@@ -1,0 +1,344 @@
+/* =============================================
+   KALYSTRAT — Custom Theme Overrides
+   Brand: Navy #0A1628, Gold #B8A472
+   Font: Akzidenz Grotesk
+   ============================================= */
+
+:root {
+    --ks-navy: #0A1628;
+    --ks-gold: #B8A472;
+    --ks-gold-hover: #9E8A5E;
+    --ks-gold-light: #D4C9A8;
+    --ks-white: #ffffff;
+    --ks-text: #333333;
+}
+
+/* ---- Typography ---- */
+body {
+    font-family: 'Akzidenz Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    color: var(--ks-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Akzidenz Grotesk', sans-serif;
+}
+
+/* ---- Theme color overrides ---- */
+.text-theme {
+    color: var(--ks-gold) !important;
+}
+
+/* ---- Buttons ---- */
+.btn {
+    background-color: var(--ks-gold);
+    color: var(--ks-navy);
+    border: 2px solid var(--ks-gold);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    transition: all 0.3s ease;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--ks-gold-hover);
+    border-color: var(--ks-gold-hover);
+    color: var(--ks-navy);
+}
+
+.btn.style2 {
+    background-color: var(--ks-navy);
+    color: var(--ks-white);
+    border-color: var(--ks-navy);
+}
+
+.btn.style2:hover,
+.btn.style2:focus {
+    background-color: var(--ks-gold);
+    color: var(--ks-navy);
+    border-color: var(--ks-gold);
+}
+
+/* ---- Header ---- */
+.header-top {
+    background-color: var(--ks-navy);
+}
+
+.header-top .header-links ul li,
+.header-top .header-links ul li a,
+.header-top .social-links a {
+    color: var(--ks-gold-light);
+}
+
+.header-top .header-links ul li a:hover,
+.header-top .social-links a:hover {
+    color: var(--ks-gold);
+}
+
+.sticky-wrapper .menu-area {
+    background-color: var(--ks-white);
+}
+
+.logo-bg {
+    background-color: var(--ks-navy);
+}
+
+.main-menu > ul > li > a {
+    color: var(--ks-navy);
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+
+.main-menu > ul > li > a:hover,
+.main-menu > ul > li > a.active {
+    color: var(--ks-gold);
+}
+
+.navbar-right-desc {
+    background-color: var(--ks-gold);
+}
+
+.navbar-right-desc .icon-btn {
+    color: var(--ks-navy);
+}
+
+.navbar-right-desc .title,
+.navbar-right-desc .link {
+    color: var(--ks-navy);
+}
+
+/* ---- Section titles ---- */
+.sec-title .sub-title {
+    color: var(--ks-gold);
+}
+
+.sec-title .title {
+    color: var(--ks-navy);
+}
+
+/* ---- Footer ---- */
+.footer-wrapper {
+    background-color: var(--ks-navy);
+}
+
+.footer-wrapper .widget_title {
+    color: var(--ks-gold);
+    border-bottom: 2px solid rgba(184, 164, 114, 0.3);
+    padding-bottom: 15px;
+}
+
+.footer-wrapper a:hover {
+    color: var(--ks-gold);
+}
+
+.copyright-wrap {
+    border-top: 1px solid rgba(184, 164, 114, 0.2);
+}
+
+.social-btn.style2 a:hover {
+    background-color: var(--ks-gold);
+    color: var(--ks-navy);
+}
+
+/* ---- Breadcrumb ---- */
+.breadcrumb-wrapper {
+    position: relative;
+}
+
+.breadcrumb-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.85);
+    z-index: 1;
+}
+
+.breadcrumb-wrapper .container {
+    position: relative;
+    z-index: 2;
+}
+
+.breadcrumb-title {
+    color: var(--ks-white);
+}
+
+.breadcrumb-menu li a {
+    color: var(--ks-gold-light);
+}
+
+.breadcrumb-menu li a:hover {
+    color: var(--ks-gold);
+}
+
+/* ---- Counter/Stats ---- */
+.counter-wrap {
+    position: relative;
+}
+
+.counter-wrap::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.9);
+}
+
+.counter-wrap .container {
+    position: relative;
+    z-index: 2;
+}
+
+.counter-card .title,
+.counter-card .counter {
+    color: var(--ks-gold);
+}
+
+/* ---- Service cards ---- */
+.service-card:hover {
+    border-color: var(--ks-gold);
+}
+
+.service-card .service-icon i {
+    color: var(--ks-gold);
+    font-size: 3rem;
+}
+
+/* ---- Project cards ---- */
+.project-card:hover .project-content {
+    border-color: var(--ks-gold);
+}
+
+/* ---- Preloader ---- */
+.preloader {
+    background-color: var(--ks-navy);
+}
+
+.loading span {
+    color: var(--ks-gold);
+}
+
+/* ---- Scroll to top ---- */
+.scroll-top svg path {
+    stroke: var(--ks-gold);
+}
+
+/* ---- Skip link (WCAG 2.2 AA) ---- */
+.skip-link {
+    background-color: var(--ks-gold);
+    color: var(--ks-navy);
+    padding: 0.75rem 1.5rem;
+    font-weight: 700;
+    z-index: 10000;
+    text-decoration: none;
+}
+
+.skip-link:focus {
+    clip: auto !important;
+    width: auto !important;
+    height: auto !important;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+}
+
+/* ---- CTA sticky mobile ---- */
+.d-lg-none.position-fixed {
+    background-color: var(--ks-white) !important;
+    border-top: 2px solid var(--ks-gold);
+}
+
+.d-lg-none.position-fixed .btn {
+    background-color: var(--ks-gold);
+    color: var(--ks-navy);
+    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 4px;
+}
+
+/* ---- Hero adjustments ---- */
+.hero-wrapper {
+    position: relative;
+}
+
+.hero-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10, 22, 40, 0.9) 0%, rgba(10, 22, 40, 0.6) 100%);
+    z-index: 1;
+}
+
+.hero-wrapper .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    color: var(--ks-white);
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+
+.hero-text {
+    color: var(--ks-gold-light);
+}
+
+.hero-style1 .sub-title {
+    color: var(--ks-gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ---- Link button ---- */
+.link-btn {
+    color: var(--ks-gold);
+    font-weight: 500;
+}
+
+.link-btn:hover {
+    color: var(--ks-gold-hover);
+}
+
+/* ---- Testimonials ---- */
+.testi-box {
+    background-color: var(--ks-white);
+    border: 1px solid rgba(10, 22, 40, 0.1);
+}
+
+.testi-rating i {
+    color: var(--ks-gold);
+}
+
+/* ---- CTA section ---- */
+.cta-wrap2 {
+    background-color: var(--ks-navy);
+    padding: 60px 40px;
+    border-radius: 8px;
+}
+
+.cta-wrap2 .title {
+    color: var(--ks-white);
+}
+
+.cta-wrap2 p {
+    color: var(--ks-gold-light);
+}
+
+/* ---- Mobile menu ---- */
+.mobile-menu-wrapper {
+    background-color: var(--ks-navy);
+}
+
+.mobile-menu ul li a {
+    color: var(--ks-white);
+    border-bottom: 1px solid rgba(184, 164, 114, 0.15);
+}
+
+.mobile-menu ul li a:hover {
+    color: var(--ks-gold);
+}
+
+/* ---- Responsive padding for sticky CTA ---- */
+@media (max-width: 991px) {
+    body {
+        padding-bottom: 70px;
+    }
+}

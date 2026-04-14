@@ -16,10 +16,7 @@ use Modules\Translation\Http\Controllers\LocaleController;
 // Sitemap dynamique
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
-// Pas de frontend - redirection vers login
-Route::get('/', function () {
-    return redirect()->route('login');
-})->name('home');
+// Home route handled by Frontend module (frontend.home)
 
 // Passkeys (spatie/laravel-passkeys)
 Route::passkeys();
