@@ -1,0 +1,168 @@
+/* Author: MEMORA solutions, https://memora.solutions ; info@memora.ca */
+/*
+ * Project custom styles for NobleUI v3.0.1
+ * Compiled via Vite alongside NobleUI SCSS source
+ */
+
+/* Alpine.js x-cloak - hide until Alpine initializes */
+[x-cloak] { display: none !important; }
+
+/* Lucide icon sizing defaults (used outside sidebar where .link-icon is not set) */
+[data-lucide] { width: 18px; height: 18px; }
+.icon-sm [data-lucide], [data-lucide].icon-sm { width: 14px; height: 14px; }
+.icon-md [data-lucide], [data-lucide].icon-md { width: 20px; height: 20px; }
+.icon-lg [data-lucide], [data-lucide].icon-lg { width: 24px; height: 24px; }
+.icon-xl [data-lucide], [data-lucide].icon-xl { width: 32px; height: 32px; }
+.icon-xxl [data-lucide], [data-lucide].icon-xxl { width: 48px; height: 48px; }
+
+/* Global search: result hover + dark mode */
+.search-result-item:hover {
+    background-color: var(--bs-tertiary-bg, #f8f9fa);
+}
+[data-bs-theme="dark"] .search-form .position-absolute {
+    background-color: var(--bs-body-bg, #1a1d21) !important;
+    border-color: var(--bs-border-color, #2c3036) !important;
+}
+
+/* Settings tabs: hide scrollbar but allow scroll */
+.settings-tabs-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Sidebar body: ensure scroll works even when perfect-scrollbar JS fails to initialize */
+.sidebar .sidebar-body.ps {
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Sidebar toggler: reset browser button defaults on ALL togglers (header + sidebar) */
+.sidebar-toggler {
+    border: none;
+    background: none;
+    padding: 8px;
+    appearance: none;
+    outline: none;
+    min-width: 48px;
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.sidebar-toggler:focus-visible {
+    outline: 2px solid var(--bs-primary, #6571ff);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.navbar-content .sidebar-toggler [data-lucide] {
+    color: var(--bs-secondary, #6c757d);
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile drawer backdrop: overlay sombre quand sidebar ouverte */
+@media (max-width: 991.98px) {
+    body.sidebar-open .page-wrapper::before {
+        content: '';
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        z-index: 999;
+        transition: opacity 0.3s ease;
+    }
+}
+
+/* TipTap editor: dark mode text color */
+[data-bs-theme="dark"] .tiptap-editor {
+    color: var(--bs-body-color);
+}
+
+/* WCAG 2.2 - Nav link min-height 48px */
+.sidebar .nav-link { min-height: 48px; }
+
+/* Tablet sidebar rail: collapsed 64px, expand on hover */
+@media (min-width: 768px) and (max-width: 1199.98px) {
+    .sidebar:not(:hover) {
+        width: 64px;
+        overflow: hidden;
+    }
+    .sidebar:not(:hover) .link-title,
+    .sidebar:not(:hover) .link-arrow,
+    .sidebar:not(:hover) .nav-category,
+    .sidebar:not(:hover) .sub-menu {
+        display: none !important;
+    }
+    .sidebar:not(:hover) .sidebar-brand {
+        font-size: 0 !important;
+    }
+    .sidebar:not(:hover) .link-icon {
+        margin: 0 auto;
+    }
+    .sidebar {
+        width: 240px;
+        transition: width .25s ease;
+    }
+    .page-wrapper {
+        transition: margin-left .25s ease;
+    }
+}
+
+/* Sidebar sub-menu: fix bullet alignment */
+.sidebar .nav.sub-menu {
+    list-style: none !important;
+    padding-left: 43px !important;
+}
+.sidebar .nav.sub-menu .nav-item {
+    position: relative;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link {
+    padding-left: 5px !important;
+    min-height: 36px;
+}
+.sidebar .nav.sub-menu .nav-item .nav-link::before {
+    left: -15px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+/* Active menu item — bold only, no background */
+.sidebar .nav-link.active,
+.sidebar .nav-item.active > .nav-link {
+    color: #fff !important;
+    font-weight: 700;
+}
+.sidebar .sub-menu .nav-link.active {
+    color: #fff !important;
+    font-weight: 700;
+}
+
+/* a11y: Focus visible modern style (WCAG 2.4.7) */
+:focus-visible {
+    outline: 2px solid var(--bs-primary, #6571ff);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.sidebar :focus-visible {
+    outline-color: #fff;
+}
+
+/* a11y: prefers-reduced-motion (WCAG 2.3.3) */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* a11y: Target size minimum 44×44 (WCAG 2.5.5 AAA) */
+.sidebar .nav-link { min-height: 44px; display: flex; align-items: center; }
+.btn, a.btn, button { min-height: 36px; }
+.btn-sm { min-height: 32px; }
+.navbar .btn, .header-right .btn, .header-right button { min-height: 44px; min-width: 44px; }
+
+/* Safe area padding for notched devices */
+.page-wrapper { padding-bottom: env(safe-area-inset-bottom); }

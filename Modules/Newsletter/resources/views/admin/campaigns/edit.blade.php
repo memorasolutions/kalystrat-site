@@ -1,0 +1,76 @@
+<!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
+@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Modifier la campagne'), 'subtitle' => __('Newsletter')])
+
+@section('content')
+
+@if($errors->any())
+    <div class="alert alert-danger mb-4">
+        <ul class="mb-0">
+            @foreach($errors->all() as $e)
+                <li>{{ $e }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<div class="row g-3">
+    <div class="col-xl-8">
+        <div class="card">
+            <div class="card-header py-3 px-4 border-bottom d-flex align-items-center justify-content-between">
+                <h5 class="fw-bold mb-0">{{ __('Modifier la campagne') }}</h5>
+                <a href="{{ route('admin.newsletter.campaigns.index') }}"
+                   class="btn btn-sm btn-outline-secondary d-flex align-items-center gap-2">
+                    <i data-lucide="arrow-left" class="icon-sm"></i> {{ __('Retour') }}
+                </a>
+            </div>
+            <div class="p-4">
+                <form method="POST" action="{{ route('admin.newsletter.campaigns.update', $campaign) }}">
+                    @csrf
+                    @method('PUT')
+
+                    <div>
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">
+                                {{ __('Sujet') }} <span class="text-danger ms-1">*</span>
+                            </label>
+                            <input type="text" name="subject"
+                                   class="form-control @error('subject') is-invalid @enderror"
+                                   value="{{ old('subject', $campaign->subject) }}" required
+                                   placeholder="{{ __('Objet de l\'email...') }}">
+                            @error('subject')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                        </div>
+
+                        <div class="mb-3">
+                            <x-editor::tiptap name="content" :value="old('content', $campaign->content)" label="{{ __('Contenu') }}" />
+                            @error('content')
+                                <small class="text-danger">{{ $message }}</small>
+                            @enderror
+                            <div class="form-text text-muted mt-2">{{ __('Le contenu sera envoyé tel quel à tous les abonnés actifs.') }}</div>
+                        </div>
+
+                        <div class="d-flex gap-2 pt-2">
+                            <button type="submit" class="btn btn-primary">{{ __('Enregistrer') }}</button>
+                            <a href="{{ route('admin.newsletter.campaigns.index') }}" class="btn btn-outline-secondary text-center">{{ __('Annuler') }}</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-4">
+        <div class="card mb-3">
+            <div class="card-header py-3 px-4 border-bottom">
+                <h5 class="fw-semibold mb-0">{{ __('Informations') }}</h5>
+            </div>
+            <div class="p-4">
+                <p class="small text-muted mb-3">{{ __('La campagne est en statut') }} <strong class="text-body">{{ __('brouillon') }}</strong>.</p>
+                <p class="small text-muted mb-0">{{ __('Vous pourrez l\'envoyer depuis la liste des campagnes.') }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@endsection

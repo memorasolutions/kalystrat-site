@@ -1,0 +1,70 @@
+<?php
+
+/**
+ * @author  MEMORA solutions <info@memora.ca> (https://memora.solutions)
+ *
+ * @project memora/laravel-saas-boilerplate
+ */
+
+declare(strict_types=1);
+
+namespace Modules\FormBuilder\Models;
+
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Support\Carbon;
+use Modules\FormBuilder\Database\Factories\FormSubmissionFactory;
+use Modules\Tenancy\Traits\BelongsToTenant;
+
+class FormSubmission extends Model
+{
+    use BelongsToTenant, HasFactory;
+
+    /** @var list<string> */
+    protected $fillable = [
+        'form_id',
+        'data',
+        'status',
+        'ip_address',
+        'read_at',
+        'tenant_id',
+    ];
+
+    /** @var array<string, string> */
+    protected $casts = [
+        'data' => 'array',
+        'read_at' => 'datetime',
+    ];
+
+    public function form(): BelongsTo
+    {
+        return $this->belongsTo(Form::class);
+    }
+
+    public function scopeUnread(Builder $query): Builder
+    {
+        return $query->whereNull('read_at');
+    }
+
+    public function scopeRead(Builder $query): Builder
+    {
+        return $query->whereNotNull('read_at');
+    }
+
+    public function markAsRead(): bool
+    {
+        return $this->update(['read_at' => Carbon::now()]);
+    }
+
+    public function isNew(): bool
+    {
+        return is_null($this->read_at);
+    }
+
+    protected static function newFactory(): FormSubmissionFactory
+    {
+        return FormSubmissionFactory::new();
+    }
+}

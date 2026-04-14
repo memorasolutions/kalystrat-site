@@ -1,0 +1,60 @@
+*.log
+.DS_Store
+DOCS.md
+.env
+.env.backup
+.env.production
+.phpactor.json
+.phpunit.result.cache
+/.fleet
+/.idea
+/.nova
+/.phpunit.cache
+/.vscode/*
+!/.vscode/settings.json
+!/.vscode/extensions.json
+/.zed
+/auth.json
+/node_modules
+/public/build
+!/public/build/nobleui
+!/public/build/authero
+/public/fonts
+/public/hot
+/public/storage
+/storage/*.key
+/storage/pail
+/vendor
+Homestead.json
+Homestead.yaml
+Thumbs.db
+_ide_helper.php
+_ide_helper_models.php
+.phpstorm.meta.php
+
+# Screenshots et images d'audit (generees localement)
+/*.png
+/*.jpg
+/*.jpeg
+
+# Outils dev locaux
+storage/debugbar/
+test-results/
+playwright-report/
+.playwright-audit/
+.playwright-mcp/
+tests/Browser/screenshots/
+
+# Sources themes (copie locale, pas dans le repo)
+.themes/
+
+# Fichiers Claude/AI session
+.claude/SESSION_STATE.md
+.claude/plans/
+
+# Docs temporaires
+AUDIT_REPORT.md
+MIGRATION_PLAN.md
+
+# CSRF temp
+csrf*

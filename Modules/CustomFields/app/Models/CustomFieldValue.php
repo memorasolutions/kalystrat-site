@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @author  MEMORA solutions <info@memora.ca> (https://memora.solutions)
+ *
+ * @project memora/laravel-saas-boilerplate
+ */
+
+declare(strict_types=1);
+
+namespace Modules\CustomFields\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\MorphTo;
+use Illuminate\Support\Carbon;
+use Modules\CustomFields\Database\Factories\CustomFieldValueFactory;
+
+class CustomFieldValue extends Model
+{
+    use HasFactory;
+
+    protected $table = 'custom_field_values';
+
+    /** @var list<string> */
+    protected $fillable = [
+        'custom_field_definition_id',
+        'fieldable_type',
+        'fieldable_id',
+        'value',
+    ];
+
+    public function definition(): BelongsTo
+    {
+        return $this->belongsTo(CustomFieldDefinition::class, 'custom_field_definition_id');
+    }
+
+    public function fieldable(): MorphTo
+    {
+        return $this->morphTo();
+    }
+
+    public function getCastedValue(): mixed
+    {
+        if (is_null($this->value) || ! $this->definition) {
+            return $this->value;
+        }
+
+        return match ($this->definition->type) {
+            'number' => (float) $this->value,
+            'checkbox' => filter_var($this->value, FILTER_VALIDATE_BOOLEAN),
+            'date' => Carbon::parse($this->value),
+            'repeater' => json_decode($this->value, true) ?? [],
+            default => (string) $this->value,
+        };
+    }
+
+    protected static function newFactory(): CustomFieldValueFactory
+    {
+        return CustomFieldValueFactory::new();
+    }
+}

@@ -1,0 +1,5 @@
+/* Author: MEMORA solutions, https://memora.solutions ; info@memora.ca */
+/* Tailwind CSS for auth views (login, register, forgot-password, etc.) */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

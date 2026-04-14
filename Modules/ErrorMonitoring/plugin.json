@@ -1,0 +1,10 @@
+{
+    "name": "ErrorMonitoring",
+    "description": "Capture erreurs applicatives (404/403/429/500), fingerprinting, dashboard admin, cleanup schedulé",
+    "version": "1.0.0",
+    "type": "plugin",
+    "dependencies": [
+        "Core"
+    ],
+    "priority": 90
+}

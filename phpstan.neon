@@ -1,0 +1,66 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+    level: 7
+    paths:
+        - app/
+        - Modules/Api/app/
+        - Modules/Auth/app/
+        - Modules/Backoffice/app/
+        - Modules/Core/app/
+        - Modules/Health/app/
+        - Modules/Logging/app/
+        - Modules/Media/app/
+        - Modules/Notifications/app/
+        - Modules/RolesPermissions/app/
+        - Modules/SEO/app/
+        - Modules/Settings/app/
+        - Modules/Storage/app/
+        - Modules/Backup/app/
+        - Modules/Export/app/
+        - Modules/Search/app/
+        - Modules/Translation/app/
+        - Modules/SaaS/app/
+        - Modules/Tenancy/app/
+        - Modules/Webhooks/app/
+        - Modules/Blog/app/
+        - Modules/Editor/app/
+        - Modules/Newsletter/app/
+        - Modules/Pages/app/
+        - Modules/AI/app/
+        - Modules/ABTest/app/
+        - Modules/CustomFields/app/
+        - Modules/Faq/app/
+        - Modules/FormBuilder/app/
+        - Modules/Import/app/
+        - Modules/Menu/app/
+        - Modules/Testimonials/app/
+        - Modules/Widget/app/
+        - database/
+        - routes/
+    excludePaths:
+        - vendor/
+        - storage/
+        - bootstrap/cache/
+        - database/migrations/2026_02_15_214425_create_pulse_tables.php
+    reportUnmatchedIgnoredErrors: false
+    ignoreErrors:
+        - '#^Access to an undefined property [a-zA-Z\\]+::\$\w+#'
+        - '#^Call to an undefined method Illuminate\\Database\\Eloquent\\(Builder[^:]*|Relations\\HasMany|Relations\\BelongsToMany)::#'
+        - '#^Trait .+ is used zero times and is not analysed#'
+        - '#^Call to an undefined method Spatie\\MediaLibrary\\HasMedia::#'
+        - identifier: missingType.return
+        - identifier: missingType.iterableValue
+        - identifier: missingType.generics
+        - identifier: missingType.parameter
+        - identifier: argument.templateType
+        - identifier: argument.type
+        - identifier: argument.unresolvableType
+        - identifier: nullCoalesce.offset
+        - identifier: nullsafe.neverNull
+        - identifier: method.unresolvableReturnType
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Model::getCastedValue#'
+        - '#Cannot call method toDateTimeString\(\) on string#'
+        - '#Call to an undefined method Illuminate\\Database\\Eloquent\\Model::addMedia#'

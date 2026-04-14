@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/errormonitoring",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\ErrorMonitoring\\": "app/",
+            "Modules\\ErrorMonitoring\\Database\\Factories\\": "database/factories/",
+            "Modules\\ErrorMonitoring\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\ErrorMonitoring\\Tests\\": "tests/"
+        }
+    }
+}

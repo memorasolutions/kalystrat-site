@@ -1,0 +1,276 @@
+<!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
+@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Nouvel article'), 'subtitle' => __('Blog')])
+
+@section('breadcrumbs')
+@endsection
+
+@section('content')
+
+@if($errors->any())
+    <div class="alert alert-danger">
+        <ul class="mb-0 ps-3">
+            @foreach($errors->all() as $e)
+                <li class="text-sm">{{ $e }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<form action="{{ route('admin.blog.articles.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <div class="row g-3">
+        {{-- Colonne principale --}}
+        <div class="col-xl-8">
+            <div class="card">
+                <div class="card-header py-3 px-4 border-bottom d-flex align-items-center justify-content-between">
+                    <h5 class="fw-semibold mb-0">{{ __('Contenu') }}</h5>
+                    @livewire('ai-article-generator')
+                </div>
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="title">
+                            {{ __('Titre') }} <span class="text-danger">*</span>
+                        </label>
+                        <input type="text" id="title" name="title"
+                               class="form-control @error('title') is-invalid @enderror"
+                               value="{{ old('title') }}" required aria-required="true" autocomplete="off">
+                        @error('title')
+                            <div class="invalid-feedback">{{ $message }}</div>
+                        @enderror
+                    </div>
+                    <div class="mb-3">
+                        <x-editor::tiptap name="content" :value="old('content', '')" :label="__('Contenu')" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="excerpt">{{ __('Extrait') }}</label>
+                        <textarea id="excerpt" name="excerpt" rows="3" maxlength="500"
+                                  class="form-control" style="resize:none;">{{ old('excerpt') }}</textarea>
+                        <div class="form-text text-muted">{{ __('Résumé court affiché dans les listes (max 500 caractères)') }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {{-- Colonne latérale --}}
+        <div class="col-xl-4">
+            {{-- Publication --}}
+            <div class="card mb-3">
+                <div class="card-header py-3 px-4 border-bottom">
+                    <h5 class="fw-semibold mb-0">{{ __('Publication') }}</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label fw-medium">{{ __('Statut') }}</label>
+                        <div class="btn-group w-100" role="group" aria-label="{{ __('Statut de publication') }}">
+                            <input type="radio" class="btn-check" name="status" value="draft" id="status-draft" autocomplete="off" {{ old('status', 'draft') === 'draft' ? 'checked' : '' }}>
+                            <label class="btn btn-outline-secondary d-inline-flex align-items-center justify-content-center gap-1" for="status-draft">
+                                <i data-lucide="file-edit" class="icon-sm"></i> {{ __('Brouillon') }}
+                            </label>
+                            <input type="radio" class="btn-check" name="status" value="pending_review" id="status-pending" autocomplete="off" {{ old('status') === 'pending_review' ? 'checked' : '' }}>
+                            <label class="btn btn-outline-info d-inline-flex align-items-center justify-content-center gap-1" for="status-pending">
+                                <i data-lucide="eye" class="icon-sm"></i> {{ __('En révision') }}
+                            </label>
+                            <input type="radio" class="btn-check" name="status" value="published" id="status-published" autocomplete="off" {{ old('status') === 'published' ? 'checked' : '' }}>
+                            <label class="btn btn-outline-success d-inline-flex align-items-center justify-content-center gap-1" for="status-published">
+                                <i data-lucide="globe" class="icon-sm"></i> {{ __('Publié') }}
+                            </label>
+                            <input type="radio" class="btn-check" name="status" value="archived" id="status-archived" autocomplete="off" {{ old('status') === 'archived' ? 'checked' : '' }}>
+                            <label class="btn btn-outline-warning d-inline-flex align-items-center justify-content-center gap-1" for="status-archived">
+                                <i data-lucide="archive" class="icon-sm"></i> {{ __('Archivé') }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-medium" for="published_at">{{ __('Date de publication') }}</label>
+                        <input type="datetime-local" id="published_at" name="published_at"
+                               class="form-control"
+                               value="{{ old('published_at') }}">
+                    </div>
+                    <div class="d-flex gap-2 pt-2">
+                        <button type="submit" class="btn btn-primary flex-fill">{{ __('Enregistrer') }}</button>
+                        <a href="{{ route('admin.blog.articles.index') }}" class="btn btn-outline-secondary flex-fill text-center">{{ __('Annuler') }}</a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Catégorie et tags --}}
+            <div class="card mb-3">
+                <div class="card-header py-3 px-4 border-bottom">
+                    <h5 class="fw-semibold mb-0">{{ __('Catégorie et tags') }}</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <label for="category-select" class="form-label fw-medium">{{ __('Catégorie') }}</label>
+                        <select id="category-select" name="category_id"
+                                class="form-select"
+                                aria-label="{{ __('Sélectionner une catégorie') }}">
+                            <option value="">{{ __('— Sélectionner —') }}</option>
+                            @foreach($categories as $cat)
+                                <option value="{{ $cat->id }}" {{ old('category_id') == $cat->id ? 'selected' : '' }}>{{ $cat->name }}</option>
+                            @endforeach
+                        </select>
+                        <div class="form-text text-muted">{{ __('Tapez pour rechercher ou créer une catégorie') }}</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tags-select" class="form-label fw-medium">{{ __('Tags') }}</label>
+                        <select id="tags-select" multiple aria-label="{{ __('Sélectionner des tags') }}"
+                                class="form-select">
+                            @foreach($existingTags as $tag)
+                                <option value="{{ $tag }}" {{ in_array($tag, old('tags', [])) ? 'selected' : '' }}>{{ $tag }}</option>
+                            @endforeach
+                        </select>
+                        <input type="hidden" name="tags_input" id="tags-input" value="{{ old('tags_input', '') }}">
+                        <div class="form-text text-muted">{{ __('Tapez pour rechercher ou créer un tag') }}</div>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Options WordPress --}}
+            <div class="card mb-3">
+                <div class="card-header py-3 px-4 border-bottom">
+                    <h5 class="fw-semibold mb-0">{{ __('Options') }}</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div class="mb-3">
+                        <label for="format" class="form-label fw-medium d-flex align-items-center gap-2">
+                            <i data-lucide="layout-template" style="width:16px;height:16px;"></i> {{ __('Format') }}
+                        </label>
+                        <select name="format" id="format" class="form-select @error('format') is-invalid @enderror">
+                            @foreach(\Modules\Blog\Enums\ArticleFormat::cases() as $case)
+                                <option value="{{ $case->value }}" {{ old('format', 'standard') === $case->value ? 'selected' : '' }}>{{ $case->label() }}</option>
+                            @endforeach
+                        </select>
+                        @error('format')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" name="is_featured" id="is_featured" value="1" {{ old('is_featured') ? 'checked' : '' }}>
+                            <label class="form-check-label d-flex align-items-center gap-2" for="is_featured">
+                                <i data-lucide="star" style="width:16px;height:16px;"></i> {{ __('Article mis en avant') }}
+                            </label>
+                        </div>
+                    </div>
+                    <div class="mb-0">
+                        <label for="content_password" class="form-label fw-medium d-flex align-items-center gap-2">
+                            <i data-lucide="lock" style="width:16px;height:16px;"></i> {{ __('Mot de passe') }}
+                        </label>
+                        <input type="text" class="form-control @error('content_password') is-invalid @enderror" id="content_password" name="content_password" value="{{ old('content_password', '') }}" placeholder="{{ __('Laisser vide pour accès libre') }}">
+                        @error('content_password')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                    </div>
+                </div>
+            </div>
+
+            {{-- Image mise en avant --}}
+            <div class="card" x-data="{
+                isDragging: false,
+                preview: null,
+                handleFile(file) {
+                    if (file && ['image/jpeg','image/png','image/webp'].includes(file.type) && file.size <= 2097152) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => { this.preview = e.target.result; };
+                        reader.readAsDataURL(file);
+                    } else {
+                        alert('{{ __("Image JPG/PNG/WebP max 2 Mo.") }}');
+                        this.$refs.featuredImageInput.value = '';
+                    }
+                }
+            }">
+                <div class="card-header py-3 px-4 border-bottom">
+                    <h5 class="fw-semibold mb-0">{{ __('Image mise en avant') }}</h5>
+                </div>
+                <div class="card-body p-4">
+                    <div @click="$refs.featuredImageInput.click()"
+                         @dragover.prevent="isDragging = true"
+                         @dragleave.prevent="isDragging = false"
+                         @drop.prevent="isDragging = false; handleFile($event.dataTransfer.files[0])"
+                         class="text-center rounded-3 border border-2 border-dashed p-4"
+                         :class="isDragging ? 'border-primary bg-primary bg-opacity-10' : 'border-secondary-subtle'"
+                         style="cursor:pointer;">
+                        <template x-if="!preview">
+                            <div>
+                                <i data-lucide="upload" class="text-muted d-block mx-auto mb-3" style="width:48px;height:48px;"></i>
+                                <p class="text-sm fw-medium mb-1">{{ __('Glissez une image ici') }}</p>
+                                <p class="text-muted small">{{ __('JPG, PNG, WebP — max 2 Mo') }}</p>
+                            </div>
+                        </template>
+                        <template x-if="preview">
+                            <div>
+                                <img :src="preview" class="w-100 rounded-3 mb-3" style="max-height:11rem;object-fit:cover;">
+                                <button type="button" class="btn btn-outline-secondary btn-sm"
+                                        @click.stop="preview = null; $refs.featuredImageInput.value = ''">
+                                    {{ __('Changer') }}
+                                </button>
+                            </div>
+                        </template>
+                    </div>
+                    <input type="file" name="featured_image"
+                           x-ref="featuredImageInput"
+                           @change="handleFile($event.target.files[0])"
+                           class="d-none"
+                           accept="image/jpeg,image/png,image/webp">
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+@endsection
+
+@push('plugin-styles')
+<link href="{{ asset('build/nobleui/plugins/tom-select/tom-select.bootstrap5.min.css') }}" rel="stylesheet">
+@endpush
+
+@push('custom-scripts')
+<script src="{{ asset('build/nobleui/plugins/tom-select/tom-select.complete.min.js') }}"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new TomSelect('#category-select', {
+        create: function(input, callback) {
+            fetch('{{ route("admin.blog.categories.quick-create") }}', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').content,
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify({ name: input })
+            })
+            .then(r => r.json())
+            .then(data => callback({ value: data.id, text: data.name }))
+            .catch(() => callback());
+        },
+        render: {
+            option_create: function(data, escape) {
+                return '<div class="create">Créer <strong>' + escape(data.input) + '</strong></div>';
+            }
+        },
+        placeholder: 'Rechercher ou créer...',
+        allowEmptyOption: true
+    });
+
+    var tagsSelect = new TomSelect('#tags-select', {
+        create: true,
+        plugins: ['remove_button'],
+        placeholder: 'Rechercher ou créer un tag...',
+        render: {
+            option_create: function(data, escape) {
+                return '<div class="create">Créer le tag <strong>' + escape(data.input) + '</strong></div>';
+            }
+        },
+        onInitialize: function() {
+            var raw = document.getElementById('tags-input').value;
+            if (raw) {
+                var tags = raw.split(',').filter(function(t) { return t.trim() !== ''; });
+                for (var i = 0; i < tags.length; i++) {
+                    this.addOption({ value: tags[i].trim(), text: tags[i].trim() });
+                    this.addItem(tags[i].trim(), true);
+                }
+            }
+        },
+        onChange: function(values) {
+            document.getElementById('tags-input').value = values.join(',');
+        }
+    });
+});
+</script>
+@endpush

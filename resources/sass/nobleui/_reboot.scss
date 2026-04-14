@@ -1,0 +1,88 @@
+// Reboot
+
+html {
+  direction: ltr;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--#{$prefix}app-bg);
+}
+
+.btn,
+.btn-group.open .dropdown-toggle,
+.btn:active,
+.btn:focus,
+.btn:hover,
+.btn:visited,
+a,
+a:active,
+a:checked,
+a:focus,
+a:hover,
+a:visited,
+body,
+button,
+button:active,
+button:hover,
+button:visited,
+div,
+input,
+input:active,
+input:hover,
+input:focus,
+input:visited,
+select,
+select:active,
+select:focus,
+select:visited,
+textarea,
+textarea:active,
+textarea:focus,
+textarea:visited {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+
+select,
+.form-check-input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+// WCAG 2.4.7 - Restore visible focus for keyboard users
+a,
+button,
+.btn,
+input,
+select,
+textarea,
+.form-control,
+.form-select,
+.form-check-input,
+.nav-link,
+.dropdown-item,
+.page-link {
+  &:focus-visible {
+    outline: 2px solid var(--bs-primary);
+    outline-offset: 2px;
+  }
+}
+
+.form-control,
+.form-select,
+.form-check-input {
+  &:focus-visible {
+    box-shadow: var(--bs-box-shadow-inset), 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.25);
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active  {
+  -webkit-box-shadow: 0 0 0 30px $input-bg inset;
+  -webkit-text-fill-color: var(--#{$prefix}body-color);
+}

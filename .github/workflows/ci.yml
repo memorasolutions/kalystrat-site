@@ -1,0 +1,253 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, 'feature/*']
+  pull_request:
+    branches: [main, master]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  code-quality:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, dom, pdo_mysql, xml, ctype, json
+          tools: composer
+          coverage: none
+
+      - uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-
+
+      - run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Pint (code style)
+        run: vendor/bin/pint --test
+
+      - name: Larastan (static analysis level 7)
+        run: vendor/bin/phpstan analyse --memory-limit=512M
+
+      - name: PHPStan baseline must stay empty
+        run: |
+          if [ -s phpstan-baseline.neon ] && grep -q 'message:' phpstan-baseline.neon; then
+            echo "::error::phpstan-baseline.neon is not empty — fix errors instead of adding to baseline"
+            exit 1
+          fi
+
+      - name: Rector (dry-run)
+        run: vendor/bin/rector process --dry-run --no-progress-bar 2>&1 | tail -5
+        continue-on-error: true
+
+  tests:
+    runs-on: ubuntu-latest
+    needs: code-quality
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: testing
+          MYSQL_USER: sail
+          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    env:
+      APP_ENV: testing
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_DATABASE: testing
+      DB_USERNAME: sail
+      DB_PASSWORD: password
+      CACHE_STORE: array
+      SESSION_DRIVER: array
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, dom, pdo_mysql, xml, ctype, json, intl, bcmath, gd
+          coverage: none
+          tools: composer
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-
+
+      - uses: actions/cache@v4
+        with:
+          path: |
+            node_modules
+            ~/.npm
+          key: npm-${{ hashFiles('package-lock.json') }}
+          restore-keys: npm-
+
+      - run: composer install --no-interaction --prefer-dist --no-progress
+
+      - run: npm ci
+
+      - run: npm run build
+
+      - run: cp .env.example .env
+
+      - run: php artisan key:generate
+
+      - name: Run migrations
+        run: php artisan migrate --force
+
+      - name: Run app tests
+        run: php artisan test tests/ --parallel --memory-limit=512M
+
+      - name: Run module tests (group 1)
+        run: |
+          FAILED=0
+          for mod in ABTest AI Auth Backup Backoffice Blog Booking Core CustomFields Ecommerce Editor ErrorMonitoring Export Faq FormBuilder Health Import Logging; do
+            echo "::group::$mod"
+            if [ -d "Modules/$mod/tests" ]; then
+              php artisan test "Modules/$mod/tests" --memory-limit=512M || FAILED=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $FAILED
+
+      - name: Run module tests (group 2)
+        run: |
+          FAILED=0
+          for mod in Media Menu Newsletter Notifications Pages Privacy Roadmap RolesPermissions SaaS SEO Search Settings ShortUrl Storage Team Tenancy Testimonials Translation Webhooks Widget; do
+            echo "::group::$mod"
+            if [ -d "Modules/$mod/tests" ]; then
+              php artisan test "Modules/$mod/tests" --memory-limit=512M || FAILED=1
+            fi
+            echo "::endgroup::"
+          done
+          exit $FAILED
+
+  e2e:
+    runs-on: ubuntu-latest
+    needs: tests
+    if: github.event_name == 'pull_request'
+
+    services:
+      mysql:
+        image: mysql:8.0
+        env:
+          MYSQL_DATABASE: testing
+          MYSQL_USER: sail
+          MYSQL_PASSWORD: password
+          MYSQL_ROOT_PASSWORD: password
+        ports:
+          - 3306:3306
+        options: >-
+          --health-cmd="mysqladmin ping"
+          --health-interval=10s
+          --health-timeout=5s
+          --health-retries=3
+
+    env:
+      APP_ENV: testing
+      DB_CONNECTION: mysql
+      DB_HOST: 127.0.0.1
+      DB_PORT: 3306
+      DB_DATABASE: testing
+      DB_USERNAME: sail
+      DB_PASSWORD: password
+      CACHE_STORE: array
+      SESSION_DRIVER: array
+      QUEUE_CONNECTION: sync
+      MAIL_MAILER: array
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          extensions: mbstring, dom, pdo_mysql, xml, ctype, json, intl, bcmath, gd
+          coverage: none
+          tools: composer
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: composer install --no-interaction --prefer-dist --no-progress
+      - run: npm ci
+      - run: npm run build
+      - run: cp .env.example .env
+      - run: php artisan key:generate
+      - run: php artisan migrate
+
+      - name: Install Playwright browsers
+        run: npx playwright install --with-deps chromium
+
+      - name: Seed E2E users
+        run: php tests/e2e/seed-e2e-users.php
+
+      - name: Start server
+        run: php artisan serve --port=8000 &
+
+      - name: Wait for server
+        run: sleep 3
+
+      - name: Run Playwright tests
+        run: npx playwright test tests/e2e/ --reporter=list
+        continue-on-error: true
+
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.4'
+          tools: composer
+          coverage: none
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-
+
+      - run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Composer audit
+        run: composer audit
+
+      - name: NPM audit
+        run: npm audit --audit-level=moderate || true

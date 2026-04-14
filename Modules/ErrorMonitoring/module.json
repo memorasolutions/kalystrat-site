@@ -1,0 +1,11 @@
+{
+    "name": "ErrorMonitoring",
+    "alias": "errormonitoring",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\ErrorMonitoring\\Providers\\ErrorMonitoringServiceProvider"
+    ],
+    "files": []
+}

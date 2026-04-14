@@ -1,0 +1,245 @@
+<?php
+
+/**
+ * @author  MEMORA solutions <info@memora.ca> (https://memora.solutions)
+ *
+ * @project memora/laravel-saas-boilerplate
+ */
+
+declare(strict_types=1);
+
+namespace Modules\Auth\Http\Controllers;
+
+use Carbon\Carbon;
+use Illuminate\Contracts\View\View;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
+use Modules\Blog\Models\Article;
+use Modules\Blog\Models\Comment;
+use Modules\Core\Shared\Traits\VerifiesPassword;
+use Modules\SaaS\Models\Plan;
+use Symfony\Component\HttpFoundation\StreamedResponse;
+
+class UserDashboardController extends Controller
+{
+    use VerifiesPassword;
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function dashboard(): View
+    {
+        $user = auth()->user();
+
+        $stats = [
+            'articles_count' => 0,
+            'published_count' => 0,
+            'draft_count' => 0,
+            'comments_count' => 0,
+        ];
+
+        $recentArticles = collect();
+
+        if (class_exists(Article::class)) {
+            $articleCounts = Article::where('user_id', $user->id)
+                ->selectRaw("COUNT(*) as total, SUM(status = 'published') as published, SUM(status = 'draft') as draft")
+                ->first();
+
+            $stats = [
+                'articles_count' => (int) $articleCounts->total,
+                'published_count' => (int) $articleCounts->published,
+                'draft_count' => (int) $articleCounts->draft,
+                'comments_count' => class_exists(Comment::class)
+                    ? Comment::whereHas('article', fn ($q) => $q->where('user_id', $user->id))->count()
+                    : 0,
+            ];
+
+            $recentArticles = Article::where('user_id', $user->id)
+                ->latest()
+                ->take(5)
+                ->get();
+        }
+
+        // Plan actuel (via subscriptions → plans, ou "Free")
+        $planName = 'Free';
+        $activeSub = DB::table('subscriptions')
+            ->where('user_id', $user->id)
+            ->whereIn('stripe_status', ['active', 'trialing'])
+            ->whereNull('ends_at')
+            ->first();
+
+        if ($activeSub && class_exists(Plan::class)) {
+            $plan = Plan::where('stripe_price_id', $activeSub->stripe_price)->first();
+            $planName = $plan->name ?? 'Pro';
+        }
+
+        $unreadNotifications = $user->unreadNotifications()->count();
+
+        return view('auth::dashboard.index', compact(
+            'user', 'stats', 'recentArticles', 'planName', 'unreadNotifications'
+        ));
+    }
+
+    public function profile(): View
+    {
+        $user = auth()->user();
+
+        return view('auth::profile.index', compact('user'));
+    }
+
+    public function updateProfile(Request $request): RedirectResponse
+    {
+        $user = auth()->user();
+
+        $validated = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255|unique:users,email,'.$user->id,
+            'bio' => 'nullable|string|max:500',
+            'avatar' => 'nullable|image|max:2048',
+        ]);
+
+        if ($request->hasFile('avatar')) {
+            if ($user->avatar && Storage::disk('public')->exists($user->avatar)) {
+                Storage::disk('public')->delete($user->avatar);
+            }
+            $validated['avatar'] = $request->file('avatar')->store('avatars', 'public');
+        }
+
+        $user->update($validated);
+
+        return back()->with('success', __('Profil mis à jour avec succès.'));
+    }
+
+    public function deleteAccount(Request $request): RedirectResponse
+    {
+        if ($failed = $this->verifyPasswordOrFail($request)) {
+            return $failed;
+        }
+
+        $user = auth()->user();
+        $userId = $user->id;
+
+        // Log suppression avant déconnexion
+        activity()->performedOn($user)->log("Suppression de compte RGPD demandée par l'utilisateur {$user->email}");
+
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        // Anonymiser les données personnelles
+        $anonymized = 'utilisateur-supprime-'.$userId;
+
+        // Anonymiser les commentaires (user_id set null par FK, mais anonymiser guest_name/email aussi)
+        DB::table('blog_comments')
+            ->where('user_id', $userId)
+            ->update(['guest_name' => 'Utilisateur supprimé', 'guest_email' => null]);
+
+        // Supprimer sessions, tokens, login attempts, password histories
+        DB::table('sessions')->where('user_id', $userId)->delete();
+        DB::table('login_attempts')->where('user_id', $userId)->delete();
+        DB::table('password_histories')->where('user_id', $userId)->delete();
+        $user->tokens()->delete();
+
+        // Anonymiser le profil puis supprimer (cascade articles, AI, etc.)
+        $user->forceFill([
+            'name' => 'Utilisateur supprimé',
+            'email' => $anonymized.'@deleted.local',
+            'password' => '',
+            'phone' => null,
+            'bio' => null,
+            'avatar' => null,
+            'social_id' => null,
+            'social_provider' => null,
+            'two_factor_secret' => null,
+            'two_factor_recovery_codes' => null,
+            'remember_token' => null,
+        ])->save();
+
+        $user->delete();
+
+        return redirect('/')->with('success', __('Votre compte et vos données personnelles ont été supprimés.'));
+    }
+
+    public function exportData(): StreamedResponse
+    {
+        $user = auth()->user();
+        $userId = $user->id;
+
+        $data = [
+            'profile' => [
+                'name' => $user->name,
+                'email' => $user->email,
+                'bio' => $user->bio,
+                'phone' => $user->phone,
+                'avatar' => $user->avatar,
+                'email_verified_at' => $user->email_verified_at?->toDateTimeString(),
+                'created_at' => $user->created_at?->toDateTimeString(),
+                'password_changed_at' => $user->password_changed_at?->toDateTimeString(),
+            ],
+            'articles' => Article::where('user_id', $userId)
+                ->get(['title', 'slug', 'status', 'created_at', 'updated_at'])
+                ->toArray(),
+            'comments' => Comment::where('user_id', $userId)
+                ->get(['body', 'created_at'])
+                ->toArray(),
+            'sessions' => DB::table('sessions')
+                ->where('user_id', $userId)
+                ->get(['ip_address', 'user_agent', 'last_activity'])
+                ->map(fn ($s) => [
+                    'ip_address' => $s->ip_address,
+                    'user_agent' => $s->user_agent,
+                    'last_activity' => Carbon::createFromTimestamp($s->last_activity)->toDateTimeString(),
+                ])
+                ->toArray(),
+            'login_attempts' => DB::table('login_attempts')
+                ->where('user_id', $userId)
+                ->get(['ip_address', 'status', 'logged_in_at'])
+                ->toArray(),
+            'subscriptions' => DB::table('subscriptions')
+                ->where('user_id', $userId)
+                ->get(['type', 'stripe_status', 'created_at', 'ends_at'])
+                ->toArray(),
+            'ai_conversations' => DB::table('ai_conversations')
+                ->where('user_id', $userId)
+                ->get(['title', 'created_at'])
+                ->toArray(),
+            'tokens' => $user->tokens()
+                ->get(['name', 'created_at', 'last_used_at'])
+                ->toArray(),
+            'exported_at' => now()->toDateTimeString(),
+        ];
+
+        return response()->streamDownload(
+            function () use ($data) {
+                echo json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+            },
+            'mes-donnees-'.date('Y-m-d').'.json',
+            ['Content-Type' => 'application/json']
+        );
+    }
+
+    public function updatePassword(Request $request): RedirectResponse
+    {
+        $request->validate([
+            'current_password' => 'required',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+        $user = auth()->user();
+
+        if (! Hash::check($request->current_password, $user->password)) {
+            return back()->withErrors(['current_password' => __('Mot de passe actuel incorrect.')]);
+        }
+
+        $user->update(['password' => $request->password]);
+
+        return back()->with('success', __('Mot de passe modifié avec succès.'));
+    }
+}

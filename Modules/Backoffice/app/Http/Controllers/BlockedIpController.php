@@ -1,0 +1,56 @@
+<?php
+
+/**
+ * @author  MEMORA solutions <info@memora.ca> (https://memora.solutions)
+ *
+ * @project memora/laravel-saas-boilerplate
+ */
+
+declare(strict_types=1);
+
+namespace Modules\Backoffice\Http\Controllers;
+
+use Illuminate\Http\RedirectResponse;
+use Illuminate\Http\Request;
+use Illuminate\View\View;
+use Modules\Auth\Models\BlockedIp;
+
+class BlockedIpController
+{
+    public function index(): View
+    {
+        $blockedIps = BlockedIp::latest()->paginate(25);
+
+        return view('backoffice::blocked-ips.index', [
+            'title' => 'IPs bloquées',
+            'subtitle' => 'Sécurité',
+            'blockedIps' => $blockedIps,
+        ]);
+    }
+
+    public function store(Request $request): RedirectResponse
+    {
+        $validated = $request->validate([
+            'ip_address' => ['required', 'ip'],
+            'reason' => ['nullable', 'string', 'max:255'],
+        ]);
+
+        BlockedIp::updateOrCreate(
+            ['ip_address' => $validated['ip_address']],
+            [
+                'reason' => $validated['reason'] ?? 'Blocage manuel',
+                'auto_blocked' => false,
+            ]
+        );
+
+        return back()->with('success', __('IP :ip bloquée.', ['ip' => $validated['ip_address']]));
+    }
+
+    public function destroy(BlockedIp $blockedIp): RedirectResponse
+    {
+        $ip = $blockedIp->ip_address;
+        $blockedIp->delete();
+
+        return back()->with('success', __('IP :ip débloquée.', ['ip' => $ip]));
+    }
+}

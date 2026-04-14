@@ -1,0 +1,96 @@
+<?php
+
+/**
+ * @author  MEMORA solutions <info@memora.ca> (https://memora.solutions)
+ *
+ * @project memora/laravel-saas-boilerplate
+ */
+
+declare(strict_types=1);
+
+namespace Modules\Backoffice\Http\Controllers;
+
+use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Modules\Ecommerce\Database\Seeders\EcommerceEmailTemplateSeeder;
+use Modules\Notifications\Database\Seeders\EmailTemplateSeeder;
+use Modules\Notifications\Models\EmailTemplate;
+use Modules\Notifications\Services\EmailTemplateService;
+
+class EmailTemplateController extends Controller
+{
+    public function index()
+    {
+        $templates = EmailTemplate::orderBy('name')->get();
+
+        return view('backoffice::email-templates.index', compact('templates'));
+    }
+
+    public function edit(EmailTemplate $emailTemplate)
+    {
+        $variables = app(EmailTemplateService::class)->getDefaultVariables();
+
+        return view('backoffice::email-templates.edit', compact('emailTemplate', 'variables'));
+    }
+
+    public function update(Request $request, EmailTemplate $emailTemplate)
+    {
+        $validated = $request->validate([
+            'subject' => 'required|string|max:255',
+            'body_html' => 'required|string',
+            'is_active' => 'boolean',
+        ]);
+
+        $emailTemplate->update([
+            'subject' => $validated['subject'],
+            'body_html' => $validated['body_html'],
+            'is_active' => $request->boolean('is_active'),
+        ]);
+
+        return redirect()->back()->with('success', __('Template mis à jour avec succès'));
+    }
+
+    public function preview(EmailTemplate $emailTemplate)
+    {
+        $service = app(EmailTemplateService::class);
+
+        $dummyData = [
+            'user' => ['name' => 'Jean Dupont', 'email' => 'jean@exemple.com'],
+            'app' => ['name' => config('app.name'), 'url' => config('app.url')],
+            'reset_link' => config('app.url').'/reset-password/example-token',
+            'verification_link' => config('app.url').'/verify-email/example-token',
+            'changed_at' => now()->format('Y-m-d H:i'),
+            'alert_message' => 'Ceci est un message d\'alerte de test.',
+            'token' => '123456',
+            'expire_minutes' => '15',
+            'order' => ['number' => 'CMD-2026-0001', 'total' => '149.99', 'date' => now()->format('d/m/Y'), 'url' => config('app.url').'/account/orders/1', 'tracking' => 'CA123456789'],
+            'refund' => ['amount' => '49.99'],
+            'currency' => 'CAD',
+            'cart' => ['items' => 'T-shirt classique, Jeans slim, Ecouteurs', 'item_count' => '3', 'total' => '259.97', 'url' => config('app.url').'/cart'],
+        ];
+
+        $rendered = $service->renderTemplate($emailTemplate, $dummyData);
+
+        return response($rendered['body_html']);
+    }
+
+    public function resetToDefault(EmailTemplate $emailTemplate)
+    {
+        $allDefaults = collect(EmailTemplateSeeder::defaults());
+
+        // Merge ecommerce email template defaults if module is active
+        if (class_exists(EcommerceEmailTemplateSeeder::class)) {
+            $allDefaults = $allDefaults->merge(EcommerceEmailTemplateSeeder::defaults());
+        }
+
+        $defaults = $allDefaults->firstWhere('slug', $emailTemplate->slug);
+
+        if ($defaults) {
+            $emailTemplate->update($defaults);
+
+            return redirect()->back()->with('success', __('Template restauré aux valeurs par défaut'));
+        }
+
+        return redirect()->back()->with('error', __('Aucun défaut trouvé pour ce template'));
+    }
+}
