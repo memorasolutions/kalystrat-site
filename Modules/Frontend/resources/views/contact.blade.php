@@ -22,7 +22,7 @@
                         <div class="mb-3">
                             <i class="ri-map-pin-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
                         </div>
-                        <h4>Notre adresse</h4>
+                        <h3>Notre adresse</h3>
                         <p>Québec, QC<br>Canada</p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
                         <div class="mb-3">
                             <i class="ri-phone-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
                         </div>
-                        <h4>Téléphone</h4>
+                        <h3>Téléphone</h3>
                         <p><a href="tel:4184760987">418-476-0987</a></p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <div class="mb-3">
                             <i class="ri-mail-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
                         </div>
-                        <h4>Courriel</h4>
+                        <h3>Courriel</h3>
                         <p><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
                     </div>
                 </div>
@@ -81,15 +81,15 @@
                         <div class="row gx-30">
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="name" class="form-label">Nom complet <span class="text-danger">*</span></label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom complet" value="{{ old('name') }}" required>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom complet" value="{{ old('name') }}" required autocomplete="name" aria-required="true">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="email" class="form-label">Courriel <span class="text-danger">*</span></label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Votre adresse courriel" value="{{ old('email') }}" required>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Votre adresse courriel" value="{{ old('email') }}" required autocomplete="email" aria-required="true">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="phone" class="form-label">Téléphone</label>
-                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Votre numéro de téléphone" value="{{ old('phone') }}">
+                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Votre numéro de téléphone" value="{{ old('phone') }}" autocomplete="tel">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="subject" class="form-label">Sujet <span class="text-danger">*</span></label>

@@ -37,7 +37,7 @@
                     </div>
                     <p>Chez Kalystrat, nous abordons chaque projet de construction et de développement avec une planification méticuleuse et une vision à long terme. Notre approche stratégique garantit des résultats optimaux, une efficacité accrue et une satisfaction client inégalée.</p>
                     <p>Inspirés par les principes fondamentaux de l'architecture — planification, organisation, ordre et précision — nous bâtissons l'avenir avec stratégie.</p>
-                    <a href="<?php echo e(route('frontend.about')); ?>" class="link-btn">En savoir plus <i class="ri-arrow-right-line"></i></a>
+                    <a href="<?php echo e(route('frontend.about')); ?>" class="link-btn" aria-label="En savoir plus sur Kalystrat">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                         </div>
                         <h3 class="service-card_title">Construction résidentielle</h3>
                         <p class="service-card_text">Des maisons personnalisées aux projets multifamiliaux, nous construisons des espaces de vie exceptionnels.</p>
-                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn">En savoir plus <i class="ri-arrow-right-line"></i></a>
+                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn" aria-label="En savoir plus sur ce service">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
@@ -68,7 +68,7 @@
                         </div>
                         <h3 class="service-card_title">Développement immobilier</h3>
                         <p class="service-card_text">Nous transformons les visions en réalités tangibles, du concept à la réalisation de projets immobiliers.</p>
-                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn">En savoir plus <i class="ri-arrow-right-line"></i></a>
+                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn" aria-label="En savoir plus sur ce service">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
@@ -78,7 +78,7 @@
                         </div>
                         <h3 class="service-card_title">Gestion de projets</h3>
                         <p class="service-card_text">Une gestion rigoureuse pour assurer le respect des délais, des budgets et des normes de qualité.</p>
-                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn">En savoir plus <i class="ri-arrow-right-line"></i></a>
+                        <a href="<?php echo e(route('frontend.services')); ?>" class="link-btn" aria-label="En savoir plus sur ce service">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>

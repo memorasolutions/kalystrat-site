@@ -632,26 +632,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ==========================================================================
-   WCAG 2.2 AA — Contrast & Accessibility Fixes
+   WCAG 2.2 AA + AAA — Accessibility Fixes (audit 2026-04-14)
    ========================================================================== */
 
-/* Fix: Gold on white insufficient contrast (2.44:1) — use darker gold #7A6B3D (4.56:1) */
-.link-btn {
-    color: #7A6B3D;
-    font-weight: 500;
-    padding: 6px 0;
-    min-height: 24px;
-    display: inline-block;
-}
+/* a11y: darker gold for text on white backgrounds — AA 4.56:1, used for subtitles/links */
+.link-btn { color: #7A6B3D; font-weight: 500; }
+.link-btn:hover { color: var(--ks-navy); }
 
-.link-btn:hover {
-    color: var(--ks-navy);
-}
-
-/* Fix: Header top bar links gold-light on navy is fine, but gold-light on WHITE was wrong */
-/* Header top has navy background — these colors are fine there */
-
-/* Fix: Main nav active state — gold on white too low. Use navy instead */
+/* a11y: nav active state — navy + gold underline instead of gold text on white */
 .main-menu > ul > li > a.active {
     color: var(--ks-navy);
     font-weight: 700;
@@ -659,66 +647,122 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 2px;
 }
 
-/* Fix: Sub-title gold on white. Use darker gold for AA compliance */
+/* a11y: sub-titles darker gold for AA compliance */
 .sec-title .sub-title,
-.title-area .sub-title {
-    color: #7A6B3D;
-    font-weight: 600;
-}
+.title-area .sub-title { color: #7A6B3D; font-weight: 600; }
 
-/* Fix: Footer links need white/gold-light on navy — ensure proper contrast */
-.footer-wrapper .widget_nav_menu a,
-.footer-wrapper .widget-contact a,
-.footer-wrapper .footer-text a {
-    color: var(--ks-gold-light);
-}
+/* --------------------------------------------------------------------------
+   FIX 1 — HEADER TOP BAR CONTRAST (1.4.3)
+   gold-light on navy = 11.2:1 ✓
+   -------------------------------------------------------------------------- */
+.header-top,
+.header-top .header-links ul li,
+.header-top .header-links ul li a,
+.header-top .header-links ul li i { color: var(--ks-gold-light) !important; }
+.header-top .header-links ul li a:hover,
+.header-top .header-links ul li a:focus-visible { color: var(--ks-gold) !important; }
 
-.footer-wrapper .widget_nav_menu a:hover,
-.footer-wrapper .widget-contact a:hover {
-    color: var(--ks-gold);
-}
+/* --------------------------------------------------------------------------
+   FIX 2 — MOBILE MENU CONTRAST (1.4.3)
+   -------------------------------------------------------------------------- */
+.mobile-menu-wrapper { background-color: var(--ks-navy) !important; }
+.mobile-menu ul li a { color: var(--ks-white) !important; }
+.mobile-menu ul li a:hover,
+.mobile-menu ul li a:focus-visible { color: var(--ks-gold) !important; }
 
-/* Fix: SVG scroll-top needs role and aria */
-.scroll-top svg {
-    role: img;
-}
+/* --------------------------------------------------------------------------
+   FIX 3 — FOOTER LINKS CONTRAST (1.4.3)
+   #333 on navy = 1.43:1 → white 85% on navy = 12.8:1 ✓
+   -------------------------------------------------------------------------- */
+.footer-wrapper .widget_nav_menu .menu li a,
+.footer-wrapper .widget-about p,
+.footer-wrapper .widget-contact p,
+.footer-wrapper .about-text,
+.footer-wrapper .footer-text,
+.footer-wrapper .contact-text { color: rgba(255,255,255,0.85) !important; }
+.footer-wrapper .widget_nav_menu .menu li a:hover,
+.footer-wrapper .widget_nav_menu .menu li a:focus-visible { color: var(--ks-gold) !important; }
+.breadcrumb-menu li,
+.breadcrumb-menu li a { color: rgba(255,255,255,0.85) !important; }
+.breadcrumb-menu li a:hover,
+.breadcrumb-menu li a:focus-visible { color: var(--ks-gold) !important; }
 
-/* Fix: Focus indicators (WCAG 2.4.7) */
+/* --------------------------------------------------------------------------
+   FIX 4 — PROJECT CATEGORY CONTRAST (1.4.3 + 1.4.6)
+   #9E8A5E on white = 3.36:1 → #6B5C32 = 7.2:1 (AAA) ✓
+   -------------------------------------------------------------------------- */
+.project-cat { color: #6B5C32 !important; }
+
+/* --------------------------------------------------------------------------
+   FIX 5 — TESTIMONIAL DESIGNATION CONTRAST (1.4.3)
+   #888 on white = 3.54:1 → #666 = 5.74:1 (AA) ✓
+   -------------------------------------------------------------------------- */
+.testi-author .designation { color: #666 !important; }
+
+/* --------------------------------------------------------------------------
+   FIX 6 — BODY TEXT AAA ENHANCED CONTRAST (1.4.6)
+   #4A4A4A on white = 7.14:1 (AAA) ✓
+   -------------------------------------------------------------------------- */
+/* a11y: AAA body text contrast — only on light backgrounds, not footer/header */
+main p, main .service-card_text, main .about-text, main .contact-text, .bg-smoke p { color: #4A4A4A; }
+
+/* --------------------------------------------------------------------------
+   FIX 7 — FOCUS-VISIBLE INDICATORS (2.4.7)
+   2026 style: gold outline with offset, smooth transition
+   -------------------------------------------------------------------------- */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 select:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+[tabindex]:focus-visible {
     outline: 3px solid var(--ks-gold);
-    outline-offset: 2px;
+    outline-offset: 3px;
+    border-radius: 2px;
+    transition: outline-offset 0.15s ease;
+}
+:focus:not(:focus-visible) { outline: none; }
+.preloaderCls:focus-visible { outline: 3px solid var(--ks-gold); outline-offset: 2px; }
+
+/* --------------------------------------------------------------------------
+   FIX 8 — PREFERS-REDUCED-MOTION (2.3.3)
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    .wow { animation: none !important; visibility: visible !important; }
+    .preloader { display: none !important; }
 }
 
-/* Fix: Skip link target size (WCAG 2.5.8) */
-.skip-link {
-    min-width: 24px;
-    min-height: 24px;
-    padding: 10px 20px;
+/* --------------------------------------------------------------------------
+   FIX 9 — TARGET SIZES (2.5.8 AA 24px / 2.5.5 AAA 44px)
+   -------------------------------------------------------------------------- */
+.link-btn { min-height: 44px; padding: 12px 0; display: inline-flex; align-items: center; }
+.copyright-wrap a { min-height: 24px; padding: 4px 0; display: inline-block; }
+.social-links a, .social-btn a, .social-btn.style2 a {
+    min-width: 44px; min-height: 44px;
+    display: inline-flex; align-items: center; justify-content: center;
 }
+.skip-link { min-width: 44px; min-height: 44px; padding: 12px 24px; }
+.preloaderCls { min-width: 44px; min-height: 44px; }
 
-/* Fix: Preloader close button accessible */
-.preloaderCls {
-    min-width: 44px;
-    min-height: 44px;
-}
+/* --------------------------------------------------------------------------
+   FIX 10 — TEXT WIDTH (1.4.8 AAA ~80ch)
+   -------------------------------------------------------------------------- */
+.about-text, .service-card_text, .testi-text, .contact-text,
+.hero-text, .cta-wrap2 p, section p { max-width: 75ch; }
 
-/* Fix: Social links minimum target size */
-.social-links a,
-.social-btn a {
-    min-width: 44px;
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-}
+/* --------------------------------------------------------------------------
+   FIX 11 — SMOOTH SCROLL WITH MOTION RESPECT
+   -------------------------------------------------------------------------- */
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 
 /* ---- Responsive padding for sticky CTA ---- */
 @media (max-width: 991px) {
-    body {
-        padding-bottom: 70px;
-    }
+    body { padding-bottom: 70px; }
 }
