@@ -13,6 +13,18 @@
     --ks-text: #333333;
 }
 
+/* ---- Logo sizing ---- */
+.header-logo img,
+.header-navbar-logo img {
+    max-width: 180px;
+    height: auto;
+}
+
+.mobile-logo img {
+    max-width: 150px;
+    height: auto;
+}
+
 /* ---- Typography ---- */
 body {
     font-family: 'Akzidenz Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -334,6 +346,374 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-menu ul li a:hover {
     color: var(--ks-gold);
+}
+
+/* ==========================================================================
+   VISUAL FIXES — Construz theme adaptation
+   ========================================================================== */
+
+/* ---- FIX: Hero section ---- */
+.hero-wrapper.hero-1 {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--ks-navy);
+}
+
+.hero-style1 {
+    padding: 120px 0 80px;
+}
+
+.hero-style1 .btn-group {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* ---- FIX: Counter section ---- */
+.counter-wrap {
+    padding: 80px 0;
+    background-color: var(--ks-navy);
+    background-size: cover;
+    background-position: center;
+}
+
+.counter-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.counter-card .title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--ks-gold);
+    margin-bottom: 5px;
+}
+
+.counter-card p {
+    color: var(--ks-white);
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+}
+
+/* ---- FIX: Service cards ---- */
+.service-card {
+    background: var(--ks-white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.service-card:hover {
+    border-color: var(--ks-gold);
+    box-shadow: 0 10px 30px rgba(10, 22, 40, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-card_icon i {
+    font-size: 3rem;
+    color: var(--ks-gold);
+    margin-bottom: 15px;
+    display: block;
+}
+
+.service-card_title {
+    font-size: 1.25rem;
+    color: var(--ks-navy);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.service-card_text {
+    color: #666;
+    line-height: 1.7;
+}
+
+/* ---- FIX: Project/Portfolio cards ---- */
+.project-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.project-img {
+    overflow: hidden;
+}
+
+.project-img img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img img {
+    transform: scale(1.1);
+}
+
+.project-content {
+    padding: 15px 0;
+}
+
+.project-title {
+    font-size: 1.1rem;
+    color: var(--ks-navy);
+    font-weight: 600;
+}
+
+.project-cat {
+    color: var(--ks-gold-hover);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+/* ---- FIX: Testimonial cards ---- */
+.testi-box {
+    background: var(--ks-white);
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+    height: 100%;
+}
+
+.testi-text {
+    font-style: italic;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.testi-author .name {
+    font-weight: 600;
+    color: var(--ks-navy);
+    margin-bottom: 3px;
+}
+
+.testi-author .designation {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.testi-rating i {
+    color: var(--ks-gold);
+}
+
+/* ---- FIX: Team cards ---- */
+.team-card {
+    background: var(--ks-white);
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.team-card:hover {
+    box-shadow: 0 10px 30px rgba(10, 22, 40, 0.1);
+}
+
+.team-img img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.team-content {
+    padding: 20px;
+}
+
+.team-title {
+    font-size: 1.1rem;
+    color: var(--ks-navy);
+    font-weight: 600;
+}
+
+.team-desig {
+    color: var(--ks-gold-hover);
+    font-size: 0.9rem;
+}
+
+/* ---- FIX: Process boxes ---- */
+.process-box {
+    padding: 30px;
+    text-align: center;
+}
+
+.process-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--ks-gold);
+    margin-bottom: 10px;
+}
+
+.process-box h5 {
+    color: var(--ks-navy);
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.process-box p {
+    color: #666;
+}
+
+/* ---- FIX: Feature boxes ---- */
+.feature-box {
+    background: var(--ks-white);
+    border-radius: 8px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.feature-box:hover {
+    border-color: var(--ks-gold);
+    box-shadow: 0 5px 20px rgba(10, 22, 40, 0.08);
+}
+
+/* ---- FIX: Breadcrumb ---- */
+.breadcrumb-wrapper {
+    padding: 80px 0 60px;
+    background-color: var(--ks-navy);
+}
+
+.breadcrumb-title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.breadcrumb-menu {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+
+.breadcrumb-menu li::before {
+    content: '/';
+    margin-right: 10px;
+    color: var(--ks-gold-light);
+}
+
+.breadcrumb-menu li:first-child::before {
+    content: '';
+    margin: 0;
+}
+
+/* ---- FIX: Portfolio filters ---- */
+.portfolio-filter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.btn-filter {
+    background: transparent;
+    border: 2px solid #ddd;
+    color: var(--ks-navy);
+    padding: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-filter.active,
+.btn-filter:hover {
+    background: var(--ks-gold);
+    border-color: var(--ks-gold);
+    color: var(--ks-navy);
+}
+
+/* ==========================================================================
+   WCAG 2.2 AA — Contrast & Accessibility Fixes
+   ========================================================================== */
+
+/* Fix: Gold on white insufficient contrast (2.44:1) — use darker gold #7A6B3D (4.56:1) */
+.link-btn {
+    color: #7A6B3D;
+    font-weight: 500;
+    padding: 6px 0;
+    min-height: 24px;
+    display: inline-block;
+}
+
+.link-btn:hover {
+    color: var(--ks-navy);
+}
+
+/* Fix: Header top bar links gold-light on navy is fine, but gold-light on WHITE was wrong */
+/* Header top has navy background — these colors are fine there */
+
+/* Fix: Main nav active state — gold on white too low. Use navy instead */
+.main-menu > ul > li > a.active {
+    color: var(--ks-navy);
+    font-weight: 700;
+    border-bottom: 2px solid var(--ks-gold);
+    padding-bottom: 2px;
+}
+
+/* Fix: Sub-title gold on white. Use darker gold for AA compliance */
+.sec-title .sub-title,
+.title-area .sub-title {
+    color: #7A6B3D;
+    font-weight: 600;
+}
+
+/* Fix: Footer links need white/gold-light on navy — ensure proper contrast */
+.footer-wrapper .widget_nav_menu a,
+.footer-wrapper .widget-contact a,
+.footer-wrapper .footer-text a {
+    color: var(--ks-gold-light);
+}
+
+.footer-wrapper .widget_nav_menu a:hover,
+.footer-wrapper .widget-contact a:hover {
+    color: var(--ks-gold);
+}
+
+/* Fix: SVG scroll-top needs role and aria */
+.scroll-top svg {
+    role: img;
+}
+
+/* Fix: Focus indicators (WCAG 2.4.7) */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--ks-gold);
+    outline-offset: 2px;
+}
+
+/* Fix: Skip link target size (WCAG 2.5.8) */
+.skip-link {
+    min-width: 24px;
+    min-height: 24px;
+    padding: 10px 20px;
+}
+
+/* Fix: Preloader close button accessible */
+.preloaderCls {
+    min-width: 44px;
+    min-height: 44px;
+}
+
+/* Fix: Social links minimum target size */
+.social-links a,
+.social-btn a {
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ---- Responsive padding for sticky CTA ---- */

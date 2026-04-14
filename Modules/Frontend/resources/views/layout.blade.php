@@ -74,6 +74,9 @@
     {{-- Kalystrat custom CSS --}}
     <link rel="stylesheet" href="{{ asset('assets/css/kalystrat.css') }}">
 
+    {{-- Schema.org JSON-LD --}}
+    @include('frontend::partials.schema-jsonld')
+
     @stack('styles')
 </head>
 <body>
@@ -83,7 +86,7 @@
 
     {{-- Preloader --}}
     <div class="preloader">
-        <button class="btn preloaderCls">
+        <button class="btn preloaderCls" aria-label="Fermer le préchargement">
             <i class="ri-close-line"></i>
         </button>
         <div class="preloader-wrap">
@@ -130,14 +133,14 @@
         <div class="sticky-wrapper">
             <div class="menu-area">
                 <div class="header-navbar-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo.svg') }}" alt="Kalystrat"></a>
+                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="logo-bg"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto d-xxl-none d-block">
                             <div class="header-logo">
-                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo.svg') }}" alt="Kalystrat"></a>
+                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
                             </div>
                         </div>
                         <div class="col-auto ms-auto ms-xxl-0">
@@ -188,7 +191,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo.svg') }}" alt="Kalystrat"></a>
+                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle" aria-label="Fermer le menu"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -231,7 +234,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo.svg') }}" alt="Kalystrat"></a>
+                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat" style="max-width: 200px; height: auto;"></a>
                 </div>
                 <div class="subscribe-box">
                     <p class="subscribe-box_text">Restez informé des dernières nouvelles et tendances en construction stratégique.</p>
@@ -301,8 +304,8 @@
     </footer>
 
     {{-- Scroll To Top --}}
-    <div class="scroll-top">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102">
+    <div class="scroll-top" role="button" aria-label="Retour en haut de page" tabindex="0">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" role="img" aria-hidden="true">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>

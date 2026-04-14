@@ -1,0 +1,37 @@
+<svg viewBox="0 0 400 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#B8A472"/>
+      <stop offset="100%" stop-color="#999779"/>
+    </linearGradient>
+  </defs>
+
+  <!-- K-Eye Symbol -->
+  <g transform="translate(10, 10)">
+    <rect x="12" y="0" width="5" height="60" fill="url(#gold)"/>
+    <polygon points="17,30 17,24 42,0 48,0 48,6" fill="url(#gold)"/>
+    <polygon points="17,30 17,36 42,60 48,60 48,54" fill="url(#gold)"/>
+    <path d="M 0,22 Q 30,2 58,22" stroke="url(#gold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 0,38 Q 30,58 58,38" stroke="url(#gold)" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 0,22 Q 8,30 0,38" stroke="url(#gold)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 58,22 Q 50,30 58,38" stroke="url(#gold)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <circle cx="30" cy="30" r="5" fill="url(#gold)"/>
+    <path d="M 0,38 Q -2,48 6,56" stroke="url(#gold)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M 6,56 Q 12,54 10,48" stroke="url(#gold)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- KALYSTRAT text - white for dark backgrounds -->
+  <g transform="translate(85, 20)">
+    <path d="M 0,0 L 0,28 M 0,14 L 10,0 M 0,14 L 10,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 20,28 L 27,0 L 34,28 M 23,18 L 31,18" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 44,0 L 44,28 L 54,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 64,0 L 69,12 L 74,0 M 69,12 L 69,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 93,4 Q 93,0 85,0 Q 79,0 79,6 Q 79,11 86,13 Q 93,15 93,21 Q 93,28 85,28 Q 79,28 79,24" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 103,0 L 117,0 L 107,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 125,28 L 125,0 L 133,0 Q 139,0 139,7 Q 139,14 133,14 L 125,14 M 133,14 L 139,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 149,28 L 156,0 L 163,28 M 152,18 L 160,18" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+    <path d="M 173,0 L 187,0 L 177,28" stroke="#FFFFFF" stroke-width="3" fill="none" stroke-linecap="square"/>
+  </g>
+
+  <text x="85" y="62" fill="#FFFFFF" font-family="'Akzidenz Grotesk', 'Helvetica Neue', Arial, sans-serif" font-size="7" letter-spacing="0.15em" opacity="0.8">STRATEGIC CONSTRUCTION &amp; DEVELOPMENT</text>
+</svg>
