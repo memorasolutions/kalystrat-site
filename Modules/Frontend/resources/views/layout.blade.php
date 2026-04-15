@@ -237,7 +237,7 @@
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat" style="max-width: 200px; height: auto;"></a>
                 </div>
                 <div class="subscribe-box">
-                    <p class="subscribe-box_text">Restez informé des dernières nouvelles et tendances en construction stratégique.</p>
+                    <p class="subscribe-box_text">Restez informé de nos projets de développement et opportunités d'investissement.</p>
                 </div>
             </div>
             <div class="widget-area">
@@ -245,7 +245,7 @@
                     <div class="col-md-6 col-xl-3">
                         <div class="widget widget-about footer-widget">
                             <h3 class="widget_title">À propos</h3>
-                            <p class="about-text">Construction stratégique et développement immobilier à Québec. Chaque projet commence par une stratégie.</p>
+                            <p class="about-text">Investissement stratégique et développement. Nous développons et gérons des actifs qui génèrent une valeur durable à long terme.</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">

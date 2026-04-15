@@ -1,7 +1,7 @@
 @extends('frontend::layout')
 
 @section('title', 'Portfolio - Kalystrat')
-@section('meta_description', 'Découvrez les projets de construction et de développement immobilier réalisés par Kalystrat à Québec.')
+@section('meta_description', 'Découvrez les projets de développement stratégique et d\'investissement immobilier réalisés par Kalystrat à Québec.')
 @section('breadcrumb_title', 'Portfolio')
 @section('breadcrumb')
     <li>Portfolio</li>
@@ -14,7 +14,7 @@
             <div class="title-area text-center">
                 <span class="sub-title"><i class="ri-focus-2-line"></i> NOS RÉALISATIONS</span>
                 <h2 class="sec-title">Projets récents</h2>
-                <p>Découvrez nos projets de construction les plus remarquables à travers le Québec.</p>
+                <p>Découvrez nos projets de développement stratégique et d'investissement immobilier à travers le Québec.</p>
             </div>
 
             {{-- Filtres --}}
@@ -32,7 +32,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item residentiel wow fadeInUp" data-wow-delay="0.1s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project1_1.png') }}" alt="Résidence Montcalm">
+                            <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="Résidence Montcalm">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Résidentiel</span>
@@ -43,7 +43,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item commercial wow fadeInUp" data-wow-delay="0.2s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project1_2.png') }}" alt="Centre commercial Laurier">
+                            <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="Centre commercial Laurier">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Commercial</span>
@@ -54,7 +54,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item renovation wow fadeInUp" data-wow-delay="0.3s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project1_3.png') }}" alt="Rénovation Vieux-Québec">
+                            <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="Rénovation Vieux-Québec">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Rénovation</span>
@@ -65,7 +65,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item residentiel wow fadeInUp" data-wow-delay="0.4s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project2_1.png') }}" alt="Condos Sainte-Foy">
+                            <img src="{{ asset('assets/img/kalystrat/project-blueprint.jpg') }}" alt="Condos Sainte-Foy">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Résidentiel</span>
@@ -76,7 +76,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item commercial wow fadeInUp" data-wow-delay="0.5s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project2_2.png') }}" alt="Édifice Lebourgneuf">
+                            <img src="{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}" alt="Édifice Lebourgneuf">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Commercial</span>
@@ -87,7 +87,7 @@
                 <div class="col-lg-4 col-md-6 isotope-item renovation wow fadeInUp" data-wow-delay="0.6s">
                     <div class="project-card">
                         <div class="project-img">
-                            <img src="{{ asset('assets/construz/img/project/project2_3.png') }}" alt="Restauration Charlesbourg">
+                            <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Restauration Charlesbourg">
                         </div>
                         <div class="project-content">
                             <span class="project-cat">Rénovation</span>

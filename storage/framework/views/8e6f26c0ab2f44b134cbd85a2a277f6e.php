@@ -7,7 +7,7 @@
       "@id": "<?php echo e(config('app.url')); ?>#localbusiness",
       "name": "Kalystrat",
       "legalName": "Kalystrat",
-      "description": "Construction stratégique et développement immobilier à Québec",
+      "description": "Investissement stratégique et développement. Nous développons et gérons des actifs qui génèrent une valeur durable à long terme.",
       "url": "<?php echo e(config('app.url')); ?>",
       "logo": "<?php echo e(config('app.url')); ?>/assets/img/kalystrat/logo-header.svg",
       "telephone": "418-476-0987",

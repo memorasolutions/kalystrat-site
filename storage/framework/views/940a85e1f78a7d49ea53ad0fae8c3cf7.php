@@ -1,20 +1,18 @@
-@extends('frontend::layout')
-
-@section('title', 'Qui nous sommes - Kalystrat')
-@section('meta_description', 'Découvrez Kalystrat, plateforme de développement stratégique et d\'investissement immobilier à Québec. Vision, équipe et approche.')
-@section('breadcrumb_title', 'Qui nous sommes')
-@section('breadcrumb')
+<?php $__env->startSection('title', 'Qui nous sommes - Kalystrat'); ?>
+<?php $__env->startSection('meta_description', 'Découvrez Kalystrat, plateforme de développement stratégique et d\'investissement immobilier à Québec. Vision, équipe et approche.'); ?>
+<?php $__env->startSection('breadcrumb_title', 'Qui nous sommes'); ?>
+<?php $__env->startSection('breadcrumb'); ?>
     <li>Qui nous sommes</li>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
-    {{-- Notre vision --}}
+<?php $__env->startSection('content'); ?>
+    
     <section class="space-top space-bottom">
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6 wow fadeInLeft">
                     <div class="img-box1">
-                        <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="Réunion stratégique Kalystrat" style="width: 100%; object-fit: cover;">
+                        <img src="<?php echo e(asset('assets/img/kalystrat/about-strategy.jpg')); ?>" alt="Réunion stratégique Kalystrat" style="width: 100%; object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight">
@@ -35,7 +33,7 @@
         </div>
     </section>
 
-    {{-- Équipe dirigeante --}}
+    
     <section class="space-top space-bottom bg-smoke">
         <div class="container">
             <div class="title-area text-center">
@@ -47,7 +45,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-1.png') }}" alt="Ali Salomon — Fondateur et président de Kalystrat">
+                            <img src="<?php echo e(asset('assets/construz/img/team/team-1-1.png')); ?>" alt="Ali Salomon — Fondateur et président de Kalystrat">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Ali Salomon</h3>
@@ -58,7 +56,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-2.png') }}" alt="Nathalia Benavidez — Directrice du développement">
+                            <img src="<?php echo e(asset('assets/construz/img/team/team-1-2.png')); ?>" alt="Nathalia Benavidez — Directrice du développement">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Nathalia Benavidez</h3>
@@ -69,7 +67,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-3.png') }}" alt="Amed Zakzuk — Directeur des investissements">
+                            <img src="<?php echo e(asset('assets/construz/img/team/team-1-3.png')); ?>" alt="Amed Zakzuk — Directeur des investissements">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Amed Zakzuk</h3>
@@ -81,7 +79,7 @@
         </div>
     </section>
 
-    {{-- Pourquoi Kalystrat --}}
+    
     <section class="space-top space-bottom">
         <div class="container">
             <div class="title-area text-center">
@@ -120,4 +118,6 @@
             </div>
         </div>
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend::layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /Users/stephanelapointe/__IA__/_____SERVEUR_____/site_internet/kalystrat/Modules/Frontend/resources/views/about.blade.php ENDPATH**/ ?>
