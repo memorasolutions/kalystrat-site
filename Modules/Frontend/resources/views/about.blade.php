@@ -14,7 +14,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 wow fadeInLeft">
                     <div class="img-box1">
-                        <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="Réunion stratégique Kalystrat" style="width: 100%; object-fit: cover;">
+                        <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="Réunion stratégique Kalystrat" loading="lazy" style="width: 100%; object-fit: cover;">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight">
@@ -47,7 +47,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-1.png') }}" alt="Ali Salomon — Fondateur et président de Kalystrat">
+                            <img src="{{ asset('assets/construz/img/team/team-1-1.png') }}" alt="Ali Salomon — Fondateur et président de Kalystrat" loading="lazy">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Ali Salomon</h3>
@@ -58,7 +58,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-2.png') }}" alt="Nathalia Benavidez — Directrice du développement">
+                            <img src="{{ asset('assets/construz/img/team/team-1-2.png') }}" alt="Nathalia Benavidez — Directrice du développement" loading="lazy">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Nathalia Benavidez</h3>
@@ -69,7 +69,7 @@
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="team-card text-center">
                         <div class="team-img">
-                            <img src="{{ asset('assets/construz/img/team/team-1-3.png') }}" alt="Amed Zakzuk — Directeur des investissements">
+                            <img src="{{ asset('assets/construz/img/team/team-1-3.png') }}" alt="Amed Zakzuk — Directeur des investissements" loading="lazy">
                         </div>
                         <div class="team-content">
                             <h3 class="team-title">Amed Zakzuk</h3>

@@ -14,6 +14,13 @@
 }
 
 /* ---- Logo sizing ---- */
+.header-logo a,
+.header-navbar-logo a {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 4px 0;
+}
 .header-logo img,
 .header-navbar-logo img {
     max-width: 180px;
@@ -671,15 +678,20 @@ html body .header-top .social-links a:hover {
    FIX 2 — MOBILE MENU CONTRAST (1.4.3)
    -------------------------------------------------------------------------- */
 .mobile-menu-wrapper { background-color: var(--ks-navy) !important; }
+.mobile-menu-wrapper .mobile-menu-area { background-color: var(--ks-navy) !important; }
 .mobile-menu ul li a { color: var(--ks-white) !important; }
 .mobile-menu ul li a:hover,
 .mobile-menu ul li a:focus-visible { color: var(--ks-gold) !important; }
+.mobile-menu-wrapper .menu-toggle { color: var(--ks-gold) !important; }
 
 /* --------------------------------------------------------------------------
    FIX 3 — FOOTER LINKS CONTRAST (1.4.3)
    #333 on navy = 1.43:1 → white 85% on navy = 12.8:1 ✓
    -------------------------------------------------------------------------- */
 .footer-wrapper .widget_nav_menu .menu li a,
+.footer-wrapper .widget_nav_menu .menu li,
+.footer-wrapper li,
+.footer-wrapper p,
 .footer-wrapper .widget-about p,
 .footer-wrapper .widget-contact p,
 .footer-wrapper .about-text,

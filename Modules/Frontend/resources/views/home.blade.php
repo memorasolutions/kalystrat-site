@@ -30,7 +30,7 @@
         <div class="row align-items-center">
             <div class="col-lg-6 wow fadeInLeft">
                 <div class="img-box1" style="position: relative; overflow: hidden;">
-                    <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Réunion stratégique de l'équipe Kalystrat" style="width: 100%; height: 520px; object-fit: cover;">
+                    <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Réunion stratégique de l'équipe Kalystrat" loading="lazy" style="width: 100%; height: 520px; object-fit: cover;">
                     <div style="position: absolute; bottom: 0; left: 0; background: var(--ks-gold); padding: 1.75rem 2.25rem;">
                         <span style="display: block; font-size: 2.5rem; font-weight: 700; color: var(--ks-navy); line-height: 1;">15+</span>
                         <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ks-navy); margin-top: 0.25rem;">Années d'expertise</span>
@@ -129,7 +129,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="Complexe résidentiel Le Plateau">
+                        <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="Complexe résidentiel Le Plateau" loading="lazy">
                     </div>
                     <div class="project-content">
                         <span class="project-cat">Résidentiel</span>
@@ -140,7 +140,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="Développement commercial Centre-Ville">
+                        <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="Développement commercial Centre-Ville" loading="lazy">
                     </div>
                     <div class="project-content">
                         <span class="project-cat">Commercial</span>
@@ -151,7 +151,7 @@
             <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="project-card">
                     <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="Projet mixte Sainte-Foy">
+                        <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="Projet mixte Sainte-Foy" loading="lazy">
                     </div>
                     <div class="project-content">
                         <span class="project-cat">Mixte</span>

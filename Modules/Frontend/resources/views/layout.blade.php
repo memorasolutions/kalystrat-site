@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>@yield('title', 'Kalystrat - Strategic Construction & Development')</title>
-    <meta name="description" content="@yield('meta_description', 'Kalystrat offre des solutions stratégiques en construction et développement immobilier à Québec.')">
+    <title>@yield('title', 'Kalystrat - Investissement stratégique et développement')</title>
+    <meta name="description" content="@yield('meta_description', 'Kalystrat développe et gère des actifs stratégiques à Québec. Investissement immobilier, développement et gestion avec vision à long terme.')">
     <meta name="robots" content="INDEX,FOLLOW">
     <meta name="theme-color" content="#0A1628">
 
     {{-- Open Graph --}}
-    <meta property="og:title" content="@yield('og_title', 'Kalystrat - Strategic Construction & Development')">
-    <meta property="og:description" content="@yield('meta_description', 'Construction stratégique et développement immobilier à Québec.')">
+    <meta property="og:title" content="@yield('og_title', 'Kalystrat - Investissement stratégique et développement')">
+    <meta property="og:description" content="@yield('meta_description', 'Kalystrat développe et gère des actifs stratégiques à Québec. Investissement immobilier, développement et gestion avec vision à long terme.')">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="@yield('og_image', asset('assets/img/kalystrat/og-image.jpg'))">
@@ -22,7 +22,9 @@
     <link rel="canonical" href="{{ url()->current() }}">
 
     {{-- Favicon --}}
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('assets/img/kalystrat/favicon.png') }}">
+    <link rel="icon" type="image/svg+xml" href="{{ asset('assets/img/kalystrat/favicon.svg') }}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('assets/img/kalystrat/apple-touch-icon.png') }}">
 
     {{-- Fonts Akzidenz Grotesk --}}
     <style>

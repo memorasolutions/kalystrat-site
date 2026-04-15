@@ -1,7 +1,7 @@
 @extends('frontend::layout')
 
 @section('title', 'Contact - Kalystrat')
-@section('meta_description', 'Contactez Kalystrat pour vos projets de construction et développement immobilier à Québec. Soumission gratuite.')
+@section('meta_description', 'Contactez Kalystrat pour vos projets d\'investissement stratégique et de développement immobilier à Québec. Consultation gratuite.')
 @section('breadcrumb_title', 'Contact')
 @section('breadcrumb')
     <li>Contact</li>
