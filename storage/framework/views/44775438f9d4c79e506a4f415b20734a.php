@@ -150,16 +150,16 @@
                                         <a href="<?php echo e(route('frontend.home')); ?>" class="<?php echo e(request()->routeIs('frontend.home') ? 'active' : ''); ?>">ACCUEIL</a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo e(route('frontend.about')); ?>" class="<?php echo e(request()->routeIs('frontend.about') ? 'active' : ''); ?>">À PROPOS</a>
+                                        <a href="<?php echo e(route('frontend.about')); ?>" class="<?php echo e(request()->routeIs('frontend.about') ? 'active' : ''); ?>">QUI NOUS SOMMES</a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo e(route('frontend.services')); ?>" class="<?php echo e(request()->routeIs('frontend.services*') ? 'active' : ''); ?>">SERVICES</a>
+                                        <a href="<?php echo e(route('frontend.services')); ?>" class="<?php echo e(request()->routeIs('frontend.services*') ? 'active' : ''); ?>">NOTRE APPROCHE</a>
                                     </li>
                                     <li>
                                         <a href="<?php echo e(route('frontend.portfolio')); ?>" class="<?php echo e(request()->routeIs('frontend.portfolio*') ? 'active' : ''); ?>">PORTFOLIO</a>
                                     </li>
                                     <li>
-                                        <a href="<?php echo e(route('frontend.contact')); ?>" class="<?php echo e(request()->routeIs('frontend.contact') ? 'active' : ''); ?>">CONTACT</a>
+                                        <a href="<?php echo e(route('frontend.contact')); ?>" class="<?php echo e(request()->routeIs('frontend.contact') ? 'active' : ''); ?>">NOUS JOINDRE</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="col-auto ms-auto d-xl-block d-none">
                             <div class="header-button">
-                                <a href="<?php echo e(route('frontend.contact')); ?>" class="btn">SOUMISSION GRATUITE <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="<?php echo e(route('frontend.contact')); ?>" class="btn">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -197,10 +197,10 @@
             <div class="mobile-menu">
                 <ul>
                     <li><a href="<?php echo e(route('frontend.home')); ?>">Accueil</a></li>
-                    <li><a href="<?php echo e(route('frontend.about')); ?>">À propos</a></li>
-                    <li><a href="<?php echo e(route('frontend.services')); ?>">Services</a></li>
+                    <li><a href="<?php echo e(route('frontend.about')); ?>">Qui nous sommes</a></li>
+                    <li><a href="<?php echo e(route('frontend.services')); ?>">Notre approche</a></li>
                     <li><a href="<?php echo e(route('frontend.portfolio')); ?>">Portfolio</a></li>
-                    <li><a href="<?php echo e(route('frontend.contact')); ?>">Contact</a></li>
+                    <li><a href="<?php echo e(route('frontend.contact')); ?>">Nous joindre</a></li>
                 </ul>
             </div>
             <div class="mobile-menu-bottom">
@@ -254,10 +254,10 @@
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="<?php echo e(route('frontend.home')); ?>">Accueil</a></li>
-                                    <li><a href="<?php echo e(route('frontend.about')); ?>">À propos</a></li>
-                                    <li><a href="<?php echo e(route('frontend.services')); ?>">Services</a></li>
+                                    <li><a href="<?php echo e(route('frontend.about')); ?>">Qui nous sommes</a></li>
+                                    <li><a href="<?php echo e(route('frontend.services')); ?>">Notre approche</a></li>
                                     <li><a href="<?php echo e(route('frontend.portfolio')); ?>">Portfolio</a></li>
-                                    <li><a href="<?php echo e(route('frontend.contact')); ?>">Contact</a></li>
+                                    <li><a href="<?php echo e(route('frontend.contact')); ?>">Nous joindre</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -312,7 +312,7 @@
 
     
     <div class="d-lg-none position-fixed bottom-0 start-0 end-0 p-3 bg-white shadow-lg" style="z-index: 999;">
-        <a href="<?php echo e(route('frontend.contact')); ?>" class="btn w-100 text-center">SOUMISSION GRATUITE <i class="ri-arrow-right-up-line"></i></a>
+        <a href="<?php echo e(route('frontend.contact')); ?>" class="btn w-100 text-center">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
     </div>
 
     

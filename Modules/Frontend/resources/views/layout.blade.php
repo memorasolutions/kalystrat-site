@@ -150,16 +150,16 @@
                                         <a href="{{ route('frontend.home') }}" class="{{ request()->routeIs('frontend.home') ? 'active' : '' }}">ACCUEIL</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.about') }}" class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">À PROPOS</a>
+                                        <a href="{{ route('frontend.about') }}" class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">QUI NOUS SOMMES</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.services') }}" class="{{ request()->routeIs('frontend.services*') ? 'active' : '' }}">SERVICES</a>
+                                        <a href="{{ route('frontend.services') }}" class="{{ request()->routeIs('frontend.services*') ? 'active' : '' }}">NOTRE APPROCHE</a>
                                     </li>
                                     <li>
                                         <a href="{{ route('frontend.portfolio') }}" class="{{ request()->routeIs('frontend.portfolio*') ? 'active' : '' }}">PORTFOLIO</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.contact') }}" class="{{ request()->routeIs('frontend.contact') ? 'active' : '' }}">CONTACT</a>
+                                        <a href="{{ route('frontend.contact') }}" class="{{ request()->routeIs('frontend.contact') ? 'active' : '' }}">NOUS JOINDRE</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -169,7 +169,7 @@
                         </div>
                         <div class="col-auto ms-auto d-xl-block d-none">
                             <div class="header-button">
-                                <a href="{{ route('frontend.contact') }}" class="btn">SOUMISSION GRATUITE <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('frontend.contact') }}" class="btn">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -197,10 +197,10 @@
             <div class="mobile-menu">
                 <ul>
                     <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
-                    <li><a href="{{ route('frontend.about') }}">À propos</a></li>
-                    <li><a href="{{ route('frontend.services') }}">Services</a></li>
+                    <li><a href="{{ route('frontend.about') }}">Qui nous sommes</a></li>
+                    <li><a href="{{ route('frontend.services') }}">Notre approche</a></li>
                     <li><a href="{{ route('frontend.portfolio') }}">Portfolio</a></li>
-                    <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
+                    <li><a href="{{ route('frontend.contact') }}">Nous joindre</a></li>
                 </ul>
             </div>
             <div class="mobile-menu-bottom">
@@ -254,10 +254,10 @@
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
                                     <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
-                                    <li><a href="{{ route('frontend.about') }}">À propos</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Services</a></li>
+                                    <li><a href="{{ route('frontend.about') }}">Qui nous sommes</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Notre approche</a></li>
                                     <li><a href="{{ route('frontend.portfolio') }}">Portfolio</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Contact</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Nous joindre</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -305,14 +305,14 @@
 
     {{-- Scroll To Top --}}
     <div class="scroll-top" role="button" aria-label="Retour en haut de page" tabindex="0">
-        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" role="img" aria-hidden="true">
+        <svg class="progress-circle svg-content" width="100%" height="100%" viewBox="-1 -1 102 102" role="img" aria-label="Progression du défilement">
             <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" style="transition: stroke-dashoffset 10ms linear 0s; stroke-dasharray: 307.919, 307.919; stroke-dashoffset: 307.919;"></path>
         </svg>
     </div>
 
     {{-- CTA sticky mobile --}}
     <div class="d-lg-none position-fixed bottom-0 start-0 end-0 p-3 bg-white shadow-lg" style="z-index: 999;">
-        <a href="{{ route('frontend.contact') }}" class="btn w-100 text-center">SOUMISSION GRATUITE <i class="ri-arrow-right-up-line"></i></a>
+        <a href="{{ route('frontend.contact') }}" class="btn w-100 text-center">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
     </div>
 
     {{-- JS --}}
