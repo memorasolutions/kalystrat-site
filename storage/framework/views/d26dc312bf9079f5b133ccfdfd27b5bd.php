@@ -1,14 +1,12 @@
-@extends('frontend::layout')
-
-@section('title', 'Contact - Kalystrat')
-@section('meta_description', 'Contactez Kalystrat pour vos projets de construction et développement immobilier à Québec. Soumission gratuite.')
-@section('breadcrumb_title', 'Contact')
-@section('breadcrumb')
+<?php $__env->startSection('title', 'Contact - Kalystrat'); ?>
+<?php $__env->startSection('meta_description', 'Contactez Kalystrat pour vos projets de construction et développement immobilier à Québec. Soumission gratuite.'); ?>
+<?php $__env->startSection('breadcrumb_title', 'Contact'); ?>
+<?php $__env->startSection('breadcrumb'); ?>
     <li>Contact</li>
-@endsection
+<?php $__env->stopSection(); ?>
 
-@section('content')
-    {{-- Contact info --}}
+<?php $__env->startSection('content'); ?>
+    
     <section class="space-top space-bottom">
         <div class="container">
             <div class="title-area text-center">
@@ -48,7 +46,7 @@
         </div>
     </section>
 
-    {{-- Contact form --}}
+    
     <section class="space-bottom">
         <div class="container">
             <div class="row justify-content-center">
@@ -58,59 +56,61 @@
                         <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
                     </div>
 
-                    @if(session('success'))
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(session('success')): ?>
                         <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                            {{ session('success') }}
+                            <?php echo e(session('success')); ?>
+
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
                         </div>
-                    @endif
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    @if(session('error'))
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if(session('error')): ?>
                         <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
-                            {{ session('error') }}
+                            <?php echo e(session('error')); ?>
+
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
                         </div>
-                    @endif
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    @if($errors->any())
+                    <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php endif; ?><?php if($errors->any()): ?>
                         <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
                             <ul class="mb-0">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if BLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::openLoop(); ?><?php endif; ?><?php $__currentLoopData = $errors->all(); $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $error): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::startLoopIteration(); ?><?php endif; ?>
+                                    <li><?php echo e($error); ?></li>
+                                <?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::endLoop(); ?><?php endif; ?><?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php \Livewire\Features\SupportCompiledWireKeys\SupportCompiledWireKeys::closeLoop(); ?><?php endif; ?>
                             </ul>
                             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
                         </div>
-                    @endif
+                    <?php endif; ?><?php if(\Livewire\Mechanisms\ExtendBlade\ExtendBlade::isRenderingLivewireComponent()): ?><!--[if ENDBLOCK]><![endif]--><?php endif; ?>
 
-                    <form action="{{ route('frontend.contact.submit') }}" method="POST">
-                        @csrf
+                    <form action="<?php echo e(route('frontend.contact.submit')); ?>" method="POST">
+                        <?php echo csrf_field(); ?>
                         <div class="row gx-30">
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="name" class="form-label">Nom complet <span class="text-danger">*</span></label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom complet" value="{{ old('name') }}" required autocomplete="name" aria-required="true">
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom complet" value="<?php echo e(old('name')); ?>" required autocomplete="name" aria-required="true">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="email" class="form-label">Courriel <span class="text-danger">*</span></label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Votre adresse courriel" value="{{ old('email') }}" required autocomplete="email" aria-required="true">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Votre adresse courriel" value="<?php echo e(old('email')); ?>" required autocomplete="email" aria-required="true">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="phone" class="form-label">Téléphone</label>
-                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Votre numéro de téléphone" value="{{ old('phone') }}" autocomplete="tel">
+                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Votre numéro de téléphone" value="<?php echo e(old('phone')); ?>" autocomplete="tel">
                             </div>
                             <div class="col-lg-6 col-md-6 mb-3">
                                 <label for="subject" class="form-label">Sujet <span class="text-danger">*</span></label>
                                 <select name="subject" id="subject" class="form-select" required>
-                                    <option value="" disabled {{ old('subject') ? '' : 'selected' }}>Sélectionnez un sujet</option>
-                                    <option value="Soumission" {{ old('subject') == 'Soumission' ? 'selected' : '' }}>Soumission</option>
-                                    <option value="Information" {{ old('subject') == 'Information' ? 'selected' : '' }}>Information</option>
-                                    <option value="Partenariat" {{ old('subject') == 'Partenariat' ? 'selected' : '' }}>Partenariat</option>
-                                    <option value="Autre" {{ old('subject') == 'Autre' ? 'selected' : '' }}>Autre</option>
+                                    <option value="" disabled <?php echo e(old('subject') ? '' : 'selected'); ?>>Sélectionnez un sujet</option>
+                                    <option value="Soumission" <?php echo e(old('subject') == 'Soumission' ? 'selected' : ''); ?>>Soumission</option>
+                                    <option value="Information" <?php echo e(old('subject') == 'Information' ? 'selected' : ''); ?>>Information</option>
+                                    <option value="Partenariat" <?php echo e(old('subject') == 'Partenariat' ? 'selected' : ''); ?>>Partenariat</option>
+                                    <option value="Autre" <?php echo e(old('subject') == 'Autre' ? 'selected' : ''); ?>>Autre</option>
                                 </select>
                             </div>
                             <div class="col-12 mb-4">
                                 <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                                <textarea name="message" id="message" class="form-control" rows="6" placeholder="Décrivez votre projet ou votre demande..." required>{{ old('message') }}</textarea>
+                                <textarea name="message" id="message" class="form-control" rows="6" placeholder="Décrivez votre projet ou votre demande..." required><?php echo e(old('message')); ?></textarea>
                             </div>
                             <div class="col-12 text-center">
                                 <button type="submit" class="btn">ENVOYER LE MESSAGE <i class="ri-send-plane-line"></i></button>
@@ -122,7 +122,7 @@
         </div>
     </section>
 
-    {{-- Map --}}
+    
     <section>
         <div class="container-fluid p-0">
             <iframe
@@ -137,4 +137,6 @@
             </iframe>
         </div>
     </section>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('frontend::layout', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH /Users/stephanelapointe/__IA__/_____SERVEUR_____/site_internet/kalystrat/Modules/Frontend/resources/views/contact.blade.php ENDPATH**/ ?>

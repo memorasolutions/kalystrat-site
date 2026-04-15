@@ -70,20 +70,25 @@ h1, h2, h3, h4, h5, h6 {
     border-color: var(--ks-gold);
 }
 
-/* ---- Header ---- */
-.header-top {
-    background-color: var(--ks-navy);
+/* ---- Header (forced specificity for Construz theme override) ---- */
+/* a11y: header-top MUST be navy bg with gold-light text (WCAG 1.4.3) */
+html body .header-top,
+html body .nav-header .header-top {
+    background-color: #0A1628 !important;
+    background: #0A1628 !important;
 }
 
-.header-top .header-links ul li,
-.header-top .header-links ul li a,
-.header-top .social-links a {
-    color: var(--ks-gold-light);
+html body .header-top .header-links ul li,
+html body .header-top .header-links ul li a,
+html body .header-top .header-links ul li i,
+html body .header-top .social-links a {
+    color: #D4C9A8 !important;
 }
 
-.header-top .header-links ul li a:hover,
-.header-top .social-links a:hover {
-    color: var(--ks-gold);
+html body .header-top .header-links ul li a:hover,
+html body .header-top .header-links ul li a:focus-visible,
+html body .header-top .social-links a:hover {
+    color: var(--ks-gold) !important;
 }
 
 .sticky-wrapper .menu-area {

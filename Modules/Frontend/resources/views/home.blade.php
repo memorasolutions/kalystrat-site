@@ -5,7 +5,7 @@
 
 @section('content')
     {{-- Hero --}}
-    <section class="hero-wrapper hero-1" data-bg-src="{{ asset('assets/construz/img/hero/hero_bg_1_1.png') }}">
+    <section class="hero-wrapper hero-1" data-bg-src="{{ asset('assets/img/kalystrat/hero-bg.jpg') }}">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8">
@@ -29,7 +29,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 wow fadeInLeft">
                     <div class="img-box1">
-                        <img src="{{ asset('assets/construz/img/normal/about_1-1.png') }}" alt="À propos de Kalystrat">
+                        <img src="{{ asset('assets/img/kalystrat/about-bg.jpg') }}" alt="À propos de Kalystrat">
                     </div>
                 </div>
                 <div class="col-lg-6 wow fadeInRight">
