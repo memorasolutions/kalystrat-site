@@ -238,9 +238,6 @@
                 <div class="footer-logo">
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat" style="max-width: 200px; height: auto;"></a>
                 </div>
-                <div class="subscribe-box">
-                    <p class="subscribe-box_text">Restez informé de nos projets de développement et opportunités d'investissement.</p>
-                </div>
             </div>
             <div class="widget-area">
                 <div class="row justify-content-between">
