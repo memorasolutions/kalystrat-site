@@ -45,6 +45,27 @@ class FrontendController extends Controller
         ]);
     }
 
+    /**
+     * Page filiale dynamique (D1 MVP additif).
+     * Désactivable en commentant la route dans routes/web.php.
+     */
+    public function filiale(string $slug): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        if (!isset($filiales[$slug])) {
+            abort(404);
+        }
+
+        $filiale = $filiales[$slug];
+
+        return view('frontend::filiale', [
+            'title'   => $filiale['nom_complet'] . ' - Kalystrat',
+            'filiale' => $filiale,
+        ]);
+    }
+
     public function contactSubmit(Request $request)
     {
         $validated = $request->validate([
