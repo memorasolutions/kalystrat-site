@@ -92,7 +92,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="feature-box text-center p-4">
                         <i class="ri-eye-line" aria-hidden="true" style="font-size: 3rem; color: var(--ks-gold);"></i>
-                        <h5 class="mt-3 mb-2">Vision stratégique</h5>
+                        <h3 class="mt-3 mb-2 h5">Vision stratégique</h3>
                         <p>Nous anticipons les dynamiques de marché pour identifier les opportunités à fort potentiel de valorisation.</p>
                     </div>
                 </div>

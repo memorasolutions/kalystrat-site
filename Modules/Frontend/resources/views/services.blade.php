@@ -75,7 +75,7 @@
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="process-box">
                         <div class="process-number">01</div>
-                        <h5>Analyse et sourcing</h5>
+                        <h3 class="h5">Analyse et sourcing</h3>
                         <p>Veille active des marchés, identification des opportunités et analyse approfondie des fondamentaux selon des critères de rendement et de risque.</p>
                     </div>
                 </div>

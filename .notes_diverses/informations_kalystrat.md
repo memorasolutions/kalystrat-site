@@ -255,3 +255,111 @@ Les nameservers sont pointes vers **SiteGround** (ns1.siteground.net / ns2.siteg
 | 2026-04-07 | Re: Invitation Rencontre (proposition Stephane) | stephane@memora.ca | 19d6a6349721dad9 |
 | 2026-04-07 | Re: Invitation Rencontre (report date) | info@kalystrat.ca | 19d69fa4cb54be21 |
 | 2026-04-04 | Accepte: Rencontre Kalystrat | Google Agenda | 19d5a2679126a05a |
+
+---
+
+## 12. Structure holding & 6 filiales
+
+Gestion Kalystrat Inc. est une holding québécoise de construction à intégration verticale fondée par Ali Salomon (Président et Directeur Général). Le slogan du groupe est **« Conçu. Réalisé. Livré. »**. Les services centralisés (Comptabilité/Finances, RH/CCQ, Juridique/RBQ, Marketing, TI) sont gérés par la holding ; chaque filiale opère sa spécialité.
+
+| # | Filiale | Spécialité |
+|---|---------|-----------|
+| 1 | Kalystrat Fondations Inc. | Excavation, coffrage, fondations, drains français, dalles |
+| 2 | Kalystrat Structure Inc. | Charpente bois/acier/hybride, ossature, poutrelles, fermes |
+| 3 | Kalystrat Toiture et Enveloppe Inc. | Toitures (membranes élastomères/TPO/EPDM/bardeaux), étanchéité, isolation, pare-air/vapeur, revêtements |
+| 4 | Kalystrat Finition Intérieure Inc. | Gypse, peinture, moulures, planchers, ébénisterie, comptoirs |
+| 5 | Kalystrat Immobilier Inc. | Développement résidentiel, flips, portefeuille locatif |
+| 6 | Kalystrat Placement Construction Inc. | Agence de placement main-d'oeuvre construction |
+
+## 13. Convention de marque "Kalystrat + Spécialité"
+
+Chaque filiale porte le préfixe **Kalystrat** suivi de sa spécialité (ex. Kalystrat Fondations, Kalystrat Structure). Cette convention assure une cohérence visuelle immédiate, renforce la reconnaissance de la marque sur les chantiers et projette l'image d'un groupe intégré et professionnel auprès des clients et partenaires.
+
+## 14. Mission, Vision et Différenciateur
+
+**Mission** — Offrir l'excellence en construction grâce à des filiales spécialisées travaillant en synergie sous une marque unifiée, afin de réduire les coûts et les délais tout en garantissant une qualité supérieure.
+
+**Vision** — Devenir un groupe intégré de référence au Québec dans un horizon de huit ans.
+
+**Différenciateur clé** — L'intégration verticale complète, de l'excavation à la finition, en passant par le placement de main-d'oeuvre et le développement immobilier, permet un contrôle total de la chaîne de valeur, éliminant la dépendance aux sous-traitants externes.
+
+## 15. Six piliers concurrentiels
+
+- **Intégration verticale** — contrôle de chaque étape du projet sous un même groupe
+- **Main-d'oeuvre interne** — réduction de la dépendance aux sous-traitants et meilleur contrôle qualité
+- **Demande captive** — Kalystrat Immobilier génère des projets pour les autres filiales
+- **Synergies opérationnelles** — partage d'équipements, de ressources et de savoir-faire entre filiales
+- **Cohérence de marque** — image unifiée « Kalystrat + Spécialité » sur tous les points de contact
+- **Gestion centralisée** — comptabilité, RH, juridique, marketing et TI mutualisés à la holding
+
+## 16. Cibles par filiale
+
+| Filiale | Cibles principales |
+|---------|--------------------|
+| Kalystrat Fondations Inc. | Promoteurs résidentiels, entrepreneurs généraux, municipalités |
+| Kalystrat Structure Inc. | Entrepreneurs généraux, promoteurs, commercial et institutionnel |
+| Kalystrat Toiture et Enveloppe Inc. | Propriétaires, promoteurs, commercial et institutionnel |
+| Kalystrat Finition Intérieure Inc. | Propriétaires, promoteurs résidentiels, designers |
+| Kalystrat Immobilier Inc. | Acheteurs résidentiels, investisseurs, locataires |
+| Kalystrat Placement Construction Inc. | Entrepreneurs généraux, promoteurs, filiales internes |
+
+## 17. Chaîne de valeur intégrée
+
+```
+Immobilier ──> Fondations ──> Structure ──> Toiture/Enveloppe ──> Finition
+    |               |             |                |                  |
+    └───────────────┴─────────────┴────────────────┴──────────────────┘
+                         Placement (main-d'oeuvre à chaque étape)
+```
+
+## 18. Conseil consultatif (prévu)
+
+| Domaine | Personne |
+|---------|----------|
+| Droit de la construction | Jacques Jobidon (avocat) |
+| Immobilier | Perry Wong |
+| Construction sénior | À pourvoir |
+| Financement | À pourvoir |
+| RH / CCQ | À pourvoir |
+
+## 19. Présence numérique prévue
+
+| Plateforme | Stratégie |
+|------------|-----------|
+| Facebook | Pages par filiale, publications projets, témoignages clients |
+| Instagram | Photos/vidéos chantiers, avant/après, stories coulisses |
+| LinkedIn | Page corporative holding, recrutement, positionnement B2B |
+| TikTok | Vidéos courtes chantiers, culture d'entreprise, viralité |
+| Google My Business | 6 fiches distinctes (une par filiale), avis clients, SEO local |
+| Blogue SEO | Articles spécialisés par filiale, mots-clés construction Québec |
+
+## 20. Statistiques de marché clés
+
+| Statistique | Valeur | Source / contexte |
+|-------------|--------|-------------------|
+| Mises en chantier 2025 | 59 864 unités | +24 % par rapport à l'année précédente |
+| Postes vacants construction | 11 000 postes | Pénurie main-d'oeuvre Québec |
+| Marché de la rénovation | 19 G$ | Taille du marché québécois |
+
+## 21. Marketing terrain
+
+- **Lettrage de véhicules** — flotte identifiée aux couleurs et logo Kalystrat sur chaque camion et machinerie
+- **Signalisation chantier** — panneaux « Réalisé par Groupe Kalystrat » visibles sur chaque site
+- **EPI à l'image du groupe** — casques, dossards et équipements de protection portant le logo
+- **Salons professionnels** — présence aux salons APCHQ et Salon national de l'habitation
+
+## 22. Programme fidélité et réseau de référencement
+
+- **Programme fidélité** — récompenses pour les clients récurrents et les recommandations vérifiées
+- **Partenariats B2B** — ententes avec courtiers immobiliers, architectes, designers et promoteurs
+- **Réseau de référencement** — système structuré de références croisées entre partenaires et filiales
+- **Marketing de contenu** — études de cas, témoignages et projets vitrines diffusés sur les plateformes numériques
+
+## 23. À configurer (TODO infrastructure)
+
+- [ ] SMTP transactionnel — configurer pour les courriels automatisés du groupe
+- [ ] Facebook Business — créer les pages par filiale et le compte publicitaire groupe
+- [ ] Instagram Pro — créer les comptes professionnels par filiale
+- [ ] LinkedIn Page — créer la page corporative Gestion Kalystrat Inc. et les pages filiales
+- [ ] TikTok Business — créer le compte entreprise pour le contenu chantier
+- [ ] Google My Business — créer les 6 fiches distinctes (une par filiale) avec adresses et catégories

@@ -801,3 +801,83 @@ html { scroll-behavior: smooth; }
 @media (max-width: 991px) {
     body { padding-bottom: 70px; }
 }
+
+/* ==========================================================================
+   WCAG 2.2 AA AUDIT FIXES - 2026-04-25 (audit clean post-debugbar)
+   ========================================================================== */
+
+/* 1.4.3 Mobile menu contrast - higher specificity override */
+.mobile-menu-wrapper .mobile-menu-area .mobile-menu ul li a {
+    color: var(--ks-white) !important;
+}
+.mobile-menu-wrapper .mobile-menu-area .mobile-menu ul li a:hover,
+.mobile-menu-wrapper .mobile-menu-area .mobile-menu ul li a:focus-visible {
+    color: var(--ks-gold) !important;
+}
+
+/* 1.4.3 Main nav on navy header - mobile only, preserve desktop fond clair */
+@media (max-width: 991px) {
+    .main-menu ul li a { color: var(--ks-white) !important; }
+}
+
+/* 2.5.8 Footer logo target size - padding pour atteindre min 24x24 */
+.footer-logo a { display: inline-block; min-height: 44px; padding: 12px 0; }
+
+/* 1.4.3 Copyright bar contrast (text-white sur white -> fond navy) */
+.copyright-wrap { background-color: var(--ks-navy); padding: 16px 0; }
+.copyright-wrap .copyright-text,
+.copyright-wrap .text-white,
+.copyright-wrap .text-white a,
+.copyright-wrap .footer-links a { color: var(--ks-white) !important; }
+
+/* 1.4.3 Team designation - gold accessible #7A6738 sur blanc 5.2:1 */
+.team-desig { color: #7A6738 !important; }
+
+/* 1.4.3 Header-top contact links (tel/email) */
+.header-top a { color: var(--ks-navy) !important; }
+.header-top a:hover,
+.header-top a:focus-visible { color: #7A6738 !important; }
+
+/* 1.4.3 Widget contact tel/mailto liens - page contact */
+.widget-contact a,
+.widget_contact a:not(.btn) {
+    color: var(--ks-navy) !important;
+}
+.widget-contact a:hover,
+.widget_contact a:not(.btn):hover { color: var(--ks-gold) !important; }
+
+/* 1.4.3 Form placeholder contrast (#737->#525252 ratio > 4.5:1) */
+.form-control::placeholder,
+.form-select { color: #525252 !important; }
+.form-control::-webkit-input-placeholder { color: #525252; }
+.form-control::-moz-placeholder { color: #525252; }
+
+/* ==========================================================================
+   WCAG ITER 2 - 2026-04-25 corrections post-fix
+   ========================================================================== */
+/* Footer menu liens blanc/gold (fond navy) */
+.footer-wrapper .menu a,
+.footer-wrapper .widget_nav_menu a { color: var(--ks-white) !important; }
+.footer-wrapper .menu a:hover,
+.footer-wrapper .menu a:focus-visible,
+.footer-wrapper .widget_nav_menu a:hover,
+.footer-wrapper .widget_nav_menu a:focus-visible { color: var(--ks-gold) !important; }
+
+/* Widget contact - scope main vs footer (revert régression mailto navy on navy) */
+main .widget-contact a,
+main .widget_contact a:not(.btn) { color: var(--ks-navy) !important; }
+.footer-wrapper .widget-contact a,
+.footer-wrapper .widget_contact a:not(.btn) { color: var(--ks-white) !important; }
+.footer-wrapper .widget-contact a:hover,
+.footer-wrapper .widget_contact a:hover { color: var(--ks-gold) !important; }
+
+/* Footer social-btn fond solide (résout faux positif rgba translucide) */
+.footer-wrapper .social-btn.style2 a {
+    background-color: rgba(184, 164, 114, 0.18) !important;
+    color: var(--ks-white) !important;
+}
+.footer-wrapper .social-btn.style2 a:hover,
+.footer-wrapper .social-btn.style2 a:focus-visible {
+    background-color: rgba(184, 164, 114, 0.40) !important;
+    color: var(--ks-white) !important;
+}
