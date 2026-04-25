@@ -329,6 +329,11 @@
     <script src="{{ asset('assets/construz/js/waypoints.min.js') }}"></script>
     <script src="{{ asset('assets/construz/js/main.js') }}"></script>
 
+    {{-- Kalystrat a11y enhancements (mobile menu inert+aria-hidden when closed) --}}
+    {{-- DÉSACTIVÉ 2026-04-25 : iter3 audit a montré +2 Tab issues au lieu d'amélioration. --}}
+    {{-- axe-core ne reconnait pas inert dans ce contexte. Pattern à retravailler. --}}
+    {{-- <script src="{{ asset('assets/js/kalystrat-a11y.js') }}"></script> --}}
+
     @stack('scripts')
 </body>
 </html>
