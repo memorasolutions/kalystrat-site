@@ -81,13 +81,40 @@
             ]
         },
         @foreach($filiales as $slug => $f)
+        @php
+            $serviceTypes = [
+                'fondations' => 'Foundation Construction',
+                'structure' => 'Building Structure Construction',
+                'toiture' => 'Roofing and Building Envelope Service',
+                'finition' => 'Interior Finishing Service',
+                'immobilier' => 'Real Estate Development',
+                'placement' => 'Construction Staffing Agency',
+            ];
+            $isB2B = in_array($slug, ['immobilier', 'placement']);
+            $audienceType = $isB2B ? 'BusinessAudience' : 'Audience';
+            $audienceLabel = $isB2B ? 'Business' : 'Consumer';
+        @endphp
         {
             "@@type": "Service",
             "@@id": "{{ $appUrl }}/filiales/{{ $slug }}#service",
             "name": "{{ $f['nom_complet'] }} — {{ $f['specialite'] }}",
+            "serviceType": "{{ $serviceTypes[$slug] ?? 'Construction Service' }}",
             "provider": { "@@id": "{{ $appUrl }}/filiales/{{ $slug }}#org" },
             "url": "{{ route('frontend.filiale', $slug) }}",
-            "areaServed": { "@@type": "AdministrativeArea", "name": "Province de Québec" },
+            "areaServed": [
+                { "@@type": "City", "name": "Québec" },
+                { "@@type": "City", "name": "Lévis" },
+                { "@@type": "AdministrativeArea", "name": "Province de Québec" }
+            ],
+            "audience": {
+                "@@type": "{{ $audienceType }}",
+                "audienceType": "{{ $audienceLabel }}"
+            },
+            "availableChannel": {
+                "@@type": "ServiceChannel",
+                "serviceUrl": "{{ route('frontend.filiale', $slug) }}",
+                "servicePhone": "+1-581-578-6145"
+            },
             "description": "{{ implode(', ', $f['services']) }}"
         },
         @endforeach
