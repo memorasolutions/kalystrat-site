@@ -1051,20 +1051,41 @@ body {
     --theme-color: var(--ks-gold);
 }
 
-/* Header layout simplifié (élimine chevauchement bouton + icon phone)
-   2026-04-26 : cache le bouton dupliqué "NOUS JOINDRE" du header
-   (déjà présent dans nav menu et CTA mobile sticky). Garde
-   navbar-right-desc Appelez-nous pour info contact persistante. */
-.header-layout1 .header-button {
-    display: none !important;
-}
+/* P3 BATCH 4.2 — Header simplifié Brookfield-style 2026-04-26
+   Refonte feedback user "entête toujours pareil" :
+   - Cache bandeau navy haut (.header-top) — sociaux/tel/email vont en footer
+   - Cache bloc "Appelez-nous" intrusif (.navbar-right-desc)
+   - Réactive .header-button en CTA gold prominent "Demander soumission" */
 
-/* Espacement navbar-right-desc — séparation claire avec nav */
-.header-layout1 .navbar-right-desc {
-    padding-left: 24px;
-    border-left: 1px solid rgba(10, 22, 40, 0.08);
-    margin-left: 16px;
+.header-layout1 .header-top { display: none !important; }
+.header-layout1 .navbar-right-desc { display: none !important; }
+
+.header-layout1 .header-button {
+    display: block !important;
 }
+.header-layout1 .header-button .btn {
+    background-color: var(--ks-gold) !important;
+    color: var(--ks-navy) !important;
+    border: 0 !important;
+    padding: 14px 28px !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.08em !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase;
+    transition: background 0.25s ease, transform 0.25s ease;
+}
+.header-layout1 .header-button .btn:hover,
+.header-layout1 .header-button .btn:focus-visible {
+    background-color: var(--ks-navy) !important;
+    color: var(--ks-white) !important;
+    transform: translateY(-1px);
+}
+.header-layout1 .header-button .btn i { color: inherit !important; }
+
+/* REVERT 2026-04-26 : sticky transparent → navy a cassé le header
+   (logo invisible avec filter invert sur fond blanc). Approche simple :
+   header reste solid blanc avec logo navy + nav navy. Sticky natif Construz. */
+.header-layout1 .menu-area > .container { padding: 8px 16px; }
 
 /* Mega-menu trigger — espacement de la flèche dropdown */
 .has-mega-menu > a > .ri-arrow-down-s-line {

@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-auto ms-auto d-xl-block d-none">
                             <div class="header-button">
-                                <a href="{{ route('frontend.contact') }}" class="btn">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
