@@ -81,13 +81,13 @@
                 <div class="footer-logo">
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
                 </div>
-                <p class="about-text mb-4">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
+                <p class="about-text mb-4">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
                 
                 <p class="footer-text">
-                    <a href="tel:851555961658"><i class="ri-phone-line me-2"></i>+85 155 596 1658</a>
+                    <a href="tel:+15815786145"><i class="ri-phone-line me-2"></i>1-581-578-6145</a>
                 </p>
                 <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Losangle, Street Road 24, New York, USA - 67452</p>
-                <p class="footer-text"><a href="mailto:support@gmail.com"><i class="ri-mail-line me-2"></i>support@gmail.com</a></p>
+                <p class="footer-text"><a href="mailto:info@kalystrat.ca"><i class="ri-mail-line me-2"></i>info@kalystrat.ca</a></p>
                 <div class="social-btn style3 mt-30">
                     <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
                     <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
@@ -154,7 +154,7 @@
                                 <a href="#">Multipage</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Home 01</a>
+                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                     </li>
                                     <li>
                                         <a href="#">Home 02</a>
@@ -166,7 +166,7 @@
                                         <a href="#">Home 04</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Home 05</a>
+                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                     </li>
                                 </ul>
                             </li>
@@ -198,10 +198,10 @@
                     <li class="menu-item-has-children">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Team Page</a></li>
-                            <li><a href="#">Team Details</a></li>
-                            <li><a href="#">Shop Page</a></li>
-                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Équipe</a></li>
+                            <li><a href="#">Membre</a></li>
+                            <li><a href="#">Boutique</a></li>
+                            <li><a href="#">Produit</a></li>
                             <li><a href="#">Cart</a></li>
                             <li><a href="#">Checkout</a></li>
                             <li><a href="#">Wishlist</a></li>
@@ -211,21 +211,21 @@
                         <a href="#">Project</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('frontend.portfolio') }}">Projects</a></li>
-                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
+                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Service</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
+                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
                             <li><a href="#">Shop</a></li>
-                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Produit</a></li>
                             <li><a href="#">Cart</a></li>
                             <li><a href="#">Checkout</a></li>
                             <li><a href="#">Wishlist</a></li>
@@ -235,7 +235,7 @@
                         <a href="#">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Blog Details</a></li>
+                            <li><a href="#">Article</a></li>
                         </ul>
                     </li>
                     <li>
@@ -272,8 +272,8 @@
                         <div class="header-top-right">
                             <div class="header-links ps-0">
                                 <ul>
-                                    <li><i class="ri-time-line"></i>Mon - Sat / 8am : 12pm</li>
-                                    <li><i class="ri-map-pin-line"></i><a href="https://www.google.com/maps">96 Jones Street, New York, USA</a></li>
+                                    <li><i class="ri-time-line"></i>Lun - Ven / 8h - 17h</li>
+                                    <li><i class="ri-map-pin-line"></i><a href="https://www.google.com/maps">Québec, QC, Canada</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -305,7 +305,7 @@
                                                 <a href="#">Multipage</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Home 01</a>
+                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">Home 02</a>
@@ -317,7 +317,7 @@
                                                         <a href="#">Home 04</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Home 05</a>
+                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -350,18 +350,18 @@
                                         <a href="#">NOS FILIALES</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
+                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">PAGES</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('frontend.portfolio') }}">Project Page</a></li>
-                                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
-                                            <li><a href="#">Team Page</a></li>
-                                            <li><a href="#">Team Details</a></li>
-                                            <li><a href="#">Shop Page</a></li>
-                                            <li><a href="#">Shop Details</a></li>
+                                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
+                                            <li><a href="#">Équipe</a></li>
+                                            <li><a href="#">Membre</a></li>
+                                            <li><a href="#">Boutique</a></li>
+                                            <li><a href="#">Produit</a></li>
                                             <li><a href="#">Cart</a></li>
                                             <li><a href="#">Checkout</a></li>
                                             <li><a href="#">Wishlist</a></li>
@@ -402,8 +402,8 @@
                         <i class="ri-phone-fill"></i>
                     </div>
                     <div class="navbar-right-desc-details">
-                        <h6 class="title">Call us any time</h6>
-                        <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                        <h6 class="title">Appelez-nous</h6>
+                        <a class="link" href="tel:+2590256215">1-581-578-6145</a>
                     </div>
                 </div>
             </div>
@@ -589,7 +589,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="title-area text-md-start text-center">
                         <span class="sub-title text-white"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">Work Process</span>
-                        <h2 class="sec-title text-white">Our services that we provide</h2>
+                        <h2 class="sec-title text-white">Six filiales spécialisées en synergie</h2>
                     </div>
                 </div>
                 <div class="col-md-auto">
@@ -1228,10 +1228,10 @@
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
-                    <p class="subscribe-box_text">Subscribe for the latest news. Stay updated on the latest trends.</p>
+                    <p class="subscribe-box_text">Recevez nos nouvelles et chantiers récents.</p>
                     <form class="newsletter-form">
-                        <input class="form-control" type="email" placeholder="Enter your email..." required="">
-                        <button type="submit" class="btn style2">SUBCRIBE<i class="ri-arrow-right-up-line"></i></button>
+                        <input class="form-control" type="email" placeholder="Votre adresse courriel" required="">
+                        <button type="submit" class="btn style2">S&apos;INSCRIRE<i class="ri-arrow-right-up-line"></i></button>
                     </form>
                 </div>
             </div>
@@ -1239,53 +1239,53 @@
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-xl-3">
                         <div class="widget widget-about footer-widget">
-                            <h3 class="widget_title">About Company</h3>
-                            <p class="about-text">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
-                            <h4 class="about-year">Since 2000</h4>
-                            <h5 class="about-subtitle">WE ARE AVAILABLE</h5>
-                            <p class="about-text"><span class="text-theme">Mon-Sat:</span> 10:00am to 07:30pm</p>
+                            <h3 class="widget_title">À propos</h3>
+                            <p class="about-text">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
+                            <h4 class="about-year">Depuis 2026</h4>
+                            <h5 class="about-subtitle">NOUS SOMMES DISPONIBLES</h5>
+                            <p class="about-text"><span class="text-theme">Lun-Ven :</span> 10:00am to 07:30pm</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Useful Links</h3>
+                            <h3 class="widget_title">Liens utiles</h3>
                             <div class="menu-all-pages-container grid-style">
                                 <ul class="menu">
-                                    <li><a href="{{ route('frontend.about') }}">About Us</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">What We Do</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">News & Article</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Success Story</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">FAQ’s</a></li>
+                                    <li><a href="{{ route('frontend.about') }}">À propos</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Nos filiales</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Blog</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Réalisations</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">FAQ</a></li>
                                 </ul>
                                 <ul class="menu">
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Careers</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Testimonials</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Privacy Policy</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Terms of use</a></li>
+                                    <li><a href="#">Notre équipe</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Carrières</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Témoignages</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Confidentialité</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
-                            <h3 class="widget_title">Office Address</h3>
+                            <h3 class="widget_title">Adresse</h3>
                             <p class="contact-text">Losangle, Street Road 24, New York, USA - 67452</p>
-                            <h3 class="widget_title">Email Address</h3> 
-                            <p class="text-white footer-text">Get in Touch !</p>   
-                            <p class="footer-text"><a href="mailto:support@gmail.com">support@gmail.com</a></p>
+                            <h3 class="widget_title">Courriel</h3> 
+                            <p class="text-white footer-text">Une question ?</p>   
+                            <p class="footer-text"><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title">Phone Number</h3>
+                            <h3 class="widget_title">Téléphone</h3>
                             <p class="footer-text">
-                                <a href="tel:121551579266">+121 551 579 266</a>
+                                <a href="tel:+15815786145">1-581-578-6145</a>
                             </p>
                             <p class="footer-text">
-                                <a href="tel:851555961658">+85 155 596 1658</a>
+                                <a href="tel:+15815786145">1-581-578-6145</a>
                             </p>
-                            <h3 class="widget_title">Follow Us</h3>
+                            <h3 class="widget_title">Suivez-nous</h3>
                             <div class="social-btn style2">
                                 <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
                                 <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
@@ -1300,12 +1300,12 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Kalystrat</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Kalystrat</a>  |  Tous droits réservés</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
-                            <a href="{{ route('frontend.contact') }}">Terms & Condition</a>
-                            <a href="{{ route('frontend.contact') }}">Privacy Policy</a>
-                            <a href="{{ route('frontend.contact') }}">Contact Us</a>
+                            <a href="{{ route('frontend.contact') }}">Conditions</a>
+                            <a href="{{ route('frontend.contact') }}">Confidentialité</a>
+                            <a href="{{ route('frontend.contact') }}">Nous joindre</a>
                         </div>
                     </div>
                 </div>                

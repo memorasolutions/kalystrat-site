@@ -81,13 +81,13 @@
                 <div class="footer-logo">
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
                 </div>
-                <p class="about-text mb-4">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
+                <p class="about-text mb-4">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
                 
                 <p class="footer-text">
-                    <a href="tel:851555961658"><i class="ri-phone-line me-2"></i>+85 155 596 1658</a>
+                    <a href="tel:+15815786145"><i class="ri-phone-line me-2"></i>1-581-578-6145</a>
                 </p>
                 <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Losangle, Street Road 24, New York, USA - 67452</p>
-                <p class="footer-text"><a href="mailto:support@gmail.com"><i class="ri-mail-line me-2"></i>support@gmail.com</a></p>
+                <p class="footer-text"><a href="mailto:info@kalystrat.ca"><i class="ri-mail-line me-2"></i>info@kalystrat.ca</a></p>
                 <div class="social-btn style3 mt-30">
                     <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
                     <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
@@ -154,7 +154,7 @@
                                 <a href="#">Multipage</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Home 01</a>
+                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                     </li>
                                     <li>
                                         <a href="#">Home 02</a>
@@ -166,7 +166,7 @@
                                         <a href="#">Home 04</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Home 05</a>
+                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                     </li>
                                 </ul>
                             </li>
@@ -198,10 +198,10 @@
                     <li class="menu-item-has-children">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Team Page</a></li>
-                            <li><a href="#">Team Details</a></li>
-                            <li><a href="#">Shop Page</a></li>
-                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Équipe</a></li>
+                            <li><a href="#">Membre</a></li>
+                            <li><a href="#">Boutique</a></li>
+                            <li><a href="#">Produit</a></li>
                             <li><a href="#">Cart</a></li>
                             <li><a href="#">Checkout</a></li>
                             <li><a href="#">Wishlist</a></li>
@@ -211,21 +211,21 @@
                         <a href="#">Project</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('frontend.portfolio') }}">Projects</a></li>
-                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
+                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Service</a>
                         <ul class="sub-menu">
                             <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
+                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
                             <li><a href="#">Shop</a></li>
-                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Produit</a></li>
                             <li><a href="#">Cart</a></li>
                             <li><a href="#">Checkout</a></li>
                             <li><a href="#">Wishlist</a></li>
@@ -235,7 +235,7 @@
                         <a href="#">Blog</a>
                         <ul class="sub-menu">
                             <li><a href="#">Blog</a></li>
-                            <li><a href="#">Blog Details</a></li>
+                            <li><a href="#">Article</a></li>
                         </ul>
                     </li>
                     <li>
@@ -270,7 +270,7 @@
                                                 <a href="#">Multipage</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Home 01</a>
+                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">Home 02</a>
@@ -282,7 +282,7 @@
                                                         <a href="#">Home 04</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Home 05</a>
+                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -315,18 +315,18 @@
                                         <a href="#">NOS FILIALES</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
+                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">PAGES</a>
                                         <ul class="sub-menu">
                                             <li><a href="{{ route('frontend.portfolio') }}">Project Page</a></li>
-                                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
-                                            <li><a href="#">Team Page</a></li>
-                                            <li><a href="#">Team Details</a></li>
-                                            <li><a href="#">Shop Page</a></li>
-                                            <li><a href="#">Shop Details</a></li>
+                                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
+                                            <li><a href="#">Équipe</a></li>
+                                            <li><a href="#">Membre</a></li>
+                                            <li><a href="#">Boutique</a></li>
+                                            <li><a href="#">Produit</a></li>
                                             <li><a href="#">Cart</a></li>
                                             <li><a href="#">Checkout</a></li>
                                             <li><a href="#">Wishlist</a></li>
@@ -356,8 +356,8 @@
                                         <i class="ri-phone-fill"></i>
                                     </div>
                                     <div class="navbar-right-desc-details">
-                                        <h6 class="title">Call us any time</h6>
-                                        <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                                        <h6 class="title">Appelez-nous</h6>
+                                        <a class="link" href="tel:+2590256215">1-581-578-6145</a>
                                     </div>
                                 </div>
                                 <a href="{{ route('frontend.about') }}" class="btn style2 d-xxl-flex d-none">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
@@ -593,7 +593,7 @@
                                         <i class="ri-phone-fill"></i>
                                     </div>
                                     <div class="media-body">
-                                        <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                                        <a class="link" href="tel:+2590256215">1-581-578-6145</a>
                                         <h6 class="title">Ned Help?</h6>
                                     </div>
                                 </div>
@@ -631,7 +631,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="title-area text-center">
-                        <span class="sub-title text-theme">What we do <i class="ri-arrow-right-down-line"></i></span>
+                        <span class="sub-title text-theme">Notre approche <i class="ri-arrow-right-down-line"></i></span>
                         <h2 class="sec-title">We provide excellent service to our customers</h2>
                     </div>
                 </div>
@@ -676,7 +676,7 @@
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
                                         <h5 class="subtitle">General construction</h5>
-                                        <p class="text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses.</p>
+                                        <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
                                                 <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Regularly Maintaining and Organizing your Tools
@@ -708,7 +708,7 @@
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
                                         <h5 class="subtitle">Property maintenance</h5>
-                                        <p class="text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses.</p>
+                                        <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
                                                 <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Regularly Maintaining and Organizing your Tools
@@ -740,7 +740,7 @@
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
                                         <h5 class="subtitle">Project management</h5>
-                                        <p class="text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses.</p>
+                                        <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
                                                 <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Regularly Maintaining and Organizing your Tools
@@ -772,7 +772,7 @@
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
                                         <h5 class="subtitle">Renovation & Remodeling</h5>
-                                        <p class="text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses.</p>
+                                        <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
                                                 <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Regularly Maintaining and Organizing your Tools
@@ -804,7 +804,7 @@
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
                                         <h5 class="subtitle">Preconstruction</h5>
-                                        <p class="text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses.</p>
+                                        <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
                                                 <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Regularly Maintaining and Organizing your Tools
@@ -845,7 +845,7 @@
                 <div class="col-xl-6">
                     <div class="benefit-wrap5">
                         <div class="title-area mb-40">
-                            <span class="sub-title text-theme">OUR BENEFITS <i class="ri-arrow-right-down-line"></i></span>
+                            <span class="sub-title text-theme">NOS AVANTAGES <i class="ri-arrow-right-down-line"></i></span>
                             <h2 class="sec-title">Reasons for why people 
                                 choosing ‘Construz’</h2>
                             <p class="sec-text">Podcasting operational change management inside of workflows to establish a framework, taking seamless key performance indicators offline.
@@ -911,8 +911,8 @@
             <div class="row gx-100 gy-60">                
                 <div class="col-xl-5 col-lg-6">
                     <div class="title-area">
-                        <span class="sub-title text-theme">Testimonials <i class="ri-arrow-right-down-line"></i></span>
-                        <h2 class="sec-title text-white">What client says</h2>
+                        <span class="sub-title text-theme">Témoignages <i class="ri-arrow-right-down-line"></i></span>
+                        <h2 class="sec-title text-white">Témoignages clients</h2>
                     </div>
                     <div class="row global-carousel testi-slider5 dot-style2" data-slide-show="1" data-dots="true">
                         <div class="col-lg-6">
@@ -922,8 +922,8 @@
                                         <img src="{{ asset('assets/construz-new/img/testimonial/testi_5_1.png') }}" alt="img">
                                     </div> 
                                     <div class="testi-card-profile-details">
-                                        <h4 class="testi-profile-title">Bm Ashik</h4>
-                                        <span class="testi-profile-desig">Designer at Rainbow Themes</span>                                                                       
+                                        <h4 class="testi-profile-title">Ali Salomon</h4>
+                                        <span class="testi-profile-desig">Fondateur, président et directeur général</span>                                                                       
                                     </div>
                                 </div>                                        
                                  
@@ -935,7 +935,7 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                     </div>
-                                    <p class="testi-card_text">When an unknown printer took a galley of type and scrambled it to make a type specimen book, It has survived not only five centuries.</p>
+                                    <p class="testi-card_text">Notre engagement : excellence et qualité à chaque projet. Holding nouvellement constitué — premiers témoignages clients à venir suite aux livraisons des premiers chantiers.</p>
                                     <div class="quote-icon">
                                         <img src="{{ asset('assets/construz-new/img/icon/quote.svg') }}" alt="img">
                                     </div>  
@@ -949,8 +949,8 @@
                                         <img src="{{ asset('assets/construz-new/img/testimonial/testi_5_1.png') }}" alt="img">
                                     </div> 
                                     <div class="testi-card-profile-details">
-                                        <h4 class="testi-profile-title">Bm Ashik</h4>
-                                        <span class="testi-profile-desig">Designer at Rainbow Themes</span>                                                                       
+                                        <h4 class="testi-profile-title">Ali Salomon</h4>
+                                        <span class="testi-profile-desig">Fondateur, président et directeur général</span>                                                                       
                                     </div>
                                 </div>                                        
                                  
@@ -962,7 +962,7 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                     </div>
-                                    <p class="testi-card_text">When an unknown printer took a galley of type and scrambled it to make a type specimen book, It has survived not only five centuries.</p>
+                                    <p class="testi-card_text">Notre engagement : excellence et qualité à chaque projet. Holding nouvellement constitué — premiers témoignages clients à venir suite aux livraisons des premiers chantiers.</p>
                                     <div class="quote-icon">
                                         <img src="{{ asset('assets/construz-new/img/icon/quote.svg') }}" alt="img">
                                     </div>  
@@ -976,8 +976,8 @@
                                         <img src="{{ asset('assets/construz-new/img/testimonial/testi_5_1.png') }}" alt="img">
                                     </div> 
                                     <div class="testi-card-profile-details">
-                                        <h4 class="testi-profile-title">Bm Ashik</h4>
-                                        <span class="testi-profile-desig">Designer at Rainbow Themes</span>                                                                       
+                                        <h4 class="testi-profile-title">Ali Salomon</h4>
+                                        <span class="testi-profile-desig">Fondateur, président et directeur général</span>                                                                       
                                     </div>
                                 </div>                                        
                                  
@@ -989,7 +989,7 @@
                                         <i class="ri-star-fill"></i>
                                         <i class="ri-star-fill"></i>
                                     </div>
-                                    <p class="testi-card_text">When an unknown printer took a galley of type and scrambled it to make a type specimen book, It has survived not only five centuries.</p>
+                                    <p class="testi-card_text">Notre engagement : excellence et qualité à chaque projet. Holding nouvellement constitué — premiers témoignages clients à venir suite aux livraisons des premiers chantiers.</p>
                                     <div class="quote-icon">
                                         <img src="{{ asset('assets/construz-new/img/icon/quote.svg') }}" alt="img">
                                     </div>  
@@ -1021,8 +1021,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="title-area text-center mb-50">
-                        <span class="sub-title text-theme">Award Winning <i class="ri-arrow-right-down-line"></i></span>
-                        <h2 class="sec-title">Our Awards & Achievements</h2>  
+                        <span class="sub-title text-theme">Nos références <i class="ri-arrow-right-down-line"></i></span>
+                        <h2 class="sec-title">Nos références et engagements</h2>  
                         <p>Podcasting operational change management inside of workflows to establish a framework, taking seamless key performance indicators offline.</p>                    
                     </div>
                 </div>
@@ -1128,30 +1128,30 @@
                     <div class="col-xl-7">
                         <div class="contact-form-wrap">
                             <div class="title-area">
-                                <span class="sub-title text-theme">Get Free Quote <i class="ri-arrow-right-down-line"></i></span>
-                                <h2 class="sec-title">Have a project in mind?</h2>
+                                <span class="sub-title text-theme">Soumission gratuite <i class="ri-arrow-right-down-line"></i></span>
+                                <h2 class="sec-title">Vous avez un projet ?</h2>
                             </div>
-                            <form action="mail.php" method="POST" class="contact-form ajax-contact">
+                            <form action="{{ route('frontend.contact.submit') }}" method="POST" class="contact-form ajax-contact">
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" autocomplete="name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" autocomplete="email">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Téléphone" autocomplete="tel">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <select name="subject" id="subject" class="single-select nice-select form-select">
-                                                <option value="" disabled selected hidden>Your Inquiry</option>
+                                                <option value="" disabled selected hidden>Sujet *</option>
                                                 <option value="Web Design">Web Design</option>
                                                 <option value="Web Development">Web Development</option>
                                                 <option value="Engine Diagnostics">Engine Diagnostics</option>
@@ -1162,11 +1162,11 @@
                                     
                                     <div class="col-12">
                                         <div class="form-group ">
-                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message..."></textarea>
+                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Décrivez votre projet..."></textarea>
                                         </div>
                                     </div>
                                     <div class="form-btn col-12">
-                                        <button class="btn w-100">Submit Now <i class="ri-arrow-right-up-line"></i></button>
+                                        <button class="btn w-100">Envoyer ma soumission <i class="ri-arrow-right-up-line"></i></button>
                                     </div>
                                 </div>
                                 <p class="form-messages mb-0 mt-3"></p>
@@ -1187,8 +1187,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="title-area text-center">
-                        <span class="sub-title text-theme">Our projects <i class="ri-arrow-right-down-line"></i></span>
-                        <h2 class="sec-title">Recently completed projects</h2>
+                        <span class="sub-title text-theme">Nos projets <i class="ri-arrow-right-down-line"></i></span>
+                        <h2 class="sec-title">Premiers chantiers à venir</h2>
                     </div>
                 </div>
             </div>
@@ -1392,13 +1392,13 @@
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-6">
                     <div class="title-area text-lg-start text-center">
-                        <span class="sub-title text-theme">Daily Update <i class="ri-arrow-right-down-line"></i></span>
-                        <h2 class="sec-title">Our latest news and blog</h2>
+                        <span class="sub-title text-theme">Blog <i class="ri-arrow-right-down-line"></i></span>
+                        <h2 class="sec-title">Articles à venir</h2>
                     </div>
                 </div>
                 <div class="col-md-auto">
                     <div class="sec-btn">
-                        <a href="#" class="btn">View all post <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="#" class="btn">Tous les articles <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -1418,7 +1418,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Protecting your roof from storm damage</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1438,7 +1438,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Roofing are fact makes easier 10 reason</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1458,7 +1458,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Why roofing material warranties important?</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1478,7 +1478,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Protecting your roof from storm damage</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1498,7 +1498,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Roofing are fact makes easier 10 reason</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1518,7 +1518,7 @@
                                 <a href="#">News in 2024</a>
                             </div>
                             <h3 class="blog-title"><a href="#">Why roofing material warranties important?</a></h3>
-                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1552,10 +1552,10 @@
                     <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
-                    <p class="subscribe-box_text">Subscribe for the latest news. Stay updated on the latest trends.</p>
+                    <p class="subscribe-box_text">Recevez nos nouvelles et chantiers récents.</p>
                     <form class="newsletter-form">
-                        <input class="form-control" type="email" placeholder="Enter your email..." required="">
-                        <button type="submit" class="btn style2">SUBCRIBE<i class="ri-arrow-right-up-line"></i></button>
+                        <input class="form-control" type="email" placeholder="Votre adresse courriel" required="">
+                        <button type="submit" class="btn style2">S&apos;INSCRIRE<i class="ri-arrow-right-up-line"></i></button>
                     </form>
                 </div>
             </div>
@@ -1563,53 +1563,53 @@
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-xl-3">
                         <div class="widget widget-about footer-widget">
-                            <h3 class="widget_title">About Company</h3>
-                            <p class="about-text">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
-                            <h4 class="about-year">Since 2000</h4>
-                            <h5 class="about-subtitle">WE ARE AVAILABLE</h5>
-                            <p class="about-text"><span class="text-theme">Mon-Sat:</span> 10:00am to 07:30pm</p>
+                            <h3 class="widget_title">À propos</h3>
+                            <p class="about-text">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
+                            <h4 class="about-year">Depuis 2026</h4>
+                            <h5 class="about-subtitle">NOUS SOMMES DISPONIBLES</h5>
+                            <p class="about-text"><span class="text-theme">Lun-Ven :</span> 10:00am to 07:30pm</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Useful Links</h3>
+                            <h3 class="widget_title">Liens utiles</h3>
                             <div class="menu-all-pages-container grid-style">
                                 <ul class="menu">
-                                    <li><a href="{{ route('frontend.about') }}">About Us</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">What We Do</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">News & Article</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Success Story</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">FAQ’s</a></li>
+                                    <li><a href="{{ route('frontend.about') }}">À propos</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Nos filiales</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Blog</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Réalisations</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">FAQ</a></li>
                                 </ul>
                                 <ul class="menu">
-                                    <li><a href="#">Our Team</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Careers</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Testimonials</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Privacy Policy</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Terms of use</a></li>
+                                    <li><a href="#">Notre équipe</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Carrières</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Témoignages</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Confidentialité</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
-                            <h3 class="widget_title">Office Address</h3>
+                            <h3 class="widget_title">Adresse</h3>
                             <p class="contact-text">Losangle, Street Road 24, New York, USA - 67452</p>
-                            <h3 class="widget_title">Email Address</h3> 
-                            <p class="text-white footer-text">Get in Touch !</p>   
-                            <p class="footer-text"><a href="mailto:support@gmail.com">support@gmail.com</a></p>
+                            <h3 class="widget_title">Courriel</h3> 
+                            <p class="text-white footer-text">Une question ?</p>   
+                            <p class="footer-text"><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title">Phone Number</h3>
+                            <h3 class="widget_title">Téléphone</h3>
                             <p class="footer-text">
-                                <a href="tel:121551579266">+121 551 579 266</a>
+                                <a href="tel:+15815786145">1-581-578-6145</a>
                             </p>
                             <p class="footer-text">
-                                <a href="tel:851555961658">+85 155 596 1658</a>
+                                <a href="tel:+15815786145">1-581-578-6145</a>
                             </p>
-                            <h3 class="widget_title">Follow Us</h3>
+                            <h3 class="widget_title">Suivez-nous</h3>
                             <div class="social-btn style2">
                                 <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
                                 <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
@@ -1624,12 +1624,12 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Kalystrat</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Kalystrat</a>  |  Tous droits réservés</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
-                            <a href="{{ route('frontend.contact') }}">Terms & Condition</a>
-                            <a href="{{ route('frontend.contact') }}">Privacy Policy</a>
-                            <a href="{{ route('frontend.contact') }}">Contact Us</a>
+                            <a href="{{ route('frontend.contact') }}">Conditions</a>
+                            <a href="{{ route('frontend.contact') }}">Confidentialité</a>
+                            <a href="{{ route('frontend.contact') }}">Nous joindre</a>
                         </div>
                     </div>
                 </div>                
