@@ -1008,3 +1008,45 @@ main .widget_contact a:not(.btn) { color: var(--ks-navy) !important; }
 @media (max-width: 991px) {
     .has-mega-menu .mega-menu { display: none !important; }
 }
+
+/* ============================================================
+   P3 BATCH 2.1 — Élimination orange Construz résiduel (icon-btn)
+   2026-04-26 : remplace --theme-color #EA5501 par charte navy/gold
+   sur tous les éléments visibles à l'utilisateur
+   ============================================================ */
+
+/* Icône téléphone navbar-right-desc (cercle orange visible header haut droite) */
+.header-layout1 .navbar-right-desc .icon-btn,
+.header-layout1 .sticky-wrapper.sticky .navbar-right-desc .icon-btn {
+    background-color: var(--ks-navy) !important;
+    color: var(--ks-gold) !important;
+}
+.header-layout1 .navbar-right-desc .icon-btn i,
+.header-layout1 .navbar-right-desc .icon-btn::before {
+    color: var(--ks-gold) !important;
+}
+
+/* Icon-btn global (toutes occurrences orange) */
+.icon-btn {
+    background-color: var(--ks-navy) !important;
+    color: var(--ks-gold) !important;
+}
+.icon-btn i {
+    color: var(--ks-gold) !important;
+}
+.icon-btn:hover,
+.icon-btn:focus-visible {
+    background-color: var(--ks-gold) !important;
+    color: var(--ks-navy) !important;
+}
+.icon-btn:hover i,
+.icon-btn:focus-visible i {
+    color: var(--ks-navy) !important;
+}
+
+/* Override variable theme-color au niveau body (filet de sécurité)
+   pour les éléments décoratifs SVG/before/after qui pourraient
+   référencer var(--theme-color) directement. Charte gold = accent. */
+body {
+    --theme-color: var(--ks-gold);
+}
