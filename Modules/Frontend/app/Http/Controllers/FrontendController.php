@@ -81,6 +81,44 @@ class FrontendController extends Controller
         ]);
     }
 
+    public function faqV2(): Renderable
+    {
+        static $faqs = null;
+        $faqs ??= require module_path('Frontend', 'config/faqs.php');
+
+        return view('frontend::faq-v2', [
+            'title' => 'Kalystrat - FAQ',
+            'faqs'  => $faqs,
+        ]);
+    }
+
+    public function sitemap()
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        $now = now()->toIso8601String();
+        $pages = [
+            ['url' => route('frontend.home'),      'lastmod' => $now, 'changefreq' => 'weekly',  'priority' => '1.0'],
+            ['url' => route('frontend.about'),     'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.8'],
+            ['url' => route('frontend.services'),  'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.9'],
+            ['url' => route('frontend.portfolio'), 'lastmod' => $now, 'changefreq' => 'monthly', 'priority' => '0.7'],
+            ['url' => route('frontend.contact'),   'lastmod' => $now, 'changefreq' => 'yearly',  'priority' => '0.6'],
+        ];
+
+        foreach (array_keys($filiales) as $slug) {
+            $pages[] = [
+                'url'        => route('frontend.filiale', $slug),
+                'lastmod'    => $now,
+                'changefreq' => 'monthly',
+                'priority'   => '0.7',
+            ];
+        }
+
+        return response()->view('frontend::sitemap', ['pages' => $pages])
+            ->header('Content-Type', 'application/xml');
+    }
+
     public function about(): Renderable
     {
         return view('frontend::about', [

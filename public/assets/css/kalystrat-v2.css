@@ -335,3 +335,44 @@ h1, h2, h3, h4, h5, h6 {
         font-size: 32px;
     }
 }
+
+/* P4 Palier 4 — corrections défauts mineurs home-v2 */
+.service-card .service-icon {
+  font-size: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: 25px;
+  line-height: 1;
+}
+
+.hero-layout5 .hero-subtitle {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+@media (max-width: 767px) {
+  .counter-area .counter-card h3 {
+    font-size: 42px;
+  }
+}
+
+.service-card {
+  box-shadow: 0 2px 8px rgba(10, 22, 40, 0.06);
+}
+
+.hero-layout5 .hero-title {
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+}
+
+.process-step h4 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.footer-widget .widget_title {
+  font-size: 18px;
+  letter-spacing: 1px;
+}

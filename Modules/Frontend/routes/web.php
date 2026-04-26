@@ -18,6 +18,13 @@ Route::get('/v2/services', [FrontendController::class, 'servicesV2'])->name('fro
 Route::get('/v2/portfolio', [FrontendController::class, 'portfolioV2'])->name('frontend.portfolio.v2');
 Route::get('/v2/contact', [FrontendController::class, 'contactV2'])->name('frontend.contact.v2');
 Route::get('/v2/filiales/{slug}', [FrontendController::class, 'filialeV2'])->where('slug', '[a-z-]+')->name('frontend.filiale.v2');
+Route::get('/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq');
+Route::get('/v2/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq.v2');
+
+// SEO sitemap.xml dynamique V2 (Laravel + 6 filiales auto)
+// NOTE : Module SEO MEMORA gère déjà /sitemap.xml en V1. Ma route est sur /v2/sitemap.xml pour MVP V2.
+// À la bascule V1→V2 : soit modifier Module SEO (recommandé), soit le désactiver.
+Route::get('/v2/sitemap.xml', [FrontendController::class, 'sitemap'])->name('frontend.sitemap.v2');
 
 // D1 MVP additif - pages filiales holding (désactivable en commentant la ligne suivante)
 Route::get('/filiales/{slug}', [FrontendController::class, 'filiale'])
