@@ -1,51 +1,60 @@
 @extends('frontend::layout-v2')
 
 @section('title', 'Portfolio — Premiers chantiers à venir | Kalystrat')
-@section('meta_description', 'Découvrez les premiers projets de construction des 6 filiales Kalystrat au Québec. Holding nouvellement constitué, premiers chantiers à venir.')
+@section('meta_description', 'Holding nouvellement constitué — premiers chantiers Kalystrat à venir. 6 filiales spécialisées en construction au Québec.')
 
 @section('content')
 
-@include('frontend::partials-v2.page-hero', [
-    'heroTitle' => 'Portfolio',
-    'heroSubtitle' => 'Réalisations Kalystrat',
-    'heroBg' => 'assets/img/kalystrat/project-residential.jpg',
-    'heroBreadcrumb' => [
+@include('frontend::partials-v2.breadcumb-v2', [
+    'pageTitle' => 'Portfolio',
+    'breadcumbItems' => [
         ['label' => 'Accueil', 'url' => route('frontend.home')],
-        ['label' => 'Portfolio'],
-    ],
+        ['label' => 'Portfolio', 'url' => null]
+    ]
 ])
 
-<section class="space">
+<section class="space-top">
     <div class="container">
         <div class="title-area text-center">
-            <h6 class="text-gold">RÉALISATIONS</h6>
-            <h2>Premiers chantiers à venir</h2>
-            <p>Gestion Kalystrat Inc. est un holding nouvellement constitué. Nos six filiales spécialisées entament leurs premiers projets de construction au Québec. Cette page présentera prochainement nos réalisations livrées et en cours, par filiale.</p>
+            <span class="sub-title text-theme">RÉALISATIONS</span>
+            <h2 class="sec-title">Premiers chantiers à venir</h2>
+            <p>Gestion Kalystrat Inc. est un holding nouvellement constitué. Nos six filiales spécialisées entament leurs premiers projets de construction au Québec.</p>
         </div>
     </div>
 </section>
 
-<section class="space-bottom">
+<div class="portfolio-area-5 space overflow-hidden">
     <div class="container">
-        <div class="row gy-4 justify-content-center">
+        <div class="row gy-30 gx-30">
             @foreach($filiales as $slug => $f)
-            <div class="col-lg-4 col-md-6">
-                <a href="{{ route('frontend.filiale', $slug) }}" class="text-decoration-none portfolio-card-filiale" aria-label="Voir les chantiers à venir de {{ $f['nom_complet'] }}" style="display: block; padding: 30px; background: #fff; border: 1px solid rgba(10,22,40,0.08); border-left: 4px solid {{ $f['hex_couleur'] }}; height: 100%; transition: 0.3s;">
-                    <span style="display: inline-block; padding: 4px 10px; margin-bottom: 15px; background: {{ $f['hex_couleur'] }}; color: #fff; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; font-family: 'Archivo', sans-serif; font-weight: 700;">{{ $f['nom_court'] }}</span>
-                    <h3 style="font-size: 20px; color: #0A1628; margin-bottom: 10px;">{{ $f['specialite'] }}</h3>
-                    <p style="color: #555; margin-bottom: 12px;">Chantiers à venir.</p>
-                    <span style="color: {{ $f['hex_couleur'] }}; font-weight: 700;">Découvrir la filiale <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
-                </a>
+            <div class="col-lg-{{ $loop->first ? '8' : '4' }} col-md-6">
+                <div class="portfolio-card style5">
+                    <div class="portfolio-card-thumb">
+                        <img src="{{ asset('assets/construz-new/img/project/project5_' . (($loop->iteration - 1) % 5 + 1) . '.png') }}" alt="img">
+                    </div>
+                    <div class="portfolio-card-details">
+                        <div class="media-left">
+                            <span class="portfolio-card-subtitle">{{ $f['nom_court'] }}</span>
+                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
+                        </div>
+                        <div class="btn-group">
+                            <a href="{{ route('frontend.filiale', $slug) }}" class="btn style2">Découvrir filiale <i class="ri-arrow-right-line"></i></a>
+                        </div>
+                    </div>
+                </div>
             </div>
             @endforeach
         </div>
     </div>
-</section>
+</div>
 
-@include('frontend::partials-v2.section-cta', [
-    'ctaTitle' => 'Vous avez un projet en tête ?',
-    'ctaText' => 'Contactez notre équipe dès aujourd\'hui pour discuter de votre projet de construction ou de rénovation.',
-    'ctaButtonText' => 'CONTACTEZ-NOUS',
-])
+<div class="cta-area-5 space-bottom">
+    <div class="container">
+        <div class="cta-wrap5" data-bg-src="{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}');">
+            <h4 class="cta-title text-white">Vous avez un projet en tête ?</h4>
+            <a class="btn style4" href="{{ route('frontend.contact') }}">CONTACTEZ-NOUS <i class="ri-arrow-right-up-line"></i></a>
+        </div>
+    </div>
+</div>
 
 @endsection

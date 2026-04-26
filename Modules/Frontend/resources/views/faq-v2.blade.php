@@ -1,7 +1,7 @@
 @extends('frontend::layout-v2')
 
-@section('title', 'FAQ — Questions fréquentes | Kalystrat construction Québec')
-@section('meta_description', 'Réponses aux questions fréquentes sur Kalystrat : holding construction québécois 6 filiales, services, RBQ, soumissions, méthodologie. Guide complet.')
+@section('title', 'FAQ - Kalystrat')
+@section('meta_description', '15 réponses fréquentes Kalystrat — holding québécois construction 6 filiales : RBQ, soumissions, méthodologie, services.')
 
 @push('styles')
 <script type="application/ld+json">
@@ -26,48 +26,49 @@
 
 @section('content')
 
-@include('frontend::partials-v2.page-hero', [
-    'heroTitle' => 'Questions fréquentes',
-    'heroSubtitle' => 'FAQ Kalystrat',
-    'heroBg' => 'assets/img/kalystrat/about-bg.jpg',
-    'heroBreadcrumb' => [
+@include('frontend::partials-v2.breadcumb-v2', [
+    'pageTitle' => 'Questions fréquentes',
+    'breadcumbItems' => [
         ['label' => 'Accueil', 'url' => route('frontend.home')],
-        ['label' => 'FAQ'],
-    ],
+        ['label' => 'FAQ', 'url' => null]
+    ]
 ])
 
-<section class="space">
+<section class="faq-area space">
     <div class="container">
-        <div class="col-lg-9 mx-auto">
-            <div class="title-area text-center mb-5">
-                <h6 class="text-gold">RÉPONSES RAPIDES</h6>
-                <h2>Questions fréquentes</h2>
-                <p>Tout ce que vous devez savoir sur Kalystrat, holding québécois construction 6 filiales spécialisées.</p>
-            </div>
-            <div class="accordion" id="faqAccordion">
-                @foreach($faqs as $i => $faq)
-                <div class="accordion-item mb-2 border-0" style="background: #f8f9fa;">
-                    <h3 class="accordion-header" id="heading{{ $i }}">
-                        <button class="accordion-button @if($i > 0) collapsed @endif" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $i }}" aria-expanded="@if($i === 0)true@else false@endif" aria-controls="collapse{{ $i }}" style="background: #fff; color: #0A1628; font-weight: 700; font-family: 'Archivo', sans-serif;">
-                            {{ $faq['question'] }}
-                        </button>
-                    </h3>
-                    <div id="collapse{{ $i }}" class="accordion-collapse collapse @if($i === 0) show @endif" aria-labelledby="heading{{ $i }}" data-bs-parent="#faqAccordion">
-                        <div class="accordion-body" style="background: #fff;">
-                            {!! nl2br(e($faq['answer'])) !!}
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="title-area text-center mb-50">
+                    <span class="sub-title text-theme">RÉPONSES RAPIDES</span>
+                    <h2 class="sec-title">Questions fréquentes</h2>
+                    <p>15 réponses sur Kalystrat — holding québécois construction.</p>
+                </div>
+                <div class="accordion" id="faqAccordion">
+                    @foreach($faqs as $i => $faq)
+                    <div class="accordion-item mb-3">
+                        <h3 class="accordion-header" id="heading{{ $i }}">
+                            <button class="accordion-button {{ $i > 0 ? 'collapsed' : '' }}" type="button" data-bs-toggle="collapse" data-bs-target="#collapse{{ $i }}" aria-expanded="{{ $i === 0 ? 'true' : 'false' }}" aria-controls="collapse{{ $i }}">
+                                {{ $faq['question'] }}
+                            </button>
+                        </h3>
+                        <div id="collapse{{ $i }}" class="accordion-collapse collapse {{ $i === 0 ? 'show' : '' }}" aria-labelledby="heading{{ $i }}" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">{!! nl2br(e($faq['answer'])) !!}</div>
                         </div>
                     </div>
+                    @endforeach
                 </div>
-                @endforeach
             </div>
         </div>
     </div>
 </section>
 
-@include('frontend::partials-v2.section-cta', [
-    'ctaTitle' => 'Une autre question ?',
-    'ctaText' => 'Contactez notre équipe — réponse sous 24 h.',
-    'ctaButtonText' => 'NOUS CONTACTER',
-])
+<div class="cta-area-5 space-bottom">
+    <div class="container">
+        <div class="cta-wrap5" data-bg-src="{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}');">
+            <h4 class="cta-title text-white">Une autre question ?</h4>
+            <a class="btn style4" href="{{ route('frontend.contact') }}">NOUS CONTACTER <i class="ri-arrow-right-up-line"></i></a>
+        </div>
+    </div>
+</div>
 
 @endsection
