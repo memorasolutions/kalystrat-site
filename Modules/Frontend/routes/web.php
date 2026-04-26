@@ -13,13 +13,14 @@ Route::post('/contact', [FrontendController::class, 'contactSubmit'])->name('fro
 
 // V2 — preview Construz officiel home-5 (routes additives, désactivables en commentant)
 Route::get('/v2', [FrontendController::class, 'homeV2'])->name('frontend.home.v2');
-Route::get('/v2/a-propos', [FrontendController::class, 'aboutV2'])->name('frontend.about.v2');
-Route::get('/v2/services', [FrontendController::class, 'servicesV2'])->name('frontend.services.v2');
-Route::get('/v2/portfolio', [FrontendController::class, 'portfolioV2'])->name('frontend.portfolio.v2');
-Route::get('/v2/contact', [FrontendController::class, 'contactV2'])->name('frontend.contact.v2');
-Route::get('/v2/filiales/{slug}', [FrontendController::class, 'filialeV2'])->where('slug', '[a-z-]+')->name('frontend.filiale.v2');
-Route::get('/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq');
-Route::get('/v2/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq.v2');
+// V2 pages annexes archivées le 2026-04-26 (refonte Construz fidèle en cours, vues dans storage/app/archive/v2-patche-2026-04-26/)
+// Route::get('/v2/a-propos', [FrontendController::class, 'aboutV2'])->name('frontend.about.v2');
+// Route::get('/v2/services', [FrontendController::class, 'servicesV2'])->name('frontend.services.v2');
+// Route::get('/v2/portfolio', [FrontendController::class, 'portfolioV2'])->name('frontend.portfolio.v2');
+// Route::get('/v2/contact', [FrontendController::class, 'contactV2'])->name('frontend.contact.v2');
+// Route::get('/v2/filiales/{slug}', [FrontendController::class, 'filialeV2'])->where('slug', '[a-z-]+')->name('frontend.filiale.v2');
+// Route::get('/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq');
+// Route::get('/v2/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq.v2');
 
 // SEO sitemap.xml dynamique V2 (Laravel + 6 filiales auto)
 // NOTE : Module SEO MEMORA gère déjà /sitemap.xml en V1. Ma route est sur /v2/sitemap.xml pour MVP V2.

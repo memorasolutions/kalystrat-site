@@ -471,6 +471,155 @@ Testimonial Area
 </div>
 
 <!--==============================
+Award Area 1 (références/certifications)
+==============================-->
+<div class="award-area-1 space-top overflow-hidden" data-bg-src="{{ asset('assets/construz-new/img/bg/award-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/award-bg5-1.png') }}');">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="title-area text-center mb-50">
+                    <span class="sub-title text-theme">NOS RÉFÉRENCES <i class="ri-arrow-right-down-line"></i></span>
+                    <h2 class="sec-title">Nos références et engagements</h2>
+                    <p>Holding nouvellement constitué — certifications et reconnaissances en cours d'obtention auprès des organismes québécois.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row gy-4 gx-40 justify-content-xl-between justify-content-center">
+            <div class="col-xxl-3 col-md-6">
+                <div class="award-card">
+                    <div class="award-card-bg-shape"><img src="{{ asset('assets/construz-new/img/bg/award-card-bg1-1.png') }}" alt="img"></div>
+                    <div class="award-card-thumb"><img src="{{ asset('assets/construz-new/img/award/award1-1.png') }}" alt="img"></div>
+                    <div class="award-card-year"><span>QC</span>2026</div>
+                    <div class="award-card_content">
+                        <h4 class="award-card_title">Licence RBQ</h4>
+                        <p class="award-card_text">En cours</p>
+                        <div class="award-card-tag">Régie du bâtiment</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+                <div class="award-card">
+                    <div class="award-card-bg-shape"><img src="{{ asset('assets/construz-new/img/bg/award-card-bg1-1.png') }}" alt="img"></div>
+                    <div class="award-card-thumb"><img src="{{ asset('assets/construz-new/img/award/award1-2.png') }}" alt="img"></div>
+                    <div class="award-card-year"><span>QC</span>2026</div>
+                    <div class="award-card_content">
+                        <h4 class="award-card_title">CCQ Conformité</h4>
+                        <p class="award-card_text">En cours</p>
+                        <div class="award-card-tag">Construction QC</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+                <div class="award-card">
+                    <div class="award-card-bg-shape"><img src="{{ asset('assets/construz-new/img/bg/award-card-bg1-1.png') }}" alt="img"></div>
+                    <div class="award-card-thumb"><img src="{{ asset('assets/construz-new/img/award/award1-3.png') }}" alt="img"></div>
+                    <div class="award-card-year"><span>QC</span>2026</div>
+                    <div class="award-card_content">
+                        <h4 class="award-card_title">APCHQ Membre</h4>
+                        <p class="award-card_text">En cours</p>
+                        <div class="award-card-tag">Habitation</div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xxl-3 col-md-6">
+                <div class="award-card">
+                    <div class="award-card-bg-shape"><img src="{{ asset('assets/construz-new/img/bg/award-card-bg1-1.png') }}" alt="img"></div>
+                    <div class="award-card-thumb"><img src="{{ asset('assets/construz-new/img/award/award1-4.png') }}" alt="img"></div>
+                    <div class="award-card-year"><span>QC</span>2026</div>
+                    <div class="award-card_content">
+                        <h4 class="award-card_title">CMMTQ Partenaire</h4>
+                        <p class="award-card_text">En cours</p>
+                        <div class="award-card-tag">Mécanique</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--==============================
+Contact Area 2 (formulaire soumission)
+==============================-->
+<section class="contact-area-2 space overflow-hidden">
+    <div class="container">
+        <div class="contact-wrap2 space overflow-hidden" data-bg-src="{{ asset('assets/construz-new/img/bg/contact-bg4-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/contact-bg4-1.png') }}');">
+            <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-left="0" data-bg-src="{{ asset('assets/construz-new/img/shape/global-line-shape1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/shape/global-line-shape1.png') }}');"></div>
+            <div class="row gy-60 justify-content-lg-end justify-content-center">
+                <div class="col-xl-7">
+                    <div class="contact-form-wrap">
+                        <div class="title-area">
+                            <span class="sub-title text-theme">SOUMISSION GRATUITE <i class="ri-arrow-right-down-line"></i></span>
+                            <h2 class="sec-title">Vous avez un projet ?</h2>
+                        </div>
+                        <form action="{{ route('frontend.contact.submit') }}" method="POST" class="contact-form ajax-contact">
+                            @csrf
+                            <div class="row gy-4">
+                                <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" required></div></div>
+                                <div class="col-md-6"><div class="form-group"><input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" required></div></div>
+                                <div class="col-md-6"><div class="form-group"><input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone"></div></div>
+                                <div class="col-md-6"><div class="form-group"><select name="subject" id="subject" class="single-select nice-select form-select" required>
+                                    <option value="" disabled selected hidden>Sujet *</option>
+                                    <option value="Soumission">Soumission</option>
+                                    <option value="Information">Information</option>
+                                    <option value="Partenariat">Partenariat</option>
+                                    <option value="Autre">Autre</option>
+                                </select></div></div>
+                                <div class="col-12"><div class="form-group"><textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Décrivez votre projet ou besoin..." required></textarea></div></div>
+                                <div class="form-btn col-12"><button class="btn w-100">ENVOYER MA SOUMISSION <i class="ri-arrow-right-up-line"></i></button></div>
+                            </div>
+                            <p class="form-messages mb-0 mt-3"></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--==============================
+Portfolio Area 5 (5 filiales premières chantiers)
+==============================-->
+<div class="portfolio-area-5 overflow-hidden">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-7">
+                <div class="title-area text-center">
+                    <span class="sub-title text-theme">NOS PROJETS <i class="ri-arrow-right-down-line"></i></span>
+                    <h2 class="sec-title">Premiers chantiers à venir</h2>
+                </div>
+            </div>
+        </div>
+        <div class="overflow-hidden">
+            <div class="row gy-30 gx-30">
+                @php
+                    $filiales_portfolio = array_slice($filiales, 0, 5, true);
+                @endphp
+                @foreach($filiales_portfolio as $slug => $f)
+                    <div class="col-lg-{{ $loop->first ? '8' : '4' }} col-md-6">
+                        <div class="portfolio-card style5">
+                            <div class="portfolio-card-thumb">
+                                <img src="{{ asset('assets/construz-new/img/project/project5_' . $loop->iteration . '.png') }}" alt="img">
+                            </div>
+                            <div class="portfolio-card-details">
+                                <div class="media-left">
+                                    <span class="portfolio-card-subtitle">{{ $f['nom_court'] }}</span>
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
+                                </div>
+                                <div class="btn-group">
+                                    <a href="{{ route('frontend.filiale', $slug) }}" class="btn style2">
+                                        Découvrir filiale <i class="ri-arrow-right-line"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--==============================
 Counter Area 01
 ==============================-->
 <div class="counter-area-1 space">
@@ -504,6 +653,62 @@ Counter Area 01
     </div>
 </div>
 
-{{-- TODO P5c — restantes Construz home-5 : award-area-1 + contact-area-2 + portfolio-area-5 + client-area-1 + blog-area-4 --}}
+<!--==============================
+Client Area 1 (logos partenaires placeholder)
+==============================-->
+<div class="client-area-1 text-center space bg-title overflow-hidden">
+    <div class="container">
+        <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
+        </div>
+    </div>
+</div>
+
+<!--==============================
+Blog Area 4 (placeholders articles à venir)
+==============================-->
+<section class="blog-area-4 space">
+    <div class="container">
+        <div class="row justify-content-lg-between justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <div class="title-area text-lg-start text-center">
+                    <span class="sub-title text-theme">BLOG <i class="ri-arrow-right-down-line"></i></span>
+                    <h2 class="sec-title">Articles à venir</h2>
+                </div>
+            </div>
+            <div class="col-md-auto">
+                <div class="sec-btn">
+                    <a href="#" class="btn">Tous les articles <i class="ri-arrow-right-up-line"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="row global-carousel blog-slider5 slider-shadow" data-slide-show="3" data-lg-slide-show="3" data-md-slide-show="2" data-sm-slide-show="1" data-xs-slide-show="1" data-dots="false">
+            @for($i = 1; $i <= 6; $i++)
+            <div class="col-md-6 col-lg-4">
+                <div class="blog-card style5">
+                    <div class="blog-img">
+                        <img src="{{ asset('assets/construz-new/img/blog/blog_5_' . (($i - 1) % 3 + 1) . '.png') }}" alt="blog image">
+                        <div class="blog-date"><a href="#"><span>26</span>AVR</a><div class="year">2026</div></div>
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta"><a href="#">Kalystrat</a><a href="#">Actualité</a></div>
+                        <h3 class="blog-title"><a href="#">Articles à venir prochainement</a></h3>
+                        <a href="#" class="btn style-border4" tabindex="0">En savoir plus <i class="ri-arrow-right-up-line"></i></a>
+                    </div>
+                </div>
+            </div>
+            @endfor
+        </div>
+    </div>
+</section>
 
 @endsection
