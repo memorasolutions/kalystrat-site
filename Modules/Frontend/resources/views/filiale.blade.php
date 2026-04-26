@@ -6,13 +6,12 @@
 {{-- Pas de @section('breadcrumb*') volontairement : le hero ci-dessous porte le h1 unique de la page (évite double h1 WCAG 1.3.1) --}}
 
 @section('content')
-    {{-- Hero filiale (couleur accent variable) --}}
-    <section class="space" style="background-color: {{ $filiale['hex_couleur'] }}; padding: 100px 0; color: #FFFFFF;">
-        <div class="container text-center">
-            <h1 style="color: #FFFFFF;">{{ $filiale['nom_complet'] }}</h1>
-            <p class="lead" style="color: rgba(255,255,255,0.9); font-size: 1.2rem; max-width: 720px; margin: 0 auto;">
-                {{ $filiale['specialite'] }}
-            </p>
+    {{-- Hero filiale fullbleed avec image + overlay gradient couleur filiale --}}
+    <section class="filiale-hero-fullbleed"
+             style="background-image: url('{{ asset('assets/img/kalystrat/about-bg.jpg') }}'); --filiale-overlay: {{ $filiale['hex_couleur'] }}d9;">
+        <div class="container">
+            <h1>{{ $filiale['nom_complet'] }}</h1>
+            <p class="filiale-subtitle">{{ $filiale['specialite'] }}</p>
         </div>
     </section>
 

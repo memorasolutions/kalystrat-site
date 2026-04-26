@@ -76,6 +76,8 @@
     {{-- Kalystrat custom CSS (cache-busting filemtime) --}}
     <link rel="stylesheet" href="{{ asset('assets/css/kalystrat.css') }}?v={{ @filemtime(public_path('assets/css/kalystrat.css')) ?: time() }}">
 
+    {{-- Script unregister SW retiré 2026-04-26 — diagnostic confirmé CSS chargé OK --}}
+
     {{-- Schema.org JSON-LD --}}
     @include('frontend::partials.schema-jsonld')
 

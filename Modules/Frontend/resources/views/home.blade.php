@@ -60,16 +60,24 @@
         <div class="row gx-30 gy-30">
             @php
                 $filiales_home = require module_path('Frontend', 'config/filiales.php');
-                $icons = ['fondations'=>'ri-tools-line','structure'=>'ri-layout-grid-line','toiture'=>'ri-home-2-line','finition'=>'ri-paint-brush-line','immobilier'=>'ri-building-line','placement'=>'ri-team-line'];
+                $bentoBgs = [
+                    'fondations' => 'assets/img/kalystrat/project-blueprint.jpg',
+                    'structure'  => 'assets/img/kalystrat/project-residential.jpg',
+                    'toiture'    => 'assets/img/kalystrat/project-apartments.jpg',
+                    'finition'   => 'assets/img/kalystrat/about-strategy.jpg',
+                    'immobilier' => 'assets/img/kalystrat/project-commercial.jpg',
+                    'placement'  => 'assets/img/kalystrat/about-meeting.jpg',
+                ];
             @endphp
             @foreach ($filiales_home as $slug => $f)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
-                    <div class="service-card" style="border-left: 4px solid {{ $f['hex_couleur'] }};">
-                        <div class="service-card_icon" style="color: {{ $f['hex_couleur'] }};"><i class="{{ $icons[$slug] ?? 'ri-building-4-line' }}" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">{{ $f['nom_court'] }}</h3>
-                        <p class="service-card_text">{{ $f['specialite'] }}</p>
-                        <a href="{{ route('frontend.filiale', $slug) }}" class="link-btn" aria-label="Découvrir {{ $f['nom_complet'] }}">Découvrir <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-                    </div>
+                    <a href="{{ route('frontend.filiale', $slug) }}" class="service-card-bento" style="--accent: {{ $f['hex_couleur'] }}; background-image: url('{{ asset($bentoBgs[$slug] ?? 'assets/img/kalystrat/hero-skyline.jpg') }}');" aria-label="Découvrir {{ $f['nom_complet'] }}">
+                        <div>
+                            <h3>{{ $f['nom_court'] }}</h3>
+                            <p>{{ $f['specialite'] }}</p>
+                        </div>
+                        <span class="bento-link">Découvrir <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
+                    </a>
                 </div>
             @endforeach
         </div>
