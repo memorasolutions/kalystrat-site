@@ -17,6 +17,17 @@ class FrontendController extends Controller
         ]);
     }
 
+    public function homeV2(): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::home-v2', [
+            'title'    => 'Kalystrat - Holding québécois construction',
+            'filiales' => $filiales,
+        ]);
+    }
+
     public function about(): Renderable
     {
         return view('frontend::about', [
