@@ -654,6 +654,9 @@
                         <li class="nav-item" role="presentation">
                             <button class="nav-link" id="why-pill-5-tab" data-bs-toggle="pill" data-bs-target="#why-pill-5" type="button" role="tab" aria-controls="why-pill-5" aria-selected="false">Kalystrat Immobilier <i class="ri-arrow-right-down-line"></i></button>
                         </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="why-pill-6-tab" data-bs-toggle="pill" data-bs-target="#why-pill-6" type="button" role="tab" aria-controls="why-pill-6" aria-selected="false">Kalystrat Placement Construction <i class="ri-arrow-right-down-line"></i></button>
+                        </li>
                     </ul>
                 </div>
                 <div class="col-xl-8">
@@ -814,7 +817,39 @@
                                         <div class="btn-group mt-35">
                                             <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
-                                    </div>                                
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="why-pill-6" role="tabpanel" aria-labelledby="why-pill-6-tab">
+                            <div class="row gx-80 gy-40 align-items-center">
+                                <div class="col-lg-5">
+                                    <div class="why-thumb-wrap3-1">
+                                        <div class="why-tab-thumb">
+                                            <img src="{{ asset('assets/construz-new/img/why/why-tab-thumb3-2.png') }}" alt="img">
+                                        </div>
+                                        <div class="why-text-wrap">
+                                            <h4 class="title">Service</h4>
+                                            <hr class="line">
+                                            <div class="number">06</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-7">
+                                    <div class="why-content-wrap">
+                                        <h4 class="title">About this Service</h4>
+                                        <h5 class="subtitle">Kalystrat Placement Construction</h5>
+                                        <p class="text">Agence de placement de main-d'œuvre construction. Six filiales spécialisées approvisionnées en personnel qualifié, formé selon normes RBQ et CCQ.</p>
+                                        <div class="checklist mb-35">
+                                            <ul>
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Personnel qualifié RBQ/CCQ — disponibilité 7j/7
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="btn-group mt-35">
+                                            <a href="{{ route('frontend.filiale', 'placement') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
