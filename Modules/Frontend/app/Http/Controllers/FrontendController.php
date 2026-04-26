@@ -12,13 +12,7 @@ class FrontendController extends Controller
 {
     public function home(): Renderable
     {
-        static $filiales = null;
-        $filiales ??= require module_path('Frontend', 'config/filiales.php');
-
-        return view('frontend::home-v2', [
-            'title'    => 'Kalystrat - Holding québécois construction',
-            'filiales' => $filiales,
-        ]);
+        return view('frontend::home-construz');
     }
 
     public function homeV2(): Renderable
