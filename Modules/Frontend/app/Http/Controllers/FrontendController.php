@@ -12,8 +12,12 @@ class FrontendController extends Controller
 {
     public function home(): Renderable
     {
-        return view('frontend::home', [
-            'title' => 'Kalystrat - Construction stratégique à Québec',
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::home-v2', [
+            'title'    => 'Kalystrat - Holding québécois construction',
+            'filiales' => $filiales,
         ]);
     }
 
@@ -121,29 +125,37 @@ class FrontendController extends Controller
 
     public function about(): Renderable
     {
-        return view('frontend::about', [
-            'title' => 'À propos - Kalystrat',
+        return view('frontend::about-v2', [
+            'title' => 'Kalystrat - À propos',
         ]);
     }
 
     public function services(): Renderable
     {
-        return view('frontend::services', [
-            'title' => 'Services - Kalystrat',
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::services-v2', [
+            'title'    => 'Kalystrat - Nos filiales',
+            'filiales' => $filiales,
         ]);
     }
 
     public function portfolio(): Renderable
     {
-        return view('frontend::portfolio', [
-            'title' => 'Portfolio - Kalystrat',
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::portfolio-v2', [
+            'title'    => 'Kalystrat - Portfolio',
+            'filiales' => $filiales,
         ]);
     }
 
     public function contact(): Renderable
     {
-        return view('frontend::contact', [
-            'title' => 'Contact - Kalystrat',
+        return view('frontend::contact-v2', [
+            'title' => 'Kalystrat - Nous joindre',
         ]);
     }
 
@@ -162,7 +174,7 @@ class FrontendController extends Controller
 
         $filiale = $filiales[$slug];
 
-        return view('frontend::filiale', [
+        return view('frontend::filiale-v2', [
             'title'   => $filiale['nom_complet'] . ' - Kalystrat',
             'filiale' => $filiale,
         ]);
