@@ -881,3 +881,53 @@ main .widget_contact a:not(.btn) { color: var(--ks-navy) !important; }
     background-color: rgba(184, 164, 114, 0.40) !important;
     color: var(--ks-white) !important;
 }
+
+/* ============================================================
+   P3 BATCH 1 — Phase A Scroll-to-top (navy/gold rebrand 2026-04-26)
+   ============================================================ */
+.scroll-top {
+    background: var(--ks-navy) !important;
+    border: 1px solid rgba(184, 164, 114, 0.25);
+    box-shadow: 0 4px 12px rgba(10, 22, 40, 0.35);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.scroll-top svg path,
+.scroll-top i {
+    color: var(--ks-gold) !important;
+    fill: var(--ks-gold) !important;
+    stroke: var(--ks-gold) !important;
+}
+.scroll-top:hover,
+.scroll-top:focus-visible {
+    transform: scale(1.08);
+    background: var(--ks-navy) !important;
+    box-shadow: 0 6px 18px rgba(10, 22, 40, 0.45);
+}
+.scroll-top:not(.show) {
+    opacity: 0;
+    pointer-events: none;
+}
+.scroll-top.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* ============================================================
+   P3 BATCH 1 — Phase G Reveal scroll (.ks-reveal) 2026-04-26
+   ============================================================ */
+.ks-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.ks-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+    .ks-reveal {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+}
