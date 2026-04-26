@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Construz - Construction HTML Template</title>
-    <meta name="description" content="Construz - Construction HTML Template">
-    <meta name="keywords" content="Construz - Construction HTML Template">
+    <title>Kalystrat — Holding québécois construction</title>
+    <meta name="description" content="Kalystrat — Holding québécois construction">
+    <meta name="keywords" content="Kalystrat — Holding québécois construction">
     <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->
@@ -31,7 +31,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/bootstrap.min.css') }}">
     <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="{{ asset('assets/construz-new/fonts/remixicon.css') }}">
+    <link rel="stylesheet" href="assets/fonts/remixicon.css') }}">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/magnific-popup.min.css') }}">
     <!-- Slick Slider -->
@@ -79,7 +79,7 @@
             <button class="closeButton sideMenuCls"><i class="ri-close-line"></i></button>
             <div class="widget widget-about footer-widget">
                 <div class="footer-logo">
-                    <a href="index.html"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
+                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
                 </div>
                 <p class="about-text mb-4">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
                 
@@ -97,37 +97,37 @@
                 <div class="recent-post-wrap mt-40">
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets/construz-new/img/blog/recent-post1.png') }}" alt="Blog Image"></a>
+                            <a href="#"><img src="{{ asset('assets/construz-new/img/blog/recent-post1.png') }}" alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">Best features of Building construction work</a></h4>
+                            <h4 class="post-title"><a class="text-inherit" href="#">Best features of Building construction work</a></h4>
                             <div class="recent-post-meta">
-                                <a href="blog.html">By Nicholes</a>
-                                <a href="blog.html">30 min ago</a>
+                                <a href="#">By Nicholes</a>
+                                <a href="#">30 min ago</a>
                             </div>
                         </div>
                     </div>
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets/construz-new/img/blog/recent-post2.png') }}" alt="Blog Image"></a>
+                            <a href="#"><img src="{{ asset('assets/construz-new/img/blog/recent-post2.png') }}" alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">The beast team is a around and how we make it</a></h4>
+                            <h4 class="post-title"><a class="text-inherit" href="#">The beast team is a around and how we make it</a></h4>
                             <div class="recent-post-meta">
-                                <a href="blog.html">By Nicholes</a>
-                                <a href="blog.html">2 days ago</a>
+                                <a href="#">By Nicholes</a>
+                                <a href="#">2 days ago</a>
                             </div>
                         </div>
                     </div>
                     <div class="recent-post">
                         <div class="media-img">
-                            <a href="blog-details.html"><img src="{{ asset('assets/construz-new/img/blog/recent-post4.png') }}" alt="Blog Image"></a>
+                            <a href="#"><img src="{{ asset('assets/construz-new/img/blog/recent-post4.png') }}" alt="Blog Image"></a>
                         </div>
                         <div class="media-body">
-                            <h4 class="post-title"><a class="text-inherit" href="blog-details.html">A well designed construction website is user accessible</a></h4>
+                            <h4 class="post-title"><a class="text-inherit" href="#">A well designed construction website is user accessible</a></h4>
                             <div class="recent-post-meta">
-                                <a href="blog.html">By Nicholes</a>
-                                <a href="blog.html">3 week ago</a>
+                                <a href="#">By Nicholes</a>
+                                <a href="#">3 week ago</a>
                             </div>
                         </div>
                     </div>
@@ -142,7 +142,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="index.html"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="Construz"></a>
+                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -154,19 +154,19 @@
                                 <a href="#">Multipage</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="index.html">Home 01</a>
+                                        <a href="{{ route('frontend.home') }}">Home 01</a>
                                     </li>
                                     <li>
-                                        <a href="home-2.html">Home 02</a>
+                                        <a href="#">Home 02</a>
                                     </li>
                                     <li>
-                                        <a href="home-3.html">Home 03</a>
+                                        <a href="#">Home 03</a>
                                     </li>
                                     <li>
-                                        <a href="home-4.html">Home 04</a>
+                                        <a href="#">Home 04</a>
                                     </li>
                                     <li>
-                                        <a href="home-5.html">Home 05</a>
+                                        <a href="{{ route('frontend.home') }}">Home 05</a>
                                     </li>
                                 </ul>
                             </li>
@@ -174,72 +174,72 @@
                                 <a href="#">Onepage</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="home-1-op.html">Home 01 Onepage</a>
+                                        <a href="#">Home 01 Onepage</a>
                                     </li>
                                     <li>
-                                        <a href="home-2-op.html">Home 02 Onepage</a>
+                                        <a href="#">Home 02 Onepage</a>
                                     </li>
                                     <li>
-                                        <a href="home-3-op.html">Home 03 Onepage</a>
+                                        <a href="#">Home 03 Onepage</a>
                                     </li>
                                     <li>
-                                        <a href="home-4-op.html">Home 04 Onepage</a>
+                                        <a href="#">Home 04 Onepage</a>
                                     </li>
                                     <li>
-                                        <a href="home-5-op.html">Home 05 Onepage</a>
+                                        <a href="#">Home 05 Onepage</a>
                                     </li>
                                 </ul>
                             </li>
                         </ul>
                     </li>
                     <li>
-                        <a href="about.html">About</a>
+                        <a href="{{ route('frontend.about') }}">About</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Pages</a>
                         <ul class="sub-menu">
-                            <li><a href="team.html">Team Page</a></li>
-                            <li><a href="team-details.html">Team Details</a></li>
-                            <li><a href="shop.html">Shop Page</a></li>
-                            <li><a href="shop-details.html">Shop Details</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="#">Team Page</a></li>
+                            <li><a href="#">Team Details</a></li>
+                            <li><a href="#">Shop Page</a></li>
+                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Wishlist</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Project</a>
                         <ul class="sub-menu">
-                            <li><a href="project.html">Projects</a></li>
-                            <li><a href="project-details.html">Project Details</a></li>
+                            <li><a href="{{ route('frontend.portfolio') }}">Projects</a></li>
+                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Service</a>
                         <ul class="sub-menu">
-                            <li><a href="service.html">Service</a></li>
-                            <li><a href="service-details.html">Service Details</a></li>
+                            <li><a href="{{ route('frontend.services') }}">Service</a></li>
+                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Shop</a>
                         <ul class="sub-menu">
-                            <li><a href="shop.html">Shop</a></li>
-                            <li><a href="shop-details.html">Shop Details</a></li>
-                            <li><a href="cart.html">Cart</a></li>
-                            <li><a href="checkout.html">Checkout</a></li>
-                            <li><a href="wishlist.html">Wishlist</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Shop Details</a></li>
+                            <li><a href="#">Cart</a></li>
+                            <li><a href="#">Checkout</a></li>
+                            <li><a href="#">Wishlist</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Blog</a>
                         <ul class="sub-menu">
-                            <li><a href="blog.html">Blog</a></li>
-                            <li><a href="blog-details.html">Blog Details</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Blog Details</a></li>
                         </ul>
                     </li>
                     <li>
-                        <a href="contact.html">Contact</a>
+                        <a href="{{ route('frontend.contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -257,32 +257,32 @@
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="index.html"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="logo"></a>
+                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-auto m-lg-auto">
                             <nav class="main-menu d-none d-lg-inline-block">
                                 <ul>
                                     <li class="menu-item-has-children">
-                                        <a href="#">HOME</a>
+                                        <a href="#">ACCUEIL</a>
                                         <ul class="sub-menu">
                                             <li class="menu-item-has-children">
                                                 <a href="#">Multipage</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="index.html">Home 01</a>
+                                                        <a href="{{ route('frontend.home') }}">Home 01</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-2.html">Home 02</a>
+                                                        <a href="#">Home 02</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-3.html">Home 03</a>
+                                                        <a href="#">Home 03</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-4.html">Home 04</a>
+                                                        <a href="#">Home 04</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-5.html">Home 05</a>
+                                                        <a href="{{ route('frontend.home') }}">Home 05</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -290,58 +290,58 @@
                                                 <a href="#">Onepage</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="home-1-op.html">Home 01 Onepage</a>
+                                                        <a href="#">Home 01 Onepage</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-2-op.html">Home 02 Onepage</a>
+                                                        <a href="#">Home 02 Onepage</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-3-op.html">Home 03 Onepage</a>
+                                                        <a href="#">Home 03 Onepage</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-4-op.html">Home 04 Onepage</a>
+                                                        <a href="#">Home 04 Onepage</a>
                                                     </li>
                                                     <li>
-                                                        <a href="home-5-op.html">Home 05 Onepage</a>
+                                                        <a href="#">Home 05 Onepage</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="about.html">ABOUT</a>
+                                        <a href="{{ route('frontend.about') }}">À PROPOS</a>
                                     </li>
                                     <li class="menu-item-has-children">
-                                        <a href="#">SERVICES</a>
+                                        <a href="#">NOS FILIALES</a>
                                         <ul class="sub-menu">
-                                            <li><a href="service.html">Service</a></li>
-                                            <li><a href="service-details.html">Service Details</a></li>
+                                            <li><a href="{{ route('frontend.services') }}">Service</a></li>
+                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Service Details</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">PAGES</a>
                                         <ul class="sub-menu">
-                                            <li><a href="project.html">Project Page</a></li>
-                                            <li><a href="project-details.html">Project Details</a></li>
-                                            <li><a href="team.html">Team Page</a></li>
-                                            <li><a href="team-details.html">Team Details</a></li>
-                                            <li><a href="shop.html">Shop Page</a></li>
-                                            <li><a href="shop-details.html">Shop Details</a></li>
-                                            <li><a href="cart.html">Cart</a></li>
-                                            <li><a href="checkout.html">Checkout</a></li>
-                                            <li><a href="wishlist.html">Wishlist</a></li>
+                                            <li><a href="{{ route('frontend.portfolio') }}">Project Page</a></li>
+                                            <li><a href="{{ route('frontend.portfolio') }}">Project Details</a></li>
+                                            <li><a href="#">Team Page</a></li>
+                                            <li><a href="#">Team Details</a></li>
+                                            <li><a href="#">Shop Page</a></li>
+                                            <li><a href="#">Shop Details</a></li>
+                                            <li><a href="#">Cart</a></li>
+                                            <li><a href="#">Checkout</a></li>
+                                            <li><a href="#">Wishlist</a></li>
                                         </ul>
                                     </li>  
                                     <li class="menu-item-has-children">
-                                        <a href="#">NEWS</a>
+                                        <a href="#">BLOG</a>
                                         <ul class="sub-menu">
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a href="blog-details.html">News Details</a></li>
+                                            <li><a href="#">News</a></li>
+                                            <li><a href="#">News Details</a></li>
                                         </ul>
                                     </li>
                                                                       
                                     <li>
-                                        <a href="contact.html">CONTACT</a>
+                                        <a href="{{ route('frontend.contact') }}">NOUS JOINDRE</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -360,7 +360,7 @@
                                         <a class="link" href="tel:+2590256215">+123 556 8824</a>
                                     </div>
                                 </div>
-                                <a href="about.html" class="btn style2 d-xxl-flex d-none">GET IN TOUCH <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('frontend.about') }}" class="btn style2 d-xxl-flex d-none">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 <button type="button" class="search-btn searchBoxToggler simple-icon">
                                     <i class="ri-search-line"></i>
                                 </button>
@@ -427,11 +427,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">We Are Unsurpassed Roofing</h1>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Services Agency</h1>
-                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites.</p>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">Holding québécois</h1>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
+                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="about.html" class="btn style2">REQUEST A FREE ESTIMATE <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -482,11 +482,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">We Are Unsurpassed Roofing</h1>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Services Agency</h1>
-                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites.</p>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">Holding québécois</h1>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
+                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="about.html" class="btn style2">REQUEST A FREE ESTIMATE <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -537,11 +537,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">We Are Unsurpassed Roofing</h1>
-                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Services Agency</h1>
-                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites.</p>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">Holding québécois</h1>
+                                <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
+                                <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="about.html" class="btn style2">REQUEST A FREE ESTIMATE <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -567,9 +567,9 @@
                         <div class="about-img-1 mb-40">
                             <img src="{{ asset('assets/construz-new/img/normal/about_5-1.png') }}" alt="img">
                         </div>
-                        <p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites. </p>
+                        <p>6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec. </p>
                         <div class="btn-group mt-30">
-                            <a href="about.html" class="btn">NOW MORE COMPANY <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="{{ route('frontend.about') }}" class="btn">NOW MORE COMPANY <i class="ri-arrow-right-up-line"></i></a>
                         </div> 
                     </div>
                 </div>
@@ -578,7 +578,7 @@
                         <div class="title-area mb-40">
                             <span class="sub-title text-theme">ABOUT US <i class="ri-arrow-right-down-line"></i></span>
                             <h2 class="sec-title">We building everything that you needed</h2>
-                            <p class="sec-text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites. 
+                            <p class="sec-text">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec. 
                             </p>
                             <div class="checklist mb-35 mt-30">
                                 <ul>
@@ -684,7 +684,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="service.html" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -716,7 +716,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="service.html" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -748,7 +748,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="service.html" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -780,7 +780,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="service.html" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -812,7 +812,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="service.html" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -1202,10 +1202,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="project-details.html">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="project-details.html" class="btn style2">
+                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1220,10 +1220,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="project-details.html">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="project-details.html" class="btn style2">
+                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1238,10 +1238,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="project-details.html">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="project-details.html" class="btn style2">
+                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1256,10 +1256,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="project-details.html">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="project-details.html" class="btn style2">
+                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1274,10 +1274,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="project-details.html">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="project-details.html" class="btn style2">
+                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1332,52 +1332,52 @@
             <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="index.html"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
             </div>
@@ -1398,7 +1398,7 @@
                 </div>
                 <div class="col-md-auto">
                     <div class="sec-btn">
-                        <a href="blog.html" class="btn">View all post <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="#" class="btn">View all post <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -1408,17 +1408,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_1.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>22</span>JUN</a>
+                                <a href="#"><span>22</span>JUN</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Jr. Saller</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Jr. Saller</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Protecting your roof from storm damage</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Protecting your roof from storm damage</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1428,17 +1428,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_2.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>14</span>FEB</a>
+                                <a href="#"><span>14</span>FEB</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Ashik</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Ashik</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Roofing are fact makes easier 10 reason</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Roofing are fact makes easier 10 reason</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1448,17 +1448,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_3.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>09</span>JUN</a>
+                                <a href="#"><span>09</span>JUN</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Jekson</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Jekson</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Why roofing material warranties important?</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Why roofing material warranties important?</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1468,17 +1468,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_1.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>22</span>JUN</a>
+                                <a href="#"><span>22</span>JUN</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Jr. Saller</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Jr. Saller</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Protecting your roof from storm damage</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Protecting your roof from storm damage</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1488,17 +1488,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_2.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>14</span>FEB</a>
+                                <a href="#"><span>14</span>FEB</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Ashik</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Ashik</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Roofing are fact makes easier 10 reason</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Roofing are fact makes easier 10 reason</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1508,17 +1508,17 @@
                         <div class="blog-img">
                             <img src="{{ asset('assets/construz-new/img/blog/blog_5_3.png') }}" alt="blog image">
                             <div class="blog-date">
-                                <a href="blog.html"><span>09</span>JUN</a>
+                                <a href="#"><span>09</span>JUN</a>
                                 <div class="year">2024</div>
                             </div>
                         </div>
                         <div class="blog-content">
                             <div class="blog-meta">
-                                <a href="blog.html">By Jekson</a>
-                                <a href="blog.html">News in 2024</a>
+                                <a href="#">By Jekson</a>
+                                <a href="#">News in 2024</a>
                             </div>
-                            <h3 class="blog-title"><a href="blog-details.html">Why roofing material warranties important?</a></h3>
-                            <a href="blog-details.html" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
+                            <h3 class="blog-title"><a href="#">Why roofing material warranties important?</a></h3>
+                            <a href="#" class="btn style-border4" tabindex="0">Read More <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -1536,7 +1536,7 @@
                 <h4 class="cta-title text-white">
                     Roofing & Restoration services that will leave your home better than before
                 </h4>
-                <a class="btn style4" href="contact.html">Start your free quote <i class="ri-arrow-right-up-line"></i></a>
+                <a class="btn style4" href="{{ route('frontend.contact') }}">Start your free quote <i class="ri-arrow-right-up-line"></i></a>
             </div>
             
         </div>
@@ -1549,7 +1549,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="index.html"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Construz"></a>
+                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
                     <p class="subscribe-box_text">Subscribe for the latest news. Stay updated on the latest trends.</p>
@@ -1575,18 +1575,18 @@
                             <h3 class="widget_title">Useful Links</h3>
                             <div class="menu-all-pages-container grid-style">
                                 <ul class="menu">
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="service.html">What We Do</a></li>
-                                    <li><a href="service.html">News & Article</a></li>
-                                    <li><a href="service.html">Success Story</a></li>
-                                    <li><a href="service.html">FAQ’s</a></li>
+                                    <li><a href="{{ route('frontend.about') }}">About Us</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">What We Do</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">News & Article</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Success Story</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">FAQ’s</a></li>
                                 </ul>
                                 <ul class="menu">
-                                    <li><a href="team.html">Our Team</a></li>
-                                    <li><a href="service.html">Careers</a></li>
-                                    <li><a href="service.html">Testimonials</a></li>
-                                    <li><a href="contact.html">Privacy Policy</a></li>
-                                    <li><a href="contact.html">Terms of use</a></li>
+                                    <li><a href="#">Our Team</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Careers</a></li>
+                                    <li><a href="{{ route('frontend.services') }}">Testimonials</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Privacy Policy</a></li>
+                                    <li><a href="{{ route('frontend.contact') }}">Terms of use</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1624,12 +1624,12 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Construz</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2024 <a href="#">Kalystrat</a>  |  All rights reserved</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
-                            <a href="contact.html">Terms & Condition</a>
-                            <a href="contact.html">Privacy Policy</a>
-                            <a href="contact.html">Contact Us</a>
+                            <a href="{{ route('frontend.contact') }}">Terms & Condition</a>
+                            <a href="{{ route('frontend.contact') }}">Privacy Policy</a>
+                            <a href="{{ route('frontend.contact') }}">Contact Us</a>
                         </div>
                     </div>
                 </div>                

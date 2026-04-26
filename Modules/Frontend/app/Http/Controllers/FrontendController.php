@@ -15,6 +15,40 @@ class FrontendController extends Controller
         return view('frontend::home-construz');
     }
 
+    public function aboutPage(): Renderable
+    {
+        return view('frontend::about-construz');
+    }
+
+    public function servicesPage(): Renderable
+    {
+        return view('frontend::services-construz');
+    }
+
+    public function portfolioPage(): Renderable
+    {
+        return view('frontend::portfolio-construz');
+    }
+
+    public function contactPage(): Renderable
+    {
+        return view('frontend::contact-construz');
+    }
+
+    public function filialePage(string $slug): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        if (!isset($filiales[$slug])) {
+            abort(404);
+        }
+
+        return view('frontend::filiale-construz', [
+            'filiale' => $filiales[$slug],
+        ]);
+    }
+
     public function homeV2(): Renderable
     {
         static $filiales = null;
@@ -119,38 +153,22 @@ class FrontendController extends Controller
 
     public function about(): Renderable
     {
-        return view('frontend::about-v2', [
-            'title' => 'Kalystrat - À propos',
-        ]);
+        return view('frontend::about-construz');
     }
 
     public function services(): Renderable
     {
-        static $filiales = null;
-        $filiales ??= require module_path('Frontend', 'config/filiales.php');
-
-        return view('frontend::services-v2', [
-            'title'    => 'Kalystrat - Nos filiales',
-            'filiales' => $filiales,
-        ]);
+        return view('frontend::services-construz');
     }
 
     public function portfolio(): Renderable
     {
-        static $filiales = null;
-        $filiales ??= require module_path('Frontend', 'config/filiales.php');
-
-        return view('frontend::portfolio-v2', [
-            'title'    => 'Kalystrat - Portfolio',
-            'filiales' => $filiales,
-        ]);
+        return view('frontend::portfolio-construz');
     }
 
     public function contact(): Renderable
     {
-        return view('frontend::contact-v2', [
-            'title' => 'Kalystrat - Nous joindre',
-        ]);
+        return view('frontend::contact-construz');
     }
 
     /**
