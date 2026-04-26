@@ -28,6 +28,59 @@ class FrontendController extends Controller
         ]);
     }
 
+    public function aboutV2(): Renderable
+    {
+        return view('frontend::about-v2', [
+            'title' => 'Kalystrat - À propos',
+        ]);
+    }
+
+    public function servicesV2(): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::services-v2', [
+            'title'    => 'Kalystrat - Nos filiales',
+            'filiales' => $filiales,
+        ]);
+    }
+
+    public function portfolioV2(): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        return view('frontend::portfolio-v2', [
+            'title'    => 'Kalystrat - Portfolio',
+            'filiales' => $filiales,
+        ]);
+    }
+
+    public function contactV2(): Renderable
+    {
+        return view('frontend::contact-v2', [
+            'title' => 'Kalystrat - Nous joindre',
+        ]);
+    }
+
+    public function filialeV2(string $slug): Renderable
+    {
+        static $filiales = null;
+        $filiales ??= require module_path('Frontend', 'config/filiales.php');
+
+        if (!isset($filiales[$slug])) {
+            abort(404);
+        }
+
+        $filiale = $filiales[$slug];
+
+        return view('frontend::filiale-v2', [
+            'title'   => $filiale['nom_complet'] . ' - Kalystrat',
+            'filiale' => $filiale,
+        ]);
+    }
+
     public function about(): Renderable
     {
         return view('frontend::about', [
