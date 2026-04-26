@@ -1,0 +1,149 @@
+#!/bin/bash
+INPUT=$1
+OUTPUT=$2
+
+sed \
+  -e "s|\"assets/css/|\"{{ asset('assets/construz-new/css/|g; s|\.css\"|.css') }}\"|g" \
+  -e "s|\"assets/fonts/remixicon\.css\"|\"{{ asset('assets/construz-new/fonts/remixicon.css') }}\"|g" \
+  -e "s|\"assets/js/|\"{{ asset('assets/construz-new/js/|g; s|\.js\"|.js') }}\"|g" \
+  -e "s|src=\"assets/img/|src=\"{{ asset('assets/construz-new/img/|g" \
+  -e "s|data-bg-src=\"assets/img/|data-bg-src=\"{{ asset('assets/construz-new/img/|g" \
+  "$INPUT" | \
+sed -E "s|\\{\\{ asset\\('assets/construz-new/img/([^\"]*)\"|{{ asset('assets/construz-new/img/\1') }}\"|g" | \
+sed \
+  -e 's|href="index\.html"|href="{{ route('"'"'frontend.home'"'"') }}"|g' \
+  -e 's|href="about\.html"|href="{{ route('"'"'frontend.about'"'"') }}"|g' \
+  -e 's|href="service\.html"|href="{{ route('"'"'frontend.services'"'"') }}"|g' \
+  -e 's|href="service-details\.html"|href="{{ route('"'"'frontend.filiale'"'"', '"'"'fondations'"'"') }}"|g' \
+  -e 's|href="project\.html"|href="{{ route('"'"'frontend.portfolio'"'"') }}"|g' \
+  -e 's|href="project-details\.html"|href="{{ route('"'"'frontend.portfolio'"'"') }}"|g' \
+  -e 's|href="contact\.html"|href="{{ route('"'"'frontend.contact'"'"') }}"|g' \
+  -e 's|href="blog\.html"|href="#"|g' \
+  -e 's|href="blog-details\.html"|href="#"|g' \
+  -e 's|href="team\.html"|href="#"|g' \
+  -e 's|href="team-details\.html"|href="#"|g' \
+  -e 's|href="shop\.html"|href="#"|g' \
+  -e 's|href="shop-details\.html"|href="#"|g' \
+  -e 's|href="cart\.html"|href="#"|g' \
+  -e 's|href="checkout\.html"|href="#"|g' \
+  -e 's|href="wishlist\.html"|href="#"|g' \
+  -e 's|href="home-2\.html"|href="#"|g' \
+  -e 's|href="home-3\.html"|href="#"|g' \
+  -e 's|href="home-4\.html"|href="#"|g' \
+  -e 's|href="home-5\.html"|href="{{ route('"'"'frontend.home'"'"') }}"|g' \
+  -e 's|href="home-1-op\.html"|href="#"|g' \
+  -e 's|href="home-2-op\.html"|href="#"|g' \
+  -e 's|href="home-3-op\.html"|href="#"|g' \
+  -e 's|href="home-4-op\.html"|href="#"|g' \
+  -e 's|href="home-5-op\.html"|href="#"|g' \
+  -e 's|>HOME<|>ACCUEIL<|g' \
+  -e 's|>ABOUT<|>À PROPOS<|g' \
+  -e 's|>SERVICES<|>NOS FILIALES<|g' \
+  -e 's|>PROJECTS<|>PROJETS<|g' \
+  -e 's|>NEWS<|>BLOG<|g' \
+  -e 's|>CONTACT<|>NOUS JOINDRE<|g' \
+  -e 's|>PAGES<|>PAGES<|g' \
+  -e 's|GET IN TOUCH|DEMANDER UNE SOUMISSION|g' \
+  -e 's|REQUEST A FREE ESTIMATE|DEMANDER UNE SOUMISSION|g' \
+  -e 's|We Are Unsurpassed Roofing|Holding québécois|g' \
+  -e 's|Services Agency|en construction|g' \
+  -e "s|We craft unique digital experiences\\. With more than 7 years of expertise we design and code clean websites\\.|6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.|g" \
+  -e "s|We craft unique digital experiences\\. With more than 7 years of expertise we design and code clean websites we have been the trusted name in heating, air conditioning and plumbing businesses\\.|Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.|g" \
+  -e 's|Construz - Construction HTML Template|Kalystrat — Holding québécois construction|g' \
+  -e 's|>Construz<|>Kalystrat<|g' \
+  -e 's|alt="Construz"|alt="Kalystrat"|g' \
+  -e 's|>CONSTRUZ<|>KALYSTRAT<|g' \
+  -e 's|Mon - Sat / 8am : 12pm|Lun - Ven / 8h - 17h|g' \
+  -e 's|Mon - Sat 10\.00 - 18\.00|Lun - Ven 8h - 17h|g' \
+  -e 's|Mon-Sat 10:00am to 07:30pm|Lun-Ven 8h à 17h|g' \
+  -e 's|Mon-Sat:|Lun-Ven :|g' \
+  -e 's|96 Jones Street, New York, USA|Québec, QC, Canada|g' \
+  -e 's|Losangle, Street Road 24, New York, USA - 67452|Québec, QC, Canada|g' \
+  -e 's|Call us any time|Appelez-nous|g' \
+  -e 's|+123 556 8824|1-581-578-6145|g' \
+  -e 's|+85 155 596 1658|1-581-578-6145|g' \
+  -e 's|+121 551 579 266|1-581-578-6145|g' \
+  -e 's|+00 (22) 730 240 369|1-581-578-6145|g' \
+  -e 's|+32 (0) 800 240 458|1-581-578-6145|g' \
+  -e 's|tel:851555961658|tel:+15815786145|g' \
+  -e 's|tel:121551579266|tel:+15815786145|g' \
+  -e 's|tel:0022730240369|tel:+15815786145|g' \
+  -e 's|tel:2590256215|tel:+15815786145|g' \
+  -e 's|support@gmail\.com|info@kalystrat.ca|g' \
+  -e 's|construz\.info@gmail\.com|info@kalystrat.ca|g' \
+  -e 's|>What we do <|>Notre approche <|g' \
+  -e 's|>Why Choose Us <|>Pourquoi nous choisir <|g' \
+  -e 's|>About Us <|>À propos de Kalystrat <|g' \
+  -e 's|>Award Winning <|>Nos références <|g' \
+  -e 's|>Daily Update <|>Blog <|g' \
+  -e 's|>Testimonials <|>Témoignages <|g' \
+  -e 's|>Our projects <|>Nos projets <|g' \
+  -e 's|>OUR BENEFITS <|>NOS AVANTAGES <|g' \
+  -e 's|>OUR PROCESS <|>NOTRE MÉTHODOLOGIE <|g' \
+  -e 's|>Our Services<|>Nos filiales<|g' \
+  -e 's|>Our services that we provide<|>Six filiales spécialisées en synergie<|g' \
+  -e 's|>Recently completed projects<|>Premiers chantiers à venir<|g' \
+  -e 's|>Our Awards & Achievements<|>Nos références et engagements<|g' \
+  -e 's|>What client says<|>Témoignages clients<|g' \
+  -e 's|>Have a project in mind?<|>Vous avez un projet ?<|g' \
+  -e 's|>Get Free Quote <|>Soumission gratuite <|g' \
+  -e 's|>Our latest news and blog<|>Articles à venir<|g' \
+  -e 's|>View all post |>Tous les articles |g' \
+  -e 's|>Read More |>En savoir plus |g' \
+  -e 's|>Submit Now |>Envoyer ma soumission |g' \
+  -e 's|placeholder="Your Name"|placeholder="Nom complet *" autocomplete="name"|g' \
+  -e 's|placeholder="Email Address"|placeholder="Courriel *" autocomplete="email"|g' \
+  -e 's|placeholder="Phone Number"|placeholder="Téléphone" autocomplete="tel"|g' \
+  -e 's|placeholder="Message\.\.\."|placeholder="Décrivez votre projet..."|g' \
+  -e 's|>Your Inquiry<|>Sujet *<|g' \
+  -e 's|action="mail\.php"|action="{{ route('"'"'frontend.contact.submit'"'"') }}"|g' \
+  -e 's|>About Company<|>À propos<|g' \
+  -e 's|A small business can be better than a big business because of agility and adaptability due to their size and scale\.|Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.|g' \
+  -e 's|>Since 2000<|>Depuis 2026<|g' \
+  -e 's|>WE ARE AVAILABLE<|>NOUS SOMMES DISPONIBLES<|g' \
+  -e 's|>Useful Links<|>Liens utiles<|g' \
+  -e 's|>Office Address<|>Adresse<|g' \
+  -e 's|>Email Address<|>Courriel<|g' \
+  -e 's|>Phone Number<|>Téléphone<|g' \
+  -e 's|>Follow Us<|>Suivez-nous<|g' \
+  -e 's|>Get in Touch !<|>Une question ?<|g' \
+  -e 's|>About Us</a>|>À propos</a>|g' \
+  -e 's|>What We Do</a>|>Nos filiales</a>|g' \
+  -e 's|>News & Article</a>|>Blog</a>|g' \
+  -e 's|>Success Story</a>|>Réalisations</a>|g' \
+  -e "s|>FAQ’s</a>|>FAQ</a>|g" \
+  -e 's|>Our Team</a>|>Notre équipe</a>|g' \
+  -e 's|>Careers</a>|>Carrières</a>|g' \
+  -e 's|>Testimonials</a>|>Témoignages</a>|g' \
+  -e 's|>Privacy Policy</a>|>Confidentialité</a>|g' \
+  -e 's|>Terms of use</a>|>Conditions</a>|g' \
+  -e 's|>Terms & Condition</a>|>Conditions</a>|g' \
+  -e 's|© 2024|© 2026|g' \
+  -e 's|All rights reserved|Tous droits réservés|g' \
+  -e 's|Subscribe for the latest news\. Stay updated on the latest trends\.|Recevez nos nouvelles et chantiers récents.|g' \
+  -e 's|Enter your email\.\.\.|Votre adresse courriel|g' \
+  -e 's|>SUBCRIBE|>S\&apos;INSCRIRE|g' \
+  -e 's|>Multipage</a>|>Multipage</a>|g' \
+  -e 's|>Onepage</a>|>Onepage</a>|g' \
+  -e 's|>Home 01</a>|>Accueil</a>|g' \
+  -e 's|>Home 05</a>|>Accueil</a>|g' \
+  -e 's|>Service Details</a>|>Filiale</a>|g' \
+  -e 's|>Project Details</a>|>Projet</a>|g' \
+  -e 's|>Blog Standard</a>|>Blog</a>|g' \
+  -e 's|>Blog Details</a>|>Article</a>|g' \
+  -e 's|>About Page</a>|>À propos</a>|g' \
+  -e 's|>Contact Us</a>|>Nous joindre</a>|g' \
+  -e 's|>Team Page</a>|>Équipe</a>|g' \
+  -e 's|>Team Details</a>|>Membre</a>|g' \
+  -e 's|>Shop Page</a>|>Boutique</a>|g' \
+  -e 's|>Shop Details</a>|>Produit</a>|g' \
+  -e 's|>Cart Page</a>|>Panier</a>|g' \
+  -e 's|>Checkout Page</a>|>Commande</a>|g' \
+  -e 's|>Wishlist Page</a>|>Favoris</a>|g' \
+  -e "s|It has survived not only five centuries\\.|Holding nouvellement constitué — premiers témoignages clients à venir suite aux livraisons des premiers chantiers.|g" \
+  -e 's|When an unknown printer took a galley of type and scrambled it to make a type specimen book, |Notre engagement : excellence et qualité à chaque projet. |g' \
+  -e 's|Bm Ashik|Ali Salomon|g' \
+  -e 's|Designer at Rainbow Themes|Fondateur, président et directeur général|g' \
+  > "$OUTPUT"
+
+echo "OK: $INPUT → $OUTPUT ($(wc -l < $OUTPUT) lignes)"
