@@ -237,3 +237,28 @@ h1, h2, h3, h4, h5, h6 {
     padding: 12px 24px;
   }
 }
+
+/* WCAG 2.4.1 Skip link + 2.4.7 focus visible */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #0A1628;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 9999;
+  text-decoration: none;
+  font-family: 'Archivo', sans-serif;
+  font-weight: 700;
+}
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 0;
+  outline: 2px solid #B8A472;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid #B8A472;
+  outline-offset: 2px;
+}

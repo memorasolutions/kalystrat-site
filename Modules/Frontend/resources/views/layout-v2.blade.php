@@ -54,6 +54,9 @@
 
 <body>
 
+    {{-- Skip link WCAG 2.4.1 --}}
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
     {{-- Preloader --}}
     <div class="preloader">
         <div class="preloader-inner">
@@ -65,7 +68,7 @@
     @include('frontend::partials-v2.sidemenu')
     @include('frontend::partials-v2.header')
 
-    <main>
+    <main id="main-content">
         @yield('content')
     </main>
 
