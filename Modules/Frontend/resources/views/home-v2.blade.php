@@ -696,7 +696,7 @@ Blog Area 4 (placeholders articles à venir)
             <div class="col-md-6 col-lg-4">
                 <div class="blog-card style5">
                     <div class="blog-img">
-                        <img src="{{ asset('assets/construz-new/img/blog/blog_5_' . (($i - 1) % 3 + 1) . '.png') }}" alt="blog image">
+                        <img src="{{ asset('assets/construz-new/img/blog/blog_5_' . (($i - 1) % 3 + 1) . '.png') }}" alt="blog image" loading="lazy" decoding="async">
                         <div class="blog-date"><a href="#"><span>26</span>AVR</a><div class="year">2026</div></div>
                     </div>
                     <div class="blog-content">
