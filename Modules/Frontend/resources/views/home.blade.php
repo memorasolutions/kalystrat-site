@@ -111,6 +111,58 @@
 {{-- Section portfolio teaser SUPPRIMÉE 2026-04-25 (projets fictifs).
      Sera réintroduite avec vrais chantiers livrés des 6 filiales. --}}
 
+{{-- Chaîne de valeur intégrée (différenciateur principal Kalystrat) --}}
+<section class="space-top space-bottom">
+  <div class="container">
+    <div class="title-area text-center mb-5">
+      <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> CHAÎNE DE VALEUR INTÉGRÉE</span>
+      <h2 class="sec-title">De l'acquisition à la livraison</h2>
+      <p class="mx-auto" style="max-width:680px;">Kalystrat maîtrise chaque maillon de la construction grâce à ses six filiales spécialisées, garantissant qualité, délais et traçabilité sur l'ensemble du cycle projet.</p>
+    </div>
+    <div class="d-flex flex-column flex-md-row align-items-center justify-content-center gap-3 gap-md-0 position-relative wow fadeInUp">
+      <div class="text-center px-2">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#2E5266;">
+          <i class="ri-building-line text-white" style="font-size:28px;" aria-hidden="true"></i>
+        </div>
+        <a href="{{ route('frontend.filiale', 'immobilier') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#2E5266;">1 — Immobilier</a>
+      </div>
+      <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
+      <div class="text-center px-2">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#8B6F47;">
+          <i class="ri-tools-line text-white" style="font-size:28px;" aria-hidden="true"></i>
+        </div>
+        <a href="{{ route('frontend.filiale', 'fondations') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#8B6F47;">2 — Fondations</a>
+      </div>
+      <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
+      <div class="text-center px-2">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#6B7B8C;">
+          <i class="ri-layout-grid-line text-white" style="font-size:28px;" aria-hidden="true"></i>
+        </div>
+        <a href="{{ route('frontend.filiale', 'structure') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#6B7B8C;">3 — Structure</a>
+      </div>
+      <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
+      <div class="text-center px-2">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#4A5D6F;">
+          <i class="ri-home-2-line text-white" style="font-size:28px;" aria-hidden="true"></i>
+        </div>
+        <a href="{{ route('frontend.filiale', 'toiture') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#4A5D6F;">4 — Toiture</a>
+      </div>
+      <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
+      <div class="text-center px-2">
+        <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#B8A472;">
+          <i class="ri-paint-brush-line text-white" style="font-size:28px;" aria-hidden="true"></i>
+        </div>
+        <a href="{{ route('frontend.filiale', 'finition') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#B8A472;">5 — Finition</a>
+      </div>
+    </div>
+    <div class="mt-5 text-center py-3 px-3 wow fadeInUp" style="background:#7A6738;border-radius:4px;">
+      <a href="{{ route('frontend.filiale', 'placement') }}" class="text-white fw-bold text-uppercase small text-decoration-none" style="letter-spacing:0.1em;">
+        <i class="ri-team-line me-2" aria-hidden="true"></i>Kalystrat Placement Construction — Main-d'œuvre interne transverse à chaque étape
+      </a>
+    </div>
+  </div>
+</section>
+
 {{-- Section témoignages SUPPRIMÉE 2026-04-25 (mensonge institutionnel : noms inventés) --}}
 {{-- Sera réintroduite avec vrais témoignages clients quand disponibles. --}}
 

@@ -35,41 +35,41 @@
         </div>
     </section>
 
-    {{-- Process --}}
+    {{-- Méthodologie construction --}}
     <section class="space-top space-bottom bg-smoke">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> NOTRE PROCESSUS</span>
-                <h2 class="sec-title">Notre méthodologie</h2>
-                <p>Une approche structurée et éprouvée pour sécuriser chaque étape du cycle d'investissement et maximiser la création de valeur.</p>
+                <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> NOTRE MÉTHODOLOGIE</span>
+                <h2 class="sec-title">Du plan au chantier livré</h2>
+                <p>Une approche structurée pour piloter chaque projet de construction de bout en bout, en coordonnant nos six filiales sous une gouvernance unique.</p>
             </div>
             <div class="row gx-30 gy-30 text-center">
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <div class="process-box">
                         <div class="process-number">01</div>
-                        <h3 class="h5">Analyse et sourcing</h3>
-                        <p>Veille active des marchés, identification des opportunités et analyse approfondie des fondamentaux selon des critères de rendement et de risque.</p>
+                        <h3 class="h5">Planification</h3>
+                        <p>Évaluation du terrain, étude des besoins, analyse réglementaire (RBQ, code du bâtiment) et estimation budgétaire intégrée par filiale.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
                     <div class="process-box">
                         <div class="process-number">02</div>
-                        <h5>Structuration</h5>
-                        <p>Conception de la structure juridique, financière et opérationnelle optimale. Montages sur mesure alignant les intérêts de toutes les parties.</p>
+                        <h3 class="h5">Conception</h3>
+                        <p>Plans architecturaux, ingénierie structurale et mécanique, choix des matériaux, validation conformité et permis de construction.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
                     <div class="process-box">
                         <div class="process-number">03</div>
-                        <h5>Exécution</h5>
-                        <p>Pilotage rigoureux de la mise en œuvre. Coordination des équipes, suivi des indicateurs de performance et gestion proactive des risques.</p>
+                        <h3 class="h5">Réalisation</h3>
+                        <p>Excavation, fondations, structure, toiture, finition. Six filiales coordonnées par notre équipe centrale, main-d'œuvre interne via Placement.</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
                     <div class="process-box">
                         <div class="process-number">04</div>
-                        <h5>Valorisation</h5>
-                        <p>Optimisation continue de la valeur des actifs sous gestion. Stratégies de valorisation active pour maximiser les rendements.</p>
+                        <h3 class="h5">Livraison</h3>
+                        <p>Inspection finale, mise en service, remise des clés et accompagnement post-livraison. Garanties prolongées sur les éléments structuraux.</p>
                     </div>
                 </div>
             </div>
