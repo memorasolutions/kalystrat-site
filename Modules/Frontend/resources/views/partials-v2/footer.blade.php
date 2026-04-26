@@ -8,7 +8,7 @@
                 <p class="subscribe-box_text">Recevez nos nouvelles et chantiers récents.</p>
                 <form class="newsletter-form" action="#" method="POST" aria-label="Inscription infolettre">
                     @csrf
-                    <input class="form-control" type="email" name="email" placeholder="Votre adresse courriel" aria-label="Adresse courriel" required>
+                    <input class="form-control" type="email" name="email" placeholder="Votre adresse courriel" aria-label="Adresse courriel infolettre" autocomplete="email" required>
                     <button type="submit" class="btn style2" aria-label="S'abonner à l'infolettre">S'INSCRIRE<i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
                 </form>
             </div>

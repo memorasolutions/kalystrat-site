@@ -233,7 +233,7 @@ About Area
                     <div class="about-thumb5 mt-60 d-inline-block">
                         <div class="video-wrap about-img-2">
                             <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
-                            <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video"><i class="ri-play-fill"></i></a>
+                            <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video" aria-label="Lire la vidéo de présentation Kalystrat"><i class="ri-play-fill" aria-hidden="true"></i></a>
                         </div>
                     </div>
                 </div>
@@ -554,17 +554,17 @@ Contact Area 2 (formulaire soumission)
                         <form action="{{ route('frontend.contact.submit') }}" method="POST" class="contact-form ajax-contact">
                             @csrf
                             <div class="row gy-4">
-                                <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" required></div></div>
-                                <div class="col-md-6"><div class="form-group"><input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" required></div></div>
-                                <div class="col-md-6"><div class="form-group"><input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone"></div></div>
-                                <div class="col-md-6"><div class="form-group"><select name="subject" id="subject" class="single-select nice-select form-select" required>
+                                <div class="col-md-6"><div class="form-group"><input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" required autocomplete="name" aria-label="Nom complet"></div></div>
+                                <div class="col-md-6"><div class="form-group"><input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" required autocomplete="email" aria-label="Courriel"></div></div>
+                                <div class="col-md-6"><div class="form-group"><input type="tel" class="form-control" name="phone" id="phone" placeholder="Téléphone" autocomplete="tel" aria-label="Numéro de téléphone"></div></div>
+                                <div class="col-md-6"><div class="form-group"><select name="subject" id="subject" class="single-select nice-select form-select" required aria-label="Sujet du message">
                                     <option value="" disabled selected hidden>Sujet *</option>
                                     <option value="Soumission">Soumission</option>
                                     <option value="Information">Information</option>
                                     <option value="Partenariat">Partenariat</option>
                                     <option value="Autre">Autre</option>
                                 </select></div></div>
-                                <div class="col-12"><div class="form-group"><textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Décrivez votre projet ou besoin..." required></textarea></div></div>
+                                <div class="col-12"><div class="form-group"><textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Décrivez votre projet ou besoin..." required aria-label="Message décrivant votre projet"></textarea></div></div>
                                 <div class="form-btn col-12"><button class="btn w-100">ENVOYER MA SOUMISSION <i class="ri-arrow-right-up-line"></i></button></div>
                             </div>
                             <p class="form-messages mb-0 mt-3"></p>
