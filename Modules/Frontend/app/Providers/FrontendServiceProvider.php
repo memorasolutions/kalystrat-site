@@ -4,6 +4,7 @@ namespace Modules\Frontend\Providers;
 
 use Nwidart\Modules\Support\ModuleServiceProvider;
 use Illuminate\Console\Scheduling\Schedule;
+use Modules\Frontend\Console\Commands\GenerateSitemapCommand;
 
 class FrontendServiceProvider extends ModuleServiceProvider
 {
@@ -22,7 +23,9 @@ class FrontendServiceProvider extends ModuleServiceProvider
      *
      * @var string[]
      */
-    // protected array $commands = [];
+    protected array $commands = [
+        GenerateSitemapCommand::class,
+    ];
 
     /**
      * Provider classes to register.
@@ -39,8 +42,8 @@ class FrontendServiceProvider extends ModuleServiceProvider
      * 
      * @param $schedule
      */
-    // protected function configureSchedules(Schedule $schedule): void
-    // {
-    //     $schedule->command('inspire')->hourly();
-    // }
+    protected function configureSchedules(Schedule $schedule): void
+    {
+        $schedule->command('frontend:sitemap')->daily()->at('03:00');
+    }
 }
