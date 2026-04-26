@@ -154,8 +154,27 @@
                                     <li>
                                         <a href="{{ route('frontend.about') }}" class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">QUI NOUS SOMMES</a>
                                     </li>
-                                    <li>
-                                        <a href="{{ route('frontend.services') }}" class="{{ request()->routeIs('frontend.services*') ? 'active' : '' }}">NOTRE APPROCHE</a>
+                                    <li class="has-mega-menu">
+                                        <a href="{{ route('frontend.services') }}" class="{{ request()->routeIs('frontend.services*') || request()->routeIs('frontend.filiale*') ? 'active' : '' }}" aria-haspopup="true">NOTRE APPROCHE <i class="ri-arrow-down-s-line" aria-hidden="true" style="font-size: 0.85em;"></i></a>
+                                        @php
+                                            $mega_filiales = require module_path('Frontend', 'config/filiales.php');
+                                        @endphp
+                                        <div class="mega-menu" role="menu" aria-label="Sous-menu filiales Kalystrat">
+                                            <div class="mega-menu-inner">
+                                                <a href="{{ route('frontend.services') }}" class="mega-menu-overview" role="menuitem">
+                                                    <span class="mega-overview-label">Vue d'ensemble</span>
+                                                    <span class="mega-overview-desc">Notre approche intégrée et nos six filiales</span>
+                                                </a>
+                                                <div class="mega-menu-grid">
+                                                    @foreach ($mega_filiales as $slug => $f)
+                                                        <a href="{{ route('frontend.filiale', $slug) }}" class="mega-menu-item" role="menuitem" style="--filiale-color: {{ $f['hex_couleur'] }};">
+                                                            <span class="mega-item-label">{{ $f['nom_court'] }}</span>
+                                                            <span class="mega-item-desc">{{ $f['specialite'] }}</span>
+                                                        </a>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
                                     </li>
                                     <li>
                                         <a href="{{ route('frontend.portfolio') }}" class="{{ request()->routeIs('frontend.portfolio*') ? 'active' : '' }}">PORTFOLIO</a>
