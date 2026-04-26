@@ -384,7 +384,7 @@
             <img src="{{ asset('assets/construz-new/img/hero/hero_shape_5_1.png') }}" alt="img">
         </div>
         <div class="hero-slider5 global-carousel" data-slide-show="1" data-fade="true" data-dots="true">
-            <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_1.png') }}">
+            <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
@@ -439,7 +439,7 @@
                     </div>                
                 </div>
             </div>
-            <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_2.png') }}">
+            <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/hero-bg.jpg') }}">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
@@ -494,7 +494,7 @@
                     </div>                
                 </div>
             </div>
-            <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_3.png') }}">
+            <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/about-bg.jpg') }}">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
@@ -565,7 +565,7 @@
                 <div class="col-xl-5">
                     <div class="about-thumb5 mb-40 mb-xl-0"> 
                         <div class="about-img-1 mb-40">
-                            <img src="{{ asset('assets/construz-new/img/normal/about_5-1.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="img">
                         </div>
                         <p>6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec. </p>
                         <div class="btn-group mt-30">
@@ -612,7 +612,7 @@
                         </div>    
                         <div class="about-thumb5 mt-60 d-inline-block"> 
                             <div class="video-wrap about-img-2">
-                                <img src="{{ asset('assets/construz-new/img/normal/about_5-2.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                                 <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video"><i class="ri-play-fill"></i></a>
                             </div>
                         </div>           
@@ -640,19 +640,19 @@
                 <div class="col-xl-4">
                     <ul class="why-tab-wrap nav nav-pills" role=tablist>
                         <li class="nav-item">
-                          <button class="nav-link active" id="why-pill-1-tab" data-bs-toggle="pill" data-bs-target="#why-pill-1" type="button" role="tab" aria-controls="why-pill-1" aria-selected="true">General construction <i class="ri-arrow-right-down-line"></i></button>
+                          <button class="nav-link active" id="why-pill-1-tab" data-bs-toggle="pill" data-bs-target="#why-pill-1" type="button" role="tab" aria-controls="why-pill-1" aria-selected="true">Kalystrat Fondations <i class="ri-arrow-right-down-line"></i></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="why-pill-2-tab" data-bs-toggle="pill" data-bs-target="#why-pill-2" type="button" role="tab" aria-controls="why-pill-2" aria-selected="false">Property maintenance <i class="ri-arrow-right-down-line"></i></button>
+                          <button class="nav-link" id="why-pill-2-tab" data-bs-toggle="pill" data-bs-target="#why-pill-2" type="button" role="tab" aria-controls="why-pill-2" aria-selected="false">Kalystrat Structure <i class="ri-arrow-right-down-line"></i></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="why-pill-3-tab" data-bs-toggle="pill" data-bs-target="#why-pill-3" type="button" role="tab" aria-controls="why-pill-3" aria-selected="false">Project management <i class="ri-arrow-right-down-line"></i></button>
+                          <button class="nav-link" id="why-pill-3-tab" data-bs-toggle="pill" data-bs-target="#why-pill-3" type="button" role="tab" aria-controls="why-pill-3" aria-selected="false">Kalystrat Toiture <i class="ri-arrow-right-down-line"></i></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="why-pill-4-tab" data-bs-toggle="pill" data-bs-target="#why-pill-4" type="button" role="tab" aria-controls="why-pill-4" aria-selected="false">Renovation & Remodeling <i class="ri-arrow-right-down-line"></i></button>
+                            <button class="nav-link" id="why-pill-4-tab" data-bs-toggle="pill" data-bs-target="#why-pill-4" type="button" role="tab" aria-controls="why-pill-4" aria-selected="false">Kalystrat Finition <i class="ri-arrow-right-down-line"></i></button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="why-pill-5-tab" data-bs-toggle="pill" data-bs-target="#why-pill-5" type="button" role="tab" aria-controls="why-pill-5" aria-selected="false">Preconstruction <i class="ri-arrow-right-down-line"></i></button>
+                            <button class="nav-link" id="why-pill-5-tab" data-bs-toggle="pill" data-bs-target="#why-pill-5" type="button" role="tab" aria-controls="why-pill-5" aria-selected="false">Kalystrat Immobilier <i class="ri-arrow-right-down-line"></i></button>
                         </li>
                     </ul>
                 </div>
@@ -675,7 +675,7 @@
                                 <div class="col-lg-7">
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
-                                        <h5 class="subtitle">General construction</h5>
+                                        <h5 class="subtitle">Kalystrat Fondations</h5>
                                         <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
@@ -707,7 +707,7 @@
                                 <div class="col-lg-7">
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
-                                        <h5 class="subtitle">Property maintenance</h5>
+                                        <h5 class="subtitle">Kalystrat Structure</h5>
                                         <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
@@ -739,7 +739,7 @@
                                 <div class="col-lg-7">
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
-                                        <h5 class="subtitle">Project management</h5>
+                                        <h5 class="subtitle">Kalystrat Toiture et Enveloppe</h5>
                                         <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
@@ -771,7 +771,7 @@
                                 <div class="col-lg-7">
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
-                                        <h5 class="subtitle">Renovation & Remodeling</h5>
+                                        <h5 class="subtitle">Kalystrat Finition Intérieure</h5>
                                         <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
@@ -803,7 +803,7 @@
                                 <div class="col-lg-7">
                                     <div class="why-content-wrap">
                                         <h4 class="title">About this Service</h4>
-                                        <h5 class="subtitle">Preconstruction</h5>
+                                        <h5 class="subtitle">Kalystrat Immobilier</h5>
                                         <p class="text">Notre intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés. Six filiales coordonnées sous une marque unifiée Kalystrat.</p>
                                         <div class="checklist mb-35">
                                             <ul>
@@ -838,7 +838,7 @@
                 <div class="col-xl-6">
                     <div class="benefit-thumb5 mb-40 mb-xl-0"> 
                         <div class="benefit-img-1">
-                            <img src="{{ asset('assets/construz-new/img/normal/benefit-thumb5-1.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                         </div>
                     </div>
                 </div>
@@ -1197,7 +1197,7 @@
                     <div class="col-lg-8">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_1.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -1215,7 +1215,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_2.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/project-blueprint.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -1233,7 +1233,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_3.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -1251,7 +1251,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_4.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -1269,7 +1269,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_5.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">

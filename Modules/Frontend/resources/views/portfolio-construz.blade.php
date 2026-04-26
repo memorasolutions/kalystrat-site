@@ -490,7 +490,7 @@
                         </div>
                         <div class="portfolio-card-details">
                             <span class="portfolio-card-subtitle">Remodeling</span>
-                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Renovation & Remodeling</a></h4>
+                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Kalystrat Finition</a></h4>
                             <p class="portofolio-card-text">Building since 09,01,2024</p>  
                             <a href="{{ route('frontend.portfolio') }}" class="btn-with-icon">
                                 VIEW DETAILS
@@ -553,7 +553,7 @@
                         </div>
                         <div class="portfolio-card-details">
                             <span class="portfolio-card-subtitle">Remodeling</span>
-                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Renovation & Remodeling</a></h4>
+                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Kalystrat Finition</a></h4>
                             <p class="portofolio-card-text">Building since 09,01,2024</p>  
                             <a href="{{ route('frontend.portfolio') }}" class="btn-with-icon">
                                 VIEW DETAILS
@@ -616,7 +616,7 @@
                         </div>
                         <div class="portfolio-card-details">
                             <span class="portfolio-card-subtitle">Remodeling</span>
-                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Renovation & Remodeling</a></h4>
+                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Kalystrat Finition</a></h4>
                             <p class="portofolio-card-text">Building since 09,01,2024</p>  
                             <a href="{{ route('frontend.portfolio') }}" class="btn-with-icon">
                                 VIEW DETAILS

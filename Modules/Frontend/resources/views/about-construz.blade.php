@@ -442,7 +442,7 @@
                 <div class="col-xl-6">
                     <div class="about-thumb2 mb-60 mb-xl-0"> 
                         <div class="about-img-1">
-                            <img src="{{ asset('assets/construz-new/img/normal/about_2-1.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="img">
                         </div>
                         <div class="about-counter-wrap style2 jump-reverse">
                             <div class="about-counter-wrap-bg"><img src="{{ asset('assets/construz-new/img/normal/about_shape_2-2.png') }}" alt="img"></div>

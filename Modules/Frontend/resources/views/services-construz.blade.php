@@ -455,7 +455,7 @@
                             <div class="service-card_icon">
                                 <img src="{{ asset('assets/construz-new/img/icon/service-icon1-1.png') }}" alt="img">
                             </div>
-                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">General construction</a></h4>
+                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">Kalystrat Fondations</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
@@ -473,7 +473,7 @@
                             <div class="service-card_icon">
                                 <img src="{{ asset('assets/construz-new/img/icon/service-icon1-2.png') }}" alt="img">
                             </div>
-                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">Property maintenance</a></h4>
+                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">Kalystrat Structure</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
@@ -491,7 +491,7 @@
                             <div class="service-card_icon">
                                 <img src="{{ asset('assets/construz-new/img/icon/service-icon1-3.png') }}" alt="img">
                             </div>
-                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">Project management</a></h4>
+                            <h4 class="service-card_title"><a href="{{ route('frontend.filiale', 'fondations') }}">Kalystrat Toiture</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
