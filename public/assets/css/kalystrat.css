@@ -1221,3 +1221,89 @@ body {
     .filiale-hero-fullbleed h1 { font-size: 2.25rem; }
     .filiale-hero-fullbleed .filiale-subtitle { font-size: 1rem; }
 }
+
+/* ============================================================
+   P3 BATCH 4.1 — Hero monumental + typographie institutional 2026
+   Refonte ambiance globale calm luxury Brookfield-style
+   ============================================================ */
+
+.hero-1 { position: relative; min-height: 92vh; }
+.hero-1::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 22, 40, 0.6) !important;
+    z-index: 1;
+    pointer-events: none;
+}
+.hero-1 > .container { position: relative; z-index: 2; }
+.hero-style1 { padding: clamp(80px, 15vh, 120px) 0; }
+
+.hero-style1 .sub-title {
+    font-size: clamp(0.875rem, 1.2vw, 1.05rem);
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--ks-gold) !important;
+    font-weight: 500;
+    margin: 0 0 28px;
+    display: inline-block;
+}
+.hero-style1 .sub-title::before,
+.hero-style1 .sub-title::after { display: none !important; }
+
+.hero-style1 .hero-title {
+    font-size: clamp(3.5rem, 8.5vw, 7.5rem) !important;
+    line-height: 0.95;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--ks-white);
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.35);
+    margin: 0 0 32px;
+}
+.hero-style1 .hero-title .text-theme { color: var(--ks-gold) !important; }
+
+.hero-style1 .hero-text {
+    font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92) !important;
+    max-width: 720px;
+    margin: 0 auto 40px;
+}
+
+.hero-style1 .btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center;
+}
+
+/* Typographie institutional pour autres sections */
+.sec-title {
+    font-size: clamp(2.25rem, 4.5vw, 3.75rem) !important;
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--ks-navy);
+    margin-bottom: 24px;
+}
+
+.title-area .sub-title {
+    font-size: 0.875rem;
+    letter-spacing: 0.25em;
+    color: var(--ks-gold) !important;
+    text-transform: uppercase;
+    margin: 0 0 16px;
+    display: block;
+}
+
+/* Spacing aggressif sections institutional B2B */
+.space, .space-top { padding-top: 160px; }
+.space, .space-bottom { padding-bottom: 160px; }
+@media (max-width: 1024px) {
+    .space, .space-top { padding-top: 120px; }
+    .space, .space-bottom { padding-bottom: 120px; }
+}
+@media (max-width: 768px) {
+    .space, .space-top { padding-top: 88px; }
+    .space, .space-bottom { padding-bottom: 88px; }
+}
