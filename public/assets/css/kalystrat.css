@@ -1050,3 +1050,29 @@ main .widget_contact a:not(.btn) { color: var(--ks-navy) !important; }
 body {
     --theme-color: var(--ks-gold);
 }
+
+/* Header layout simplifié (élimine chevauchement bouton + icon phone)
+   2026-04-26 : cache le bouton dupliqué "NOUS JOINDRE" du header
+   (déjà présent dans nav menu et CTA mobile sticky). Garde
+   navbar-right-desc Appelez-nous pour info contact persistante. */
+.header-layout1 .header-button {
+    display: none !important;
+}
+
+/* Espacement navbar-right-desc — séparation claire avec nav */
+.header-layout1 .navbar-right-desc {
+    padding-left: 24px;
+    border-left: 1px solid rgba(10, 22, 40, 0.08);
+    margin-left: 16px;
+}
+
+/* Mega-menu trigger — espacement de la flèche dropdown */
+.has-mega-menu > a > .ri-arrow-down-s-line {
+    margin-left: 4px;
+    vertical-align: middle;
+    transition: transform 0.2s ease;
+}
+.has-mega-menu:hover > a > .ri-arrow-down-s-line,
+.has-mega-menu:focus-within > a > .ri-arrow-down-s-line {
+    transform: rotate(180deg);
+}
