@@ -56,6 +56,14 @@
                 "closes": "17:00"
             },
             "knowsLanguage": ["fr", "en"],
+            "priceRange": "$$",
+            "paymentAccepted": ["Cash", "Credit Card", "Bank Transfer", "Check"],
+            "currenciesAccepted": "CAD",
+            "sameAs": [
+                "https://facebook.com/kalystrat",
+                "https://linkedin.com/company/kalystrat",
+                "https://instagram.com/kalystrat"
+            ],
             "subOrganization": [
                 @foreach($filiales as $slug => $f)
                 {
