@@ -1082,10 +1082,8 @@ body {
 }
 .header-layout1 .header-button .btn i { color: inherit !important; }
 
-/* REVERT 2026-04-26 : sticky transparent → navy a cassé le header
-   (logo invisible avec filter invert sur fond blanc). Approche simple :
-   header reste solid blanc avec logo navy + nav navy. Sticky natif Construz. */
-.header-layout1 .menu-area > .container { padding: 8px 16px; }
+/* CSS header custom retiré 2026-04-26 (régression rendu).
+   Garde uniquement : header-top hidden + navbar-right-desc hidden. */
 
 /* Mega-menu trigger — espacement de la flèche dropdown */
 .has-mega-menu > a > .ri-arrow-down-s-line {

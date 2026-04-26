@@ -137,14 +137,14 @@
         <div class="sticky-wrapper">
             <div class="menu-area">
                 <div class="header-navbar-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
+                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                 </div>
                 <div class="logo-bg"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto d-xxl-none d-block">
                             <div class="header-logo">
-                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
+                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                             </div>
                         </div>
                         <div class="col-auto ms-auto ms-xxl-0">
@@ -190,7 +190,7 @@
                                 <button type="button" class="menu-toggle icon-btn" aria-label="Ouvrir le menu"><i class="ri-menu-line"></i></button>
                             </div>
                         </div>
-                        <div class="col-auto ms-auto d-xl-block d-none">
+                        <div class="col-auto ms-auto d-lg-block d-none">
                             <div class="header-button">
                                 <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                             </div>
@@ -214,7 +214,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Kalystrat"></a>
+                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                 <button class="menu-toggle" aria-label="Fermer le menu"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
