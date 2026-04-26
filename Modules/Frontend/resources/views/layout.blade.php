@@ -73,8 +73,8 @@
     <link rel="stylesheet" href="{{ asset('assets/construz/css/nice-select.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/construz/css/style.css') }}">
 
-    {{-- Kalystrat custom CSS --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/kalystrat.css') }}">
+    {{-- Kalystrat custom CSS (cache-busting filemtime) --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/kalystrat.css') }}?v={{ @filemtime(public_path('assets/css/kalystrat.css')) ?: time() }}">
 
     {{-- Schema.org JSON-LD --}}
     @include('frontend::partials.schema-jsonld')
@@ -350,7 +350,7 @@
 
     {{-- Kalystrat UI enhancements (scroll-to-top, count-up KPI, reveal scroll) --}}
     {{-- Désactivable en commentant cette ligne, le site continue de fonctionner --}}
-    <script src="{{ asset('assets/js/kalystrat-ui.js') }}" defer></script>
+    <script src="{{ asset('assets/js/kalystrat-ui.js') }}?v={{ @filemtime(public_path('assets/js/kalystrat-ui.js')) ?: time() }}" defer></script>
 
     {{-- Kalystrat a11y enhancements (mobile menu inert+aria-hidden when closed) --}}
     {{-- DÉSACTIVÉ 2026-04-25 : iter3 audit a montré +2 Tab issues au lieu d'amélioration. --}}
