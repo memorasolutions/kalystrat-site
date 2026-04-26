@@ -1,3 +1,30 @@
+@php $breadcumbItems = $breadcumbItems ?? []; @endphp
+
+{{-- Schema.org BreadcrumbList JSON-LD (SEO/AEO) --}}
+<script type="application/ld+json">
+{
+    "@@context": "https://schema.org",
+    "@@type": "BreadcrumbList",
+    "itemListElement": [
+        {
+            "@@type": "ListItem",
+            "position": 1,
+            "name": "Accueil",
+            "item": "{{ route('frontend.home') }}"
+        }
+        @foreach($breadcumbItems as $item)
+            ,
+            {
+                "@@type": "ListItem",
+                "position": {{ $loop->iteration + 1 }},
+                "name": @json($item['label']),
+                "item": "{{ $item['url'] ?? url()->current() }}"
+            }
+        @endforeach
+    ]
+}
+</script>
+
 <div class="breadcumb-wrapper" style="background-image: url('{{ asset('assets/construz-new/img/bg/breadcrumb-bg.png') }}')">
     <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" style="background-image: url('{{ asset('assets/construz-new/img/shape/global-line-shape1.png') }}')"></div>
     <div class="container">
@@ -7,7 +34,6 @@
                     <h1 class="breadcumb-title">{{ $pageTitle ?? 'Kalystrat' }}</h1>
                     <ul class="breadcumb-menu">
                         <li><a href="{{ route('frontend.home') }}"><i class="ri-home-4-fill"></i> ACCUEIL</a></li>
-                        @php $breadcumbItems = $breadcumbItems ?? []; @endphp
                         @foreach($breadcumbItems as $item)
                             @if($loop->last)
                                 <li class="active">{{ $item['label'] }}</li>
