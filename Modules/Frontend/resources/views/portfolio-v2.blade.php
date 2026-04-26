@@ -30,7 +30,7 @@
             <div class="col-lg-{{ $loop->first ? '8' : '4' }} col-md-6">
                 <div class="portfolio-card style5">
                     <div class="portfolio-card-thumb">
-                        <img src="{{ asset('assets/construz-new/img/project/project5_' . (($loop->iteration - 1) % 5 + 1) . '.png') }}" alt="img">
+                        <img src="{{ asset('assets/img/kalystrat/project-' . ($loop->iteration % 4 == 1 ? 'residential' : ($loop->iteration % 4 == 2 ? 'blueprint' : ($loop->iteration % 4 == 3 ? 'commercial' : 'apartments'))) . '.jpg') }}" alt="img">
                     </div>
                     <div class="portfolio-card-details">
                         <div class="media-left">

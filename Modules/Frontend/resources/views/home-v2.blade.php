@@ -10,7 +10,7 @@
         <img src="{{ asset('assets/construz-new/img/hero/hero_shape_5_1.png') }}" alt="img">
     </div>
     <div class="hero-slider5 global-carousel" data-slide-show="1" data-fade="true" data-dots="true">
-        <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/hero/hero_bg_5_1.png') }}');">
+        <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}" style="background-image: url('{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}');">
             <div class="container">
                 <div class="hero-style5">
                     <div class="row align-items-center">
@@ -64,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_2.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/hero/hero_bg_5_2.png') }}');">
+        <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/hero-bg.jpg') }}" style="background-image: url('{{ asset('assets/img/kalystrat/hero-bg.jpg') }}');">
             <div class="container">
                 <div class="hero-style5">
                     <div class="row align-items-center">
@@ -118,7 +118,7 @@
                 </div>
             </div>
         </div>
-        <div class="hero-slide" data-bg-src="{{ asset('assets/construz-new/img/hero/hero_bg_5_3.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/hero/hero_bg_5_3.png') }}');">
+        <div class="hero-slide" data-bg-src="{{ asset('assets/img/kalystrat/about-bg.jpg') }}" style="background-image: url('{{ asset('assets/img/kalystrat/about-bg.jpg') }}');">
             <div class="container">
                 <div class="hero-style5">
                     <div class="row align-items-center">
@@ -187,7 +187,7 @@ About Area
             <div class="col-xl-5">
                 <div class="about-thumb5 mb-40 mb-xl-0">
                     <div class="about-img-1 mb-40">
-                        <img src="{{ asset('assets/construz-new/img/normal/about_5-1.png') }}" alt="img">
+                        <img src="{{ asset('assets/img/kalystrat/about-strategy.jpg') }}" alt="img">
                     </div>
                     <p>Gestion Kalystrat Inc. réunit six filiales spécialisées sous une marque unifiée. Excellence québécoise en construction.</p>
                     <div class="btn-group mt-30">
@@ -232,7 +232,7 @@ About Area
                     </div>
                     <div class="about-thumb5 mt-60 d-inline-block">
                         <div class="video-wrap about-img-2">
-                            <img src="{{ asset('assets/construz-new/img/normal/about_5-2.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                             <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video"><i class="ri-play-fill"></i></a>
                         </div>
                     </div>
@@ -319,7 +319,7 @@ Benefit Area
             <div class="col-xl-6">
                 <div class="benefit-thumb5 mb-40 mb-xl-0">
                     <div class="benefit-img-1">
-                        <img src="{{ asset('assets/construz-new/img/normal/benefit-thumb5-1.png') }}" alt="img">
+                        <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                     </div>
                 </div>
             </div>
@@ -598,7 +598,7 @@ Portfolio Area 5 (5 filiales premières chantiers)
                     <div class="col-lg-{{ $loop->first ? '8' : '4' }} col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/construz-new/img/project/project5_' . $loop->iteration . '.png') }}" alt="img">
+                                <img src="{{ asset('assets/img/kalystrat/project-' . ($loop->iteration % 4 == 1 ? 'residential' : ($loop->iteration % 4 == 2 ? 'blueprint' : ($loop->iteration % 4 == 3 ? 'commercial' : 'apartments'))) . '.jpg') }}" alt="img">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
