@@ -12,53 +12,25 @@
     <section class="space-top space-bottom">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> CE QUE NOUS FAISONS</span>
-                <h2 class="sec-title">Investissement stratégique et développement</h2>
-                <p>Kalystrat conçoit, structure et pilote des opérations d'investissement à forte valeur ajoutée. Notre approche couvre l'ensemble du cycle de vie des actifs.</p>
+                <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> NOTRE APPROCHE INTÉGRÉE</span>
+                <h2 class="sec-title">Six filiales spécialisées en synergie</h2>
+                <p>De l'excavation aux finitions intérieures, nos six filiales construction couvrent l'intégralité de la chaîne de valeur d'un bâtiment, soutenues par une agence de placement de main-d'œuvre interne. Cette intégration verticale élimine les sous-traitants et garantit délais, qualité et coûts maîtrisés.</p>
             </div>
             <div class="row gx-30 gy-30">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-building-4-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Développement immobilier</h3>
-                        <p class="service-card_text">Nous identifions, structurons et développons des actifs immobiliers stratégiques à fort potentiel. Notre expertise couvre le tertiaire, résidentiel, mixte et logistique.</p>
+                @php
+                    $filiales_services = require module_path('Frontend', 'config/filiales.php');
+                    $icons_services = ['fondations'=>'ri-tools-line','structure'=>'ri-layout-grid-line','toiture'=>'ri-home-2-line','finition'=>'ri-paint-brush-line','immobilier'=>'ri-building-line','placement'=>'ri-team-line'];
+                @endphp
+                @foreach ($filiales_services as $slug => $f)
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
+                        <div class="service-card" style="border-left: 4px solid {{ $f['hex_couleur'] }};">
+                            <div class="service-card_icon" style="color: {{ $f['hex_couleur'] }};"><i class="{{ $icons_services[$slug] ?? 'ri-building-4-line' }}" aria-hidden="true"></i></div>
+                            <h3 class="service-card_title">{{ $f['nom_court'] }}</h3>
+                            <p class="service-card_text">{{ $f['specialite'] }}</p>
+                            <a href="{{ route('frontend.filiale', $slug) }}" class="link-btn" aria-label="Découvrir {{ $f['nom_complet'] }}">Découvrir <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-bar-chart-grouped-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Gestion d'actifs</h3>
-                        <p class="service-card_text">Nous assurons la gestion opérationnelle et financière de portefeuilles diversifiés. Objectif : maximiser la performance et la valeur patrimoniale sur le long terme.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-funds-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Investissement stratégique</h3>
-                        <p class="service-card_text">Nous déployons des capitaux dans des opérations ciblées à haute valeur ajoutée. Analyse rigoureuse des fondamentaux et des leviers de création de valeur.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-layout-masonry-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Gestion de projets</h3>
-                        <p class="service-card_text">Nous pilotons des projets complexes de bout en bout en coordonnant l'ensemble des parties prenantes. Rigueur méthodologique, respect des délais et des budgets.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-lightbulb-flash-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Consultation stratégique</h3>
-                        <p class="service-card_text">Nous accompagnons dirigeants et investisseurs dans leurs décisions stratégiques. Analyses approfondies et recommandations sur mesure en allocation de capital.</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="service-card">
-                        <div class="service-card_icon"><i class="ri-exchange-line" aria-hidden="true"></i></div>
-                        <h3 class="service-card_title">Acquisition et restructuration</h3>
-                        <p class="service-card_text">Nous identifions des opportunités d'acquisition et orchestrons des opérations de restructuration. Due diligence, négociation et intégration post-acquisition.</p>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>

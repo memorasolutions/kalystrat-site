@@ -11,9 +11,9 @@
         <div class="row align-items-center justify-content-center" style="min-height: 92vh;">
             <div class="col-xl-9 col-lg-10 text-center">
                 <div class="hero-style1">
-                    <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Investissement stratégique et développement</span>
+                    <span class="sub-title wow fadeInUp" data-wow-delay="0.1s">Holding construction 6 filiales · Québec</span>
                     <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">Conçu. <span class="text-theme">Réalisé.</span> Livré.</h1>
-                    <p class="hero-text wow fadeInUp" data-wow-delay="0.3s">Nous développons et gérons des actifs stratégiques avec précision, rigueur et une vision à long terme.</p>
+                    <p class="hero-text wow fadeInUp" data-wow-delay="0.3s">Six filiales spécialisées en synergie sous une marque unifiée. De l'excavation à la finition, Kalystrat livre des projets de construction intégrés au Québec.</p>
                     <div class="btn-group wow fadeInUp" data-wow-delay="0.4s">
                         <a href="{{ route('frontend.services') }}" class="btn" aria-label="Découvrir notre approche stratégique">DÉCOUVRIR NOTRE APPROCHE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                         <a href="{{ route('frontend.contact') }}" class="btn style2" aria-label="Nous joindre pour discuter de votre projet">NOUS JOINDRE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
@@ -32,8 +32,8 @@
                 <div class="img-box1" style="position: relative; overflow: hidden;">
                     <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Réunion stratégique de l'équipe Kalystrat" loading="lazy" style="width: 100%; height: 520px; object-fit: cover;">
                     <div style="position: absolute; bottom: 0; left: 0; background: var(--ks-gold); padding: 1.75rem 2.25rem;">
-                        <span style="display: block; font-size: 2.5rem; font-weight: 700; color: var(--ks-navy); line-height: 1;">15+</span>
-                        <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ks-navy); margin-top: 0.25rem;">Années d'expertise</span>
+                        <span style="display: block; font-size: 2.5rem; font-weight: 700; color: var(--ks-navy); line-height: 1;">6</span>
+                        <span style="display: block; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--ks-navy); margin-top: 0.25rem;">Filiales intégrées</span>
                     </div>
                 </div>
             </div>
@@ -42,8 +42,8 @@
                     <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> À PROPOS DE KALYSTRAT</span>
                     <h2 class="sec-title">Créer de la valeur au-delà de la construction</h2>
                 </div>
-                <p>Kalystrat est une plateforme pour le développement stratégique. Nous développons, gérons et faisons croître des entreprises et des actifs qui génèrent une valeur durable.</p>
-                <p>Notre approche intégrée combine une expertise approfondie en développement immobilier, en gestion d'actifs et en investissement stratégique pour offrir des résultats mesurables et pérennes.</p>
+                <p>Gestion Kalystrat Inc. est un holding québécois de construction à intégration verticale, fondé par Ali Salomon. Six filiales spécialisées opèrent en synergie, de l'excavation aux finitions, soutenues par une agence de placement de main-d'œuvre interne.</p>
+                <p>Cette intégration verticale élimine la dépendance aux sous-traitants, raccourcit les délais et garantit une qualité supérieure à chaque étape. Notre ambition : devenir un groupe intégré de référence au Québec dans 8 ans.</p>
                 <a href="{{ route('frontend.about') }}" class="link-btn" aria-label="En savoir plus sur l'approche Kalystrat">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
         </div>
@@ -54,34 +54,24 @@
 <section class="space-top space-bottom bg-smoke">
     <div class="container">
         <div class="title-area text-center">
-            <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> NOS EXPERTISES</span>
-            <h2 class="sec-title">Une approche intégrée de la création de valeur</h2>
+            <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> NOS 6 FILIALES</span>
+            <h2 class="sec-title">Une chaîne de valeur intégrée, du sol aux finitions</h2>
         </div>
         <div class="row gx-30 gy-30">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="service-card">
-                    <div class="service-card_icon"><i class="ri-building-4-line" aria-hidden="true"></i></div>
-                    <h3 class="service-card_title">Développement immobilier</h3>
-                    <p class="service-card_text">De la conception à la livraison, nous développons des projets immobiliers d'envergure qui répondent aux plus hauts standards de qualité et de rentabilité.</p>
-                    <a href="{{ route('frontend.services') }}" class="link-btn" aria-label="En savoir plus sur le développement immobilier">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+            @php
+                $filiales_home = require module_path('Frontend', 'config/filiales.php');
+                $icons = ['fondations'=>'ri-tools-line','structure'=>'ri-layout-grid-line','toiture'=>'ri-home-2-line','finition'=>'ri-paint-brush-line','immobilier'=>'ri-building-line','placement'=>'ri-team-line'];
+            @endphp
+            @foreach ($filiales_home as $slug => $f)
+                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
+                    <div class="service-card" style="border-left: 4px solid {{ $f['hex_couleur'] }};">
+                        <div class="service-card_icon" style="color: {{ $f['hex_couleur'] }};"><i class="{{ $icons[$slug] ?? 'ri-building-4-line' }}" aria-hidden="true"></i></div>
+                        <h3 class="service-card_title">{{ $f['nom_court'] }}</h3>
+                        <p class="service-card_text">{{ $f['specialite'] }}</p>
+                        <a href="{{ route('frontend.filiale', $slug) }}" class="link-btn" aria-label="Découvrir {{ $f['nom_complet'] }}">Découvrir <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                    </div>
                 </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="service-card">
-                    <div class="service-card_icon"><i class="ri-bar-chart-grouped-line" aria-hidden="true"></i></div>
-                    <h3 class="service-card_title">Gestion d'actifs</h3>
-                    <p class="service-card_text">Nous optimisons la performance de chaque actif sous gestion grâce à une approche rigoureuse. Notre objectif : maximiser la valeur et assurer une croissance soutenue.</p>
-                    <a href="{{ route('frontend.services') }}" class="link-btn" aria-label="En savoir plus sur la gestion d'actifs">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="service-card">
-                    <div class="service-card_icon"><i class="ri-funds-line" aria-hidden="true"></i></div>
-                    <h3 class="service-card_title">Investissement stratégique</h3>
-                    <p class="service-card_text">Nous identifions et structurons des opportunités d'investissement à fort potentiel. Notre discipline financière génère des rendements durables et prévisibles.</p>
-                    <a href="{{ route('frontend.services') }}" class="link-btn" aria-label="En savoir plus sur l'investissement stratégique">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -92,125 +82,47 @@
         <div class="row gy-4 text-center">
             <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.1s">
                 <div class="counter-card">
-                    <h3 class="title"><span class="counter">15</span>+</h3>
-                    <p>Années d'expertise</p>
+                    <h3 class="title">6</h3>
+                    <p>Filiales spécialisées</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.2s">
                 <div class="counter-card">
-                    <h3 class="title">200M+</h3>
-                    <p>Actifs gérés</p>
+                    <h3 class="title">59&nbsp;864</h3>
+                    <p>Mises en chantier au Québec en 2025</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.3s">
                 <div class="counter-card">
-                    <h3 class="title"><span class="counter">50</span>+</h3>
-                    <p>Projets réalisés</p>
+                    <h3 class="title">19&nbsp;G$</h3>
+                    <p>Marché de la rénovation au Québec</p>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3 wow fadeInUp" data-wow-delay="0.4s">
                 <div class="counter-card">
-                    <h3 class="title"><span class="counter">100</span>%</h3>
-                    <p>Engagement</p>
+                    <h3 class="title">100%</h3>
+                    <p>Intégration verticale</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-{{-- Portfolio teaser --}}
-<section class="space-top space-bottom">
-    <div class="container">
-        <div class="title-area text-center">
-            <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> PORTFOLIO</span>
-            <h2 class="sec-title">Des projets qui définissent l'excellence</h2>
-        </div>
-        <div class="row gx-30 gy-30">
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="Complexe résidentiel Le Plateau" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-cat">Résidentiel</span>
-                        <h3 class="project-title">Complexe résidentiel Le Plateau</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="Développement commercial Centre-Ville" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-cat">Commercial</span>
-                        <h3 class="project-title">Développement commercial Centre-Ville</h3>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                <div class="project-card">
-                    <div class="project-img">
-                        <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="Projet mixte Sainte-Foy" loading="lazy">
-                    </div>
-                    <div class="project-content">
-                        <span class="project-cat">Mixte</span>
-                        <h3 class="project-title">Projet mixte Sainte-Foy</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-5">
-            <a href="{{ route('frontend.portfolio') }}" class="btn" aria-label="Voir l'ensemble du portfolio Kalystrat">VOIR TOUT LE PORTFOLIO <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-        </div>
-    </div>
-</section>
+{{-- Section portfolio teaser SUPPRIMÉE 2026-04-25 (projets fictifs).
+     Sera réintroduite avec vrais chantiers livrés des 6 filiales. --}}
 
-{{-- Testimonials --}}
-<section class="space-top space-bottom bg-smoke">
-    <div class="container">
-        <div class="title-area text-center">
-            <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> TÉMOIGNAGES</span>
-            <h2 class="sec-title">La confiance de nos partenaires</h2>
-        </div>
-        <div class="row gx-30 gy-30">
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                <div class="testi-box">
-                    <div class="testi-rating">
-                        <i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i>
-                    </div>
-                    <p class="testi-text">"Kalystrat a démontré une rigueur exceptionnelle dans la gestion de notre portefeuille immobilier. Leur approche stratégique et leur capacité à identifier des opportunités de création de valeur ont dépassé nos attentes."</p>
-                    <div class="testi-author">
-                        <h3 class="name">Marc-Antoine Lefebvre</h3>
-                        <span class="designation">Directeur principal, Groupe Capital Québec</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
-                <div class="testi-box">
-                    <div class="testi-rating">
-                        <i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i><i class="ri-star-fill" aria-hidden="true"></i>
-                    </div>
-                    <p class="testi-text">"Travailler avec Kalystrat, c'est collaborer avec une équipe qui comprend véritablement les enjeux du développement immobilier stratégique. Leur vision à long terme en fait un partenaire incontournable."</p>
-                    <div class="testi-author">
-                        <h3 class="name">Sophie Beaumont</h3>
-                        <span class="designation">Vice-présidente, Investissements Laurentides Inc.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+{{-- Section témoignages SUPPRIMÉE 2026-04-25 (mensonge institutionnel : noms inventés) --}}
+{{-- Sera réintroduite avec vrais témoignages clients quand disponibles. --}}
 
 {{-- CTA Banner --}}
 <section class="space-top space-bottom">
     <div class="container">
         <div class="cta-wrap2 text-center">
-            <h2 class="title wow fadeInUp">Prêt à créer de la valeur durable?</h2>
-            <p class="wow fadeInUp" data-wow-delay="0.1s">Discutons de vos objectifs d'investissement et explorons ensemble les opportunités de développement stratégique.</p>
+            <h2 class="title wow fadeInUp">Un projet de construction intégré ?</h2>
+            <p class="wow fadeInUp" data-wow-delay="0.1s">De l'excavation aux finitions, Kalystrat coordonne l'ensemble de votre chantier via ses six filiales spécialisées. Demandez une soumission gratuite et personnalisée.</p>
             <div class="wow fadeInUp" data-wow-delay="0.2s" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Communiquer avec l'équipe Kalystrat">COMMUNIQUER AVEC NOUS <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                <a href="{{ route('frontend.portfolio') }}" class="btn style2" aria-label="Explorer le portfolio Kalystrat">EXPLORER NOS PROJETS <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Demander une soumission à Kalystrat">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('frontend.services') }}" class="btn style2" aria-label="Découvrir les six filiales Kalystrat">NOS 6 FILIALES <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

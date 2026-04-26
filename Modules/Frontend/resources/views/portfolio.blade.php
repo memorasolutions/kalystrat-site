@@ -12,89 +12,28 @@
     <section class="space-top space-bottom">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><i class="ri-focus-2-line"></i> NOS RÉALISATIONS</span>
-                <h2 class="sec-title">Projets récents</h2>
-                <p>Découvrez nos projets de développement stratégique et d'investissement immobilier à travers le Québec.</p>
+                <span class="sub-title"><i class="ri-focus-2-line" aria-hidden="true"></i> RÉALISATIONS</span>
+                <h2 class="sec-title">Premiers chantiers à venir</h2>
+                <p>Gestion Kalystrat Inc. est un holding nouvellement constitué. Nos six filiales spécialisées entament leurs premiers projets de construction au Québec. Cette page présentera prochainement nos réalisations livrées et en cours, par filiale.</p>
             </div>
 
-            {{-- Filtres --}}
-            <div class="text-center mb-4">
-                <div class="portfolio-filter">
-                    <button class="btn btn-filter active" data-filter="*">Tous</button>
-                    <button class="btn btn-filter" data-filter=".residentiel">Résidentiel</button>
-                    <button class="btn btn-filter" data-filter=".commercial">Commercial</button>
-                    <button class="btn btn-filter" data-filter=".renovation">Rénovation</button>
-                </div>
-            </div>
-
-            {{-- Grid --}}
-            <div class="row gx-30 gy-30 isotope-grid">
-                <div class="col-lg-4 col-md-6 isotope-item residentiel wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/project-residential.jpg') }}" alt="Résidence Montcalm" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Résidentiel</span>
-                            <h3 class="project-title">Résidence Montcalm</h3>
-                        </div>
+            {{-- Six filiales en charge des chantiers (en attendant premiers projets livrés) --}}
+            <div class="row gx-30 gy-30 justify-content-center">
+                @php
+                    $filiales_portfolio = require module_path('Frontend', 'config/filiales.php');
+                @endphp
+                @foreach ($filiales_portfolio as $slug => $f)
+                    <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
+                        <a href="{{ route('frontend.filiale', $slug) }}" class="text-decoration-none" aria-label="Voir les chantiers à venir de {{ $f['nom_complet'] }}">
+                            <div class="p-4" style="border: 1px solid rgba(10,22,40,0.08); border-left: 4px solid {{ $f['hex_couleur'] }}; background: var(--ks-white); height: 100%;">
+                                <span class="d-inline-block px-2 py-1 mb-3" style="background: {{ $f['hex_couleur'] }}; color: var(--ks-white); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">{{ $f['nom_court'] }}</span>
+                                <h3 class="h5" style="color: var(--ks-navy);">{{ $f['specialite'] }}</h3>
+                                <p style="color: var(--ks-navy); margin-bottom: 0.5rem;">Chantiers à venir.</p>
+                                <span class="link-btn" style="color: {{ $f['hex_couleur'] }};">Découvrir la filiale <i class="ri-arrow-right-line" aria-hidden="true"></i></span>
+                            </div>
+                        </a>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6 isotope-item commercial wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/project-apartments.jpg') }}" alt="Centre commercial Laurier" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Commercial</span>
-                            <h3 class="project-title">Centre commercial Laurier</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 isotope-item renovation wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/project-commercial.jpg') }}" alt="Rénovation Vieux-Québec" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Rénovation</span>
-                            <h3 class="project-title">Rénovation Vieux-Québec</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 isotope-item residentiel wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/project-blueprint.jpg') }}" alt="Condos Sainte-Foy" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Résidentiel</span>
-                            <h3 class="project-title">Condos Sainte-Foy</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 isotope-item commercial wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}" alt="Édifice Lebourgneuf" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Commercial</span>
-                            <h3 class="project-title">Édifice Lebourgneuf</h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6 isotope-item renovation wow fadeInUp" data-wow-delay="0.6s">
-                    <div class="project-card">
-                        <div class="project-img">
-                            <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Restauration Charlesbourg" loading="lazy">
-                        </div>
-                        <div class="project-content">
-                            <span class="project-cat">Rénovation</span>
-                            <h3 class="project-title">Restauration Charlesbourg</h3>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
