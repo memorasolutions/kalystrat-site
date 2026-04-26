@@ -1076,3 +1076,43 @@ body {
 .has-mega-menu:focus-within > a > .ri-arrow-down-s-line {
     transform: rotate(180deg);
 }
+
+/* ============================================================
+   FIX 2026-04-26 — Underline ACCUEIL/active mal positionné
+   Cause : border-bottom Construz sur <a> inline débordait à droite.
+   Fix : retirer border-bottom + ::after positionné absolu contrôlé.
+   ============================================================ */
+.main-menu > ul > li > a {
+    border-bottom: none !important;
+    position: relative;
+}
+.main-menu > ul > li > a.active::after,
+.main-menu > ul > li > a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: var(--ks-gold);
+    transition: opacity 0.2s ease;
+}
+.main-menu > ul > li > a:not(.active):not(:hover)::after {
+    display: none;
+}
+
+/* ============================================================
+   FIX 2026-04-26 — Header-top responsive (Québec, QC tronqué)
+   À breakpoint < 1366px, masquer "Québec, QC" pour éviter
+   chevauchement avec navbar-right-desc.
+   ============================================================ */
+@media (max-width: 1366px) {
+    .header-layout1 .header-top .header-top-right .header-links ul li:last-child {
+        display: none;
+    }
+}
+@media (max-width: 1199px) {
+    .header-layout1 .header-top .header-top-right .header-links ul li:nth-last-child(2) {
+        display: none;
+    }
+}
