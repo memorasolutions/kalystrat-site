@@ -16,10 +16,12 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
 Route::middleware('web')->group(function () {
-    Route::get('/robots.txt', function () {
-        return response(app(SeoService::class)->generateRobotsTxt())
-            ->header('Content-Type', 'text/plain');
-    })->name('robots');
+    // Kalystrat P20 fix : route /robots.txt désactivée pour servir fichier statique public/robots.txt
+    // (13 LLM bots autorisés). Décommenter pour réactiver SeoService::generateRobotsTxt().
+    // Route::get('/robots.txt', function () {
+    //     return response(app(SeoService::class)->generateRobotsTxt())
+    //         ->header('Content-Type', 'text/plain');
+    // })->name('robots');
 
     Route::get('/sitemap.xml', function () {
         $sitemap = Sitemap::create()
