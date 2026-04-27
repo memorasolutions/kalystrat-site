@@ -41,6 +41,7 @@
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
 
+    @include('frontend::partials-v2.schema-jsonld')
 </head>
 
 <body>
