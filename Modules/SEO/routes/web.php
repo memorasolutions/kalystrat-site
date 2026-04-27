@@ -16,12 +16,16 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
 Route::middleware('web')->group(function () {
-    // Kalystrat P20 fix : route /robots.txt désactivée pour servir fichier statique public/robots.txt
-    // (13 LLM bots autorisés). Décommenter pour réactiver SeoService::generateRobotsTxt().
-    // Route::get('/robots.txt', function () {
-    //     return response(app(SeoService::class)->generateRobotsTxt())
-    //         ->header('Content-Type', 'text/plain');
-    // })->name('robots');
+    // Kalystrat P21 fix : route Laravel sert le fichier statique public/robots.txt en 200 OK.
+    // Sans cette route, nginx Herd intercepte et NotFoundHttpException retourne 404 avec body weird.
+    // Fallback dynamique via SeoService si fichier statique absent (portabilité).
+    Route::get('/robots.txt', function () {
+        $path = public_path('robots.txt');
+
+        return file_exists($path)
+            ? response()->file($path, ['Content-Type' => 'text/plain'])
+            : response(app(SeoService::class)->generateRobotsTxt())->header('Content-Type', 'text/plain');
+    })->name('robots');
 
     Route::get('/sitemap.xml', function () {
         $sitemap = Sitemap::create()

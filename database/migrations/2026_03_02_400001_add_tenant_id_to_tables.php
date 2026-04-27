@@ -38,6 +38,9 @@ return new class extends Migration
     public function up(): void
     {
         foreach (self::TABLES as $tableName) {
+            if (! Schema::hasTable($tableName)) {
+                continue;
+            }
             Schema::table($tableName, function (Blueprint $table) {
                 $table->foreignId('tenant_id')
                     ->nullable()
@@ -51,6 +54,9 @@ return new class extends Migration
     public function down(): void
     {
         foreach (self::TABLES as $tableName) {
+            if (! Schema::hasTable($tableName)) {
+                continue;
+            }
             Schema::table($tableName, function (Blueprint $table) {
                 $table->dropConstrainedForeignId('tenant_id');
             });
