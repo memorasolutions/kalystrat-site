@@ -42,9 +42,11 @@
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
 
     @include('frontend::partials-v2.schema-jsonld')
+    <link rel="stylesheet" href="{{ asset('assets/css/kalystrat-wcag.css') }}">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <!--********************************
    		Code Start From Here 
 	******************************** -->
@@ -505,17 +507,17 @@
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" autocomplete="name">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet *" autocomplete="name" aria-label="Nom complet" autocomplete="name">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" autocomplete="email">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel *" autocomplete="email" aria-label="Courriel" autocomplete="email">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Téléphone" autocomplete="tel">
+                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Téléphone" autocomplete="tel" aria-label="Numéro de téléphone" autocomplete="tel">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

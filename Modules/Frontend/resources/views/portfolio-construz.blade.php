@@ -42,9 +42,11 @@
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
 
     @include('frontend::partials-v2.schema-jsonld')
+    <link rel="stylesheet" href="{{ asset('assets/css/kalystrat-wcag.css') }}">
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <!--********************************
    		Code Start From Here 
 	******************************** -->
