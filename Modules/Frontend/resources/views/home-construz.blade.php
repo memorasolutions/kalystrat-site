@@ -1617,7 +1617,7 @@
                                     <li><a href="{{ route('frontend.services') }}">Nos filiales</a></li>
                                     <li><a href="{{ route('frontend.services') }}">Blog</a></li>
                                     <li><a href="{{ route('frontend.services') }}">Réalisations</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">FAQ</a></li>
+                                    <li><a href="{{ route('frontend.faq') }}">FAQ</a></li>
                                 </ul>
                                 <ul class="menu">
                                     <li><a href="#">Notre équipe</a></li>
