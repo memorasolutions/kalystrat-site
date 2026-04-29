@@ -1,0 +1,25 @@
+/* Kalystrat fixes — overrides minimaux du theme Construz pour empêcher le débordement horizontal sur viewports 1366-1900px.
+   Validé via qwen3-max (multi-ai-mcp-3, openrouter-free). Chargé après style.css.
+   Désactivable en supprimant la <link> dans elements/head.blade.php. */
+
+html, body { overflow-x: hidden !important; }
+
+/* Topbar : permet wrap si le contenu dépasse */
+.header-top .row { flex-wrap: wrap !important; row-gap: 4px; }
+.header-top-right { flex: 1; min-width: 0; }
+.header-top-right .header-links ul { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; margin: 0; }
+.header-top-right .header-links ul li { white-space: normal; word-break: break-word; }
+
+/* Widget "Call us" : décalé sous la topbar (top: 41px = hauteur topbar) pour éviter chevauchement avec l'adresse */
+.navbar-right-desc {
+  position: absolute;
+  top: 41px !important;
+  right: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+.navbar-right-desc.background-image {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right center;
+}

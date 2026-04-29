@@ -1,33 +1,45 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Modules\Frontend\Http\Controllers\FrontendController;
+use Modules\Frontend\Http\Controllers\HomeController;
+use Modules\Frontend\Http\Controllers\newsController;
+use Modules\Frontend\Http\Controllers\pagesController;
+use Modules\Frontend\Http\Controllers\serviceController;
 
-// Frontend public routes — no auth required
-Route::get('/', [FrontendController::class, 'home'])->name('frontend.home');
-Route::get('/a-propos', [FrontendController::class, 'about'])->name('frontend.about');
-Route::get('/services', [FrontendController::class, 'services'])->name('frontend.services');
-Route::get('/portfolio', [FrontendController::class, 'portfolio'])->name('frontend.portfolio');
-Route::get('/contact', [FrontendController::class, 'contact'])->name('frontend.contact');
-Route::post('/contact', [FrontendController::class, 'contactSubmit'])->name('frontend.contact.submit')->middleware('throttle:5,1');
+// Construz native routes (TEL QUEL - noms identiques au theme original pour que les vues fonctionnent sans modif)
+Route::controller(HomeController::class)->group(function () {
+    Route::get('/', 'index')->name('index');
+    Route::get('/home1-op', 'home1Op')->name('home1Op');
+    Route::get('/home2-op', 'home2Op')->name('home2Op');
+    Route::get('/home3-op', 'home3Op')->name('home3Op');
+    Route::get('/home4-op', 'home4Op')->name('home4Op');
+    Route::get('/home5-op', 'home5Op')->name('home5Op');
+    Route::get('/home2', 'home2')->name('home2');
+    Route::get('/home3', 'home3')->name('home3');
+    Route::get('/home4', 'home4')->name('home4');
+    Route::get('/home5', 'home5')->name('home5');
+    Route::get('/about', 'about')->name('about');
+    Route::get('/contact', 'contact')->name('contact');
+});
 
-// V2 — preview Construz officiel home-5 (routes additives, désactivables en commentant)
-Route::get('/v2', [FrontendController::class, 'homeV2'])->name('frontend.home.v2');
-// V2 pages annexes archivées le 2026-04-26 (refonte Construz fidèle en cours, vues dans storage/app/archive/v2-patche-2026-04-26/)
-Route::get('/v2/a-propos', [FrontendController::class, 'aboutV2'])->name('frontend.about.v2');
-Route::get('/v2/services', [FrontendController::class, 'servicesV2'])->name('frontend.services.v2');
-Route::get('/v2/portfolio', [FrontendController::class, 'portfolioV2'])->name('frontend.portfolio.v2');
-Route::get('/v2/contact', [FrontendController::class, 'contactV2'])->name('frontend.contact.v2');
-Route::get('/v2/filiales/{slug}', [FrontendController::class, 'filialeV2'])->where('slug', '[a-z-]+')->name('frontend.filiale.v2');
-Route::get('/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq');
-Route::get('/v2/faq', [FrontendController::class, 'faqV2'])->name('frontend.faq.v2');
+Route::controller(newsController::class)->group(function () {
+    Route::get('/blog', 'blog')->name('blog');
+    Route::get('/blog-details', 'blogDetails')->name('blogDetails');
+});
 
-// SEO sitemap.xml dynamique V2 (Laravel + 6 filiales auto)
-// NOTE : Module SEO MEMORA gère déjà /sitemap.xml en V1. Ma route est sur /v2/sitemap.xml pour MVP V2.
-// À la bascule V1→V2 : soit modifier Module SEO (recommandé), soit le désactiver.
-Route::get('/v2/sitemap.xml', [FrontendController::class, 'sitemap'])->name('frontend.sitemap.v2');
+Route::controller(pagesController::class)->group(function () {
+    Route::get('/cart', 'cart')->name('cart');
+    Route::get('/checkout', 'checkout')->name('checkout');
+    Route::get('/project', 'project')->name('project');
+    Route::get('/project-details', 'projectDetails')->name('projectDetails');
+    Route::get('/shop', 'shop')->name('shop');
+    Route::get('/shop-details', 'shopDetails')->name('shopDetails');
+    Route::get('/team', 'team')->name('team');
+    Route::get('/team-details', 'teamDetails')->name('teamDetails');
+    Route::get('/wishlist', 'wishlist')->name('wishlist');
+});
 
-// D1 MVP additif - pages filiales holding (désactivable en commentant la ligne suivante)
-Route::get('/filiales/{slug}', [FrontendController::class, 'filiale'])
-    ->where('slug', '[a-z-]+')
-    ->name('frontend.filiale');
+Route::controller(serviceController::class)->group(function () {
+    Route::get('/service', 'service')->name('service');
+    Route::get('/service-details', 'serviceDetails')->name('serviceDetails');
+});

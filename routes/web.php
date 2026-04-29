@@ -14,8 +14,6 @@ use Modules\SEO\Http\Controllers\SitemapController;
 // Sitemap dynamique
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
 
-// Home route handled by Frontend module (frontend.home)
-
 // Passkeys (spatie/laravel-passkeys)
 Route::passkeys();
 

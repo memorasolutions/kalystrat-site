@@ -1,140 +1,131 @@
-@extends('frontend::layout')
+@extends('frontend::layout.layout')
 
-@section('title', 'Contact - Kalystrat')
-@section('meta_description', 'Contactez Kalystrat pour vos projets d\'investissement stratégique et de développement immobilier à Québec. Consultation gratuite.')
-@section('breadcrumb_title', 'Contact')
-@section('breadcrumb')
-    <li>Contact</li>
-@endsection
+@php
+    $title='Contact Us';
+    $subTitle='Contact Us';
+@endphp
 
 @section('content')
-    {{-- Contact info --}}
-    <section class="space-top space-bottom">
+
+    <!--==============================
+    Contact Page Area  
+    ==============================-->
+    <section class="contact-page-area space">
         <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title"><i class="ri-focus-2-line"></i> NOUS JOINDRE</span>
-                <h2 class="sec-title">Restons en contact</h2>
-                <p>N'hésitez pas à nous contacter pour toute question concernant nos services. Notre équipe est à votre disposition.</p>
-            </div>
-            <div class="row gx-30 gy-30">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="contact-info-card text-center p-4">
-                        <div class="mb-3">
-                            <i class="ri-map-pin-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
+            <div class="row gy-4 justify-content-center">
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-page-card bg-smoke">
+                        <div class="contact-page-card-details">
+                            <h4 class="contact-page-card_title">Main Office</h4>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+00 (22) 730 240 369</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 10.00 - 18.00</div>
                         </div>
-                        <h3>Notre adresse</h3>
-                        <p>Québec, QC<br>Canada</p>
+                        <div class="contact-page-card-thumb">
+                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-1.png') }}" alt="img">
+                        </div>  
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="contact-info-card text-center p-4">
-                        <div class="mb-3">
-                            <i class="ri-phone-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-page-card bg-smoke">
+                        <div class="contact-page-card-details">
+                            <h4 class="contact-page-card_title">London Office</h4>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 12.00 - 20.00</div>
                         </div>
-                        <h3>Téléphone</h3>
-                        <p><a href="tel:4184760987">418-476-0987</a></p>
+                        <div class="contact-page-card-thumb">
+                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-2.png') }}" alt="img">
+                        </div>  
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="contact-info-card text-center p-4">
-                        <div class="mb-3">
-                            <i class="ri-mail-line" style="font-size: 3rem; color: var(--ks-gold);"></i>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="contact-page-card bg-smoke">
+                        <div class="contact-page-card-details">
+                            <h4 class="contact-page-card_title">New York City</h4>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 08.00 - 16.00</div>
                         </div>
-                        <h3>Courriel</h3>
-                        <p><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
+                        <div class="contact-page-card-thumb">
+                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-3.png') }}" alt="img">
+                        </div>  
                     </div>
                 </div>
+
             </div>
         </div>
-    </section>
-
-    {{-- Contact form --}}
-    <section class="space-bottom">
+    </section>  
+    
+    <!--==============================
+    Contact Area  
+    ==============================-->
+    <section class="contact-area-2 space-bottom overflow-hidden">        
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="title-area text-center">
-                        <h2 class="sec-title">Envoyez-nous un message</h2>
-                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons dans les plus brefs délais.</p>
-                    </div>
-
-                    @if(session('success'))
-                        <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
-                            {{ session('success') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
+            <div class="contact-wrap2 space overflow-hidden" data-bg-src="{{ asset('themes/construz/assets/img/bg/contact-bg3-1.png') }}">
+                <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-left="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
+                </div>
+                <div class="row gy-60 justify-content-lg-end justify-content-center">
+                    <div class="col-xl-7">
+                        <div class="contact-form-wrap">
+                            <div class="title-area">
+                                <span class="sub-title text-theme"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Get Free Quote </span>
+                                <h2 class="sec-title">Have a project in mind?</h2>
+                            </div>
+                            <form action="mail.php" method="POST" class="contact-form ajax-contact">
+                                <div class="row gy-4">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <select name="subject" id="subject" class="single-select nice-select form-select">
+                                                <option value="" disabled selected hidden>Your Inquiry</option>
+                                                <option value="Web Design">Web Design</option>
+                                                <option value="Web Development">Web Development</option>
+                                                <option value="Engine Diagnostics">Engine Diagnostics</option>
+                                                <option value="Digital Marketing">Digital Marketing</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-12">
+                                        <div class="form-group ">
+                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-btn col-12">
+                                        <button class="btn w-100">Submit Now <i class="ri-arrow-right-up-line"></i></button>
+                                    </div>
+                                </div>
+                                <p class="form-messages mb-0 mt-3"></p>
+                            </form>
                         </div>
-                    @endif
-
-                    @if(session('error'))
-                        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
-                            {{ session('error') }}
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
-                        </div>
-                    @endif
-
-                    @if($errors->any())
-                        <div class="alert alert-danger alert-dismissible fade show mb-4" role="alert">
-                            <ul class="mb-0">
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fermer"></button>
-                        </div>
-                    @endif
-
-                    <form action="{{ route('frontend.contact.submit') }}" method="POST">
-                        @csrf
-                        <div class="row gx-30">
-                            <div class="col-lg-6 col-md-6 mb-3">
-                                <label for="name" class="form-label">Nom complet <span class="text-danger">*</span></label>
-                                <input type="text" name="name" id="name" class="form-control" placeholder="Votre nom complet" value="{{ old('name') }}" required autocomplete="name" aria-required="true">
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-3">
-                                <label for="email" class="form-label">Courriel <span class="text-danger">*</span></label>
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Votre adresse courriel" value="{{ old('email') }}" required autocomplete="email" aria-required="true">
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-3">
-                                <label for="phone" class="form-label">Téléphone</label>
-                                <input type="tel" name="phone" id="phone" class="form-control" placeholder="Votre numéro de téléphone" value="{{ old('phone') }}" autocomplete="tel">
-                            </div>
-                            <div class="col-lg-6 col-md-6 mb-3">
-                                <label for="subject" class="form-label">Sujet <span class="text-danger">*</span></label>
-                                <select name="subject" id="subject" class="form-select" required>
-                                    <option value="" disabled {{ old('subject') ? '' : 'selected' }}>Sélectionnez un sujet</option>
-                                    <option value="Soumission" {{ old('subject') == 'Soumission' ? 'selected' : '' }}>Soumission</option>
-                                    <option value="Information" {{ old('subject') == 'Information' ? 'selected' : '' }}>Information</option>
-                                    <option value="Partenariat" {{ old('subject') == 'Partenariat' ? 'selected' : '' }}>Partenariat</option>
-                                    <option value="Autre" {{ old('subject') == 'Autre' ? 'selected' : '' }}>Autre</option>
-                                </select>
-                            </div>
-                            <div class="col-12 mb-4">
-                                <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
-                                <textarea name="message" id="message" class="form-control" rows="6" placeholder="Décrivez votre projet ou votre demande..." required>{{ old('message') }}</textarea>
-                            </div>
-                            <div class="col-12 text-center">
-                                <button type="submit" class="btn">ENVOYER LE MESSAGE <i class="ri-send-plane-line"></i></button>
-                            </div>
-                        </div>
-                    </form>
+                    </div>            
                 </div>
             </div>
+            
         </div>
-    </section>
+    </section>   
 
-    {{-- Map --}}
-    <section>
-        <div class="container-fluid p-0">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d86847.5!2d-71.31!3d46.81!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cb8968a05db8893%3A0x8fc52d8f4f5bef9c!2sQu%C3%A9bec%2C%20QC%2C%20Canada!5e0!3m2!1sfr!2sca"
-                width="100%"
-                height="400"
-                style="border:0;"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Localisation Kalystrat - Québec">
-            </iframe>
+    <div class="map-area overflow-hidden">
+        <div class="map-sec">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3644.7310056272386!2d89.2286059153658!3d24.00527418490799!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39fe9b97badc6151%3A0x30b048c9fb2129bc!2s!5e0!3m2!1sen!2sbd!4v1651028958211!5m2!1sen!2sbd" allowfullscreen="" loading="lazy"></iframe>
         </div>
-    </section>
+    </div>
+
 @endsection

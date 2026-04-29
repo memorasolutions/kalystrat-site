@@ -58,3 +58,7 @@ MIGRATION_PLAN.md
 
 # CSRF temp
 csrf*
+
+# Backups locaux et plan d'affaires (hors repo)
+.backups/
+.plan_affaire/
