@@ -23,3 +23,49 @@ html, body { overflow-x: hidden !important; }
   background-repeat: no-repeat;
   background-position: right center;
 }
+
+/* P22-S4b — Fix UX/UI icônes header (search + sidemenu) + collision Call-Us
+   Validé via qwen3-max (multi-ai-mcp openrouter-free).
+   Désactivable en supprimant ce bloc. */
+
+/* Target size 44×44 (WCAG 2.5.8 + Apple HIG) */
+.header-button .simple-icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hover orange Kalystrat */
+.header-button .simple-icon:hover {
+  color: #FF5E14 !important;
+  transition: color 0.15s ease-in-out;
+}
+
+/* Focus visible WCAG 2.4.7 */
+.header-button .simple-icon:focus-visible {
+  outline: 2px solid #FF5E14;
+  outline-offset: 2px;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .header-button .simple-icon {
+    transition: none;
+  }
+}
+
+/* Évite collision avec .navbar-right-desc (visible >= 1400px, ~281px absolute right:0)
+   Approche : padding-right sur .menu-area .row pour réserver l'espace du widget,
+   + flex-shrink:0 pour préserver GET IN TOUCH + icônes. */
+@media (min-width: 1400px) {
+  .menu-area .row {
+    padding-right: 281px;
+  }
+  .header-button > .btn,
+  .header-button > .search-btn,
+  .header-button > .sidebar-btn {
+    flex-shrink: 0;
+  }
+}

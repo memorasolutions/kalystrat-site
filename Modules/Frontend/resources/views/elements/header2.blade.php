@@ -117,11 +117,11 @@
                         <div class="col-auto ms-auto d-xl-block d-none">
                             <div class="header-button">
                                 <a href="{{ route('about') }}" class="btn">GET IN TOUCH <i class="ri-arrow-right-up-line"></i></a>
-                                <button type="button" class="search-btn searchBoxToggler simple-icon">
+                                <button type="button" class="search-btn searchBoxToggler simple-icon" aria-label="Rechercher">
                                     <i class="ri-search-line"></i>
                                 </button>
-                                <button type="button" class="sidebar-btn sideMenuToggler simple-icon">
-                                    <i class="ri-grid-fill"></i>
+                                <button type="button" class="sidebar-btn sideMenuToggler simple-icon" aria-label="Menu principal">
+                                    <i class="ri-menu-3-line"></i>
                                 </button>
                             </div>
                         </div>
