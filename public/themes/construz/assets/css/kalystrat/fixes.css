@@ -10,18 +10,26 @@ html, body { overflow-x: hidden !important; }
 .header-top-right .header-links ul { display: flex; flex-wrap: wrap; gap: 0.25rem 0.75rem; margin: 0; }
 .header-top-right .header-links ul li { white-space: normal; word-break: break-word; }
 
-/* Widget "Call us" : décalé sous la topbar (top: 41px = hauteur topbar) pour éviter chevauchement avec l'adresse */
+/* Widget "Call us" : RESTAURE la symétrie native Construz avec le logo-bg gauche
+   (top:-40px height:calc(100%+40px) → forme L renversée identique côté droit, demande user 2026-04-29).
+   Empêche chevauchement texte topbar via padding-right sur .header-top-right >=1400px. */
 .navbar-right-desc {
-  position: absolute;
-  top: 41px !important;
-  right: 0;
-  max-width: 100%;
-  overflow: hidden;
+  top: -40px !important;
+  position: absolute !important;
+  right: 0 !important;
+  max-width: 100% !important;
+  overflow: hidden !important;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.06);
+}
+@media (min-width: 1400px) {
+  .header-top .header-top-right {
+    padding-right: 320px !important;
+  }
 }
 .navbar-right-desc.background-image {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: right center;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+  background-position: right center !important;
 }
 
 /* P22-S4b — Fix UX/UI icônes header (search + sidemenu) + collision Call-Us
