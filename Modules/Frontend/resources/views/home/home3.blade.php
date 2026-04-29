@@ -241,7 +241,7 @@
                                     </div>
                                     <div class="navbar-right-desc-details">
                                         <h6 class="title">Call us any time</h6>
-                                        <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                                        <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                                     </div>
                                 </div>
                                 <a href="{{ route('about') }}" class="btn d-xxl-flex d-none">GET IN TOUCH <i class="ri-arrow-right-up-line"></i></a>
@@ -313,7 +313,7 @@
                                     <i class="ri-phone-fill"></i>
                                 </div>
                                 <div class="media-body">
-                                    <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                                    <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                                     <h6 class="title">Ned Help?</h6>
                                 </div>
                             </div>

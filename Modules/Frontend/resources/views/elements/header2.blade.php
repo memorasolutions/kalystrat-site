@@ -116,7 +116,10 @@
                         </div>
                         <div class="col-auto ms-auto d-xl-block d-none">
                             <div class="header-button">
-                                <a href="{{ route('about') }}" class="btn">GET IN TOUCH <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="tel:+15815786145" class="btn btn-phone-cta" aria-label="Téléphoner à Kalystrat">
+                                    <i class="ri-phone-line" aria-hidden="true"></i>
+                                    <span class="btn-phone-cta-text">1-581-578-6145</span>
+                                </a>
                                 <button type="button" class="search-btn searchBoxToggler simple-icon" aria-label="Rechercher">
                                     <i class="ri-search-line"></i>
                                 </button>
@@ -133,7 +136,7 @@
                     </div>
                     <div class="navbar-right-desc-details">
                         <h6 class="title">Call us any time</h6>
-                        <a class="link" href="tel:+2590256215">+123 556 8824</a>
+                        <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                     </div>
                 </div>
             </div>

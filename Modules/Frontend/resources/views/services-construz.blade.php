@@ -406,7 +406,7 @@
                     </div>
                     <div class="navbar-right-desc-details">
                         <h6 class="title">Appelez-nous</h6>
-                        <a class="link" href="tel:+2590256215">1-581-578-6145</a>
+                        <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                     </div>
                 </div>
             </div>

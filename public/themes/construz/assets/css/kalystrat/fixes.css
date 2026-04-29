@@ -67,13 +67,76 @@ html, body { overflow-x: hidden !important; }
 /* Évite collision avec .navbar-right-desc (visible >= 1400px, ~281px absolute right:0)
    Approche : padding-right sur .menu-area .row pour réserver l'espace du widget,
    + flex-shrink:0 pour préserver GET IN TOUCH + icônes. */
-@media (min-width: 1400px) {
+/* Padding-right activé seulement à >=1600 (grand écran) pour réserver l'espace widget Call-Us
+   Sous 1600, le bouton phone CTA prend le relais et le widget peut chevaucher légèrement */
+@media (min-width: 1600px) {
   .menu-area .row {
     padding-right: 281px;
   }
-  .header-button > .btn,
-  .header-button > .search-btn,
-  .header-button > .sidebar-btn {
-    flex-shrink: 0;
+}
+.header-button > .btn,
+.header-button > .btn-phone-cta,
+.header-button > .search-btn,
+.header-button > .sidebar-btn {
+  flex-shrink: 0;
+}
+
+/* P22-S4d — Bouton TÉLÉPHONE UX/UI moderne 2026 (signalé user)
+   Remplace GET IN TOUCH par CTA tap-to-call. Génré qwen3-max (multi-ai-mcp openrouter-free). */
+.btn-phone-cta {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 8px;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 12px 20px;
+  background-color: #FF5E14;
+  color: white !important;
+  text-decoration: none !important;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+.btn-phone-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 94, 20, 0.3);
+  color: white;
+}
+
+.btn-phone-cta:focus-visible {
+  outline: 2px solid #FF5E14;
+  outline-offset: 3px;
+}
+
+.btn-phone-cta i {
+  transition: transform 0.3s ease;
+  font-size: 1.1em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-phone-cta:hover i {
+    animation: phonePulse 1.2s infinite;
+  }
+}
+
+@keyframes phonePulse {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  25% { transform: rotate(3deg) scale(1.05); }
+  75% { transform: rotate(-3deg) scale(1.05); }
+}
+
+/* Variant compact mobile : icône seule */
+@media (max-width: 991px) {
+  .btn-phone-cta {
+    padding: 12px;
+    min-width: 44px;
+    justify-content: center;
+  }
+  .btn-phone-cta-text {
+    display: none;
   }
 }
