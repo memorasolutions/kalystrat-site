@@ -137,39 +137,39 @@
         <div class="sticky-wrapper">
             <div class="menu-area">
                 <div class="header-navbar-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                 </div>
                 <div class="logo-bg"></div>
                 <div class="container">
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto d-xxl-none d-block">
                             <div class="header-logo">
-                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
+                                <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                             </div>
                         </div>
                         <div class="col-auto ms-auto ms-xxl-0">
                             <nav class="main-menu d-none d-lg-inline-block" aria-label="Navigation principale">
                                 <ul>
                                     <li>
-                                        <a href="{{ route('frontend.home') }}" class="{{ request()->routeIs('frontend.home') ? 'active' : '' }}">ACCUEIL</a>
+                                        <a href="{{ route('index') }}" class="{{ request()->routeIs('frontend.home') ? 'active' : '' }}">ACCUEIL</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.about') }}" class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">QUI NOUS SOMMES</a>
+                                        <a href="{{ route('kalystrat.apropos') }}" class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">QUI NOUS SOMMES</a>
                                     </li>
                                     <li class="has-mega-menu">
-                                        <a href="{{ route('frontend.services') }}" class="{{ request()->routeIs('frontend.services*') || request()->routeIs('frontend.filiale*') ? 'active' : '' }}" aria-haspopup="true">NOTRE APPROCHE <i class="ri-arrow-down-s-line" aria-hidden="true" style="font-size: 0.85em;"></i></a>
+                                        <a href="{{ route('service') }}" class="{{ request()->routeIs('frontend.services*') || request()->routeIs('frontend.filiale*') ? 'active' : '' }}" aria-haspopup="true">NOTRE APPROCHE <i class="ri-arrow-down-s-line" aria-hidden="true" style="font-size: 0.85em;"></i></a>
                                         @php
                                             $mega_filiales = require module_path('Frontend', 'config/filiales.php');
                                         @endphp
                                         <div class="mega-menu" role="menu" aria-label="Sous-menu filiales Kalystrat">
                                             <div class="mega-menu-inner">
-                                                <a href="{{ route('frontend.services') }}" class="mega-menu-overview" role="menuitem">
+                                                <a href="{{ route('service') }}" class="mega-menu-overview" role="menuitem">
                                                     <span class="mega-overview-label">Vue d'ensemble</span>
                                                     <span class="mega-overview-desc">Notre approche intégrée et nos six filiales</span>
                                                 </a>
                                                 <div class="mega-menu-grid">
                                                     @foreach ($mega_filiales as $slug => $f)
-                                                        <a href="{{ route('frontend.filiale', $slug) }}" class="mega-menu-item" role="menuitem" style="--filiale-color: {{ $f['hex_couleur'] }};">
+                                                        <a href="{{ route('kalystrat.filiale', $slug) }}" class="mega-menu-item" role="menuitem" style="--filiale-color: {{ $f['hex_couleur'] }};">
                                                             <span class="mega-item-label">{{ $f['nom_court'] }}</span>
                                                             <span class="mega-item-desc">{{ $f['specialite'] }}</span>
                                                         </a>
@@ -179,10 +179,10 @@
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.portfolio') }}" class="{{ request()->routeIs('frontend.portfolio*') ? 'active' : '' }}">PORTFOLIO</a>
+                                        <a href="{{ route('project') }}" class="{{ request()->routeIs('frontend.portfolio*') ? 'active' : '' }}">PORTFOLIO</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.contact') }}" class="{{ request()->routeIs('frontend.contact') ? 'active' : '' }}">NOUS JOINDRE</a>
+                                        <a href="{{ route('contact') }}" class="{{ request()->routeIs('frontend.contact') ? 'active' : '' }}">NOUS JOINDRE</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -192,7 +192,7 @@
                         </div>
                         <div class="col-auto ms-auto d-lg-block d-none">
                             <div class="header-button">
-                                <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                                <a href="{{ route('contact') }}" class="btn" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>
@@ -214,20 +214,20 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}?v={{ @filemtime(public_path('assets/img/kalystrat/logo-header.svg')) ?: time() }}" alt="Kalystrat"></a>
                 <button class="menu-toggle" aria-label="Fermer le menu"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
                 <ul>
-                    <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
-                    <li><a href="{{ route('frontend.about') }}">Qui nous sommes</a></li>
-                    <li><a href="{{ route('frontend.services') }}">Notre approche</a></li>
-                    <li><a href="{{ route('frontend.portfolio') }}">Portfolio</a></li>
-                    <li><a href="{{ route('frontend.contact') }}">Nous joindre</a></li>
+                    <li><a href="{{ route('index') }}">Accueil</a></li>
+                    <li><a href="{{ route('kalystrat.apropos') }}">Qui nous sommes</a></li>
+                    <li><a href="{{ route('service') }}">Notre approche</a></li>
+                    <li><a href="{{ route('project') }}">Portfolio</a></li>
+                    <li><a href="{{ route('contact') }}">Nous joindre</a></li>
                 </ul>
             </div>
             <div class="mobile-menu-bottom">
-                <a href="{{ route('frontend.contact') }}" class="btn w-100">Soumission gratuite</a>
+                <a href="{{ route('contact') }}" class="btn w-100">Soumission gratuite</a>
             </div>
         </div>
     </div>
@@ -239,7 +239,7 @@
                 <div class="breadcrumb-content">
                     <h1 class="breadcrumb-title">@yield('breadcrumb_title')</h1>
                     <ul class="breadcrumb-menu">
-                        <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
+                        <li><a href="{{ route('index') }}">Accueil</a></li>
                         @yield('breadcrumb')
                     </ul>
                 </div>
@@ -257,7 +257,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat" style="max-width: 200px; height: auto;"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat" style="max-width: 200px; height: auto;"></a>
                 </div>
             </div>
             <div class="widget-area">
@@ -273,11 +273,11 @@
                             <h3 class="widget_title">Liens rapides</h3>
                             <div class="menu-all-pages-container">
                                 <ul class="menu">
-                                    <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
-                                    <li><a href="{{ route('frontend.about') }}">Qui nous sommes</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Notre approche</a></li>
-                                    <li><a href="{{ route('frontend.portfolio') }}">Portfolio</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Nous joindre</a></li>
+                                    <li><a href="{{ route('index') }}">Accueil</a></li>
+                                    <li><a href="{{ route('kalystrat.apropos') }}">Qui nous sommes</a></li>
+                                    <li><a href="{{ route('service') }}">Notre approche</a></li>
+                                    <li><a href="{{ route('project') }}">Portfolio</a></li>
+                                    <li><a href="{{ route('contact') }}">Nous joindre</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -332,7 +332,7 @@
 
     {{-- CTA sticky mobile --}}
     <div class="d-lg-none position-fixed bottom-0 start-0 end-0 p-3 bg-white shadow-lg" style="z-index: 999;">
-        <a href="{{ route('frontend.contact') }}" class="btn w-100 text-center">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
+        <a href="{{ route('contact') }}" class="btn w-100 text-center">NOUS JOINDRE <i class="ri-arrow-right-up-line"></i></a>
     </div>
 
     {{-- JS --}}

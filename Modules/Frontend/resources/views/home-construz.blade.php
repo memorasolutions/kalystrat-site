@@ -82,7 +82,7 @@
             <button class="closeButton sideMenuCls"><i class="ri-close-line"></i></button>
             <div class="widget widget-about footer-widget">
                 <div class="footer-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="logo"></a>
                 </div>
                 <p class="about-text mb-4">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
                 
@@ -145,7 +145,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="Kalystrat"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/logo.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -157,7 +157,7 @@
                                 <a href="#">Multipage</a>
                                 <ul class="sub-menu">
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Accueil</a>
+                                        <a href="{{ route('index') }}">Accueil</a>
                                     </li>
                                     <li>
                                         <a href="#">Home 02</a>
@@ -169,7 +169,7 @@
                                         <a href="#">Home 04</a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.home') }}">Accueil</a>
+                                        <a href="{{ route('index') }}">Accueil</a>
                                     </li>
                                 </ul>
                             </li>
@@ -196,7 +196,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('frontend.about') }}">About</a>
+                        <a href="{{ route('kalystrat.apropos') }}">About</a>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Pages</a>
@@ -213,15 +213,15 @@
                     <li class="menu-item-has-children">
                         <a href="#">Project</a>
                         <ul class="sub-menu">
-                            <li><a href="{{ route('frontend.portfolio') }}">Projects</a></li>
-                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
+                            <li><a href="{{ route('project') }}">Projects</a></li>
+                            <li><a href="{{ route('project') }}">Projet</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
                         <a href="#">Service</a>
                         <ul class="sub-menu">
-                            <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
+                            <li><a href="{{ route('service') }}">Service</a></li>
+                            <li><a href="{{ route('kalystrat.filiale', 'fondations') }}">Filiale</a></li>
                         </ul>
                     </li>
                     <li class="menu-item-has-children">
@@ -242,7 +242,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a href="{{ route('frontend.contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -260,7 +260,7 @@
                     <div class="row align-items-center justify-content-lg-start justify-content-between">
                         <div class="col-auto">
                             <div class="header-logo">
-                                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="logo"></a>
+                                <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="logo"></a>
                             </div>
                         </div>
                         <div class="col-auto m-lg-auto">
@@ -273,7 +273,7 @@
                                                 <a href="#">Multipage</a>
                                                 <ul class="sub-menu">
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
+                                                        <a href="{{ route('index') }}">Accueil</a>
                                                     </li>
                                                     <li>
                                                         <a href="#">Home 02</a>
@@ -285,7 +285,7 @@
                                                         <a href="#">Home 04</a>
                                                     </li>
                                                     <li>
-                                                        <a href="{{ route('frontend.home') }}">Accueil</a>
+                                                        <a href="{{ route('index') }}">Accueil</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -312,20 +312,20 @@
                                         </ul>
                                     </li>
                                     <li>
-                                        <a href="{{ route('frontend.about') }}">À PROPOS</a>
+                                        <a href="{{ route('kalystrat.apropos') }}">À PROPOS</a>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">NOS FILIALES</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{{ route('frontend.services') }}">Service</a></li>
-                                            <li><a href="{{ route('frontend.filiale', 'fondations') }}">Filiale</a></li>
+                                            <li><a href="{{ route('service') }}">Service</a></li>
+                                            <li><a href="{{ route('kalystrat.filiale', 'fondations') }}">Filiale</a></li>
                                         </ul>
                                     </li>
                                     <li class="menu-item-has-children">
                                         <a href="#">PAGES</a>
                                         <ul class="sub-menu">
-                                            <li><a href="{{ route('frontend.portfolio') }}">Project Page</a></li>
-                                            <li><a href="{{ route('frontend.portfolio') }}">Projet</a></li>
+                                            <li><a href="{{ route('project') }}">Project Page</a></li>
+                                            <li><a href="{{ route('project') }}">Projet</a></li>
                                             <li><a href="#">Équipe</a></li>
                                             <li><a href="#">Membre</a></li>
                                             <li><a href="#">Boutique</a></li>
@@ -344,7 +344,7 @@
                                     </li>
                                                                       
                                     <li>
-                                        <a href="{{ route('frontend.contact') }}">NOUS JOINDRE</a>
+                                        <a href="{{ route('contact') }}">NOUS JOINDRE</a>
                                     </li>
                                 </ul>
                             </nav>
@@ -363,7 +363,7 @@
                                         <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                                     </div>
                                 </div>
-                                <a href="{{ route('frontend.about') }}" class="btn style2 d-xxl-flex d-none">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('kalystrat.apropos') }}" class="btn style2 d-xxl-flex d-none">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 <button type="button" class="search-btn searchBoxToggler simple-icon">
                                     <i class="ri-search-line"></i>
                                 </button>
@@ -434,7 +434,7 @@
                                 <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -489,7 +489,7 @@
                                 <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -544,7 +544,7 @@
                                 <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">en construction</h1>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                                 <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                    <a href="{{ route('frontend.about') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                             
@@ -572,7 +572,7 @@
                         </div>
                         <p>6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec. </p>
                         <div class="btn-group mt-30">
-                            <a href="{{ route('frontend.about') }}" class="btn">NOW MORE COMPANY <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="{{ route('kalystrat.apropos') }}" class="btn">NOW MORE COMPANY <i class="ri-arrow-right-up-line"></i></a>
                         </div> 
                     </div>
                 </div>
@@ -690,7 +690,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('service') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -722,7 +722,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('service') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -754,7 +754,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('service') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -786,7 +786,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('service') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>                                
                                 </div>
@@ -818,7 +818,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.services') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('service') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -850,7 +850,7 @@
                                             </ul>
                                         </div>
                                         <div class="btn-group mt-35">
-                                            <a href="{{ route('frontend.filiale', 'placement') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
+                                            <a href="{{ route('kalystrat.filiale', 'placement') }}" class="btn style3">More Details <i class="ri-arrow-right-up-line"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1240,10 +1240,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('project') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
+                                    <a href="{{ route('project') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1258,10 +1258,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('project') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
+                                    <a href="{{ route('project') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1276,10 +1276,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('project') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
+                                    <a href="{{ route('project') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1294,10 +1294,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('project') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
+                                    <a href="{{ route('project') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1312,10 +1312,10 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Residential</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.portfolio') }}">Modern pattern style for house roof</a></h4>                     
+                                    <h4 class="portfolio-card-title"><a href="{{ route('project') }}">Modern pattern style for house roof</a></h4>                     
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.portfolio') }}" class="btn style2">
+                                    <a href="{{ route('project') }}" class="btn style2">
                                         Explore Project <i class="ri-arrow-right-line"></i>
                                     </a> 
                                 </div>
@@ -1370,52 +1370,52 @@
             <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
             </div>
@@ -1574,7 +1574,7 @@
                 <h4 class="cta-title text-white">
                     Roofing & Restoration services that will leave your home better than before
                 </h4>
-                <a class="btn style4" href="{{ route('frontend.contact') }}">Start your free quote <i class="ri-arrow-right-up-line"></i></a>
+                <a class="btn style4" href="{{ route('contact') }}">Start your free quote <i class="ri-arrow-right-up-line"></i></a>
             </div>
             
         </div>
@@ -1587,7 +1587,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Kalystrat"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
                     <p class="subscribe-box_text">Recevez nos nouvelles et chantiers récents.</p>
@@ -1613,18 +1613,18 @@
                             <h3 class="widget_title">Liens utiles</h3>
                             <div class="menu-all-pages-container grid-style">
                                 <ul class="menu">
-                                    <li><a href="{{ route('frontend.about') }}">À propos</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Nos filiales</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Blog</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Réalisations</a></li>
-                                    <li><a href="{{ route('frontend.faq') }}">FAQ</a></li>
+                                    <li><a href="{{ route('kalystrat.apropos') }}">À propos</a></li>
+                                    <li><a href="{{ route('service') }}">Nos filiales</a></li>
+                                    <li><a href="{{ route('service') }}">Blog</a></li>
+                                    <li><a href="{{ route('service') }}">Réalisations</a></li>
+                                    <li><a href="{{ route('kalystrat.faq') }}">FAQ</a></li>
                                 </ul>
                                 <ul class="menu">
                                     <li><a href="#">Notre équipe</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Carrières</a></li>
-                                    <li><a href="{{ route('frontend.services') }}">Témoignages</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Confidentialité</a></li>
-                                    <li><a href="{{ route('frontend.contact') }}">Conditions</a></li>
+                                    <li><a href="{{ route('service') }}">Carrières</a></li>
+                                    <li><a href="{{ route('service') }}">Témoignages</a></li>
+                                    <li><a href="{{ route('contact') }}">Confidentialité</a></li>
+                                    <li><a href="{{ route('contact') }}">Conditions</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1665,9 +1665,9 @@
                     <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Kalystrat</a>  |  Tous droits réservés</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
-                            <a href="{{ route('frontend.contact') }}">Conditions</a>
-                            <a href="{{ route('frontend.contact') }}">Confidentialité</a>
-                            <a href="{{ route('frontend.contact') }}">Nous joindre</a>
+                            <a href="{{ route('contact') }}">Conditions</a>
+                            <a href="{{ route('contact') }}">Confidentialité</a>
+                            <a href="{{ route('contact') }}">Nous joindre</a>
                         </div>
                     </div>
                 </div>                

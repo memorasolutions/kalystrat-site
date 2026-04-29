@@ -10,7 +10,7 @@
 
                     <div class="col-auto">
                         <div class="header-logo">
-                            <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Conçu. Réalisé. Livré."></a>
+                            <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Conçu. Réalisé. Livré."></a>
                         </div>
                     </div>
 
@@ -18,25 +18,25 @@
                         <nav class="main-menu d-none d-lg-inline-block" aria-label="Navigation principale">
                             <ul>
                                 <li class="{{ request()->routeIs('frontend.home') ? 'active' : '' }}">
-                                    <a href="{{ route('frontend.home') }}">ACCUEIL</a>
+                                    <a href="{{ route('index') }}">ACCUEIL</a>
                                 </li>
                                 <li class="{{ request()->routeIs('frontend.about') ? 'active' : '' }}">
-                                    <a href="{{ route('frontend.about') }}">À PROPOS</a>
+                                    <a href="{{ route('kalystrat.apropos') }}">À PROPOS</a>
                                 </li>
                                 <li class="menu-item-has-children {{ request()->routeIs('frontend.services') || request()->routeIs('frontend.filiale*') ? 'active' : '' }}">
-                                    <a href="{{ route('frontend.services') }}">NOS FILIALES</a>
+                                    <a href="{{ route('service') }}">NOS FILIALES</a>
                                     <ul class="sub-menu">
-                                        <li><a href="{{ route('frontend.services') }}">Vue d'ensemble</a></li>
+                                        <li><a href="{{ route('service') }}">Vue d'ensemble</a></li>
                                         @foreach($filiales_header as $slug => $f)
-                                            <li><a href="{{ route('frontend.filiale', $slug) }}">{{ $f['nom_court'] }}</a></li>
+                                            <li><a href="{{ route('kalystrat.filiale', $slug) }}">{{ $f['nom_court'] }}</a></li>
                                         @endforeach
                                     </ul>
                                 </li>
                                 <li class="{{ request()->routeIs('frontend.portfolio*') ? 'active' : '' }}">
-                                    <a href="{{ route('frontend.portfolio') }}">PROJETS</a>
+                                    <a href="{{ route('project') }}">PROJETS</a>
                                 </li>
                                 <li class="{{ request()->routeIs('frontend.contact') ? 'active' : '' }}">
-                                    <a href="{{ route('frontend.contact') }}">NOUS JOINDRE</a>
+                                    <a href="{{ route('contact') }}">NOUS JOINDRE</a>
                                 </li>
                             </ul>
                         </nav>
@@ -56,7 +56,7 @@
                                     <a class="link" href="tel:+15815786145">1-581-578-6145</a>
                                 </div>
                             </div>
-                            <a href="{{ route('frontend.contact') }}" class="btn style2 d-xxl-flex d-none" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                            <a href="{{ route('contact') }}" class="btn style2 d-xxl-flex d-none" aria-label="Demander une soumission gratuite">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                             <button type="button" class="search-btn searchBoxToggler simple-icon" aria-label="Ouvrir la recherche"><i class="ri-search-line" aria-hidden="true"></i></button>
                             <button type="button" class="sidebar-btn sideMenuToggler simple-icon" aria-label="Ouvrir le menu latéral"><i class="ri-grid-fill" aria-hidden="true"></i></button>
                         </div>

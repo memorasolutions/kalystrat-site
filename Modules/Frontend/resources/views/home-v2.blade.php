@@ -57,7 +57,7 @@
                             <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Conçu. Réalisé. Livré.</h1>
                             <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                             <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                <a href="{{ route('frontend.contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -111,7 +111,7 @@
                             <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Conçu. Réalisé. Livré.</h1>
                             <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                             <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                <a href="{{ route('frontend.contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -165,7 +165,7 @@
                             <h1 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Conçu. Réalisé. Livré.</h1>
                             <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.</p>
                             <div class="btn-group" data-ani="slider-custom-anim-left" data-ani-delay="0.4s">
-                                <a href="{{ route('frontend.contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('contact') }}" class="btn style2">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -191,7 +191,7 @@ About Area
                     </div>
                     <p>Gestion Kalystrat Inc. réunit six filiales spécialisées sous une marque unifiée. Excellence québécoise en construction.</p>
                     <div class="btn-group mt-30">
-                        <a href="{{ route('frontend.about') }}" class="btn">EN APPRENDRE PLUS <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="{{ route('kalystrat.apropos') }}" class="btn">EN APPRENDRE PLUS <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -294,7 +294,7 @@ Why Choose Area 03 (6 filiales tabs)
                                         </ul>
                                     </div>
                                     <div class="btn-group mt-35">
-                                        <a href="{{ route('frontend.filiale', $slug) }}" class="btn style3">DÉCOUVRIR <i class="ri-arrow-right-up-line"></i></a>
+                                        <a href="{{ route('kalystrat.filiale', $slug) }}" class="btn style3">DÉCOUVRIR <i class="ri-arrow-right-up-line"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -388,7 +388,7 @@ Cta Area 5
             <h4 class="cta-title text-white">
                 Construction au Québec — soumission gratuite, accompagnement personnalisé
             </h4>
-            <a class="btn style4" href="{{ route('frontend.contact') }}">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+            <a class="btn style4" href="{{ route('contact') }}">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
         </div>
     </div>
 </div>
@@ -603,10 +603,10 @@ Portfolio Area 5 (5 filiales premières chantiers)
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">{{ $f['nom_court'] }}</span>
-                                    <h4 class="portfolio-card-title"><a href="{{ route('frontend.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
+                                    <h4 class="portfolio-card-title"><a href="{{ route('kalystrat.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
                                 </div>
                                 <div class="btn-group">
-                                    <a href="{{ route('frontend.filiale', $slug) }}" class="btn style2">
+                                    <a href="{{ route('kalystrat.filiale', $slug) }}" class="btn style2">
                                         Découvrir filiale <i class="ri-arrow-right-line"></i>
                                     </a>
                                 </div>
@@ -659,16 +659,16 @@ Client Area 1 (logos partenaires placeholder)
 <div class="client-area-1 text-center space bg-title overflow-hidden">
     <div class="container">
         <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
-            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-1.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-2.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-3.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-4.svg') }}" alt="img"></a></div></div>
+            <div class="col-lg-auto"><div class="client-logo"><a href="{{ route('index') }}"><img src="{{ asset('assets/construz-new/img/client/client-1-5.svg') }}" alt="img"></a></div></div>
         </div>
     </div>
 </div>

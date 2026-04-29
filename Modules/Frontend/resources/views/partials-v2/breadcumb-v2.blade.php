@@ -10,7 +10,7 @@
             "@@type": "ListItem",
             "position": 1,
             "name": "Accueil",
-            "item": "{{ route('frontend.home') }}"
+            "item": "{{ route('index') }}"
         }
         @foreach($breadcumbItems as $item)
             ,
@@ -33,7 +33,7 @@
                 <div class="breadcumb-content">
                     <h1 class="breadcumb-title">{{ $pageTitle ?? 'Kalystrat' }}</h1>
                     <ul class="breadcumb-menu">
-                        <li><a href="{{ route('frontend.home') }}"><i class="ri-home-4-fill"></i> ACCUEIL</a></li>
+                        <li><a href="{{ route('index') }}"><i class="ri-home-4-fill"></i> ACCUEIL</a></li>
                         @foreach($breadcumbItems as $item)
                             @if($loop->last)
                                 <li class="active">{{ $item['label'] }}</li>

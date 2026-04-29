@@ -3,54 +3,34 @@
 namespace Modules\Kalystrat\Http\Controllers;
 
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use Illuminate\Support\Arr;
 
 class KalystratController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
+    public function aPropos()
     {
-        return view('kalystrat::index');
+        return view('frontend::about-construz');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
+    public function faq()
     {
-        return view('kalystrat::create');
+        $faqs = config('kalystrat.faqs', []);
+
+        return view('frontend::faq-v2', compact('faqs'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request) {}
-
-    /**
-     * Show the specified resource.
-     */
-    public function show($id)
+    public function filiale(string $slug)
     {
-        return view('kalystrat::show');
+        $filiales = config('kalystrat.filiales', []);
+        $filialeData = Arr::get($filiales, $slug);
+
+        if (! $filialeData) {
+            abort(404);
+        }
+
+        return view('frontend::filiale', [
+            'filiale' => $filialeData,
+            'title' => $filialeData['nom_complet'] ?? ucfirst($slug),
+        ]);
     }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit($id)
-    {
-        return view('kalystrat::edit');
-    }
-
-    /**
-     * Update the specified resource in storage.
-     */
-    public function update(Request $request, $id) {}
-
-    /**
-     * Remove the specified resource from storage.
-     */
-    public function destroy($id) {}
 }

@@ -29,7 +29,7 @@
 @include('frontend::partials-v2.breadcumb-v2', [
     'pageTitle' => 'Questions fréquentes',
     'breadcumbItems' => [
-        ['label' => 'Accueil', 'url' => route('frontend.home')],
+        ['label' => 'Accueil', 'url' => route('index')],
         ['label' => 'FAQ', 'url' => null]
     ]
 ])
@@ -66,7 +66,7 @@
     <div class="container">
         <div class="cta-wrap5" data-bg-src="{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}');">
             <h4 class="cta-title text-white">Une autre question ?</h4>
-            <a class="btn style4" href="{{ route('frontend.contact') }}">NOUS CONTACTER <i class="ri-arrow-right-up-line"></i></a>
+            <a class="btn style4" href="{{ route('contact') }}">NOUS CONTACTER <i class="ri-arrow-right-up-line"></i></a>
         </div>
     </div>
 </div>

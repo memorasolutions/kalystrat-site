@@ -68,7 +68,7 @@
             <p style="color: rgba(255,255,255,0.85); max-width: 640px; margin: 0 auto 24px;">
                 Notre équipe vous accompagne dès la première rencontre. Demandez une soumission gratuite et personnalisée.
             </p>
-            <a href="{{ route('frontend.contact') }}" class="btn"
+            <a href="{{ route('contact') }}" class="btn"
                style="background: {{ $filiale['hex_couleur'] }}; color: #FFFFFF; padding: 14px 32px; border: 0; font-weight: 600;">
                 Demander une soumission
                 <i class="ri-arrow-right-up-line" aria-hidden="true" style="margin-left: 8px;"></i>

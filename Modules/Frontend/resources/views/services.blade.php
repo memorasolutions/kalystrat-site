@@ -30,7 +30,7 @@
                 @endphp
                 @foreach ($filiales_services as $slug => $f)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
-                        <a href="{{ route('frontend.filiale', $slug) }}" class="service-card-bento" style="--accent: {{ $f['hex_couleur'] }}; background-image: url('{{ asset($bentoBgs_services[$slug] ?? 'assets/img/kalystrat/hero-skyline.jpg') }}');" aria-label="Découvrir {{ $f['nom_complet'] }}">
+                        <a href="{{ route('kalystrat.filiale', $slug) }}" class="service-card-bento" style="--accent: {{ $f['hex_couleur'] }}; background-image: url('{{ asset($bentoBgs_services[$slug] ?? 'assets/img/kalystrat/hero-skyline.jpg') }}');" aria-label="Découvrir {{ $f['nom_complet'] }}">
                             <div>
                                 <h3>{{ $f['nom_court'] }}</h3>
                                 <p>{{ $f['specialite'] }}</p>
@@ -90,7 +90,7 @@
             <div class="cta-wrap2 text-center">
                 <h2 class="title wow fadeInUp">Explorons ensemble vos opportunités</h2>
                 <p class="wow fadeInUp" data-wow-delay="0.1s">Vous avez un projet d'investissement, un actif à valoriser ou une vision stratégique à concrétiser? Nos équipes sont à votre disposition.</p>
-                <a href="{{ route('frontend.contact') }}" class="btn wow fadeInUp" data-wow-delay="0.2s" aria-label="Contacter Kalystrat pour explorer vos opportunités">NOUS CONTACTER <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('contact') }}" class="btn wow fadeInUp" data-wow-delay="0.2s" aria-label="Contacter Kalystrat pour explorer vos opportunités">NOUS CONTACTER <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </section>

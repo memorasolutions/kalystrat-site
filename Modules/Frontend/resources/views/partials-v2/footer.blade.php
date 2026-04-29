@@ -2,7 +2,7 @@
     <div class="container">
         <div class="footer-top-1">
             <div class="footer-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Holding québécois en construction"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Holding québécois en construction"></a>
             </div>
             <div class="subscribe-box">
                 <p class="subscribe-box_text">Recevez nos nouvelles et chantiers récents.</p>
@@ -31,11 +31,11 @@
                         <h3 class="widget_title">Liens utiles</h3>
                         <div class="menu-all-pages-container grid-style">
                             <ul class="menu">
-                                <li><a href="{{ route('frontend.home') }}">Accueil</a></li>
-                                <li><a href="{{ route('frontend.about') }}">À propos</a></li>
-                                <li><a href="{{ route('frontend.services') }}">Nos filiales</a></li>
-                                <li><a href="{{ route('frontend.portfolio') }}">Projets</a></li>
-                                <li><a href="{{ route('frontend.contact') }}">Nous joindre</a></li>
+                                <li><a href="{{ route('index') }}">Accueil</a></li>
+                                <li><a href="{{ route('kalystrat.apropos') }}">À propos</a></li>
+                                <li><a href="{{ route('service') }}">Nos filiales</a></li>
+                                <li><a href="{{ route('project') }}">Projets</a></li>
+                                <li><a href="{{ route('contact') }}">Nous joindre</a></li>
                             </ul>
                         </div>
                     </div>
@@ -77,9 +77,9 @@
                 <div class="col-auto align-self-center"><p class="copyright-text text-center">&copy; {{ date('Y') }} Gestion Kalystrat Inc. | Tous droits réservés</p></div>
                 <div class="col-auto">
                     <div class="footer-links">
-                        <a href="{{ route('frontend.contact') }}">Politique de confidentialité</a>
-                        <a href="{{ route('frontend.contact') }}">Conditions d'utilisation</a>
-                        <a href="{{ route('frontend.contact') }}">Contact</a>
+                        <a href="{{ route('contact') }}">Politique de confidentialité</a>
+                        <a href="{{ route('contact') }}">Conditions d'utilisation</a>
+                        <a href="{{ route('contact') }}">Contact</a>
                     </div>
                 </div>
             </div>

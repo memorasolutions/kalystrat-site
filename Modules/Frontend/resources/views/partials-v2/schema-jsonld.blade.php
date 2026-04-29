@@ -73,7 +73,7 @@
                     ],
                     "@@id": "{{ $appUrl }}/filiales/{{ $slug }}#org",
                     "name": "{{ $f['nom_complet'] }}",
-                    "url": "{{ route('frontend.filiale', $slug) }}",
+                    "url": "{{ route('kalystrat.filiale', $slug) }}",
                     "description": "{{ $f['specialite'] }}",
                     "parentOrganization": { "@@id": "{{ $appUrl }}/#organization" }
                 }@if(!$loop->last),@endif
@@ -100,7 +100,7 @@
             "name": "{{ $f['nom_complet'] }} — {{ $f['specialite'] }}",
             "serviceType": "{{ $serviceTypes[$slug] ?? 'Construction Service' }}",
             "provider": { "@@id": "{{ $appUrl }}/filiales/{{ $slug }}#org" },
-            "url": "{{ route('frontend.filiale', $slug) }}",
+            "url": "{{ route('kalystrat.filiale', $slug) }}",
             "areaServed": [
                 { "@@type": "City", "name": "Québec" },
                 { "@@type": "City", "name": "Lévis" },
@@ -112,7 +112,7 @@
             },
             "availableChannel": {
                 "@@type": "ServiceChannel",
-                "serviceUrl": "{{ route('frontend.filiale', $slug) }}",
+                "serviceUrl": "{{ route('kalystrat.filiale', $slug) }}",
                 "servicePhone": "+1-581-578-6145"
             },
             "description": "{{ implode(', ', $f['services']) }}"

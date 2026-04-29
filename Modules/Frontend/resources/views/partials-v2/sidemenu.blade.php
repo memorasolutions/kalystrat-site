@@ -7,7 +7,7 @@
 
         <div class="widget widget-about footer-widget">
             <div class="footer-logo">
-                <a href="{{ route('frontend.home') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Holding québécois en construction"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat — Holding québécois en construction"></a>
             </div>
             <p class="about-text mb-4">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction, immobilier et placement de personnel. Conçu. Réalisé. Livré.</p>
 
@@ -27,7 +27,7 @@
                 <h4 class="widget_title">Nos 6 filiales</h4>
                 <ul class="sidemenu-links">
                     @foreach($filiales_side as $slug => $f)
-                        <li><a href="{{ route('frontend.filiale', $slug) }}">{{ $f['nom_court'] }}</a></li>
+                        <li><a href="{{ route('kalystrat.filiale', $slug) }}">{{ $f['nom_court'] }}</a></li>
                     @endforeach
                 </ul>
             </div>

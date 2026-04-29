@@ -24,7 +24,7 @@
                 @endphp
                 @foreach ($filiales_portfolio as $slug => $f)
                     <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
-                        <a href="{{ route('frontend.filiale', $slug) }}" class="text-decoration-none" aria-label="Voir les chantiers à venir de {{ $f['nom_complet'] }}">
+                        <a href="{{ route('kalystrat.filiale', $slug) }}" class="text-decoration-none" aria-label="Voir les chantiers à venir de {{ $f['nom_complet'] }}">
                             <div class="p-4" style="border: 1px solid rgba(10,22,40,0.08); border-left: 4px solid {{ $f['hex_couleur'] }}; background: var(--ks-white); height: 100%;">
                                 <span class="d-inline-block px-2 py-1 mb-3" style="background: {{ $f['hex_couleur'] }}; color: var(--ks-white); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em;">{{ $f['nom_court'] }}</span>
                                 <h3 class="h5" style="color: var(--ks-navy);">{{ $f['specialite'] }}</h3>
@@ -44,7 +44,7 @@
             <div class="cta-wrap2 text-center">
                 <h2 class="title wow fadeInUp">Vous avez un projet en tête?</h2>
                 <p class="wow fadeInUp" data-wow-delay="0.1s">Contactez notre équipe dès aujourd'hui pour discuter de votre projet de construction ou de rénovation.</p>
-                <a href="{{ route('frontend.contact') }}" class="btn wow fadeInUp" data-wow-delay="0.2s">CONTACTEZ-NOUS <i class="ri-arrow-right-up-line"></i></a>
+                <a href="{{ route('contact') }}" class="btn wow fadeInUp" data-wow-delay="0.2s">CONTACTEZ-NOUS <i class="ri-arrow-right-up-line"></i></a>
             </div>
         </div>
     </section>

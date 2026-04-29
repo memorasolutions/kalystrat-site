@@ -8,7 +8,7 @@
 @include('frontend::partials-v2.breadcumb-v2', [
     'pageTitle' => 'Portfolio',
     'breadcumbItems' => [
-        ['label' => 'Accueil', 'url' => route('frontend.home')],
+        ['label' => 'Accueil', 'url' => route('index')],
         ['label' => 'Portfolio', 'url' => null]
     ]
 ])
@@ -35,10 +35,10 @@
                     <div class="portfolio-card-details">
                         <div class="media-left">
                             <span class="portfolio-card-subtitle">{{ $f['nom_court'] }}</span>
-                            <h4 class="portfolio-card-title"><a href="{{ route('frontend.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
+                            <h4 class="portfolio-card-title"><a href="{{ route('kalystrat.filiale', $slug) }}">Premiers chantiers à venir</a></h4>
                         </div>
                         <div class="btn-group">
-                            <a href="{{ route('frontend.filiale', $slug) }}" class="btn style2">Découvrir filiale <i class="ri-arrow-right-line"></i></a>
+                            <a href="{{ route('kalystrat.filiale', $slug) }}" class="btn style2">Découvrir filiale <i class="ri-arrow-right-line"></i></a>
                         </div>
                     </div>
                 </div>
@@ -52,7 +52,7 @@
     <div class="container">
         <div class="cta-wrap5" data-bg-src="{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}');">
             <h4 class="cta-title text-white">Vous avez un projet en tête ?</h4>
-            <a class="btn style4" href="{{ route('frontend.contact') }}">CONTACTEZ-NOUS <i class="ri-arrow-right-up-line"></i></a>
+            <a class="btn style4" href="{{ route('contact') }}">CONTACTEZ-NOUS <i class="ri-arrow-right-up-line"></i></a>
         </div>
     </div>
 </div>

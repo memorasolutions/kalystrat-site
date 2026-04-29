@@ -8,8 +8,8 @@
 @include('frontend::partials-v2.breadcumb-v2', [
     'pageTitle' => $filiale['nom_complet'],
     'breadcumbItems' => [
-        ['label' => 'Accueil', 'url' => route('frontend.home')],
-        ['label' => 'Nos filiales', 'url' => route('frontend.services')],
+        ['label' => 'Accueil', 'url' => route('index')],
+        ['label' => 'Nos filiales', 'url' => route('service')],
         ['label' => $filiale['nom_court'], 'url' => null]
     ]
 ])
@@ -54,7 +54,7 @@
     <div class="container">
         <div class="cta-wrap5" style="background: linear-gradient(135deg, {{ $filiale['hex_couleur'] }}d0 0%, #0A1628 100%);">
             <h4 class="cta-title text-white">Démarrez votre projet avec {{ $filiale['nom_court'] }}</h4>
-            <a class="btn style4" href="{{ route('frontend.contact') }}" style="background: {{ $filiale['hex_couleur'] }};">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
+            <a class="btn style4" href="{{ route('contact') }}" style="background: {{ $filiale['hex_couleur'] }};">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line"></i></a>
         </div>
     </div>
 </div>

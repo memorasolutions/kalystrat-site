@@ -15,8 +15,8 @@
                     <h1 class="hero-title wow fadeInUp" data-wow-delay="0.2s">Conçu. <span class="text-theme">Réalisé.</span> Livré.</h1>
                     <p class="hero-text wow fadeInUp" data-wow-delay="0.3s">Six filiales spécialisées en synergie sous une marque unifiée. De l'excavation à la finition, Kalystrat livre des projets de construction intégrés au Québec.</p>
                     <div class="btn-group wow fadeInUp" data-wow-delay="0.4s">
-                        <a href="{{ route('frontend.services') }}" class="btn" aria-label="Découvrir notre approche stratégique">DÉCOUVRIR NOTRE APPROCHE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                        <a href="{{ route('frontend.contact') }}" class="btn style2" aria-label="Nous joindre pour discuter de votre projet">NOUS JOINDRE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                        <a href="{{ route('service') }}" class="btn" aria-label="Découvrir notre approche stratégique">DÉCOUVRIR NOTRE APPROCHE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                        <a href="{{ route('contact') }}" class="btn style2" aria-label="Nous joindre pour discuter de votre projet">NOUS JOINDRE <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                 </div>
                 <p>Gestion Kalystrat Inc. est un holding québécois de construction à intégration verticale, fondé par Ali Salomon. Six filiales spécialisées opèrent en synergie, de l'excavation aux finitions, soutenues par une agence de placement de main-d'œuvre interne.</p>
                 <p>Cette intégration verticale élimine la dépendance aux sous-traitants, raccourcit les délais et garantit une qualité supérieure à chaque étape. Notre ambition : devenir un groupe intégré de référence au Québec dans 8 ans.</p>
-                <a href="{{ route('frontend.about') }}" class="link-btn" aria-label="En savoir plus sur l'approche Kalystrat">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                <a href="{{ route('kalystrat.apropos') }}" class="link-btn" aria-label="En savoir plus sur l'approche Kalystrat">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -71,7 +71,7 @@
             @endphp
             @foreach ($filiales_home as $slug => $f)
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.{{ $loop->iteration }}s">
-                    <a href="{{ route('frontend.filiale', $slug) }}" class="service-card-bento" style="--accent: {{ $f['hex_couleur'] }}; background-image: url('{{ asset($bentoBgs[$slug] ?? 'assets/img/kalystrat/hero-skyline.jpg') }}');" aria-label="Découvrir {{ $f['nom_complet'] }}">
+                    <a href="{{ route('kalystrat.filiale', $slug) }}" class="service-card-bento" style="--accent: {{ $f['hex_couleur'] }}; background-image: url('{{ asset($bentoBgs[$slug] ?? 'assets/img/kalystrat/hero-skyline.jpg') }}');" aria-label="Découvrir {{ $f['nom_complet'] }}">
                         <div>
                             <h3>{{ $f['nom_court'] }}</h3>
                             <p>{{ $f['specialite'] }}</p>
@@ -132,39 +132,39 @@
         <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#2E5266;">
           <i class="ri-building-line text-white" style="font-size:28px;" aria-hidden="true"></i>
         </div>
-        <a href="{{ route('frontend.filiale', 'immobilier') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#2E5266;">1 — Immobilier</a>
+        <a href="{{ route('kalystrat.filiale', 'immobilier') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#2E5266;">1 — Immobilier</a>
       </div>
       <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
       <div class="text-center px-2">
         <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#8B6F47;">
           <i class="ri-tools-line text-white" style="font-size:28px;" aria-hidden="true"></i>
         </div>
-        <a href="{{ route('frontend.filiale', 'fondations') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#8B6F47;">2 — Fondations</a>
+        <a href="{{ route('kalystrat.filiale', 'fondations') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#8B6F47;">2 — Fondations</a>
       </div>
       <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
       <div class="text-center px-2">
         <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#6B7B8C;">
           <i class="ri-layout-grid-line text-white" style="font-size:28px;" aria-hidden="true"></i>
         </div>
-        <a href="{{ route('frontend.filiale', 'structure') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#6B7B8C;">3 — Structure</a>
+        <a href="{{ route('kalystrat.filiale', 'structure') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#6B7B8C;">3 — Structure</a>
       </div>
       <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
       <div class="text-center px-2">
         <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#4A5D6F;">
           <i class="ri-home-2-line text-white" style="font-size:28px;" aria-hidden="true"></i>
         </div>
-        <a href="{{ route('frontend.filiale', 'toiture') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#4A5D6F;">4 — Toiture</a>
+        <a href="{{ route('kalystrat.filiale', 'toiture') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#4A5D6F;">4 — Toiture</a>
       </div>
       <i class="ri-arrow-right-line d-none d-md-block mx-2" style="font-size:24px;color:#6B7B8C;" aria-hidden="true"></i>
       <div class="text-center px-2">
         <div class="d-inline-flex align-items-center justify-content-center rounded-circle mb-2" style="width:72px;height:72px;background:#B8A472;">
           <i class="ri-paint-brush-line text-white" style="font-size:28px;" aria-hidden="true"></i>
         </div>
-        <a href="{{ route('frontend.filiale', 'finition') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#B8A472;">5 — Finition</a>
+        <a href="{{ route('kalystrat.filiale', 'finition') }}" class="d-block fw-semibold small text-uppercase text-decoration-none" style="color:#B8A472;">5 — Finition</a>
       </div>
     </div>
     <div class="mt-5 text-center py-3 px-3 wow fadeInUp" style="background:#7A6738;border-radius:4px;">
-      <a href="{{ route('frontend.filiale', 'placement') }}" class="text-white fw-bold text-uppercase small text-decoration-none" style="letter-spacing:0.1em;">
+      <a href="{{ route('kalystrat.filiale', 'placement') }}" class="text-white fw-bold text-uppercase small text-decoration-none" style="letter-spacing:0.1em;">
         <i class="ri-team-line me-2" aria-hidden="true"></i>Kalystrat Placement Construction — Main-d'œuvre interne transverse à chaque étape
       </a>
     </div>
@@ -181,8 +181,8 @@
             <h2 class="title wow fadeInUp">Un projet de construction intégré ?</h2>
             <p class="wow fadeInUp" data-wow-delay="0.1s">De l'excavation aux finitions, Kalystrat coordonne l'ensemble de votre chantier via ses six filiales spécialisées. Demandez une soumission gratuite et personnalisée.</p>
             <div class="wow fadeInUp" data-wow-delay="0.2s" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="{{ route('frontend.contact') }}" class="btn" aria-label="Demander une soumission à Kalystrat">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
-                <a href="{{ route('frontend.services') }}" class="btn style2" aria-label="Découvrir les six filiales Kalystrat">NOS 6 FILIALES <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('contact') }}" class="btn" aria-label="Demander une soumission à Kalystrat">DEMANDER UNE SOUMISSION <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('service') }}" class="btn style2" aria-label="Découvrir les six filiales Kalystrat">NOS 6 FILIALES <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

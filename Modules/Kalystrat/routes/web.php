@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Modules\Kalystrat\Http\Controllers\KalystratController;
 
-Route::middleware(['auth', 'verified'])->group(function () {
-    Route::resource('kalystrats', KalystratController::class)->names('kalystrat');
-});
+Route::get('/a-propos', [KalystratController::class, 'aPropos'])->name('kalystrat.apropos');
+Route::get('/faq', [KalystratController::class, 'faq'])->name('kalystrat.faq');
+Route::get('/filiales/{slug}', [KalystratController::class, 'filiale'])
+    ->where('slug', 'fondations|structure|toiture|finition|immobilier|placement')
+    ->name('kalystrat.filiale');

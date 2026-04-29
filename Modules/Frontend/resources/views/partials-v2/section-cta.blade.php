@@ -2,7 +2,7 @@
     $ctaTitle = $ctaTitle ?? 'Prêt à concevoir votre projet ?';
     $ctaText = $ctaText ?? 'Une question, un terrain, un projet — parlons-en.';
     $ctaButtonText = $ctaButtonText ?? 'DEMANDER UNE SOUMISSION';
-    $ctaButtonUrl = $ctaButtonUrl ?? route('frontend.contact');
+    $ctaButtonUrl = $ctaButtonUrl ?? route('contact');
 @endphp
 <section class="cta-area" style="background-color: #B8A472;">
     <div class="container">

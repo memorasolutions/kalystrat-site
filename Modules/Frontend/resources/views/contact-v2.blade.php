@@ -9,7 +9,7 @@
 @include('frontend::partials-v2.breadcumb-v2', [
     'pageTitle' => 'Nous joindre',
     'breadcumbItems' => [
-        ['label' => 'Accueil', 'url' => route('frontend.home')],
+        ['label' => 'Accueil', 'url' => route('index')],
         ['label' => 'Contact', 'url' => null]
     ]
 ])
