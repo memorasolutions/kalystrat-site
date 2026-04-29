@@ -22,3 +22,4 @@
     
     <!-- Main Js File -->
     <script src="{{ asset('themes/construz/assets/js/main.js') }}"></script>
+    <script src="{{ asset('themes/construz/assets/js/kalystrat-header.js') }}" defer></script>

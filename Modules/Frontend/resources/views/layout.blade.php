@@ -76,6 +76,9 @@
     {{-- Kalystrat custom CSS (cache-busting filemtime) --}}
     <link rel="stylesheet" href="{{ asset('assets/css/kalystrat.css') }}?v={{ @filemtime(public_path('assets/css/kalystrat.css')) ?: time() }}">
 
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (désactivable en commentant la ligne) --}}
+    <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/kalystrat/fixes.css') }}?v={{ @filemtime(public_path('themes/construz/assets/css/kalystrat/fixes.css')) ?: time() }}">
+
     {{-- Script unregister SW retiré 2026-04-26 — diagnostic confirmé CSS chargé OK --}}
 
     {{-- Schema.org JSON-LD --}}
@@ -100,7 +103,11 @@
         </div>
     </div>
 
-    {{-- Header --}}
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (utilise partial conditionnel ks-header / legacy P19)
+         Pour rétablir le header P19 inline : décommenter le bloc ci-dessous et supprimer @include. --}}
+    @include('frontend::elements.header')
+    @php $__legacy_header_disabled = true; @endphp
+    @if(false)
     <header class="nav-header header-layout1">
         <div class="header-top">
             <div class="container">
@@ -210,7 +217,7 @@
         </div>
     </header>
 
-    {{-- Mobile Menu --}}
+    {{-- Mobile Menu legacy P19 (remplacé par offcanvas dans elements.header) --}}
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
@@ -231,6 +238,7 @@
             </div>
         </div>
     </div>
+    @endif {{-- fin @if(false) du header legacy P19 --}}
 
     {{-- Breadcrumb --}}
     @hasSection('breadcrumb')
@@ -353,6 +361,9 @@
     {{-- Kalystrat UI enhancements (scroll-to-top, count-up KPI, reveal scroll) --}}
     {{-- Désactivable en commentant cette ligne, le site continue de fonctionner --}}
     <script src="{{ asset('assets/js/kalystrat-ui.js') }}?v={{ @filemtime(public_path('assets/js/kalystrat-ui.js')) ?: time() }}" defer></script>
+
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (sticky shrink + offcanvas + dropdown vanilla) --}}
+    <script src="{{ asset('themes/construz/assets/js/kalystrat-header.js') }}?v={{ @filemtime(public_path('themes/construz/assets/js/kalystrat-header.js')) ?: time() }}" defer></script>
 
     {{-- Kalystrat a11y enhancements (mobile menu inert+aria-hidden when closed) --}}
     {{-- DÉSACTIVÉ 2026-04-25 : iter3 audit a montré +2 Tab issues au lieu d'amélioration. --}}

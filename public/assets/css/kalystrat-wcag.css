@@ -39,3 +39,12 @@ textarea:focus-visible {
   white-space: nowrap;
   border: 0;
 }
+
+/* P22-S5b — Cap logo Kalystrat custom (assets/construz-new/img/logo.svg natif 400x70) à 200px max
+   Cible header zone uniquement (pas footer ni sidemenu offcanvas) */
+.menu-area .header-logo img,
+.menu-area .header-navbar-logo img,
+.header-layout1 .menu-area img[src*="construz-new/img/logo"] {
+  max-width: 200px !important;
+  height: auto !important;
+}

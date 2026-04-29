@@ -46,6 +46,9 @@
     {{-- Kalystrat overrides (charte navy/gold) --}}
     <link rel="stylesheet" href="{{ asset('assets/css/kalystrat-v2.css') }}?v={{ @filemtime(public_path('assets/css/kalystrat-v2.css')) ?: time() }}">
 
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (désactivable en commentant la ligne) --}}
+    <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/kalystrat/fixes.css') }}?v={{ @filemtime(public_path('themes/construz/assets/css/kalystrat/fixes.css')) ?: time() }}">
+
     {{-- Schema.org JSON-LD --}}
     @include('frontend::partials-v2.schema-jsonld')
 
@@ -66,7 +69,9 @@
 
     @include('frontend::partials-v2.popup-search')
     @include('frontend::partials-v2.sidemenu')
-    @include('frontend::partials-v2.header')
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (remplace partials-v2.header).
+         Pour rétablir : remplacer la ligne suivante par @include('frontend::partials-v2.header') --}}
+    @include('frontend::elements.header')
 
     <main id="main-content">
         @yield('content')
@@ -95,6 +100,9 @@
     <script src="{{ asset('assets/construz-new/js/wow.min.js') }}"></script>
     <script src="{{ asset('assets/construz-new/js/waypoints.min.js') }}"></script>
     <script src="{{ asset('assets/construz-new/js/main.js') }}"></script>
+
+    {{-- P22-S6b — Header unifié Kalystrat 2026 (sticky shrink + offcanvas + dropdown vanilla) --}}
+    <script src="{{ asset('themes/construz/assets/js/kalystrat-header.js') }}?v={{ @filemtime(public_path('themes/construz/assets/js/kalystrat-header.js')) ?: time() }}" defer></script>
 
     @stack('scripts')
 

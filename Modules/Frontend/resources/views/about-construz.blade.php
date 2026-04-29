@@ -424,10 +424,10 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcumb-content">
-                        <h1 class="breadcumb-title">About Us</h1>
+                        <h1 class="breadcumb-title">À propos</h1>
                         <ul class="breadcumb-menu">
                             <li><a href="{{ route('index') }}"><i class="ri-home-4-fill"></i> HOME</a></li>
-                            <li class="active">ABOUT US</li>
+                            <li class="active">À PROPOS</li>
                         </ul>
                     </div>
                 </div>
@@ -451,22 +451,22 @@
                             <div class="about-counter-wrap-bg"><img src="{{ asset('assets/construz-new/img/normal/about_shape_2-2.png') }}" alt="img"></div>
                             <div class="about-counter-icon"><img src="{{ asset('assets/construz-new/img/hero/hero_experience_wrap_icon_1_1.png') }}" alt="img"></div>
                             <h3 class="about-counter-number"><span class="counter-number">40</span>+</h3>
-                            <p class="about-counter-text">Business Experience</p>
+                            <p class="about-counter-text">Années d'expérience</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-xl-6">
                     <div class="title-area mb-25">
-                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">ABOUT US</span>
-                        <h2 class="sec-title">WE BUILDING EVERYTHING THAT YOU NEEDED</h2>
+                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">À PROPOS</span>
+                        <h2 class="sec-title">NOUS CONSTRUISONS TOUT CE DONT VOUS AVEZ BESOIN</h2>
                         <p class="sec-text">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.  
                         </p>
                     </div>
                     <div class="checklist mb-35">
                         <ul>
-                            <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Providing Solutions For Construction, Management
+                            <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Solutions complètes en construction et gestion
                             </li>
-                            <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Engineers design and build the structure</li>
+                            <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Ingénieurs qualifiés pour concevoir et bâtir</li>
                         </ul>
                     </div>
                     <div class="about-grid-wrap">
@@ -474,8 +474,8 @@
                             <img src="{{ asset('assets/construz-new/img/icon/about-grid-icon1-1.svg') }}" alt="img">
                         </div>
                         <div class="about-grid-details">
-                            <h4 class="title">Our Mission</h4>
-                            <p class="text">We craft unique digital experiences. With more years of expertise we design </p>
+                            <h4 class="title">Notre mission</h4>
+                            <p class="text">Excellence opérationnelle, qualité et fiabilité sur tous nos projets </p>
                         </div>
                     </div>
                     <div class="about-grid-wrap">
@@ -483,12 +483,12 @@
                             <img src="{{ asset('assets/construz-new/img/icon/about-grid-icon1-2.svg') }}" alt="img">
                         </div>
                         <div class="about-grid-details">
-                            <h4 class="title">Our Vision</h4>
-                            <p class="text">We craft unique digital experiences. With more years of expertise we design </p>
+                            <h4 class="title">Notre vision</h4>
+                            <p class="text">Excellence opérationnelle, qualité et fiabilité sur tous nos projets </p>
                         </div>
                     </div>
                     <div class="btn-group mt-60">
-                        <a href="{{ route('kalystrat.apropos') }}" class="btn style3">Explore Our Company <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="{{ route('kalystrat.apropos') }}" class="btn style3">Découvrir l'entreprise <i class="ri-arrow-right-up-line"></i></a>
                     </div>                
                 </div>
             </div>

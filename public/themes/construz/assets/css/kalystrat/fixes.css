@@ -140,3 +140,261 @@ html, body { overflow-x: hidden !important; }
     display: none;
   }
 }
+
+/* P22-S5b — Logo Kalystrat (assets/construz-new/img/logo.svg) natif 400x70 trop grand
+   Cible : header zone uniquement, pas footer ni sidemenu */
+.menu-area .header-logo img,
+.menu-area .header-navbar-logo img,
+.header-layout1 .menu-area img[src*="construz-new/img/logo"] {
+  max-width: 200px !important;
+  height: auto !important;
+}
+
+/* P22-S6 — Header unifié Kalystrat 2026 (sticky shrink-on-scroll glassmorphism)
+   Génère via qwen3-max best practices 2026 sourcees sonar-pro */
+.ks-header {
+  position: sticky;
+  top: 0;
+  height: 90px;
+  z-index: 100;
+  background-color: #ffffff;
+  transition: height 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  will-change: height, background-color;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.ks-header > .container {
+  height: 100%;
+}
+.ks-header > .container > .row {
+  height: 100%;
+}
+.ks-header.scrolled {
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+}
+.ks-header__logo-img {
+  max-width: 175px;
+  height: auto;
+  display: block;
+  transition: max-width 0.3s ease;
+}
+.ks-header.scrolled .ks-header__logo-img {
+  max-width: 140px;
+}
+.ks-header__nav-list {
+  gap: 28px;
+}
+.ks-header__nav-link {
+  color: #0a1628;
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  padding: 8px 4px;
+  position: relative;
+  transition: color 0.2s ease;
+}
+.ks-header__nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #FF5E14;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.ks-header__nav-link:hover,
+.ks-header__nav-link:focus-visible {
+  color: #FF5E14;
+}
+.ks-header__nav-link:hover::after,
+.ks-header__nav-link:focus-visible::after {
+  width: 100%;
+  left: 0;
+}
+.ks-header__nav-link:focus-visible {
+  outline: 2px solid #FF5E14;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+.ks-header__dropdown {
+  min-width: 280px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  margin-top: 8px;
+}
+.ks-header__dropdown-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  font-size: 14px;
+  color: #0a1628;
+}
+.ks-header__dropdown-item:hover,
+.ks-header__dropdown-item:focus-visible {
+  background-color: rgba(255, 94, 20, 0.08);
+  color: #FF5E14;
+}
+.ks-header__dropdown-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.ks-header__hamburger {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #0a1628;
+  background: transparent;
+}
+.ks-header__hamburger:focus-visible {
+  outline: 2px solid #FF5E14;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+@media (max-width: 991.98px) {
+  .ks-header {
+    height: 60px;
+  }
+  .ks-header.scrolled {
+    height: 50px;
+  }
+}
+.ks-header__mobile-nav {
+  margin: 0;
+  padding: 0;
+}
+.ks-header__mobile-link,
+.ks-header__mobile-sublink {
+  display: block;
+  padding: 14px 16px;
+  color: #0a1628;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 8px;
+  min-height: 44px;
+}
+.ks-header__mobile-link:hover,
+.ks-header__mobile-link:focus-visible,
+.ks-header__mobile-sublink:hover,
+.ks-header__mobile-sublink:focus-visible {
+  background-color: rgba(255, 94, 20, 0.08);
+  color: #FF5E14;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ks-header,
+  .ks-header__logo-img,
+  .ks-header__nav-link::after {
+    transition: none;
+  }
+}
+
+/* P22-S6 — Fix offcanvas mobile : Bootstrap 5.0.0-beta1 N'A PAS Offcanvas JS
+   → polyfill vanilla dans kalystrat-header.js. CSS définit l'animation. */
+.offcanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 85vw;
+  background-color: #fff;
+  z-index: 1045;
+  visibility: hidden;
+  transition: transform 0.3s ease, visibility 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.offcanvas-end {
+  right: 0;
+  transform: translateX(100%);
+  border-left: 1px solid rgba(0,0,0,0.1);
+}
+.offcanvas.show {
+  visibility: visible;
+  transform: translateX(0);
+}
+.offcanvas-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid rgba(0,0,0,0.08);
+}
+.offcanvas-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px 12px;
+}
+.btn-close {
+  width: 32px;
+  height: 32px;
+  border: 0;
+  background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230a1628'%3e%3cpath d='M.293.293a1 1 0 011.414 0L8 6.586 14.293.293a1 1 0 111.414 1.414L9.414 8l6.293 6.293a1 1 0 01-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 01-1.414-1.414L6.586 8 .293 1.707a1 1 0 010-1.414z'/%3e%3c/svg%3e") center/14px no-repeat;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.btn-close:focus-visible {
+  outline: 2px solid #FF5E14;
+  outline-offset: 2px;
+}
+.ks-offcanvas-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1040;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.ks-offcanvas-backdrop.show {
+  opacity: 1;
+}
+body.ks-offcanvas-open {
+  overflow: hidden;
+}
+
+/* P22-S6 — Dropdown filiales : Bootstrap 5.0.0-beta1 N'A PAS Dropdown JS robuste
+   → polyfill vanilla. CSS = visibilité conditionnelle. */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  list-style: none;
+  margin: 0;
+}
+.dropdown-menu.show {
+  display: block;
+}
+.has-dropdown {
+  position: relative;
+}
+
+/* Collapse mobile (sous-menu filiales dans offcanvas) */
+.collapse:not(.show) {
+  display: none;
+}
+.collapse.show {
+  display: block;
+}
+
+/* P22-S6 — Masque widget legacy Construz (.navbar-right-desc) sur pages Kalystrat
+   pour éviter la bande orange qui dépasse à droite quand le header unifié est actif. */
+body:has(#kalystrat-header) .navbar-right-desc {
+  display: none !important;
+}
