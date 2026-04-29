@@ -23,7 +23,7 @@
                             <div class="header-links ps-0">
                                 <ul>
                                     <li><i class="ri-time-line"></i>Mon - Sat / 8am : 12pm</li>
-                                    <li><i class="ri-map-pin-line"></i><a href="https://www.google.com/maps">96 Jones Street, New York, USA</a></li>
+                                    <li><i class="ri-map-pin-line"></i><a href="https://www.google.com/maps">Québec, QC, Canada</a></li>
                                 </ul>
                             </div>
                         </div>

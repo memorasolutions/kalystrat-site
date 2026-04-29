@@ -627,7 +627,7 @@
                                         <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                         <div class="testi-card-profile">
                                             <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                            <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                            <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                         </div>
                                     </div>                        
                                 </div>
@@ -645,7 +645,7 @@
                                         <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                         <div class="testi-card-profile">
                                             <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                            <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                            <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                         </div>
                                     </div>                        
                                 </div>
@@ -663,7 +663,7 @@
                                         <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                         <div class="testi-card-profile">
                                             <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                            <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                            <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                         </div>
                                     </div>                        
                                 </div>
@@ -1309,7 +1309,7 @@
                     <div class="col-md-6 col-xl-4">
                         <div class="widget widget-about footer-widget">
                             <div class="footer-logo">
-                                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Construz"></a>
+                                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Kalystrat"></a>
                             </div>
                             <p class="about-text">Holisticly underwhelm ethical solutions whereas maintainable strategic theme areas. Uniquely optimize quality interface before resource.</p>
                             <h4 class="about-year">Since 2000</h4>
@@ -1366,7 +1366,7 @@
         <div class="copyright-wrap">
             <div class="container">
                 <div class="row gy-3 justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2025 <a href="#">Construz</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Gestion Kalystrat Inc.</a>  |  All rights reserved</p></div>
                 </div>                
             </div>
         </div>

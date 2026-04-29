@@ -74,7 +74,7 @@
         <h1 class="error-title">Page Not Found</h1>
         <p class="error-message">The page you're looking for doesn't exist or has been moved.</p>
         <a href="{{ url('/') }}" class="home-link">Go Back Home</a>
-        <div class="company-name">Construz - Construction & Architecture</div>
+        <div class="company-name">Kalystrat - Construction & Architecture</div>
     </div>
 </body>
 </html>

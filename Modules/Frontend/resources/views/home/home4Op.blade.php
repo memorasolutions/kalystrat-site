@@ -25,7 +25,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Construz"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -929,7 +929,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -947,7 +947,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -965,7 +965,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -1320,7 +1320,7 @@
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
                             <h3 class="widget_title">Office Address</h3>
-                            <p class="contact-text">Losangle, Street Road 24, New York, USA - 67452</p>
+                            <p class="contact-text">Québec, QC, Canada</p>
                             <h3 class="widget_title">Email Address</h3> 
                             <p class="text-white footer-text">Get in Touch !</p>   
                             <p class="footer-text"><a href="mailto:info@construz.example">info@construz.example</a></p>
@@ -1350,7 +1350,7 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2025 <a href="#">Construz</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Gestion Kalystrat Inc.</a>  |  All rights reserved</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
                             <a href="{{ route('contact') }}">Terms & Condition</a>

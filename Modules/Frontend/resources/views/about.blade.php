@@ -409,7 +409,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -427,7 +427,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -445,7 +445,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>

@@ -10,7 +10,7 @@
                 <p class="footer-text">
                     <a href="tel:851555961658"><i class="ri-phone-line me-2"></i>+85 155 596 1658</a>
                 </p>
-                <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Losangle, Street Road 24, New York, USA - 67452</p>
+                <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Québec, QC, Canada</p>
                 <p class="footer-text"><a href="mailto:info@construz.example"><i class="ri-mail-line me-2"></i>info@construz.example</a></p>
                 <div class="social-btn style3 mt-30">
                     <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>

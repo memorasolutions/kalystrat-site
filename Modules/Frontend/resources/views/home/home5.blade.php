@@ -26,7 +26,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Construz"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -1434,7 +1434,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Construz"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
                     <p class="subscribe-box_text">Subscribe for the latest news. Stay updated on the latest trends.</p>
@@ -1479,7 +1479,7 @@
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
                             <h3 class="widget_title">Office Address</h3>
-                            <p class="contact-text">Losangle, Street Road 24, New York, USA - 67452</p>
+                            <p class="contact-text">Québec, QC, Canada</p>
                             <h3 class="widget_title">Email Address</h3> 
                             <p class="text-white footer-text">Get in Touch !</p>   
                             <p class="footer-text"><a href="mailto:info@construz.example">info@construz.example</a></p>
@@ -1509,7 +1509,7 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2025 <a href="#">Construz</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Gestion Kalystrat Inc.</a>  |  All rights reserved</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
                             <a href="{{ route('contact') }}">Terms & Condition</a>

@@ -1,9 +1,9 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ config('app.name') }} - Construction & Architecture Laravel Template</title>
-    <meta name="description" content="{{ config('app.name') }} - Construction & Architecture Laravel Website">
-    <meta name="keywords" content="{{ config('app.name') }}, Construction, Architecture, Laravel, Template">
+    <title>{{ config('app.name') }} - Holding de construction québécois à intégration verticale</title>
+    <meta name="description" content="Gestion Kalystrat Inc. - Holding québécois de construction regroupant 6 filiales spécialisées : Fondations, Structure, Toiture, Finition, Immobilier et Placement Construction.">
+    <meta name="keywords" content="Kalystrat, construction Québec, holding construction, fondations, charpente, toiture, finition intérieure, immobilier, placement construction">
     <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->

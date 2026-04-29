@@ -1,7 +1,7 @@
 <div class="mobile-menu-wrapper">
     <div class="mobile-menu-area">
         <div class="mobile-logo">
-            <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Construz"></a>
+            <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Kalystrat"></a>
             <button class="menu-toggle"><i class="ri-close-line"></i></button>
         </div>
         <div class="mobile-menu">

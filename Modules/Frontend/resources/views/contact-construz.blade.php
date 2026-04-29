@@ -89,7 +89,7 @@
                 <p class="footer-text">
                     <a href="tel:+15815786145"><i class="ri-phone-line me-2"></i>1-581-578-6145</a>
                 </p>
-                <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Losangle, Street Road 24, New York, USA - 67452</p>
+                <p class="contact-text"><i class="ri-map-pin-line me-2"></i> Québec, QC, Canada</p>
                 <p class="footer-text"><a href="mailto:info@kalystrat.ca"><i class="ri-mail-line me-2"></i>info@kalystrat.ca</a></p>
                 <div class="social-btn style3 mt-30">
                     <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
@@ -610,7 +610,7 @@
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
                             <h3 class="widget_title">Adresse</h3>
-                            <p class="contact-text">Losangle, Street Road 24, New York, USA - 67452</p>
+                            <p class="contact-text">Québec, QC, Canada</p>
                             <h3 class="widget_title">Courriel</h3> 
                             <p class="text-white footer-text">Une question ?</p>   
                             <p class="footer-text"><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>

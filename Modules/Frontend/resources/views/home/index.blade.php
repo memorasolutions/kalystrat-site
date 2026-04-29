@@ -25,7 +25,7 @@
     <div class="mobile-menu-wrapper">
         <div class="mobile-menu-area">
             <div class="mobile-logo">
-                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Construz"></a>
+                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Kalystrat"></a>
                 <button class="menu-toggle"><i class="ri-close-line"></i></button>
             </div>
             <div class="mobile-menu">
@@ -818,7 +818,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -836,7 +836,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -854,7 +854,7 @@
                                     <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
                                     <div class="testi-card-profile">
                                         <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Construz</span>                                                                       
+                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>

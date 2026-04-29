@@ -100,7 +100,7 @@
                                         </div>
                                         <div class="education-card-details">
                                             <h4 class="education-card-title">Experience Employee</h4>
-                                            <p class="education-card-text">2015 - 2021 <span class="text-theme">Construz</span></p>
+                                            <p class="education-card-text">2015 - 2021 <span class="text-theme">Kalystrat</span></p>
                                         </div>
                                     </div>
                                     <div class="education-card">
@@ -109,7 +109,7 @@
                                         </div>
                                         <div class="education-card-details">
                                             <h4 class="education-card-title">Finance Manager</h4>
-                                            <p class="education-card-text">2014 - 2010 <span class="text-theme">Construz</span></p>
+                                            <p class="education-card-text">2014 - 2010 <span class="text-theme">Kalystrat</span></p>
                                         </div>
                                     </div>
                                     <div class="education-card">
