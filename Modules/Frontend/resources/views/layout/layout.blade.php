@@ -1,9 +1,12 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="fr-CA">
 
     @include('frontend::elements.head')
 
 <body>
+
+    {{-- Skip link WCAG 2.4.1 --}}
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Aller au contenu principal</a>
 
     @include('frontend::elements.preloader')
 
@@ -27,7 +30,9 @@
         @include('frontend::elements.breadcrumb')
     @endif
 
+    <main id="main-content" role="main" tabindex="-1">
         @yield('content')
+    </main>
 
     @if(!isset($footer))
         @include('frontend::elements.footer')

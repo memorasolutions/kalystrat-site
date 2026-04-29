@@ -1,9 +1,13 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="fr-CA">
 
     @include('frontend::elements.head')
 
 <body>
+
+    {{-- Skip link WCAG 2.4.1 --}}
+    <a href="#main-content" class="skip-link visually-hidden-focusable">Aller au contenu principal</a>
+
     <!--********************************
     Code Start From Here
 	******************************** -->
@@ -133,6 +137,8 @@
 	Header Area
     ==============================-->
     @include('frontend::elements.header')
+
+    <main id="main-content" role="main" tabindex="-1">
 
     <!--==============================
     Hero Area
@@ -438,12 +444,14 @@
                             <div class="row gy-15">
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" id="name" placeholder="Full Name">
+                                        <label for="name" class="visually-hidden">Nom complet</label>
+                                        <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet" autocomplete="name" aria-label="Nom complet" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                        <label for="email" class="visually-hidden">Courriel</label>
+                                        <input type="email" class="form-control" name="email" id="email" placeholder="Courriel" autocomplete="email" aria-label="Courriel" required>
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -1198,7 +1206,8 @@
                 
             </div>
         </div>
-    </section>   
+    </section>
+    </main>
 
     <!--==============================
     Footer Area

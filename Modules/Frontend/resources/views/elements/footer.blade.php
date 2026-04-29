@@ -64,10 +64,10 @@
                             </p>
                             <h3 class="widget_title">Follow Us</h3>
                             <div class="social-btn style2">
-                                <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
-                                <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
-                                <a href="https://facebook.com/"><i class="ri-facebook-fill"></i></a>
-                                <a href="https://linkedin.com/"><i class="ri-linkedin-fill"></i></a>
+                                <a href="https://www.twitter.com/" aria-label="Suivez Kalystrat sur X" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-line" aria-hidden="true"></i></a>
+                                <a href="https://instagram.com/" aria-label="Suivez Kalystrat sur Instagram" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line" aria-hidden="true"></i></a>
+                                <a href="https://facebook.com/" aria-label="Suivez Kalystrat sur Facebook" target="_blank" rel="noopener noreferrer"><i class="ri-facebook-fill" aria-hidden="true"></i></a>
+                                <a href="https://linkedin.com/" aria-label="Suivez Kalystrat sur LinkedIn" target="_blank" rel="noopener noreferrer"><i class="ri-linkedin-fill" aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </div>                    
