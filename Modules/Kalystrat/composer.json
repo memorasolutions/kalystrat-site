@@ -1,0 +1,30 @@
+{
+    "name": "nwidart/kalystrat",
+    "description": "",
+    "authors": [
+        {
+            "name": "Nicolas Widart",
+            "email": "n.widart@gmail.com"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Kalystrat\\": "app/",
+            "Modules\\Kalystrat\\Database\\Factories\\": "database/factories/",
+            "Modules\\Kalystrat\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Modules\\Kalystrat\\Tests\\": "tests/"
+        }
+    }
+}

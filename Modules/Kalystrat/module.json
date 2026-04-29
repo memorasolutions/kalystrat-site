@@ -1,0 +1,11 @@
+{
+    "name": "Kalystrat",
+    "alias": "kalystrat",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\Kalystrat\\Providers\\KalystratServiceProvider"
+    ],
+    "files": []
+}

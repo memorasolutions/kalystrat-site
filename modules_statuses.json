@@ -38,5 +38,6 @@
     "Widget": true,
     "Privacy": true,
     "ErrorMonitoring": true,
-    "Frontend": true
+    "Frontend": true,
+    "Kalystrat": true
 }

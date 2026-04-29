@@ -14,7 +14,7 @@ class GenerateSitemapCommand extends Command
     public function handle(): int
     {
         $baseUrl = 'https://kalystrat.ca';
-        $filiales = require module_path('Frontend', 'config/filiales.php');
+        $filiales = config('kalystrat.filiales', []);
         $today = now()->toDateString();
 
         $urls = [
