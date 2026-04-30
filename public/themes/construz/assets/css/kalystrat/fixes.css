@@ -454,3 +454,15 @@ body:has(#kalystrat-header) .navbar-right-desc {
 /* P22-S7 [C] Trust badges hover orange Kalystrat */
 .ks-trust-badge { transition: border-color 0.2s ease, transform 0.2s ease; }
 .ks-trust-badge:hover, .ks-trust-badge:focus-within { border-color: #FF5E14 !important; transform: translateY(-2px); }
+
+/* P22-S9 [H] Fix sidemenu CLS x=2410 - use transform compositor au lieu de right (pas de layout shift). Désactivable en supprimant ce bloc. */
+.sidemenu-wrapper { overflow-x: hidden !important; }
+.sidemenu-wrapper .sidemenu-content {
+  right: 0 !important;
+  transform: translateX(100%);
+  transition: transform ease 0.4s !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .sidemenu-wrapper .sidemenu-content { transition: none !important; }
+}
+.sidemenu-wrapper.show .sidemenu-content { transform: translateX(0); }
