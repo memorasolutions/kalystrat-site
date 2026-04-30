@@ -1,9 +1,25 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>{{ config('app.name') }} - Holding de construction québécois à intégration verticale</title>
-    <meta name="description" content="Gestion Kalystrat Inc. - Holding québécois de construction regroupant 6 filiales spécialisées : Fondations, Structure, Toiture, Finition, Immobilier et Placement Construction.">
+    {{-- P22-S20e SEO/AEO/GEO 2026 : meta dynamiques, OG, Twitter, canonical, geo tags. Désactivable en revertant ce bloc. --}}
+    @php
+        $ksDefaultTitle = 'Kalystrat - Holding de construction québécois à intégration verticale';
+        $ksDefaultDesc = "Gestion Kalystrat Inc. - Holding québécois de construction regroupant 6 filiales spécialisées : Fondations, Structure, Toiture, Finition, Immobilier et Placement Construction.";
+        $ksTitle = isset($title) ? $title.' | Kalystrat' : $ksDefaultTitle;
+        $ksDesc = $metaDescription ?? $ksDefaultDesc;
+        $ksImage = $ogImage ?? asset('assets/img/kalystrat/logo-header.svg');
+        $ksUrl = url()->current();
+    @endphp
+    <title>{{ $ksTitle }}</title>
+    <meta name="description" content="{{ $ksDesc }}">
+    <link rel="canonical" href="{{ $ksUrl }}">
+    <link rel="alternate" hreflang="fr-CA" href="{{ $ksUrl }}">
     <meta name="keywords" content="Kalystrat, construction Québec, holding construction, fondations, charpente, toiture, finition intérieure, immobilier, placement construction">
+    <meta name="author" content="Gestion Kalystrat Inc.">
+    <meta name="geo.region" content="CA-QC">
+    <meta name="geo.placename" content="Québec">
+    <meta name="geo.position" content="46.8139;-71.2080">
+    <meta name="ICBM" content="46.8139, -71.2080">
     <meta name="robots" content="INDEX,FOLLOW">
 
     <!-- Mobile Specific Metas -->
@@ -20,6 +36,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+
+    {{-- P22-S20e Open Graph (Facebook, LinkedIn, etc.) --}}
+    <meta property="og:type" content="{{ $ogType ?? 'website' }}">
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:site_name" content="Kalystrat">
+    <meta property="og:title" content="{{ $ogTitle ?? $ksTitle }}">
+    <meta property="og:description" content="{{ $ksDesc }}">
+    <meta property="og:url" content="{{ $ksUrl }}">
+    <meta property="og:image" content="{{ $ksImage }}">
+    <meta property="og:image:alt" content="Logo Kalystrat">
+
+    {{-- P22-S20e Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ $ogTitle ?? $ksTitle }}">
+    <meta name="twitter:description" content="{{ $ksDesc }}">
+    <meta name="twitter:image" content="{{ $ksImage }}">
 
     <!--==============================
 	All CSS File
@@ -44,4 +76,7 @@
 
     {{-- P22-S8 [G] Schema.org JSON-LD (Organization + 6 Subsidiary + LocalBusiness + WebSite). Désactivable. --}}
     @include('frontend::partials.schema-jsonld')
+
+    {{-- P22-S20e BreadcrumbList JSON-LD (auto-construit depuis $title). --}}
+    @include('frontend::partials.breadcrumb-jsonld')
 </head>

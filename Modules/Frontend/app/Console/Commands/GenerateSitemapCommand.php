@@ -20,8 +20,9 @@ class GenerateSitemapCommand extends Command
         $urls = [
             ['loc' => '/', 'priority' => '1.0', 'changefreq' => 'weekly'],
             ['loc' => '/a-propos', 'priority' => '0.8', 'changefreq' => 'monthly'],
-            ['loc' => '/services', 'priority' => '0.9', 'changefreq' => 'monthly'],
-            ['loc' => '/portfolio', 'priority' => '0.7', 'changefreq' => 'monthly'],
+            ['loc' => '/service', 'priority' => '0.9', 'changefreq' => 'monthly'],
+            ['loc' => '/project', 'priority' => '0.7', 'changefreq' => 'monthly'],
+            ['loc' => '/carrieres', 'priority' => '0.8', 'changefreq' => 'weekly'],
             ['loc' => '/contact', 'priority' => '0.6', 'changefreq' => 'yearly'],
             ['loc' => '/faq', 'priority' => '0.7', 'changefreq' => 'monthly'],
         ];

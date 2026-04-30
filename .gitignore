@@ -62,3 +62,16 @@ csrf*
 # Backups locaux et plan d'affaires (hors repo)
 .backups/
 .plan_affaire/
+
+# Charte graphique source (volumineuse, brouillon)
+.charte_graphique/
+
+# Fichiers backup locaux (.bak, .bak2, .bak.YYYY-MM-DD, .bak-p22s13)
+*.bak
+*.bak[0-9]*
+*.bak.*
+*.bak-*
+
+# Vues compilées Laravel (regenerees auto)
+storage/framework/views/*.php
+storage/framework/testing/

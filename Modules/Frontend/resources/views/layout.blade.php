@@ -20,6 +20,20 @@
 
     {{-- Canonical --}}
     <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="alternate" hreflang="fr-CA" href="{{ url()->current() }}">
+
+    {{-- P22-S20e Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="@yield('og_title', 'Kalystrat - Investissement stratégique et développement')">
+    <meta name="twitter:description" content="@yield('meta_description', 'Kalystrat développe et gère des actifs stratégiques à Québec. Investissement immobilier, développement et gestion avec vision à long terme.')">
+    <meta name="twitter:image" content="@yield('og_image', asset('assets/img/kalystrat/og-image.jpg'))">
+
+    {{-- P22-S20e AEO/GEO meta --}}
+    <meta name="author" content="Gestion Kalystrat Inc.">
+    <meta name="geo.region" content="CA-QC">
+    <meta name="geo.placename" content="Québec">
+    <meta name="geo.position" content="46.8139;-71.2080">
+    <meta name="ICBM" content="46.8139, -71.2080">
 
     {{-- Favicon --}}
     <link rel="icon" type="image/svg+xml" href="{{ asset('assets/img/kalystrat/favicon.svg') }}">
@@ -83,6 +97,9 @@
 
     {{-- Schema.org JSON-LD --}}
     @include('frontend::partials.schema-jsonld')
+
+    {{-- P22-S20e BreadcrumbList JSON-LD --}}
+    @include('frontend::partials.breadcrumb-jsonld')
 
     @stack('styles')
 </head>
