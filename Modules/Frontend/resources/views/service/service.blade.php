@@ -1,486 +1,117 @@
 @extends('frontend::layout.layout')
 
 @php
-    $title='Our Services';
-    $subTitle='Our Services';
+    $title='Nos services';
+    $subTitle='Nos services';
 @endphp
 
 @section('content')
+<div class="container py-5">
+    {{-- P22-S20b Hub services Kalystrat. Désactivable en revertant ce fichier vers la version Construz originale (git checkout). --}}
 
-    <!--==============================
-    Service Area 01  
-    ==============================-->
-    <div class="service-area-4 space-top overflow-hidden">
-        <div class="container">
-            <div class="row gy-30 gx-30">
-                <div class="col-xl-4 col-md-6">
-                    <div class="title-area mb-0 text-md-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> What We Do</span>
-                        <h2 class="sec-title">Our services that we provide</h2>
-                        <p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
-                    </div>
+    <header class="text-center mb-5" role="region" aria-labelledby="services-hero-title">
+        <h1 id="services-hero-title" class="display-4 fw-bold text-primary">Nos services intégrés</h1>
+        <p class="lead text-muted mt-3">Six filiales spécialisées qui couvrent toute la chaîne de construction, du concept aux clés en main.</p>
+    </header>
+
+    <section class="mb-5" role="region" aria-labelledby="overview-title">
+        <h2 id="overview-title" class="h3 fw-bold mb-4 text-primary">Vue d'ensemble</h2>
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 bg-light rounded text-center h-100">
+                    <p class="display-6 fw-bold text-primary mb-1">6</p>
+                    <p class="mb-0">filiales spécialisées</p>
                 </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card style3">
-                        <div class="service-card-shadow-text">
-                            SERVICES - 01
-                        </div>
-                        <div class="service-card_content">
-                            <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-1.png') }}" alt="img">
-                            </div>
-                            <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">General construction</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
-                            <div class="btn-wrap">
-                                <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 bg-light rounded text-center h-100">
+                    <p class="display-6 fw-bold text-primary mb-1">100&nbsp;%</p>
+                    <p class="mb-0">intégration verticale</p>
                 </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card style3">
-                        <div class="service-card-shadow-text">
-                            SERVICES - 02
-                        </div>
-                        <div class="service-card_content">
-                            <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-2.png') }}" alt="img">
-                            </div>
-                            <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Property maintenance</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
-                            <div class="btn-wrap">
-                                <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 bg-light rounded text-center h-100">
+                    <p class="display-6 fw-bold text-primary mb-1">1</p>
+                    <p class="mb-0">équipe centralisée</p>
                 </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card style3">
-                        <div class="service-card-shadow-text">
-                            SERVICES - 03
-                        </div>
-                        <div class="service-card_content">
-                            <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-3.png') }}" alt="img">
-                            </div>
-                            <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Project management</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
-                            <div class="btn-wrap">
-                                <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card style3">
-                        <div class="service-card-shadow-text">
-                            SERVICES - 04
-                        </div>
-                        <div class="service-card_content">
-                            <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-4.png') }}" alt="img">
-                            </div>
-                            <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Virtual design & build</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
-                            <div class="btn-wrap">
-                                <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-4 col-md-6">
-                    <div class="service-card style3">
-                        <div class="service-card-shadow-text">
-                            SERVICES - 05
-                        </div>
-                        <div class="service-card_content">
-                            <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-5.png') }}" alt="img">
-                            </div>
-                            <h4 class="service-card_title h5"><a href="{{ route('serviceDetails') }}">Proconstruction</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
-                            <div class="btn-wrap">
-                                <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="p-4 bg-light rounded text-center h-100">
+                    <p class="display-6 fw-bold text-primary mb-1">59 864</p>
+                    <p class="mb-0">mises en chantier (QC, 2025)</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!--==============================
-    Process Area  
-    ==============================-->
-    <section class="process-area-2 space overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-between align-items-center gy-40">
-                <div class="col-lg-6">
-                    <div class="title-area text-md-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Our Benefits</span>
-                        <h2 class="sec-title">Why choose us</h2>
-                    </div>
-                    <div class="process-thumb2-1">
-                        <img src="{{ asset('themes/construz/assets/img/normal/process-thumb2-1.png') }}" alt="img">
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="process-grid-list style2">
-                        <div class="process-grid-list-bg-text">
-                            BENEFIT
+    <section class="mb-5" role="region" aria-labelledby="filiales-title">
+        <h2 id="filiales-title" class="h3 fw-bold mb-4 text-primary">Nos 6 filiales</h2>
+        <div class="row g-4">
+            @foreach(config('kalystrat.filiales', []) as $slug => $filiale)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-header d-flex align-items-center" style="background-color: {{ $filiale['hex_couleur'] ?? '#0A1628' }};">
+                            <span class="dot me-2" aria-hidden="true" style="display: inline-block; width: 12px; height: 12px; background-color: #FF5E14; border-radius: 50%;"></span>
+                            <h3 class="h5 text-white mb-0">{{ $filiale['nom_court'] ?? $slug }}</h3>
                         </div>
-                        <div class="process-grid">
-                            <div class="process-grid-number">01</div>
-                            <div class="process-grid-details">
-                                <h3 class="process-grid-title">Advanced Technology </h3>
-                                <p class="process-grid-text">We craft unique digital experiences. With more years of expertise we design </p>
-                            </div>
+                        <div class="card-body">
+                            <p class="text-muted small mb-3">{{ $filiale['specialite'] ?? '' }}</p>
+                            <ul class="list-unstyled">
+                                @foreach(($filiale['services'] ?? []) as $service)
+                                    <li class="mb-1"><i class="ri-check-line text-primary me-1" aria-hidden="true"></i>{{ $service }}</li>
+                                @endforeach
+                            </ul>
                         </div>
-                        <div class="process-grid">
-                            <div class="process-grid-number">02</div>
-                            <div class="process-grid-details">
-                                <h3 class="process-grid-title">Trusted Company </h3>
-                                <p class="process-grid-text">We craft unique digital experiences. With more years of expertise we design </p>
-                            </div>
-                        </div>
-                        <div class="process-grid">
-                            <div class="process-grid-number">03</div>
-                            <div class="process-grid-details">
-                                <h3 class="process-grid-title">Professional Teams </h3>
-                                <p class="process-grid-text">We craft unique digital experiences. With more years of expertise we design </p>
-                            </div>
-                        </div>
-                        <div class="process-grid">
-                            <div class="process-grid-number">04</div>
-                            <div class="process-grid-details">
-                                <h3 class="process-grid-title">Stylistic formula method</h3>
-                                <p class="process-grid-text">We craft unique digital experiences. With more years of expertise we design </p>
-                            </div>
+                        <div class="card-footer bg-white border-0">
+                            <a href="{{ route('kalystrat.filiale', ['slug' => $slug]) }}" class="btn btn-outline-primary btn-sm" aria-label="En savoir plus sur {{ $filiale['nom_court'] ?? $slug }}">
+                                Détails <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
-            
+            @endforeach
         </div>
-    </section> 
+    </section>
 
-    <!--==============================
-    Testimonial Area  
-    ==============================-->
-    <div class="testimonial-area-3 overflow-hidden">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-lg-7">
-                    <div class="title-area text-lg-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> Testimonials</span>
-                        <h2 class="sec-title">What client saying about us</h2>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="sec-btn btn-wrap">
-                        <div class="client-group-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/normal/client_group_1-2.png') }}" alt="img">
-                        </div>
-                        <div class="testi-counter-wrap">
-                            <h3 class="testi-counter-number"><span class="counter-number">2</span>m+</h3>
-                            <p class="testi-counter-text">Success Peoples</p>                            
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row global-carousel testi-slider3 slider-shadow" data-slide-show="3" data-lg-slide-show="2" data-dots="true" data-xl-dots="true" data-ml-dots="true" data-center-mode="true" data-xl-center-mode="true" data-ml-center-mode="true">
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_2.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Best Construction!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
+    <section class="mb-5" role="region" aria-labelledby="why-choose-title">
+        <h2 id="why-choose-title" class="h3 fw-bold mb-4 text-primary">Pourquoi choisir Kalystrat</h2>
+        <div class="row g-4">
+            @php
+                $piliers = [
+                    ['titre' => 'Intégration verticale complète', 'desc' => "De l'excavation à la finition, tout en interne. Aucun sous-traitant inconnu."],
+                    ['titre' => "Main-d'œuvre interne CCQ", 'desc' => 'Filiale Placement Construction garantit la disponibilité et la cohérence de formation.'],
+                    ['titre' => 'Demande captive', 'desc' => 'Kalystrat Immobilier développe ses propres projets, alimentant les 5 autres filiales.'],
+                    ['titre' => 'Synergies opérationnelles', 'desc' => 'Chaîne complète en boucle : aucun délai de coordination entre étapes.'],
+                    ['titre' => 'Marque unifiée Kalystrat', 'desc' => 'Convention « Kalystrat + Spécialité » : reconnaissance et confiance B2B Québec.'],
+                    ['titre' => 'Gestion centralisée', 'desc' => 'Comptabilité, RH, juridique, marketing, TI mutualisés à la holding.'],
+                ];
+            @endphp
+            @foreach($piliers as $p)
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="me-3 flex-shrink-0" style="width: 44px; height: 44px; background-color: #FF5E14; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                    <i class="ri-check-line text-white" aria-hidden="true" style="font-size: 1.25rem;"></i>
                                 </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Joshua Pul</h4>
-                                <span class="testi-profile-desig">/ CEO Industry</span>                                                                       
+                                <div>
+                                    <h3 class="h6 fw-bold mb-1">{{ $p['titre'] }}</h3>
+                                    <p class="text-muted small mb-0">{{ $p['desc'] }}</p>
+                                </div>
                             </div>
-                        </div>                        
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_3.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Good Services!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Aya Nikola</h4>
-                                <span class="testi-profile-desig">/ Sr. Manager</span>                                                                       
-                            </div>
-                        </div>  
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
-                        </div>                      
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_1.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Best Company!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Christopher</h4>
-                                <span class="testi-profile-desig">/ Engineer</span>                                                                       
-                            </div>
-                        </div>  
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
-                        </div>                      
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_2.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Best Construction!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Joshua Pul</h4>
-                                <span class="testi-profile-desig">/ CEO Industry</span>                                                                       
-                            </div>
-                        </div>                        
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_3.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Good Services!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Aya Nikola</h4>
-                                <span class="testi-profile-desig">/ Sr. Manager</span>                                                                       
-                            </div>
-                        </div>  
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
-                        </div>                      
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="testi-card style3">
-                        <div class="testi-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/testimonial/testi_2_1.png') }}" alt="img">
-                            <div class="media-body">
-                                <h4 class="testi-card_title">Best Company!</h4>
-                                <div class="testi-card_review">
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                    <i class="ri-star-fill"></i>
-                                </div>
-                            </div>                                       
-                        </div>  
-                        <div class="testi-card_content">
-                            <p class="testi-card_text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean.</p>
-                            <div class="testi-card-profile">
-                                <h4 class="testi-profile-title">Christopher</h4>
-                                <span class="testi-profile-desig">/ Engineer</span>                                                                       
-                            </div>
-                        </div>  
-                        <div class="quote-icon">
-                            <img src="{{ asset('themes/construz/assets/img/icon/quote3.svg') }}" alt="img">
-                        </div>                      
-                    </div>
-                </div>
-            </div>         
+            @endforeach
         </div>
-    </div>
+    </section>
 
-    <!--==============================
-    Client Area  
-    ==============================-->
-    <div class="client-area-2 text-center space overflow-hidden">
-        <div class="container">
-            <div class="row global-carousel client-slider2" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-1.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-2.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-3.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-4.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-5.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-1.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-2.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-3.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-4.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-2-5.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-    <!--==============================
-    Contact Area  
-    ==============================-->
-    <section class="contact-area-2 space-bottom overflow-hidden">        
-        <div class="container">
-            <div class="contact-wrap2 space overflow-hidden" data-bg-src="{{ asset('themes/construz/assets/img/bg/contact-bg3-1.png') }}">
-                <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-left="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
-                </div>
-                <div class="row gy-60 justify-content-lg-end justify-content-center">
-                    <div class="col-xl-7">
-                        <div class="contact-form-wrap">
-                            <div class="title-area">
-                                <span class="sub-title text-theme">Get Free Quote <i class="ri-arrow-right-down-line"></i></span>
-                                <h2 class="sec-title">Have a project in mind?</h2>
-                            </div>
-                            <form action="mail.php" method="POST" class="contact-form ajax-contact">
-                                <div class="row gy-4">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <select name="subject" id="subject" class="single-select nice-select form-select">
-                                                <option value="" disabled selected hidden>Your Inquiry</option>
-                                                <option value="Web Design">Web Design</option>
-                                                <option value="Web Development">Web Development</option>
-                                                <option value="Engine Diagnostics">Engine Diagnostics</option>
-                                                <option value="Digital Marketing">Digital Marketing</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="col-12">
-                                        <div class="form-group ">
-                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message..."></textarea>
-                                        </div>
-                                    </div>
-                                    <div class="form-btn col-12">
-                                        <button class="btn w-100">Submit Now <i class="ri-arrow-right-up-line"></i></button>
-                                    </div>
-                                </div>
-                                <p class="form-messages mb-0 mt-3"></p>
-                            </form>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-            
-        </div>
-    </section>   
-
+    <section class="text-center py-5" role="region" aria-labelledby="cta-title">
+        <h2 id="cta-title" class="h3 fw-bold mb-3 text-primary">Démarrons votre projet</h2>
+        <p class="lead text-muted mb-4">Soumission gratuite, réponse sous 48h ouvrables.</p>
+        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3" style="background-color: #FF5E14; border-color: #FF5E14; color: white;" aria-label="Aller au formulaire de contact pour demander une soumission">
+            Demander une soumission <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+        </a>
+    </section>
+</div>
 @endsection
