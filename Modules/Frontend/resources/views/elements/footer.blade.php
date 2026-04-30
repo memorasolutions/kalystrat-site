@@ -5,10 +5,10 @@
                     <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
-                    <p class="subscribe-box_text">Subscribe for the latest news. Stay updated on the latest trends.</p>
+                    <p class="subscribe-box_text">Recevez nos chantiers en cours et conseils construction du mois.</p>
                     <form class="newsletter-form">
-                        <input class="form-control" type="email" placeholder="Enter your email..." required="">
-                        <button type="submit" class="btn style2">SUBCRIBE<i class="ri-arrow-right-up-line"></i></button>
+                        <input class="form-control" type="email" placeholder="Votre courriel..." required="">
+                        <button type="submit" class="btn style2">S'INSCRIRE<i class="ri-arrow-right-up-line"></i></button>
                     </form>
                 </div>
             </div>
@@ -16,51 +16,51 @@
                 <div class="row justify-content-between">
                     <div class="col-md-6 col-xl-3">
                         <div class="widget widget-about footer-widget">
-                            <h3 class="widget_title">About Company</h3>
-                            <p class="about-text">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
-                            <h4 class="about-year">Since 2000</h4>
-                            <h5 class="about-subtitle">WE ARE AVAILABLE</h5>
-                            <p class="about-text"><span class="text-theme">Mon-Sat:</span> 10:00am to 07:30pm</p>
+                            <h3 class="widget_title">À propos de Kalystrat</h3>
+                            <p class="about-text">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent du concept aux clés en main, dans toute la province.</p>
+                            <h4 class="about-year">Fondé en 2026</h4>
+                            <h5 class="about-subtitle">DISPONIBLES</h5>
+                            <p class="about-text"><span class="text-theme">Lun-Ven:</span> 8h00 à 17h00</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget widget_nav_menu footer-widget">
-                            <h3 class="widget_title">Useful Links</h3>
+                            <h3 class="widget_title">Liens utiles</h3>
                             <div class="menu-all-pages-container grid-style">
                                 <ul class="menu">
-                                    <li><a href="{{ route('about') }}">About Us</a></li>
-                                    <li><a href="{{ route('service') }}">What We Do</a></li>
-                                    <li><a href="{{ route('service') }}">News & Article</a></li>
-                                    <li><a href="{{ route('service') }}">Success Story</a></li>
-                                    <li><a href="{{ route('service') }}">FAQ’s</a></li>
+                                    <li><a href="{{ route('about') }}">À propos</a></li>
+                                    <li><a href="{{ route('service') }}">Nos services</a></li>
+                                    <li><a href="{{ route('service') }}">Blogue</a></li>
+                                    <li><a href="{{ route('service') }}">Réalisations</a></li>
+                                    <li><a href="{{ route('service') }}">FAQ</a></li>
                                 </ul>
                                 <ul class="menu">
-                                    <li><a href="{{ route('team') }}">Our Team</a></li>
-                                    <li><a href="{{ route('service') }}">Careers</a></li>
-                                    <li><a href="{{ route('service') }}">Testimonials</a></li>
-                                    <li><a href="{{ route('contact') }}">Privacy Policy</a></li>
-                                    <li><a href="{{ route('contact') }}">Terms of use</a></li>
+                                    <li><a href="{{ route('team') }}">Filiales</a></li>
+                                    <li><a href="{{ route('service') }}">Carrières</a></li>
+                                    <li><a href="{{ route('service') }}">Témoignages</a></li>
+                                    <li><a href="{{ route('contact') }}">Politique de confidentialité</a></li>
+                                    <li><a href="{{ route('contact') }}">Conditions d'utilisation</a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget widget-contact">
-                            <h3 class="widget_title">Office Address</h3>
+                            <h3 class="widget_title">Siège social</h3>
                             <p class="contact-text">Québec, QC, Canada</p>
-                            <h3 class="widget_title">Email Address</h3> 
-                            <p class="text-white footer-text">Get in Touch !</p>   
-                            <p class="footer-text"><a href="mailto:info@construz.example">info@construz.example</a></p>
+                            <h3 class="widget_title">Courriel</h3> 
+                            <p class="text-white footer-text">Écrivez-nous</p>   
+                            <p class="footer-text"><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">
                         <div class="widget footer-widget">
-                            <h3 class="widget_title">Phone Number</h3>
+                            <h3 class="widget_title">Téléphone</h3>
                             <p class="footer-text">
-                                <a href="tel:121551579266">+121 551 579 266</a>
+                                <a href="tel:+15815786145">1-581-578-6145</a>
                             </p>
                             <p class="footer-text">
-                                <a href="tel:851555961658">+85 155 596 1658</a>
+                                <a href="tel:+14184760987">1-418-476-0987</a>
                             </p>
                             <h3 class="widget_title">Suivez-nous</h3>
                             <div class="social-btn style2">
@@ -77,11 +77,11 @@
         <div class="container">
             <div class="copyright-wrap">
                 <div class="row gy-3 justify-content-md-between justify-content-center">
-                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Gestion Kalystrat Inc.</a>  |  All rights reserved</p></div>
+                    <div class="col-auto align-self-center"><p class="copyright-text text-center">© 2026 <a href="#">Gestion Kalystrat Inc.</a>  |  Tous droits réservés</p></div>
                     <div class="col-auto">
                         <div class="footer-links">
                             <a href="{{ route('contact') }}">Terms & Condition</a>
-                            <a href="{{ route('contact') }}">Privacy Policy</a>
+                            <a href="{{ route('contact') }}">Politique de confidentialité</a>
                             <a href="{{ route('contact') }}">Communiquez avec nous</a>
                         </div>
                     </div>

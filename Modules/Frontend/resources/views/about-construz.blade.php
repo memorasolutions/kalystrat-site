@@ -532,7 +532,7 @@
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Project Result</h4>
-                                <p class="wcu-card-text">Making this the first true generator on the Internet uses a dictionary</p>
+                                <p class="wcu-card-text">Six filiales qui collaborent en synergie pour livrer du concept aux clés en main.</p>
                             </div>
                         </div>
                     </div>
@@ -821,7 +821,7 @@
             <div class="row gx-100 gy-60 flex-row-reverse">                
                 <div class="col-xl-6">
                     <div class="title-area">
-                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">Testimonials</span>
+                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">Témoignages</span>
                         <h2 class="sec-title">Our happy customers</h2>
                     </div>
                     <div class="row global-carousel testi-slider1" data-slide-show="1">
@@ -897,7 +897,7 @@
                 <div class="col-xl-6">
                     <div class="testimonial-card" data-bg-src="{{ asset('assets/construz-new/img/bg/testimonial-card-bg1-1.png') }}">
                         <h3 class="testimonial-card-title">Have you any questions?</h3>
-                        <p class="testimonial-card-text">Podcasting operational change management inside of making this the first true generator.</p>
+                        <p class="testimonial-card-text">L'équipe Kalystrat a livré notre projet dans les délais avec une qualité irréprochable, du gros oeuvre à la finition.</p>
                         <div class="btn-group">
                             <a href="{{ route('contact') }}" class="btn style6">Contact with Us <i class="ri-arrow-right-up-line"></i></a>
                         </div>
@@ -917,7 +917,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-7 col-md-7">
                     <div class="title-area text-md-start text-center">
-                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">Our Team</span>
+                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">Filiales</span>
                         <h2 class="sec-title">Meet our leadership</h2>
                     </div>
                 </div>

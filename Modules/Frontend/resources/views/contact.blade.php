@@ -17,9 +17,9 @@
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
                             <h4 class="contact-page-card_title">Siège social</h4>
-                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+00 (22) 730 240 369</a></div>   
-                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
-                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 10.00 - 18.00</div>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:+15815786145">1-581-578-6145</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
                             <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-1.png') }}" alt="img">
@@ -31,9 +31,9 @@
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
                             <h4 class="contact-page-card_title">Bureau régional</h4>
-                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
-                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
-                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 12.00 - 20.00</div>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:+15815786145">1-581-578-6145</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
                             <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-2.png') }}" alt="img">
@@ -45,9 +45,9 @@
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
                             <h4 class="contact-page-card_title">Chantiers en cours</h4>
-                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
-                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>
-                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 08.00 - 16.00</div>
+                            <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:+15815786145">1-581-578-6145</a></div>   
+                            <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></div>
+                            <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
                             <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-3.png') }}" alt="img">
@@ -71,41 +71,41 @@
                     <div class="col-xl-7">
                         <div class="contact-form-wrap">
                             <div class="title-area">
-                                <span class="sub-title text-theme"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Get Free Quote </span>
+                                <span class="sub-title text-theme"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Demande de soumission </span>
                                 <h2 class="sec-title">Vous avez un projet en tête?</h2>
                             </div>
                             <form action="mail.php" method="POST" class="contact-form ajax-contact">
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Your Name">
+                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet" autocomplete="name" required aria-label="Nom complet">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Email Address">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel" autocomplete="email">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Phone Number">
+                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Téléphone" autocomplete="tel">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <select name="subject" id="subject" class="single-select nice-select form-select">
-                                                <option value="" disabled selected hidden>Your Inquiry</option>
-                                                <option value="Web Design">Web Design</option>
-                                                <option value="Web Development">Web Development</option>
-                                                <option value="Engine Diagnostics">Engine Diagnostics</option>
-                                                <option value="Digital Marketing">Digital Marketing</option>
+                                                <option value="" disabled selected hidden>Type de demande</option>
+                                                <option value="Fondations">Kalystrat Fondations (excavation, coffrage)</option>
+                                                <option value="Structure">Kalystrat Structure (charpente)</option>
+                                                <option value="Toiture">Kalystrat Toiture et Enveloppe</option>
+                                                <option value="Finition">Kalystrat Finition Intérieure</option>
                                             </select>
                                         </div>
                                     </div>
                                     
                                     <div class="col-12">
                                         <div class="form-group ">
-                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Message..."></textarea>
+                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Votre message..."></textarea>
                                         </div>
                                     </div>
                                     <div class="form-btn col-12">
