@@ -38,4 +38,7 @@
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/style.css') }}">
     <!-- Kalystrat fixes (anti-overflow viewport <1900px) -->
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/kalystrat/fixes.css') }}">
+
+    {{-- P22-S8 [G] Schema.org JSON-LD (Organization + 6 Subsidiary + LocalBusiness + WebSite). Désactivable. --}}
+    @include('frontend::partials.schema-jsonld')
 </head>
