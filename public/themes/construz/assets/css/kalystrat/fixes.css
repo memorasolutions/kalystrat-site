@@ -450,3 +450,7 @@ body:has(#kalystrat-header) .navbar-right-desc {
   white-space: nowrap;
   border: 0;
 }
+
+/* P22-S7 [C] Trust badges hover orange Kalystrat */
+.ks-trust-badge { transition: border-color 0.2s ease, transform 0.2s ease; }
+.ks-trust-badge:hover, .ks-trust-badge:focus-within { border-color: #FF5E14 !important; transform: translateY(-2px); }

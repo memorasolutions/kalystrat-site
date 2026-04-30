@@ -248,8 +248,11 @@
     </div>
     <!--======== / Hero Section ========-->
 
+    {{-- P22-S7 [C] Trust badges + temoignages (above-the-fold pour confiance B2B immediate). Desactivable. --}}
+    @includeWhen(\Nwidart\Modules\Facades\Module::find('Kalystrat')?->isEnabled(), 'kalystrat::partials.trust-badges')
+
     <!--==============================
-    About Area  
+    About Area
     ==============================-->
     <div class="about-area-1 space overflow-hidden">
         <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-bottom="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape2.png') }}">
