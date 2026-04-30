@@ -6,6 +6,15 @@ use Modules\Frontend\Http\Controllers\newsController;
 use Modules\Frontend\Http\Controllers\pagesController;
 use Modules\Frontend\Http\Controllers\serviceController;
 
+// P22-S20f Cleanup status (2026-04-29) : routes legacy Construz conservées car références
+// résiduelles dans home/home[2-5]*.blade.php, elements/header2.blade.php, elements/mobileMenu.blade.php.
+// Ces vues ne sont pas affichées en production (ks-header unifié + index.blade.php uniquement) mais
+// php génère les liens via route(...) au rendu, donc supprimer les routes ferait planter ces vues.
+// Suppression complète possible APRÈS refactor des vues legacy (tâche #86 différée à #79 PASS 2 footer/menu cleanup).
+//
+// Routes ACTIVES utilisées par le site Kalystrat : / (index), /a-propos, /service, /project, /contact, /faq, /carrieres, /filiales/{slug}.
+// Routes INACTIVES (alias compat) : /home[1-5]-op, /home[2-5], /about, /shop*, /cart, /checkout, /wishlist, /team*, /service-details, /project-details, /blog*.
+
 // Construz native routes (TEL QUEL - noms identiques au theme original pour que les vues fonctionnent sans modif)
 Route::controller(HomeController::class)->group(function () {
     Route::get('/', 'index')->name('index');
@@ -43,3 +52,5 @@ Route::controller(serviceController::class)->group(function () {
     Route::get('/service', 'service')->name('service');
     Route::get('/service-details', 'serviceDetails')->name('serviceDetails');
 });
+
+// P22-S20e Note : routes /robots.txt et /sitemap.xml gérées par Module SEO (priorité supérieure).

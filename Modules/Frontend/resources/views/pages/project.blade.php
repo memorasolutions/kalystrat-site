@@ -20,7 +20,7 @@
                 <div class="bg-light border rounded-3 p-5 text-center">
                     <h2 id="vision-heading" class="h4 fw-bold mb-3" style="color: #0A1628;">Notre vision</h2>
                     <p class="mb-4">Kalystrat se construit projet après projet, avec rigueur et transparence. Cette page documentera bientôt nos premières réalisations livrées par les six filiales du groupe.</p>
-                    <a href="{{ route('contact') }}" class="btn btn-lg" style="background-color: #FF5E14; border-color: #FF5E14; color: white;" aria-label="Contactez Kalystrat pour devenir un de nos premiers clients">
+                    <a href="{{ route('contact') }}" class="btn btn-lg" style="background-color: #B8A472; border-color: #B8A472; color: #0A1628;" aria-label="Contactez Kalystrat pour devenir un de nos premiers clients">
                         Soyez parmi nos premiers clients <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
                     </a>
                 </div>
@@ -45,8 +45,8 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 shadow-sm border-0">
                         <div class="card-body d-flex flex-column align-items-center text-center p-4">
-                            <div class="mb-3" style="width: 60px; height: 60px; background-color: rgba(255,94,20,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
-                                <i class="{{ $t['icon'] }}" aria-hidden="true" style="font-size: 1.75rem; color: #FF5E14;"></i>
+                            <div class="mb-3" style="width: 60px; height: 60px; background-color: rgba(184,164,114,0.15); border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <i class="{{ $t['icon'] }}" aria-hidden="true" style="font-size: 1.75rem; color: #B8A472;"></i>
                             </div>
                             <h3 class="h5 fw-bold mb-2" style="color: #0A1628;">{{ $t['nom'] }}</h3>
                             <p class="card-text text-muted small mb-0">{{ $t['desc'] }}</p>
@@ -60,7 +60,7 @@
     <section class="mb-5" role="region" aria-labelledby="cas-heading">
         <div class="row justify-content-center">
             <div class="col-lg-9">
-                <div class="bg-light border-start border-5 rounded-3 p-4" style="border-color: #FF5E14 !important;">
+                <div class="bg-light border-start border-5 rounded-3 p-4" style="border-color: #B8A472 !important;">
                     <h2 id="cas-heading" class="h5 fw-bold mb-2" style="color: #0A1628;">Études de cas à venir</h2>
                     <p class="mb-0 text-muted">Études de cas détaillées et projets livrés seront ajoutés ici dès leur complétion. Premier projet de Kalystrat Immobilier prévu en chantier 2026.</p>
                 </div>
@@ -71,7 +71,7 @@
     <section class="text-center py-5" role="region" aria-labelledby="cta-realisations">
         <h2 id="cta-realisations" class="h3 fw-bold mb-3" style="color: #0A1628;">Devenez notre prochaine référence</h2>
         <p class="lead text-muted mb-4">Bâtir avec Kalystrat, c'est garantir une exécution intégrée du concept aux clés en main.</p>
-        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3" style="background-color: #FF5E14; border-color: #FF5E14; color: white;" aria-label="Contactez Kalystrat dès aujourd'hui">
+        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3" style="background-color: #B8A472; border-color: #B8A472; color: #0A1628;" aria-label="Contactez Kalystrat dès aujourd'hui">
             Démarrer un projet <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
         </a>
     </section>

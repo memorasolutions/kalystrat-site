@@ -26,112 +26,8 @@
     <!--==============================
     Mobile Menu
     ============================== -->
-    <div class="mobile-menu-wrapper">
-        <div class="mobile-menu-area">
-            <div class="mobile-logo">
-                <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Kalystrat"></a>
-                <button class="menu-toggle"><i class="ri-close-line"></i></button>
-            </div>
-            <div class="mobile-menu">
-                <ul>
-                    <li class="menu-item-has-children">
-                        <a href="#">Home</a>
-                        <ul class="sub-menu">
-                            <li class="menu-item-has-children">
-                                <a href="#">Multipage</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="{{ route('index') }}">Home 01</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home2') }}">Home 02</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home3') }}">Home 03</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home4') }}">Home 04</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home5') }}">Home 05</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children">
-                                <a href="#">Onepage</a>
-                                <ul class="sub-menu">
-                                    <li>
-                                        <a href="{{ route('home1Op') }}">Home 01 Onepage</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home2Op') }}">Home 02 Onepage</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home3Op') }}">Home 03 Onepage</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home4Op') }}">Home 04 Onepage</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{ route('home5Op') }}">Home 05 Onepage</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{ route('about') }}">About</a>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Pages</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('team') }}">Team Page</a></li>
-                            <li><a href="{{ route('teamDetails') }}">Team Details</a></li>
-                            <li><a href="{{ route('shop') }}">Shop Page</a></li>
-                            <li><a href="{{ route('shopDetails') }}">Shop Details</a></li>
-                            <li><a href="{{ route('cart') }}">Cart</a></li>
-                            <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                            <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Project</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('project') }}">Projects</a></li>
-                            <li><a href="{{ route('projectDetails') }}">Project Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Service</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('service') }}">Service</a></li>
-                            <li><a href="{{ route('serviceDetails') }}">Service Details</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Shop</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('shop') }}">Shop</a></li>
-                            <li><a href="{{ route('shopDetails') }}">Shop Details</a></li>
-                            <li><a href="{{ route('cart') }}">Cart</a></li>
-                            <li><a href="{{ route('checkout') }}">Checkout</a></li>
-                            <li><a href="{{ route('wishlist') }}">Wishlist</a></li>
-                        </ul>
-                    </li>
-                    <li class="menu-item-has-children">
-                        <a href="#">Blog</a>
-                        <ul class="sub-menu">
-                            <li><a href="{{ route('blog') }}">Blog</a></li>
-                            <li><a href="{{ route('blogDetails') }}">Blog Details</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a href="{{ route('contact') }}">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+    @include('frontend::elements.mobileMenu')
+
     
     <!--==============================
 	Header Area
@@ -158,11 +54,10 @@
                         <div class="col-lg-6">
                             <div class="hero-style1">
                                 <h1 class="hero-title text-white">Bâtir aujourd'hui ce qui durera demain</h1>
-                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
-                                    expertise we design and code clean websites.</p>
+                                <p class="hero-text text-white">Une vision qui transcende les saisons : construire solide, penser durable, ancrer l'avenir dans chaque fondation.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -179,11 +74,10 @@
                         <div class="col-lg-6">
                             <div class="hero-style1">
                                 <h1 class="hero-title text-white">Une force intégrée, six expertises</h1>
-                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
-                                    expertise we design and code clean websites.</p>
+                                <p class="hero-text text-white">De la fondation au placement immobilier, une synergie unique où chaque expertise s'articule sans friction ni intermédiaire.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -200,11 +94,10 @@
                         <div class="col-lg-6">
                             <div class="hero-style1">
                                 <h1 class="hero-title text-white">Clés en main, sans compromis</h1>
-                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
-                                    expertise we design and code clean websites.</p>
+                                <p class="hero-text text-white">Du premier croquis à la dernière touche, une réalisation totale, exigeante, où rien n'est laissé au hasard.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('kalystrat.apropos') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +135,7 @@
                 <div class="icon">
                     <img src="{{ asset('themes/construz/assets/img/hero/hero_experience_wrap_icon_1_2.png') }}" alt="img">
                 </div>
-                <a class="link-btn" href="{{ route('about') }}">TRAVAILLONS ENSEMBLE <img src="{{ asset('themes/construz/assets/img/icon/long-arrow-right.png') }}" alt="img"></a>
+                <a class="link-btn" href="{{ route('kalystrat.apropos') }}">TRAVAILLONS ENSEMBLE <img src="{{ asset('themes/construz/assets/img/icon/long-arrow-right.png') }}" alt="img"></a>
             </div>
         </div>
     </div>
@@ -314,7 +207,7 @@
                             </div>
                         </div>
                         <div class="btn-group mt-60">
-                            <a href="{{ route('about') }}" class="btn style3">DÉCOUVRIR KALYSTRAT <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="{{ route('kalystrat.apropos') }}" class="btn style3">DÉCOUVRIR KALYSTRAT <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>                    
                 </div>
@@ -914,7 +807,7 @@
                 </div>
                 <div class="col-md-auto">
                     <div class="sec-btn">
-                        <a href="{{ route('about') }}" class="btn">Voir toute l'équipe <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="{{ route('kalystrat.apropos') }}" class="btn">Voir toute l'équipe <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>

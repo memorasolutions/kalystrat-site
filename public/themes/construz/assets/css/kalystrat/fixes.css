@@ -2,6 +2,49 @@
    Validé via qwen3-max (multi-ai-mcp-3, openrouter-free). Chargé après style.css.
    Désactivable en supprimant la <link> dans elements/head.blade.php. */
 
+/* P22-S14 charte officielle : Akzidenz Grotesk loaded from /assets/fonts/. Désactivable en supprimant ce bloc. */
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Akzidenz Grotesk', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
+.section-title, .hero-title {
+  font-family: 'Akzidenz Grotesk', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
 html, body { overflow-x: hidden !important; }
 
 /* Topbar : permet wrap si le contenu dépasse */
@@ -466,3 +509,80 @@ body:has(#kalystrat-header) .navbar-right-desc {
   .sidemenu-wrapper .sidemenu-content { transition: none !important; }
 }
 .sidemenu-wrapper.show .sidemenu-content { transform: translateX(0); }
+
+/* P22-S14 [J] Glassmorphism nav + micro-interactions Kalystrat. Charte calm luxury (navy + gold). Désactivable en supprimant ce bloc. */
+
+.ks-header { 
+  background: rgba(10, 22, 40, 0.4) !important; 
+  backdrop-filter: blur(16px) saturate(140%); 
+  -webkit-backdrop-filter: blur(16px) saturate(140%); 
+  border-bottom: 1px solid rgba(184, 164, 114, 0.15); 
+  transition: background 0.3s ease, backdrop-filter 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.ks-header.scrolled { 
+  background: rgba(10, 22, 40, 0.92) !important; 
+  backdrop-filter: blur(20px) saturate(180%); 
+  -webkit-backdrop-filter: blur(20px) saturate(180%); 
+  border-bottom-color: rgba(184, 164, 114, 0.3); 
+  box-shadow: 0 8px 32px rgba(10, 22, 40, 0.15); 
+}
+
+.ks-header__nav-link {
+  color: #ffffff;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+.ks-header__nav-link:hover, .ks-header__nav-link:focus-visible {
+  color: #B8A472;
+  transform: translateY(-1px);
+}
+.ks-header__nav-link::after {
+  background: #B8A472;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-header, .ks-header__nav-link, .ks-header__nav-link::after {
+    transition: none !important;
+  }
+  .ks-header__nav-link:hover { transform: none !important; }
+}
+
+/* P22-S20g Charte officielle Kalystrat : override Bootstrap + Construz pour navy/gold uniquement (sauf btn-phone-cta toléré). Désactivable en supprimant ce bloc. */
+:root {
+  --bs-primary: #0A1628;
+  --bs-primary-rgb: 10, 22, 40;
+}
+.text-primary { color: #0A1628 !important; }
+.bg-primary { background-color: #0A1628 !important; }
+.btn-primary { background-color: #0A1628; border-color: #0A1628; }
+.btn-primary:hover, .btn-primary:focus { background-color: #B8A472; border-color: #B8A472; color: #0A1628; }
+.text-theme { color: #B8A472 !important; }
+.breadcrumb-wrapper { 
+  background-color: #0A1628 !important; 
+  background-blend-mode: multiply;
+}
+.breadcrumb-title { color: #ffffff !important; font-weight: 700; }
+.breadcrumb-menu { color: rgba(255, 255, 255, 0.85) !important; }
+.breadcrumb-menu a { color: #B8A472 !important; }
+.btn.style2, .btn.style3 {
+  background-color: #B8A472 !important;
+  border-color: #B8A472 !important;
+  color: #0A1628 !important;
+}
+.btn.style2:hover, .btn.style3:hover {
+  background-color: #C4B285 !important;
+  border-color: #C4B285 !important;
+  color: #0A1628 !important;
+}
+.about-year, .about-subtitle { color: #0A1628 !important; }
+
+/* P22-S20g bis : Construz typo "breadcumb" (sans 'r'). Override charte navy. */
+.breadcumb-wrapper { 
+  background-color: #0A1628 !important;
+}
+.breadcumb-wrapper::before { background-color: rgba(10, 22, 40, 0.85) !important; }
+.breadcumb-title { color: #ffffff !important; }
+.breadcumb-menu { background-color: #B8A472 !important; color: #0A1628 !important; }
+.breadcumb-menu a, .breadcumb-menu li { color: #0A1628 !important; }
+.breadcumb-menu li.active { color: #0A1628 !important; font-weight: 600; }

@@ -1,13 +1,37 @@
 <!doctype html>
-<html class="no-js" lang="zxx">
+<html class="no-js" lang="fr-CA">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Kalystrat — Holding québécois construction</title>
-    <meta name="description" content="Kalystrat — Holding québécois construction">
-    <meta name="keywords" content="Kalystrat — Holding québécois construction">
+    {{-- P22-S20e SEO/AEO/GEO 2026 --}}
+    <title>À propos | Kalystrat - Holding québécois construction intégrée</title>
+    <meta name="description" content="Kalystrat est un holding québécois de construction fondé en 2026 par Ali Salomon. Six filiales spécialisées intégrées verticalement : du concept aux clés en main.">
+    <meta name="keywords" content="Kalystrat à propos, holding construction Québec, Ali Salomon fondateur, intégration verticale construction, 6 filiales Kalystrat">
+    <link rel="canonical" href="{{ url()->current() }}">
+    <link rel="alternate" hreflang="fr-CA" href="{{ url()->current() }}">
+    <meta name="author" content="Gestion Kalystrat Inc.">
+    <meta name="geo.region" content="CA-QC">
+    <meta name="geo.placename" content="Québec">
+    <meta name="geo.position" content="46.8139;-71.2080">
+    <meta name="ICBM" content="46.8139, -71.2080">
     <meta name="robots" content="INDEX,FOLLOW">
+
+    {{-- Open Graph --}}
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="fr_CA">
+    <meta property="og:site_name" content="Kalystrat">
+    <meta property="og:title" content="À propos de Kalystrat">
+    <meta property="og:description" content="Holding québécois de construction à intégration verticale, fondé en 2026 par Ali Salomon. Six filiales du concept aux clés en main.">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('assets/img/kalystrat/logo-header.svg') }}">
+    <meta property="og:image:alt" content="Logo Kalystrat">
+
+    {{-- Twitter Card --}}
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="À propos de Kalystrat">
+    <meta name="twitter:description" content="Holding québécois de construction à intégration verticale, fondé en 2026 par Ali Salomon.">
+    <meta name="twitter:image" content="{{ asset('assets/img/kalystrat/logo-header.svg') }}">
 
     <!-- Mobile Specific Metas -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -42,6 +66,11 @@
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
 
     @include('frontend::partials-v2.schema-jsonld')
+
+    {{-- P22-S20e BreadcrumbList JSON-LD pour /a-propos --}}
+    @php $title = 'À propos'; @endphp
+    @include('frontend::partials.breadcrumb-jsonld')
+
     <link rel="stylesheet" href="{{ asset('assets/css/kalystrat-wcag.css') }}">
 </head>
 

@@ -5,7 +5,7 @@
             {{-- Logo Kalystrat --}}
             <div class="col-auto">
                 <a href="{{ route('index') }}" class="ks-header__logo-link" aria-label="Accueil - Kalystrat">
-                    <img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Logo Kalystrat" width="175" height="46" class="ks-header__logo-img">
+                    <img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Logo Kalystrat" width="175" height="46" class="ks-header__logo-img">
                 </a>
             </div>
 
@@ -27,7 +27,7 @@
                                 @foreach(config('kalystrat.filiales', []) as $slug => $filiale)
                                     <li>
                                         <a class="dropdown-item ks-header__dropdown-item" href="{{ route('kalystrat.filiale', ['slug' => $slug]) }}">
-                                            <span class="ks-header__dropdown-dot" style="background-color: {{ $filiale['hex_couleur'] ?? '#FF5E14' }};" aria-hidden="true"></span>
+                                            <span class="ks-header__dropdown-dot" style="background-color: {{ $filiale['hex_couleur'] ?? '#B8A472' }};" aria-hidden="true"></span>
                                             {{ $filiale['nom_court'] }}
                                         </a>
                                     </li>
@@ -36,6 +36,9 @@
                         </li>
                         <li class="ks-header__nav-item">
                             <a href="{{ route('kalystrat.faq') }}" class="ks-header__nav-link">FAQ</a>
+                        </li>
+                        <li class="ks-header__nav-item">
+                            <a href="{{ route('kalystrat.carrieres') }}" class="ks-header__nav-link">Carrières</a>
                         </li>
                         <li class="ks-header__nav-item">
                             <a href="{{ route('contact') }}" class="ks-header__nav-link">Contact</a>
@@ -67,7 +70,7 @@
         <div class="offcanvas-header">
             <h5 class="offcanvas-title visually-hidden" id="ksMobileNavLabel">Menu de navigation</h5>
             <a href="{{ route('index') }}" aria-label="Accueil">
-                <img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="Logo Kalystrat" width="140" height="36">
+                <img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Logo Kalystrat" width="140" height="36">
             </a>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Fermer le menu"></button>
         </div>
@@ -93,6 +96,7 @@
                         </div>
                     </li>
                     <li><a href="{{ route('kalystrat.faq') }}" class="ks-header__mobile-link">FAQ</a></li>
+                    <li><a href="{{ route('kalystrat.carrieres') }}" class="ks-header__mobile-link">Carrières</a></li>
                     <li><a href="{{ route('contact') }}" class="ks-header__mobile-link">Contact</a></li>
                     <li class="mt-3 pt-3 border-top">
                         <a href="tel:+15815786145" class="btn-phone-cta w-100" aria-label="Appeler Kalystrat au 1-581-578-6145">

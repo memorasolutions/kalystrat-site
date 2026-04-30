@@ -13,7 +13,7 @@ return [
         'specialite'  => 'Excavation, coffrage, drains français, dalles',
         'services'    => ['Excavation et nivellement', 'Coffrage de fondations', 'Coulée de béton', 'Imperméabilisation', 'Drains français', 'Dalles de sous-sol'],
         'cibles'      => ['Promoteurs résidentiels', 'Entrepreneurs généraux', 'Propriétaires', 'Municipalités'],
-        'hex_couleur' => '#8B6F47',
+        'hex_couleur' => '#6B4F2C',
     ],
     'structure' => [
         'slug'        => 'structure',
@@ -22,7 +22,7 @@ return [
         'specialite'  => 'Charpente bois, acier et hybride',
         'services'    => ['Charpente bois d\'œuvre', 'Charpente acier', 'Systèmes hybrides bois-acier', 'Poutrelles et fermes de toit', 'Structures préfabriquées'],
         'cibles'      => ['Entrepreneurs généraux', 'Promoteurs', 'Commercial et institutionnel'],
-        'hex_couleur' => '#6B7B8C',
+        'hex_couleur' => '#3F4A55',
     ],
     'toiture' => [
         'slug'        => 'toiture',
@@ -31,7 +31,7 @@ return [
         'specialite'  => 'Toitures, étanchéité, isolation et revêtements',
         'services'    => ['Membranes élastomères', 'Membranes TPO et EPDM', 'Bardeaux', 'Pare-air et pare-vapeur', 'Isolation thermique', 'Revêtements extérieurs (maçonnerie, bardage, fibrociment)'],
         'cibles'      => ['Propriétaires résidentiels', 'Promoteurs', 'Commercial', 'Institutionnel (écoles, hôpitaux)'],
-        'hex_couleur' => '#4A5D6F',
+        'hex_couleur' => '#2C4858',
     ],
     'finition' => [
         'slug'        => 'finition',
@@ -49,7 +49,7 @@ return [
         'specialite'  => 'Développement résidentiel, flips et locatif',
         'services'    => ['Acquisition de terrains', 'Construction unifamiliale et multilogement', 'Achats-rénovations-reventes (flips)', 'Constitution portefeuille locatif'],
         'cibles'      => ['Acheteurs résidentiels', 'Investisseurs immobiliers', 'Locataires'],
-        'hex_couleur' => '#2E5266',
+        'hex_couleur' => '#2A5A4E',
     ],
     'placement' => [
         'slug'        => 'placement',
@@ -58,6 +58,6 @@ return [
         'specialite'  => 'Agence de placement de main-d\'œuvre construction',
         'services'    => ['Recrutement spécialisé', 'Formation et intégration', 'Gestion paie, assurances, CCQ', 'Placement temporaire et permanent'],
         'cibles'      => ['Filiales Kalystrat (clients internes)', 'Entrepreneurs généraux externes', 'Sous-traitants', 'Promoteurs'],
-        'hex_couleur' => '#7A6738',
+        'hex_couleur' => '#A66B3A',
     ],
 ];

@@ -2,7 +2,7 @@
         <div class="container">
             <div class="footer-top-1">
                 <div class="footer-logo">
-                    <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo-white.svg') }}" alt="Kalystrat"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Kalystrat"></a>
                 </div>
                 <div class="subscribe-box">
                     <p class="subscribe-box_text">Recevez nos chantiers en cours et conseils construction du mois.</p>

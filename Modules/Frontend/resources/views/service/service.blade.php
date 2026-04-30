@@ -51,7 +51,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-header d-flex align-items-center" style="background-color: {{ $filiale['hex_couleur'] ?? '#0A1628' }};">
-                            <span class="dot me-2" aria-hidden="true" style="display: inline-block; width: 12px; height: 12px; background-color: #FF5E14; border-radius: 50%;"></span>
+                            <span class="dot me-2" aria-hidden="true" style="display: inline-block; width: 12px; height: 12px; background-color: #B8A472; border-radius: 50%;"></span>
                             <h3 class="h5 text-white mb-0">{{ $filiale['nom_court'] ?? $slug }}</h3>
                         </div>
                         <div class="card-body">
@@ -91,7 +91,7 @@
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="card-body">
                             <div class="d-flex align-items-start">
-                                <div class="me-3 flex-shrink-0" style="width: 44px; height: 44px; background-color: #FF5E14; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                                <div class="me-3 flex-shrink-0" style="width: 44px; height: 44px; background-color: #B8A472; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
                                     <i class="ri-check-line text-white" aria-hidden="true" style="font-size: 1.25rem;"></i>
                                 </div>
                                 <div>
@@ -109,7 +109,7 @@
     <section class="text-center py-5" role="region" aria-labelledby="cta-title">
         <h2 id="cta-title" class="h3 fw-bold mb-3 text-primary">Démarrons votre projet</h2>
         <p class="lead text-muted mb-4">Soumission gratuite, réponse sous 48h ouvrables.</p>
-        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3" style="background-color: #FF5E14; border-color: #FF5E14; color: white;" aria-label="Aller au formulaire de contact pour demander une soumission">
+        <a href="{{ route('contact') }}" class="btn btn-lg px-5 py-3" style="background-color: #B8A472; border-color: #B8A472; color: #0A1628;" aria-label="Aller au formulaire de contact pour demander une soumission">
             Demander une soumission <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
         </a>
     </section>

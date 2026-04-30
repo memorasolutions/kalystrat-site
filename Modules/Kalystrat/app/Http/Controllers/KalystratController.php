@@ -19,6 +19,11 @@ class KalystratController extends Controller
         return view('frontend::faq-v2', compact('faqs'));
     }
 
+    public function carrieres()
+    {
+        return view('kalystrat::pages.carrieres');
+    }
+
     public function filiale(string $slug)
     {
         $filiales = config('kalystrat.filiales', []);

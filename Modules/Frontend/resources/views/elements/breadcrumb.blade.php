@@ -1,4 +1,4 @@
-<div class="breadcumb-wrapper" data-bg-src="{{ asset('themes/construz/assets/img/bg/breadcrumb-bg.png') }}">
+<div class="breadcumb-wrapper" data-bg-src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp') }}">
     <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
     </div>
     <!-- bg animated image/ -->   

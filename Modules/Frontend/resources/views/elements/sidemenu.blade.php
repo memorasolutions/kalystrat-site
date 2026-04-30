@@ -3,9 +3,9 @@
             <button class="closeButton sideMenuCls"><i class="ri-close-line"></i></button>
             <div class="widget widget-about footer-widget">
                 <div class="footer-logo">
-                    <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/logo.svg') }}" alt="logo"></a>
+                    <a href="{{ route('index') }}"><img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Logo Kalystrat"></a>
                 </div>
-                <p class="about-text mb-4">A small business can be better than a big business because of agility and adaptability due to their size and scale.</p>
+                <p class="about-text mb-4">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent du concept aux clés en main, partout au Québec.</p>
                 
                 <p class="footer-text">
                     <a href="tel:851555961658"><i class="ri-phone-line me-2"></i>+85 155 596 1658</a>
