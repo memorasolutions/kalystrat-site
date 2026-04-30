@@ -143,7 +143,7 @@
     <!--==============================
     Hero Area
     ==============================-->
-    <div class="hero-wrapper hero-1" id="hero" data-bg-src="{{ asset('themes/construz/assets/img/hero/hero_bg_1_1.png') }}">
+    <div class="hero-wrapper hero-1" id="hero" data-bg-src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.jpg') }}">
         <div class="hero-bg-shape1-1"></div>
         <div class="hero-bg-shape1-2"></div>
         <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
@@ -158,11 +158,11 @@
                         <div class="col-lg-6">
                             <div class="hero-style1">
                                 <h1 class="hero-title text-white">Bâtir aujourd'hui ce qui durera demain</h1>
-                                <p class="hero-text text-white">We craft unique digital experiences. With more than 7 years of
+                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
                                     expertise we design and code clean websites.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">Discover More <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -178,12 +178,12 @@
                         
                         <div class="col-lg-6">
                             <div class="hero-style1">
-                                <h1 class="hero-title text-white">Quality Build Construction Service</h1>
-                                <p class="hero-text text-white">We craft unique digital experiences. With more than 7 years of
+                                <h1 class="hero-title text-white">Une force intégrée, six expertises</h1>
+                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
                                     expertise we design and code clean websites.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">Discover More <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -199,12 +199,12 @@
                         
                         <div class="col-lg-6">
                             <div class="hero-style1">
-                                <h1 class="hero-title text-white">Apex Architects Build Construction for future</h1>
-                                <p class="hero-text text-white">We craft unique digital experiences. With more than 7 years of
+                                <h1 class="hero-title text-white">Clés en main, sans compromis</h1>
+                                <p class="hero-text text-white">Six filiales spécialisées au Québec, du concept à la livraison clés en main.
                                     expertise we design and code clean websites.</p>
         
                                 <div class="btn-group">
-                                    <a href="{{ route('about') }}" class="btn style2">Discover More <i class="ri-arrow-right-up-line"></i></a>
+                                    <a href="{{ route('about') }}" class="btn style2">EN SAVOIR PLUS <i class="ri-arrow-right-up-line"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -242,7 +242,7 @@
                 <div class="icon">
                     <img src="{{ asset('themes/construz/assets/img/hero/hero_experience_wrap_icon_1_2.png') }}" alt="img">
                 </div>
-                <a class="link-btn" href="{{ route('about') }}">Let’s work together <img src="{{ asset('themes/construz/assets/img/icon/long-arrow-right.png') }}" alt="img"></a>
+                <a class="link-btn" href="{{ route('about') }}">TRAVAILLONS ENSEMBLE <img src="{{ asset('themes/construz/assets/img/icon/long-arrow-right.png') }}" alt="img"></a>
             </div>
         </div>
     </div>
@@ -314,7 +314,7 @@
                             </div>
                         </div>
                         <div class="btn-group mt-60">
-                            <a href="{{ route('about') }}" class="btn style3">Explore Our Company <i class="ri-arrow-right-up-line"></i></a>
+                            <a href="{{ route('about') }}" class="btn style3">DÉCOUVRIR KALYSTRAT <i class="ri-arrow-right-up-line"></i></a>
                         </div>
                     </div>                    
                 </div>
@@ -348,7 +348,7 @@
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -366,7 +366,7 @@
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -384,7 +384,7 @@
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -402,7 +402,7 @@
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -420,7 +420,7 @@
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
-                                <a href="{{ route('serviceDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>
+                                <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
                             </div>
                         </div>
                     </div>
@@ -677,7 +677,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -693,7 +693,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -709,7 +709,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -725,7 +725,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -741,7 +741,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -757,7 +757,7 @@
                                     <p class="portofolio-card-text">Building since 09,01,2024</p>
                                 </div>  
                             </div>
-                            <a href="{{ route('projectDetails') }}" class="btn">Explore Service <i class="ri-arrow-right-up-line"></i></a>                          
+                            <a href="{{ route('projectDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>                          
                         </div>
                     </div>
                 </div>
