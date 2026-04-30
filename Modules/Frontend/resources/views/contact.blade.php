@@ -1,8 +1,8 @@
 @extends('frontend::layout.layout')
 
 @php
-    $title='Contact Us';
-    $subTitle='Contact Us';
+    $title='Communiquez avec nous';
+    $subTitle='Communiquez avec nous';
 @endphp
 
 @section('content')
@@ -16,7 +16,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
-                            <h4 class="contact-page-card_title">Main Office</h4>
+                            <h4 class="contact-page-card_title">Siège social</h4>
                             <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+00 (22) 730 240 369</a></div>   
                             <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 10.00 - 18.00</div>
@@ -30,7 +30,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
-                            <h4 class="contact-page-card_title">London Office</h4>
+                            <h4 class="contact-page-card_title">Bureau régional</h4>
                             <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
                             <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>   
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 12.00 - 20.00</div>
@@ -44,7 +44,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="contact-page-card bg-smoke">
                         <div class="contact-page-card-details">
-                            <h4 class="contact-page-card_title">New York City</h4>
+                            <h4 class="contact-page-card_title">Chantiers en cours</h4>
                             <div class="contact-page-card-text"><i class="ri-phone-line"></i><a class="contact-page-card_link" href="tel:0022730240369">+32 (0) 800 240 458</a></div>   
                             <div class="contact-page-card-text"><i class="ri-mail-line"></i><a class="contact-page-card_link" href="mailto:info@construz.example">info@construz.example</a></div>
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Mon - Sat 08.00 - 16.00</div>
@@ -72,7 +72,7 @@
                         <div class="contact-form-wrap">
                             <div class="title-area">
                                 <span class="sub-title text-theme"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Get Free Quote </span>
-                                <h2 class="sec-title">Have a project in mind?</h2>
+                                <h2 class="sec-title">Vous avez un projet en tête?</h2>
                             </div>
                             <form action="mail.php" method="POST" class="contact-form ajax-contact">
                                 <div class="row gy-4">
@@ -109,7 +109,7 @@
                                         </div>
                                     </div>
                                     <div class="form-btn col-12">
-                                        <button class="btn w-100">Submit Now <i class="ri-arrow-right-up-line"></i></button>
+                                        <button type="submit" class="btn w-100">Envoyer <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
                                 <p class="form-messages mb-0 mt-3"></p>

@@ -62,7 +62,7 @@
                             <p class="footer-text">
                                 <a href="tel:851555961658">+85 155 596 1658</a>
                             </p>
-                            <h3 class="widget_title">Follow Us</h3>
+                            <h3 class="widget_title">Suivez-nous</h3>
                             <div class="social-btn style2">
                                 <a href="https://www.twitter.com/" aria-label="Suivez Kalystrat sur X" target="_blank" rel="noopener noreferrer"><i class="ri-twitter-x-line" aria-hidden="true"></i></a>
                                 <a href="https://instagram.com/" aria-label="Suivez Kalystrat sur Instagram" target="_blank" rel="noopener noreferrer"><i class="ri-instagram-line" aria-hidden="true"></i></a>
@@ -82,7 +82,7 @@
                         <div class="footer-links">
                             <a href="{{ route('contact') }}">Terms & Condition</a>
                             <a href="{{ route('contact') }}">Privacy Policy</a>
-                            <a href="{{ route('contact') }}">Contact Us</a>
+                            <a href="{{ route('contact') }}">Communiquez avec nous</a>
                         </div>
                     </div>
                 </div>                

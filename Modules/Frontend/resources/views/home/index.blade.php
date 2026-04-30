@@ -157,7 +157,7 @@
                         
                         <div class="col-lg-6">
                             <div class="hero-style1">
-                                <h1 class="hero-title text-white">Build Your dream buildings for the future</h1>
+                                <h1 class="hero-title text-white">Bâtir aujourd'hui ce qui durera demain</h1>
                                 <p class="hero-text text-white">We craft unique digital experiences. With more than 7 years of
                                     expertise we design and code clean websites.</p>
         
@@ -230,14 +230,14 @@
             <img src="{{ asset('themes/construz/assets/img/hero/hero_shape_1_1.png') }}" alt="img">
         </div>
         <div class="hero-experience-wrap" data-bg-src="{{ asset('themes/construz/assets/img/hero/hero_experience_wrap_bg_1_1.png') }}">
-            <span class="shadow-text">Business Experience</span>
+            <span class="shadow-text">Expérience d'affaires</span>
             <div class="hero-experience-icon">
                 <img src="{{ asset('themes/construz/assets/img/hero/hero_experience_wrap_icon_1_1.png') }}" alt="img">
             </div>
             <h2 class="hero-experience-counter">
                 <span class="counter-number">40</span>+
             </h2>
-            <p class="hero-experience-text">Years we have been doing this</p>
+            <p class="hero-experience-text">Années en construction au Québec</p>
             <div class="media">
                 <div class="icon">
                     <img src="{{ asset('themes/construz/assets/img/hero/hero_experience_wrap_icon_1_2.png') }}" alt="img">
@@ -282,7 +282,7 @@
                         <div class="title-area mb-25">
                             <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">ABOUT US</span>
                             <h2 class="sec-title">We building everything Tthat you needed</h2>
-                            <p class="sec-text">We craft unique digital experiences. With more than 7 years of expertise we design and code clean websites.  
+                            <p class="sec-text">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent du concept aux clés en main.  
                             </p>
                         </div>
                         <div class="checklist mb-35">
@@ -298,7 +298,7 @@
                             </div>
                             <div class="about-grid-details">
                                 <h4 class="title">Our Mission</h4>
-                                <p class="text">We craft unique digital experiences. With more years of expertise we design </p>
+                                <p class="text">Six filiales spécialisées synergiques pour livrer des projets </p>
                             </div>
                         </div>
                         <div class="about-grid-wrap">
@@ -307,7 +307,7 @@
                             </div>
                             <div class="about-grid-details">
                                 <h4 class="title">Our Vision</h4>
-                                <p class="text">We craft unique digital experiences. With more years of expertise we design </p>
+                                <p class="text">Six filiales spécialisées synergiques pour livrer des projets </p>
                             </div>
                         </div>
                         <div class="btn-group mt-60">
@@ -328,8 +328,8 @@
                 <div class="col-xl-4 col-md-6">
                     <div class="title-area mb-0 text-md-start text-center">
                         <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> What We Do</span>
-                        <h2 class="sec-title">Our services that we provide</h2>
-                        <p>We craft unique digital experiences. With more than 7 years of expertise we design and code clean</p>
+                        <h2 class="sec-title">Nos services spécialisés</h2>
+                        <p>Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent</p>
                     </div>
                 </div>
                 <div class="col-xl-4 col-md-6">
@@ -438,7 +438,7 @@
                         </div>
                         <div class="title-area mb-40 text-md-start text-center">
                             <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">GET FREE QUOTE</span>
-                            <h3 class="sec-title">Have a project in mind?</h3>
+                            <h3 class="sec-title">Vous avez un projet en tête?</h3>
                         </div>
                         <form action="mail.php" method="POST" class="cta-contact-form ajax-contact">
                             <div class="row gy-15">
@@ -466,7 +466,7 @@
                                     </div>
                                 </div>
                                 <div class="form-btn col-12">
-                                    <button type="submit" class="btn w-100">SUBMIT NOW<i class="ri-arrow-right-up-line"></i></button>
+                                    <button type="submit" class="btn w-100">ENVOYER<i class="ri-arrow-right-up-line"></i></button>
                                 </div>
                             </div>
                         </form>
@@ -489,9 +489,9 @@
         </div>
         <div class="container">
             <div class="title-area text-center">
-                <div class="shadow-title">Why Choose Us</div>
-                <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> Why Choose Us</span>
-                <h2 class="sec-title">High Quality Innovate Design</h2>
+                <div class="shadow-title">Pourquoi Kalystrat</div>
+                <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> Pourquoi Kalystrat</span>
+                <h2 class="sec-title">Six filiales, une seule équipe</h2>
             </div>
             <div class="row gy-50 align-items-center">
                 <div class="col-xl-4 col-md-6">
@@ -580,7 +580,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="title-area text-md-start text-center">
                         <span class="sub-title text-white"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Work Process</span>
-                        <h2 class="sec-title text-white">Our services that we provide</h2>
+                        <h2 class="sec-title text-white">Nos services spécialisés</h2>
                     </div>
                 </div>
                 <div class="col-md-auto">
@@ -656,7 +656,7 @@
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Recent Work</span>
-                <h2 class="sec-title">Check our latest projects</h2>
+                <h2 class="sec-title">Découvrez nos derniers projets</h2>
                 <p class="sec-text">We are the best construction agency in the world</p>
             </div>
             <div class="portfolio-slider1 overflow-hidden">
@@ -773,25 +773,25 @@
                 <div class="col-auto">
                     <div class="counter-card">
                         <h2 class="counter-card_number"><span class="counter-number">26</span>k+</h2>
-                        <p class="counter-card_text">Projects Completed</p>
+                        <p class="counter-card_text">Projets réalisés</p>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="counter-card">
                         <h2 class="counter-card_number"><span class="counter-number">98</span>%</h2>
-                        <p class="counter-card_text">Customers Satisfied</p>
+                        <p class="counter-card_text">Clients satisfaits</p>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="counter-card">
                         <h2 class="counter-card_number"><span class="counter-number">20</span>M</h2>
-                        <p class="counter-card_text">Special Machinery</p>
+                        <p class="counter-card_text">Machinerie spécialisée</p>
                     </div>
                 </div>
                 <div class="col-auto">
                     <div class="counter-card">
                         <h2 class="counter-card_number"><span class="counter-number">30</span>+</h2>
-                        <p class="counter-card_text">Years in Business</p>
+                        <p class="counter-card_text">Années en affaires</p>
                     </div>
                 </div>
             </div>
@@ -884,7 +884,7 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="testimonial-card" data-bg-src="{{ asset('themes/construz/assets/img/bg/testimonial-card-bg1-1.png') }}">
-                        <h3 class="testimonial-card-title">Have you any questions?</h3>
+                        <h3 class="testimonial-card-title">Des questions?</h3>
                         <p class="testimonial-card-text">Podcasting operational change management inside of making this the first true generator.</p>
                         <div class="btn-group">
                             <a href="{{ route('contact') }}" class="btn style6">Contact with Us <i class="ri-arrow-right-up-line"></i></a>
@@ -911,7 +911,7 @@
                 </div>
                 <div class="col-md-auto">
                     <div class="sec-btn">
-                        <a href="{{ route('about') }}" class="btn">View All Members <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="{{ route('about') }}" class="btn">Voir toute l'équipe <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
@@ -1000,7 +1000,7 @@
         <div class="container">
             <div class="title-area text-center">
                 <span class="sub-title text-white"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Happy Clients</span>
-                <h2 class="sec-title text-white">Our trusted partners</h2>
+                <h2 class="sec-title text-white">Nos partenaires de confiance</h2>
             </div>
             <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
                 <div class="col-lg-auto">
@@ -1073,7 +1073,7 @@
                 </div>
                 <div class="col-md-auto">
                     <div class="sec-btn">
-                        <a href="{{ route('blog') }}" class="btn style-border">View All News <i class="ri-arrow-right-up-line"></i></a>
+                        <a href="{{ route('blog') }}" class="btn style-border">Voir toutes les nouvelles <i class="ri-arrow-right-up-line"></i></a>
                     </div>
                 </div>
             </div>
