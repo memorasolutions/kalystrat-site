@@ -143,7 +143,7 @@
     <!--==============================
     Hero Area
     ==============================-->
-    <div class="hero-wrapper hero-1" id="hero" data-bg-src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.jpg') }}">
+    <div class="hero-wrapper hero-1" id="hero" data-bg-src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp') }}">
         <div class="hero-bg-shape1-1"></div>
         <div class="hero-bg-shape1-2"></div>
         <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
@@ -258,23 +258,23 @@
         <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-bottom="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape2.png') }}">
         </div>
         <div class="about_shape_1-1 shape-mockup jump-reverse" data-bottom="0" data-right="0">
-            <img src="{{ asset('themes/construz/assets/img/normal/about_shape_1-2.png') }}" alt="img">
+            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/about_shape_1-2.png') }}" alt="img">
         </div>
         <div class="container">
             <div class="row gx-60 align-items-center">
                 <div class="col-xl-6">
                     <div class="about-thumb1 mb-40 mb-lg-0"> 
                         <div class="about-img-1">
-                            <img src="{{ asset('themes/construz/assets/img/normal/about_1-1.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/about_1-1.png') }}" alt="img">
                         </div>
                         <div class="about-counter-wrap jump">
                             <h3 class="about-counter-number"><span class="counter-number">1.2</span>k</h3>
                             <p class="about-counter-text">Happy Customers</p>
                             <div class="about-counter-shape">
-                                <img src="{{ asset('themes/construz/assets/img/normal/about_shape_1-1.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/about_shape_1-1.png') }}" alt="img">
                             </div>
                             <div class="client-group-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/normal/client_group_1-1.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/client_group_1-1.png') }}" alt="img">
                             </div>
                             
                         </div>
@@ -283,21 +283,21 @@
                 <div class="col-xl-6">
                     <div class="about-content-wrap1">
                         <div class="title-area mb-25">
-                            <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">ABOUT US</span>
+                            <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">ABOUT US</span>
                             <h2 class="sec-title">We building everything Tthat you needed</h2>
                             <p class="sec-text">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent du concept aux clés en main.  
                             </p>
                         </div>
                         <div class="checklist mb-35">
                             <ul>
-                                <li><img src="{{ asset('themes/construz/assets/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Providing Solutions For Construction, Management
+                                <li><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Providing Solutions For Construction, Management
                                 </li>
-                                <li><img src="{{ asset('themes/construz/assets/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Engineers design and build the structure</li>
+                                <li><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/about-checklsit-icon1-1.svg') }}" alt="img">Engineers design and build the structure</li>
                             </ul>
                         </div>
                         <div class="about-grid-wrap">
                             <div class="icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/about-grid-icon1-1.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/about-grid-icon1-1.svg') }}" alt="img">
                             </div>
                             <div class="about-grid-details">
                                 <h4 class="title">Our Mission</h4>
@@ -306,7 +306,7 @@
                         </div>
                         <div class="about-grid-wrap">
                             <div class="icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/about-grid-icon1-2.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/about-grid-icon1-2.svg') }}" alt="img">
                             </div>
                             <div class="about-grid-details">
                                 <h4 class="title">Our Vision</h4>
@@ -330,7 +330,7 @@
             <div class="row gy-30 gx-30">
                 <div class="col-xl-4 col-md-6">
                     <div class="title-area mb-0 text-md-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> What We Do</span>
+                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> What We Do</span>
                         <h2 class="sec-title">Nos services spécialisés</h2>
                         <p>Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent</p>
                     </div>
@@ -342,7 +342,7 @@
                         </div>
                         <div class="service-card_content">
                             <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-1.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-1.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">General construction</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
@@ -360,7 +360,7 @@
                         </div>
                         <div class="service-card_content">
                             <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-2.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-2.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Property maintenance</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
@@ -378,7 +378,7 @@
                         </div>
                         <div class="service-card_content">
                             <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-3.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-3.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Project management</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
@@ -396,7 +396,7 @@
                         </div>
                         <div class="service-card_content">
                             <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-4.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-4.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Virtual design & build</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
@@ -414,7 +414,7 @@
                         </div>
                         <div class="service-card_content">
                             <div class="service-card_icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/service-icon1-5.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-5.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title h5"><a href="{{ route('serviceDetails') }}">Proconstruction</a></h4>
                             <p class="service-card_text">There are many passages of lorem ipsum available</p>
@@ -440,7 +440,7 @@
                         <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-left="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
                         </div>
                         <div class="title-area mb-40 text-md-start text-center">
-                            <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">GET FREE QUOTE</span>
+                            <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">GET FREE QUOTE</span>
                             <h3 class="sec-title">Vous avez un projet en tête?</h3>
                         </div>
                         <form action="mail.php" method="POST" class="cta-contact-form ajax-contact">
@@ -477,7 +477,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="cta-thumb1-1">
-                        <img src="{{ asset('themes/construz/assets/img/normal/cta-thumb1-1.png') }}" alt="img">
+                        <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/cta-thumb1-1.png') }}" alt="img">
                     </div>
                 </div>
             </div>
@@ -493,7 +493,7 @@
         <div class="container">
             <div class="title-area text-center">
                 <div class="shadow-title">Pourquoi Kalystrat</div>
-                <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> Pourquoi Kalystrat</span>
+                <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img"> Pourquoi Kalystrat</span>
                 <h2 class="sec-title">Six filiales, une seule équipe</h2>
             </div>
             <div class="row gy-50 align-items-center">
@@ -501,7 +501,7 @@
                     <div class="wcu-card-wrap left-align">
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-1.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-1.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Technology</h4>
@@ -510,7 +510,7 @@
                         </div>
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-2.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-2.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Core Planning</h4>
@@ -519,7 +519,7 @@
                         </div>
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-3.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-3.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Project Result</h4>
@@ -532,7 +532,7 @@
                     <div class="wcu-card-wrap right-align">
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-4.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-4.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Trusted Clients</h4>
@@ -541,7 +541,7 @@
                         </div>
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-5.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-5.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Skilled Team</h4>
@@ -550,7 +550,7 @@
                         </div>
                         <div class="wcu-card">
                             <div class="wcu-card-icon">
-                                <img src="{{ asset('themes/construz/assets/img/icon/why-icon1-6.svg') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/why-icon1-6.svg') }}" alt="img">
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Save Money</h4>
@@ -561,7 +561,7 @@
                 </div>
                 <div class="col-xl-4">
                     <div class="wcu-thumb1-1">
-                        <img src="{{ asset('themes/construz/assets/img/normal/why_1-1.png') }}" alt="img">
+                        <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/why_1-1.png') }}" alt="img">
                     </div>
                 </div>
                 
@@ -576,13 +576,13 @@
         <div class="process_shape_1-1 movingX shape-mockup d-lg-block d-none"></div>
         <div class="process_shape_1-2 moving shape-mockup d-lg-block d-none"></div>
         <div class="process_shape_1-3 shape-mockup jump-reverse d-xl-block d-none" data-bottom="-50%" data-right="0">
-            <img src="{{ asset('themes/construz/assets/img/shape/sec-bg-shape1.png') }}" alt="img">
+            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/shape/sec-bg-shape1.png') }}" alt="img">
         </div>
         <div class="container">
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="title-area text-md-start text-center">
-                        <span class="sub-title text-white"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Work Process</span>
+                        <span class="sub-title text-white"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Work Process</span>
                         <h2 class="sec-title text-white">Nos services spécialisés</h2>
                     </div>
                 </div>
@@ -658,7 +658,7 @@
     <div class="portfolio-area-1 space">
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Recent Work</span>
+                <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Recent Work</span>
                 <h2 class="sec-title">Découvrez nos derniers projets</h2>
                 <p class="sec-text">We are the best construction agency in the world</p>
             </div>
@@ -667,7 +667,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_1.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_1.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_1.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -683,7 +683,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_2.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_2.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_2.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -699,7 +699,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_3.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_3.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_3.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -715,7 +715,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_1.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_1.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_1.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -731,7 +731,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_2.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_2.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_2.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -747,7 +747,7 @@
                     <div class="col-lg-6">
                         <div class="portfolio-card">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('themes/construz/assets/img/project/project1_3.png') }}" alt="img">
+                                <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/project/project1_3.png') }}" alt="img">
                                 <a class="icon-btn popup-image" href="assets/img/project/project1_3.png"><i class="ri-eye-line"></i></a>
                             </div>
                             <div class="portfolio-card-details">
@@ -806,23 +806,23 @@
     ==============================-->
     <div class="testimonial-area-1 overflow-hidden space bg-smoke" data-bg-src="{{ asset('themes/construz/assets/img/bg/testimonial-bg1-1.png') }}">
         <div class="testimonial_shape_1-1 shape-mockup jump d-xxl-block d-none" data-top="0" data-right="4%">
-            <img src="{{ asset('themes/construz/assets/img/shape/sec-bg-shape2.png') }}" alt="img">
+            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/shape/sec-bg-shape2.png') }}" alt="img">
         </div>
         <div class="container">
             <div class="row gx-100 gy-60 flex-row-reverse">                
                 <div class="col-xl-6">
                     <div class="title-area">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Testimonials</span>
+                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Testimonials</span>
                         <h2 class="sec-title">Our happy customers</h2>
                     </div>
                     <div class="row global-carousel testi-slider1" data-slide-show="1">
                         <div class="col-lg-6">
                             <div class="testi-card">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
                                 </div>  
                                 <div class="testi-card_content">
                                     <h4 class="testi-card_title">Best Company!</h4>
@@ -837,10 +837,10 @@
                         <div class="col-lg-6">
                             <div class="testi-card">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img src="{{ asset('themes/construz/assets/img/testimonial/testi_1_2.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_2.png') }}" alt="img">
                                 </div>  
                                 <div class="testi-card_content">
                                     <h4 class="testi-card_title">Best Company!</h4>
@@ -855,10 +855,10 @@
                         <div class="col-lg-6">
                             <div class="testi-card">
                                 <div class="quote-icon">
-                                    <img src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
                                 </div>  
                                 <div class="testi-card_content">
                                     <h4 class="testi-card_title">Best Company!</h4>
@@ -877,7 +877,7 @@
                             <button data-slick-next=".testi-slider1" class="slick-arrow style2 default"><i class="ri-arrow-right-up-line"></i></button>
                         </div>
                         <div class="client-group-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/normal/client_group_1-2.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/client_group_1-2.png') }}" alt="img">
                         </div>
                         <div class="testi-counter-wrap">
                             <h3 class="testi-counter-number"><span class="counter-number">2</span>m+</h3>
@@ -908,7 +908,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-7 col-md-7">
                     <div class="title-area text-md-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Our Team</span>
+                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Our Team</span>
                         <h2 class="sec-title">Meet our leadership</h2>
                     </div>
                 </div>
@@ -935,7 +935,7 @@
                             </div>
                         </div>
                         <div class="team-card_img">
-                            <img src="{{ asset('themes/construz/assets/img/team/team-1-1.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-1.png') }}" alt="img">
                         </div>
                         <a href="tel:0023745671379" class="contact-btn-wrap">
                             <span class="number">(+00) 347 456 1379</span>
@@ -958,7 +958,7 @@
                             </div>
                         </div>
                         <div class="team-card_img">
-                            <img src="{{ asset('themes/construz/assets/img/team/team-1-2.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-2.png') }}" alt="img">
                         </div>
                         <a href="tel:0023745671379" class="contact-btn-wrap">
                             <span class="number">(+00) 347 456 1379</span>
@@ -981,7 +981,7 @@
                             </div>
                         </div>
                         <div class="team-card_img">
-                            <img src="{{ asset('themes/construz/assets/img/team/team-1-3.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-3.png') }}" alt="img">
                         </div>
                         <a href="tel:0023745671379" class="contact-btn-wrap">
                             <span class="number">(+00) 347 456 1379</span>
@@ -998,62 +998,62 @@
     ==============================-->
     <div class="client-area-1 text-center space overflow-hidden" data-bg-src="{{ asset('themes/construz/assets/img/bg/client-bg1-1.png') }}" data-overlay="title" data-opacity="9">
         <div class="client_shape_1-1 shape-mockup jump-reverse" data-bottom="0%" data-right="-6%">
-            <img src="{{ asset('themes/construz/assets/img/shape/client-bg-shape1.png') }}" alt="img">
+            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/shape/client-bg-shape1.png') }}" alt="img">
         </div>
         <div class="container">
             <div class="title-area text-center">
-                <span class="sub-title text-white"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Happy Clients</span>
+                <span class="sub-title text-white"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Happy Clients</span>
                 <h2 class="sec-title text-white">Nos partenaires de confiance</h2>
             </div>
             <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
                     </div>
                 </div>
                 <div class="col-lg-auto">
                     <div class="client-logo">
-                        <a href="{{ route('index') }}"><img src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
+                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
                     </div>
                 </div>
             </div>
@@ -1070,7 +1070,7 @@
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-6">
                     <div class="title-area text-lg-start text-center">
-                        <span class="sub-title"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Latest News</span>
+                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Latest News</span>
                         <h2 class="sec-title">Recent news and events</h2>
                     </div>
                 </div>
@@ -1084,7 +1084,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>
@@ -1105,7 +1105,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>
@@ -1126,7 +1126,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>
@@ -1147,7 +1147,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>
@@ -1168,7 +1168,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>
@@ -1189,7 +1189,7 @@
                 <div class="col-md-6 col-lg-4">
                     <div class="blog-card">
                         <div class="blog-img">
-                            <img src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
+                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
                             <div class="blog-date">
                                 <a href="{{ route('blog') }}"><span>17</span>JUN</a>
                                 <div class="year">2024</div>

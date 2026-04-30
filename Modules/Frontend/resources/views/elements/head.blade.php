@@ -36,6 +36,9 @@
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/nice-select.min.css') }}">
     <!-- Theme Custom CSS -->
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/style.css') }}">
+    <!-- P22-S8 [D] LCP preload hero (above-the-fold) -->
+    <link rel="preload" as="image" href="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp') }}" fetchpriority="high">
+
     <!-- Kalystrat fixes (anti-overflow viewport <1900px) -->
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/kalystrat/fixes.css') }}">
 
