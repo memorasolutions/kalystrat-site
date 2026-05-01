@@ -161,8 +161,8 @@
                             <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Réunion stratégique équipe Kalystrat" width="1080" height="720">
                         </div>
                         <div class="about-counter-wrap jump">
-                            <h3 class="about-counter-number"><span class="counter-number">1.2</span>k</h3>
-                            <p class="about-counter-text">Happy Customers</p>
+                            <h3 class="about-counter-number"><span class="counter-number">6</span></h3>
+                            <p class="about-counter-text">Filiales spécialisées</p>
                             <div class="about-counter-shape">
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/about_shape_1-1.png') }}" alt="img">
                             </div>
@@ -177,7 +177,7 @@
                     <div class="about-content-wrap1">
                         <div class="title-area mb-25">
                             <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">ABOUT US</span>
-                            <h2 class="sec-title">We building everything Tthat you needed</h2>
+                            <h2 class="sec-title">Six filiales spécialisées sous une seule marque</h2>
                             <p class="sec-text">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui livrent du concept aux clés en main.  
                             </p>
                         </div>
@@ -238,7 +238,7 @@
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-1.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">General construction</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
+                            <p class="service-card_text">Fondations solides et adaptées à chaque type de sol québécois</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
                                 <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
@@ -256,7 +256,7 @@
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-2.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Property maintenance</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
+                            <p class="service-card_text">Structure en béton, acier ou bois, conçue pour durer</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
                                 <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
@@ -274,7 +274,7 @@
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-3.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Project management</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
+                            <p class="service-card_text">Toiture performante, étanche et conforme aux normes énergétiques</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
                                 <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
@@ -292,7 +292,7 @@
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-4.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title"><a href="{{ route('serviceDetails') }}">Virtual design & build</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
+                            <p class="service-card_text">Finitions précises, propres et livrées dans les délais convenus</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
                                 <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
@@ -310,7 +310,7 @@
                                 <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/service-icon1-5.png') }}" alt="img">
                             </div>
                             <h4 class="service-card_title h5"><a href="{{ route('serviceDetails') }}">Proconstruction</a></h4>
-                            <p class="service-card_text">There are many passages of lorem ipsum available</p>
+                            <p class="service-card_text">Main-d oeuvre qualifiée disponible rapidement pour vos projets</p>
                             <div class="btn-wrap">
                                 <div class="icon-btn"><i class="ri-arrow-right-up-line"></i></div>
                                 <a href="{{ route('serviceDetails') }}" class="btn">VOIR LE SERVICE <i class="ri-arrow-right-up-line"></i></a>
@@ -407,7 +407,7 @@
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Core Planning</h4>
-                                <p class="wcu-card-text">All the Lorem Ipsum generators on the Internet tend to repeat predefined</p>
+                                <p class="wcu-card-text">Une seule équipe pour gérer l ensemble du cycle de construction</p>
                             </div>
                         </div>
                         <div class="wcu-card">
@@ -429,7 +429,7 @@
                             </div>
                             <div class="wcu-card-details">
                                 <h4 class="wcu-card-title">Trusted Clients</h4>
-                                <p class="wcu-card-text">Passage of Lorem Ipsum, you need to be sure there isn't anything</p>
+                                <p class="wcu-card-text">Accès garanti à une main-d oeuvre qualifiée via notre filiale Placement</p>
                             </div>
                         </div>
                         <div class="wcu-card">
@@ -706,7 +706,7 @@
                 <div class="col-xl-6">
                     <div class="title-area">
                         <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Témoignages</span>
-                        <h2 class="sec-title">Our happy customers</h2>
+                        <h2 class="sec-title">Nos clients satisfaits</h2>
                     </div>
                     <div class="row global-carousel testi-slider1" data-slide-show="1">
                         <div class="col-lg-6">
@@ -715,14 +715,14 @@
                                     <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/testi-1-engineer-suit.jpg') }}" alt="Promoteur résidentiel" width="256" height="256">
                                 </div>  
                                 <div class="testi-card_content">
-                                    <h4 class="testi-card_title">Best Company!</h4>
-                                    <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
+                                    <h4 class="testi-card_title">Coordination simplifiée</h4>
+                                    <p class="testi-card_text">Kalystrat simplifie la coordination entre les corps de métier. On gagne du temps et de la qualité.</p>
                                     <div class="testi-card-profile">
-                                        <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
+                                        <h4 class="testi-profile-title">Promoteur résidentiel</h4>
+                                        <span class="testi-profile-desig">Multi-logements à Québec</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -733,14 +733,14 @@
                                     <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_2.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/testi-2-business-woman.jpg') }}" alt="Entrepreneur général" width="256" height="256">
                                 </div>  
                                 <div class="testi-card_content">
-                                    <h4 class="testi-card_title">Best Company!</h4>
-                                    <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
+                                    <h4 class="testi-card_title">Partenaire fiable</h4>
+                                    <p class="testi-card_text">Leur intégration verticale réduit les imprévus sur chantier. Un partenaire fiable d un bout à l autre.</p>
                                     <div class="testi-card-profile">
-                                        <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
+                                        <h4 class="testi-profile-title">Entrepreneur général</h4>
+                                        <span class="testi-profile-desig">Bâtiments commerciaux</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
@@ -751,14 +751,14 @@
                                     <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/quote.svg') }}" alt="img">
                                 </div>                                          
                                 <div class="testi-card-thumb">
-                                    <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/testimonial/testi_1_1.png') }}" alt="img">
+                                    <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/testi-3-worker-hardhat.jpg') }}" alt="Architecte" width="256" height="256">
                                 </div>  
                                 <div class="testi-card_content">
-                                    <h4 class="testi-card_title">Best Company!</h4>
-                                    <p class="testi-card_text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar. Purus sit ame nus mas do eiusmod.</p>
+                                    <h4 class="testi-card_title">Un seul interlocuteur</h4>
+                                    <p class="testi-card_text">Travailler avec Kalystrat, c est avoir un seul interlocuteur pour des livrables alignés sur les plans.</p>
                                     <div class="testi-card-profile">
-                                        <h4 class="testi-profile-title">Aleesha brown.</h4>
-                                        <span class="testi-profile-desig">CEO at Kalystrat</span>                                                                       
+                                        <h4 class="testi-profile-title">Architecte</h4>
+                                        <span class="testi-profile-desig">Projets résidentiels haut de gamme</span>                                                                       
                                     </div>
                                 </div>                        
                             </div>
