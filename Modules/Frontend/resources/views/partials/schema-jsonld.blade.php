@@ -11,8 +11,20 @@
             "description": "Holding québécois de construction à intégration verticale regroupant six filiales spécialisées — des fondations à la finition, du placement de main-d'œuvre au développement immobilier. Conçu. Réalisé. Livré.",
             "slogan": "Conçu. Réalisé. Livré.",
             "url": "{{ config('app.url') }}",
-            "logo": "{{ config('app.url') }}/assets/img/kalystrat/logo-header.svg",
-            "image": "{{ config('app.url') }}/assets/img/kalystrat/logo-header.svg",
+            "logo": {
+                "@@type": "ImageObject",
+                "url": "{{ config('app.url') }}/assets/img/kalystrat/logo-header.svg",
+                "caption": "Logo Kalystrat",
+                "encodingFormat": "image/svg+xml"
+            },
+            "image": {
+                "@@type": "ImageObject",
+                "url": "{{ config('app.url') }}/assets/img/kalystrat/og-image.jpg",
+                "width": 1200,
+                "height": 630,
+                "caption": "Kalystrat - Holding de construction québécois à intégration verticale",
+                "encodingFormat": "image/jpeg"
+            },
             "telephone": "+1-418-476-0987",
             "email": "info@kalystrat.ca",
             "foundingDate": "2026",

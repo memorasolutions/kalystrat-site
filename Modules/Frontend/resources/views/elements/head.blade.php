@@ -7,7 +7,7 @@
         $ksDefaultDesc = "Gestion Kalystrat Inc. - Holding québécois de construction regroupant 6 filiales spécialisées : Fondations, Structure, Toiture, Finition, Immobilier et Placement Construction.";
         $ksTitle = isset($title) ? $title.' | Kalystrat' : $ksDefaultTitle;
         $ksDesc = $metaDescription ?? $ksDefaultDesc;
-        $ksImage = $ogImage ?? asset('assets/img/kalystrat/logo-header.svg');
+        $ksImage = $ogImage ?? asset('assets/img/kalystrat/og-image.jpg');
         $ksUrl = url()->current();
     @endphp
     <title>{{ $ksTitle }}</title>
@@ -42,7 +42,10 @@
     <meta property="og:description" content="{{ $ksDesc }}">
     <meta property="og:url" content="{{ $ksUrl }}">
     <meta property="og:image" content="{{ $ksImage }}">
-    <meta property="og:image:alt" content="Logo Kalystrat">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:alt" content="{{ $ogImageAlt ?? 'Kalystrat - Holding de construction québécois' }}">
 
     {{-- P22-S20e Twitter Card --}}
     <meta name="twitter:card" content="summary_large_image">

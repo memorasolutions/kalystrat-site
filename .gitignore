@@ -66,6 +66,9 @@ csrf*
 # Charte graphique source (volumineuse, brouillon)
 .charte_graphique/
 
+# Stock photos sources brutes (regenerees via stock-photos MCP si besoin)
+public/assets/img/kalystrat/sourced/
+
 # Fichiers backup locaux (.bak, .bak2, .bak.YYYY-MM-DD, .bak-p22s13)
 *.bak
 *.bak[0-9]*

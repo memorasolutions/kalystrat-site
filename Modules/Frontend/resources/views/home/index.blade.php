@@ -64,7 +64,7 @@
                     </div>                
                 </div>
                 <div class="hero-thumb text-center">
-                    <img src="{{ asset('themes/construz/assets/img/hero/hero_thumb_1_1.png') }}" alt="img">
+                    <img src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.jpg') }}" alt="Chantier construction Kalystrat à Montréal" width="867" height="650" fetchpriority="high" loading="eager" decoding="async">
                 </div>
             </div>
             <div class="hero-slide">
@@ -84,7 +84,7 @@
                     </div>                
                 </div>
                 <div class="hero-thumb text-center">
-                    <img src="{{ asset('themes/construz/assets/img/hero/hero_thumb_1_2.png') }}" alt="img">
+                    <img src="{{ asset('assets/img/kalystrat/hero/slide-2-vieux-quebec.jpg') }}" alt="Restauration Vieux-Québec par Kalystrat" width="366" height="650" loading="lazy" decoding="async">
                 </div>
             </div>
             <div class="hero-slide">
@@ -104,7 +104,7 @@
                     </div>                
                 </div>
                 <div class="hero-thumb text-center">
-                    <img src="{{ asset('themes/construz/assets/img/hero/hero_thumb_1_3.png') }}" alt="img">
+                    <img src="{{ asset('assets/img/kalystrat/hero/slide-3-excavator.jpg') }}" alt="Excavation Kalystrat Fondations Québec" width="1280" height="742" loading="lazy" decoding="async">
                 </div>
             </div>
         </div>
@@ -158,7 +158,7 @@
                 <div class="col-xl-6">
                     <div class="about-thumb1 mb-40 mb-lg-0"> 
                         <div class="about-img-1">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/about_1-1.png') }}" alt="img">
+                            <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="Réunion stratégique équipe Kalystrat" width="1080" height="720">
                         </div>
                         <div class="about-counter-wrap jump">
                             <h3 class="about-counter-number"><span class="counter-number">1.2</span>k</h3>
@@ -370,7 +370,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="cta-thumb1-1">
-                        <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/normal/cta-thumb1-1.png') }}" alt="img">
+                        <img loading="lazy" decoding="async" src="{{ asset('assets/img/kalystrat/cta-quebec-1280w.jpg') }}" alt="Vue aérienne chantier construction au Québec - Soumission gratuite" width="1280" height="719">
                     </div>
                 </div>
             </div>
@@ -475,7 +475,7 @@
             <div class="row justify-content-between align-items-center">
                 <div class="col-lg-4 col-md-6">
                     <div class="title-area text-md-start text-center">
-                        <span class="sub-title text-white"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Work Process</span>
+                        <span class="sub-title text-white"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Notre méthode</span>
                         <h2 class="sec-title text-white">Nos services spécialisés</h2>
                     </div>
                 </div>
@@ -500,8 +500,8 @@
                                 </span>
                                 STEP
                             </div>
-                            <h4 class="process-card-title">Meet and consultant about project</h4>
-                            <p class="process-card-text">Industry standard dummy text took since the when an unknown</p>
+                            <h4 class="process-card-title">Consultation et analyse du projet</h4>
+                            <p class="process-card-text">Rencontre avec un expert Kalystrat pour cerner besoins, contraintes et budget.</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
@@ -512,8 +512,8 @@
                                 </span>
                                 STEP
                             </div>
-                            <h4 class="process-card-title">Product design and planning</h4>
-                            <p class="process-card-text">Known printer took a galley of type and scrambled it to make</p>
+                            <h4 class="process-card-title">Conception et planification</h4>
+                            <p class="process-card-text">Plans, devis détaillé et calendrier livrés sous 5 jours ouvrables.</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
@@ -524,8 +524,8 @@
                                 </span>
                                 STEP
                             </div>
-                            <h4 class="process-card-title">Testing and quality control</h4>
-                            <p class="process-card-text">It has survived not only centuries also the leap into electronic</p>
+                            <h4 class="process-card-title">Suivi qualité chantier</h4>
+                            <p class="process-card-text">Inspection RBQ/CCQ à chaque étape, communication transparente.</p>
                         </div>
                     </div>
                     <div class="col-xl-3 col-md-6">
@@ -536,8 +536,8 @@
                                 </span>
                                 STEP
                             </div>
-                            <h4 class="process-card-title">Final assembly and project handover</h4>
-                            <p class="process-card-text">Electronic typesetting conta the popularised in the 1960s</p>
+                            <h4 class="process-card-title">Livraison clés en main</h4>
+                            <p class="process-card-text">Réception finale, garantie 1 an pièces et main-d œuvre, suivi long terme.</p>
                         </div>
                     </div>
                 </div>
@@ -791,318 +791,8 @@
         </div>
     </div>
     
-    <!--==============================
-    Team Area  
-    ==============================-->
-    <div class="team-area-1 space">
-        <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-bottom="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape2.png') }}">
-        </div>
-        <div class="container">
-            <div class="row justify-content-between align-items-center">
-                <div class="col-lg-7 col-md-7">
-                    <div class="title-area text-md-start text-center">
-                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Filiales</span>
-                        <h2 class="sec-title">Meet our leadership</h2>
-                    </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="sec-btn">
-                        <a href="{{ route('kalystrat.apropos') }}" class="btn">Voir toute l'équipe <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="row gy-30 justify-content-center">
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card" data-bg-src="{{ asset('themes/construz/assets/img/bg/team-card-bg1-1.png') }}">
-                        <div class="team-card_content">
-                            <h4 class="team-card_title"><a href="{{ route('teamDetails') }}">Penelopa Miller</a>
-                            </h4>
-                            <span class="team-card_desig">Head of Production</span>
-                            <div class="team-social_wrap">
-                                <div class="social-btn">
-                                    <a href="https://facebook.com/"><i class="ri-facebook-fill"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
-                                    <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-card_img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-1.png') }}" alt="img">
-                        </div>
-                        <a href="tel:0023745671379" class="contact-btn-wrap">
-                            <span class="number">(+00) 347 456 1379</span>
-                            <div class="icon-btn"><i class="ri-phone-fill"></i></div>
-                        </a>                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card" data-bg-src="{{ asset('themes/construz/assets/img/bg/team-card-bg1-1.png') }}">
-                        <div class="team-card_content">
-                            <h4 class="team-card_title"><a href="{{ route('teamDetails') }}">Mark Ronaldo</a>
-                            </h4>
-                            <span class="team-card_desig">Sr. Engineer</span>
-                            <div class="team-social_wrap">
-                                <div class="social-btn">
-                                    <a href="https://facebook.com/"><i class="ri-facebook-fill"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
-                                    <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-card_img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-2.png') }}" alt="img">
-                        </div>
-                        <a href="tel:0023745671379" class="contact-btn-wrap">
-                            <span class="number">(+00) 347 456 1379</span>
-                            <div class="icon-btn"><i class="ri-phone-fill"></i></div>
-                        </a>                        
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="team-card" data-bg-src="{{ asset('themes/construz/assets/img/bg/team-card-bg1-1.png') }}">
-                        <div class="team-card_content">
-                            <h4 class="team-card_title"><a href="{{ route('teamDetails') }}">John Maxwell</a>
-                            </h4>
-                            <span class="team-card_desig">Project Management</span>
-                            <div class="team-social_wrap">
-                                <div class="social-btn">
-                                    <a href="https://facebook.com/"><i class="ri-facebook-fill"></i></a>
-                                    <a href="https://www.twitter.com/"><i class="ri-twitter-x-line"></i></a>
-                                    <a href="https://instagram.com/"><i class="ri-instagram-line"></i></a>                           
-                                </div>
-                            </div>
-                        </div>
-                        <div class="team-card_img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/team/team-1-3.png') }}" alt="img">
-                        </div>
-                        <a href="tel:0023745671379" class="contact-btn-wrap">
-                            <span class="number">(+00) 347 456 1379</span>
-                            <div class="icon-btn"><i class="ri-phone-fill"></i></div>
-                        </a>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <!--==============================
-    Client Area  
-    ==============================-->
-    <div class="client-area-1 text-center space overflow-hidden" data-bg-src="{{ asset('themes/construz/assets/img/bg/client-bg1-1.png') }}" data-overlay="title" data-opacity="9">
-        <div class="client_shape_1-1 shape-mockup jump-reverse" data-bottom="0%" data-right="-6%">
-            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/shape/client-bg-shape1.png') }}" alt="img">
-        </div>
-        <div class="container">
-            <div class="title-area text-center">
-                <span class="sub-title text-white"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Happy Clients</span>
-                <h2 class="sec-title text-white">Nos partenaires de confiance</h2>
-            </div>
-            <div class="row global-carousel client-slider1" data-slide-show="5" data-lg-slide-show="4" data-md-slide-show="3" data-sm-slide-show="2">
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-1.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-2.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-3.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-4.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-                <div class="col-lg-auto">
-                    <div class="client-logo">
-                        <a href="{{ route('index') }}"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/client/client-1-5.svg') }}" alt="img"></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> 
 
-    <!--==============================
-    Blog Area  
-    ==============================-->
-    <section class="blog-area-1 space">
-        <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
-        </div>
-        <div class="container">
-            <div class="row justify-content-lg-between justify-content-center align-items-center">
-                <div class="col-lg-6">
-                    <div class="title-area text-lg-start text-center">
-                        <span class="sub-title"><img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Latest News</span>
-                        <h2 class="sec-title">Recent news and events</h2>
-                    </div>
-                </div>
-                <div class="col-md-auto">
-                    <div class="sec-btn">
-                        <a href="{{ route('blog') }}" class="btn style-border">Voir toutes les nouvelles <i class="ri-arrow-right-up-line"></i></a>
-                    </div>
-                </div>
-            </div>
-            <div class="row global-carousel blog-slider slider-shadow" data-slide-show="3" data-lg-slide-show="2" data-md-slide-show="2" data-sm-slide-show="1" data-xs-slide-show="1" data-dots="false">
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">How to hire a contractor home renovation service</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">Started to develop a specific testing programs</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">How to stay motivated until a project is finished</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_1.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">How to hire a contractor home renovation service</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_2.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">Started to develop a specific testing programs</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <div class="blog-card">
-                        <div class="blog-img">
-                            <img loading="lazy" decoding="async" src="{{ asset('themes/construz/assets/img/blog/blog_1_3.png') }}" alt="blog image">
-                            <div class="blog-date">
-                                <a href="{{ route('blog') }}"><span>17</span>JUN</a>
-                                <div class="year">2024</div>
-                            </div>
-                        </div>
-                        <div class="blog-content">
-                            <div class="blog-meta">
-                                <a href="{{ route('blog') }}">By Rebecca</a>
-                                <a href="{{ route('blog') }}">Construction</a>
-                            </div>
-                            <h3 class="blog-title"><a href="{{ route('blogDetails') }}">How to stay motivated until a project is finished</a></h3>
-                            <p class="blog-text">Tortor posuere ac ut consequat. Tellusi elem isis etum sag ittis vitae et leo duis ut diam. Odio ut sem nulla phar.</p>
-                            <a href="{{ route('blogDetails') }}" class="btn">More Details <i class="ri-arrow-right-up-line"></i></a>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
     </main>
 
     <!--==============================
