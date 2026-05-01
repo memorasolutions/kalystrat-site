@@ -21,7 +21,11 @@ class KalystratController extends Controller
 
     public function carrieres()
     {
-        return view('kalystrat::pages.carrieres');
+        return view('kalystrat::pages.carrieres', [
+            'title' => 'Carrières',
+            'metaDescription' => "Carrières en construction à Québec (QC) : Kalystrat recrute via sa filiale Placement. Emplois RBQ/CCQ, main-d'œuvre qualifiée et intégration verticale.",
+            'ogTitle' => "Carrières Kalystrat : emplois construction QC RBQ/CCQ",
+        ]);
     }
 
     public function filiale(string $slug)

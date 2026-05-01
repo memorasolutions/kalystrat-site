@@ -18,7 +18,11 @@ class pagesController extends \App\Http\Controllers\Controller
 
     public function project()
     {
-        return view('frontend::pages.project');
+        return view('frontend::pages.project', [
+            'title' => 'Réalisations',
+            'metaDescription' => "Kalystrat, fondé en 2026 à Québec, dévoile ses réalisations Phase 1 avec transparence. Projets intégrés de A à Z grâce à ses 6 filiales spécialisées.",
+            'ogTitle' => "Réalisations Kalystrat : holding construction QC",
+        ]);
     }
 
     public function projectDetails()

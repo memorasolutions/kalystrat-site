@@ -2,6 +2,8 @@
 @extends('frontend::layout')
 
 @section('title', $title)
+@section('meta_description', $filiale['meta_description'] ?? "Kalystrat {$filiale['nom_court']} à Québec. Spécialiste en construction intégrée, filiale du holding Gestion Kalystrat Inc.")
+@section('og_title', $title)
 
 {{-- Pas de @section('breadcrumb*') volontairement : le hero ci-dessous porte le h1 unique de la page (évite double h1 WCAG 1.3.1) --}}
 

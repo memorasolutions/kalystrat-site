@@ -63,7 +63,11 @@ class HomeController extends \App\Http\Controllers\Controller
 
     public function contact()
     {
-        return view('frontend::contact');
+        return view('frontend::contact', [
+            'title' => 'Communiquez avec nous',
+            'metaDescription' => "Soumission gratuite à Québec (QC) avec Kalystrat. Contactez notre équipe pour un projet de construction intégré, de la fondation à la livraison finale.",
+            'ogTitle' => "Contact Kalystrat : soumission gratuite Québec",
+        ]);
     }
 
 }

@@ -1,7 +1,7 @@
 @extends('frontend::layout-v2')
 
 @section('title', 'FAQ - Kalystrat')
-@section('meta_description', '15 réponses fréquentes Kalystrat — holding québécois construction 6 filiales : RBQ, soumissions, méthodologie, services.')
+@section('meta_description', '15 réponses fréquentes sur Kalystrat, holding québécois de construction. Six filiales spécialisées, certifications RBQ et CCQ, méthodologie et soumissions.')
 
 @push('styles')
 <script type="application/ld+json">
@@ -64,7 +64,7 @@
 
 <div class="cta-area-5 space-bottom">
     <div class="container">
-        <div class="cta-wrap5" data-bg-src="{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}" style="background-image: url('{{ asset('assets/construz-new/img/bg/cta-bg5-1.png') }}');">
+        <div class="cta-wrap5" data-bg-src="{{ asset('assets/img/kalystrat/cta-quebec-1280w.jpg') }}" style="background-image: url('{{ asset('assets/img/kalystrat/cta-quebec-1280w.jpg') }}');">
             <h4 class="cta-title text-white">Une autre question ?</h4>
             <a class="btn style4" href="{{ route('contact') }}">NOUS CONTACTER <i class="ri-arrow-right-up-line"></i></a>
         </div>

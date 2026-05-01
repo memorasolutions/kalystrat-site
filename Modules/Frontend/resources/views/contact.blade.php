@@ -22,7 +22,7 @@
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-1.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/about-meeting.jpg') }}" alt="img">
                         </div>  
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-2.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/hero-skyline.jpg') }}" alt="img">
                         </div>  
                     </div>
                 </div>
@@ -50,7 +50,7 @@
                             <div class="contact-page-card-text"><i class="ri-time-line"></i>Lun - Ven 8h00 - 17h00</div>
                         </div>
                         <div class="contact-page-card-thumb">
-                            <img src="{{ asset('themes/construz/assets/img/normal/contact_page1-3.png') }}" alt="img">
+                            <img src="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.jpg') }}" alt="img">
                         </div>  
                     </div>
                 </div>
@@ -64,7 +64,7 @@
     ==============================-->
     <section class="contact-area-2 space-bottom overflow-hidden">        
         <div class="container">
-            <div class="contact-wrap2 space overflow-hidden" data-bg-src="{{ asset('themes/construz/assets/img/bg/contact-bg3-1.png') }}">
+            <div class="contact-wrap2 space overflow-hidden" data-bg-src="{{ asset('assets/img/kalystrat/project-blueprint.jpg') }}">
                 <div class="section-animation-shape1-1 shape-mockup animation-infinite" data-top="0" data-left="0" data-bg-src="{{ asset('themes/construz/assets/img/shape/global-line-shape1.png') }}">
                 </div>
                 <div class="row gy-60 justify-content-lg-end justify-content-center">
