@@ -38,6 +38,12 @@
   font-style: normal;
   font-display: swap;
 }
+/* Override variables Construz (--title-font, --body-font) pour neutraliser Titillium Web/Archivo
+   et permettre la suppression des Google Fonts (gain ~800ms render-blocking). */
+:root {
+  --title-font: 'Akzidenz Grotesk', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  --body-font: 'Akzidenz Grotesk', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
+}
 body, h1, h2, h3, h4, h5, h6 {
   font-family: 'Akzidenz Grotesk', system-ui, -apple-system, 'Helvetica Neue', Arial, sans-serif;
 }
