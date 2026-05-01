@@ -224,14 +224,34 @@ html, body { overflow-x: hidden !important; }
   -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
 }
+.ks-header__logo-link {
+  position: relative;
+  display: inline-block;
+  width: 175px;
+  height: 46px;
+}
 .ks-header__logo-img {
+  position: absolute;
+  inset: 0;
   max-width: 175px;
   height: auto;
   display: block;
-  transition: max-width 0.3s ease;
+  transition: max-width 0.3s ease, opacity 0.25s ease;
+}
+.ks-header__logo-img--dark {
+  opacity: 0;
+}
+.ks-header.scrolled .ks-header__logo-img--light {
+  opacity: 0;
+}
+.ks-header.scrolled .ks-header__logo-img--dark {
+  opacity: 1;
 }
 .ks-header.scrolled .ks-header__logo-img {
   max-width: 140px;
+}
+.ks-header.scrolled .ks-header__logo-link {
+  width: 140px;
 }
 .ks-header__nav-list {
   gap: 28px;

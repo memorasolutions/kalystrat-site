@@ -31,6 +31,10 @@ Route::controller(HomeController::class)->group(function () {
     Route::get('/contact', 'contact')->name('contact');
 });
 
+Route::post('/contact', [\Modules\Frontend\Http\Controllers\ContactController::class, 'store'])
+    ->name('contact.store')
+    ->middleware('throttle:5,1');
+
 Route::controller(newsController::class)->group(function () {
     Route::get('/blog', 'blog')->name('blog');
     Route::get('/blog-details', 'blogDetails')->name('blogDetails');

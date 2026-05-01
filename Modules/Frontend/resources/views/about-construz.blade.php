@@ -52,7 +52,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/bootstrap.min.css') }}">
     <!-- Fontawesome Icon -->
-    <link rel="stylesheet" href="assets/fonts/remixicon.css') }}">
+    <link rel="stylesheet" href="{{ asset('themes/construz/assets/fonts/remixicon.css') }}">
     <!-- Magnific Popup -->
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/magnific-popup.min.css') }}">
     <!-- Slick Slider -->
@@ -483,8 +483,8 @@
                 </div>
                 <div class="col-xl-6">
                     <div class="title-area mb-25">
-                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">À PROPOS</span>
-                        <h2 class="sec-title">NOUS CONSTRUISONS TOUT CE DONT VOUS AVEZ BESOIN</h2>
+                        <span class="sub-title"><img src="{{ asset('assets/construz-new/img/icon/section-subtitle-icon.svg') }}" alt="img">À propos</span>
+                        <h2 class="sec-title">Nous construisons tout ce dont vous avez besoin</h2>
                         <p class="sec-text">6 filiales spécialisées en synergie sous une marque unifiée. De la fondation à la livraison clés en main au Québec.  
                         </p>
                     </div>
@@ -844,8 +844,8 @@
                             <h3 class="widget_title">À propos</h3>
                             <p class="about-text">Gestion Kalystrat Inc. est un holding québécois regroupant six filiales spécialisées en construction.</p>
                             <h4 class="about-year">Depuis 2026</h4>
-                            <h5 class="about-subtitle">NOUS SOMMES DISPONIBLES</h5>
-                            <p class="about-text"><span class="text-theme">Lun-Ven :</span> 10:00am to 07:30pm</p>
+                            <h5 class="about-subtitle">Nous sommes disponibles</h5>
+                            <p class="about-text"><span class="text-theme">Lun-Ven :</span> 8 h 00 à 17 h 00</p>
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-auto">

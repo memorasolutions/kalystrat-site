@@ -74,45 +74,56 @@
                                 <span class="sub-title text-theme"><img src="{{ asset('themes/construz/assets/img/icon/section-subtitle-icon.svg') }}" alt="img">Demande de soumission </span>
                                 <h2 class="sec-title">Vous avez un projet en tête?</h2>
                             </div>
-                            <form action="mail.php" method="POST" class="contact-form ajax-contact">
+                            @if (session('success'))
+                                <div class="alert alert-success" role="alert">{{ session('success') }}</div>
+                            @endif
+                            @if ($errors->any())
+                                <div class="alert alert-danger" role="alert">
+                                    <ul class="mb-0">
+                                        @foreach ($errors->all() as $err)<li>{{ $err }}</li>@endforeach
+                                    </ul>
+                                </div>
+                            @endif
+                            <form action="{{ route('contact.store') }}" method="POST" class="contact-form">
+                                @csrf
                                 <div class="row gy-4">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="text" class="form-control" name="name" id="name" placeholder="Nom complet" autocomplete="name" required aria-label="Nom complet">
+                                            <input type="text" class="form-control" name="nom" id="nom" placeholder="Nom complet" autocomplete="name" required aria-label="Nom complet" value="{{ old('nom') }}" maxlength="120">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel" autocomplete="email">
+                                            <input type="email" class="form-control" name="email" id="email" placeholder="Courriel" autocomplete="email" required aria-label="Courriel" value="{{ old('email') }}" maxlength="180">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <input type="tel" class="form-control" name="number" id="number" placeholder="Téléphone" autocomplete="tel">
+                                            <input type="tel" class="form-control" name="telephone" id="telephone" placeholder="Téléphone" autocomplete="tel" aria-label="Téléphone" value="{{ old('telephone') }}" maxlength="30">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <select name="subject" id="subject" class="single-select nice-select form-select">
-                                                <option value="" disabled selected hidden>Type de demande</option>
-                                                <option value="Fondations">Kalystrat Fondations (excavation, coffrage)</option>
-                                                <option value="Structure">Kalystrat Structure (charpente)</option>
-                                                <option value="Toiture">Kalystrat Toiture et Enveloppe</option>
-                                                <option value="Finition">Kalystrat Finition Intérieure</option>
+                                            <select name="filiale" id="filiale" class="form-select" aria-label="Filiale concernée">
+                                                <option value="" selected>Type de demande (filiale)</option>
+                                                <option value="fondations" @selected(old('filiale')==='fondations')>Kalystrat Fondations</option>
+                                                <option value="structure" @selected(old('filiale')==='structure')>Kalystrat Structure</option>
+                                                <option value="toiture" @selected(old('filiale')==='toiture')>Kalystrat Toiture et Enveloppe</option>
+                                                <option value="finition" @selected(old('filiale')==='finition')>Kalystrat Finition Intérieure</option>
+                                                <option value="immobilier" @selected(old('filiale')==='immobilier')>Kalystrat Immobilier</option>
+                                                <option value="placement" @selected(old('filiale')==='placement')>Kalystrat Placement Construction</option>
                                             </select>
                                         </div>
                                     </div>
-                                    
                                     <div class="col-12">
-                                        <div class="form-group ">
-                                            <textarea name="message" id="message" cols="30" rows="3" class="form-control" placeholder="Votre message..."></textarea>
+                                        <div class="form-group">
+                                            <textarea name="message" id="message" cols="30" rows="4" class="form-control" placeholder="Votre message" required aria-label="Message" minlength="10" maxlength="3000">{{ old('message') }}</textarea>
                                         </div>
                                     </div>
                                     <div class="form-btn col-12">
                                         <button type="submit" class="btn w-100">Envoyer <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
                                     </div>
                                 </div>
-                                <p class="form-messages mb-0 mt-3"></p>
                             </form>
                         </div>
                     </div>            

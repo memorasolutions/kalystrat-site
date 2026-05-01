@@ -2,10 +2,11 @@
     <div class="container">
         <div class="row align-items-center justify-content-between gx-3">
 
-            {{-- Logo Kalystrat --}}
+            {{-- Logo Kalystrat (swap blanc/navy selon scroll) --}}
             <div class="col-auto">
                 <a href="{{ route('index') }}" class="ks-header__logo-link" aria-label="Accueil - Kalystrat">
-                    <img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="Logo Kalystrat" width="175" height="46" class="ks-header__logo-img">
+                    <img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Logo Kalystrat" width="175" height="46" class="ks-header__logo-img ks-header__logo-img--light">
+                    <img src="{{ asset('assets/img/kalystrat/logo-header.svg') }}" alt="" aria-hidden="true" width="175" height="46" class="ks-header__logo-img ks-header__logo-img--dark">
                 </a>
             </div>
 

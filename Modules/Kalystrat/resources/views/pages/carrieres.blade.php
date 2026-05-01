@@ -105,64 +105,66 @@
 
         <section role="region" aria-labelledby="form-heading" class="mb-5">
             <h2 id="form-heading" class="text-center mb-4" style="color: #0A1628;">Postuler maintenant</h2>
-            <form action="mail.php" method="POST" class="contact-form ajax-contact" novalidate>
+            @if (session('success'))
+                <div class="alert alert-success" role="alert">{{ session('success') }}</div>
+            @endif
+            @if ($errors->any())
+                <div class="alert alert-danger" role="alert">
+                    <ul class="mb-0">
+                        @foreach ($errors->all() as $err)<li>{{ $err }}</li>@endforeach
+                    </ul>
+                </div>
+            @endif
+            <form action="{{ route('carrieres.store') }}" method="POST" class="contact-form" novalidate>
+                @csrf
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label for="nom" class="form-label visually-hidden">Nom complet</label>
-                        <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom complet" required autocomplete="name" aria-label="Nom complet">
+                        <input type="text" id="nom" name="nom" class="form-control" placeholder="Nom complet" required autocomplete="name" aria-label="Nom complet" value="{{ old('nom') }}" maxlength="120">
                     </div>
                     <div class="col-md-6">
                         <label for="courriel" class="form-label visually-hidden">Courriel</label>
-                        <input type="email" id="courriel" name="courriel" class="form-control" placeholder="Courriel" required autocomplete="email" aria-label="Courriel">
+                        <input type="email" id="courriel" name="courriel" class="form-control" placeholder="Courriel" required autocomplete="email" aria-label="Courriel" value="{{ old('courriel') }}" maxlength="180">
                     </div>
                     <div class="col-md-6">
                         <label for="telephone" class="form-label visually-hidden">Téléphone</label>
-                        <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Téléphone" required autocomplete="tel" aria-label="Téléphone">
+                        <input type="tel" id="telephone" name="telephone" class="form-control" placeholder="Téléphone" required autocomplete="tel" aria-label="Téléphone" value="{{ old('telephone') }}" maxlength="30">
                     </div>
                     <div class="col-md-6">
                         <label for="metier" class="form-label visually-hidden">Métier</label>
                         <select id="metier" name="metier" class="form-select" required aria-label="Métier">
-                            <option value="" disabled selected hidden>Métier souhaité</option>
-                            <option value="Charpentier-menuisier">Charpentier-menuisier</option>
-                            <option value="Couvreur">Couvreur</option>
-                            <option value="Coffreur-bétonneur">Coffreur-bétonneur</option>
-                            <option value="Finisseur de béton">Finisseur de béton</option>
-                            <option value="Plâtrier-peintre">Plâtrier-peintre</option>
-                            <option value="Ébéniste">Ébéniste</option>
-                            <option value="Chef d'équipe">Chef d'équipe</option>
-                            <option value="Apprenti (programme PAMT)">Apprenti (programme PAMT)</option>
-                            <option value="Autre">Autre</option>
+                            <option value="" disabled @selected(!old('metier')) hidden>Métier souhaité</option>
+                            @foreach(['Charpentier-menuisier','Couvreur','Coffreur-bétonneur','Finisseur de béton','Plâtrier-peintre','Ébéniste','Chef d\'équipe','Apprenti (programme PAMT)','Autre'] as $m)
+                                <option value="{{ $m }}" @selected(old('metier')===$m)>{{ $m }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="experience" class="form-label visually-hidden">Expérience</label>
                         <select id="experience" name="experience" class="form-select" required aria-label="Expérience">
-                            <option value="" disabled selected hidden>Niveau d'expérience</option>
-                            <option value="Apprenti / sans expérience">Apprenti / sans expérience</option>
-                            <option value="1-3 ans">1-3 ans</option>
-                            <option value="4-10 ans">4-10 ans</option>
-                            <option value="10+ ans">10+ ans</option>
+                            <option value="" disabled @selected(!old('experience')) hidden>Niveau d'expérience</option>
+                            @foreach(['Apprenti / sans expérience','1-3 ans','4-10 ans','10+ ans'] as $e)
+                                <option value="{{ $e }}" @selected(old('experience')===$e)>{{ $e }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-md-6">
                         <label for="disponibilite" class="form-label visually-hidden">Disponibilité</label>
                         <select id="disponibilite" name="disponibilite" class="form-select" required aria-label="Disponibilité">
-                            <option value="" disabled selected hidden>Disponibilité</option>
-                            <option value="Immédiate">Immédiate</option>
-                            <option value="Sous 2 semaines">Sous 2 semaines</option>
-                            <option value="Sous 1 mois">Sous 1 mois</option>
-                            <option value="Plus tard">Plus tard</option>
+                            <option value="" disabled @selected(!old('disponibilite')) hidden>Disponibilité</option>
+                            @foreach(['Immédiate','Sous 2 semaines','Sous 1 mois','Plus tard'] as $d)
+                                <option value="{{ $d }}" @selected(old('disponibilite')===$d)>{{ $d }}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="col-12">
                         <label for="message" class="form-label visually-hidden">Message</label>
-                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Votre message..." required aria-label="Message"></textarea>
+                        <textarea id="message" name="message" class="form-control" rows="4" placeholder="Votre message..." required aria-label="Message" minlength="10" maxlength="3000">{{ old('message') }}</textarea>
                     </div>
                     <div class="col-12 text-center">
                         <button type="submit" class="btn btn-lg px-5 py-3" style="background-color: #B8A472; border-color: #B8A472; color: #0A1628;">Envoyer ma candidature <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
                     </div>
                 </div>
-                <p class="form-messages mb-0 mt-3"></p>
             </form>
         </section>
 
