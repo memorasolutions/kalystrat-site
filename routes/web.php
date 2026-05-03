@@ -10,9 +10,8 @@ declare(strict_types=1);
 
 use Illuminate\Support\Facades\Route;
 use Modules\Core\Http\Controllers\PwaController;
-use Modules\SEO\Http\Controllers\SitemapController;
-// Sitemap dynamique
-Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
+// Sitemap dynamique : route déclarée dans Modules/SEO/routes/web.php (évite duplication)
 
 // Passkeys (spatie/laravel-passkeys)
 Route::passkeys();

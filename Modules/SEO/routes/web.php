@@ -16,11 +16,10 @@ use Spatie\Sitemap\Sitemap;
 use Spatie\Sitemap\Tags\Url;
 
 Route::middleware('web')->group(function () {
-    // Kalystrat P21 fix : route Laravel sert le fichier statique public/robots.txt en 200 OK.
-    // Sans cette route, nginx Herd intercepte et NotFoundHttpException retourne 404 avec body weird.
+    // Kalystrat AEO/GEO 2026 : fichiers SEO servis via storage/app/seo (Herd nginx renvoie 404 sur /public).
     // Fallback dynamique via SeoService si fichier statique absent (portabilité).
     Route::get('/robots.txt', function () {
-        $path = public_path('robots.txt');
+        $path = storage_path('app/seo/robots.txt');
         $content = file_exists($path)
             ? file_get_contents($path)
             : app(SeoService::class)->generateRobotsTxt();
@@ -28,19 +27,33 @@ Route::middleware('web')->group(function () {
         return response($content, 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
     })->name('robots');
 
+    Route::get('/llms.txt', function () {
+        $path = storage_path('app/seo/llms.txt');
+        abort_unless(file_exists($path), 404);
+
+        return response(file_get_contents($path), 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+    })->name('llms');
+
+    Route::get('/llms-full.txt', function () {
+        $path = storage_path('app/seo/llms-full.txt');
+        abort_unless(file_exists($path), 404);
+
+        return response(file_get_contents($path), 200, ['Content-Type' => 'text/plain; charset=UTF-8']);
+    })->name('llms-full');
+
     Route::get('/sitemap.xml', function () {
         // P22-S20e Sitemap Kalystrat : pages publiques actives + 6 filiales dynamiques.
         $sitemap = Sitemap::create()
             ->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
-            ->add(Url::create('/a-propos')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/service')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/project')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/carrieres')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
-            ->add(Url::create('/contact')->setPriority(0.6)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
-            ->add(Url::create('/faq')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            ->add(Url::create('/a-propos')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
+            ->add(Url::create('/services')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
+            ->add(Url::create('/realisations')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
+            ->add(Url::create('/carrieres')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
+            ->add(Url::create('/contact')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
+            ->add(Url::create('/faq')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
 
         foreach (array_keys(config('kalystrat.filiales', [])) as $slug) {
-            $sitemap->add(Url::create('/filiales/'.$slug)->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+            $sitemap->add(Url::create('/filiales/'.$slug)->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
 
         if (class_exists(Article::class)) {

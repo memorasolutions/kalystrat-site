@@ -1,20 +1,7 @@
 {
-    "name": "nwidart/frontend",
-    "description": "",
-    "authors": [
-        {
-            "name": "Nicolas Widart",
-            "email": "n.widart@gmail.com"
-        }
-    ],
-    "extra": {
-        "laravel": {
-            "providers": [],
-            "aliases": {
-
-            }
-        }
-    },
+    "name": "kalystrat/frontend",
+    "description": "Module Frontend Kalystrat (Construz home-5 rebuild).",
+    "type": "laravel-module",
     "autoload": {
         "psr-4": {
             "Modules\\Frontend\\": "app/",
@@ -22,9 +9,10 @@
             "Modules\\Frontend\\Database\\Seeders\\": "database/seeders/"
         }
     },
-    "autoload-dev": {
-        "psr-4": {
-            "Modules\\Frontend\\Tests\\": "tests/"
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
         }
     }
 }

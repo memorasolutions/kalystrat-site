@@ -1,7 +1,7 @@
 {
     "name": "Frontend",
     "alias": "frontend",
-    "description": "",
+    "description": "Module Frontend Kalystrat (rebuild 2026-05-01 sur base Construz home-5).",
     "keywords": [],
     "priority": 0,
     "providers": [

@@ -59,6 +59,6 @@ return [
     ],
     [
         'question' => 'Comment contacter Kalystrat ?',
-        'answer'   => "Vous pouvez contacter Kalystrat par téléphone au 1-581-578-6145, par courriel à info@kalystrat.ca ou via le formulaire de contact sur le site officiel kalystrat.ca. Basé à Québec, le siège du groupe assure un suivi rapide et personnalisé pour toute demande d'information, de soumission ou de partenariat. L'équipe est disponible du lundi au vendredi, de 8 h à 17 h.",
+        'answer'   => "Vous pouvez contacter Kalystrat par téléphone au 418-476-0987, par courriel à info@kalystrat.ca ou via le formulaire de contact sur le site officiel kalystrat.ca. Basé à Québec, le siège du groupe assure un suivi rapide et personnalisé pour toute demande d'information, de soumission ou de partenariat. L'équipe est disponible du lundi au vendredi, de 8 h à 17 h.",
     ],
 ];

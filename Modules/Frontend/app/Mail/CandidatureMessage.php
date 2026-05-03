@@ -9,7 +9,7 @@ use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMessage extends Mailable implements ShouldQueue
+class CandidatureMessage extends Mailable implements ShouldQueue
 {
     use Queueable, SerializesModels;
 
@@ -17,16 +17,14 @@ class ContactMessage extends Mailable implements ShouldQueue
 
     public function envelope(): Envelope
     {
-        $filiale = $this->data['filiale'] ?? 'général';
-
         return new Envelope(
-            subject: "Nouveau contact Kalystrat – {$filiale}",
-            replyTo: [$this->data['email']],
+            subject: "Candidature Kalystrat – {$this->data['metier']}",
+            replyTo: [$this->data['courriel']],
         );
     }
 
     public function content(): Content
     {
-        return new Content(view: 'frontend::emails.contact', with: $this->data);
+        return new Content(view: 'frontend::emails.candidature', with: $this->data);
     }
 }

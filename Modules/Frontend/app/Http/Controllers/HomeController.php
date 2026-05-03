@@ -2,72 +2,16 @@
 
 namespace Modules\Frontend\Http\Controllers;
 
-use Illuminate\Http\Request;
-
 class HomeController extends \App\Http\Controllers\Controller
 {
     public function index()
     {
-        return view('frontend::home.index');
-    }
-    
-    public function home1Op()
-    {
-        return view('frontend::home.home1Op');
-    }
-
-    public function home2Op()
-    {
-        return view('frontend::home.home2Op');
-    }
-
-    public function home3Op()
-    {
-        return view('frontend::home.home3Op');
-    }
-
-    public function home4Op()
-    {
-        return view('frontend::home.home4Op');
-    }
-
-    public function home5Op()
-    {
-        return view('frontend::home.home5Op');
-    }
-
-    public function home2()
-    {
-        return view('frontend::home.home2');
-    }
-
-    public function home3()
-    {
-        return view('frontend::home.home3');
-    }
-
-    public function home4()
-    {
-        return view('frontend::home.home4');
-    }
-
-    public function home5()
-    {
-        return view('frontend::home.home5');
-    }   
-
-    public function about()
-    {
-        return view('frontend::about');
-    }
-
-    public function contact()
-    {
-        return view('frontend::contact', [
-            'title' => 'Communiquez avec nous',
-            'metaDescription' => "Soumission gratuite à Québec (QC) avec Kalystrat. Contactez notre équipe pour un projet de construction intégré, de la fondation à la livraison finale.",
-            'ogTitle' => "Contact Kalystrat : soumission gratuite Québec",
+        return view('frontend::home', [
+            'title' => 'Kalystrat – Groupe québécois de construction à intégration verticale',
+            'metaDescription' => 'Kalystrat regroupe six filiales spécialisées en construction au Québec : fondations, structure, toiture, finition intérieure, immobilier et placement de main-d\'œuvre.',
+            'ogTitle' => 'Kalystrat – Groupe construction Québec',
+            'ogImage' => asset('assets/img/kalystrat/og-image.jpg'),
+            'canonical' => route('index'),
         ]);
     }
-
 }
