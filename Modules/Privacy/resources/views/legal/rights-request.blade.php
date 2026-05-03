@@ -1,9 +1,11 @@
 {{-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca --}}
 @extends(config('privacy.layout') ?: 'privacy::layouts.legal')
 @section('title', __('Exercer vos droits'))
+@section('banner-title', __('Exercer vos droits'))
+@section('banner-crumb', __('Exercer vos droits'))
 @section('legal-content')
 <div class="prose max-w-none mx-auto">
-    <h1>{{ __('Exercer vos droits') }}</h1>
+    <h2 class="ks-legal-title">{{ __('Exercer vos droits') }}</h2>
 
     @if (session('success'))
         <div class="mb-6 rounded-md bg-green-50 border-l-4 border-green-400 p-4" role="alert">

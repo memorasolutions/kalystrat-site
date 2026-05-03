@@ -1,6 +1,8 @@
 {{-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca --}}
 @extends(config('privacy.layout') ?: 'privacy::layouts.legal')
 @section('title', __('Politique des cookies'))
+@section('banner-title', __('Politique des cookies'))
+@section('banner-crumb', __('Politique des cookies'))
 @section('legal-content')
 @php
     $locale = app()->getLocale();
@@ -11,7 +13,7 @@
 @endphp
 
 <div class="prose max-w-none mx-auto">
-    <h1>{{ __('Politique des cookies') }}</h1>
+    <h2 class="ks-legal-title">{{ __('Politique des cookies') }}</h2>
     <p class="text-sm text-gray-500">
         <strong>{{ __('Version') }} :</strong> {{ $doc['version'] }}<br>
         <strong>{{ __('Dernière mise à jour') }} :</strong> {{ $doc['updated_at'] }}

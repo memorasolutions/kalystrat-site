@@ -1,6 +1,8 @@
 {{-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca --}}
 @extends(config('privacy.layout') ?: 'privacy::layouts.legal')
 @section('title', __('Conditions d\'utilisation'))
+@section('banner-title', __('Conditions d\'utilisation'))
+@section('banner-crumb', __('Conditions d\'utilisation'))
 @section('legal-content')
 @php
     $company = $config['company'];
@@ -8,7 +10,7 @@
 @endphp
 
 <div class="prose max-w-none mx-auto">
-    <h1>{{ __('Conditions d\'utilisation') }}</h1>
+    <h2 class="ks-legal-title">{{ __('Conditions d\'utilisation') }}</h2>
     <p class="text-sm text-gray-500">
         <strong>{{ __('Version') }} :</strong> {{ $doc['version'] }}<br>
         <strong>{{ __('Date d\'entree en vigueur') }} :</strong> {{ \Carbon\Carbon::parse($doc['updated_at'])->translatedFormat('d F Y') }}

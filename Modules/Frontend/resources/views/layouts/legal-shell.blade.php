@@ -26,7 +26,8 @@
         box-shadow: 0 1px 3px rgba(10, 22, 40, 0.05), 0 8px 24px rgba(10, 22, 40, 0.06);
         border: 1px solid #E8E2D0;
     }
-    .ks-legal-container h1 {
+    .ks-legal-container h1,
+    .ks-legal-container h2.ks-legal-title {
         color: #0A1628;
         font-size: 2.25rem;
         font-weight: 700;
@@ -34,6 +35,9 @@
         margin-bottom: 0.75rem;
         padding-bottom: 1rem;
         border-bottom: 3px solid #B8A472;
+        margin-top: 0;
+        padding-left: 0;
+        border-left: 0;
     }
     .ks-legal-container h2 {
         color: #0A1628;
@@ -124,6 +128,18 @@
 @endpush
 
 @section('content')
+@php
+    $legalBannerTitle = htmlspecialchars_decode($__env->yieldContent('banner-title', 'Documents légaux'), ENT_QUOTES);
+    $legalBannerCrumb = htmlspecialchars_decode($__env->yieldContent('banner-crumb', $legalBannerTitle), ENT_QUOTES);
+@endphp
+@include('frontend::partials.page-banner', [
+    'title' => $legalBannerTitle,
+    'breadcrumbs' => [
+        ['label' => 'Accueil', 'url' => route('index')],
+        ['label' => $legalBannerCrumb, 'url' => null],
+    ],
+])
+
 <div class="ks-legal-wrapper">
     <div class="container">
         <div class="ks-legal-container">

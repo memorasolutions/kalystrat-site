@@ -1,6 +1,8 @@
 {{-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca --}}
 @extends(config('privacy.layout') ?: 'privacy::layouts.legal')
 @section('title', __('Politique de confidentialite'))
+@section('banner-title', __('Politique de confidentialite'))
+@section('banner-crumb', __('Politique de confidentialite'))
 @section('legal-content')
 @php
     $locale = app()->getLocale();
@@ -21,7 +23,7 @@
 @endphp
 
 <div class="prose max-w-none mx-auto">
-    <h1 id="top">{{ __('Politique de confidentialite') }}</h1>
+    <h2 id="top" class="ks-legal-title">{{ __('Politique de confidentialite') }}</h2>
     <p class="text-sm text-gray-500">
         <strong>{{ __('Version') }} :</strong> {{ $doc['version'] }}<br>
         <strong>{{ __('Dernière mise à jour') }} :</strong> {{ \Carbon\Carbon::parse($doc['updated_at'])->translatedFormat('d F Y') }}
