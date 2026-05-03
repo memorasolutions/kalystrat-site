@@ -1405,8 +1405,8 @@
             <div class="ks-footer__bottom-inner">
                 <p class="ks-footer__copyright">© 2026 Gestion Kalystrat Inc. Tous droits réservés. <span aria-hidden="true" style="margin: 0 0.5rem; opacity: 0.4;">·</span> <span style="color: rgba(212, 196, 152, 0.95); font-size: 0.75rem; letter-spacing: 0.04em;">Conçu et hébergé par <a href="https://memora.solutions" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline; text-decoration-color: rgba(212, 196, 152, 0.4); text-underline-offset: 2px;">MEMORA</a>, compagnie du Québec.</span></p>
                 <nav class="ks-footer__legal" aria-label="Liens légaux et conformité">
-                    <a href="{{ url('/privacy-policy') }}">Politique de confidentialité</a>
-                    <a href="{{ url('/terms-of-use') }}">Conditions d'utilisation</a>
+                    <a href="{{ route('legal.privacy') }}">Politique de confidentialité</a>
+                    <a href="{{ route('legal.terms') }}">Conditions d'utilisation</a>
                     <a href="{{ url('/credits') }}">Crédits photos</a>
                     <a href="/llms.txt" rel="alternate" type="text/plain">LLMs.txt</a>
                 </nav>

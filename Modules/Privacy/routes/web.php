@@ -16,14 +16,20 @@ use Modules\Privacy\Http\Controllers\CookieConsentController;
 use Modules\Privacy\Http\Controllers\LegalController;
 use Modules\Privacy\Http\Controllers\UserConsentController;
 
-// Legal pages (public, no auth required)
+// Legal pages — URLs canoniques FR-CA (cohérence avec le reste du site Kalystrat)
 Route::controller(LegalController::class)->group(function () {
-    Route::get('/privacy-policy', 'privacyPolicy')->name('legal.privacy');
-    Route::get('/terms-of-use', 'termsOfUse')->name('legal.terms');
-    Route::get('/cookie-policy', 'cookiePolicy')->name('legal.cookies');
-    Route::get('/rights-request', 'rightsRequest')->name('legal.rights');
-    Route::post('/rights-request', 'rightsRequestStore')->name('legal.rights.store');
+    Route::get('/politique-confidentialite', 'privacyPolicy')->name('legal.privacy');
+    Route::get('/conditions-utilisation', 'termsOfUse')->name('legal.terms');
+    Route::get('/politique-cookies', 'cookiePolicy')->name('legal.cookies');
+    Route::get('/demande-droits', 'rightsRequest')->name('legal.rights');
+    Route::post('/demande-droits', 'rightsRequestStore')->name('legal.rights.store');
 });
+
+// Redirects 301 depuis anciennes URLs EN (rétro-compat SEO si déjà indexées)
+Route::redirect('/privacy-policy', '/politique-confidentialite', 301);
+Route::redirect('/terms-of-use', '/conditions-utilisation', 301);
+Route::redirect('/cookie-policy', '/politique-cookies', 301);
+Route::redirect('/rights-request', '/demande-droits', 301);
 
 // Cookie consent management (GDPR / Loi 25 / CCPA)
 Route::prefix('cookie-consent')->controller(CookieConsentController::class)->group(function () {

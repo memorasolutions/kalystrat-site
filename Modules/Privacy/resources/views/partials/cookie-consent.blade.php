@@ -4,7 +4,7 @@
     $scripts = config('privacy.scripts', []);
     $cookieName = config('privacy.consent.cookie_name', 'consent_v1');
     $policyVersion = config('privacy.documents.privacy_policy.version', '1.0');
-    $policyUrl = config('privacy.documents.privacy_policy.url', '/privacy-policy');
+    $policyUrl = config('privacy.documents.privacy_policy.url', '/politique-confidentialite');
     $locale = app()->getLocale();
     $isFr = str_starts_with($locale, 'fr');
     $hasCookie = request()->cookie($cookieName);

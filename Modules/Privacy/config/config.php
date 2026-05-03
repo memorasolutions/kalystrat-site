@@ -43,17 +43,17 @@ return [
     'documents' => [
         'privacy_policy' => [
             'version' => '1.0',
-            'url' => '/privacy-policy',
+            'url' => '/politique-confidentialite',
             'updated_at' => '2026-03-12',
         ],
         'terms' => [
             'version' => '1.0',
-            'url' => '/terms-of-use',
+            'url' => '/conditions-utilisation',
             'updated_at' => '2026-03-12',
         ],
         'cookie_policy' => [
             'version' => '1.0',
-            'url' => '/cookie-policy',
+            'url' => '/politique-cookies',
             'updated_at' => '2026-03-12',
         ],
     ],

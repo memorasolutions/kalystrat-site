@@ -119,7 +119,7 @@
         </table>
     </div>
     <p class="text-sm mt-2">
-        {{ __('Pour plus de details, consultez notre') }} <a href="{{ url('/cookie-policy') }}">{{ __('politique des cookies') }}</a>.
+        {{ __('Pour plus de details, consultez notre') }} <a href="{{ route('legal.cookies') }}">{{ __('politique des cookies') }}</a>.
     </p>
 
     <h2 id="sharing">{{ __('7. Communication et transferts de donnees') }}</h2>
