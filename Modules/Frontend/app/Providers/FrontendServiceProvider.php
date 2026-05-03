@@ -2,6 +2,7 @@
 
 namespace Modules\Frontend\Providers;
 
+use Illuminate\Support\Facades\Blade;
 use Nwidart\Modules\Support\ModuleServiceProvider;
 
 class FrontendServiceProvider extends ModuleServiceProvider
@@ -12,4 +13,14 @@ class FrontendServiceProvider extends ModuleServiceProvider
     protected array $providers = [
         RouteServiceProvider::class,
     ];
+
+    public function boot(): void
+    {
+        parent::boot();
+
+        Blade::anonymousComponentPath(
+            module_path($this->name, 'resources/views/components'),
+            $this->nameLower
+        );
+    }
 }

@@ -1284,15 +1284,18 @@
                     <li class="ks-header__nav-item"><a href="{{ url('/services') }}" class="ks-header__nav-link">Services</a></li>
                     <li class="ks-header__nav-item"><a href="{{ url('/realisations') }}" class="ks-header__nav-link">Réalisations</a></li>
                     <li class="ks-header__nav-item">
-                        <button type="button" class="ks-header__nav-link" aria-haspopup="true" aria-expanded="false" aria-controls="ks-header-filiales-menu" data-ks-disclosure>Filiales <span class="ks-header__nav-arrow" aria-hidden="true">▾</span></button>
-                        <ul class="ks-header__dropdown" id="ks-header-filiales-menu">
+                        <x-frontend::disclosure
+                            id="ks-header-filiales-menu"
+                            label="Filiales"
+                            triggerClass="ks-header__nav-link"
+                            menuClass="ks-header__dropdown">
                             <li><a href="{{ url('/filiales/fondations') }}" class="ks-header__dropdown-link">Kalystrat Fondations</a></li>
                             <li><a href="{{ url('/filiales/structure') }}" class="ks-header__dropdown-link">Kalystrat Structure</a></li>
                             <li><a href="{{ url('/filiales/toiture') }}" class="ks-header__dropdown-link">Kalystrat Toiture et Enveloppe</a></li>
                             <li><a href="{{ url('/filiales/finition') }}" class="ks-header__dropdown-link">Kalystrat Finition Intérieure</a></li>
                             <li><a href="{{ url('/filiales/immobilier') }}" class="ks-header__dropdown-link">Kalystrat Immobilier</a></li>
                             <li><a href="{{ url('/filiales/placement') }}" class="ks-header__dropdown-link">Kalystrat Placement Construction</a></li>
-                        </ul>
+                        </x-frontend::disclosure>
                     </li>
                     <li class="ks-header__nav-item"><a href="{{ url('/faq') }}" class="ks-header__nav-link">FAQ</a></li>
                     <li class="ks-header__nav-item"><a href="{{ url('/carrieres') }}" class="ks-header__nav-link">Carrières</a></li>
