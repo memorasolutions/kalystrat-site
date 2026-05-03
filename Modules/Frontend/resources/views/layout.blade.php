@@ -92,8 +92,8 @@
             --ks-font: "Akzidenz Grotesk", "Helvetica Neue", Arial, sans-serif;
         }
         *, *::before, *::after { box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { margin: 0; padding: 0; font-family: var(--ks-font); color: var(--ks-navy); background: var(--ks-white); -webkit-font-smoothing: antialiased; }
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+        body { margin: 0; padding: 0; font-family: var(--ks-font); color: var(--ks-navy); background: var(--ks-white); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
         .ks-skip-link { position: absolute; top: -100%; left: 1rem; z-index: 10000; padding: 0.75rem 1.5rem; background: var(--ks-gold); color: var(--ks-navy); font-weight: 700; text-decoration: none; border-radius: 0 0 0.25rem 0.25rem; transition: top 0.2s ease; }
         .ks-skip-link:focus { top: 0; outline: 3px solid var(--ks-navy); outline-offset: 2px; }
         :focus-visible { outline: 3px solid var(--ks-gold); outline-offset: 3px; }
