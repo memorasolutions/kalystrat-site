@@ -4,8 +4,12 @@
 <meta name="description" content="Kalystrat – groupe québécois en construction à intégration verticale, porté par une décennie d'expertise terrain sous la conduite d'Ali Salomon. Six filiales spécialisées : Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction.">
 <meta name="dateModified" content="2026-05-01">
 
-{{-- Préchargement assets visuels home --}}
-<link rel="preload" href="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp?v=3') }}" as="image">
+{{-- Préchargement LCP slide hero #1 (AVIF prioritaire — 64KB vs 108KB WebP).
+     fetchpriority high pousse le navigateur à le prioriser au-dessus des autres preload. --}}
+<link rel="preload" href="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.avif') }}" as="image" type="image/avif" fetchpriority="high">
+
+{{-- Preconnect CDN remixicon (deferred ailleurs, mais DNS lookup amorcé tôt) --}}
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
 {{-- Magnific Popup, Slick, Nice Select pour les widgets de la home --}}
 <link rel="stylesheet" href="{{ asset('assets/construz-new/css/magnific-popup.min.css') }}">
@@ -91,7 +95,7 @@
         {{-- hero_shape_5_1 (toît décoratif Construz) retiré : élément hors-marque suggérant uniquement toiture, alors que Kalystrat = 6 filiales --}}
         {{-- WCAG 2.2.2 satisfaite par absence d'autoplay (pas de mouvement automatique = règle inapplicable). Navigation manuelle via dots. --}}
         <div class="hero-slider5 global-carousel" data-slide-show="1" data-fade="true" data-dots="true" data-autoplay="false">
-            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp?v=3') }}'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+            <div class="hero-slide" style="background-image: image-set(url('{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.avif') }}') type('image/avif'), url('{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp?v=3') }}') type('image/webp'), url('{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.jpg') }}') type('image/jpeg')); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
@@ -125,7 +129,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/kalystrat/hero/slide-2-vieux-quebec.webp?v=3') }}'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+            <div class="hero-slide" style="background-image: image-set(url('{{ asset('assets/img/kalystrat/hero/slide-2-vieux-quebec.avif') }}') type('image/avif'), url('{{ asset('assets/img/kalystrat/hero/slide-2-vieux-quebec.webp?v=3') }}') type('image/webp'), url('{{ asset('assets/img/kalystrat/hero/slide-2-vieux-quebec.jpg') }}') type('image/jpeg')); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
@@ -159,7 +163,7 @@
                     </div>
                 </div>
             </div>
-            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/kalystrat/hero/slide-3-excavator.webp?v=3') }}'); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
+            <div class="hero-slide" style="background-image: image-set(url('{{ asset('assets/img/kalystrat/hero/slide-3-excavator.avif') }}') type('image/avif'), url('{{ asset('assets/img/kalystrat/hero/slide-3-excavator.webp?v=3') }}') type('image/webp'), url('{{ asset('assets/img/kalystrat/hero/slide-3-excavator.jpg') }}') type('image/jpeg')); background-size: cover; background-position: center bottom; background-repeat: no-repeat;">
                 <div class="container">
                     <div class="hero-style5">
                         <div class="row align-items-center">
