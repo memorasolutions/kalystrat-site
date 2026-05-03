@@ -23,7 +23,6 @@
 
 <div class="ks-page-banner breadcumb-wrapper"
      style="background-image: url('{{ asset($bannerImage) }}'); background-size: cover; background-position: center; background-color: #0A1628; color: #FFFFFF;"
-     role="banner"
      aria-label="En-tête de page : {{ $bannerTitle }}">
     <div class="container">
         <div class="ks-page-banner__content breadcumb-content text-center">

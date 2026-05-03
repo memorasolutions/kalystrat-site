@@ -1271,7 +1271,7 @@
 <body>
     <a href="#contenu-principal" class="ks-skip-link">Aller au contenu principal</a>
 
-    <header class="ks-header" id="ks-header" role="banner">
+    <header class="ks-header" id="ks-header">
         <div class="ks-header__inner">
             <a href="{{ url('/') }}" class="ks-header__logo" aria-label="Kalystrat – Retour à l'accueil">
                 <img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Logo Kalystrat" class="ks-header__logo-white" width="160" height="44">
@@ -1337,7 +1337,7 @@
         </a>
     </nav>
 
-    <main class="ks-main" id="contenu-principal" role="main">
+    <main class="ks-main" id="contenu-principal">
         @yield('content')
     </main>
 
@@ -1351,7 +1351,7 @@
         </div>
     </aside>
 
-    <footer class="ks-footer" role="contentinfo" aria-label="Pied de page Kalystrat">
+    <footer class="ks-footer" aria-label="Pied de page Kalystrat">
         <div class="ks-footer__grid">
             <div>
                 <h2 class="ks-footer__heading">À propos</h2>
