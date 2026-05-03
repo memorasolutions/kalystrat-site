@@ -1008,6 +1008,9 @@
 @endsection
 
 @push('scripts')
+{{-- Note : defer testé sur ces scripts mais empire le LCP (Lighthouse 64 vs 67 sans defer,
+     LCP 8.1s vs 6.0s) — Chrome re-priorise mal sur ce site. Defer retiré, polling jQuery
+     dans l'inline ci-dessous reste robuste si chargement asynchrone activé plus tard. --}}
 <script src="{{ asset('assets/construz-new/js/vendor/jquery-3.6.0.min.js') }}"></script>
 <script src="{{ asset('assets/construz-new/js/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('assets/construz-new/js/jquery.counterup.min.js') }}"></script>
@@ -1025,25 +1028,32 @@
 <script src="{{ asset('assets/construz-new/js/main.js') }}"></script>
 <script>
 /* a11y : Slick clone des slides → liens interactifs hors écran restent dans le DOM et sont focusables.
-   On bloque le focus tab sur slides non-actives via attribut HTML "inert" (standard moderne 2024). */
+   On bloque le focus tab sur slides non-actives via attribut HTML "inert" (standard moderne 2024).
+   Polling jQuery car les scripts externes sont en defer : ils s'exécutent APRÈS cet inline. */
 (function() {
-    if (typeof jQuery === 'undefined') return;
-    function applyInertToSlides() {
-        jQuery('.hero-slider5, .ks-tab-slide-wrap, .global-carousel').each(function() {
-            jQuery(this).find('.slick-slide').each(function() {
-                var $slide = jQuery(this);
-                if ($slide.hasClass('slick-active') || $slide.hasClass('slick-current')) {
-                    $slide.removeAttr('inert');
-                } else {
-                    $slide.attr('inert', '');
-                }
+    function tryInit() {
+        if (typeof jQuery === 'undefined' || typeof jQuery.fn.slick === 'undefined') {
+            setTimeout(tryInit, 50);
+            return;
+        }
+        function applyInertToSlides() {
+            jQuery('.hero-slider5, .ks-tab-slide-wrap, .global-carousel').each(function() {
+                jQuery(this).find('.slick-slide').each(function() {
+                    var $slide = jQuery(this);
+                    if ($slide.hasClass('slick-active') || $slide.hasClass('slick-current')) {
+                        $slide.removeAttr('inert');
+                    } else {
+                        $slide.attr('inert', '');
+                    }
+                });
             });
+        }
+        jQuery(document).ready(function() {
+            setTimeout(applyInertToSlides, 200);
+            jQuery('.hero-slider5, .ks-tab-slide-wrap, .global-carousel').on('afterChange init', applyInertToSlides);
         });
     }
-    jQuery(document).ready(function() {
-        setTimeout(applyInertToSlides, 200);
-        jQuery('.hero-slider5, .ks-tab-slide-wrap, .global-carousel').on('afterChange init', applyInertToSlides);
-    });
+    tryInit();
 })();
 </script>
 @endpush
