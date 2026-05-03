@@ -1,7 +1,7 @@
 {{-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca --}}
-@extends('privacy::layouts.legal')
+@extends(config('privacy.layout') ?: 'privacy::layouts.legal')
 @section('title', __('Conditions d\'utilisation'))
-@section('content')
+@section('legal-content')
 @php
     $company = $config['company'];
     $doc = $config['documents']['terms'];

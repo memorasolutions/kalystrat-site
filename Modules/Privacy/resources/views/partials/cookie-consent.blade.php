@@ -58,9 +58,9 @@
     .cc-text { font-size: 0.9rem; margin: 0 0 1rem 0; opacity: 0.9; }
     .cc-link { color: inherit; text-decoration: underline; }
     .cc-actions { display: flex; gap: 0.75rem; flex-wrap: wrap; }
-    .cc-btn { flex: 1; min-width: 0; padding: 0.6rem 1rem; border-radius: 0.375rem; font-weight: 600; font-size: 0.9rem; cursor: pointer; border: none; text-align: center; transition: opacity 0.2s; white-space: nowrap; }
+    .cc-btn { flex: 1; min-width: 0; min-height: 44px; padding: 0.75rem 1rem; border-radius: 0.375rem; font-weight: 600; font-size: 0.9rem; cursor: pointer; border: none; text-align: center; transition: opacity 0.2s; white-space: nowrap; }
     .cc-btn:hover { opacity: 0.85; }
-    .cc-btn:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+    .cc-btn:focus-visible { outline: 3px solid #0a1628; outline-offset: 3px; }
     .cc-btn-primary { background: var(--cc-btn-primary); color: var(--cc-btn-primary-text); }
     .cc-btn-secondary { background: var(--cc-btn-secondary); color: var(--cc-btn-secondary-text); }
     .cc-details { display: none; margin-top: 1rem; border-top: 1px solid var(--cc-border); padding-top: 1rem; }
@@ -77,7 +77,7 @@
     input:disabled + .cc-slider { opacity: 0.5; cursor: not-allowed; }
     .cc-fab { position: fixed; bottom: 20px; right: 20px; width: 48px; height: 48px; border-radius: 50%; background: var(--cc-btn-primary); color: var(--cc-btn-primary-text); border: none; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer; z-index: 9990; display: flex; align-items: center; justify-content: center; transition: transform 0.2s; }
     .cc-fab:hover { transform: scale(1.1); }
-    .cc-fab:focus-visible { outline: 2px solid #3b82f6; outline-offset: 2px; }
+    .cc-fab:focus-visible { outline: 3px solid #0a1628; outline-offset: 3px; }
     .cc-fab svg { width: 22px; height: 22px; fill: currentColor; }
     .cc-hidden { display: none !important; }
     @media (max-width: 640px) {
@@ -206,6 +206,7 @@
         els.modal.classList.remove('cc-open');
         els.backdrop.classList.remove('cc-open');
         els.fab.classList.remove('cc-hidden');
+        restoreFocusOnClose();
     }
 
     function showDetails() {
@@ -225,27 +226,42 @@
         els.btnCustomize.focus();
     }
 
-    // --- Focus trap (WCAG) ---
+    // --- Focus trap (WCAG 2.1.2 + 2.4.3) ---
+    var focusTrapBound = false;
+    var lastFocusedBeforeOpen = null;
+    function focusTrapHandler(e) {
+        if (e.key === 'Escape') {
+            if (els.details.classList.contains('cc-show')) { showMain(); }
+            else if (getCookie(config.cookieName)) { closeBanner(); }
+            return;
+        }
+        if (e.key !== 'Tab') return;
+        var focusable = els.modal.querySelectorAll('button:not(.cc-hidden), a[href], input:not([disabled])');
+        var visible = [];
+        for (var i = 0; i < focusable.length; i++) {
+            if (focusable[i].offsetParent !== null) visible.push(focusable[i]);
+        }
+        if (!visible.length) return;
+        var first = visible[0], last = visible[visible.length - 1];
+        if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
+        else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
+    }
     function initFocusTrap() {
-        els.modal.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                if (els.details.classList.contains('cc-show')) { showMain(); }
-                else if (getCookie(config.cookieName)) { closeBanner(); }
-                return;
-            }
-            if (e.key !== 'Tab') return;
-            var focusable = els.modal.querySelectorAll('button:not(.cc-hidden), a[href], input:not([disabled])');
-            var visible = [];
-            for (var i = 0; i < focusable.length; i++) {
-                if (focusable[i].offsetParent !== null) visible.push(focusable[i]);
-            }
-            if (!visible.length) return;
-            var first = visible[0], last = visible[visible.length - 1];
-            if (e.shiftKey && document.activeElement === first) { last.focus(); e.preventDefault(); }
-            else if (!e.shiftKey && document.activeElement === last) { first.focus(); e.preventDefault(); }
-        });
+        if (!focusTrapBound) {
+            els.modal.addEventListener('keydown', focusTrapHandler);
+            focusTrapBound = true;
+        }
+        lastFocusedBeforeOpen = document.activeElement;
         var firstBtn = els.modal.querySelector('button:not(.cc-hidden)');
         if (firstBtn) firstBtn.focus();
+    }
+    function restoreFocusOnClose() {
+        if (lastFocusedBeforeOpen && typeof lastFocusedBeforeOpen.focus === 'function') {
+            lastFocusedBeforeOpen.focus();
+            lastFocusedBeforeOpen = null;
+        } else if (els.fab && !els.fab.classList.contains('cc-hidden')) {
+            els.fab.focus();
+        }
     }
 
     // --- Inject third-party scripts ---

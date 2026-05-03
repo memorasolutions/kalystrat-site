@@ -14,6 +14,17 @@ return [
     | Company Information
     |--------------------------------------------------------------------------
     */
+    /*
+    |--------------------------------------------------------------------------
+    | Layout (Layout Slot pattern)
+    |--------------------------------------------------------------------------
+    | Permet à un projet hôte d'override le layout des 4 pages légales.
+    | Si null → utilise le layout standalone Tailwind du module (fallback).
+    | Sinon → @extends(config('privacy.layout')) résolu dynamiquement.
+    | Exemple Kalystrat : env PRIVACY_LAYOUT="frontend::layouts.legal-shell"
+    */
+    'layout' => env('PRIVACY_LAYOUT', null),
+
     'company' => [
         'name' => env('COMPANY_NAME', 'Your Company Ltd'),
         'address' => env('COMPANY_ADDRESS', '123 Privacy Street, City, Country'),
