@@ -3,7 +3,6 @@
 @push('head')
 <meta name="description" content="Kalystrat – groupe québécois en construction à intégration verticale, porté par une décennie d'expertise terrain sous la conduite d'Ali Salomon. Six filiales spécialisées : Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction.">
 <meta name="dateModified" content="2026-05-01">
-<link rel="canonical" href="https://kalystrat.ca/">
 
 {{-- Préchargement assets visuels home --}}
 <link rel="preload" href="{{ asset('assets/img/kalystrat/hero/slide-1-montreal-chantier.webp?v=3') }}" as="image">
