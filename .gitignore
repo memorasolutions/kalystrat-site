@@ -63,6 +63,9 @@ csrf*
 .backups/
 .plan_affaire/
 
+# Vidéos sources brutes (volumineuses, hors repo)
+.video/
+
 # Charte graphique source (volumineuse, brouillon)
 .charte_graphique/
 
