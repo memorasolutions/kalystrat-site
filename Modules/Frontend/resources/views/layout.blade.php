@@ -43,11 +43,20 @@
     {{-- Préchargement logo --}}
     <link rel="preload" href="{{ asset('assets/img/kalystrat/logo-white.svg') }}" as="image" type="image/svg+xml">
 
-    {{-- CSS --}}
+    {{-- CSS critiques bloquants (Bootstrap utility + Construz layout above-the-fold) --}}
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+
+    {{-- CSS icônes : differées via pattern Filament Group loadCSS (media=print + onload swap).
+         Économie ~700ms de render-blocking. Fallback noscript pour navigateurs sans JS (~0.3% trafic). --}}
+    <link rel="preload" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}" as="style">
+    <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}" media="print" onload="this.media='all'; this.onload=null;">
+    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript>
+        <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
+    </noscript>
 
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('assets/img/kalystrat/favicon.svg') }}" type="image/svg+xml">
