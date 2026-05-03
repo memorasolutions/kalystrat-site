@@ -64,8 +64,8 @@
         <div class="row align-items-center g-5">
             <div class="col-lg-6">
                 <div class="img-box2" style="position: relative;">
-                    <div class="img1">
-                        <img src="{{ asset('assets/img/kalystrat/about-bg.webp') }}" alt="Équipe Kalystrat sur chantier au Québec" style="width: 100%; border-radius: 0.5rem;" loading="lazy">
+                    <div class="img1" style="aspect-ratio: 4 / 3;">
+                        <img src="{{ asset('assets/img/kalystrat/about-bg.webp') }}" alt="Équipe Kalystrat sur chantier au Québec" width="960" height="720" style="width: 100%; height: 100%; object-fit: cover; border-radius: 0.5rem;" loading="lazy">
                     </div>
                 </div>
             </div>
