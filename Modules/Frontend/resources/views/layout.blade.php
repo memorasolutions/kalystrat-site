@@ -61,6 +61,10 @@
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('assets/img/kalystrat/favicon.svg') }}" type="image/svg+xml">
 
+    {{-- Préchargement Akzidenz Grotesk (charte v2) — variants Regular + Bold critiques au-dessus du fold --}}
+    <link rel="preload" href="{{ asset('assets/fonts/AkzidenzGrotesk-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ asset('assets/fonts/AkzidenzGrotesk-Bold.woff2') }}" as="font" type="font/woff2" crossorigin>
+
     {{-- Schema.org JSON-LD Organization + 6 LocalBusiness subOrganization --}}
     @verbatim
     <script type="application/ld+json">
@@ -93,6 +97,47 @@
     {{-- Styles critiques --}}
     @verbatim
     <style>
+        /* @font-face Akzidenz Grotesk — self-hosted, charte v2 (G6 2026-05-04) */
+        @font-face {
+            font-family: 'Akzidenz Grotesk';
+            src: url('/assets/fonts/AkzidenzGrotesk-Regular.woff2') format('woff2'),
+                 url('/assets/fonts/AkzidenzGrotesk-Regular.otf') format('opentype');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Akzidenz Grotesk';
+            src: url('/assets/fonts/AkzidenzGrotesk-Bold.woff2') format('woff2'),
+                 url('/assets/fonts/AkzidenzGrotesk-Bold.otf') format('opentype');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Akzidenz Grotesk';
+            src: url('/assets/fonts/AkzidenzGrotesk-Medium.woff2') format('woff2'),
+                 url('/assets/fonts/AkzidenzGrotesk-Medium.otf') format('opentype');
+            font-weight: 500;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Akzidenz Grotesk';
+            src: url('/assets/fonts/AkzidenzGrotesk-Light.woff2') format('woff2'),
+                 url('/assets/fonts/AkzidenzGrotesk-Light.otf') format('opentype');
+            font-weight: 300;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Akzidenz Grotesk';
+            src: url('/assets/fonts/AkzidenzGrotesk-LightItalic.woff2') format('woff2'),
+                 url('/assets/fonts/AkzidenzGrotesk-LightItalic.otf') format('opentype');
+            font-weight: 300;
+            font-style: italic;
+            font-display: swap;
+        }
         :root {
             --ks-navy: #0A1628;
             --ks-gold: #B8A472;
