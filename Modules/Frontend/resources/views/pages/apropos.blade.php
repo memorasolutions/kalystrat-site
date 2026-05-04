@@ -282,7 +282,7 @@
                 <span class="sub-title text-theme">Gouvernance</span>
                 <h2 class="sec-title" style="color: var(--ks-navy); font-size: 2.25rem; font-weight: 700;">Notre conseil consultatif</h2>
                 <p style="color: #2C3340; margin-top: 1rem;">Ali Salomon a voulu s'entourer tôt. Pas pour l'image, pour la rigueur. Le conseil consultatif de Kalystrat réunit des professionnels chevronnés qui apportent l'expérience sectorielle que seul le temps forge. Trois sièges restent à pourvoir&nbsp;: nous cherchons des profils complémentaires en construction senior, financement et gestion RH/CCQ.</p>
-                <p style="margin-top: 1rem;"><a href="{{ route('conseil') }}" style="color: var(--ks-navy); font-weight: 600; text-decoration: underline;">Voir les profils détaillés du conseil consultatif&nbsp;→</a></p>
+                <p style="margin-top: 1rem; color: #0A1628;"><a href="{{ route('conseil') }}" style="color: #0A1628; font-weight: 700; text-decoration: underline; text-underline-offset: 3px;">Voir les profils détaillés du conseil consultatif&nbsp;→</a></p>
             </div>
         </div>
         <div class="row g-4 justify-content-center">
@@ -323,13 +323,92 @@
             <span class="sub-title text-theme">Six filiales, une marque</span>
             <h2 class="sec-title" style="color: var(--ks-navy); font-size: 2.25rem; font-weight: 700;">Six expertises sous la signature Kalystrat</h2>
         </div>
+        <style>
+            /* Cards filiales premium — relief, hover lift, numérotation, accent couleur par filiale */
+            .ks-filiale-card {
+                position: relative;
+                background: #FFFFFF;
+                border: 1px solid rgba(10, 22, 40, 0.06);
+                border-radius: 0.875rem;
+                padding: 2.25rem 2rem 2rem;
+                height: 100%;
+                box-shadow: 0 4px 16px rgba(10, 22, 40, 0.04);
+                transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                            box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                            border-color 0.25s ease;
+                overflow: hidden;
+                display: flex;
+                flex-direction: column;
+            }
+            .ks-filiale-card::before {
+                content: '';
+                position: absolute;
+                top: 0; left: 0; right: 0;
+                height: 4px;
+                background: var(--card-accent, #B8A472);
+                transition: height 0.25s ease;
+            }
+            .ks-filiale-card:hover, .ks-filiale-card:focus-within {
+                transform: translateY(-4px);
+                box-shadow: 0 18px 44px rgba(10, 22, 40, 0.12);
+                border-color: rgba(184, 164, 114, 0.5);
+            }
+            .ks-filiale-card:hover::before, .ks-filiale-card:focus-within::before { height: 6px; }
+            .ks-filiale-card__num {
+                font-size: 0.75rem;
+                font-weight: 700;
+                color: #5C4F2C; /* WCAG AAA : couleur fixée 8:1 sur blanc, vs --card-accent variable (Finition #B8A472 = 2.44:1 non conforme) */
+                letter-spacing: 0.22em;
+                text-transform: uppercase;
+                margin-bottom: 0.875rem;
+                display: block;
+            }
+            .ks-filiale-card__title {
+                color: #0A1628;
+                font-size: 1.375rem;
+                font-weight: 700;
+                line-height: 1.25;
+                margin: 0 0 0.75rem;
+            }
+            .ks-filiale-card__desc {
+                color: #2C3340;
+                font-size: 0.9375rem;
+                line-height: 1.6;
+                margin: 0 0 1.5rem;
+                flex-grow: 1;
+            }
+            .ks-filiale-card__link {
+                color: #0A1628;
+                font-weight: 700;
+                font-size: 0.9375rem;
+                text-decoration: none;
+                display: inline-flex;
+                align-items: center;
+                gap: 0.5rem;
+                min-height: 44px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                border-bottom: 2px solid transparent;
+                padding-bottom: 0.125rem;
+                transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+                align-self: flex-start;
+            }
+            .ks-filiale-card__link i { color: #B8A472; transition: transform 0.2s ease; }
+            .ks-filiale-card__link:hover, .ks-filiale-card__link:focus-visible {
+                color: #5C4F2C;
+                border-bottom-color: #B8A472;
+                gap: 0.75rem;
+            }
+            .ks-filiale-card__link:hover i, .ks-filiale-card__link:focus-visible i { transform: translate(2px, -2px); }
+        </style>
         <div class="row g-4">
             @foreach(config('kalystrat.filiales', []) as $slug => $f)
             <div class="col-md-6 col-lg-4">
-                <article class="service-card style2" style="background: #FFFFFF; border: 1px solid #E9E9E6; border-top: 3px solid var(--ks-gold); border-radius: 0.5rem; padding: 2rem; height: 100%; transition: box-shadow 0.2s;">
-                    <h3 style="color: var(--ks-navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">{{ $f['nom_court'] ?? ucfirst($slug) }}</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem; min-height: 70px;">{{ $f['specialite'] ?? '' }}</p>
-                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="link-btn" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}" style="color: #8C2E00; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px;">En savoir plus <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <article class="ks-filiale-card" style="--card-accent: {{ $f['hex_couleur'] ?? '#B8A472' }};">
+                    <span class="ks-filiale-card__num">{{ str_pad((string) ($loop->iteration), 2, '0', STR_PAD_LEFT) }} — Filiale</span>
+                    <h3 class="ks-filiale-card__title">{{ $f['nom_court'] ?? ucfirst($slug) }}</h3>
+                    <p class="ks-filiale-card__desc">{{ $f['specialite'] ?? '' }}</p>
+                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-filiale-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                 </article>
             </div>
             @endforeach

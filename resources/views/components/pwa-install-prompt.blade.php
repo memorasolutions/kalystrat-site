@@ -17,18 +17,20 @@
     x-transition:leave="transition ease-in duration-200"
     class="position-fixed bottom-0 start-0 end-0"
     style="display: none; z-index: 9999;">
-    <div class="bg-primary text-white rounded-top shadow-lg p-3">
+    {{-- WCAG AAA : navy #0A1628 sur texte blanc = 16:1 (Bootstrap bg-primary #0d6efd = 4:1 NON conforme AAA). Heading h6 → strong (saut hiérarchie h1→h2→h3→h6). --}}
+    <div class="text-white rounded-top shadow-lg p-3" style="background-color: #0A1628;">
         <div class="d-flex justify-content-between align-items-center">
             <div class="me-3">
-                <h6 class="mb-1 fw-bold">{{ __('Installer l\'application') }}</h6>
-                <p class="mb-0 small">{{ __('Accédez rapidement depuis votre écran d\'accueil.') }}</p>
+                <strong class="d-block mb-1">{{ __('Installer l\'application') }}</strong>
+                <p class="mb-0 small" style="color: #FFFFFF;">{{ __('Accédez rapidement depuis votre écran d\'accueil.') }}</p>
             </div>
             <div class="d-flex gap-2">
-                <button class="btn btn-light btn-sm" @click="window.pwaInstall?.()">
+                <button class="btn btn-light btn-sm" @click="window.pwaInstall?.()" style="font-weight: 700;">
                     {{ __('Installer') }}
                 </button>
                 <button class="btn btn-outline-light btn-sm"
-                        @click="show = false; localStorage.setItem('pwa-install-dismissed', Date.now().toString())">
+                        @click="show = false; localStorage.setItem('pwa-install-dismissed', Date.now().toString())"
+                        aria-label="{{ __('Fermer la bannière d\'installation') }}">
                     &times;
                 </button>
             </div>
