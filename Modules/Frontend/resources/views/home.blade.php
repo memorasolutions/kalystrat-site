@@ -16,14 +16,14 @@
 <link rel="stylesheet" href="{{ asset('assets/construz-new/css/slick.min.css') }}">
 <link rel="stylesheet" href="{{ asset('assets/construz-new/css/nice-select.min.css') }}">
 
-{{-- Police signature manuscrite Ali Salomon (Sacramento) --}}
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap">
+{{-- Signature Ali Salomon : Sacramento Google Fonts retirée (hors charte v2 + perçue "playful" par tendances 2026 pour B2B construction premium + dépendance externe). Remplacée par italique de la sans existante (alignement charte v2 + RGPD/Loi 25 + zéro requête externe + gain ~800ms LCP mobile). À terme : SVG signature réelle Ali (tâche G7). --}}
 <style>
     .ks-founder-signature {
-        font-family: 'Sacramento', cursive;
-        font-size: 2.25rem;
+        font-family: "Akzidenz Grotesk", "Helvetica Neue", Arial, sans-serif;
+        font-style: italic;
+        font-weight: 500;
+        font-size: 1.625rem;
+        letter-spacing: 0.01em;
         line-height: 1;
         color: #0A1628;
         display: inline-block;
