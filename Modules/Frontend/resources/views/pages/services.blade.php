@@ -17,6 +17,23 @@
 <script type="application/ld+json">
 {
     "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "Méthodologie de construction Kalystrat — Conçu. Réalisé. Livré.",
+    "description": "Kalystrat suit 4 étapes structurées via intégration verticale regroupant 6 filiales spécialisées, garantissant un contrôle total de la chaîne de construction.",
+    "totalTime": "P3M",
+    "inLanguage": "fr-CA",
+    "url": "https://kalystrat.ca/services",
+    "step": [
+        {"@type": "HowToStep", "position": 1, "name": "Planification", "text": "Évaluation terrain, étude des besoins, analyse RBQ, budget intégré.", "url": "https://kalystrat.ca/services#etape-1"},
+        {"@type": "HowToStep", "position": 2, "name": "Conception", "text": "Plans architecturaux, ingénierie, choix matériaux, permis.", "url": "https://kalystrat.ca/services#etape-2"},
+        {"@type": "HowToStep", "position": 3, "name": "Réalisation", "text": "Excavation, fondations, structure, toiture, finition coordonnées par les six filiales.", "url": "https://kalystrat.ca/services#etape-3"},
+        {"@type": "HowToStep", "position": 4, "name": "Livraison", "text": "Inspection finale, mise en service, remise des clés, garanties prolongées sur les éléments structuraux.", "url": "https://kalystrat.ca/services#etape-4"}
+    ]
+}
+</script>
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://kalystrat.ca/" },
