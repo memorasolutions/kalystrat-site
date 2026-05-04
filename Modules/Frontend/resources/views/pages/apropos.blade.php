@@ -317,22 +317,22 @@
 {{-- ========================
      Section "Nos six filiales"
      ======================== --}}
-<div class="space-top space-bottom overflow-hidden" style="padding: 5rem 0;">
+<div class="space-top space-bottom overflow-hidden" style="padding: 5rem 0; background: #F4F4F2;">
     <div class="container">
         <div class="title-area text-center mb-5">
             <span class="sub-title text-theme">Six filiales, une marque</span>
             <h2 class="sec-title" style="color: var(--ks-navy); font-size: 2.25rem; font-weight: 700;">Six expertises sous la signature Kalystrat</h2>
         </div>
         <style>
-            /* Cards filiales premium — relief, hover lift, numérotation, accent couleur par filiale */
+            /* Cards filiales premium — relief marqué sur fond gris #F4F4F2, hover lift, numérotation, accent couleur par filiale */
             .ks-filiale-card {
                 position: relative;
                 background: #FFFFFF;
-                border: 1px solid rgba(10, 22, 40, 0.06);
+                border: 1px solid rgba(10, 22, 40, 0.10);
                 border-radius: 0.875rem;
-                padding: 2.25rem 2rem 2rem;
+                padding: 2.5rem 2rem 2rem;
                 height: 100%;
-                box-shadow: 0 4px 16px rgba(10, 22, 40, 0.04);
+                box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08), 0 2px 6px rgba(10, 22, 40, 0.04);
                 transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
                             box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
                             border-color 0.25s ease;
@@ -349,9 +349,9 @@
                 transition: height 0.25s ease;
             }
             .ks-filiale-card:hover, .ks-filiale-card:focus-within {
-                transform: translateY(-4px);
-                box-shadow: 0 18px 44px rgba(10, 22, 40, 0.12);
-                border-color: rgba(184, 164, 114, 0.5);
+                transform: translateY(-6px);
+                box-shadow: 0 24px 56px rgba(10, 22, 40, 0.18), 0 4px 12px rgba(10, 22, 40, 0.08);
+                border-color: rgba(184, 164, 114, 0.6);
             }
             .ks-filiale-card:hover::before, .ks-filiale-card:focus-within::before { height: 6px; }
             .ks-filiale-card__num {
