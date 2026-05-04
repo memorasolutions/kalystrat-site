@@ -16,6 +16,20 @@ return [
         'hex_couleur' => '#6B4F2C',
         'meta_title' => 'Kalystrat Fondations Québec — Excavation & coffrage RBQ',
         'meta_description' => 'Kalystrat Fondations à Québec : excavation, coffrage, drains français et fondations solides pour projets résidentiels et commerciaux au QC.',
+        'intro_paragraph' => 'Les fondations constituent l\'assise critique de tout bâtiment, déterminant sa stabilité à long terme face aux contraintes environnementales. Au Québec, les cycles de gel-dégel, les sols argileux de Beauport ou la présence de roc en Charlevoix exigent une expertise géotechnique rigoureuse et des solutions adaptées. Kalystrat Fondations conçoit chaque projet en stricte conformité avec le Code de construction du Québec et sous licence RBQ, garantissant solidité, durabilité et sécurité. Grâce à l\'intégration verticale au sein du groupe Kalystrat, nos fondations s\'articulent parfaitement avec les phases ultérieures de construction, optimisant délais, coûts et qualité pour promoteurs, entrepreneurs généraux et institutions publiques.',
+        'process' => [
+            'Étude de sol et planification' => 'Analyse géotechnique du site et élaboration de plans conformes au Code de construction du Québec.',
+            'Excavation et nivellement' => 'Excavation précise et nivellement du terrain selon les spécifications du plan de fondation.',
+            'Coffrage et coulée' => 'Installation de coffrages robustes suivie d\'une coulée de béton contrôlée et vibrée.',
+            'Imperméabilisation et drainage' => 'Application d\'un système d\'imperméabilisation et installation de drains français certifiés.',
+        ],
+        'certifications' => [
+            'Licence RBQ entrepreneur général',
+            'Membre actif de l\'APCHQ',
+            'Travailleurs CCQ qualifiés sur chantier',
+            'Adhésion au régime de la Garantie de construction résidentielle (GCR)',
+            'Conformité totale aux normes CNESST en santé-sécurité',
+        ],
     ],
     'structure' => [
         'slug'        => 'structure',

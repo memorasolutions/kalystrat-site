@@ -111,6 +111,10 @@
                     <h2 class="sec-title" style="color: var(--ks-navy); font-size: 2rem; font-weight: 700; margin-bottom: 1rem;">{{ $filiale['nom_complet'] ?? $filialeName }}</h2>
                     <p class="sec-text" style="font-size: 1.05rem; color: #2C3340;">{{ $filialeDesc }}</p>
 
+                    @if(!empty($filiale['intro_paragraph']))
+                    <p style="font-size: 1rem; color: #2C3340; line-height: 1.7; margin-top: 1.25rem;">{{ $filiale['intro_paragraph'] }}</p>
+                    @endif
+
                     @if(!empty($filiale['services']))
                     <h3 style="color: var(--ks-navy); font-size: 1.5rem; font-weight: 700; margin-top: 2rem;">Nos services</h3>
                     <div class="row g-3 mt-2">
@@ -123,6 +127,33 @@
                         </div>
                         @endforeach
                     </div>
+                    @endif
+
+                    @if(!empty($filiale['process']))
+                    <h3 style="color: var(--ks-navy); font-size: 1.5rem; font-weight: 700; margin-top: 2rem;">Notre méthodologie</h3>
+                    <ol style="padding-left: 0; list-style: none; counter-reset: ks-step; margin-top: 1rem;">
+                        @foreach($filiale['process'] as $stepName => $stepDesc)
+                        <li style="display: flex; gap: 1rem; padding: 1rem 0; border-bottom: 1px solid rgba(184, 164, 114, 0.2); counter-increment: ks-step;">
+                            <span aria-hidden="true" style="flex-shrink: 0; width: 36px; height: 36px; display: inline-flex; align-items: center; justify-content: center; background: var(--ks-navy); color: var(--ks-gold); border-radius: 50%; font-weight: 700; font-size: 0.9375rem;">{{ $loop->iteration }}</span>
+                            <div>
+                                <strong style="display: block; color: var(--ks-navy); font-size: 1rem; margin-bottom: 0.25rem;">{{ $stepName }}</strong>
+                                <span style="color: #2C3340; font-size: 0.9375rem; line-height: 1.6;">{{ $stepDesc }}</span>
+                            </div>
+                        </li>
+                        @endforeach
+                    </ol>
+                    @endif
+
+                    @if(!empty($filiale['certifications']))
+                    <h3 style="color: var(--ks-navy); font-size: 1.5rem; font-weight: 700; margin-top: 2rem;">Conformité et certifications</h3>
+                    <ul style="padding-left: 0; list-style: none; margin-top: 1rem;">
+                        @foreach($filiale['certifications'] as $cert)
+                        <li style="display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0;">
+                            <i class="ri-shield-check-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.25rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                            <span style="color: #2C3340; font-size: 0.9375rem;">{{ $cert }}</span>
+                        </li>
+                        @endforeach
+                    </ul>
                     @endif
 
                     @if(!empty($filiale['cibles']))
