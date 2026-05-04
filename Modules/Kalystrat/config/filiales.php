@@ -41,6 +41,20 @@ return [
         'hex_couleur' => '#3F4A55',
         'meta_title' => 'Kalystrat Structure Québec — Charpente bois, acier, hybride',
         'meta_description' => 'Kalystrat Structure à Québec : charpente bois, acier ou hybride. Solutions structurales robustes intégrées à nos projets de construction au QC.',
+        'intro_paragraph' => 'Spécialiste des systèmes porteurs en bois, acier et hybrides, Kalystrat Structure conçoit des charpentes optimisées pour les contraintes climatiques et réglementaires du Québec — charges de neige, cycles de gel-dégel, normes antisismiques. Nos solutions préfabriquées répondent aux exigences RBQ, au Code national du bâtiment et aux spécifications CCQ, tout en s\'intégrant verticalement aux autres filiales pour accélérer les délais et garantir la cohérence technique. Nous servons principalement les entrepreneurs généraux, promoteurs immobiliers et maîtres d\'ouvrage commerciaux ou institutionnels exigeant précision, durabilité et traçabilité complète des matériaux.',
+        'process' => [
+            'Conception technique' => 'Modélisation BIM et calculs structuraux adaptés au contexte québécois.',
+            'Fabrication préfabriquée' => 'Production en usine certifiée selon normes CSA et RBQ.',
+            'Logistique intégrée' => 'Livraison synchronisée avec le chantier via réseau Kalystrat.',
+            'Support sur site' => 'Assistance technique certifiée CCQ pour montage et conformité.',
+        ],
+        'certifications' => [
+            'Licence RBQ classe 1.1',
+            'Programme Compétence construction (CCQ)',
+            'Conformité norme CSA S308 (charpente bois)',
+            'Conformité norme CAN/CSA-S16 (structures acier)',
+            'Système qualité aligné ISO 9001',
+        ],
     ],
     'toiture' => [
         'slug'        => 'toiture',
@@ -52,6 +66,20 @@ return [
         'hex_couleur' => '#2C4858',
         'meta_title' => 'Kalystrat Toiture & Enveloppe — Membranes TPO/EPDM Québec',
         'meta_description' => 'Kalystrat Toiture et Enveloppe à Québec : membranes, isolation, revêtements. Performance énergétique et étanchéité assurées pour bâtiments au QC.',
+        'intro_paragraph' => 'Kalystrat Toiture et Enveloppe déploie des systèmes complets d\'étanchéité, d\'isolation et de revêtement conçus pour résister aux hivers rigoureux et aux variations thermiques extrêmes du Québec. Nos membranes élastomères, TPO, EPDM, ainsi que nos solutions de pare-air et d\'isolation thermique respectent strictement les normes RBQ, le Code de construction du Québec et les exigences d\'efficacité énergétique. Intégrée verticalement à la chaîne Kalystrat, notre filiale assure une synergie parfaite entre structure, enveloppe et finition. Nous ciblons propriétaires résidentiels exigeants, promoteurs et clients institutionnels soucieux de performance durable et de conformité réglementaire.',
+        'process' => [
+            'Diagnostic enveloppe' => 'Évaluation technique des besoins climatiques et réglementaires propres au site.',
+            'Sélection des matériaux' => 'Choix de membranes et isolants certifiés pour le climat québécois.',
+            'Pose certifiée' => 'Installation conforme aux normes RBQ et aux spécifications fabricants.',
+            'Contrôle qualité' => 'Inspection post-travaux avec tests d\'étanchéité documentés.',
+        ],
+        'certifications' => [
+            'Licence RBQ classe 2.1 (couverture)',
+            'Travailleurs CCQ qualifiés en toiture',
+            'Conformité ENERGY STAR sur les isolants',
+            'Norme BNQ 3620-600 (toitures)',
+            'Garanties manufacturiers prolongées',
+        ],
     ],
     'finition' => [
         'slug'        => 'finition',
@@ -63,6 +91,20 @@ return [
         'hex_couleur' => '#B8A472',
         'meta_title' => 'Kalystrat Finition Intérieure Québec — Gypse, peinture',
         'meta_description' => 'Kalystrat Finition Intérieure à Québec : gypse, peinture, planchers, ébénisterie. Détails soignés pour des intérieurs clés en main au QC.',
+        'intro_paragraph' => 'Kalystrat Finition Intérieure allie savoir-faire artisanal et standards industriels pour offrir des aménagements intérieurs haut de gamme, parfaitement adaptés aux marchés résidentiel, multifamilial et commercial du Québec. Spécialisés en gypse, peinture, planchers (bois franc, céramique, vinyle de luxe) et ébénisterie sur mesure, nous appliquons rigoureusement les normes RBQ, les protocoles CCQ et les critères de qualité interne Kalystrat. Grâce à l\'intégration verticale, chaque élément est coordonné dès la phase de conception avec la structure et l\'enveloppe, minimisant les retards et les imprévus. Nos clients principaux : propriétaires, promoteurs et designers d\'intérieur exigeant précision, durabilité et esthétique premium.',
+        'process' => [
+            'Planification détaillée' => 'Coordination BIM avec structure et MEP pour anticiper les conflits.',
+            'Préparation des surfaces' => 'Nivellement et traitement selon normes BNQ et fabricants.',
+            'Pose spécialisée' => 'Exécution par équipes CCQ certifiées, dédiées par matériau.',
+            'Finition et inspection' => 'Contrôle qualité final incluant les tolérances esthétiques.',
+        ],
+        'certifications' => [
+            'Licence RBQ classe 3.1 (finition intérieure)',
+            'Compagnons CCQ certifiés en finition',
+            'Conformité norme BNQ 3019-075 (planchers)',
+            'Peintures certifiées GREENGUARD Gold',
+            'Ébénisterie sur mesure CTQ',
+        ],
     ],
     'immobilier' => [
         'slug'        => 'immobilier',
@@ -74,6 +116,20 @@ return [
         'hex_couleur' => '#2A5A4E',
         'meta_title' => 'Kalystrat Immobilier Québec — Promotion résidentielle',
         'meta_description' => 'Kalystrat Immobilier à Québec : développement résidentiel, flips et locatif. Projets pensés avec notre demande captive et intégration verticale QC.',
+        'intro_paragraph' => 'Kalystrat Immobilier développe, transforme et gère un portefeuille résidentiel performant dans les marchés clés du Québec — Québec, Lévis, Sainte-Foy, Beauport et régions en croissance — en combinant expertise foncière, construction intégrée et analyse de rendement locatif. Nos projets unifamiliaux, multiplex et flips sont conçus dès l\'origine selon les normes RBQ, le Code de construction et les exigences d\'efficacité énergétique, avec une traçabilité totale grâce à l\'intégration verticale Kalystrat. Cette approche unique réduit les coûts, accélère la mise en marché et maximise la valeur pour acheteurs, investisseurs et locataires. Conformité, qualité et rentabilité guident chaque acquisition, construction ou rénovation.',
+        'process' => [
+            'Acquisition stratégique' => 'Sélection de terrains selon potentiel constructif et zonage municipal.',
+            'Conception intégrée' => 'Plans validés par ingénieurs et coordonnés avec les filiales Kalystrat.',
+            'Construction verticale' => 'Exécution par nos propres équipes RBQ et CCQ.',
+            'Mise en marché' => 'Vente ou mise en location via partenariats courtiers OACIQ.',
+        ],
+        'certifications' => [
+            'Licence RBQ classe 1.1 (construction)',
+            'Partenariats courtiers immobiliers OACIQ',
+            'Programme Novoclimat (habitations neuves)',
+            'Travailleurs CCQ qualifiés',
+            'Conformité Code de construction du Québec',
+        ],
     ],
     'placement' => [
         'slug'        => 'placement',
@@ -85,5 +141,19 @@ return [
         'hex_couleur' => '#A66B3A',
         'meta_title' => 'Kalystrat Placement Construction — Main-d\'œuvre CCQ Québec',
         'meta_description' => 'Kalystrat Placement Construction à Québec : agence de main-d\'œuvre qualifiée RBQ/CCQ. Recrutement ciblé pour les besoins des filiales et partenaires au QC.',
+        'intro_paragraph' => 'Kalystrat Placement Construction est l\'agence spécialisée en main-d\'œuvre qualifiée pour le secteur de la construction au Québec, répondant aux besoins internes des filiales Kalystrat et externes d\'entrepreneurs généraux, promoteurs et sous-traitants. Nos travailleurs sont rigoureusement sélectionnés, formés selon les normes CCQ, et couverts par les assurances requises (CNESST, RBQ). Grâce à notre intégration verticale, nous garantissons une adéquation parfaite entre compétences techniques (structure, toiture, finition) et exigences spécifiques des chantiers québécois — climat, calendrier serré, conformité réglementaire. Service B2B premium centré sur la fiabilité, la traçabilité et la continuité opérationnelle.',
+        'process' => [
+            'Analyse de besoin' => 'Évaluation précise des profils techniques requis par chantier.',
+            'Recrutement ciblé' => 'Sélection parmi notre bassin certifié CCQ et le réseau Kalystrat.',
+            'Formation intégrée' => 'Briefings sécurité, méthodes Kalystrat et conformité RBQ.',
+            'Gestion administrative' => 'Paie, assurances et suivi continu selon normes CNESST.',
+        ],
+        'certifications' => [
+            'Agréé Commission de la construction du Québec (CCQ)',
+            'Licence RBQ — agence de placement construction',
+            'Employeur agréé CNESST (santé-sécurité)',
+            'Système qualité aligné ISO 9001 (gestion RH)',
+            'Programme Compétence construction CCQ',
+        ],
     ],
 ];
