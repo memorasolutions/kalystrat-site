@@ -206,14 +206,14 @@
          ============================== --}}
     <div class="about-area-5 space">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
-            <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" alt="">
+            <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>
         <div class="container">
             <div class="row gx-100 align-items-center">
                 <div class="col-xl-5">
                     <div class="about-thumb5 mb-40 mb-xl-0">
                         <div class="about-img-1 mb-40">
-                            <img src="{{ asset('assets/img/kalystrat/about-bg.webp?v=4') }}" alt="Vue aérienne d'un chantier d'envergure Kalystrat au Canada">
+                            <img src="{{ asset('assets/img/kalystrat/about-bg.webp?v=4') }}" loading="lazy" decoding="async" alt="Vue aérienne d'un chantier d'envergure Kalystrat au Canada">
                         </div>
                         <p>Porté par plus de dix ans d'expertise terrain en construction québécoise, Ali Salomon a structuré Kalystrat pour rassembler six entreprises spécialisées sous une seule gouvernance. Une intégration verticale rare dans la province, pensée pour réduire vos délais et vos imprévus.</p>
                         <div class="btn-group mt-30">
@@ -230,9 +230,9 @@
                             </p>
                             <div class="checklist mb-35 mt-30">
                                 <ul>
-                                    <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Une seule signature, six expertises sous un même toit
+                                    <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Une seule signature, six expertises sous un même toit
                                     </li>
-                                    <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Équipes québécoises, normes RBQ, garantie GCR
+                                    <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Équipes québécoises, normes RBQ, garantie GCR
                                     </li>
                                 </ul>
                             </div>
@@ -267,7 +267,7 @@
                         </div>
                         <div class="about-thumb5 mt-60 d-inline-block">
                             <div class="video-wrap about-img-2">
-                                <img src="{{ asset('assets/img/kalystrat/about-strategy.webp?v=4') }}" alt="Plans architecturaux, crayon et règle – design Kalystrat">
+                                <img src="{{ asset('assets/img/kalystrat/about-strategy.webp?v=4') }}" loading="lazy" decoding="async" alt="Plans architecturaux, crayon et règle – design Kalystrat">
                                 <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video" aria-label="Regarder la vidéo de présentation Kalystrat"><i class="ri-play-fill" aria-hidden="true"></i></a>
                             </div>
                         </div>
@@ -322,7 +322,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-fondations.webp') }}" alt="Armature d'acier prête pour la coulée – Kalystrat Fondations">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-fondations.webp') }}" loading="lazy" decoding="async" alt="Armature d'acier prête pour la coulée – Kalystrat Fondations">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -338,7 +338,7 @@
                                         <p class="text">Excavation, coffrage, coulée de béton, drainage français et imperméabilisation. Kalystrat Fondations exécute les travaux souterrains pour le groupe et pour la clientèle externe.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Équipes RBQ, garantie sur la maçonnerie et le drainage
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Équipes RBQ, garantie sur la maçonnerie et le drainage
                                                 </li>
                                             </ul>
                                         </div>
@@ -355,7 +355,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-structure.webp') }}" alt="Charpente bois résidentielle en construction – Kalystrat Structure">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-structure.webp') }}" loading="lazy" decoding="async" alt="Charpente bois résidentielle en construction – Kalystrat Structure">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -371,7 +371,7 @@
                                         <p class="text">Charpentes bois d'œuvre, fermes préfabriquées, structures d'acier léger&nbsp;: Kalystrat Structure érige le squelette de vos bâtiments résidentiels, commerciaux et industriels selon les normes du Code de construction du Québec.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Plans signés par ingénieur, montage rapide, sécurité chantier
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Plans signés par ingénieur, montage rapide, sécurité chantier
                                                 </li>
                                             </ul>
                                         </div>
@@ -388,7 +388,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" alt="Bardeaux d'asphalte texture macro – Kalystrat Toiture">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" loading="lazy" decoding="async" alt="Bardeaux d'asphalte texture macro – Kalystrat Toiture">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -404,7 +404,7 @@
                                         <p class="text">Couverture bardeaux, membranes élastomères, toits plats, revêtements extérieurs, soffites et fascias&nbsp;: Kalystrat Toiture et Enveloppe ferme et étanchéifie vos bâtiments contre les hivers québécois.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Garantie matériaux et main-d'œuvre, manufacturiers certifiés
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Garantie matériaux et main-d'œuvre, manufacturiers certifiés
                                                 </li>
                                             </ul>
                                         </div>
@@ -421,7 +421,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-finition.webp') }}" alt="Finition intérieure haut de gamme Kalystrat">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-finition.webp') }}" loading="lazy" decoding="async" alt="Finition intérieure haut de gamme Kalystrat">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -437,7 +437,7 @@
                                         <p class="text">Gypse, peinture, planchers, ébénisterie, cuisines et salles de bain. Kalystrat Finition Intérieure livre des espaces prêts à occuper, du brut jusqu'au dernier joint de silicone.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Sélection de matériaux, suivi des sous-traitants, livraison clé en main
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Sélection de matériaux, suivi des sous-traitants, livraison clé en main
                                                 </li>
                                             </ul>
                                         </div>
@@ -454,7 +454,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-immobilier.webp') }}" alt="Vente immobilière neuve Kalystrat">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-immobilier.webp') }}" loading="lazy" decoding="async" alt="Vente immobilière neuve Kalystrat">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -470,7 +470,7 @@
                                         <p class="text">Promotion immobilière, vente de constructions neuves, gestion d'unités locatives et conseil aux acheteurs&nbsp;: Kalystrat Immobilier ferme la boucle en commercialisant ce que le groupe construit.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Courtiers <abbr title="Organisme d'autoréglementation du courtage immobilier du Québec">OACIQ</abbr>, accompagnement notaire et financement
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Courtiers <abbr title="Organisme d'autoréglementation du courtage immobilier du Québec">OACIQ</abbr>, accompagnement notaire et financement
                                                 </li>
                                             </ul>
                                         </div>
@@ -487,7 +487,7 @@
                                 <div class="col-lg-5">
                                     <div class="why-thumb-wrap3-1">
                                         <div class="why-tab-thumb">
-                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-placement.webp') }}" alt="Casque de sécurité jaune sur chantier – Kalystrat Placement">
+                                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-placement.webp') }}" loading="lazy" decoding="async" alt="Casque de sécurité jaune sur chantier – Kalystrat Placement">
                                         </div>
                                         <div class="why-text-wrap">
                                             <h3 class="title">Filiale</h3>
@@ -503,7 +503,7 @@
                                         <p class="text">Recrutement et placement de main-d'œuvre qualifiée pour les chantiers du Québec&nbsp;: charpentiers, électriciens, plombiers, manœuvres <abbr title="Commission de la construction du Québec">CCQ</abbr>. Kalystrat Placement appuie autant le groupe que les entrepreneurs externes.</p>
                                         <div class="checklist mb-35">
                                             <ul>
-                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" alt="">Cartes CCQ vérifiées, conformité <abbr title="Commission des normes, de l'équité, de la santé et de la sécurité du travail">CNESST</abbr>, pool de talents actif
+                                                <li><img src="{{ asset('assets/construz-new/img/icon/about-checklsit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">Cartes CCQ vérifiées, conformité <abbr title="Commission des normes, de l'équité, de la santé et de la sécurité du travail">CNESST</abbr>, pool de talents actif
                                                 </li>
                                             </ul>
                                         </div>
@@ -525,14 +525,14 @@
          ============================== --}}
     <div class="benefit-area-5 space overflow-hidden">
         <div class="benefit-bg-shape5-1 shape-mockup" data-bottom="0" data-right="0" aria-hidden="true">
-            <img src="{{ asset('assets/construz-new/img/bg/benefit-bg-shape5-1.png?v=2') }}" alt="">
+            <img src="{{ asset('assets/construz-new/img/bg/benefit-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>
         <div class="container">
             <div class="row gx-40 align-items-center">
                 <div class="col-xl-6">
                     <div class="benefit-thumb5 mb-40 mb-xl-0">
                         <div class="benefit-img-1">
-                            <img src="{{ asset('assets/img/kalystrat/team-coordination.webp') }}" alt="Grue de construction sous ciel bleu – chantier Kalystrat">
+                            <img src="{{ asset('assets/img/kalystrat/team-coordination.webp') }}" loading="lazy" decoding="async" alt="Grue de construction sous ciel bleu – chantier Kalystrat">
                         </div>
                     </div>
                 </div>
@@ -548,19 +548,19 @@
                                 <div class="col-md-6">
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-1.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Ingénieurs et chargés de projet à l'interne</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-2.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-2.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Un seul interlocuteur, zéro renvoi de balle</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-3.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-3.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Expertise accumulée par filiale</h4>
                                     </div>
@@ -568,19 +568,19 @@
                                 <div class="col-md-6">
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-4.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-4.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Conformité RBQ, CCQ et CNESST</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-5.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-5.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Soumissions détaillées, devis ferme respecté</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
-                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-6.svg') }}" alt="">
+                                            <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-6.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
                                         <h4 class="single-benefit-title">Garantie GCR sur le résidentiel neuf</h4>
                                     </div>
@@ -718,7 +718,7 @@
                     <div class="col-lg-8">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-immobilier.webp') }}" alt="Bâtiment résidentiel multilogements moderne — projet Kalystrat Immobilier à Québec">
+                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-immobilier.webp') }}" loading="lazy" decoding="async" alt="Bâtiment résidentiel multilogements moderne — projet Kalystrat Immobilier à Québec">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -736,7 +736,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/img/kalystrat/project-residential.webp?v=2') }}" alt="Maison neuve à Sainte-Foy livrée clé en main par Kalystrat">
+                                <img src="{{ asset('assets/img/kalystrat/project-residential.webp?v=2') }}" loading="lazy" decoding="async" alt="Maison neuve à Sainte-Foy livrée clé en main par Kalystrat">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -754,7 +754,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/img/kalystrat/photos/projet-commercial-montreal.webp') }}" alt="Bâtiment commercial moderne — projet de référence Kalystrat à Montréal">
+                                <img src="{{ asset('assets/img/kalystrat/photos/projet-commercial-montreal.webp') }}" loading="lazy" decoding="async" alt="Bâtiment commercial moderne — projet de référence Kalystrat à Montréal">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -772,7 +772,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" alt="Bardeaux d'asphalte premium – réfection toiture Beauport Kalystrat">
+                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" loading="lazy" decoding="async" alt="Bardeaux d'asphalte premium – réfection toiture Beauport Kalystrat">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -790,7 +790,7 @@
                     <div class="col-lg-4 col-md-6">
                         <div class="portfolio-card style5">
                             <div class="portfolio-card-thumb">
-                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-finition.webp') }}" alt="Cuisine sur mesure haut de gamme livrée à Sillery par Kalystrat Finition">
+                                <img src="{{ asset('assets/img/kalystrat/photos/filiale-finition.webp') }}" loading="lazy" decoding="async" alt="Cuisine sur mesure haut de gamme livrée à Sillery par Kalystrat Finition">
                             </div>
                             <div class="portfolio-card-details">
                                 <div class="media-left">
@@ -866,7 +866,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-structure.webp') }}" alt="Charpente bois en construction – carrière charpentier-menuisier Kalystrat">
+                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-structure.webp') }}" loading="lazy" decoding="async" alt="Charpente bois en construction – carrière charpentier-menuisier Kalystrat">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
@@ -886,7 +886,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" alt="Bardeaux d'asphalte texture – carrière couvreur Kalystrat Toiture">
+                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-toiture.webp') }}" loading="lazy" decoding="async" alt="Bardeaux d'asphalte texture – carrière couvreur Kalystrat Toiture">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
@@ -906,7 +906,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-placement.webp') }}" alt="Casque sécurité chantier – carrière chargé de projet Kalystrat Placement">
+                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-placement.webp') }}" loading="lazy" decoding="async" alt="Casque sécurité chantier – carrière chargé de projet Kalystrat Placement">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
@@ -926,7 +926,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-fondations.webp') }}" alt="Armature acier coffrage – carrière manœuvre coffreur Kalystrat Fondations">
+                            <img src="{{ asset('assets/img/kalystrat/photos/filiale-fondations.webp') }}" loading="lazy" decoding="async" alt="Armature acier coffrage – carrière manœuvre coffreur Kalystrat Fondations">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
@@ -946,7 +946,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/carriere-designer.webp') }}" alt="Échantillons matériaux et palette couleurs – carrière designer d'intérieur Kalystrat">
+                            <img src="{{ asset('assets/img/kalystrat/photos/carriere-designer.webp') }}" loading="lazy" decoding="async" alt="Échantillons matériaux et palette couleurs – carrière designer d'intérieur Kalystrat">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
@@ -966,7 +966,7 @@
                 <div class="col-md-6 col-lg-4">
                     <article class="blog-card style5">
                         <div class="blog-img">
-                            <img src="{{ asset('assets/img/kalystrat/photos/carriere-courtier.webp') }}" alt="Clés et contrat de propriété – carrière courtier immobilier OACIQ Kalystrat">
+                            <img src="{{ asset('assets/img/kalystrat/photos/carriere-courtier.webp') }}" loading="lazy" decoding="async" alt="Clés et contrat de propriété – carrière courtier immobilier OACIQ Kalystrat">
                             <div class="blog-date">
                                 <a href="{{ url('/carrieres') }}"><span class="ks-badge-loc">QC</span></a>
                                 <div class="year">2026</div>
