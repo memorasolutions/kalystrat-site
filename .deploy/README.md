@@ -10,6 +10,7 @@ n'est actif tant qu'il n'est pas copié à son emplacement cible.
 |---------|-------|-------------|
 | `.env.production.kalystrat.example` | `/home/{cpanel}/kalystrat/.env` | Template `.env` Kalystrat-spécifique avec valeurs prédéfinies + champs `TO_FILL` |
 | `github-actions-ci.yml.example` | `.github/workflows/ci.yml` | Workflow CI avec Pest + axe-core + Lighthouse CI sur PR |
+| `deploy.sh` | `~/kalystrat/.deploy/deploy.sh` (cPanel) | Script bash idempotent : snapshot → pull → composer → migrate → cache → smoke test → rollback auto si échec |
 
 ## Pré-requis (inputs user attendus pour la prochaine session)
 
@@ -49,26 +50,40 @@ git push
 - Transform Rule CSP header
 
 ### 3. Déploiement cPanel (D5)
-Via sub-agent `laravel-deployer` ou manuellement :
+
+**Premier déploiement** :
 ```bash
 # Sur cPanel SSH
 cd ~/
 git clone <repo> kalystrat
 cd kalystrat
 cp .deploy/.env.production.kalystrat.example .env
-# Éditer .env : remplir tous les TO_FILL
-nano .env
-composer install --no-dev --optimize-autoloader
+nano .env                                  # remplir tous les TO_FILL
 php artisan key:generate
-php artisan migrate --force
-php artisan db:seed --force        # crée superadmin avec ADMIN_PASSWORD
-php artisan config:cache
-php artisan route:cache
-php artisan view:cache
-php artisan event:cache
-php artisan storage:link
+chmod +x .deploy/deploy.sh
+bash .deploy/deploy.sh --first-deploy      # script idempotent : snapshot → composer → migrate → seed → cache → smoke test
 chmod -R 775 storage bootstrap/cache
-# Vider ADMIN_PASSWORD du .env après seed
+nano .env                                  # vider ADMIN_PASSWORD (mot de passe est en DB hashé)
+```
+
+**Déploiements suivants** (idempotent, rollback auto sur échec) :
+```bash
+ssh cpanel-user@server.memora.pro
+cd ~/kalystrat
+bash .deploy/deploy.sh
+# Le script : snapshot tar.gz → git pull → composer install --no-dev → php artisan down →
+# migrate --force → cache (config/route/view/event) → up → smoke test 3 URLs.
+# Si une URL ne renvoie pas 200 → rollback auto vers commit précédent + restore .env/storage.
+```
+
+**Rollback manuel d'urgence** (si script absent ou autre incident) :
+```bash
+cd ~/kalystrat
+git checkout <commit-hash-précédent>
+tar -xzf ~/backups/snapshot_YYYYMMDD_HHMMSS.tar.gz
+composer install --no-dev --optimize-autoloader
+php artisan config:clear && php artisan route:clear && php artisan view:clear
+php artisan up
 ```
 
 ### 4. Smoke test post-déploiement (D6)
@@ -80,10 +95,23 @@ chmod -R 775 storage bootstrap/cache
 - SSL grade A+ (ssllabs.com)
 
 ### 5. Observabilité (Section E)
-- E1 Sentry : `composer require sentry/sentry-laravel`, ajouter SENTRY_LARAVEL_DSN
-- E2 GA4 + GSC : ajouter G-XXX dans .env, soumettre sitemap dans GSC
-- E3 Pulse : `composer require laravel/pulse`, `php artisan pulse:install`
-- E4 Backups : `composer require spatie/laravel-backup`, cron `0 2 * * * php artisan backup:run`
+
+**Statut packages : tous déjà installés via boilerplate Memora** ✅
+- E1 Sentry (`sentry/sentry-laravel 4.24.0`) : ajouter SENTRY_LARAVEL_DSN dans .env (créer projet sur sentry.io, scope `laravel`)
+- E2 GA4 + GSC : ajouter `GA_MEASUREMENT_ID=G-XXX` dans .env + vérifier GSC via DNS TXT, soumettre sitemap.xml
+- E3 Pulse (`laravel/pulse 1.7.2`) : déjà gated `viewPulse` super_admin (commit 7c0c7da) — accès via /pulse après login
+- E4 Backups (`spatie/laravel-backup 9.4.1`) : `routes/console.php` a déjà `backup:run` daily 03:00 + `backup:clean` daily 04:00 ; activer le cron Laravel `* * * * * cd ~/kalystrat && php artisan schedule:run >> /dev/null 2>&1`
+
+## Sécurité — état post-S26 (2026-05-04)
+
+| Vérif | État |
+|---|---|
+| CVE Composer | ✅ 0 (`composer audit` clean, commit 4104640) |
+| ADMIN_PASSWORD fallback hardcodé | ✅ retiré, RuntimeException en prod si vide (de69231) |
+| /pulse + /telescope auth | ✅ Gate super_admin (7c0c7da) |
+| Tests automatisés | ✅ 19 tests Pest sur 18 pages publiques (f240632) |
+
+Audit complet : `.rapports/audit-securite-2026-05-04.md`
 
 ## Tâches restantes (référence)
 
