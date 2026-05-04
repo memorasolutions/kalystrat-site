@@ -9,6 +9,7 @@ use Modules\Frontend\Http\Controllers\CandidatureController;
 Route::get('/', [HomeController::class, 'index'])->name('index');
 
 Route::get('/a-propos', [PageController::class, 'aPropos'])->name('apropos');
+Route::get('/conseil-consultatif', [PageController::class, 'conseil'])->name('conseil');
 Route::get('/services', [PageController::class, 'services'])->name('services');
 Route::get('/realisations', [PageController::class, 'realisations'])->name('realisations');
 Route::get('/faq', [PageController::class, 'faq'])->name('faq');

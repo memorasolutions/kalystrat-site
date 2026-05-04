@@ -282,6 +282,7 @@
                 <span class="sub-title text-theme">Gouvernance</span>
                 <h2 class="sec-title" style="color: var(--ks-navy); font-size: 2.25rem; font-weight: 700;">Notre conseil consultatif</h2>
                 <p style="color: #2C3340; margin-top: 1rem;">Ali Salomon a voulu s'entourer tôt. Pas pour l'image, pour la rigueur. Le conseil consultatif de Kalystrat réunit des professionnels chevronnés qui apportent l'expérience sectorielle que seul le temps forge. Trois sièges restent à pourvoir&nbsp;: nous cherchons des profils complémentaires en construction senior, financement et gestion RH/CCQ.</p>
+                <p style="margin-top: 1rem;"><a href="{{ route('conseil') }}" style="color: var(--ks-navy); font-weight: 600; text-decoration: underline;">Voir les profils détaillés du conseil consultatif&nbsp;→</a></p>
             </div>
         </div>
         <div class="row g-4 justify-content-center">

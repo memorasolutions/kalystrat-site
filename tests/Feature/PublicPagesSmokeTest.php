@@ -14,6 +14,7 @@ it('renvoie HTTP 200 sur toutes les pages publiques', function (string $url) {
 })->with([
     '/',
     '/a-propos',
+    '/conseil-consultatif',
     '/services',
     '/realisations',
     '/faq',

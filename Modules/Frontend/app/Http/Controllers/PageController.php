@@ -17,6 +17,17 @@ class PageController extends \App\Http\Controllers\Controller
         ]);
     }
 
+    public function conseil()
+    {
+        return view('frontend::pages.conseil', [
+            'title' => 'Conseil consultatif | Kalystrat – Gouvernance et expertise',
+            'metaDescription' => 'Conseil consultatif Kalystrat : Ali Salomon (Président), Jacques Jobidon (droit construction), Perry Wong (immobilier). Trois sièges à pourvoir au conseil du holding québécois.',
+            'ogTitle' => 'Conseil consultatif Kalystrat',
+            'ogImage' => asset('assets/img/kalystrat/og/conseil.jpg'),
+            'canonical' => route('conseil'),
+        ]);
+    }
+
     public function services()
     {
         return view('frontend::pages.services', [
