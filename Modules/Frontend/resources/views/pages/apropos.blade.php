@@ -169,7 +169,51 @@
 {{-- ========================
      Section Six piliers concurrentiels
      ======================== --}}
-<section class="space-top space-extra-bottom" style="background-color: #ffffff; padding: 5rem 0;">
+<style>
+    /* Cards "Six piliers" — pattern .ks-pillar-card aligné sur .ks-filiale-card pour cohérence visuelle */
+    .ks-pillar-card {
+        position: relative;
+        background: #FFFFFF;
+        border: 1px solid rgba(10, 22, 40, 0.10);
+        border-radius: 0.875rem;
+        padding: 2rem;
+        height: 100%;
+        box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08), 0 2px 6px rgba(10, 22, 40, 0.04);
+        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                    border-color 0.25s ease;
+    }
+    .ks-pillar-card:hover, .ks-pillar-card:focus-within {
+        transform: translateY(-4px);
+        box-shadow: 0 18px 44px rgba(10, 22, 40, 0.14), 0 4px 10px rgba(10, 22, 40, 0.06);
+        border-color: rgba(184, 164, 114, 0.5);
+    }
+    .ks-pillar-card__icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 56px;
+        height: 56px;
+        background: linear-gradient(135deg, #0A1628 0%, #1A2840 100%);
+        color: #B8A472;
+        border-radius: 0.5rem;
+        font-size: 1.5rem;
+        margin-bottom: 1.25rem;
+    }
+    .ks-pillar-card__title {
+        color: #0A1628;
+        font-size: 1.125rem;
+        font-weight: 700;
+        margin: 0 0 0.625rem;
+    }
+    .ks-pillar-card__text {
+        color: #2C3340;
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+</style>
+<section class="space-top space-extra-bottom" style="background-color: #F4F4F2; padding: 5rem 0;">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
             <div class="col-lg-9">
@@ -180,46 +224,46 @@
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-git-merge-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Intégration verticale</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Chaque étape du chantier reste à l'interne. On contrôle la chaîne de valeur du premier coup de pelle jusqu'à la remise des clés, ce qui élimine les marges intermédiaires et les délais de coordination.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-git-merge-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Intégration verticale</h3>
+                    <p class="ks-pillar-card__text">Chaque étape du chantier reste à l'interne. On contrôle la chaîne de valeur du premier coup de pelle jusqu'à la remise des clés, ce qui élimine les marges intermédiaires et les délais de coordination.</p>
+                </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-team-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Main-d'œuvre interne</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Dans un marché où la CCQ prévoit le recrutement de 16&nbsp;000 nouveaux travailleurs par année jusqu'en 2029, disposer de ses propres équipes n'est pas un luxe – c'est un avantage opérationnel. Nos travailleurs sont formés, encadrés et fidélisés selon les normes de la CCQ.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-team-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Main-d'œuvre interne</h3>
+                    <p class="ks-pillar-card__text">Dans un marché où la CCQ prévoit le recrutement de 16&nbsp;000 nouveaux travailleurs par année jusqu'en 2029, disposer de ses propres équipes n'est pas un luxe — c'est un avantage opérationnel. Nos travailleurs sont formés, encadrés et fidélisés selon les normes de la CCQ.</p>
+                </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-refresh-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Demande captive</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">La filiale immobilière génère des projets que les filiales de construction réalisent. Pas besoin de courir après les contrats quand le carnet de commandes se remplit de l'intérieur.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-refresh-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Demande captive</h3>
+                    <p class="ks-pillar-card__text">La filiale immobilière génère des projets que les filiales de construction réalisent. Pas besoin de courir après les contrats quand le carnet de commandes se remplit de l'intérieur.</p>
+                </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-links-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Synergies opérationnelles</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Achats groupés, équipements partagés, planification centralisée&nbsp;: quand six filiales parlent le même langage, les économies d'échelle deviennent tangibles dès le premier projet conjoint.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-links-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Synergies opérationnelles</h3>
+                    <p class="ks-pillar-card__text">Achats groupés, équipements partagés, planification centralisée&nbsp;: quand six filiales parlent le même langage, les économies d'échelle deviennent tangibles dès le premier projet conjoint.</p>
+                </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-award-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Cohérence de marque</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Un logo, une promesse, une réputation à défendre partout. Le client ne navigue pas entre cinq entreprises aux standards différents. Il fait affaire avec Kalystrat, point.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-award-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Cohérence de marque</h3>
+                    <p class="ks-pillar-card__text">Un logo, une promesse, une réputation à défendre partout. Le client ne navigue pas entre cinq entreprises aux standards différents. Il fait affaire avec Kalystrat, point.</p>
+                </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="p-4 rounded-3 h-100" style="border: 1px solid #E9E9E6;">
-                    <i class="ri-dashboard-3-line mb-3 d-block" aria-hidden="true" style="font-size: 2rem; color: var(--ks-gold);"></i>
-                    <h3 class="h6 fw-bold" style="color: var(--ks-navy);">Gestion centralisée</h3>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Comptabilité, conformité RBQ, relations CCQ, stratégie&nbsp;: tout converge vers le groupe. Les filiales se concentrent sur leur métier pendant que Kalystrat pilote la vue d'ensemble.</p>
-                </div>
+                <article class="ks-pillar-card">
+                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-dashboard-3-line"></i></span>
+                    <h3 class="ks-pillar-card__title">Gestion centralisée</h3>
+                    <p class="ks-pillar-card__text">Comptabilité, conformité RBQ, relations CCQ, stratégie&nbsp;: tout converge vers le groupe. Les filiales se concentrent sur leur métier pendant que Kalystrat pilote la vue d'ensemble.</p>
+                </article>
             </div>
         </div>
     </div>
