@@ -844,6 +844,33 @@
             color: #D4C28C !important;
         }
 
+        /* Portfolio thumbs – aspect-ratio fixe pour grille cohérente.
+           Sans ça, photos prennent leur taille intrinsèque (cassait la grille S25). */
+        .portfolio-card.style5 .portfolio-card-thumb {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+        .portfolio-card.style5 .portfolio-card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Blog cards style5 (carrieres) – aspect-ratio fixe.
+           Override Construz min-height:280px qui cassait l'alignement des 3 cartes. */
+        .blog-card.style5 .blog-img {
+            aspect-ratio: 4 / 3;
+            overflow: hidden;
+        }
+        .blog-card.style5 .blog-img img {
+            width: 100%;
+            height: 100%;
+            min-height: 0;
+            object-fit: cover;
+            display: block;
+        }
+
         /* Counter cards – gris remplacé */
         .counter-card_text,
         p.counter-card_text {
