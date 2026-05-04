@@ -1485,7 +1485,11 @@
                 <img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Logo Kalystrat" class="ks-footer__logo" width="140" height="40" loading="lazy">
                 <p class="ks-footer__slogan" style="color: var(--ks-gold); font-weight: 600; letter-spacing: 0.05em; margin: 0 0 0.75rem; font-size: 1rem;">« Conçu. Réalisé. Livré.&nbsp;»</p>
                 <p class="ks-footer__tagline">Groupe québécois en construction regroupant 6 filiales spécialisées. Bâtir l'avenir du Québec, une fondation à la fois.</p>
-                <a href="{{ url('/a-propos') }}">En savoir plus →</a>
+                <ul class="ks-footer__links" style="margin-top: 0.5rem;">
+                    <li><a href="{{ url('/a-propos') }}">À propos du groupe</a></li>
+                    <li><a href="{{ url('/conseil-consultatif') }}">Conseil consultatif</a></li>
+                    <li><a href="{{ url('/partenaires') }}">Réseau de partenaires</a></li>
+                </ul>
             </div>
             <div>
                 <h3 class="ks-footer__heading">Filiales</h3>
