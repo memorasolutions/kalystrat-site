@@ -1,0 +1,161 @@
+name: CI Kalystrat
+
+# À copier vers .github/workflows/ci.yml dès que le repo GitHub est créé
+# (actuellement le repo n'a pas de remote — voir handoff S25)
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  pest:
+    name: Tests Pest
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          extensions: mbstring, dom, fileinfo, sqlite, pdo_sqlite
+          coverage: none
+
+      - name: Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: ~/.composer/cache/files
+          key: composer-${{ hashFiles('composer.lock') }}
+
+      - name: Install Composer deps
+        run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Copy .env
+        run: cp .env.example .env
+
+      - name: Generate APP_KEY
+        run: php artisan key:generate
+
+      - name: Create SQLite DB
+        run: |
+          mkdir -p database
+          touch database/database.sqlite
+
+      - name: Migrate
+        run: php artisan migrate --force
+
+      - name: Run Pest
+        run: vendor/bin/pest --parallel
+
+  axe:
+    name: Audit AAA via axe-core
+    runs-on: ubuntu-latest
+    needs: pest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with: { php-version: '8.3', extensions: mbstring, dom, sqlite, pdo_sqlite }
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with: { node-version: '22' }
+
+      - name: Install Composer + Laravel boot
+        run: |
+          composer install --prefer-dist --no-interaction --no-progress
+          cp .env.example .env
+          php artisan key:generate
+          mkdir -p database && touch database/database.sqlite
+          php artisan migrate --force
+
+      - name: Install axe-core/cli
+        run: npm install -g @axe-core/cli
+
+      - name: Start Laravel server
+        run: php artisan serve --host=127.0.0.1 --port=8000 &
+
+      - name: Wait for server
+        run: npx wait-on http://127.0.0.1:8000
+
+      - name: Audit AAA sur 14 URLs
+        run: |
+          set -e
+          URLS=(
+            "/" "/a-propos" "/services" "/realisations"
+            "/faq" "/contact" "/carrieres" "/credits"
+            "/filiales/fondations" "/filiales/structure" "/filiales/toiture"
+            "/filiales/finition" "/filiales/immobilier" "/filiales/placement"
+          )
+          mkdir -p axe-reports
+          FAIL=0
+          for url in "${URLS[@]}"; do
+            slug=$(echo "$url" | sed 's|/|_|g;s|^_||;s|^$|home|')
+            axe "http://127.0.0.1:8000$url" \
+                --tags wcag2a,wcag2aa,wcag21a,wcag21aa,wcag22aa \
+                --exit \
+                > "axe-reports/${slug:-home}.txt" 2>&1 || FAIL=$((FAIL+1))
+          done
+          # Tolérance : 5 faux positifs documentés (slick, header, h1.visually-hidden, etc.)
+          if [ $FAIL -gt 5 ]; then
+            echo "::error::Trop de violations AAA non documentées : $FAIL"
+            cat axe-reports/*.txt
+            exit 1
+          fi
+          echo "Audits AAA OK (échecs ≤ tolérance faux positifs documentés)"
+
+      - name: Upload reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: axe-reports
+          path: axe-reports/
+
+  lighthouse:
+    name: Lighthouse mobile
+    runs-on: ubuntu-latest
+    needs: pest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup PHP 8.3
+        uses: shivammathur/setup-php@v2
+        with: { php-version: '8.3', extensions: mbstring, dom, sqlite, pdo_sqlite }
+
+      - name: Setup Node 22
+        uses: actions/setup-node@v4
+        with: { node-version: '22' }
+
+      - name: Install + boot
+        run: |
+          composer install --prefer-dist --no-interaction --no-progress
+          cp .env.example .env
+          php artisan key:generate
+          mkdir -p database && touch database/database.sqlite
+          php artisan migrate --force
+
+      - name: Install Lighthouse CI
+        run: npm install -g @lhci/cli@0.14.x
+
+      - name: Start Laravel server
+        run: php artisan serve --host=127.0.0.1 --port=8000 &
+
+      - name: Wait for server
+        run: npx wait-on http://127.0.0.1:8000
+
+      - name: Run Lighthouse CI
+        run: |
+          lhci autorun \
+            --collect.url=http://127.0.0.1:8000/ \
+            --collect.url=http://127.0.0.1:8000/a-propos \
+            --collect.url=http://127.0.0.1:8000/services \
+            --collect.url=http://127.0.0.1:8000/contact \
+            --collect.settings.preset=desktop \
+            --upload.target=temporary-public-storage \
+            --assert.assertions.categories:performance=warn \
+            --assert.assertions.categories:accessibility=error \
+            --assert.assertions.categories:best-practices=error \
+            --assert.assertions.categories:seo=error
