@@ -129,8 +129,93 @@
 </div>
 
 {{-- ========================
-     Section Mission, vision, différenciateur
+     Section Mission, vision, différenciateur — layout asymétrique 2+1 manifesto (tendance UX 2026)
+     Mission = card hero col-12 (manifesto fort)
+     Vision + Différenciateur = 2 cards .identity-card sobres charte v2 (col-6 chacune)
      ======================== --}}
+<style>
+    /* .ks-manifesto-card — Mission hero pleine largeur, charte v2 navy + gold accent */
+    .ks-manifesto-card {
+        position: relative;
+        background: linear-gradient(135deg, #0A1628 0%, #14223A 100%);
+        background-color: #0A1628; /* fallback solide WCAG */
+        color: #FFFFFF;
+        border-radius: 0.875rem;
+        padding: 3rem 2.5rem;
+        overflow: hidden;
+        border-left: 4px solid #B8A472; /* gold accent charte v2 */
+    }
+    .ks-manifesto-card::after {
+        content: '';
+        position: absolute;
+        top: -100px;
+        right: -100px;
+        width: 320px;
+        height: 320px;
+        border: 1px solid rgba(184, 164, 114, 0.18);
+        border-radius: 50%;
+        pointer-events: none;
+    }
+    .ks-manifesto-card__eyebrow {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #B8A472;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+    }
+    .ks-manifesto-card__title {
+        color: #FFFFFF;
+        font-size: clamp(1.5rem, 2.5vw + 0.5rem, 2rem);
+        font-weight: 700;
+        line-height: 1.25;
+        margin: 0 0 1.25rem;
+        max-width: 800px;
+    }
+    .ks-manifesto-card__text {
+        color: #E8DDBE; /* --gold-40, contraste 9:1 sur navy AAA */
+        font-size: 1.0625rem;
+        line-height: 1.65;
+        margin: 0;
+        max-width: 900px;
+    }
+    /* .ks-identity-card — sobre charte v2 pour Vision + Différenciateur */
+    .ks-identity-card {
+        background: #FAFAFA; /* --gray-50 charte v2 */
+        border: 1px solid #E5E5E5; /* --gray-200 charte v2 */
+        border-radius: 0.875rem;
+        padding: 2rem;
+        height: 100%;
+        transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+    .ks-identity-card:hover {
+        border-color: rgba(184, 164, 114, 0.5);
+        box-shadow: 0 12px 32px rgba(10, 22, 40, 0.08);
+    }
+    .ks-identity-card__eyebrow {
+        display: inline-block;
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #5C4F2C; /* gold profond AAA-OK */
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        margin-bottom: 0.75rem;
+    }
+    .ks-identity-card__title {
+        color: #0A1628;
+        font-size: 1.375rem;
+        font-weight: 700;
+        line-height: 1.3;
+        margin: 0 0 0.75rem;
+    }
+    .ks-identity-card__text {
+        color: #2C3340; /* navy-60 charte v2 ≈ #4F6180 mais on garde plus contrasté */
+        font-size: 0.9375rem;
+        line-height: 1.6;
+        margin: 0;
+    }
+</style>
 <section class="space-top space-extra-bottom" style="background-color: #F8F8F6; padding: 5rem 0;">
     <div class="container">
         <div class="row justify-content-center text-center mb-5">
@@ -140,27 +225,33 @@
                 <p style="color: #2C3340; margin-top: 1rem;">« Conçu. Réalisé. Livré. » Trois mots, une promesse&nbsp;: prendre le projet à bras-le-corps du devis aux clés en main, sans déléguer la responsabilité à personne d'autre.</p>
             </div>
         </div>
+
+        {{-- Mission : card hero pleine largeur (manifesto) --}}
+        <div class="row g-4 mb-4">
+            <div class="col-12">
+                <article class="ks-manifesto-card">
+                    <span class="ks-manifesto-card__eyebrow">Notre mission</span>
+                    <h3 class="ks-manifesto-card__title">Livrer des projets de construction sous une même enseigne, sans sous-traitance en cascade.</h3>
+                    <p class="ks-manifesto-card__text">Quand un client signe avec Kalystrat, l'équipe qui coule ses fondations parle à celle qui posera sa toiture, parce qu'elles portent le même dossard. Pas de zones grises contractuelles : un interlocuteur, un standard, un résultat.</p>
+                </article>
+            </div>
+        </div>
+
+        {{-- Vision + Différenciateur : 2 cards secondaires col-6 --}}
         <div class="row g-4">
-            <div class="col-lg-4">
-                <div class="p-4 bg-white rounded-3 h-100 shadow-sm">
-                    <div class="mb-3"><i class="ri-compass-3-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Notre mission</h3>
-                    <p style="color: #2C3340;">Livrer des projets de construction de qualité en réunissant des filiales spécialisées sous une même enseigne. Pas de sous-traitance en cascade, pas de zones grises contractuelles&nbsp;: un interlocuteur, un standard, un résultat. Quand un client signe avec Kalystrat, l'équipe qui coule ses fondations parle à celle qui posera sa toiture, parce qu'elles portent le même dossard.</p>
-                </div>
+            <div class="col-lg-6">
+                <article class="ks-identity-card">
+                    <span class="ks-identity-card__eyebrow">Notre vision · Horizon 2034</span>
+                    <h3 class="ks-identity-card__title">Le groupe intégré de référence au Québec d'ici huit ans</h3>
+                    <p class="ks-identity-card__text">Huit ans pour prouver qu'un modèle vertical, discipliné et ancré localement peut rivaliser avec les grands donneurs d'ouvrage tout en gardant l'agilité d'une PME. L'objectif n'est pas de grossir pour grossir — c'est de structurer une offre complète qui réduit les coûts et les délais sans sacrifier l'exécution.</p>
+                </article>
             </div>
-            <div class="col-lg-4">
-                <div class="p-4 bg-white rounded-3 h-100 shadow-sm">
-                    <div class="mb-3"><i class="ri-eye-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Notre vision</h3>
-                    <p style="color: #2C3340;">D'ici 2034, devenir le groupe intégré de référence au Québec. Huit ans pour prouver qu'un modèle vertical, discipliné et ancré localement peut rivaliser avec les grands donneurs d'ouvrage tout en gardant l'agilité d'une PME. L'objectif n'est pas de grossir pour grossir. C'est de structurer une offre complète qui réduit les coûts et les délais sans sacrifier l'exécution.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="p-4 bg-white rounded-3 h-100 shadow-sm">
-                    <div class="mb-3"><i class="ri-stack-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Notre différenciateur</h3>
-                    <p style="color: #2C3340;">L'intégration verticale complète – de l'excavation jusqu'à la finition intérieure, en passant par le placement de main-d'œuvre et le développement immobilier. Au Québec, la plupart des entrepreneurs généraux coordonnent des sous-traitants. Kalystrat, lui, possède les filiales. Résultat concret&nbsp;: moins d'interfaces, moins de litiges, des échéanciers tenus. Un seul groupe, six métiers, zéro excuse.</p>
-                </div>
+            <div class="col-lg-6">
+                <article class="ks-identity-card">
+                    <span class="ks-identity-card__eyebrow">Notre différenciateur</span>
+                    <h3 class="ks-identity-card__title">L'intégration verticale complète, de l'excavation à la finition</h3>
+                    <p class="ks-identity-card__text">Au Québec, la plupart des entrepreneurs généraux coordonnent des sous-traitants. Kalystrat, lui, possède les filiales — placement de main-d'œuvre et développement immobilier inclus. Résultat concret : moins d'interfaces, moins de litiges, des échéanciers tenus. Un seul groupe, six métiers, zéro excuse.</p>
+                </article>
             </div>
         </div>
     </div>
@@ -170,44 +261,53 @@
      Section Six piliers concurrentiels
      ======================== --}}
 <style>
-    /* Cards "Six piliers" — pattern .ks-pillar-card aligné sur .ks-filiale-card pour cohérence visuelle */
+    /* Cards "Six piliers" — strict charte v2 .pillar-card : bg navy, numéro gold opacity 0.3, h4 gold, p navy-20, border-left gold 4px */
     .ks-pillar-card {
         position: relative;
-        background: #FFFFFF;
-        border: 1px solid rgba(10, 22, 40, 0.10);
-        border-radius: 0.875rem;
+        background: #0A1628; /* charte v2 --navy */
+        color: #FFFFFF;
+        border-radius: 0.875rem; /* charte v2 --r-md */
         padding: 2rem;
         height: 100%;
-        box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08), 0 2px 6px rgba(10, 22, 40, 0.04);
-        transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                    box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
-                    border-color 0.25s ease;
+        overflow: hidden;
+        transition: box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                    transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .ks-pillar-card:hover, .ks-pillar-card:focus-within {
-        transform: translateY(-4px);
-        box-shadow: 0 18px 44px rgba(10, 22, 40, 0.14), 0 4px 10px rgba(10, 22, 40, 0.06);
-        border-color: rgba(184, 164, 114, 0.5);
+        box-shadow: 0 16px 40px rgba(10, 22, 40, 0.30), 0 4px 12px rgba(10, 22, 40, 0.18);
+        transform: translateY(-2px);
     }
-    .ks-pillar-card__icon {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 56px;
-        height: 56px;
-        background: linear-gradient(135deg, #0A1628 0%, #1A2840 100%);
+    /* Border-left gold 4px (charte v2 spec) */
+    .ks-pillar-card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 4px;
+        height: 100%;
+        background: #B8A472; /* --gold */
+    }
+    /* Numéro gros gold opacity 0.3 absolu top-right (charte v2 spec) */
+    .ks-pillar-card__number {
+        position: absolute;
+        top: 1rem;
+        right: 1.5rem;
+        font-size: 3rem;
+        font-weight: 800;
         color: #B8A472;
-        border-radius: 0.5rem;
-        font-size: 1.5rem;
-        margin-bottom: 1.25rem;
+        opacity: 0.35;
+        line-height: 1;
+        font-feature-settings: "tnum";
     }
     .ks-pillar-card__title {
-        color: #0A1628;
-        font-size: 1.125rem;
+        color: #B8A472; /* gold (charte v2 spec) */
+        font-size: 1.25rem;
         font-weight: 700;
-        margin: 0 0 0.625rem;
+        margin: 0.5rem 0 0.75rem;
+        line-height: 1.3;
     }
     .ks-pillar-card__text {
-        color: #2C3340;
+        color: #E8DDBE; /* --gold-40, contraste 9:1 sur navy AAA */
         font-size: 0.9375rem;
         line-height: 1.6;
         margin: 0;
@@ -225,42 +325,48 @@
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-git-merge-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">01</span>
+                    <i class="ri-git-merge-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Intégration verticale</h3>
                     <p class="ks-pillar-card__text">Chaque étape du chantier reste à l'interne. On contrôle la chaîne de valeur du premier coup de pelle jusqu'à la remise des clés, ce qui élimine les marges intermédiaires et les délais de coordination.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-team-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">02</span>
+                    <i class="ri-team-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Main-d'œuvre interne</h3>
                     <p class="ks-pillar-card__text">Dans un marché où la CCQ prévoit le recrutement de 16&nbsp;000 nouveaux travailleurs par année jusqu'en 2029, disposer de ses propres équipes n'est pas un luxe — c'est un avantage opérationnel. Nos travailleurs sont formés, encadrés et fidélisés selon les normes de la CCQ.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-refresh-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">03</span>
+                    <i class="ri-refresh-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Demande captive</h3>
                     <p class="ks-pillar-card__text">La filiale immobilière génère des projets que les filiales de construction réalisent. Pas besoin de courir après les contrats quand le carnet de commandes se remplit de l'intérieur.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-links-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">04</span>
+                    <i class="ri-links-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Synergies opérationnelles</h3>
                     <p class="ks-pillar-card__text">Achats groupés, équipements partagés, planification centralisée&nbsp;: quand six filiales parlent le même langage, les économies d'échelle deviennent tangibles dès le premier projet conjoint.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-award-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">05</span>
+                    <i class="ri-award-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Cohérence de marque</h3>
                     <p class="ks-pillar-card__text">Un logo, une promesse, une réputation à défendre partout. Le client ne navigue pas entre cinq entreprises aux standards différents. Il fait affaire avec Kalystrat, point.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
-                    <span class="ks-pillar-card__icon" aria-hidden="true"><i class="ri-dashboard-3-line"></i></span>
+                    <span class="ks-pillar-card__number" aria-hidden="true">06</span>
+                    <i class="ri-dashboard-3-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
                     <h3 class="ks-pillar-card__title">Gestion centralisée</h3>
                     <p class="ks-pillar-card__text">Comptabilité, conformité RBQ, relations CCQ, stratégie&nbsp;: tout converge vers le groupe. Les filiales se concentrent sur leur métier pendant que Kalystrat pilote la vue d'ensemble.</p>
                 </article>
