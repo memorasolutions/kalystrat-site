@@ -3,6 +3,7 @@
     <li>Nom&nbsp;: {{ $nom }}</li>
     <li>Courriel&nbsp;: {{ $email }}</li>
     <li>Téléphone&nbsp;: {{ $telephone ?? '–' }}</li>
+    <li>Ville du projet&nbsp;: {{ $ville ?? '–' }}</li>
     <li>Filiale&nbsp;: {{ $filiale ?? 'général' }}</li>
     <li>Budget&nbsp;: {{ $budget ?? '–' }}</li>
     <li>Échéance&nbsp;: {{ $echeance ?? '–' }}</li>

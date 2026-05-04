@@ -135,7 +135,39 @@
                             <input type="tel" id="telephone" name="telephone" class="form-control" maxlength="30" autocomplete="tel" value="{{ old('telephone') }}">
                         </div>
                     </div>
+                    @php
+                        $villesMap = [
+                            'quebec' => 'Québec',
+                            'levis' => 'Lévis',
+                            'sainte-foy' => 'Sainte-Foy',
+                            'beauport' => 'Beauport',
+                            'sillery' => 'Sillery',
+                            'autre' => 'Autre (à préciser dans le message)',
+                        ];
+                        $villePreset = old('ville') ?: ($villesMap[request('ville')] ?? request('ville') ?? '');
+                    @endphp
                     <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="ville" class="form-label" style="font-weight: 600; color: var(--ks-navy);">Ville du projet</label>
+                            <input type="text" id="ville" name="ville" class="form-control" maxlength="80" autocomplete="address-level2" value="{{ $villePreset }}" list="villes-suggestions" placeholder="Ex&nbsp;: Québec, Lévis, Montréal, Sherbrooke…">
+                            <datalist id="villes-suggestions">
+                                <option value="Québec">
+                                <option value="Lévis">
+                                <option value="Sainte-Foy">
+                                <option value="Beauport">
+                                <option value="Sillery">
+                                <option value="Charlesbourg">
+                                <option value="Cap-Rouge">
+                                <option value="Montréal">
+                                <option value="Laval">
+                                <option value="Longueuil">
+                                <option value="Sherbrooke">
+                                <option value="Trois-Rivières">
+                                <option value="Gatineau">
+                                <option value="Saguenay">
+                            </datalist>
+                            <small class="form-text" style="color: rgba(10, 22, 40, 0.6); font-size: 0.8125rem; margin-top: 0.25rem; display: block;">Hors Capitale-Nationale&nbsp;? Indiquez votre ville — nous évaluons la faisabilité pour les projets d'envergure partout au Québec.</small>
+                        </div>
                         <div class="col-md-6 mb-3">
                             <label for="filiale" class="form-label" style="font-weight: 600; color: var(--ks-navy);">Filiale concernée</label>
                             <select id="filiale" name="filiale" class="form-select">

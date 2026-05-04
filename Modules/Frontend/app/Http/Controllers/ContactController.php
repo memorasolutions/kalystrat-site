@@ -26,6 +26,7 @@ class ContactController extends \App\Http\Controllers\Controller
             'nom' => 'required|string|max:120',
             'email' => 'required|email|max:180',
             'telephone' => 'nullable|string|max:30',
+            'ville' => 'nullable|string|max:80',
             'filiale' => 'nullable|in:fondations,structure,toiture,finition,immobilier,placement,general',
             'budget' => 'nullable|string|max:60',
             'echeance' => 'nullable|string|max:60',
