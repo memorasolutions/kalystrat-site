@@ -28,6 +28,17 @@ class PageController extends \App\Http\Controllers\Controller
         ]);
     }
 
+    public function partenaires()
+    {
+        return view('frontend::pages.partenaires', [
+            'title' => 'Partenaires | Kalystrat – Architectes, designers, courtiers',
+            'metaDescription' => 'Réseau de partenaires Kalystrat : architectes, designers d\'intérieur, courtiers OACIQ et promoteurs. Programme de fidélité avec référencement croisé, tarifs préférentiels et visibilité chantier.',
+            'ogTitle' => 'Partenaires Kalystrat — Réseau de référencement',
+            'ogImage' => asset('assets/img/kalystrat/og/partenaires.jpg'),
+            'canonical' => route('partenaires'),
+        ]);
+    }
+
     public function services()
     {
         return view('frontend::pages.services', [
