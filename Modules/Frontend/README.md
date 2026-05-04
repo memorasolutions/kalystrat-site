@@ -184,6 +184,7 @@ session S24.
 | Critère | Élément | Cause | Validation |
 |---|---|---|---|
 | 1.4.3 / 1.4.6 | `<h1 class="visually-hidden">` | clip-path Bootstrap ignoré par axe | h1 invisible mais lu par lecteurs d'écran |
+| 1.4.3 / 1.4.6 | `<span class="visually-hidden">obligatoire</span>` (forms /contact, /carrieres) | même cause que h1 — clip-path | text invisible, marqueur sémantique screen-reader pour `<label>aria-required` |
 | 2.1.1 ~9 slides | `.slick-slide[inert]` | comportement attendu (slides cachées non focusables) | inert = best practice 2024 |
 | 2.1.2 keyboard trap | `<a href="/services">` du header | check heuristique défaillant | Prouvé via Tab Playwright : focus passe au lien suivant |
 | 1.4.8 text width | `div`, `main` | mesure DOM imprécise (responsive) | Texte responsive avec line-height correct |
