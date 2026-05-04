@@ -7,6 +7,8 @@
 | **Dépendances Composer (CVE)** | ✅ 2 CVE patchées | Aucune |
 | **Auth superadmin** | ✅ ADMIN_PASSWORD obligatoire en prod | Aucune |
 | **Dashboards observabilité** | ✅ /pulse + /telescope protégés (Gate super_admin) | Aucune |
+| **Secrets dans git history** | ✅ Aucun secret hardcodé (audit grep complet) | Aucune |
+| **Tests automatisés** | ✅ 19 Pest sur 18 pages publiques | Aucune |
 | **DNS kalystrat.ca** | ⚠️ Pointe encore SiteGround | Moyenne (migration prévue) |
 | **Email security** | ⚠️ DMARC `p=none`, DKIM absent | Moyenne (post-migration) |
 | **HTTPS / SSL** | ⏳ À auditer post-déploiement | À valider |
