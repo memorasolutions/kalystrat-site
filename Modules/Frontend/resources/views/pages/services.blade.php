@@ -72,12 +72,10 @@
         <div class="row g-4">
             @foreach(config('kalystrat.filiales', []) as $slug => $f)
             <div class="col-md-6 col-lg-4">
-                <article class="service-card" style="background: #FFFFFF; border: 1px solid #E9E9E6; border-top: 3px solid var(--ks-gold); border-radius: 0.5rem; padding: 2rem; height: 100%;">
-                    <div style="display: flex; align-items: center; justify-content: center; width: 56px; height: 56px; background: rgba(184,164,114,0.12); border-radius: 0.375rem; margin-bottom: 1rem;">
-                        <i class="ri-building-2-line" aria-hidden="true" style="color: var(--ks-navy); font-size: 1.5rem;"></i>
-                    </div>
-                    <h2 style="color: var(--ks-navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">{{ $f['nom_court'] ?? ucfirst($slug) }}</h2>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">{{ $f['specialite'] ?? '' }}</p>
+                <article class="ks-card ks-card--accent" style="--card-accent: {{ $f['hex_couleur'] ?? '#B8A472' }};">
+                    <span class="ks-card__icon" aria-hidden="true"><i class="ri-building-2-line"></i></span>
+                    <h2 class="ks-card__title ks-card__title--lg">{{ $f['nom_court'] ?? ucfirst($slug) }}</h2>
+                    <p class="ks-card__text">{{ $f['specialite'] ?? '' }}</p>
                     @if(!empty($f['services']))
                     <ul style="padding-left: 1.25rem; color: #2C3340; font-size: 0.9rem; margin-bottom: 1.25rem;">
                         @foreach(array_slice($f['services'], 0, 3) as $s)
@@ -85,7 +83,7 @@
                         @endforeach
                     </ul>
                     @endif
-                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="link-btn" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}" style="color: #8C2E00; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem; min-height: 44px;">En savoir plus <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
                 </article>
             </div>
             @endforeach
@@ -93,8 +91,8 @@
     </div>
 </div>
 
-{{-- Section "Pourquoi nous choisir" --}}
-<div class="space-top space-bottom" style="background-color: #F8F8F6; padding: 5rem 0;">
+{{-- Section "Pourquoi nous choisir" — 4 cards uniformes .ks-card --}}
+<div class="ks-card-section--grey">
     <div class="container">
         <div class="title-area text-center mb-5">
             <span class="sub-title text-theme">Pourquoi Kalystrat</span>
@@ -102,40 +100,32 @@
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
-                <div class="text-center p-3">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-shield-check-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;"><abbr title="Régie du bâtiment du Québec">RBQ</abbr> et garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">Licences à jour et garantie de construction résidentielle pour le neuf.</p>
-                </div>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-shield-check-fill"></i></span>
+                    <h3 class="ks-card__title"><abbr title="Régie du bâtiment du Québec">RBQ</abbr> et garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></h3>
+                    <p class="ks-card__text">Licences à jour et garantie de construction résidentielle pour le neuf.</p>
+                </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="text-center p-3">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-team-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">Personnel qualifié, formé et placé via notre filiale Placement Construction.</p>
-                </div>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-team-fill"></i></span>
+                    <h3 class="ks-card__title">Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></h3>
+                    <p class="ks-card__text">Personnel qualifié, formé et placé via notre filiale Placement Construction.</p>
+                </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="text-center p-3">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-time-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Délais maîtrisés</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">Intégration verticale&nbsp;: pas d'intermédiaire entre les corps de métier, calendrier tenu.</p>
-                </div>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-time-fill"></i></span>
+                    <h3 class="ks-card__title">Délais maîtrisés</h3>
+                    <p class="ks-card__text">Intégration verticale&nbsp;: pas d'intermédiaire entre les corps de métier, calendrier tenu.</p>
+                </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="text-center p-3">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-customer-service-2-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Un seul interlocuteur</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">Du devis à la livraison, vous traitez avec une seule équipe Kalystrat.</p>
-                </div>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-customer-service-2-fill"></i></span>
+                    <h3 class="ks-card__title">Un seul interlocuteur</h3>
+                    <p class="ks-card__text">Du devis à la livraison, vous traitez avec une seule équipe Kalystrat.</p>
+                </article>
             </div>
         </div>
     </div>

@@ -65,7 +65,7 @@
             {{-- Sidebar gauche --}}
             <aside class="col-lg-4" aria-label="Navigation des filiales et contact">
                 <h2 class="visually-hidden">Navigation et contact</h2>
-                <div class="service-widget" style="background: #F8F8F6; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
+                <div class="service-widget" style="background: #FFFFFF; padding: 1.5rem; border-radius: 0.875rem; margin-bottom: 1.5rem; border: 1px solid rgba(10, 22, 40, 0.10); box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08), 0 2px 6px rgba(10, 22, 40, 0.04);">
                     <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E0DDD3;">Toutes nos filiales</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         @foreach($filiales as $sl => $f)

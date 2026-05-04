@@ -99,13 +99,11 @@
             @endphp
             @foreach($expertises as $e)
             <div class="col-md-6 col-lg-4">
-                <article style="background: #FFFFFF; border: 1px solid #E9E9E6; border-top: 3px solid var(--ks-gold); border-radius: 0.5rem; padding: 1.75rem; height: 100%;">
-                    <div style="display: flex; align-items: center; justify-content: center; width: 48px; height: 48px; background: rgba(184,164,114,0.12); border-radius: 0.375rem; margin-bottom: 1rem;">
-                        <i class="{{ $e['icone'] }}" aria-hidden="true" style="color: var(--ks-navy); font-size: 1.375rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700; margin-bottom: 0.5rem;">{{ $e['filiale'] }}</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem; margin-bottom: 0.75rem;">{{ $e['chantiers'] }}</p>
-                    <p style="color: #595959; font-size: 0.85rem; margin: 0; font-style: italic;">{{ $e['volume'] }}</p>
+                <article class="ks-card ks-card--accent" style="--card-accent: #B8A472;">
+                    <span class="ks-card__icon" aria-hidden="true"><i class="{{ $e['icone'] }}"></i></span>
+                    <h3 class="ks-card__title">{{ $e['filiale'] }}</h3>
+                    <p class="ks-card__text">{{ $e['chantiers'] }}</p>
+                    <p style="color: #2C3340; font-size: 0.85rem; margin: 0; font-style: italic;">{{ $e['volume'] }}</p>
                 </article>
             </div>
             @endforeach
@@ -118,24 +116,24 @@
     <div class="container">
         <div class="row g-4 align-items-stretch">
             <div class="col-lg-6">
-                <div style="background: #FFFFFF; border: 1px solid #E9E9E6; border-radius: 0.5rem; padding: 2rem; height: 100%;">
-                    <span style="display: inline-block; background: #0A1628; color: #FFD54A; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 999px; margin-bottom: 0.75rem;">Propriétaires et promoteurs</span>
-                    <h3 style="color: var(--ks-navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Demander des références projets</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem; margin-bottom: 1.25rem;">Nous transmettons volontiers les coordonnées de clients récents pertinents à votre type de projet, sur demande et avec leur accord.</p>
-                    <a href="{{ route('contact') }}" style="display: inline-flex; align-items: center; gap: 0.5rem; background: var(--ks-navy); color: #FFFFFF; padding: 0.75rem 1.5rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; min-height: 44px;">
+                <article class="ks-card">
+                    <span style="display: inline-block; background: #0A1628; color: #FFD54A; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 999px; margin-bottom: 0.75rem; align-self: flex-start;">Propriétaires et promoteurs</span>
+                    <h3 class="ks-card__title ks-card__title--lg">Demander des références projets</h3>
+                    <p class="ks-card__text">Nous transmettons volontiers les coordonnées de clients récents pertinents à votre type de projet, sur demande et avec leur accord.</p>
+                    <a href="{{ route('contact') }}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.5rem; background: var(--ks-navy); color: #FFFFFF; padding: 0.75rem 1.5rem; border-radius: 0.375rem; text-decoration: none; font-weight: 600; min-height: 44px; margin-top: auto;">
                         Nous écrire <i class="ri-arrow-right-line" aria-hidden="true"></i>
                     </a>
-                </div>
+                </article>
             </div>
             <div class="col-lg-6">
-                <div style="background: #FFFFFF; border: 1px solid #E9E9E6; border-radius: 0.5rem; padding: 2rem; height: 100%;">
-                    <span style="display: inline-block; background: #0A1628; color: #FFD54A; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 999px; margin-bottom: 0.75rem;">Clients récents</span>
-                    <h3 style="color: var(--ks-navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Autoriser la publication de votre projet</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem; margin-bottom: 1.25rem;">Vous avez fait affaire avec une de nos filiales et acceptez que votre chantier figure dans cette galerie ? Écrivez-nous, nous organisons la séance photo.</p>
-                    <a href="mailto:info@kalystrat.ca?subject=Autorisation%20publication%20galerie" style="display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--ks-navy); padding: 0.75rem 1.5rem; border: 2px solid var(--ks-navy); border-radius: 0.375rem; text-decoration: none; font-weight: 600; min-height: 44px;">
+                <article class="ks-card">
+                    <span style="display: inline-block; background: #0A1628; color: #FFD54A; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; padding: 0.35rem 0.75rem; border-radius: 999px; margin-bottom: 0.75rem; align-self: flex-start;">Clients récents</span>
+                    <h3 class="ks-card__title ks-card__title--lg">Autoriser la publication de votre projet</h3>
+                    <p class="ks-card__text">Vous avez fait affaire avec une de nos filiales et acceptez que votre chantier figure dans cette galerie&nbsp;? Écrivez-nous, nous organisons la séance photo.</p>
+                    <a href="mailto:info@kalystrat.ca?subject=Autorisation%20publication%20galerie" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--ks-navy); padding: 0.75rem 1.5rem; border: 2px solid var(--ks-navy); border-radius: 0.375rem; text-decoration: none; font-weight: 600; min-height: 44px; margin-top: auto;">
                         info@kalystrat.ca <i class="ri-mail-line" aria-hidden="true"></i>
                     </a>
-                </div>
+                </article>
             </div>
         </div>
     </div>

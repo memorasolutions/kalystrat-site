@@ -1402,6 +1402,113 @@
                 scroll-behavior: auto !important;
             }
         }
+
+        /* === Système de cards Kalystrat universel — pattern .ks-card avec variants === */
+        /* Charte v2 : navy #0A1628 + gold #B8A472, WCAG 2.2 AAA, relief premium uniforme */
+        .ks-card {
+            position: relative;
+            background: #FFFFFF;
+            border: 1px solid rgba(10, 22, 40, 0.10);
+            border-radius: 0.875rem;
+            padding: 2rem;
+            height: 100%;
+            box-shadow: 0 8px 24px rgba(10, 22, 40, 0.08), 0 2px 6px rgba(10, 22, 40, 0.04);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+                        border-color 0.25s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .ks-card:hover, .ks-card:focus-within {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 44px rgba(10, 22, 40, 0.14), 0 4px 10px rgba(10, 22, 40, 0.06);
+            border-color: rgba(184, 164, 114, 0.5);
+        }
+        /* Variant centré (icône carrée + h3 + p) */
+        .ks-card--centered { text-align: center; }
+        /* Icône carré navy gradient + accent gold */
+        .ks-card__icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            background: linear-gradient(135deg, #0A1628 0%, #1A2840 100%);
+            color: #B8A472;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+        .ks-card--centered .ks-card__icon { margin-left: auto; margin-right: auto; }
+        /* Icône cercle (variant rond) */
+        .ks-card__icon--circle {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+        }
+        /* Titre, texte, lien CTA */
+        .ks-card__title {
+            color: #0A1628;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin: 0 0 0.625rem;
+            line-height: 1.3;
+        }
+        .ks-card__title--lg { font-size: 1.25rem; }
+        .ks-card__text {
+            color: #2C3340;
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin: 0 0 1rem;
+            flex-grow: 1;
+        }
+        .ks-card__link {
+            color: #0A1628;
+            font-weight: 700;
+            font-size: 0.9375rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            min-height: 44px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 0.125rem;
+            transition: color 0.2s ease, border-color 0.2s ease, gap 0.2s ease;
+            align-self: flex-start;
+            margin-top: auto;
+        }
+        .ks-card__link i { color: #B8A472; transition: transform 0.2s ease; }
+        .ks-card__link:hover, .ks-card__link:focus-visible {
+            color: #5C4F2C;
+            border-bottom-color: #B8A472;
+            gap: 0.75rem;
+        }
+        .ks-card__link:hover i, .ks-card__link:focus-visible i { transform: translate(2px, -2px); }
+        /* Variant avec accent border-top distinctif */
+        .ks-card--accent::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: var(--card-accent, #B8A472);
+            transition: height 0.25s ease;
+            border-radius: 0.875rem 0.875rem 0 0;
+        }
+        .ks-card--accent:hover::before { height: 6px; }
+        /* Section grise pour faire ressortir les cards blanches */
+        .ks-card-section--grey { background: #F4F4F2; padding: 5rem 0; }
+        /* Couleur gold profond pour eyebrow / numérotation accessible AAA */
+        .ks-card__eyebrow {
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #5C4F2C;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            margin-bottom: 0.875rem;
+            display: block;
+        }
     </style>
     @endverbatim
 

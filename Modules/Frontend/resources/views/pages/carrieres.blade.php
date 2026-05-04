@@ -127,13 +127,11 @@
             @endphp
             @foreach($avantages as $a)
             <div class="col-md-6 col-lg-3">
-                <div style="background: #FFFFFF; padding: 2rem 1.5rem; border-radius: 0.5rem; height: 100%; text-align: center;">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="{{ $a['icon'] }}" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">{{ $a['titre'] }}</h3>
-                    <p style="color: #2C3340; font-size: 0.9375rem;">{{ $a['texte'] }}</p>
-                </div>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="{{ $a['icon'] }}"></i></span>
+                    <h3 class="ks-card__title">{{ $a['titre'] }}</h3>
+                    <p class="ks-card__text">{{ $a['texte'] }}</p>
+                </article>
             </div>
             @endforeach
         </div>

@@ -57,34 +57,28 @@
         </div>
         <div class="row g-4">
             <div class="col-md-4">
-                <div class="contact-info-card text-center" style="background: #FFFFFF; padding: 2.5rem 1.5rem; border-radius: 0.5rem; height: 100%; box-shadow: 0 2px 12px rgba(10,22,40,0.08); border-top: 3px solid var(--ks-gold);">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-phone-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Téléphone</h3>
-                    <p style="color: #2C3340; font-size: 0.9rem; margin-bottom: 0.75rem;">Lun – Ven, 8&nbsp;h à 17&nbsp;h</p>
-                    <a href="tel:+14184760987" style="color: #8C2E00; font-weight: 700; font-size: 1.125rem; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">418-476-0987</a>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-phone-fill"></i></span>
+                    <h3 class="ks-card__title">Téléphone</h3>
+                    <p class="ks-card__text">Lun&nbsp;– Ven, 8&nbsp;h à 17&nbsp;h</p>
+                    <a href="tel:+14184760987" style="color: #0A1628; font-weight: 700; font-size: 1.125rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #B8A472; min-height: 44px; display: inline-flex; align-items: center; align-self: center; margin-top: auto;">418-476-0987</a>
+                </article>
             </div>
             <div class="col-md-4">
-                <div class="contact-info-card text-center" style="background: #FFFFFF; padding: 2.5rem 1.5rem; border-radius: 0.5rem; height: 100%; box-shadow: 0 2px 12px rgba(10,22,40,0.08); border-top: 3px solid var(--ks-gold);">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-mail-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Courriel</h3>
-                    <p style="color: #2C3340; font-size: 0.9rem; margin-bottom: 0.75rem;">Réponse sous 48&nbsp;h ouvrables</p>
-                    <a href="mailto:info@kalystrat.ca" style="color: #8C2E00; font-weight: 700; font-size: 1.05rem; text-decoration: none; min-height: 44px; display: inline-flex; align-items: center;">info@kalystrat.ca</a>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-mail-fill"></i></span>
+                    <h3 class="ks-card__title">Courriel</h3>
+                    <p class="ks-card__text">Réponse sous 48&nbsp;h ouvrables</p>
+                    <a href="mailto:info@kalystrat.ca" style="color: #0A1628; font-weight: 700; font-size: 1.05rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #B8A472; min-height: 44px; display: inline-flex; align-items: center; align-self: center; margin-top: auto;">info@kalystrat.ca</a>
+                </article>
             </div>
             <div class="col-md-4">
-                <div class="contact-info-card text-center" style="background: #FFFFFF; padding: 2.5rem 1.5rem; border-radius: 0.5rem; height: 100%; box-shadow: 0 2px 12px rgba(10,22,40,0.08); border-top: 3px solid var(--ks-gold);">
-                    <div style="display: inline-flex; align-items: center; justify-content: center; width: 64px; height: 64px; background: var(--ks-navy); border-radius: 50%; margin-bottom: 1rem;">
-                        <i class="ri-map-pin-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.75rem;"></i>
-                    </div>
-                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700;">Siège social</h3>
-                    <p style="color: #2C3340; font-size: 0.9rem; margin-bottom: 0.75rem;">Rendez-vous sur invitation</p>
-                    <p style="color: var(--ks-navy); font-weight: 700; font-size: 1.05rem; margin: 0;">Québec, QC, Canada</p>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-map-pin-fill"></i></span>
+                    <h3 class="ks-card__title">Siège social</h3>
+                    <p class="ks-card__text">Rendez-vous sur invitation</p>
+                    <p style="color: #0A1628; font-weight: 700; font-size: 1.05rem; margin: auto 0 0; align-self: center;">Québec, QC, Canada</p>
+                </article>
             </div>
         </div>
     </div>

@@ -331,27 +331,27 @@
         </div>
         <div class="row g-4 justify-content-center">
             <div class="col-lg-4 col-md-6">
-                <article class="p-4 bg-white rounded-3 h-100 shadow-sm text-center">
-                    <div class="mb-3"><i class="ri-scales-3-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Jacques Jobidon</h3>
-                    <span class="d-block mb-3" style="color: #5C4F2C; font-size: 0.9rem; font-weight: 700;">Conseiller – Droit de la construction</span>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Avocat spécialisé en droit de la construction, Jacques accompagne des entrepreneurs et des donneurs d'ouvrage depuis plus de deux décennies. Sa connaissance fine des contrats, des hypothèques légales et de la jurisprudence RBQ permet à Kalystrat de structurer ses ententes avec une solidité juridique dès le départ.</p>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-scales-3-line"></i></span>
+                    <h3 class="ks-card__title ks-card__title--lg">Jacques Jobidon</h3>
+                    <span class="ks-card__eyebrow">Conseiller — Droit de la construction</span>
+                    <p class="ks-card__text">Avocat spécialisé en droit de la construction, Jacques accompagne des entrepreneurs et des donneurs d'ouvrage depuis plus de deux décennies. Sa connaissance fine des contrats, des hypothèques légales et de la jurisprudence RBQ permet à Kalystrat de structurer ses ententes avec une solidité juridique dès le départ.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <article class="p-4 bg-white rounded-3 h-100 shadow-sm text-center">
-                    <div class="mb-3"><i class="ri-building-2-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Perry Wong</h3>
-                    <span class="d-block mb-3" style="color: #5C4F2C; font-size: 0.9rem; font-weight: 700;">Conseiller – Immobilier</span>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Actif dans le développement immobilier, Perry apporte une lecture marché indispensable à notre filiale Immobilier. Identification de terrains, analyse de rentabilité, positionnement de produit&nbsp;: son regard oriente les décisions d'investissement du groupe vers des projets viables et alignés avec la demande locale.</p>
+                <article class="ks-card ks-card--centered">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-building-2-line"></i></span>
+                    <h3 class="ks-card__title ks-card__title--lg">Perry Wong</h3>
+                    <span class="ks-card__eyebrow">Conseiller — Immobilier</span>
+                    <p class="ks-card__text">Actif dans le développement immobilier, Perry apporte une lecture marché indispensable à notre filiale Immobilier. Identification de terrains, analyse de rentabilité, positionnement de produit&nbsp;: son regard oriente les décisions d'investissement du groupe vers des projets viables et alignés avec la demande locale.</p>
                 </article>
             </div>
             <div class="col-lg-4 col-md-6">
-                <article class="p-4 bg-white rounded-3 h-100 shadow-sm text-center" style="border: 2px dashed var(--ks-gold);">
-                    <div class="mb-3"><i class="ri-user-add-line" aria-hidden="true" style="font-size: 2.5rem; color: var(--ks-gold);"></i></div>
-                    <h3 class="h5 fw-bold" style="color: var(--ks-navy);">Trois sièges à pourvoir</h3>
-                    <span class="d-block mb-3" style="color: #5C4F2C; font-size: 0.9rem; font-weight: 700;">Construction senior · Financement · RH/CCQ</span>
-                    <p style="color: #2C3340; font-size: 0.95rem;">Nous recherchons des professionnels expérimentés prêts à contribuer à la gouvernance d'un groupe en construction. Vous avez 15&nbsp;ans et plus d'expérience dans l'un de ces domaines&nbsp;? Écrivez-nous à <a href="mailto:info@kalystrat.ca" style="color: #8C2E00; text-decoration: underline; font-weight: 600;">info@kalystrat.ca</a> ou téléphonez au <a href="tel:+14184760987" style="color: #8C2E00; text-decoration: underline; font-weight: 600;">418-476-0987</a>.</p>
+                <article class="ks-card ks-card--centered" style="border-style: dashed; border-color: rgba(184, 164, 114, 0.5);">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-user-add-line"></i></span>
+                    <h3 class="ks-card__title ks-card__title--lg">Trois sièges à pourvoir</h3>
+                    <span class="ks-card__eyebrow">Construction senior · Financement · RH/CCQ</span>
+                    <p class="ks-card__text">Nous recherchons des professionnels expérimentés prêts à contribuer à la gouvernance d'un groupe en construction. Vous avez 15&nbsp;ans et plus d'expérience dans l'un de ces domaines&nbsp;? Écrivez-nous à <a href="mailto:info@kalystrat.ca" style="color: #0A1628; text-decoration: underline; text-decoration-color: #B8A472; text-underline-offset: 3px; font-weight: 700;">info@kalystrat.ca</a> ou téléphonez au <a href="tel:+14184760987" style="color: #0A1628; text-decoration: underline; text-decoration-color: #B8A472; text-underline-offset: 3px; font-weight: 700;">418-476-0987</a>.</p>
                 </article>
             </div>
         </div>
