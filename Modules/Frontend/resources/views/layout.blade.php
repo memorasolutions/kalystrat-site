@@ -61,6 +61,18 @@
     {{-- Favicon --}}
     <link rel="icon" href="{{ asset('assets/img/kalystrat/favicon.svg') }}" type="image/svg+xml">
 
+    {{-- PWA — manifest dynamique, theme color navy, icônes Apple/Android (config via config/pwa.php + .env) --}}
+    @if(config('pwa.enabled', true))
+    <link rel="manifest" href="{{ url('/manifest.webmanifest') }}">
+    <meta name="theme-color" content="{{ config('pwa.theme_color', '#0A1628') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="{{ config('pwa.short_name', config('app.name', 'Kalystrat')) }}">
+    <link rel="apple-touch-icon" href="{{ asset('icons/apple-touch-icon.png') }}">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="msapplication-TileColor" content="{{ config('pwa.theme_color', '#0A1628') }}">
+    @endif
+
     {{-- Préchargement Akzidenz Grotesk (charte v2) — variants Regular + Bold critiques au-dessus du fold --}}
     <link rel="preload" href="{{ asset('assets/fonts/AkzidenzGrotesk-Regular.woff2') }}" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="{{ asset('assets/fonts/AkzidenzGrotesk-Bold.woff2') }}" as="font" type="font/woff2" crossorigin>
@@ -1620,5 +1632,11 @@
         })();
     </script>
     @stack('scripts')
+
+    {{-- PWA prompts (install + update) — activés via config/pwa.php --}}
+    @if(config('pwa.enabled', true))
+    <x-pwa-install-prompt />
+    <x-pwa-update-prompt />
+    @endif
 </body>
 </html>
