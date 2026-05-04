@@ -39,6 +39,20 @@ class PageController extends \App\Http\Controllers\Controller
         ]);
     }
 
+    public function zonesDesservies()
+    {
+        $villes = config('kalystrat.villes', []);
+
+        return view('frontend::pages.zones-desservies', [
+            'title' => 'Zones desservies | Kalystrat – Capitale-Nationale, Chaudière-Appalaches et tout le Québec',
+            'metaDescription' => 'Kalystrat dessert principalement la Capitale-Nationale (Québec, Sainte-Foy, Beauport, Sillery) et la Chaudière-Appalaches (Lévis). Pour les projets d\'envergure : partout au Québec.',
+            'ogTitle' => 'Zones desservies par Kalystrat — Construction au Québec',
+            'ogImage' => asset('assets/img/kalystrat/og/zones-desservies.jpg'),
+            'canonical' => route('zones'),
+            'villes' => $villes,
+        ]);
+    }
+
     public function ville(string $slug)
     {
         $villes = config('kalystrat.villes', []);

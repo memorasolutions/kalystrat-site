@@ -64,6 +64,7 @@ Route::middleware('web')->group(function () {
             $sitemap->add(Url::create('/filiales/'.$slug)->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
 
+        $sitemap->add(Url::create('/zones-desservies')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         foreach (array_keys(config('kalystrat.villes', [])) as $slug) {
             $sitemap->add(Url::create('/zones-desservies/'.$slug)->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }

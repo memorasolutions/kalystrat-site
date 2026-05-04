@@ -29,6 +29,7 @@ Route::get('/filiales/{slug}', [PageController::class, 'filiale'])
     ->where('slug', 'fondations|structure|toiture|finition|immobilier|placement')
     ->name('filiale');
 
+Route::get('/zones-desservies', [PageController::class, 'zonesDesservies'])->name('zones');
 Route::get('/zones-desservies/{slug}', [PageController::class, 'ville'])
     ->where('slug', 'quebec|levis|sainte-foy|beauport|sillery')
     ->name('ville');
