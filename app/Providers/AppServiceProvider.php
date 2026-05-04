@@ -10,11 +10,13 @@ declare(strict_types=1);
 
 namespace App\Providers;
 
+use App\Models\User;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\Paginator;
 use Illuminate\Queue\Events\JobFailed;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Queue;
 use Illuminate\Support\Facades\RateLimiter;
@@ -89,6 +91,22 @@ class AppServiceProvider extends ServiceProvider
 
         $this->configureRateLimiting();
         $this->configureQueueFailureHandling();
+        $this->configureObservabilityGates();
+    }
+
+    /**
+     * Restreint l'accès aux dashboards d'observabilité (Pulse, Telescope) au super_admin.
+     * Sans ces Gates, /pulse et /telescope sont accessibles publiquement en prod.
+     */
+    protected function configureObservabilityGates(): void
+    {
+        Gate::define('viewPulse', function (User $user) {
+            return $user->hasRole('super_admin');
+        });
+
+        Gate::define('viewTelescope', function (User $user) {
+            return $user->hasRole('super_admin');
+        });
     }
 
     protected function configureQueueFailureHandling(): void
