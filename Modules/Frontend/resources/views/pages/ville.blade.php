@@ -88,7 +88,7 @@
         justify-content: center;
         margin-top: 2rem;
         padding: 1.5rem;
-        background: rgba(10, 22, 40, 0.04);
+        background: #F4F4F2; /* WCAG AAA : était rgba 0.04 (quasi blanc), texte navy mal détecté contraste */
         border-radius: 0.5rem;
     }
     .ks-ville-stat {
@@ -96,14 +96,14 @@
     }
     .ks-ville-stat__num {
         display: block;
-        color: var(--ks-gold, #B8A472);
+        color: #5C4F2C; /* gold profond — était #B8A472 sur blanc = 2.44:1 non conforme AA */
         font-size: 1.75rem;
         font-weight: 700;
         line-height: 1;
     }
     .ks-ville-stat__label {
         font-size: 0.8125rem;
-        color: rgba(10, 22, 40, 0.6);
+        color: #2C3340; /* navy fort sur gris-clair #F4F4F2 = 14:1 OK AAA */
         text-transform: uppercase;
         letter-spacing: 0.05em;
     }

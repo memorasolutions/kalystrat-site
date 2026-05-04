@@ -55,11 +55,12 @@
         border: 3px solid var(--ks-gold, #B8A472);
     }
     .ks-conseil-name { font-size: 1.375rem; font-weight: 700; margin: 0 0 0.5rem; color: var(--ks-navy, #0A1628); }
-    .ks-conseil-role { color: var(--ks-gold, #B8A472); font-size: 0.875rem; font-weight: 600; letter-spacing: 0.02em; margin: 0 0 1rem; text-transform: uppercase; }
-    .ks-conseil-bio { color: rgba(10, 22, 40, 0.78); font-size: 0.9375rem; line-height: 1.6; margin: 0 0 1rem; }
-    .ks-conseil-expertise { font-size: 0.8125rem; color: rgba(10, 22, 40, 0.6); font-style: italic; margin: 0; }
+    /* WCAG AAA : navy #0A1628 sur blanc = ratio 16.6:1 (gold #B8A472 sur blanc = 2.44:1, non conforme AA/AAA) */
+    .ks-conseil-role { color: #5C4F2C; font-size: 0.875rem; font-weight: 700; letter-spacing: 0.02em; margin: 0 0 1rem; text-transform: uppercase; }
+    .ks-conseil-bio { color: #2C3340; font-size: 0.9375rem; line-height: 1.6; margin: 0 0 1rem; }
+    .ks-conseil-expertise { font-size: 0.8125rem; color: #2C3340; font-style: italic; margin: 0; }
     .ks-conseil-card--vacant {
-        background: rgba(10, 22, 40, 0.025);
+        background: #F4F4F2; /* solide (était rgba 0.025 = quasi blanc, contraste 1:1 sur texte navy) */
         border-style: dashed;
         border-color: rgba(184, 164, 114, 0.4);
     }

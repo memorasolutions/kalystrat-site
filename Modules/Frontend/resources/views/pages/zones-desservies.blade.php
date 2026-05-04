@@ -59,7 +59,7 @@
         display: inline-block;
         font-size: 0.75rem;
         font-weight: 700;
-        color: var(--ks-gold, #B8A472);
+        color: #5C4F2C; /* WCAG AAA : gold #B8A472 sur blanc = 2.44:1 non conforme. Navy-gold dérivé = 8:1 OK */
         letter-spacing: 0.18em;
         text-transform: uppercase;
         margin-bottom: 0.75rem;
@@ -86,14 +86,16 @@
     }
     .ks-zone-card:hover .ks-zone-card__cta { color: var(--ks-gold, #B8A472); }
     .ks-zones-other {
-        background: linear-gradient(180deg, #0A1628 0%, #14223A 100%);
+        background-color: #0A1628; /* fallback solide explicite — sans ça l'auditeur WCAG calcule blanc-sur-blanc */
+        background-image: linear-gradient(180deg, #0A1628 0%, #14223A 100%);
         color: #FFFFFF;
         padding: 4rem 0;
         margin-top: 4rem;
         border-top: 1px solid rgba(184, 164, 114, 0.18);
     }
-    .ks-zones-other h2 { color: #FFFFFF; }
-    .ks-zones-other p { color: rgba(255, 255, 255, 0.78); }
+    .ks-zones-other h2 { color: #FFFFFF !important; } /* override .sec-title navy par défaut */
+    .ks-zones-other p { color: #E8DCC8; } /* rgba(255,255,255,0.78) sur navy = 12:1 OK, mais auditeur scan parent blanc → couleur solide */
+    .ks-zones-other .sub-title { color: #C4B285 !important; }
 </style>
 @endpush
 
@@ -138,7 +140,7 @@
     <div class="container">
         <div class="row justify-content-center text-center">
             <div class="col-lg-9">
-                <span class="sub-title text-theme" style="color: var(--ks-gold, #B8A472);">Hors zone listée</span>
+<span class="sub-title" style="color: #C4B285; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; font-size: 0.875rem;">Hors zone listée</span>
                 <h2 class="sec-title" style="margin-top: 0.5rem;">Votre projet ailleurs au Québec&nbsp;?</h2>
                 <p style="font-size: 1.0625rem; line-height: 1.7; margin: 1.25rem auto 2rem; max-width: 720px;">Vous êtes à Montréal, Laval, Longueuil, Sherbrooke, Trois-Rivières, Gatineau, Saguenay ou ailleurs&nbsp;? Pour les projets d'envergure (immeubles multi-logement, commerciaux ou institutionnels), Kalystrat se déplace partout au Québec avec ses six filiales spécialisées coordonnées sous une seule signature.</p>
                 <p style="font-size: 1rem; color: rgba(255,255,255,0.65); margin: 0 auto 2rem; max-width: 640px;">Décrivez-nous votre projet en quelques minutes&nbsp;: localisation, type, échéancier, budget. Nous évaluons la faisabilité et revenons vers vous sous 48 heures ouvrables.</p>
