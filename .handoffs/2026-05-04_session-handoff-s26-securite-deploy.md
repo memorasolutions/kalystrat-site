@@ -65,11 +65,14 @@ Session orientée sécurité et préparation au déploiement. Audit Composer →
 - S26-L2 : un `Gate::define` dans `AppServiceProvider` est le meilleur endroit pour protéger les dashboards Laravel (Pulse, Telescope) — propre, testé, sans middleware custom.
 - S26-L3 : `RuntimeException` dans `DatabaseSeeder` pour variable obligatoire en prod est une garde-fou efficace — le déploiement s'arrête avant de créer un compte admin sans mot de passe.
 - S26-L4 : limiter Pest au testsuite Feature (`--testsuite=Feature` dans `phpunit.xml`) isole proprement les tests projet des tests scaffold du laravel_vierge.
+- S26-L5 : tout redesign visuel doit déclencher un re-audit AAA — le redesign trust signals (commit `18d1812`) a introduit silencieusement 17 violations contraste critiques (background `rgba(255,255,255,0.03)` calculé blanc/blanc 1:1 par les checkers, link Bootstrap héritant de `rgb(13,110,253)`). Catch + fix par re-audit MCP en fin de session (commit `eb2f459`). Sans le re-audit, la prod aurait dégradé l'AAA homepage.
+- S26-L6 : audit AAA bulk via sub-agent + filtrage des faux positifs documentés (visually-hidden, slick[inert], header disclosure widget) = pattern efficace pour valider 11+ pages en 60s sans bruit.
 
 ## Fichiers créés/modifiés
 
 - **Créés** :
   - `.rapports/audit-securite-2026-05-04.md` (rapport sécurité 115L)
+  - `.rapports/audit-aaa-11pages-2026-05-04.md` (audit AAA 11 pages, 0 violation)
   - `.deploy/deploy.sh` (script idempotent + rollback)
   - `tests/Feature/PublicPagesSmokeTest.php` (19 smoke tests)
 - **Modifiés** :
@@ -80,8 +83,10 @@ Session orientée sécurité et préparation au déploiement. Audit Composer →
   - `Modules/Kalystrat/routes/api.php` (route orpheline retirée)
   - `.env.example` (ADMIN_PASSWORD vide documenté)
   - `.deploy/README.md` (procédure mise à jour)
-  - `.deploy/github-actions-ci.yml.example` (squelette CI/CD)
-  - `Modules/Frontend/resources/views/home-construz.blade.php` (trust signals + CTA tel)
+  - `.deploy/github-actions-ci.yml.example` (squelette CI/CD + scope Feature testsuite)
+  - `Modules/Frontend/resources/views/layout.blade.php` (aspect-ratio photos + fix régression contraste trust signals)
+  - `Modules/Frontend/resources/views/home.blade.php` (redesign trust signals + CTA tel)
+  - `Modules/Frontend/README.md` (registre faux positifs WCAG enrichi)
 
 ## Actions requises au retour
 
