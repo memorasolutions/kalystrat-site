@@ -65,7 +65,7 @@
             {{-- Sidebar gauche --}}
             <aside class="col-lg-4">
                 <div class="service-widget" style="background: #F8F8F6; padding: 1.5rem; border-radius: 0.5rem; margin-bottom: 1.5rem;">
-                    <h2 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E0DDD3;">Toutes nos filiales</h2>
+                    <h3 style="color: var(--ks-navy); font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #E0DDD3;">Toutes nos filiales</h3>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         @foreach($filiales as $sl => $f)
                         <li>
@@ -82,7 +82,7 @@
 
                 <div class="service-widget" style="background: var(--ks-navy); color: #FFFFFF; padding: 2rem 1.5rem; border-radius: 0.5rem; text-align: center;">
                     <i class="ri-customer-service-2-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 2.5rem;"></i>
-                    <h2 style="color: #FFFFFF; font-size: 1.125rem; font-weight: 700; margin: 1rem 0 0.5rem;">Besoin d'aide&nbsp;?</h2>
+                    <h3 style="color: #FFFFFF; font-size: 1.125rem; font-weight: 700; margin: 1rem 0 0.5rem;">Besoin d'aide&nbsp;?</h3>
                     <p style="color: #C2C5C9; font-size: 0.9rem; margin-bottom: 1rem;">Notre équipe répond sous 48&nbsp;h ouvrables.</p>
                     <a href="tel:+14184760987" style="display: block; color: var(--ks-gold); font-size: 1.25rem; font-weight: 700; text-decoration: none; min-height: 44px;">418-476-0987</a>
                     <a href="mailto:info@kalystrat.ca" style="display: inline-block; color: #C2C5C9; text-decoration: underline; font-size: 0.9rem; min-height: 44px; padding: 0.5rem 0;">info@kalystrat.ca</a>
