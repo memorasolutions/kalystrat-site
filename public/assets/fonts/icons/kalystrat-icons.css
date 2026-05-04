@@ -1,0 +1,60 @@
+/* Kalystrat Icons — subset RemixIcon v4.2.0 (43 glyphes utilisés sur le site)
+   Self-hosted, Apache 2.0 https://remixicon.com — subsetté via fontTools 2026-05-04 */
+@font-face {
+    font-family: "kalystrat-icons";
+    src: url("/assets/fonts/icons/kalystrat-icons.woff2") format("woff2");
+    font-display: swap;
+}
+[class^="ri-"], [class*=" ri-"] {
+    font-family: "kalystrat-icons" !important;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    speak: none;
+}
+
+.ri-arrow-right-down-line:before { content: "\ea6a"; }
+.ri-arrow-right-line:before { content: "\ea6c"; }
+.ri-arrow-right-up-line:before { content: "\ea70"; }
+.ri-award-line:before { content: "\ea8a"; }
+.ri-building-2-line:before { content: "\eb09"; }
+.ri-building-3-line:before { content: "\eb0b"; }
+.ri-building-4-line:before { content: "\eb0d"; }
+.ri-building-line:before { content: "\eb0f"; }
+.ri-checkbox-circle-fill:before { content: "\eb80"; }
+.ri-community-line:before { content: "\ebba"; }
+.ri-compass-3-line:before { content: "\ebbe"; }
+.ri-customer-service-2-fill:before { content: "\ec0b"; }
+.ri-dashboard-3-line:before { content: "\ec12"; }
+.ri-eye-line:before { content: "\ecb5"; }
+.ri-git-merge-line:before { content: "\edc1"; }
+.ri-graduation-cap-fill:before { content: "\f332"; }
+.ri-home-4-line:before { content: "\ee1d"; }
+.ri-home-heart-fill:before { content: "\ee29"; }
+.ri-line-chart-line:before { content: "\eeab"; }
+.ri-links-line:before { content: "\eeb8"; }
+.ri-mail-fill:before { content: "\eef3"; }
+.ri-mail-line:before { content: "\eef6"; }
+.ri-map-pin-fill:before { content: "\ef13"; }
+.ri-map-pin-line:before { content: "\ef14"; }
+.ri-menu-line:before { content: "\ef3e"; }
+.ri-money-dollar-circle-fill:before { content: "\ef64"; }
+.ri-paint-brush-line:before { content: "\efc1"; }
+.ri-phone-fill:before { content: "\efe9"; }
+.ri-phone-line:before { content: "\efec"; }
+.ri-play-fill:before { content: "\f00a"; }
+.ri-refresh-line:before { content: "\f064"; }
+.ri-roadster-fill:before { content: "\f08f"; }
+.ri-scales-3-line:before { content: "\f0b7"; }
+.ri-shield-check-fill:before { content: "\f0ff"; }
+.ri-shield-cross-fill:before { content: "\f101"; }
+.ri-shield-star-fill:before { content: "\f109"; }
+.ri-stack-line:before { content: "\f181"; }
+.ri-star-fill:before { content: "\f186"; }
+.ri-team-fill:before { content: "\f1ed"; }
+.ri-team-line:before { content: "\f1ee"; }
+.ri-time-fill:before { content: "\f20e"; }
+.ri-time-line:before { content: "\f20f"; }
+.ri-user-add-line:before { content: "\f25e"; }

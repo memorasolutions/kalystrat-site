@@ -51,11 +51,11 @@
          Économie ~700ms de render-blocking. Fallback noscript pour navigateurs sans JS (~0.3% trafic). --}}
     <link rel="preload" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}" as="style">
     <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}" media="print" onload="this.media='all'; this.onload=null;">
-    <link rel="preload" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" as="style">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" media="print" onload="this.media='all'; this.onload=null;">
+    {{-- Kalystrat Icons : subset RemixIcon (43 glyphes utilisés, 159KB → 3.5KB woff2 -98%, self-hosted RGPD/Loi 25 OK) --}}
+    <link rel="preload" href="{{ asset('assets/fonts/icons/kalystrat-icons.woff2') }}" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="{{ asset('assets/fonts/icons/kalystrat-icons.css') }}">
     <noscript>
         <link rel="stylesheet" href="{{ asset('themes/construz/assets/css/fontawesome.min.css') }}">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css">
     </noscript>
 
     {{-- Favicon --}}
