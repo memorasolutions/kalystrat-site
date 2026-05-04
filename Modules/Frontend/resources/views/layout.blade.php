@@ -1072,10 +1072,18 @@
             line-height: 1.55;
             margin-bottom: 1.75rem;
         }
+        /* Trust signals card : border-left gold + bg subtil — pattern "engagement contractuel" 2026 */
+        .ks-contact-trust__card {
+            border-left: 4px solid var(--ks-gold);
+            background: rgba(255, 255, 255, 0.03);
+            padding: 1.5rem 1.75rem 1rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin-bottom: 1.5rem;
+        }
         .ks-contact-trust__list {
             list-style: none;
             padding: 0;
-            margin: 0 0 1.5rem;
+            margin: 0;
         }
         .ks-contact-trust__list li {
             display: flex;
@@ -1116,40 +1124,70 @@
             font-size: 0.825rem;
             font-weight: 400;
         }
+        /* CTA téléphone : card cliquable full-width — pattern conversion 2026 (Stripe, Linear, Material 3) */
         .ks-contact-trust__phone {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 1rem;
+            gap: 1.25rem;
             padding: 1.15rem 1.75rem;
             background: #061020;
             border: 1px solid rgba(255, 213, 74, 0.45);
             border-radius: 0.5rem;
+            text-decoration: none;
+            transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+            min-height: 88px;
         }
-        .ks-contact-trust__phone i {
-            color: #FFD54A;
-            font-size: 1.5rem;
+        .ks-contact-trust__phone:hover {
+            border-color: #FFD54A;
+            background: #081428;
+            box-shadow: 0 4px 16px rgba(255, 213, 74, 0.18);
+            text-decoration: none;
         }
-        .ks-contact-trust__phone a {
+        .ks-contact-trust__phone:focus-visible {
+            outline: 3px solid #FFD54A;
+            outline-offset: 3px;
+            border-color: #FFD54A;
+        }
+        .ks-contact-trust__phone-icon {
             display: inline-flex;
             align-items: center;
-            min-height: 44px;
-            padding: 0.5rem 0.75rem;
-            color: #FFD54A !important;
-            font-size: 1.35rem;
+            justify-content: center;
+            width: 56px;
+            height: 56px;
+            min-width: 56px;
+            background: rgba(255, 213, 74, 0.12);
+            border: 1px solid rgba(255, 213, 74, 0.4);
+            border-radius: 50%;
+            color: #FFD54A;
+            font-size: 1.75rem;
+            flex-shrink: 0;
+        }
+        .ks-contact-trust__phone-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            text-align: center;
+            gap: 0.25rem;
+        }
+        .ks-contact-trust__phone-number {
+            color: #FFD54A;
+            font-size: 1.5rem;
             font-weight: 700;
-            text-decoration: none;
             line-height: 1.1;
+            letter-spacing: 0.02em;
+            white-space: nowrap;
         }
-        .ks-contact-trust__phone a:hover,
-        .ks-contact-trust__phone a:focus-visible {
-            text-decoration: underline;
-            outline: 2px solid #FFD54A;
-            outline-offset: 2px;
+        .ks-contact-trust__phone-label {
+            color: #E8E2D0;
+            font-size: 0.875rem;
+            line-height: 1.4;
         }
-        .ks-contact-trust__phone span {
-            color: #E8E2D0 !important;
-            font-size: 0.85rem;
+        @media (max-width: 480px) {
+            .ks-contact-trust__phone { padding: 1rem 1.25rem; gap: 1rem; }
+            .ks-contact-trust__phone-icon { width: 48px; height: 48px; min-width: 48px; font-size: 1.5rem; }
+            .ks-contact-trust__phone-number { font-size: 1.35rem; }
+            .ks-contact-trust__phone-label { font-size: 0.8125rem; }
         }
         @media (max-width: 991px) {
             .ks-contact-trust { padding: 0; margin-bottom: 0; }

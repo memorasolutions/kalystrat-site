@@ -606,35 +606,37 @@
                         <div class="ks-contact-trust">
                             <h3 class="ks-contact-trust__title">Pourquoi nous écrire&nbsp;?</h3>
                             <p class="ks-contact-trust__lead">Six expertises sous une seule signature. On vous répond avec le bon interlocuteur dès le premier appel.</p>
-                            <ul class="ks-contact-trust__list" role="list">
-                                <li>
-                                    <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-shield-check-fill"></i></span>
-                                    <span class="ks-contact-trust__txt"><strong>Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</strong><span class="ks-contact-trust__sub">Conformité vérifiable en tout temps</span></span>
-                                </li>
-                                <li>
-                                    <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-home-heart-fill"></i></span>
-                                    <span class="ks-contact-trust__txt"><strong>Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></strong><span class="ks-contact-trust__sub">Sur tous les projets résidentiels neufs</span></span>
-                                </li>
-                                <li>
-                                    <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-team-fill"></i></span>
-                                    <span class="ks-contact-trust__txt"><strong>Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr> qualifiée</strong><span class="ks-contact-trust__sub">Cartes de compétence vérifiées</span></span>
-                                </li>
-                                <li>
-                                    <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-shield-star-fill"></i></span>
-                                    <span class="ks-contact-trust__txt"><strong>Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr></strong><span class="ks-contact-trust__sub">Affiliation professionnelle reconnue</span></span>
-                                </li>
-                                <li>
-                                    <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-time-fill"></i></span>
-                                    <span class="ks-contact-trust__txt"><strong>Réponse sous 48&nbsp;h ouvrables</strong><span class="ks-contact-trust__sub">Engagement ferme, pas de file d'attente</span></span>
-                                </li>
-                            </ul>
-                            <div class="ks-contact-trust__phone">
-                                <i class="ri-phone-fill" aria-hidden="true"></i>
-                                <div>
-                                    <a href="tel:+14184760987" aria-label="Appeler Kalystrat au 418-476-0987">418-476-0987</a>
-                                    <span>Ou parlez à notre équipe directement</span>
-                                </div>
+                            <div class="ks-contact-trust__card">
+                                <ul class="ks-contact-trust__list" role="list">
+                                    <li>
+                                        <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-shield-check-fill"></i></span>
+                                        <span class="ks-contact-trust__txt"><strong>Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</strong><span class="ks-contact-trust__sub">Conformité vérifiable en tout temps</span></span>
+                                    </li>
+                                    <li>
+                                        <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-home-heart-fill"></i></span>
+                                        <span class="ks-contact-trust__txt"><strong>Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></strong><span class="ks-contact-trust__sub">Sur tous les projets résidentiels neufs</span></span>
+                                    </li>
+                                    <li>
+                                        <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-team-fill"></i></span>
+                                        <span class="ks-contact-trust__txt"><strong>Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr> qualifiée</strong><span class="ks-contact-trust__sub">Cartes de compétence vérifiées</span></span>
+                                    </li>
+                                    <li>
+                                        <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-shield-star-fill"></i></span>
+                                        <span class="ks-contact-trust__txt"><strong>Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr></strong><span class="ks-contact-trust__sub">Affiliation professionnelle reconnue</span></span>
+                                    </li>
+                                    <li>
+                                        <span class="ks-contact-trust__icon" aria-hidden="true"><i class="ri-time-fill"></i></span>
+                                        <span class="ks-contact-trust__txt"><strong>Réponse sous 48&nbsp;h ouvrables</strong><span class="ks-contact-trust__sub">Engagement ferme, pas de file d'attente</span></span>
+                                    </li>
+                                </ul>
                             </div>
+                            <a href="tel:+14184760987" class="ks-contact-trust__phone" aria-label="Appeler Kalystrat au 418-476-0987">
+                                <span class="ks-contact-trust__phone-icon" aria-hidden="true"><i class="ri-phone-fill"></i></span>
+                                <span class="ks-contact-trust__phone-text">
+                                    <span class="ks-contact-trust__phone-number">418-476-0987</span>
+                                    <span class="ks-contact-trust__phone-label">Ou parlez à notre équipe directement</span>
+                                </span>
+                            </a>
                         </div>
                     </div>
                     <div class="col-xl-7">
