@@ -46,8 +46,11 @@ jobs:
       - name: Migrate
         run: php artisan migrate --force
 
-      - name: Run Pest
-        run: vendor/bin/pest --parallel
+      - name: Run Pest (testsuite Feature uniquement)
+        # Kalystrat = site marketing : on teste les pages publiques (testsuite Feature),
+        # pas les modules Memora boilerplate (Booking, AI, SaaS) qui sont désactivés
+        # via modules_statuses.json et dont les tests dépendent de routes non chargées.
+        run: vendor/bin/pest --testsuite=Feature
 
   axe:
     name: Audit AAA via axe-core
