@@ -42,6 +42,19 @@
         box-shadow: 0 2px 8px rgba(10, 22, 40, 0.18);
     }
     .ks-founder-growth-icon svg { width: 36px; height: 36px; display: block; }
+    /* Slogan officiel Kalystrat — eyebrow gold au-dessus des hero-title (3 slides) */
+    .ks-hero-slogan {
+        display: inline-block;
+        color: var(--ks-gold);
+        font-size: 0.875rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        text-transform: uppercase;
+        margin: 1rem 0 0.5rem;
+        padding: 0.4rem 1rem 0.35rem;
+        border: 1px solid rgba(184, 164, 114, 0.4);
+        border-radius: 999px;
+    }
 </style>
 
 @verbatim
@@ -118,6 +131,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <span class="ks-hero-slogan" data-ani="slider-custom-anim-left" data-ani-delay="0.05s" aria-label="Slogan Kalystrat">Conçu. Réalisé. Livré.</span>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">Bâtir le Québec sous une seule marque&nbsp;:</h2>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">six filiales, un seul interlocuteur.</h2>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Kalystrat est un groupe québécois de construction à intégration verticale. De la fondation à la livraison, nos six filiales spécialisées avancent ensemble&nbsp;: vous gardez un seul contact, nous assumons toute la chaîne.</p>
@@ -152,6 +166,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <span class="ks-hero-slogan" data-ani="slider-custom-anim-left" data-ani-delay="0.05s" aria-label="Slogan Kalystrat">Conçu. Réalisé. Livré.</span>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">Une équipe québécoise,</h2>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">une chaîne complète, zéro sous-traitance perdue.</h2>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Ali Salomon construit au Québec depuis plus de dix ans. Avec Kalystrat, il a réuni six filiales spécialisées pour piloter vos projets résidentiels, commerciaux et institutionnels sous une même gouvernance.</p>
@@ -186,6 +201,7 @@
                                         </div>
                                     </div>
                                 </div>
+                                <span class="ks-hero-slogan" data-ani="slider-custom-anim-left" data-ani-delay="0.05s" aria-label="Slogan Kalystrat">Conçu. Réalisé. Livré.</span>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">De la première pelletée</h2>
                                 <h2 class="hero-title" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">aux clés livrées&nbsp;: Kalystrat.</h2>
                                 <p class="hero-text" data-ani="slider-custom-anim-left" data-ani-delay="0.2s">Excavation, structure, toiture, finition, vente, main-d'œuvre. Six filiales intégrées qui éliminent les zones grises entre les corps de métier.</p>

@@ -59,7 +59,7 @@ class PageController extends \App\Http\Controllers\Controller
         $filiale = $filiales[$slug];
 
         return view('frontend::pages.filiale', [
-            'title' => ($filiale['nom'] ?? $filiale['nom_court']) . ' – Kalystrat',
+            'title' => $filiale['meta_title'] ?? (($filiale['nom'] ?? $filiale['nom_court']) . ' – Kalystrat'),
             'metaDescription' => $filiale['meta_description'] ?? "Kalystrat {$filiale['nom_court']} : expertise construction Québec, intégrée au groupe Kalystrat.",
             'ogTitle' => $filiale['nom'] ?? $filiale['nom_court'],
             'ogImage' => asset("assets/img/kalystrat/og/filiale-{$slug}.jpg"),

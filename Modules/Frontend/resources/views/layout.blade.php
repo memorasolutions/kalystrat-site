@@ -81,7 +81,7 @@
         "founder": {"@type": "Person", "name": "Ali Salomon"},
         "address": {"@type": "PostalAddress", "addressLocality": "Québec", "addressRegion": "QC", "addressCountry": "CA"},
         "contactPoint": {"@type": "ContactPoint", "telephone": "+14184760987", "contactType": "customer service", "email": "info@kalystrat.ca", "areaServed": "CA-QC", "availableLanguage": "French"},
-        "sameAs": ["https://www.facebook.com/kalystrat", "https://www.linkedin.com/company/kalystrat", "https://www.instagram.com/kalystrat"],
+        "sameAs": ["https://www.facebook.com/kalystrat", "https://www.linkedin.com/company/kalystrat", "https://www.instagram.com/kalystrat", "https://www.tiktok.com/@kalystrat"],
         "subOrganization": [
             {"@type": "GeneralContractor", "@id": "https://kalystrat.ca/filiales/fondations#business", "name": "Kalystrat Fondations Inc.", "url": "https://kalystrat.ca/filiales/fondations", "address": {"@type": "PostalAddress", "addressLocality": "Québec", "addressRegion": "QC", "addressCountry": "CA"}, "telephone": "+14184760987", "areaServed": "CA-QC", "parentOrganization": {"@type": "Organization", "name": "Gestion Kalystrat Inc."}},
             {"@type": "GeneralContractor", "@id": "https://kalystrat.ca/filiales/structure#business", "name": "Kalystrat Structure Inc.", "url": "https://kalystrat.ca/filiales/structure", "address": {"@type": "PostalAddress", "addressLocality": "Québec", "addressRegion": "QC", "addressCountry": "CA"}, "telephone": "+14184760987", "areaServed": "CA-QC", "parentOrganization": {"@type": "Organization", "name": "Gestion Kalystrat Inc."}},
