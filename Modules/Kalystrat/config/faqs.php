@@ -61,4 +61,24 @@ return [
         'question' => 'Comment contacter Kalystrat ?',
         'answer'   => "Vous pouvez contacter Kalystrat par téléphone au 418-476-0987, par courriel à info@kalystrat.ca ou via le formulaire de contact sur le site officiel kalystrat.ca. Basé à Québec, le siège du groupe assure un suivi rapide et personnalisé pour toute demande d'information, de soumission ou de partenariat. L'équipe est disponible du lundi au vendredi, de 8 h à 17 h.",
     ],
+    [
+        'question' => 'Combien coûte une construction résidentielle à Québec en 2026 ?',
+        'answer'   => "En 2026, les coûts varient selon le type de projet : rénovation (250-400 \$/pi²), construction neuve standard (300-450 \$/pi²) et haut de gamme (450-700+ \$/pi²). Les facteurs clés incluent le prix du terrain, la complexité des fondations et le niveau de finition. À Québec, les variations peuvent dépendre de l'arrondissement (ex. : Sillery vs Beauport). Kalystrat offre une estimation gratuite via notre formulaire de contact, réalisée par des professionnels certifiés RBQ, tenant compte des spécificités locales et réglementaires.",
+    ],
+    [
+        'question' => 'Quels sont les défis de construction sur les sols argileux à Beauport ?',
+        'answer'   => "Les sols argileux à Beauport présentent un risque de gonflement saisonnier dû au gel-dégel, pouvant endommager les fondations. Kalystrat Fondations applique des solutions renforcées : semelles élargies, drainage périphérique efficace et imperméabilisation avancée. Une étude géotechnique est fortement recommandée avant tout projet. Notre expertise locale permet d'anticiper ces contraintes et d'assurer la durabilité des structures, conformément aux normes RBQ et aux exigences municipales.",
+    ],
+    [
+        'question' => 'Comment Kalystrat gère-t-il le gel-dégel sur les fondations dans la Capitale-Nationale ?',
+        'answer'   => "Dans la Capitale-Nationale, la ligne de gel dépasse 1,5 mètre. Kalystrat creuse donc les fondations en profondeur conforme au Code de construction du Québec, intègre des drains français performants, utilise de l'isolant rigide extérieur et applique un contrôle hydrostatique rigoureux. Tous nos chantiers sont supervisés par des professionnels RBQ et CCQ qualifiés, garantissant une résistance optimale aux cycles de gel-dégel propres au climat québécois.",
+    ],
+    [
+        'question' => 'Kalystrat fait-il des rénovations patrimoniales dans le Vieux-Québec et Sillery ?',
+        'answer'   => "Oui, via notre filiale Kalystrat Finition Intérieure, nous réalisons des rénovations patrimoniales dans le Vieux-Québec et Sillery avec des équipes spécialisées dans les maisons centenaires. Nous respectons strictement le règlement sur le patrimoine bâti de la Ville de Québec, restaurons les façades traditionnelles, intégrons des isolations invisibles et traitons la charpente en bois ancien avec soin. Nos interventions allient discrétion, savoir-faire artisanal et exigence premium.",
+    ],
+    [
+        'question' => 'Kalystrat dessert-il Montréal et les autres régions du Québec ?',
+        'answer'   => "Notre zone principale couvre la Capitale-Nationale et la Chaudière-Appalaches (notamment Lévis). Toutefois, pour des projets d'envergure tels que multi-logements, bâtiments commerciaux ou institutionnels, Kalystrat intervient partout au Québec : Montréal, Laval, Sherbrooke, Trois-Rivières, Gatineau ou Saguenay. Une demande de faisabilité détaillée peut être soumise via notre page de contact pour évaluer la logistique, les coûts et la faisabilité technique.",
+    ],
 ];
