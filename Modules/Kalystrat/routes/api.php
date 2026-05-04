@@ -1,8 +1,4 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-use Modules\Kalystrat\Http\Controllers\KalystratController;
-
-Route::middleware(['auth:sanctum'])->prefix('v1')->group(function () {
-    Route::apiResource('kalystrats', KalystratController::class)->names('kalystrat');
-});
+// Module Kalystrat = placeholder vide (frontend public dans Modules/Frontend).
+// Pas de controller ni de route à exposer. Décommenter quand un usage est défini.
