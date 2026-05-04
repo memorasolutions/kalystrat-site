@@ -20,7 +20,8 @@ Avant le déploiement, fournir :
 - [ ] **Credentials cPanel** : login + DB credentials (DB_NAME/USER/PASS)
 - [ ] **Cloudflare API token** (scope DNS edit + Page Rules)
 - [ ] **Password choisi** stephane@memora.ca (16+ chars, alphanum + symbol)
-       OU autoriser génération aléatoire
+       OU générer fort : `openssl rand -base64 24 | tr -d '/+='`
+       NB : seeder lance `RuntimeException` si `ADMIN_PASSWORD` vide en prod
 - [ ] **MX records** info@kalystrat.ca (Gmail Workspace ou autre ?)
 - [ ] **SMTP credentials** (provider + login + password) pour formulaire contact
 - [ ] **Sentry DSN** Kalystrat (créer projet sur sentry.io après déploiement)

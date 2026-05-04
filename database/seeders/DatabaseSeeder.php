@@ -12,6 +12,8 @@ namespace Database\Seeders;
 
 use App\Models\User;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Str;
+use RuntimeException;
 use Modules\Privacy\Database\Seeders\CookieCategorySeeder;
 use Modules\SaaS\Database\Seeders\SaaSDatabaseSeeder;
 use Modules\SEO\Database\Seeders\SEODatabaseSeeder;
@@ -27,26 +29,38 @@ class DatabaseSeeder extends Seeder
         ]);
 
         // 2. Superadmin principal - indestructible
+        $adminPassword = config('app.admin_password');
+        if (empty($adminPassword)) {
+            if (app()->isProduction()) {
+                throw new RuntimeException(
+                    'ADMIN_PASSWORD est requis en production. Définir dans .env (16+ chars).'
+                );
+            }
+            $adminPassword = 'Admin123!';
+        }
+
         $superAdmin = User::updateOrCreate(
             ['email' => config('app.superadmin_email')],
             [
                 'name' => config('app.admin_name', 'Super Admin'),
-                'password' => bcrypt(config('app.admin_password', 'Admin123!')),
+                'password' => bcrypt($adminPassword),
                 'email_verified_at' => now(),
                 'is_active' => true,
             ]
         );
         $superAdmin->assignRole('super_admin');
 
-        $admin = User::firstOrCreate(
-            ['email' => 'moderator@laravel-core.test'],
-            [
-                'name' => 'Modérateur',
-                'password' => bcrypt('password'),
-                'email_verified_at' => now(),
-            ]
-        );
-        $admin->assignRole('admin');
+        if (! app()->isProduction()) {
+            $admin = User::firstOrCreate(
+                ['email' => 'moderator@laravel-core.test'],
+                [
+                    'name' => 'Modérateur',
+                    'password' => bcrypt(Str::password(20)),
+                    'email_verified_at' => now(),
+                ]
+            );
+            $admin->assignRole('admin');
+        }
 
         // 3. Feature flags Pennant
         $this->call(FeatureFlagSeeder::class);
