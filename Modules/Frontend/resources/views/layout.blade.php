@@ -1481,14 +1481,14 @@
     <footer class="ks-footer" aria-label="Pied de page Kalystrat">
         <div class="ks-footer__grid">
             <div>
-                <h2 class="ks-footer__heading">À propos</h2>
+                <h3 class="ks-footer__heading">À propos</h3>
                 <img src="{{ asset('assets/img/kalystrat/logo-white.svg') }}" alt="Logo Kalystrat" class="ks-footer__logo" width="140" height="40" loading="lazy">
                 <p class="ks-footer__slogan" style="color: var(--ks-gold); font-weight: 600; letter-spacing: 0.05em; margin: 0 0 0.75rem; font-size: 1rem;">« Conçu. Réalisé. Livré.&nbsp;»</p>
                 <p class="ks-footer__tagline">Groupe québécois en construction regroupant 6 filiales spécialisées. Bâtir l'avenir du Québec, une fondation à la fois.</p>
                 <a href="{{ url('/a-propos') }}">En savoir plus →</a>
             </div>
             <div>
-                <h2 class="ks-footer__heading">Filiales</h2>
+                <h3 class="ks-footer__heading">Filiales</h3>
                 <ul class="ks-footer__links">
                     <li><a href="{{ url('/filiales/fondations') }}">Kalystrat Fondations</a></li>
                     <li><a href="{{ url('/filiales/structure') }}">Kalystrat Structure</a></li>
@@ -1499,7 +1499,7 @@
                 </ul>
             </div>
             <div>
-                <h2 class="ks-footer__heading">Contact</h2>
+                <h3 class="ks-footer__heading">Contact</h3>
                 <div class="ks-footer__contact-item">
                     <svg class="ks-footer__contact-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 1112 6.5a2.5 2.5 0 010 5z"/></svg>
                     <span>Québec, QC, Canada</span>
@@ -1514,7 +1514,7 @@
                 </div>
             </div>
             <div>
-                <h2 class="ks-footer__heading">Suivez-nous</h2>
+                <h3 class="ks-footer__heading">Suivez-nous</h3>
                 <div class="ks-footer__social">
                     <a href="https://www.facebook.com/kalystrat" class="ks-footer__social-link" aria-label="Kalystrat sur Facebook" target="_blank" rel="noopener noreferrer">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.13 8.44 9.88v-6.99H7.9V12h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99C18.34 21.13 22 16.99 22 12z"/></svg>
