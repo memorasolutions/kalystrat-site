@@ -1489,6 +1489,7 @@
                     <li><a href="{{ url('/a-propos') }}">À propos du groupe</a></li>
                     <li><a href="{{ url('/conseil-consultatif') }}">Conseil consultatif</a></li>
                     <li><a href="{{ url('/partenaires') }}">Réseau de partenaires</a></li>
+                    <li><a href="{{ url('/zones-desservies') }}">Zones desservies</a></li>
                 </ul>
             </div>
             <div>

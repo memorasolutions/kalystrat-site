@@ -116,8 +116,8 @@
     'title' => $ville['nom'],
     'breadcrumbs' => [
         ['label' => 'Accueil', 'url' => route('index')],
-        ['label' => 'À propos', 'url' => route('apropos')],
-        ['label' => 'Zones desservies — ' . $ville['nom'], 'url' => null],
+        ['label' => 'Zones desservies', 'url' => route('zones')],
+        ['label' => $ville['nom'], 'url' => null],
     ],
 ])
 
