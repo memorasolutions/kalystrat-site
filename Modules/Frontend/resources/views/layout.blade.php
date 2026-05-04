@@ -1099,10 +1099,12 @@
             line-height: 1.55;
             margin-bottom: 1.75rem;
         }
-        /* Trust signals card : border-left gold + bg subtil — pattern "engagement contractuel" 2026 */
+        /* Trust signals card : border-left gold + bg navy plus foncé — pattern "engagement contractuel" 2026.
+           NB : navy solide (pas blanc translucide) pour que les contrast checkers calculent
+           correctement le ratio AAA des textes blancs (rgba blanc/blanc = 1:1 faux positif). */
         .ks-contact-trust__card {
             border-left: 4px solid var(--ks-gold);
-            background: rgba(255, 255, 255, 0.03);
+            background: #061020;
             padding: 1.5rem 1.75rem 1rem;
             border-radius: 0 0.5rem 0.5rem 0;
             margin-bottom: 1.5rem;
@@ -1151,18 +1153,24 @@
             font-size: 0.825rem;
             font-weight: 400;
         }
-        /* CTA téléphone : card cliquable full-width — pattern conversion 2026 (Stripe, Linear, Material 3) */
+        /* CTA téléphone : card cliquable full-width — pattern conversion 2026 (Stripe, Linear, Material 3).
+           Force color: gold pour empêcher Bootstrap link de surcharger en bleu (régression contraste AAA). */
         .ks-contact-trust__phone {
             display: flex;
             align-items: center;
             gap: 1.25rem;
             padding: 1.15rem 1.75rem;
             background: #061020;
+            color: #FFD54A;
             border: 1px solid rgba(255, 213, 74, 0.45);
             border-radius: 0.5rem;
             text-decoration: none;
             transition: border-color 0.2s ease, background 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
             min-height: 88px;
+        }
+        .ks-contact-trust__phone:link,
+        .ks-contact-trust__phone:visited {
+            color: #FFD54A;
         }
         .ks-contact-trust__phone:hover {
             border-color: #FFD54A;
