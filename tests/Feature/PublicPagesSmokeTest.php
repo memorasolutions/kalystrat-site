@@ -28,6 +28,7 @@ it('renvoie HTTP 200 sur toutes les pages publiques', function (string $url) {
     '/filiales/finition',
     '/filiales/immobilier',
     '/filiales/placement',
+    '/zones-desservies/quebec',
     '/politique-confidentialite',
     '/conditions-utilisation',
     '/politique-cookies',

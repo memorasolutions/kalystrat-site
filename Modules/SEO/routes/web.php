@@ -64,6 +64,10 @@ Route::middleware('web')->group(function () {
             $sitemap->add(Url::create('/filiales/'.$slug)->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
 
+        foreach (array_keys(config('kalystrat.villes', [])) as $slug) {
+            $sitemap->add(Url::create('/zones-desservies/'.$slug)->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
+        }
+
         if (class_exists(Article::class)) {
             Article::published()->each(function (Article $article) use ($sitemap) {
                 $sitemap->add(

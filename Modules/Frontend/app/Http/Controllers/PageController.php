@@ -39,6 +39,24 @@ class PageController extends \App\Http\Controllers\Controller
         ]);
     }
 
+    public function ville(string $slug)
+    {
+        $villes = config('kalystrat.villes', []);
+        abort_unless(isset($villes[$slug]), 404);
+
+        $ville = $villes[$slug];
+
+        return view('frontend::pages.ville', [
+            'title' => $ville['meta_title'],
+            'metaDescription' => $ville['meta_description'],
+            'ogTitle' => $ville['h1'],
+            'ogImage' => asset("assets/img/kalystrat/og/ville-{$slug}.jpg"),
+            'canonical' => route('ville', ['slug' => $slug]),
+            'slug' => $slug,
+            'ville' => $ville,
+        ]);
+    }
+
     public function services()
     {
         return view('frontend::pages.services', [
