@@ -127,7 +127,7 @@
             @endphp
             @foreach($avantages as $a)
             <div class="col-md-6 col-lg-3">
-                <article class="ks-card ks-card--centered">
+                <article class="ks-card ks-card--centered ks-card--sober">
                     <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="{{ $a['icon'] }}"></i></span>
                     <h3 class="ks-card__title">{{ $a['titre'] }}</h3>
                     <p class="ks-card__text">{{ $a['texte'] }}</p>

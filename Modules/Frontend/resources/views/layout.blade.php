@@ -1426,6 +1426,18 @@
         }
         /* Variant centré (icône carrée + h3 + p) */
         .ks-card--centered { text-align: center; }
+        /* Variant "sober" — strict charte v2 .identity-card : bg gray-50 #FAFAFA + border gray-200 #E5E5E5, sans relief box-shadow (sobre informatif) */
+        .ks-card--sober {
+            background: #FAFAFA;
+            border-color: #E5E5E5;
+            box-shadow: none;
+        }
+        .ks-card--sober:hover, .ks-card--sober:focus-within {
+            background: #FFFFFF;
+            border-color: rgba(184, 164, 114, 0.5);
+            box-shadow: 0 12px 32px rgba(10, 22, 40, 0.08);
+            transform: translateY(-2px);
+        }
         /* Icône carré navy gradient + accent gold */
         .ks-card__icon {
             display: inline-flex;

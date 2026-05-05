@@ -100,28 +100,28 @@
         </div>
         <div class="row g-4">
             <div class="col-md-6 col-lg-3">
-                <article class="ks-card ks-card--centered">
+                <article class="ks-card ks-card--centered ks-card--sober">
                     <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-shield-check-fill"></i></span>
                     <h3 class="ks-card__title"><abbr title="Régie du bâtiment du Québec">RBQ</abbr> et garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></h3>
                     <p class="ks-card__text">Licences à jour et garantie de construction résidentielle pour le neuf.</p>
                 </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <article class="ks-card ks-card--centered">
+                <article class="ks-card ks-card--centered ks-card--sober">
                     <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-team-fill"></i></span>
                     <h3 class="ks-card__title">Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></h3>
                     <p class="ks-card__text">Personnel qualifié, formé et placé via notre filiale Placement Construction.</p>
                 </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <article class="ks-card ks-card--centered">
+                <article class="ks-card ks-card--centered ks-card--sober">
                     <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-time-fill"></i></span>
                     <h3 class="ks-card__title">Délais maîtrisés</h3>
                     <p class="ks-card__text">Intégration verticale&nbsp;: pas d'intermédiaire entre les corps de métier, calendrier tenu.</p>
                 </article>
             </div>
             <div class="col-md-6 col-lg-3">
-                <article class="ks-card ks-card--centered">
+                <article class="ks-card ks-card--centered ks-card--sober">
                     <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-customer-service-2-fill"></i></span>
                     <h3 class="ks-card__title">Un seul interlocuteur</h3>
                     <p class="ks-card__text">Du devis à la livraison, vous traitez avec une seule équipe Kalystrat.</p>

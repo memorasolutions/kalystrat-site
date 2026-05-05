@@ -142,25 +142,25 @@
 
         <div class="row gy-30 mt-50">
             <div class="col-lg-4">
-                <div class="ks-partner-benefit" aria-labelledby="benefit-referencement">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-links-line"></i></div>
-                    <h3 id="benefit-referencement" class="ks-partner-title">Référencement croisé</h3>
-                    <p class="ks-partner-desc">Visibilité mutuelle sur nos plateformes numériques, événements sectoriels et signalisations chantier.</p>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-referencement">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-links-line"></i></span>
+                    <h3 id="benefit-referencement" class="ks-card__title">Référencement croisé</h3>
+                    <p class="ks-card__text">Visibilité mutuelle sur nos plateformes numériques, événements sectoriels et signalisations chantier.</p>
+                </article>
             </div>
             <div class="col-lg-4">
-                <div class="ks-partner-benefit" aria-labelledby="benefit-tarifs">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-money-dollar-circle-fill"></i></div>
-                    <h3 id="benefit-tarifs" class="ks-partner-title">Tarifs préférentiels</h3>
-                    <p class="ks-partner-desc">Conditions avantageuses sur les services Kalystrat pour les partenaires apportant un volume récurrent.</p>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-tarifs">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-money-dollar-circle-fill"></i></span>
+                    <h3 id="benefit-tarifs" class="ks-card__title">Tarifs préférentiels</h3>
+                    <p class="ks-card__text">Conditions avantageuses sur les services Kalystrat pour les partenaires apportant un volume récurrent.</p>
+                </article>
             </div>
             <div class="col-lg-4">
-                <div class="ks-partner-benefit" aria-labelledby="benefit-visibilite">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-eye-line"></i></div>
-                    <h3 id="benefit-visibilite" class="ks-partner-title">Visibilité chantier</h3>
-                    <p class="ks-partner-desc">Affichage de votre logo sur les panneaux de chantier et dans la documentation projet remise aux clients.</p>
-                </div>
+                <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-visibilite">
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-eye-line"></i></span>
+                    <h3 id="benefit-visibilite" class="ks-card__title">Visibilité chantier</h3>
+                    <p class="ks-card__text">Affichage de votre logo sur les panneaux de chantier et dans la documentation projet remise aux clients.</p>
+                </article>
             </div>
         </div>
     </div>
