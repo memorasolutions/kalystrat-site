@@ -1,50 +1,27 @@
 /**
  * AdminTabler — entry CSS
- * Tabler 1.4 officiel + Tabler Icons + Simplebar.
- * Layout "navbar-overlap" reproduit fidèlement preview.tabler.io/layout-navbar-overlap.html
+ * Imports IDENTIQUES à preview.tabler.io/layout-navbar-overlap.html (mai 2026, v1.4.0).
+ * Source officielle Paweł Kuna, MIT.
  */
 
+/* ========== TABLER GLOBAL MANDATORY ========== */
 @import "@tabler/core/dist/css/tabler.min.css";
-@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
-@import "simplebar/dist/simplebar.css";
 
-/* ========================================================================
-   Branding dynamique — surchargé par PHP via inline <style> dans layout
-   ======================================================================== */
+/* ========== TABLER PLUGINS STYLES ========== */
+@import "@tabler/core/dist/css/tabler-flags.min.css";
+@import "@tabler/core/dist/css/tabler-socials.min.css";
+@import "@tabler/core/dist/css/tabler-payments.min.css";
+@import "@tabler/core/dist/css/tabler-vendors.min.css";
+@import "@tabler/core/dist/css/tabler-marketing.min.css";
+@import "@tabler/core/dist/css/tabler-themes.min.css";
+
+/* ========== TABLER ICONS WEBFONT ========== */
+@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+
+/* ========== CUSTOM FONT (Inter via Google Fonts) ========== */
+@import url("https://rsms.me/inter/inter.css");
+
+/* ========== BRANDING DYNAMIQUE — surchargé via inline <style> dans layout ========== */
 :root {
     --admintabler-primary: #066fd1;
-    --admintabler-secondary: #5eba00;
-    --admintabler-font: "Inter", system-ui, sans-serif;
-}
-
-/* ========================================================================
-   WCAG 2.2 — focus visible
-   ======================================================================== */
-:focus-visible {
-    outline: 2px solid var(--admintabler-primary);
-    outline-offset: 2px;
-    border-radius: 4px;
-}
-
-/* ========================================================================
-   Reduced motion (WCAG 2.3.3)
-   ======================================================================== */
-@media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-        scroll-behavior: auto !important;
-    }
-}
-
-/* ========================================================================
-   Accessibility — target sizes WCAG 2.2 (44×44 min sur navbar)
-   ======================================================================== */
-.navbar .btn,
-.navbar .nav-link,
-.navbar button {
-    min-height: 44px;
 }

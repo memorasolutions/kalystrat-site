@@ -19,6 +19,10 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
+                    src: 'node_modules/@tabler/core/dist/js/tabler-theme.min.js',
+                    dest: 'admintabler',
+                },
+                {
                     src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'node_modules/bootstrap/dist/css/bootstrap.min.css'],
                     dest: 'nobleui/plugins/bootstrap',
                 },
