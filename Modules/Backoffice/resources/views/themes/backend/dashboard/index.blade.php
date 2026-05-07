@@ -71,107 +71,135 @@
 @endforeach
 @endif
 
-{{-- Stat cards --}}
-<div class="row" id="dashboard-stats">
-    {{-- Users --}}
-    <div class="col-md-6 col-xl-3 grid-margin stretch-card">
+{{-- Stat cards style Tabler navbar-overlap : Welcome + 2 cards stats avec sparklines + gauge donut --}}
+@php
+    $usersTotal = \App\Models\User::count();
+    $usersNew = \App\Models\User::where('created_at', '>=', now()->subDays(30))->count();
+    $articlesTotal = class_exists(\Modules\Blog\Models\Article::class) ? \Modules\Blog\Models\Article::count() : 0;
+    $articlesPublished = class_exists(\Modules\Blog\Models\Article::class) ? \Modules\Blog\Models\Article::where('status', 'published')->count() : 0;
+    $pagesTotal = class_exists(\Modules\Pages\Models\StaticPage::class) ? \Modules\Pages\Models\StaticPage::count() : 0;
+    $pagesPublished = class_exists(\Modules\Pages\Models\StaticPage::class) ? \Modules\Pages\Models\StaticPage::where('status', 'published')->count() : 0;
+    $modulesActive = count(\Nwidart\Modules\Facades\Module::allEnabled());
+    $modulesTotal = count(\Nwidart\Modules\Facades\Module::all());
+    $modulesPercent = $modulesTotal > 0 ? round(($modulesActive / $modulesTotal) * 100) : 0;
+    $welcomeRatio = $usersTotal > 0 ? min(100, round(($usersNew / max($usersTotal, 1)) * 100)) : 0;
+    $articleRatio = $articlesTotal > 0 ? min(100, round(($articlesPublished / max($articlesTotal, 1)) * 100)) : 0;
+@endphp
+
+<div class="row row-deck row-cards mb-3" id="dashboard-stats">
+    {{-- Welcome card --}}
+    <div class="col-sm-12 col-lg-6">
         <div class="card">
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">{{ __('Utilisateurs') }}</h6>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-7">
-                        <h3 class="mb-2">{{ \App\Models\User::count() }}</h3>
-                        <div class="d-flex align-items-baseline">
-                            <p class="text-success">
-                                <span>+{{ \App\Models\User::where('created_at', '>=', now()->subDays(30))->count() }}</span>
-                                <i data-lucide="arrow-up" class="icon-sm mb-1"></i>
-                            </p>
-                            <p class="text-muted ms-1">{{ __('ce mois') }}</p>
+                <div class="row gy-3">
+                    <div class="col-12 col-sm d-flex flex-column">
+                        <h3 class="h2">{{ __('Bonjour') }}, {{ auth()->user()->name }}</h3>
+                        <p class="text-muted">{{ __('Vue rapide de votre tableau de bord Kalystrat.') }}</p>
+                        <div class="row g-5 mt-auto">
+                            <div class="col-auto">
+                                <div class="subheader">{{ __('Nouveaux utilisateurs') }}</div>
+                                <div class="d-flex align-items-baseline">
+                                    <div class="h3 me-2">+{{ $usersNew }}</div>
+                                    <div class="me-auto">
+                                        <span class="text-green d-inline-flex align-items-center lh-1">
+                                            <i class="ti ti-trending-up icon ms-1 icon-2"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-success" style="width: {{ max(5, $welcomeRatio) }}%" role="progressbar" aria-valuenow="{{ $welcomeRatio }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <div class="subheader">{{ __('Articles publiés') }}</div>
+                                <div class="d-flex align-items-baseline">
+                                    <div class="h3 me-2">{{ $articlesPublished }}</div>
+                                    <div class="me-auto">
+                                        <span class="text-blue d-inline-flex align-items-center lh-1">
+                                            <i class="ti ti-trending-up icon ms-1 icon-2"></i>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="progress progress-sm">
+                                    <div class="progress-bar bg-primary" style="width: {{ max(5, $articleRatio) }}%" role="progressbar" aria-valuenow="{{ $articleRatio }}" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="col-5 d-flex align-items-center justify-content-end">
-                        <div class="rounded-circle bg-primary bg-opacity-10 d-flex align-items-center justify-content-center" style="width:48px;height:48px;min-width:48px;">
-                            <i data-lucide="users" class="text-primary icon-md"></i>
-                        </div>
+                    <div class="col-12 col-sm-auto d-flex justify-content-center align-items-center">
+                        <i class="ti ti-building-skyscraper" style="font-size: 8rem; color: var(--tblr-primary); opacity: 0.9;"></i>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    {{-- Articles --}}
-    @if(class_exists(\Modules\Blog\Models\Article::class))
-    <div class="col-md-6 col-xl-3 grid-margin stretch-card">
+    {{-- Card Total utilisateurs avec sparkline --}}
+    <div class="col-sm-6 col-lg-3">
         <div class="card">
             <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">{{ __('Articles') }}</h6>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-7">
-                        <h3 class="mb-2">{{ \Modules\Blog\Models\Article::count() }}</h3>
-                        <div class="d-flex align-items-baseline">
-                            <p class="text-muted">{{ \Modules\Blog\Models\Article::where('status', 'published')->count() }} {{ __('publiés') }}</p>
-                        </div>
-                    </div>
-                    <div class="col-5 d-flex align-items-center justify-content-end">
-                        <div class="rounded-circle bg-success bg-opacity-10 d-flex align-items-center justify-content-center" style="width:48px;height:48px;min-width:48px;">
-                            <i data-lucide="file-text" class="text-success icon-md"></i>
-                        </div>
-                    </div>
+                <div class="subheader">{{ __('Total utilisateurs') }}</div>
+                <div class="h1 mb-3">{{ $usersTotal }}</div>
+                <div id="kalystrat-sparkline-users" style="height: 40px;"></div>
+                <small class="text-muted">{{ __('Tendance 12 derniers mois') }}</small>
+            </div>
+        </div>
+    </div>
+
+    {{-- Card Modules actifs avec gauge donut --}}
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <div class="subheader mb-3">{{ __('Modules actifs') }}</div>
+                <div id="kalystrat-gauge-modules" style="height: 130px;"></div>
+                <div class="h3 mb-0 mt-2">{{ $modulesActive }} / {{ $modulesTotal }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{-- 4 mini-cards horizontales style Tabler --}}
+<div class="row row-cards mb-3">
+    <div class="col-6 col-sm-4 col-md-3">
+        <div class="card card-sm">
+            <div class="card-body d-flex align-items-center">
+                <span class="bg-primary text-white avatar me-3"><i class="ti ti-file-text"></i></span>
+                <div>
+                    <div class="font-weight-medium">{{ $articlesTotal }} {{ __('Articles') }}</div>
+                    <div class="text-muted">{{ $articlesPublished }} {{ __('publiés') }}</div>
                 </div>
             </div>
         </div>
     </div>
-    @endif
-
-    {{-- Pages --}}
-    @if(class_exists(\Modules\Pages\Models\StaticPage::class))
-    <div class="col-md-6 col-xl-3 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">{{ __('Pages') }}</h6>
-                </div>
-                <div class="row mt-3">
-                    <div class="col-7">
-                        <h3 class="mb-2">{{ \Modules\Pages\Models\StaticPage::count() }}</h3>
-                        <div class="d-flex align-items-baseline">
-                            <p class="text-muted">{{ \Modules\Pages\Models\StaticPage::where('status', 'published')->count() }} {{ __('publiées') }}</p>
-                        </div>
-                    </div>
-                    <div class="col-5 d-flex align-items-center justify-content-end">
-                        <div class="rounded-circle bg-info bg-opacity-10 d-flex align-items-center justify-content-center" style="width:48px;height:48px;min-width:48px;">
-                            <i data-lucide="layout" class="text-info icon-md"></i>
-                        </div>
-                    </div>
+    <div class="col-6 col-sm-4 col-md-3">
+        <div class="card card-sm">
+            <div class="card-body d-flex align-items-center">
+                <span class="bg-success text-white avatar me-3"><i class="ti ti-layout"></i></span>
+                <div>
+                    <div class="font-weight-medium">{{ $pagesTotal }} {{ __('Pages') }}</div>
+                    <div class="text-muted">{{ $pagesPublished }} {{ __('publiées') }}</div>
                 </div>
             </div>
         </div>
     </div>
-    @endif
-
-    {{-- Modules actifs (toujours affiché) --}}
-    <div class="col-md-6 col-xl-3 grid-margin stretch-card">
-        <div class="card">
-            <div class="card-body">
-                <div class="d-flex justify-content-between align-items-baseline">
-                    <h6 class="card-title mb-0">{{ __('Modules actifs') }}</h6>
+    <div class="col-6 col-sm-4 col-md-3">
+        <div class="card card-sm">
+            <div class="card-body d-flex align-items-center">
+                <span class="bg-yellow text-white avatar me-3"><i class="ti ti-users"></i></span>
+                <div>
+                    <div class="font-weight-medium">{{ $usersTotal }} {{ __('Membres') }}</div>
+                    <div class="text-muted">+{{ $usersNew }} {{ __('ce mois') }}</div>
                 </div>
-                <div class="row mt-3">
-                    <div class="col-7">
-                        <h3 class="mb-2">{{ count(\Nwidart\Modules\Facades\Module::allEnabled()) }}</h3>
-                        <div class="d-flex align-items-baseline">
-                            <p class="text-muted">{{ __('sur') }} {{ count(\Nwidart\Modules\Facades\Module::all()) }} {{ __('total') }}</p>
-                        </div>
-                    </div>
-                    <div class="col-5 d-flex align-items-center justify-content-end">
-                        <div class="rounded-circle bg-warning bg-opacity-10 d-flex align-items-center justify-content-center" style="width:48px;height:48px;min-width:48px;">
-                            <i data-lucide="layout-grid" class="text-warning icon-md"></i>
-                        </div>
-                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-6 col-sm-4 col-md-3">
+        <div class="card card-sm">
+            <div class="card-body d-flex align-items-center">
+                <span class="bg-purple text-white avatar me-3"><i class="ti ti-stack-2"></i></span>
+                <div>
+                    <div class="font-weight-medium">{{ $modulesActive }} {{ __('Modules') }}</div>
+                    <div class="text-muted">{{ $modulesPercent }}% {{ __('actifs') }}</div>
                 </div>
             </div>
         </div>
@@ -323,6 +351,38 @@ document.addEventListener('DOMContentLoaded', function() {
         tooltip: { theme: document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'dark' : 'light' }
     };
     new ApexCharts(document.querySelector('#usersRegistrationChart'), options).render();
+
+    // Sparkline mini-chart "Total utilisateurs" (style Tabler officiel)
+    var sparklineEl = document.getElementById('kalystrat-sparkline-users');
+    if (sparklineEl) {
+        var sparklineData = chartData.length ? chartData.map(function(i) { return i.count; }) : [0,0,0,0,0,0,0];
+        new ApexCharts(sparklineEl, {
+            chart: { type: 'line', fontFamily: 'inherit', height: 40, sparkline: { enabled: true }, animations: { enabled: false } },
+            tooltip: { enabled: false },
+            stroke: { width: 2, lineCap: 'round' },
+            series: [{ color: 'var(--tblr-primary)', data: sparklineData }],
+        }).render();
+    }
+
+    // Gauge donut "Modules actifs" (style Tabler officiel)
+    var gaugeEl = document.getElementById('kalystrat-gauge-modules');
+    if (gaugeEl) {
+        new ApexCharts(gaugeEl, {
+            chart: { type: 'radialBar', height: 130, sparkline: { enabled: true } },
+            plotOptions: {
+                radialBar: {
+                    hollow: { size: '60%' },
+                    dataLabels: {
+                        name: { show: false },
+                        value: { show: true, fontSize: '1.5rem', fontWeight: 600, formatter: function(v) { return Math.round(v) + '%'; } }
+                    }
+                }
+            },
+            series: [{{ $modulesPercent ?? 0 }}],
+            colors: ['var(--tblr-primary)'],
+            stroke: { lineCap: 'round' },
+        }).render();
+    }
 });
 </script>
 @endpush

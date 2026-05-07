@@ -23,6 +23,10 @@ export default defineConfig({
                     dest: 'admintabler',
                 },
                 {
+                    src: ['node_modules/apexcharts/dist/apexcharts.min.js', 'node_modules/apexcharts/dist/apexcharts.css'],
+                    dest: 'nobleui/plugins/apexcharts',
+                },
+                {
                     src: ['node_modules/bootstrap/dist/js/bootstrap.bundle.min.js', 'node_modules/bootstrap/dist/css/bootstrap.min.css'],
                     dest: 'nobleui/plugins/bootstrap',
                 },
