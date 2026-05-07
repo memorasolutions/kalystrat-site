@@ -1461,6 +1461,21 @@
             border-radius: 0.5rem;
             font-size: 1.5rem;
             margin-bottom: 1.25rem;
+            line-height: 1;
+        }
+        /* Phase 27 — DRY : centrage parfait icônes RemixIcon/SVG dans tous wrappers
+           (line-height:1 sur <i> + flex centring déjà sur parent) */
+        .ks-card__icon i,
+        .ks-card__icon svg,
+        .ks-zone-card__icon i,
+        .ks-zone-card__icon svg,
+        .ks-conseil-card__icon i,
+        .ks-conseil-card__icon svg,
+        .ks-partner-icon i,
+        .ks-partner-icon svg {
+            line-height: 1;
+            display: block;
+            margin: 0;
         }
         .ks-card--centered .ks-card__icon { margin-left: auto; margin-right: auto; }
         /* Icône cercle (variant rond) */
