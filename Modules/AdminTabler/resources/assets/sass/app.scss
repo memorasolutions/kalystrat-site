@@ -26,6 +26,92 @@
     --admintabler-primary: #066fd1;
 }
 
+/* ====================================================================
+   WCAG 2.2 AAA — Phase 18 corrections accessibilité (préservation design)
+   ==================================================================== */
+
+/* a11y: Skip-link "Aller au contenu principal" (WCAG 2.4.1 Bypass Blocks)
+   Caché par défaut, visible au focus avec style moderne 2026 */
+.admintabler-skip-link {
+    position: absolute;
+    top: -100px;
+    left: 1rem;
+    z-index: 9999;
+    padding: 0.75rem 1.25rem;
+    background: var(--admintabler-primary);
+    color: #fff;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: top 0.2s ease;
+}
+.admintabler-skip-link:focus,
+.admintabler-skip-link:focus-visible {
+    top: 1rem;
+    color: #fff;
+    outline: 3px solid #fff;
+    outline-offset: 2px;
+}
+
+/* a11y: Focus-visible moderne 2026 (outline + offset + radius cohérent)
+   WCAG 2.4.7 Focus Visible + 2.4.11 Focus Not Obscured */
+*:focus-visible {
+    outline: 2px solid var(--admintabler-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+.btn:focus-visible,
+.nav-link:focus-visible,
+.dropdown-item:focus-visible,
+.form-control:focus-visible,
+.form-select:focus-visible,
+.form-check-input:focus-visible,
+.btn-close:focus-visible {
+    outline: 2px solid var(--admintabler-primary);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 4px rgba(var(--tblr-primary-rgb, 6, 111, 209), 0.2);
+}
+
+/* a11y: Touch targets 44×44 minimum (WCAG 2.5.5 Target Size Enhanced AAA)
+   Sur navbar et dropdowns + form-check */
+.navbar .nav-link,
+.navbar .btn,
+.navbar button:not(.navbar-toggler) {
+    min-height: 44px;
+    min-width: 44px;
+}
+.navbar .navbar-toggler {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.5rem;
+}
+.dropdown-item {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+}
+.btn-close {
+    min-height: 24px;
+    min-width: 24px;
+    padding: 0.5rem;
+}
+.form-check-input {
+    min-height: 24px;
+    min-width: 24px;
+}
+
+/* a11y: prefers-reduced-motion (WCAG 2.3.3 Animation from Interactions) */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
 /* ========== FIX profil navbar : éviter wrap sur 2 lignes pour noms longs ========== */
 .navbar .nav-item.dropdown .d-xl-block {
     max-width: 180px;

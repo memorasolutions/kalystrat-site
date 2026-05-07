@@ -106,6 +106,8 @@ def replace_nav_menu_with_kalystrat_loop(html):
     La STRUCTURE HTML reste identique à l'officiel (.nav-item, .dropdown-toggle, .dropdown-menu, .dropdown-menu-columns, .dropdown-header, .dropdown-item).
     """
     blade_loop = '''            <!-- BEGIN NAVBAR MENU -->
+            {{-- a11y: <nav> landmark WCAG 1.3.1 + 4.1.2 --}}
+            <nav role="navigation" aria-label="{{ __('Menu principal') }}" style="display:contents;">
             @inject('navService', 'Modules\\Backoffice\\Services\\NavigationService')
             @php
                 $kSections = $navService->getNavigation(auth()->user());
@@ -207,6 +209,7 @@ def replace_nav_menu_with_kalystrat_loop(html):
                 @endif
               @endforeach
             </ul>
+            </nav>
             <!-- END NAVBAR MENU -->'''
 
     # Match le bloc complet entre <!-- BEGIN NAVBAR MENU --> et <!-- END NAVBAR MENU --> (inclusive)
@@ -294,11 +297,16 @@ blade = '''<!doctype html>
     {{-- BEGIN GLOBAL THEME SCRIPT (anti-flash dark mode) --}}
     <script src="{{ asset('build/admintabler/tabler-theme.min.js') }}"></script>
     {{-- END GLOBAL THEME SCRIPT --}}
+
+    {{-- a11y: Skip-link WCAG 2.4.1 Bypass Blocks — premier focus tab --}}
+    <a href="#main-content" class="admintabler-skip-link">{{ __('Aller au contenu principal') }}</a>
+
     <div class="page">
 ''' + header + '''
 ''' + page_header + '''
         {{-- BEGIN PAGE BODY --}}
-        <div class="page-body">
+        {{-- a11y: <main> landmark WCAG 1.3.1 + 4.1.2 --}}
+        <main id="main-content" class="page-body" aria-label="{{ __('Contenu principal') }}">
           <div class="container-xl">
             @if(session('success'))
                 <div class="alert alert-success alert-dismissible mb-3" role="alert">
@@ -315,7 +323,7 @@ blade = '''<!doctype html>
 
             @yield('content')
           </div>
-        </div>
+        </main>
         {{-- END PAGE BODY --}}
 ''' + footer + '''
       </div>
