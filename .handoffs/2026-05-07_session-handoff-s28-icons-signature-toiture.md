@@ -8,16 +8,38 @@
 ## 1. ÉTAT DU DÉPÔT
 
 - **Branche** : `master` (pas de remote)
-- **HEAD** : `a36d604` — fix(home): Phase 28b tabs filiales (kalystrat-icons buggy)
+- **HEAD** : `c6e42fe` — fix(frontend): Phase 28c (13 SVG inline cercles)
 - **Working tree** : clean
-- **Commits S28** : 3 commits
+- **Commits S28** : 4 commits
 
 ```
+c6e42fe fix(frontend): Phase 28c — 13 icônes circulaires en SVG inline (police custom buggée)
+a78fc56 docs: handoff S28 amendé — Phase 28b (kalystrat-icons font discovery)
 a36d604 fix(home): Phase 28b — tabs filiales icônes parasites supprimées (font kalystrat-icons buggy)
 fb136b0 docs: handoff S28 — Phase 21A/B/C + 22 + 28 (icons line + signature Caveat + photo toiture + centrage boutons)
 91eac3b feat(frontend): S28 — uniformisation icônes + signature Caveat + photo toiture + centrage boutons
 af680e8 docs: handoff S27 — migration Tabler admin + 7 fixes UX/UI frontend Kalystrat
 ```
+
+### Phase 28c — 13 SVG inline pour cercles décoratifs (CORRECTIF FINAL user)
+**Bug user S28 verbatim 15:18:44** : "icons dans les boutons sont encore non centré. Et sur toutes les pages". Screenshot user montrait 3 cercles navy/gold (📞 ✉ 📍) sur /contact avec téléphone décalé bas-droite et map pin haut-droite.
+
+**Cause racine confirmée** : la police custom `kalystrat-icons` rend certaines classes ri-*-fill ET ri-*-line avec un offset interne dans l'em-square. Mesures DOM `delta_x:0, delta_y:0` (box mathématiquement centrée) MAIS pictogramme dessiné visuellement décalé.
+
+**Fix** : remplacer par SVG inline (Heroicons-style, viewBox 24×24, `stroke="currentColor"` hérité de `.ks-card__icon { color: #B8A472 }`).
+
+**4 fichiers modifiés, 13 SVG inline** :
+- `pages/contact.blade.php` (3) : phone / mail / map-pin
+- `pages/services.blade.php` (4) : shield-check / users / clock / headphones
+- `pages/apropos.blade.php` (3) : balance / building / user-add
+- `pages/partenaires.blade.php` (3) : link / dollar-circle / eye
+
+**Validation Playwright multi-pages obligatoire** :
+- /contact ✓ /services ✓ /a-propos ✓ /partenaires ✓ /carrieres ✓ /realisations ✓ / ✓
+
+**Pages où le webfont a été préservé (validé OK visuellement)** : carrieres (4 cercles avec dollar/shield-cross/graduation/roadster), realisations (6 cards filiales), services (6 cards filiales building-2-line), home (DÉCOUVRIR LE GROUPE → centré). Ces glyphes-là sont bien centrés dans la police custom.
+
+**Leçon S28 critique** : pour wrappers décoratifs critiques (cercles, badges, avatars), **SVG inline obligatoire** — la police kalystrat-icons rend de nombreux glyphes avec offset interne. SVG inline avec viewBox 24×24 + currentColor = centrage déterministe garanti.
 
 ---
 
