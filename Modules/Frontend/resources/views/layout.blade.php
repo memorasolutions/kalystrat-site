@@ -766,6 +766,20 @@
         html body .text-theme.sub-title {
             color: #8C2E00 !important; /* contraste 7.46:1 sur blanc → AAA */
         }
+        /* Phase 26 — Fix coupure top sub-title (line-height 1.2 → 1.4 + padding-top léger) */
+        html body .sub-title,
+        html body .title-area .sub-title {
+            line-height: 1.4 !important;
+            padding-top: 0.25rem;
+            display: inline-flex;
+            align-items: center;
+        }
+        html body .sub-title i,
+        html body .sub-title svg,
+        html body .sub-title img {
+            line-height: 1;
+            vertical-align: middle;
+        }
 
         /* Paragraphes texte gris Construz – passer à navy foncé */
         p.sec-text,
