@@ -33,6 +33,10 @@
 .sidebar .sidebar-body.ps {
     overflow-y: auto !important;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: none; /* Firefox: cache la scrollbar native, le rail PerfectScrollbar suffit */
+}
+.sidebar .sidebar-body.ps::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Edge: idem */
 }
 
 /* Sidebar toggler: reset browser button defaults on ALL togglers (header + sidebar) */
