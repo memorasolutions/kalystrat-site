@@ -35,9 +35,28 @@ def slice_lines(start, end):
     return ''.join(src_lines[start-1:end])
 
 def apply_laravel_substitutions(html):
-    # Logo brand link
-    html = html.replace('<a href="." aria-label="Tabler"',
-                        '<a href="{{ route(\'admin.dashboard\') }}" aria-label="{{ config(\'app.name\') }}"')
+    # ===== Logo brand : remplace le SVG officiel Tabler par logo Kalystrat =====
+    # Pattern : <a href="." aria-label="Tabler"><svg ...>...</svg></a>
+    # → <a href="{{ route('admin.dashboard') }}" aria-label="..."><img src="..." class="navbar-brand-image"></a>
+    logo_pattern = re.compile(
+        r'<a href="\." aria-label="Tabler"\s*><svg[^>]*class="navbar-brand-image">.*?</svg\s*\n?\s*></a>',
+        re.DOTALL
+    )
+    # Logo Kalystrat SVG inline (lecture du fichier source) — fidèle structure Tabler officiel SVG inline
+    logo_svg_path = ROOT / "public/assets/img/kalystrat/logo-white.svg"
+    logo_svg_content = logo_svg_path.read_text(encoding='utf-8')
+    # Adapter dimensions (officiel Tabler logo : width 110 height 32 viewBox custom)
+    # Notre logo : width 400 height 70 viewBox 0 0 400 70 → ratio ~5.7
+    # Pour navbar : height 32 → width = 32 * 400/70 = 183
+    logo_svg_content = logo_svg_content.replace('<svg xmlns="http://www.w3.org/2000/svg" width="400" height="70"',
+                                                 '<svg xmlns="http://www.w3.org/2000/svg" width="183" height="32"')
+    logo_svg_content = logo_svg_content.replace('aria-hidden="true"', 'aria-hidden="true" class="navbar-brand-image"')
+    logo_replacement = (
+        '<a href="{{ route(\'admin.dashboard\') }}" aria-label="{{ config(\'app.name\') }}">'
+        + logo_svg_content.strip() +
+        '</a>'
+    )
+    html = logo_pattern.sub(lambda m: logo_replacement, html)
 
     # Routes
     html = html.replace('"./profile.html"', '"{{ route(\'admin.profile\') }}"')
