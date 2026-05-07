@@ -8,14 +8,15 @@
 ## 1. ÉTAT DU DÉPÔT
 
 - **Branche** : `master` (pas de remote)
-- **HEAD** : `91eac3b` — feat(frontend): S28 unified Phase 21A/B/C + 22 + 28
+- **HEAD** : `a36d604` — fix(home): Phase 28b tabs filiales (kalystrat-icons buggy)
 - **Working tree** : clean
-- **Commits S28** : 1 commit unifié (toutes les phases entrelacées sur les mêmes fichiers — granularité fine impossible sans `git add -p` ardu, message structuré couvre le détail par phase)
+- **Commits S28** : 3 commits
 
 ```
+a36d604 fix(home): Phase 28b — tabs filiales icônes parasites supprimées (font kalystrat-icons buggy)
+fb136b0 docs: handoff S28 — Phase 21A/B/C + 22 + 28 (icons line + signature Caveat + photo toiture + centrage boutons)
 91eac3b feat(frontend): S28 — uniformisation icônes + signature Caveat + photo toiture + centrage boutons
 af680e8 docs: handoff S27 — migration Tabler admin + 7 fixes UX/UI frontend Kalystrat
-ce34e15 fix(home): Phase 25 grille projets — espace vide éliminé + sémantique h3 corrigée
 ```
 
 ---
@@ -46,6 +47,26 @@ ce34e15 fix(home): Phase 25 grille projets — espace vide éliminé + sémantiq
 - Backup `filiale-toiture.webp.bak-2026-05-08` (gitignored via `*.bak-*`)
 - Conversion `cwebp -q 78 -resize 800 0` → **81 KB / 800×534** optimisé LCP
 - Affichée 4 emplacements : tab filiale, portfolio card, blog card, carrière card
+
+### 2.6 Phase 28b — Tabs filiales : glyphe parasite police kalystrat-icons (CORRECTIF user)
+**Bug user verbatim S28** : "pourquoi les icons dans les boutons sont encore non centré ? et sur toutes les pages ?". Phase 28 initiale n'avait fixé QUE `ri-arrow-right-up-line` (↗) sur la home. Le user voyait toujours un ↗ parasite sur les **6 tabs pills filiales** de la home en état `.active`.
+
+**Cause racine identifiée via Playwright + getComputedStyle ::before** :
+- Le projet utilise une police custom `font-family: kalystrat-icons` (PAS Remix Icon natif)
+- Les classes `ri-*` sont mappées sur cette police custom partiellement buggée
+- `ri-arrow-right-down-line` rendait `content: ""` (Unicode 0xea70) **uniquement** sur l'état `.active`, et le glyphe correspondant à 0xea70 dans kalystrat-icons est **incorrect** (visuel ↗, pas ↘)
+- Inactives : `content: none` (rien rendu) → tabs propres
+
+**Fix** : retrait du `<i>` des 6 tabs pills home (les inactives marchaient déjà sans glyphe). Cohérence visuelle obtenue, plus de glyphe parasite.
+
+**Validation Playwright multi-pages** :
+- / : 6 tabs propres ✓ + DÉCOUVRIR LE GROUPE → centré ✓
+- /a-propos : DEMANDER UNE SOUMISSION → centré ✓
+- /services : EN SAVOIR PLUS → centré ✓ + CTA Demander une soumission → ✓ + 📞 ✓
+- /filiales/toiture : 📞 418-476-0987 centré ✓ + FORMULAIRE → centré ✓
+- /contact : composants déjà validés sur autres pages
+
+**LEÇON CRITIQUE S28** : `ri-*` dans Kalystrat ≠ Remix Icon natif. Toujours valider le content rendu (Unicode privé via `getComputedStyle ::before`) avant de supposer qu'une classe Remix Icon se comportera comme attendu. La police custom kalystrat-icons est partiellement buggée — certaines classes mappent au mauvais glyphe selon l'état (active vs inactive).
 
 ### 2.5 Phase 28 — Centrage icônes dans boutons CTA (BUG USER S28)
 **Symptôme** : flèche `↗` (`ri-arrow-right-up-line`) apparaissait en exposant haut-droite des boutons « DÉCOUVRIR LE GROUPE », « VOIR NOS SERVICES », etc. Le glyphe Remix Icon a sa masse dessinée en haut-droite de l'em-square → centrage géométrique strict (mesuré centerDiff: 0) mais **centrage optique cassé**.
