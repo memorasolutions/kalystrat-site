@@ -24,6 +24,7 @@
     @vite(['Modules/AdminTabler/resources/assets/sass/app.scss'])
 
     @livewireStyles
+    @stack('plugin-styles')
     @stack('styles')
 </head>
 <body>
