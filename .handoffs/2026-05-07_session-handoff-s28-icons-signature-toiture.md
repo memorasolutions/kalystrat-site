@@ -8,18 +8,41 @@
 ## 1. ÉTAT DU DÉPÔT
 
 - **Branche** : `master` (pas de remote)
-- **HEAD** : `c6e42fe` — fix(frontend): Phase 28c (13 SVG inline cercles)
+- **HEAD** : `9dba5d3` — fix(a11y): Phase 28e (aria-hidden 13 SVG)
 - **Working tree** : clean
-- **Commits S28** : 4 commits
+- **Commits S28** : 6 commits
 
 ```
+9dba5d3 fix(a11y): Phase 28e — aria-hidden+focusable=false sur 13 SVG décoratifs (régression WCAG 1.1.1)
+c2d81bc docs: handoff S28 amendé — Phase 28c (13 SVG inline pour cercles)
 c6e42fe fix(frontend): Phase 28c — 13 icônes circulaires en SVG inline (police custom buggée)
 a78fc56 docs: handoff S28 amendé — Phase 28b (kalystrat-icons font discovery)
 a36d604 fix(home): Phase 28b — tabs filiales icônes parasites supprimées (font kalystrat-icons buggy)
-fb136b0 docs: handoff S28 — Phase 21A/B/C + 22 + 28 (icons line + signature Caveat + photo toiture + centrage boutons)
-91eac3b feat(frontend): S28 — uniformisation icônes + signature Caveat + photo toiture + centrage boutons
-af680e8 docs: handoff S27 — migration Tabler admin + 7 fixes UX/UI frontend Kalystrat
+fb136b0 docs: handoff S28 — Phase 21A/B/C + 22 + 28
+91eac3b feat(frontend): S28 — phases 21A/B/C + 22 + 28
+af680e8 docs: handoff S27
 ```
+
+### Phase 28e — A11y aria-hidden SVG + validation multi-viewports + pages restantes
+**Audit WCAG AAA post-Phase 28c** détecté 6 violations 1.1.1 Non-text Content : les SVG inline étaient flaggués "Meaningful SVG missing role='img' / accessible name". Le span parent `.ks-card__icon` avait `aria-hidden="true"` mais axe-core inspecte le SVG indépendamment.
+
+**Fix** : sed ajout `aria-hidden="true" focusable="false"` sur les 13 SVG inline (4 fichiers).
+
+**Résultat WCAG /contact après fix** :
+- 24/86 → **25/86 conformes**
+- 1.1.1 Non-text Content : non-conforme → **CONFORME** ✓
+- 5 violations restantes = **TOUS faux positifs documentés** (visually-hidden span clip:rect, Tab traversal dropdown, etc.)
+
+**Validation Playwright Phase 28e (multi-viewports + pages restantes)** :
+| Test | Résultat |
+|------|----------|
+| Mobile 375 home (tabs + hero) | ✓ propres |
+| Mobile 375 contact (3 cercles) | ✓ centrés |
+| Tablet 768 services (4 cercles) | ✓ centrés |
+| /filiales/toiture image bardeaux | ✓ serveur 800×534 (cache navigateur user nécessite hard-refresh) |
+| /faq, /conseil-consultatif, /filiales/fondations, /zones-desservies, /zones-desservies/quebec, /politique-confidentialite, /conditions-utilisation, /politique-cookies, /demande-droits | ✓ toutes propres |
+
+**Pest tests post-S28e** : 31/31 PASS
 
 ### Phase 28c — 13 SVG inline pour cercles décoratifs (CORRECTIF FINAL user)
 **Bug user S28 verbatim 15:18:44** : "icons dans les boutons sont encore non centré. Et sur toutes les pages". Screenshot user montrait 3 cercles navy/gold (📞 ✉ 📍) sur /contact avec téléphone décalé bas-droite et map pin haut-droite.
