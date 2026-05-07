@@ -8,13 +8,9 @@ export default defineConfig({
     plugins: [
         laravel({
             input: [
-                'resources/sass/nobleui/app.scss',
-                'resources/css/nobleui-custom.css',
                 'resources/css/auth.css',
                 'resources/js/app.js',
-                'resources/js/nobleui/template.js',
-                'resources/js/nobleui/color-modes.js',
-                // AdminTabler — nouveau thème admin Tabler 1.4 (modulaire)
+                // AdminTabler — thème admin Tabler 1.4 (UNIQUE entry admin)
                 'Modules/AdminTabler/resources/assets/sass/app.scss',
                 'Modules/AdminTabler/resources/assets/js/app.js',
             ],

@@ -1,96 +1,34 @@
 /**
  * AdminTabler — entry CSS
- * Tabler 1.4 + Tabler Icons + branding overrides via CSS vars.
+ * Tabler 1.4 officiel + Tabler Icons + Simplebar.
+ * Layout "navbar-overlap" reproduit fidèlement preview.tabler.io/layout-navbar-overlap.html
  */
 
 @import "@tabler/core/dist/css/tabler.min.css";
 @import "@tabler/icons-webfont/dist/tabler-icons.min.css";
 @import "simplebar/dist/simplebar.css";
 
+/* ========================================================================
+   Branding dynamique — surchargé par PHP via inline <style> dans layout
+   ======================================================================== */
 :root {
     --admintabler-primary: #066fd1;
     --admintabler-secondary: #5eba00;
     --admintabler-font: "Inter", system-ui, sans-serif;
-    --admintabler-radius: 4px;
-}
-
-.layout-navbar-overlap .navbar.navbar-dark {
-    background-color: var(--admintabler-primary);
 }
 
 /* ========================================================================
-   Effet "navbar-overlap" Tabler 1.4 — page-header bg-primary qui chevauche
-   le page-body via margin-top négatif sur ce dernier.
+   WCAG 2.2 — focus visible
    ======================================================================== */
-.page-header.bg-primary {
-    color: #fff;
-    border-bottom: 0;
-    padding-bottom: 4rem !important;
-
-    .page-pretitle {
-        color: rgba(255, 255, 255, 0.7);
-        text-transform: uppercase;
-        letter-spacing: 0.05em;
-    }
-
-    .page-title {
-        color: #fff;
-    }
-
-    .breadcrumb a {
-        color: rgba(255, 255, 255, 0.7);
-        text-decoration: none;
-
-        &:hover,
-        &:focus-visible {
-            color: #fff;
-            text-decoration: underline;
-        }
-    }
-
-    .breadcrumb-item.active {
-        color: #fff;
-    }
-}
-
-.page-body {
-    /* Cards remontent sur la zone primary du page-header */
-    .card {
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    }
-}
-
-.navbar-vertical .navbar-nav .nav-link {
-    border-radius: var(--admintabler-radius);
-    transition: background-color 0.15s ease;
-}
-
-.navbar-vertical .navbar-nav .nav-link.active {
-    background-color: rgba(var(--tblr-primary-rgb), 0.1);
-    color: var(--tblr-primary);
-    font-weight: 600;
-}
-
 :focus-visible {
     outline: 2px solid var(--admintabler-primary);
     outline-offset: 2px;
-    border-radius: var(--admintabler-radius);
+    border-radius: 4px;
 }
 
-.btn,
-.nav-link,
-.dropdown-item,
-button[type="submit"] {
-    min-height: 36px;
-}
-
-.navbar .btn,
-.navbar .nav-link,
-.navbar button {
-    min-height: 44px;
-    min-width: 44px;
-}
-
+/* ========================================================================
+   Reduced motion (WCAG 2.3.3)
+   ======================================================================== */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -102,36 +40,11 @@ button[type="submit"] {
     }
 }
 
-.admintabler-command-palette {
-    position: fixed;
-    inset: 0;
-    z-index: 1080;
-    background: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    display: none;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 10vh;
-}
-
-.admintabler-command-palette[data-open="true"] {
-    display: flex;
-}
-
-.admintabler-command-palette__panel {
-    width: min(640px, 90vw);
-    background: var(--tblr-bg-surface);
-    border-radius: 8px;
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
-    overflow: hidden;
-}
-
-.admintabler-command-palette__input {
-    width: 100%;
-    padding: 16px 20px;
-    border: 0;
-    border-bottom: 1px solid var(--tblr-border-color);
-    font-size: 1rem;
-    background: transparent;
-    color: var(--tblr-body-color);
+/* ========================================================================
+   Accessibility — target sizes WCAG 2.2 (44×44 min sur navbar)
+   ======================================================================== */
+.navbar .btn,
+.navbar .nav-link,
+.navbar button {
+    min-height: 44px;
 }
