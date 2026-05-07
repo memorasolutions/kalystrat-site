@@ -18,6 +18,48 @@
     background-color: var(--admintabler-primary);
 }
 
+/* ========================================================================
+   Effet "navbar-overlap" Tabler 1.4 — page-header bg-primary qui chevauche
+   le page-body via margin-top négatif sur ce dernier.
+   ======================================================================== */
+.page-header.bg-primary {
+    color: #fff;
+    border-bottom: 0;
+    padding-bottom: 4rem !important;
+
+    .page-pretitle {
+        color: rgba(255, 255, 255, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    .page-title {
+        color: #fff;
+    }
+
+    .breadcrumb a {
+        color: rgba(255, 255, 255, 0.7);
+        text-decoration: none;
+
+        &:hover,
+        &:focus-visible {
+            color: #fff;
+            text-decoration: underline;
+        }
+    }
+
+    .breadcrumb-item.active {
+        color: #fff;
+    }
+}
+
+.page-body {
+    /* Cards remontent sur la zone primary du page-header */
+    .card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    }
+}
+
 .navbar-vertical .navbar-nav .nav-link {
     border-radius: var(--admintabler-radius);
     transition: background-color 0.15s ease;

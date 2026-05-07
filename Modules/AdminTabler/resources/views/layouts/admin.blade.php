@@ -69,8 +69,8 @@
             />
         @endadminFeature
 
-        {{-- Page body avec effet "overlap" (margin-top négatif) --}}
-        <div class="page-body">
+        {{-- Page body avec effet "overlap" : margin-top négatif pour que les cards remontent sur le bg-primary du page-header --}}
+        <div class="page-body" style="margin-top: -2.5rem; position: relative; z-index: 2;">
             <div class="container-xl">
 
                 {{-- Flash messages --}}

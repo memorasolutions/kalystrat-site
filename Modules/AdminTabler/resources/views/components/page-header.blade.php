@@ -6,20 +6,20 @@
     'breadcrumbs' => [],
 ])
 
-<div class="page-header d-print-none">
+<div class="page-header d-print-none bg-primary text-white pt-4 pb-5">
     <div class="container-xl">
 
         {{-- Breadcrumb --}}
         @adminFeature('breadcrumbs')
             @if(!empty($breadcrumbs))
-                <ol class="breadcrumb breadcrumb-arrows" aria-label="breadcrumbs">
+                <ol class="breadcrumb breadcrumb-arrows text-white-50" aria-label="breadcrumbs">
                     @foreach($breadcrumbs as $crumb)
                         @if($loop->last)
-                            <li class="breadcrumb-item active" aria-current="page">{{ $crumb['label'] }}</li>
+                            <li class="breadcrumb-item active text-white" aria-current="page">{{ $crumb['label'] }}</li>
                         @elseif(!empty($crumb['url']))
-                            <li class="breadcrumb-item"><a href="{{ $crumb['url'] }}">{{ $crumb['label'] }}</a></li>
+                            <li class="breadcrumb-item"><a href="{{ $crumb['url'] }}" class="text-white-50">{{ $crumb['label'] }}</a></li>
                         @else
-                            <li class="breadcrumb-item">{{ $crumb['label'] }}</li>
+                            <li class="breadcrumb-item text-white-50">{{ $crumb['label'] }}</li>
                         @endif
                     @endforeach
                 </ol>
