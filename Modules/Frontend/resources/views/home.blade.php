@@ -566,26 +566,26 @@
                             <h2 class="sec-title">Pourquoi les Québécois choisissent Kalystrat</h2>
                             <p class="sec-text">Un contact, six équipes qui se parlent, des échéanciers tenus. Quand un problème survient, personne ne pointe le sous-traitant d'à côté. C'est nous, au complet.
                             </p>
-                            <h3 class="mt-20 fw-normal mb-30">Six raisons concrètes&nbsp;:</h3>
+                            <h3 class="mt-20 fw-normal mb-30">Six piliers stratégiques&nbsp;:</h3>
                             <div class="row gy-4">
                                 <div class="col-md-6">
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-1.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Ingénieurs et chargés de projet à l'interne</h4>
+                                        <h4 class="single-benefit-title">Intégration verticale complète, de l'excavation à la finition</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-2.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Un seul interlocuteur, zéro renvoi de balle</h4>
+                                        <h4 class="single-benefit-title">Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr> interne via notre agence Placement</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-3.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Expertise accumulée par filiale</h4>
+                                        <h4 class="single-benefit-title">Demande captive&nbsp;: Kalystrat Immobilier alimente les cinq filiales</h4>
                                     </div>
                                 </div>
                                 <div class="col-md-6">
@@ -593,19 +593,19 @@
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-4.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Conformité RBQ, CCQ et CNESST</h4>
+                                        <h4 class="single-benefit-title">Synergies opérationnelles, calendrier tenu en boucle</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-5.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Soumissions détaillées, devis ferme respecté</h4>
+                                        <h4 class="single-benefit-title">Cohérence de marque «&nbsp;Kalystrat + Spécialité&nbsp;»</h4>
                                     </div>
                                     <div class="single-benefit-wrap">
                                         <div class="single-benefit-icon">
                                             <img src="{{ asset('assets/construz-new/img/icon/benefit-icon1-6.svg') }}" loading="lazy" decoding="async" alt="">
                                         </div>
-                                        <h4 class="single-benefit-title">Garantie GCR sur le résidentiel neuf</h4>
+                                        <h4 class="single-benefit-title">Gestion centralisée — comptabilité, RH, juridique, TI</h4>
                                     </div>
                                 </div>
                             </div>
