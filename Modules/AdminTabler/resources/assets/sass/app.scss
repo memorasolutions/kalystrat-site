@@ -25,3 +25,30 @@
 :root {
     --admintabler-primary: #066fd1;
 }
+
+/* ========== FIX profil navbar : éviter wrap sur 2 lignes pour noms longs ========== */
+.navbar .nav-item.dropdown .d-xl-block {
+    max-width: 180px;
+    overflow: hidden;
+}
+.navbar .nav-item.dropdown .d-xl-block > div {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ========== FIX en-têtes internes vues admin sur extension dark navbar-overlap ==========
+   Les vues qui commencent par un <div> ou <h4> non-card sont rendues sur le bandeau dark
+   et deviennent invisibles. On force la visibilité du texte sur dark.
+*/
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) h1,
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) h2,
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) h3,
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) h4,
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) h5 {
+    color: #fff;
+}
+.page-body > .container-xl > div:first-child:not(.card):not(.row):not(.alert) {
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 1.5rem;
+}
