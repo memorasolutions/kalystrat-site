@@ -1513,6 +1513,31 @@
             display: block;
             margin: 0;
         }
+        /* Phase 28 — Centrage icônes Remix Icon DANS .btn (boutons CTA).
+           Construz applique seulement font-size:20px sur .btn i, donc l'icône
+           reste en display:inline + line-height héritée → glyphes arrow ri-arrow-*
+           paraissent décentrés verticalement (masse asymétrique up-right/down-right).
+           Fix : inline-flex centré strict + line-height:1 + vertical-align:middle. */
+        .btn i {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
+            vertical-align: middle;
+        }
+        /* Compensation OPTIQUE : les glyphes Remix Icon ri-arrow-*-up-* sont dessinés
+           avec masse en HAUT-DROITE de l'em-square → apparaissent comme exposant.
+           translateY positive (vers le bas) recentre visuellement avec le texte uppercase. */
+        .btn i.ri-arrow-right-up-line,
+        .btn i.ri-arrow-up-line,
+        .btn i.ri-arrow-up-right-line {
+            transform: translateY(0.15em);
+        }
+        .btn i.ri-arrow-right-down-line,
+        .btn i.ri-arrow-down-line,
+        .btn i.ri-arrow-down-right-line {
+            transform: translateY(-0.15em);
+        }
         .ks-card--centered .ks-card__icon { margin-left: auto; margin-right: auto; }
         /* Icône cercle (variant rond) */
         .ks-card__icon--circle {
@@ -1664,10 +1689,10 @@
     <aside class="ks-trust-band" aria-label="Accréditations et garanties Kalystrat">
         <div class="ks-trust-band__inner">
             <span class="ks-trust-band__label">Accréditations</span>
-            <span class="ks-trust-band__item"><i class="ri-shield-check-fill" aria-hidden="true"></i> Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</span>
-            <span class="ks-trust-band__item"><i class="ri-home-heart-fill" aria-hidden="true"></i> Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></span>
-            <span class="ks-trust-band__item"><i class="ri-team-fill" aria-hidden="true"></i> Main-d'oeuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></span>
-            <span class="ks-trust-band__item"><i class="ri-time-fill" aria-hidden="true"></i> Réponse sous 48&nbsp;h ouvrables</span>
+            <span class="ks-trust-band__item"><i class="ri-shield-check-line" aria-hidden="true"></i> Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</span>
+            <span class="ks-trust-band__item"><i class="ri-home-heart-line" aria-hidden="true"></i> Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></span>
+            <span class="ks-trust-band__item"><i class="ri-team-line" aria-hidden="true"></i> Main-d'oeuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></span>
+            <span class="ks-trust-band__item"><i class="ri-time-line" aria-hidden="true"></i> Réponse sous 48&nbsp;h ouvrables</span>
         </div>
     </aside>
 

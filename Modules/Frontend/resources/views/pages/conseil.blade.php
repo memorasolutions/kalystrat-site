@@ -171,7 +171,7 @@
         </div>
 
         <div class="text-center mt-60">
-            <a href="{{ route('contact') }}" class="btn style3" aria-label="Soumettre votre candidature au conseil consultatif Kalystrat">Soumettre votre candidature&nbsp;<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+            <a href="{{ route('contact') }}" class="btn style3" aria-label="Soumettre votre candidature au conseil consultatif Kalystrat">Soumettre votre candidature&nbsp;<i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             <p class="mt-3" style="font-size: 0.9375rem; color: rgba(10, 22, 40, 0.6);">
                 <a href="{{ route('apropos') }}" style="color: var(--ks-navy, #0A1628); text-decoration: underline;">← Retour à À propos</a>
             </p>

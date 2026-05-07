@@ -170,7 +170,7 @@
                         <h3 class="title" style="color: var(--ks-navy); font-size: 1.375rem; font-weight: 700; margin-bottom: 0.75rem;">Demande de soumission – {{ $filialeName }}</h3>
                         <p style="color: #2C3340; margin-bottom: 1.25rem;">Pour un projet en lien avec cette filiale, contactez-nous par téléphone ou via le formulaire. Réponse sous 48&nbsp;h ouvrables.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="{{ route('contact') }}?filiale={{ $slug }}" class="btn style2">Formulaire de contact <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                            <a href="{{ route('contact') }}?filiale={{ $slug }}" class="btn style2">Formulaire de contact <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                             <a href="tel:+14184760987" class="btn style-border4"><i class="ri-phone-line" aria-hidden="true"></i> 418-476-0987</a>
                         </div>
                     </div>

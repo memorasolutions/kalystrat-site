@@ -200,7 +200,7 @@
                         <label for="message" class="form-label" style="font-weight: 600; color: var(--ks-navy);">Décrivez votre projet <span aria-hidden="true">*</span></label>
                         <textarea id="message" name="message" class="form-control" rows="5" required minlength="10" maxlength="3000">{{ old('message') }}</textarea>
                     </div>
-                    <button type="submit" class="btn style2">Envoyer ma demande <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
+                    <button type="submit" class="btn style2">Envoyer ma demande <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>

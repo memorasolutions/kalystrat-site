@@ -102,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <a href="{{ route('contact') }}" class="btn style2 mt-3">Demander une soumission <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('contact') }}" class="btn style2 mt-3">Demander une soumission <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>
@@ -558,7 +558,7 @@
                     <span class="ks-filiale-card__num">{{ str_pad((string) ($loop->iteration), 2, '0', STR_PAD_LEFT) }} — Filiale</span>
                     <h3 class="ks-filiale-card__title">{{ $f['nom_court'] ?? ucfirst($slug) }}</h3>
                     <p class="ks-filiale-card__desc">{{ $f['specialite'] ?? '' }}</p>
-                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-filiale-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-filiale-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus<i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                 </article>
             </div>
             @endforeach

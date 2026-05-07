@@ -82,3 +82,6 @@ public/assets/img/kalystrat/sourced/
 # Vues compilées Laravel (regenerees auto)
 storage/framework/views/*.php
 storage/framework/testing/
+
+# Rapports de session (screenshots Playwright, audits ponctuels)
+.rapports/

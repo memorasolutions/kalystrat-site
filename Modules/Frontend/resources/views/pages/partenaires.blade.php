@@ -176,7 +176,7 @@
                     <p class="sec-text">Vous êtes architecte, designer, courtier ou promoteur et souhaitez collaborer avec un groupe québécois en construction à intégration verticale&nbsp;? Soumettez-nous votre profil de partenariat&nbsp;: notre équipe vous recontacte dans les 48 heures ouvrables.</p>
                 </div>
                 <div class="text-center mt-4">
-                    <a href="{{ route('contact') }}" class="btn style3" aria-label="Soumettre votre profil de partenariat à Kalystrat">Soumettre votre profil&nbsp;<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                    <a href="{{ route('contact') }}" class="btn style3" aria-label="Soumettre votre profil de partenariat à Kalystrat">Soumettre votre profil&nbsp;<i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>

@@ -83,7 +83,7 @@
                         @endforeach
                     </ul>
                     @endif
-                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                    <a href="{{ route('filiale', ['slug' => $slug]) }}" class="ks-card__link" aria-label="En savoir plus sur {{ $f['nom_court'] ?? ucfirst($slug) }}">En savoir plus <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                 </article>
             </div>
             @endforeach

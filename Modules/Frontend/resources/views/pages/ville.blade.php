@@ -222,7 +222,7 @@
         </div>
 
         <div class="text-center mt-80">
-            <a href="{{ route('contact') }}" class="btn style3" aria-label="Demander une soumission pour un projet à {{ $ville['nom'] }}">Demander une soumission à {{ $ville['nom'] }}&nbsp;<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+            <a href="{{ route('contact') }}" class="btn style3" aria-label="Demander une soumission pour un projet à {{ $ville['nom'] }}">Demander une soumission à {{ $ville['nom'] }}&nbsp;<i class="ri-arrow-right-line" aria-hidden="true"></i></a>
         </div>
     </div>
 </div>

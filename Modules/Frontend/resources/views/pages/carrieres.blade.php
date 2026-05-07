@@ -100,7 +100,7 @@
                     </div>
                     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; margin-top: 1rem;">
                         <span style="color: var(--ks-navy); font-weight: 700; font-size: 1.05rem;">{{ $m['salaryMin'] }}&nbsp;$ – {{ $m['salaryMax'] }}&nbsp;$/h</span>
-                        <a href="#postuler" class="btn style-border4" style="font-size: 0.9rem;">Postuler <i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                        <a href="#postuler" class="btn style-border4" style="font-size: 0.9rem;">Postuler <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
                     </div>
                 </article>
             </div>
@@ -215,7 +215,7 @@
                         <label for="message" class="form-label" style="font-weight: 600; color: var(--ks-navy);">Présentez-vous <span aria-hidden="true">*</span></label>
                         <textarea id="message" name="message" class="form-control" rows="5" required minlength="10" maxlength="3000">{{ old('message') }}</textarea>
                     </div>
-                    <button type="submit" class="btn style2">Envoyer ma candidature <i class="ri-arrow-right-up-line" aria-hidden="true"></i></button>
+                    <button type="submit" class="btn style2">Envoyer ma candidature <i class="ri-arrow-right-line" aria-hidden="true"></i></button>
                 </form>
             </div>
         </div>

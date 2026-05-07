@@ -144,7 +144,7 @@
                 <h2 class="sec-title" style="margin-top: 0.5rem;">Votre projet ailleurs au Québec&nbsp;?</h2>
                 <p style="font-size: 1.0625rem; line-height: 1.7; margin: 1.25rem auto 2rem; max-width: 720px;">Vous êtes à Montréal, Laval, Longueuil, Sherbrooke, Trois-Rivières, Gatineau, Saguenay ou ailleurs&nbsp;? Pour les projets d'envergure (immeubles multi-logement, commerciaux ou institutionnels), Kalystrat se déplace partout au Québec avec ses six filiales spécialisées coordonnées sous une seule signature.</p>
                 <p style="font-size: 1rem; color: rgba(255,255,255,0.65); margin: 0 auto 2rem; max-width: 640px;">Décrivez-nous votre projet en quelques minutes&nbsp;: localisation, type, échéancier, budget. Nous évaluons la faisabilité et revenons vers vous sous 48 heures ouvrables.</p>
-                <a href="{{ route('contact') }}?ville=autre" class="btn style2" aria-label="Décrire un projet hors des zones listées">Décrire mon projet&nbsp;<i class="ri-arrow-right-up-line" aria-hidden="true"></i></a>
+                <a href="{{ route('contact') }}?ville=autre" class="btn style2" aria-label="Décrire un projet hors des zones listées">Décrire mon projet&nbsp;<i class="ri-arrow-right-line" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

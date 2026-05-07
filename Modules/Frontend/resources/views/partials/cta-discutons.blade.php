@@ -32,7 +32,7 @@
             <div class="ks-cta-discutons__actions">
                 <a href="{{ $_ctaPrimary['url'] }}" class="ks-cta-discutons__btn ks-cta-discutons__btn--primary">
                     {{ $_ctaPrimary['label'] }}
-                    <i class="ri-arrow-right-up-line" aria-hidden="true"></i>
+                    <i class="ri-arrow-right-line" aria-hidden="true"></i>
                 </a>
                 <a href="{{ $_ctaSecondary['url'] }}" class="ks-cta-discutons__btn ks-cta-discutons__btn--secondary">
                     @if(!empty($_ctaSecondary['icon']))<i class="{{ $_ctaSecondary['icon'] }}" aria-hidden="true"></i>@endif
