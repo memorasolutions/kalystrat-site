@@ -746,7 +746,7 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Résidentiel multifamilial</span>
-                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Résidentiel multilogements moderne à Québec</a></h4>
+                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Résidentiel multilogements moderne à Québec</a></h3>
                                 </div>
                                 <div class="btn-group">
                                     <a href="{{ url('/realisations') }}" class="btn style2">
@@ -764,7 +764,7 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Résidentiel</span>
-                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Maison neuve à Sainte-Foy</a></h4>
+                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Maison neuve à Sainte-Foy</a></h3>
                                 </div>
                                 <div class="btn-group">
                                     <a href="{{ url('/realisations') }}" class="btn style2">
@@ -782,7 +782,7 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Commercial</span>
-                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Bâtiment commercial à Montréal</a></h4>
+                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Bâtiment commercial à Montréal</a></h3>
                                 </div>
                                 <div class="btn-group">
                                     <a href="{{ url('/realisations') }}" class="btn style2">
@@ -800,7 +800,7 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Toiture et enveloppe</span>
-                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Réfection complète de toiture à Beauport</a></h4>
+                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Réfection complète de toiture à Beauport</a></h3>
                                 </div>
                                 <div class="btn-group">
                                     <a href="{{ url('/realisations') }}" class="btn style2">
@@ -818,7 +818,7 @@
                             <div class="portfolio-card-details">
                                 <div class="media-left">
                                     <span class="portfolio-card-subtitle">Finition intérieure</span>
-                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Cuisine sur mesure à Sillery</a></h4>
+                                    <h3 class="portfolio-card-title"><a href="{{ url('/realisations') }}">Cuisine sur mesure à Sillery</a></h3>
                                 </div>
                                 <div class="btn-group">
                                     <a href="{{ url('/realisations') }}" class="btn style2">

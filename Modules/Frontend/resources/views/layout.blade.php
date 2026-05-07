@@ -878,6 +878,28 @@
 
         /* Portfolio cards – image visible, overlay navy semi-opaque sur le bas pour le texte (Construz utilise un overlay).
            On NE remplit PAS la card en navy plein (ça masquait l'image). */
+        /* Phase 25 — Fix grille asymétrique : cards prennent toute la hauteur du col parent
+           pour éliminer espace vide (col-lg-8 multilogements + col-lg-4 Sainte-Foy même hauteur) */
+        .portfolio-area-5 .row > [class*="col-"] {
+            display: flex;
+        }
+        .portfolio-area-5 .portfolio-card.style5 {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+        }
+        .portfolio-area-5 .portfolio-card.style5 .portfolio-card-thumb {
+            flex: 1 1 auto;
+            min-height: 240px;
+            overflow: hidden;
+        }
+        .portfolio-area-5 .portfolio-card.style5 .portfolio-card-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
         .portfolio-card.style5 .portfolio-card-details {
             color: #FFFFFF !important;
         }
