@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Nouveau lien court'), 'subtitle' => __('Créer un lien raccourci')])
+@extends('admintabler::layouts.admin', ['title' => __('Nouveau lien court'), 'subtitle' => __('Créer un lien raccourci')])
 
 @section('breadcrumbs')
 @endsection

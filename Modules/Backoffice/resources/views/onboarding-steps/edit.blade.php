@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin')
+@extends('admintabler::layouts.admin')
 @section('title', 'Modifier étape onboarding')
 @section('content')
 <div class="card">

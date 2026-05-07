@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Services de réservation'), 'subtitle' => __('Réservations')])
+@extends('admintabler::layouts.admin', ['title' => __('Services de réservation'), 'subtitle' => __('Réservations')])
 
 @section('content')
 <div class="d-flex justify-content-between align-items-center mb-4">

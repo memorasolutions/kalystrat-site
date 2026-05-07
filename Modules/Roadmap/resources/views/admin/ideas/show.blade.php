@@ -1,7 +1,7 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @php use Modules\Roadmap\Enums\IdeaStatus; @endphp
 
-@extends('backoffice::themes.backend.layouts.admin')
+@extends('admintabler::layouts.admin')
 
 @section('title', $idea->title)
 

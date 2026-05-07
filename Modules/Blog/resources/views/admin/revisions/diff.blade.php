@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Comparaison'), 'subtitle' => $article->title])
+@extends('admintabler::layouts.admin', ['title' => __('Comparaison'), 'subtitle' => $article->title])
 
 @push('styles')
 <style>

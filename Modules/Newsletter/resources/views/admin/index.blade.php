@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Newsletter', 'subtitle' => 'Abonnés'])
+@extends('admintabler::layouts.admin', ['title' => 'Newsletter', 'subtitle' => 'Abonnés'])
 
 @section('content')
 

@@ -1,0 +1,11 @@
+{
+    "name": "AdminTabler",
+    "alias": "admintabler",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": [
+        "Modules\\AdminTabler\\Providers\\AdminTablerServiceProvider"
+    ],
+    "files": []
+}

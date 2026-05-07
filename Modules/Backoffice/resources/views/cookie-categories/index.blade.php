@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Catégories cookies'), 'subtitle' => __('Gestion')])
+@extends('admintabler::layouts.admin', ['title' => __('Catégories cookies'), 'subtitle' => __('Gestion')])
 
 @section('content')
 <div class="d-flex justify-content-end align-items-center mb-4">

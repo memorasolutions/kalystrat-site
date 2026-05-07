@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Modifier template', 'subtitle' => 'Newsletter'])
+@extends('admintabler::layouts.admin', ['title' => 'Modifier template', 'subtitle' => 'Newsletter'])
 
 @section('content')
 <div class="row gy-3">

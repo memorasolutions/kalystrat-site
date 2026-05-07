@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => $title ?? __('Statistiques'), 'subtitle' => $subtitle ?? __('Analytiques')])
+@extends('admintabler::layouts.admin', ['title' => $title ?? __('Statistiques'), 'subtitle' => $subtitle ?? __('Analytiques')])
 
 @section('content')
 

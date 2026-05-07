@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Révision').' #'.$revision->revision_number, 'subtitle' => $article->title])
+@extends('admintabler::layouts.admin', ['title' => __('Révision').' #'.$revision->revision_number, 'subtitle' => $article->title])
 
 @section('content')
 

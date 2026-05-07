@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Personnalisation'), 'subtitle' => __('Apparence du site')])
+@extends('admintabler::layouts.admin', ['title' => __('Personnalisation'), 'subtitle' => __('Apparence du site')])
 
 @section('breadcrumbs')
     <x-backoffice::breadcrumb :items="[

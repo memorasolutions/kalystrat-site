@@ -1,0 +1,95 @@
+/**
+ * AdminTabler — entry CSS
+ * Tabler 1.4 + Tabler Icons + branding overrides via CSS vars.
+ */
+
+@import "@tabler/core/dist/css/tabler.min.css";
+@import "@tabler/icons-webfont/dist/tabler-icons.min.css";
+@import "simplebar/dist/simplebar.css";
+
+:root {
+    --admintabler-primary: #066fd1;
+    --admintabler-secondary: #5eba00;
+    --admintabler-font: "Inter", system-ui, sans-serif;
+    --admintabler-radius: 4px;
+}
+
+.layout-navbar-overlap .navbar.navbar-dark {
+    background-color: var(--admintabler-primary);
+}
+
+.navbar-vertical .navbar-nav .nav-link {
+    border-radius: var(--admintabler-radius);
+    transition: background-color 0.15s ease;
+}
+
+.navbar-vertical .navbar-nav .nav-link.active {
+    background-color: rgba(var(--tblr-primary-rgb), 0.1);
+    color: var(--tblr-primary);
+    font-weight: 600;
+}
+
+:focus-visible {
+    outline: 2px solid var(--admintabler-primary);
+    outline-offset: 2px;
+    border-radius: var(--admintabler-radius);
+}
+
+.btn,
+.nav-link,
+.dropdown-item,
+button[type="submit"] {
+    min-height: 36px;
+}
+
+.navbar .btn,
+.navbar .nav-link,
+.navbar button {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+.admintabler-command-palette {
+    position: fixed;
+    inset: 0;
+    z-index: 1080;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: none;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 10vh;
+}
+
+.admintabler-command-palette[data-open="true"] {
+    display: flex;
+}
+
+.admintabler-command-palette__panel {
+    width: min(640px, 90vw);
+    background: var(--tblr-bg-surface);
+    border-radius: 8px;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+    overflow: hidden;
+}
+
+.admintabler-command-palette__input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 0;
+    border-bottom: 1px solid var(--tblr-border-color);
+    font-size: 1rem;
+    background: transparent;
+    color: var(--tblr-body-color);
+}

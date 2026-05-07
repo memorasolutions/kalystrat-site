@@ -31,7 +31,8 @@
         "@mdi/font": "^7.4.47",
         "@popperjs/core": "^2.11.8",
         "@simplewebauthn/browser": "^13.3.0",
-        "@tabler/icons-webfont": "^2.47.0",
+        "@tabler/core": "^1.4.0",
+        "@tabler/icons-webfont": "^3.43.0",
         "@tiptap/core": "^3.19.0",
         "@tiptap/extension-character-count": "^3.20.0",
         "@tiptap/extension-code-block-lowlight": "^3.19.0",
@@ -64,7 +65,8 @@
         "lowlight": "^3.3.0",
         "lucide": "^0.575.0",
         "perfect-scrollbar": "^1.5.6",
-        "pusher-js": "^8.4.0"
+        "pusher-js": "^8.4.0",
+        "simplebar": "^6.3.3"
     },
     "name": "laravel_vierge",
     "version": "1.0.0",

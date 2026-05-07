@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Campagnes', 'subtitle' => 'Newsletter'])
+@extends('admintabler::layouts.admin', ['title' => 'Campagnes', 'subtitle' => 'Newsletter'])
 
 @section('content')
 <div class="card h-100 p-0">

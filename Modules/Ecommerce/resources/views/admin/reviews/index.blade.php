@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Avis clients'), 'subtitle' => __('Boutique')])
+@extends('admintabler::layouts.admin', ['title' => __('Avis clients'), 'subtitle' => __('Boutique')])
 
 @section('content')
     <nav aria-label="breadcrumb" class="mb-4">

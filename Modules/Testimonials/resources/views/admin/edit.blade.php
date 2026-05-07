@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Modifier :') . ' ' . $testimonial->author_name, 'subtitle' => __('Témoignages')])
+@extends('admintabler::layouts.admin', ['title' => __('Modifier :') . ' ' . $testimonial->author_name, 'subtitle' => __('Témoignages')])
 
 @section('content')
 

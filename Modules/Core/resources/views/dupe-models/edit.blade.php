@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Dupe Models', 'subtitle' => 'Modifier'])
+@extends('admintabler::layouts.admin', ['title' => 'Dupe Models', 'subtitle' => 'Modifier'])
 
 @section('content')
 

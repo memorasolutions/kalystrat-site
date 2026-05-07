@@ -39,5 +39,6 @@
     "Privacy": true,
     "ErrorMonitoring": true,
     "Frontend": true,
-    "Kalystrat": true
+    "Kalystrat": true,
+    "AdminTabler": true
 }
