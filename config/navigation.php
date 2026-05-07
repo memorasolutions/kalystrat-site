@@ -6,11 +6,11 @@
  * @project memora/laravel-saas-boilerplate
  *
  * Navigation configuration for the admin backoffice.
- * Refonte mai 2026 (Phase 16) : 8 sections → 5 sections (Hybrid Entity+Workflow simplifié)
- * Pattern Hybrid noté 94/100 simplifié à 5 sections (compromise scope/complexité).
+ * Phase 17 (mai 2026) : Pattern A Workflow-based 4 sections (note 91/100).
+ * Sources : Hick's Law, Baymard Institute Admin UX 2026, NNG, Linear/Vercel benchmarks.
  *
+ * Réduction 8 → 5 → 4 sections (Phase 14 → 16 → 17). Charge cognitive minimisée.
  * Each section contains items filtered by permissions, modules, and route existence.
- * Maximum 2 levels of nesting (section → items → children).
  */
 
 declare(strict_types=1);
@@ -19,11 +19,16 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Sidebar Sections — 5 sections (Phase 16 refonte UX 2026)
+    | Sidebar Sections — 4 sections (Phase 17 — Pattern A Workflow-based)
     |--------------------------------------------------------------------------
+    | 1. Accueil    — Tableau de bord + Statistiques (entry point)
+    | 2. Contenu    — Création éditoriale (Build phase)
+    | 3. Opérations — Marketing + Commerce + Équipe + Sécurité (Run phase, ops quotidiennes)
+    | 4. Configuration — Apparence + Technique + Système + IA + Roadmap (Setup phase)
     */
     'sections' => [
-        // ═══ 1. ACCUEIL ═══ Vue d'ensemble + analytics
+
+        // ═══ 1. ACCUEIL ═══
         [
             'label' => 'Accueil',
             'icon' => 'home',
@@ -33,7 +38,7 @@ return [
             ],
         ],
 
-        // ═══ 2. CONTENU ═══ Tout ce qui est éditorial / structurel public
+        // ═══ 2. CONTENU ═══ Création éditoriale
         [
             'label' => 'Contenu',
             'icon' => 'file-text',
@@ -51,14 +56,21 @@ return [
             ],
         ],
 
-        // ═══ 3. MARKETING & COMMERCE ═══ Newsletter + Ecommerce + SaaS + Booking
+        // ═══ 3. OPÉRATIONS ═══ Run phase (ops quotidiennes : marketing + commerce + équipe + sécurité + audit)
         [
-            'label' => 'Marketing & Commerce',
-            'icon' => 'megaphone',
+            'label' => 'Opérations',
+            'icon' => 'briefcase',
             'items' => [
-                ['label' => 'Newsletter', 'icon' => 'mail', 'route' => 'admin.newsletter.index', 'permission' => 'view_newsletter', 'module' => 'Newsletter'],
-                ['label' => 'Campagnes', 'icon' => 'send', 'route' => 'admin.newsletter.campaigns.index', 'permission' => 'view_newsletter', 'module' => 'Newsletter'],
-                ['label' => 'Workflows', 'icon' => 'workflow', 'route' => 'admin.newsletter.workflows.index', 'permission' => 'view_workflows', 'module' => 'Newsletter'],
+                // Sub-group : Marketing
+                [
+                    'label' => 'Marketing', 'icon' => 'megaphone', 'module' => 'Newsletter',
+                    'children' => [
+                        ['label' => 'Newsletter', 'route' => 'admin.newsletter.index', 'permission' => 'view_newsletter', 'icon' => 'mail'],
+                        ['label' => 'Campagnes', 'route' => 'admin.newsletter.campaigns.index', 'permission' => 'view_newsletter', 'icon' => 'send'],
+                        ['label' => 'Workflows', 'route' => 'admin.newsletter.workflows.index', 'permission' => 'view_workflows', 'icon' => 'workflow'],
+                    ],
+                ],
+                // Sub-group : Boutique
                 [
                     'label' => 'Boutique', 'icon' => 'store', 'module' => 'Ecommerce',
                     'children' => [
@@ -68,6 +80,7 @@ return [
                         ['label' => 'Coupons', 'route' => 'admin.ecommerce.coupons.index', 'permission' => 'view_coupons', 'icon' => 'ticket'],
                     ],
                 ],
+                // Sub-group : SaaS
                 [
                     'label' => 'SaaS', 'icon' => 'cloud', 'module' => 'SaaS',
                     'children' => [
@@ -75,6 +88,7 @@ return [
                         ['label' => 'Abonnés', 'route' => 'admin.saas.tenants.index', 'permission' => 'view_tenants', 'icon' => 'building-2'],
                     ],
                 ],
+                // Sub-group : Réservations
                 [
                     'label' => 'Réservations', 'icon' => 'calendar', 'module' => 'Booking',
                     'children' => [
@@ -82,25 +96,29 @@ return [
                         ['label' => 'Services', 'route' => 'admin.booking.services.index', 'permission' => 'manage_booking', 'icon' => 'briefcase'],
                     ],
                 ],
+                // Sub-group : Équipe
+                [
+                    'label' => 'Équipe', 'icon' => 'users',
+                    'children' => [
+                        ['label' => 'Membres', 'route' => 'admin.users.index', 'permission' => 'view_users', 'icon' => 'user'],
+                        ['label' => 'Rôles', 'route' => 'admin.roles.index', 'permission' => 'view_roles', 'icon' => 'shield'],
+                        ['label' => 'Équipes', 'route' => 'admin.teams.index', 'permission' => 'view_teams', 'icon' => 'users'],
+                        ['label' => 'Messages', 'route' => 'admin.contacts.index', 'permission' => 'view_contacts', 'icon' => 'message-square'],
+                    ],
+                ],
+                // Sub-group : Sécurité & Audit
+                [
+                    'label' => 'Sécurité & Audit', 'icon' => 'lock',
+                    'children' => [
+                        ['label' => 'Sécurité', 'route' => 'admin.security.index', 'permission' => 'view_security', 'icon' => 'lock'],
+                        ['label' => 'Activité', 'route' => 'admin.activity-logs.index', 'permission' => 'view_activity_logs', 'icon' => 'activity'],
+                        ['label' => 'Jobs échoués', 'route' => 'admin.failed-jobs.index', 'permission' => 'manage_system', 'icon' => 'alert-circle'],
+                    ],
+                ],
             ],
         ],
 
-        // ═══ 4. ÉQUIPE & SÉCURITÉ ═══ Personnes + accès + audit
-        [
-            'label' => 'Équipe & Sécurité',
-            'icon' => 'users',
-            'items' => [
-                ['label' => 'Membres', 'icon' => 'user', 'route' => 'admin.users.index', 'permission' => 'view_users'],
-                ['label' => 'Rôles', 'icon' => 'shield', 'route' => 'admin.roles.index', 'permission' => 'view_roles'],
-                ['label' => 'Équipes', 'icon' => 'users', 'route' => 'admin.teams.index', 'permission' => 'view_teams', 'module' => 'Team'],
-                ['label' => 'Messages', 'icon' => 'message-square', 'route' => 'admin.contacts.index', 'permission' => 'view_contacts'],
-                ['label' => 'Sécurité', 'icon' => 'lock', 'route' => 'admin.security.index', 'permission' => 'view_security'],
-                ['label' => 'Activité', 'icon' => 'activity', 'route' => 'admin.activity-logs.index', 'permission' => 'view_activity_logs'],
-                ['label' => 'Jobs échoués', 'icon' => 'alert-circle', 'route' => 'admin.failed-jobs.index', 'permission' => 'manage_system'],
-            ],
-        ],
-
-        // ═══ 5. CONFIGURATION ═══ Tout le réglage : apparence + tech + ops + outils
+        // ═══ 4. CONFIGURATION ═══ Setup phase (apparence + tech + système + IA + roadmap)
         [
             'label' => 'Configuration',
             'icon' => 'settings',
@@ -139,7 +157,7 @@ return [
                         ['label' => 'Infos système', 'route' => 'admin.system-info.index', 'permission' => 'manage_system', 'icon' => 'info'],
                     ],
                 ],
-                // Sub-group : Outils
+                // Sub-group : IA
                 [
                     'label' => 'IA', 'icon' => 'bot', 'module' => 'AI',
                     'children' => [
@@ -148,6 +166,7 @@ return [
                         ['label' => 'Analytics IA', 'route' => 'admin.ai.analytics.index', 'permission' => 'view_ai', 'icon' => 'activity'],
                     ],
                 ],
+                // Sub-group : Roadmap
                 [
                     'label' => 'Roadmap', 'icon' => 'kanban', 'module' => 'Roadmap',
                     'children' => [
@@ -160,13 +179,13 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Bottom Bar (Mobile) — Priority+ pattern
+    | Bottom Bar (Mobile) — Priority+ pattern (4 items max)
     |--------------------------------------------------------------------------
     */
     'bottom_bar' => [
         ['label' => 'Accueil', 'icon' => 'home', 'route' => 'admin.dashboard', 'permission' => 'view_dashboard'],
         ['label' => 'Contenu', 'icon' => 'file-text', 'route' => 'admin.blog.articles.index', 'permission' => 'view_articles'],
-        ['label' => 'Équipe', 'icon' => 'users', 'route' => 'admin.users.index', 'permission' => 'view_users'],
+        ['label' => 'Opérations', 'icon' => 'briefcase', 'route' => 'admin.users.index', 'permission' => 'view_users'],
         ['label' => 'Config', 'icon' => 'settings', 'route' => 'admin.settings.index', 'permission' => 'view_settings'],
     ],
 
