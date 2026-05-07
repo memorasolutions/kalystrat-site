@@ -627,7 +627,7 @@
             left: 0;
             right: 0;
             height: 110px;
-            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,55 C240,110 600,10 960,40 C1200,60 1340,90 1440,70 L1440,110 L0,110 Z'/></svg>") no-repeat bottom / 100% 100%;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,55 C360,110 720,0 1080,55 C1260,82 1350,75 1440,55 L1440,110 L0,110 Z'/></svg>") no-repeat bottom / 100% 100%;
             z-index: 4;
             pointer-events: none;
         }
