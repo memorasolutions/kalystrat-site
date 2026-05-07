@@ -35,7 +35,7 @@
             <div>
                 <div class="flex items-center justify-between">
                     <label for="login-password" class="text-base font-medium text-gray-900">{{ __('Mot de passe') }}</label>
-                    <a href="{{ route('password.request') }}" class="text-sm font-medium text-sky-700 transition-all duration-200 hover:text-sky-700 focus:text-sky-700 hover:underline inline-flex items-center" style="min-height:24px" wire:navigate>
+                    <a href="{{ route('password.request') }}" class="text-sm font-medium text-sky-800 transition-all duration-200 hover:text-sky-800 focus:text-sky-800 hover:underline inline-flex items-center" style="min-height:24px" wire:navigate>
                         {{ __('Mot de passe oublié ?') }}
                     </a>
                 </div>
@@ -59,14 +59,14 @@
             {{-- Remember me --}}
             <div class="flex items-center" style="gap: 0.75rem">
                 <input wire:model="remember" type="checkbox" id="remember"
-                       class="text-sky-700 border-gray-300 rounded focus:ring-sky-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0">
+                       class="text-sky-800 border-gray-300 rounded focus:ring-sky-500" style="width: 1.5rem; height: 1.5rem; flex-shrink: 0">
                 <label for="remember" class="text-sm font-normal text-gray-700" style="cursor: pointer">{{ __('Se souvenir de moi') }}</label>
             </div>
 
             {{-- Submit --}}
             <div>
                 <button type="submit"
-                        class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:opacity-80 focus:opacity-80" style="background-color:#0369a1"
+                        class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:opacity-80 focus:opacity-80" style="background-color:#075985"
                         wire:loading.attr="disabled">
                     <span wire:loading.remove>{{ __('Se connecter') }}</span>
                     <span wire:loading>{{ __('Connexion en cours...') }}</span>
@@ -79,7 +79,7 @@
     <div x-data="{ supported: typeof window.browserSupportsWebAuthn === 'function' && window.browserSupportsWebAuthn() }" x-show="supported" x-cloak x-bind:inert="!supported" @if($isLocked) style="display:none" @endif>
         <div class="relative my-6">
             <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-gray-300"></div></div>
-            <div class="relative flex justify-center text-sm"><span class="px-4 bg-white text-gray-500">{{ __('ou') }}</span></div>
+            <div class="relative flex justify-center text-sm"><span class="px-4 bg-white text-gray-600">{{ __('ou') }}</span></div>
         </div>
         <x-authenticate-passkey redirect="/admin">
             <button type="button"
@@ -95,10 +95,10 @@
     <div class="mt-6 text-center space-y-2">
         <p class="text-sm text-gray-700">
             {{ __('Pas de compte ?') }}
-            <a href="{{ route('register') }}" class="font-medium text-sky-700 transition-all duration-200 hover:text-sky-700 focus:text-sky-700 hover:underline" wire:navigate>{{ __('Créer un compte') }}</a>
+            <a href="{{ route('register') }}" class="font-medium text-sky-800 transition-all duration-200 hover:text-sky-800 focus:text-sky-800 hover:underline" wire:navigate>{{ __('Créer un compte') }}</a>
         </p>
         <p class="text-sm text-gray-700">
-            <a href="{{ route('magic-link.request') }}" class="font-medium text-sky-700 transition-all duration-200 hover:text-sky-700 focus:text-sky-700 hover:underline" wire:navigate>{{ __('Connexion sans mot de passe (code)') }}</a>
+            <a href="{{ route('magic-link.request') }}" class="font-medium text-sky-800 transition-all duration-200 hover:text-sky-800 focus:text-sky-800 hover:underline" wire:navigate>{{ __('Connexion sans mot de passe (code)') }}</a>
         </p>
     </div>
 </div>

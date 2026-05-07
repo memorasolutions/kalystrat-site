@@ -19,7 +19,11 @@
     <style>
         /* WCAG skip link: hidden until focused */
         .skip-link { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0 }
-        .skip-link:focus { position:fixed;top:0.5rem;left:0.5rem;width:auto;height:auto;min-width:24px;min-height:24px;padding:0.5rem 1rem;margin:0;overflow:visible;clip:auto;white-space:normal;z-index:9999;background:#0369a1;color:#fff;border-radius:0.375rem;font-size:0.875rem;font-weight:500;text-decoration:none;outline:2px solid #0284c7 }
+        .skip-link:focus { position:fixed;top:0.5rem;left:0.5rem;width:auto;height:auto;min-width:44px;min-height:44px;padding:0.75rem 1.25rem;margin:0;overflow:visible;clip:auto;white-space:normal;z-index:9999;background:#075985;color:#fff;border-radius:0.375rem;font-size:0.875rem;font-weight:500;text-decoration:none;outline:2px solid #0284c7;outline-offset:2px }
+        /* a11y: prefers-reduced-motion (WCAG 2.3.3) */
+        @media (prefers-reduced-motion: reduce) {
+            *,*::before,*::after { animation-duration:0.01ms !important; animation-iteration-count:1 !important; transition-duration:0.01ms !important; scroll-behavior:auto !important }
+        }
         /* Hide browser credential manager icons inside password inputs */
         input[type="password"]::-webkit-credentials-auto-fill-button,
         input[type="password"]::-webkit-textfield-decoration-container { display: none !important; }
@@ -80,6 +84,17 @@
             </div>
         </aside>
     </div>
+
+    {{-- a11y: <footer> landmark WCAG 1.3.1 (page guest minimale) --}}
+    <footer role="contentinfo" aria-label="{{ __('Pied de page') }}" class="text-center text-xs text-gray-600 py-4 border-t border-gray-200 bg-white">
+        <nav aria-label="{{ __('Liens légaux') }}">
+            <ul class="list-none flex flex-wrap justify-center gap-4 m-0 p-0">
+                <li><a href="{{ url('/politique-confidentialite') }}" class="text-gray-700 hover:text-sky-800 underline">{{ __('Confidentialité') }}</a></li>
+                <li><a href="{{ url('/conditions-utilisation') }}" class="text-gray-700 hover:text-sky-800 underline">{{ __('Conditions') }}</a></li>
+                <li>&copy; {{ date('Y') }} {{ config('app.name') }}</li>
+            </ul>
+        </nav>
+    </footer>
 
     @livewireScripts
     @stack('scripts')

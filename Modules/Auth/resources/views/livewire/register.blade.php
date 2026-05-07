@@ -63,14 +63,14 @@
                     </div>
                     <div class="flex justify-between items-center">
                         <span class="text-sm font-medium" x-text="label"></span>
-                        <div class="flex gap-3 text-xs text-gray-500">
+                        <div class="flex gap-3 text-xs text-gray-600">
                             <span :class="pwd.length >= 8 ? 'text-green-500' : ''">{{ __('8+ caract.') }}</span>
                             <span :class="/[A-Z]/.test(pwd) ? 'text-green-500' : ''">{{ __('Majuscule') }}</span>
                             <span :class="/[0-9]/.test(pwd) ? 'text-green-500' : ''">{{ __('Chiffre') }}</span>
                         </div>
                     </div>
                 </div>
-                <p class="mt-1 text-sm text-gray-500">{{ __('Minimum 8 caractères requis') }}</p>
+                <p class="mt-1 text-sm text-gray-600">{{ __('Minimum 8 caractères requis') }}</p>
                 @error('password')<p class="text-red-600 text-sm mt-1" id="register-password-error" role="alert">{{ $message }}</p>@enderror
             </div>
 
@@ -90,7 +90,7 @@
             {{-- Submit --}}
             <div>
                 <button type="submit"
-                        class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:opacity-80 focus:opacity-80" style="background-color:#0369a1"
+                        class="inline-flex items-center justify-center w-full px-4 py-4 text-base font-semibold text-white transition-all duration-200 border border-transparent rounded-md focus:outline-none hover:opacity-80 focus:opacity-80" style="background-color:#075985"
                         wire:loading.attr="disabled">
                     <span wire:loading.remove>{{ __('Créer le compte') }}</span>
                     <span wire:loading>{{ __('Création...') }}</span>
@@ -104,7 +104,7 @@
     <div class="mt-6 text-center">
         <p class="text-sm text-gray-700">
             {{ __('Déjà un compte ?') }}
-            <a href="{{ route('login') }}" class="font-medium text-sky-700 transition-all duration-200 hover:text-sky-700 focus:text-sky-700 hover:underline" wire:navigate>{{ __('Se connecter') }}</a>
+            <a href="{{ route('login') }}" class="font-medium text-sky-800 transition-all duration-200 hover:text-sky-800 focus:text-sky-800 hover:underline" wire:navigate>{{ __('Se connecter') }}</a>
         </p>
     </div>
 

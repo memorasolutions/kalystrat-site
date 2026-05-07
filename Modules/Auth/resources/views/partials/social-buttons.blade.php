@@ -17,7 +17,7 @@
         <div class="absolute inset-0 flex items-center">
             <div class="w-full border-t border-gray-200"></div>
         </div>
-        <div class="relative bg-white px-4 text-sm text-gray-500">{{ __('Ou continuer avec') }}</div>
+        <div class="relative bg-white px-4 text-sm text-gray-600">{{ __('Ou continuer avec') }}</div>
     </div>
 
     <div class="flex flex-col gap-3">

@@ -39,6 +39,10 @@
     {{-- BEGIN GLOBAL THEME SCRIPT (anti-flash dark mode) --}}
     <script src="{{ asset('build/admintabler/tabler-theme.min.js') }}"></script>
     {{-- END GLOBAL THEME SCRIPT --}}
+
+    {{-- a11y: Skip-link WCAG 2.4.1 Bypass Blocks — premier focus tab --}}
+    <a href="#main-content" class="admintabler-skip-link">{{ __('Aller au contenu principal') }}</a>
+
     <div class="page">
       <!-- BEGIN NAVBAR  -->
       <header class="navbar navbar-expand-md navbar-overlap d-print-none" data-bs-theme="dark">
@@ -793,6 +797,8 @@
           </div>
           <div class="collapse navbar-collapse" id="navbar-menu">
                         <!-- BEGIN NAVBAR MENU -->
+            {{-- a11y: <nav> landmark WCAG 1.3.1 + 4.1.2 --}}
+            <nav role="navigation" aria-label="{{ __('Menu principal') }}" style="display:contents;">
             @inject('navService', 'Modules\Backoffice\Services\NavigationService')
             @php
                 $kSections = $navService->getNavigation(auth()->user());
@@ -894,6 +900,7 @@
                 @endif
               @endforeach
             </ul>
+            </nav>
             <!-- END NAVBAR MENU -->
           </div>
         </div>
@@ -920,7 +927,8 @@
         <!-- END PAGE HEADER -->
 
         {{-- BEGIN PAGE BODY --}}
-        <div class="page-body">
+        {{-- a11y: <main> landmark WCAG 1.3.1 + 4.1.2 --}}
+        <main id="main-content" class="page-body" aria-label="{{ __('Contenu principal') }}">
           <div class="container-xl">
             @if(session('success'))
                 <div class="alert alert-success alert-dismissible mb-3" role="alert">
@@ -937,7 +945,7 @@
 
             @yield('content')
           </div>
-        </div>
+        </main>
         {{-- END PAGE BODY --}}
         <!--  BEGIN FOOTER  -->
         <footer class="footer footer-transparent d-print-none">
