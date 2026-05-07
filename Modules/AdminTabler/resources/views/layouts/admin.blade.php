@@ -80,6 +80,8 @@
 @vite(['Modules/AdminTabler/resources/assets/js/app.js'])
 
 @livewireScripts
+@stack('plugin-scripts')
+@stack('custom-scripts')
 @stack('scripts')
 </body>
 </html>
