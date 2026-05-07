@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => $title ?? __('Statistiques'), 'subtitle' => $subtitle ?? __('Analytiques')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpStatsModal" :title="__('Statistiques')" icon="bar-chart-3" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.stats._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="bar-chart-3" class="icon-md text-primary"></i>{{ __('Statistiques') }}</h4>
-    <x-backoffice::help-modal id="helpStatsModal" :title="__('Statistiques')" icon="bar-chart-3" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.stats._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- Period Selector --}}
 <div class="d-flex flex-wrap gap-2 mb-3">

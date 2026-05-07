@@ -1,19 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Rôles'), 'subtitle' => __('Liste')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpRolesModal" :title="__('Rôles et permissions')" icon="shield-check" :buttonLabel="__('Aide')">
+                @include('backoffice::themes.backend.roles._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="shield" class="icon-md text-primary"></i>{{ __('Rôles') }}</h4>
-    <div class="d-flex gap-2">
-        <x-backoffice::help-modal id="helpRolesModal" :title="__('Rôles et permissions')" icon="shield-check" :buttonLabel="__('Aide')">
-            @include('backoffice::themes.backend.roles._help')
-        </x-backoffice::help-modal>
-        <a href="{{ route('admin.roles.create') }}" class="btn btn-sm btn-primary d-inline-flex align-items-center gap-2">
-            <i data-lucide="plus"></i>
-            {{ __('Ajouter') }}
-        </a>
-    </div>
 </div>
 
 <div class="card">

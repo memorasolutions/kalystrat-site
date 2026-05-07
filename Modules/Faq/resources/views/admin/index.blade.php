@@ -1,22 +1,15 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin')
 @section('title', __('Gestion des FAQ'))
+@section('page-actions')
+    <x-backoffice::help-modal id="helpFaqModal" :title="__('Qu\'est-ce que la FAQ ?')" icon="help-circle" :buttonLabel="__('Aide')">
+                    @include('faq::admin._help')
+                </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 <div class="page-content">
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-        <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="help-circle" class="icon-md text-primary"></i>{{ __('FAQ') }}</h4>
-        <div class="d-flex gap-2">
-            <x-backoffice::help-modal id="helpFaqModal" :title="__('Qu\'est-ce que la FAQ ?')" icon="help-circle" :buttonLabel="__('Aide')">
-                @include('faq::admin._help')
-            </x-backoffice::help-modal>
-            <button type="button" class="btn btn-success d-none" id="btnSaveOrder" onclick="saveOrder()">
-                <i data-lucide="save"></i> {{ __('Enregistrer l\'ordre') }}
-            </button>
-            <a href="{{ route('admin.faqs.create') }}" class="btn btn-primary">
-                <i data-lucide="plus"></i> {{ __('Ajouter une question') }}
-            </a>
         </div>
-    </div>
 
     <div class="card">
         <div class="card-body">

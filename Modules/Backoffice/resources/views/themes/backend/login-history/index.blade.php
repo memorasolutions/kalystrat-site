@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => $title, 'subtitle' => $subtitle])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpLoginHistoryModal" :title="__('Historique de connexion')" icon="log-in" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.login-history._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="log-in" class="icon-md text-primary"></i>{{ __('Historique de connexion') }}</h4>
-    <x-backoffice::help-modal id="helpLoginHistoryModal" :title="__('Historique de connexion')" icon="log-in" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.login-history._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="card-header py-3 px-4 border-bottom">

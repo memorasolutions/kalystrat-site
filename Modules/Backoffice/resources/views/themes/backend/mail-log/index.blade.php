@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => $title, 'subtitle' => $subtitle])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpMailLogModal" :title="__('Journal des emails')" icon="send" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.mail-log._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="send" class="icon-md text-primary"></i>{{ __('Emails envoyés') }}</h4>
-    <x-backoffice::help-modal id="helpMailLogModal" :title="__('Journal des emails')" icon="send" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.mail-log._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="card-header py-3 px-4 border-bottom">

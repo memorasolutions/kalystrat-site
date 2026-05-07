@@ -1,6 +1,12 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Sauvegardes'), 'subtitle' => __('Gestion')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpBackupsModal" :title="__('Sauvegardes')" icon="hard-drive-download" :buttonLabel="__('Aide')">
+                @include('backoffice::themes.backend.backups._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 <div x-data="{
@@ -9,26 +15,7 @@
     toggleAll() { this.selected = this.allSelected ? [] : {{ Js::from(array_column($backups, 'path')) }} }
 }">
 
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-        <h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
-            <i data-lucide="hard-drive" class="icon-md text-primary"></i>{{ __('Sauvegardes') }}
-            @if(count($backups) > 0)
-                @php $totalMB = round(array_sum(array_column($backups, 'size')) / 1024 / 1024, 1); @endphp
-                <span class="badge bg-secondary bg-opacity-10 text-secondary fw-normal fs-6">{{ $totalMB }} MB · {{ count($backups) }} {{ __('fichier(s)') }}</span>
-            @endif
-        </h4>
-        <x-backoffice::help-modal id="helpBackupsModal" :title="__('Sauvegardes')" icon="hard-drive-download" :buttonLabel="__('Aide')">
-            @include('backoffice::themes.backend.backups._help')
-        </x-backoffice::help-modal>
-        <form action="{{ route('admin.backups.run') }}" method="POST">
-            @csrf
-            <button type="submit" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
-                <i data-lucide="upload"></i>
-                {{ __('Lancer une sauvegarde') }}
-            </button>
-        </form>
-    </div>
-
+    
     {{-- Bulk actions bar --}}
     <div x-show="selected.length > 0" x-cloak
          class="d-flex flex-wrap align-items-center gap-3 mb-3 px-3 py-2 bg-danger bg-opacity-10 border border-danger border-opacity-25 rounded">

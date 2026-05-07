@@ -1,23 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => $title, 'subtitle' => $subtitle])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpSchedulerModal" :title="__('Planificateur de tâches')" icon="clock" :buttonLabel="__('Aide')">
+                @include('backoffice::themes.backend.scheduler._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
-        <i data-lucide="calendar-clock" class="text-primary icon-md"></i>
-        {{ __('Tâches planifiées') }}
-        <span class="badge bg-secondary bg-opacity-10 text-secondary fw-normal fs-6">{{ count($systemTasks) + $customTasks->count() }}</span>
-    </h4>
-    <div class="d-flex gap-2">
-        <x-backoffice::help-modal id="helpSchedulerModal" :title="__('Planificateur de tâches')" icon="clock" :buttonLabel="__('Aide')">
-            @include('backoffice::themes.backend.scheduler._help')
-        </x-backoffice::help-modal>
-        <a href="{{ route('admin.scheduler.create') }}" class="btn btn-primary btn-sm d-inline-flex align-items-center gap-2">
-            <i data-lucide="plus"></i>
-            {{ __('Nouvelle tâche') }}
-        </a>
-    </div>
 </div>
 
 {{-- Tâches système --}}

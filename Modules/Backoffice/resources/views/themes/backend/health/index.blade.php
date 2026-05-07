@@ -1,6 +1,12 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Santé système')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpHealthModal" :title="__('Santé du système')" icon="heart-pulse" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.health._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 @php
@@ -10,12 +16,6 @@
     $failedCount = $results ? $results->storedCheckResults->whereIn('status', ['failed', 'crashed'])->count() : 0;
 @endphp
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="heart-pulse" class="icon-md text-primary"></i>{{ __('Santé du système') }}</h4>
-    <x-backoffice::help-modal id="helpHealthModal" :title="__('Santé du système')" icon="heart-pulse" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.health._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- Stats cards --}}
 <div class="row mb-4">

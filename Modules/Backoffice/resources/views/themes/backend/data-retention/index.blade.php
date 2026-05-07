@@ -4,14 +4,14 @@
 @section('breadcrumbs')
 @endsection
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpDataRetentionModal" :title="__('Rétention des données')" icon="timer" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.data-retention._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="timer" class="icon-md text-primary"></i>{{ __('Rétention des données') }}</h4>
-    <x-backoffice::help-modal id="helpDataRetentionModal" :title="__('Rétention des données')" icon="timer" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.data-retention._help')
-    </x-backoffice::help-modal>
-</div>
 
 @php
     $totalRecords = collect($stats)->sum('total');

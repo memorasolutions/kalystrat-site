@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Informations système'), 'subtitle' => __('Diagnostic')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpSystemInfoModal" :title="__('Informations système')" icon="server" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.system-info._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="server" class="icon-md text-primary"></i>{{ __('Informations système') }}</h4>
-    <x-backoffice::help-modal id="helpSystemInfoModal" :title="__('Informations système')" icon="server" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.system-info._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- Stat cards --}}
 <div class="row mb-4">

@@ -67,27 +67,28 @@
                 </div>
             </div>
 
-            {{-- Profile dropdown --}}
+            {{-- COPIE VERBATIM Tabler officiel preview.tabler.io/layout-navbar-overlap.html lignes 857-873 --}}
+            {{-- Substitutions Laravel : (1) avatar URL UI Avatars API, (2) route('admin.profile'), (3) route('admin.settings.index'), (4) Logout via form POST caché (CSRF Laravel obligatoire) --}}
             <div class="nav-item dropdown">
-                <a href="#" class="nav-link d-flex lh-1 text-reset p-0" data-bs-toggle="dropdown" aria-label="{{ __('Menu utilisateur') }}" data-bs-auto-close="outside" aria-expanded="false">
-                    <span class="avatar avatar-sm bg-primary text-white" style="display:inline-flex;align-items:center;justify-content:center;font-weight:600;">
-                        {{ mb_strtoupper(mb_substr($user->name, 0, 2)) }}
-                    </span>
+                <a href="#" class="nav-link d-flex lh-1 p-0 px-2" data-bs-toggle="dropdown" aria-label="Open user menu">
+                    <span class="avatar avatar-sm" style="background-image: url(https://ui-avatars.com/api/?name={{ urlencode($user->name) }}&background=066fd1&color=fff&size=64)"> </span>
                     <div class="d-none d-xl-block ps-2">
                         <div>{{ $user->name }}</div>
                         <div class="mt-1 small text-secondary">{{ $user->roles->first()?->name ?? __('Utilisateur') }}</div>
                     </div>
                 </a>
-                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                    <a href="{{ route('admin.profile') }}" class="dropdown-item">{{ __('Profil') }}</a>
-                    <a href="{{ route('admin.dashboard') }}" class="dropdown-item">{{ __('Tableau de bord') }}</a>
+                <div class="dropdown-menu dropdown-menu-end dropdown-menu-arrow" data-bs-theme="light">
+                    <a href="#" class="dropdown-item">Status</a>
+                    <a href="{{ route('admin.profile') }}" class="dropdown-item">Profile</a>
+                    <a href="#" class="dropdown-item">Feedback</a>
                     <div class="dropdown-divider"></div>
-                    <form method="POST" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="dropdown-item">{{ __('Déconnexion') }}</button>
-                    </form>
+                    <a href="{{ route('admin.settings.index') }}" class="dropdown-item">Settings</a>
+                    <a href="#" class="dropdown-item" onclick="event.preventDefault(); document.getElementById('admintabler-logout-form').submit();">Logout</a>
                 </div>
             </div>
+            <form id="admintabler-logout-form" method="POST" action="{{ route('logout') }}" class="d-none">
+                @csrf
+            </form>
         </div>
 
         {{-- NAV MENU (collapse mobile) — 8 dropdowns NavigationService --}}

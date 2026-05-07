@@ -2,17 +2,13 @@
 @extends('admintabler::layouts.admin')
 @section('title', __('Widgets'))
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpWidgetsModal" :title="__('Qu\'est-ce qu\'un widget ?')" icon="layout-grid" :buttonLabel="__('Aide')">
+                @include('widget::admin._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="layout-grid" class="icon-md text-primary"></i>{{ __('Widgets') }}</h4>
-    <div class="d-flex gap-2">
-        <x-backoffice::help-modal id="helpWidgetsModal" :title="__('Qu\'est-ce qu\'un widget ?')" icon="layout-grid" :buttonLabel="__('Aide')">
-            @include('widget::admin._help')
-        </x-backoffice::help-modal>
-        <a href="{{ route('admin.widgets.create') }}" class="btn btn-primary btn-icon-text">
-            <i class="btn-icon-prepend" data-lucide="plus"></i> {{ __('Nouveau widget') }}
-        </a>
-    </div>
 </div>
 
 @if(session('success'))

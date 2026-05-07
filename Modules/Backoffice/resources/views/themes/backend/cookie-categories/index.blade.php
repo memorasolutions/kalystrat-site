@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Catégories cookies'), 'subtitle' => __('Gestion')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpCookieCategoriesModal" :title="__('Catégories de cookies RGPD')" icon="cookie" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.cookie-categories._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="cookie" class="icon-md text-primary"></i>{{ __('Catégories de cookies') }}</h4>
-    <x-backoffice::help-modal id="helpCookieCategoriesModal" :title="__('Catégories de cookies RGPD')" icon="cookie" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.cookie-categories._help')
-    </x-backoffice::help-modal>
-</div>
 
 @if(session('success'))
     <div class="alert alert-success d-flex align-items-center gap-2 mb-4">

@@ -3,6 +3,12 @@
 
 @section('title', __('Analytiques IA'))
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpAnalyticsModal" :title="__('Analytiques IA')" icon="bar-chart-2" :buttonLabel="__('Aide')">
+            @include('ai::admin.analytics._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -12,12 +18,6 @@
     </ol>
 </nav>
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="bar-chart-2" class="icon-md text-primary"></i>{{ __('Analytiques IA') }}</h4>
-    <x-backoffice::help-modal id="helpAnalyticsModal" :title="__('Analytiques IA')" icon="bar-chart-2" :buttonLabel="__('Aide')">
-        @include('ai::admin.analytics._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- KPI Cards --}}
 <div class="row mb-4">

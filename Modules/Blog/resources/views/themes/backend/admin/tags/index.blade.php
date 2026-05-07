@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Tags'), 'subtitle' => __('Blog')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpTagsModal" :title="__('Tags du blog')" icon="tags" :buttonLabel="__('Aide')">
+            @include('blog::themes.backend.admin.tags._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="tags" class="icon-md text-primary"></i>{{ __('Tags') }}</h4>
-    <x-backoffice::help-modal id="helpTagsModal" :title="__('Tags du blog')" icon="tags" :buttonLabel="__('Aide')">
-        @include('blog::themes.backend.admin.tags._help')
-    </x-backoffice::help-modal>
-</div>
 
 @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show" role="alert">
