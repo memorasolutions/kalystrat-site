@@ -8,6 +8,12 @@
     ]" />
 @endsection
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpBrandingModal" :title="__('Identité visuelle')" icon="paintbrush" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.branding._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 @php
@@ -34,12 +40,6 @@
     ];
 @endphp
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="paintbrush" class="icon-md text-primary"></i>{{ __('Identité visuelle') }}</h4>
-    <x-backoffice::help-modal id="helpBrandingModal" :title="__('Identité visuelle')" icon="paintbrush" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.branding._help')
-    </x-backoffice::help-modal>
-</div>
 
 <form action="{{ route('admin.branding.update') }}" method="POST" enctype="multipart/form-data">
     @csrf

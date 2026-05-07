@@ -1,6 +1,12 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Paramètres'), 'subtitle' => __('Configuration')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpSettingsModal" :title="__('Paramètres')" icon="settings" :buttonLabel="__('Aide')">
+                @include('backoffice::themes.backend.settings._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 <x-backoffice::driver-tour
@@ -11,17 +17,6 @@
     ]"
 />
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="settings" class="icon-md text-primary"></i>{{ __('Paramètres') }}</h4>
-    <div class="d-flex gap-2">
-        <x-backoffice::help-modal id="helpSettingsModal" :title="__('Paramètres')" icon="settings" :buttonLabel="__('Aide')">
-            @include('backoffice::themes.backend.settings._help')
-        </x-backoffice::help-modal>
-        <a href="{{ route('admin.settings.create') }}" class="btn btn-sm btn-primary d-inline-flex align-items-center gap-2">
-            <i data-lucide="plus"></i>
-            {{ __('Ajouter un paramètre') }}
-        </a>
-    </div>
 </div>
 
 <div class="card">

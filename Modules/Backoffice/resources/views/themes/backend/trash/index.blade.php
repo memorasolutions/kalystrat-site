@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => $title, 'subtitle' => $subtitle])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpTrashModal" :title="__('Corbeille')" icon="trash-2" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.trash._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="trash-2" class="icon-md text-primary"></i>{{ __('Corbeille') }}</h4>
-    <x-backoffice::help-modal id="helpTrashModal" :title="__('Corbeille')" icon="trash-2" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.trash._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- Articles supprimés --}}
 <div class="card mb-4">

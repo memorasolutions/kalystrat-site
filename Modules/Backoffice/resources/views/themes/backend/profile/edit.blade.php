@@ -4,14 +4,14 @@
 @section('breadcrumbs')
 @endsection
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpProfileModal" :title="__('Mon profil')" icon="user" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.profile._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="user" class="icon-md text-primary"></i>{{ __('Mon profil') }}</h4>
-    <x-backoffice::help-modal id="helpProfileModal" :title="__('Mon profil')" icon="user" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.profile._help')
-    </x-backoffice::help-modal>
-</div>
 
 @if(session('success'))
     <div class="alert alert-success d-flex align-items-center gap-2 mb-4">

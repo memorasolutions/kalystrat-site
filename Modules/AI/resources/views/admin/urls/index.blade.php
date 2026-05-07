@@ -1,23 +1,15 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin')
 @section('title', __('Sources URL - Base de connaissances'))
+@section('page-actions')
+    <x-backoffice::help-modal id="helpUrlsModal" :title="__('Sources URL')" icon="link" :buttonLabel="__('Aide')">
+                    @include('ai::admin.urls._help')
+                </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 <div class="page-content">
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-        <h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
-            <i data-lucide="link" class="icon-md text-primary"></i>
-            {{ __('Sources URL') }}
-            <span class="badge bg-secondary fw-normal fs-6">{{ $urls->total() }}</span>
-        </h4>
-        <div class="d-flex gap-2">
-            <x-backoffice::help-modal id="helpUrlsModal" :title="__('Sources URL')" icon="link" :buttonLabel="__('Aide')">
-                @include('ai::admin.urls._help')
-            </x-backoffice::help-modal>
-            <a href="{{ route('admin.ai.urls.create') }}" class="btn btn-primary">
-                <i data-lucide="plus"></i> {{ __('Ajouter une URL') }}
-            </a>
         </div>
-    </div>
 
     @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">

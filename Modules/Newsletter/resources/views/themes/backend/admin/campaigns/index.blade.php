@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => 'Campagnes', 'subtitle' => 'Newsletter'])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpNewsletterCampaignsModal" :title="__('Campagnes newsletter')" icon="megaphone" :buttonLabel="__('Aide')">
+            @include('newsletter::admin.campaigns._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="megaphone" class="icon-md text-primary"></i>{{ __('Campagnes newsletter') }}</h4>
-    <x-backoffice::help-modal id="helpNewsletterCampaignsModal" :title="__('Campagnes newsletter')" icon="megaphone" :buttonLabel="__('Aide')">
-        @include('newsletter::admin.campaigns._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="card-header d-block py-3 px-4 border-bottom">

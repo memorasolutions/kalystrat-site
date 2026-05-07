@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Médias'), 'subtitle' => __('Bibliothèque')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpMediaModal" :title="__('Médiathèque')" icon="image" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.media._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="image" class="icon-md text-primary"></i>{{ __('Médiathèque') }}</h4>
-    <x-backoffice::help-modal id="helpMediaModal" :title="__('Médiathèque')" icon="image" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.media._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="p-4">

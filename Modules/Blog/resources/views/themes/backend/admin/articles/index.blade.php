@@ -1,6 +1,12 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Articles')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpArticlesModal" :title="__('Articles du blog')" icon="newspaper" :buttonLabel="__('Aide')">
+            @include('blog::themes.backend.admin.articles._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 <x-backoffice::driver-tour
@@ -12,12 +18,6 @@
     ]"
 />
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="newspaper" class="icon-md text-primary"></i>{{ __('Articles') }}</h4>
-    <x-backoffice::help-modal id="helpArticlesModal" :title="__('Articles du blog')" icon="newspaper" :buttonLabel="__('Aide')">
-        @include('blog::themes.backend.admin.articles._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="card-header py-3 px-4 border-bottom">

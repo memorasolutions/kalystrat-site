@@ -1,26 +1,15 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin')
 @section('title', __('Base de connaissances IA'))
+@section('page-actions')
+    <x-backoffice::help-modal id="helpKnowledgeModal" :title="__('Base de connaissances IA')" icon="brain" :buttonLabel="__('Aide')">
+                    @include('ai::admin.knowledge._help')
+                </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 <div class="page-content">
-    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-        <h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
-            <i data-lucide="brain" class="icon-md text-primary"></i>
-            {{ __('Base de connaissances') }}
-            <span class="badge bg-secondary fw-normal fs-6">{{ $documents->total() }}</span>
-        </h4>
-        <div class="d-flex gap-2">
-            <x-backoffice::help-modal id="helpKnowledgeModal" :title="__('Base de connaissances IA')" icon="brain" :buttonLabel="__('Aide')">
-                @include('ai::admin.knowledge._help')
-            </x-backoffice::help-modal>
-            <a href="{{ route('admin.ai.knowledge.create') }}" class="btn btn-primary">
-                <i data-lucide="plus"></i> {{ __('Ajouter un document') }}
-            </a>
-            <a href="{{ route('admin.ai.knowledge.index') }}" class="btn btn-outline-secondary" title="{{ __('Synchroniser les sources (FAQ, Pages, Articles)') }}">
-                <i data-lucide="refresh-cw"></i> {{ __('Synchroniser') }}
-            </a>
         </div>
-    </div>
 
     @if(session('success'))
     <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">

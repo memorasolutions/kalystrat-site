@@ -4,6 +4,12 @@
 @section('breadcrumbs')
 @endsection
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpOnboardingStepsModal" :title="__('Étapes d\'accueil')" icon="footprints" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.onboarding-steps._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
 @if(session('success'))
@@ -13,12 +19,6 @@
     </div>
 @endif
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="footprints" class="icon-md text-primary"></i>{{ __('Étapes onboarding') }}</h4>
-    <x-backoffice::help-modal id="helpOnboardingStepsModal" :title="__('Étapes d\'accueil')" icon="footprints" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.onboarding-steps._help')
-    </x-backoffice::help-modal>
-</div>
 
 <div class="card">
     <div class="card-header border-bottom py-3 px-4">

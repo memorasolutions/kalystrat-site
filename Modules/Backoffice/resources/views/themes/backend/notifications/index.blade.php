@@ -1,14 +1,14 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => __('Notifications'), 'subtitle' => __('Liste')])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpNotificationsModal" :title="__('Notifications')" icon="bell" :buttonLabel="__('Aide')">
+            @include('backoffice::themes.backend.notifications._help')
+        </x-backoffice::help-modal>
+@endsection
+
 @section('content')
 
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2"><i data-lucide="bell" class="icon-md text-primary"></i>{{ __('Notifications') }}</h4>
-    <x-backoffice::help-modal id="helpNotificationsModal" :title="__('Notifications')" icon="bell" :buttonLabel="__('Aide')">
-        @include('backoffice::themes.backend.notifications._help')
-    </x-backoffice::help-modal>
-</div>
 
 {{-- Diffuser une alerte système --}}
 <div class="card mb-3">

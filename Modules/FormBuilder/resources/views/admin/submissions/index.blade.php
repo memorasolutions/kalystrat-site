@@ -1,21 +1,13 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
 @extends('admintabler::layouts.admin', ['title' => 'Soumissions : ' . $form->title])
 
+@section('page-actions')
+    <x-backoffice::help-modal id="helpFormBuilderSubmissionsModal" :title="__('Soumissions de formulaire')" icon="inbox" :buttonLabel="__('Aide')">
+                @include('formbuilder::admin.submissions._help')
+            </x-backoffice::help-modal>
+@endsection
+
 @section('content')
-<div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">
-    <h4 class="fw-bold mb-0 d-flex align-items-center gap-2">
-        <i data-lucide="inbox" class="icon-md text-primary"></i>
-        {{ __('Soumissions') }} : {{ $form->title }}
-    </h4>
-    <div class="d-flex align-items-center gap-2">
-        <x-backoffice::help-modal id="helpFormBuilderSubmissionsModal" :title="__('Soumissions de formulaire')" icon="inbox" :buttonLabel="__('Aide')">
-            @include('formbuilder::admin.submissions._help')
-        </x-backoffice::help-modal>
-        <a href="{{ route('admin.formbuilder.forms.submissions.export', $form) }}" class="btn btn-outline-success btn-icon-text">
-            <i class="btn-icon-prepend" data-lucide="download"></i>
-            {{ __('Exporter CSV') }}
-        </a>
-    </div>
 </div>
 
 @if(session('success'))
