@@ -143,21 +143,21 @@
         <div class="row gy-30 mt-50">
             <div class="col-lg-4">
                 <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-referencement">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-links-line"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg></span>
                     <h3 id="benefit-referencement" class="ks-card__title">Référencement croisé</h3>
                     <p class="ks-card__text">Visibilité mutuelle sur nos plateformes numériques, événements sectoriels et signalisations chantier.</p>
                 </article>
             </div>
             <div class="col-lg-4">
                 <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-tarifs">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-money-dollar-circle-fill"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M16 8h-6a2 2 0 0 0 0 4h4a2 2 0 0 1 0 4H8"/><line x1="12" y1="6" x2="12" y2="8"/><line x1="12" y1="16" x2="12" y2="18"/></svg></span>
                     <h3 id="benefit-tarifs" class="ks-card__title">Tarifs préférentiels</h3>
                     <p class="ks-card__text">Conditions avantageuses sur les services Kalystrat pour les partenaires apportant un volume récurrent.</p>
                 </article>
             </div>
             <div class="col-lg-4">
                 <article class="ks-card ks-card--centered ks-card--sober" aria-labelledby="benefit-visibilite">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-eye-line"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg></span>
                     <h3 id="benefit-visibilite" class="ks-card__title">Visibilité chantier</h3>
                     <p class="ks-card__text">Affichage de votre logo sur les panneaux de chantier et dans la documentation projet remise aux clients.</p>
                 </article>

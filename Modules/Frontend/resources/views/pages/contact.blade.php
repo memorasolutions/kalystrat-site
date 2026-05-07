@@ -58,7 +58,7 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-phone-fill"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
                     <h3 class="ks-card__title">Téléphone</h3>
                     <p class="ks-card__text">Lun&nbsp;– Ven, 8&nbsp;h à 17&nbsp;h</p>
                     <a href="tel:+14184760987" style="color: #0A1628; font-weight: 700; font-size: 1.125rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #B8A472; min-height: 44px; display: inline-flex; align-items: center; align-self: center; margin-top: auto;">418-476-0987</a>
@@ -66,7 +66,7 @@
             </div>
             <div class="col-md-4">
                 <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-mail-fill"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
                     <h3 class="ks-card__title">Courriel</h3>
                     <p class="ks-card__text">Réponse sous 48&nbsp;h ouvrables</p>
                     <a href="mailto:info@kalystrat.ca" style="color: #0A1628; font-weight: 700; font-size: 1.05rem; text-decoration: underline; text-underline-offset: 4px; text-decoration-color: #B8A472; min-height: 44px; display: inline-flex; align-items: center; align-self: center; margin-top: auto;">info@kalystrat.ca</a>
@@ -74,7 +74,7 @@
             </div>
             <div class="col-md-4">
                 <article class="ks-card ks-card--centered ks-card--accent" style="--card-accent: #B8A472;">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="ri-map-pin-fill"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
                     <h3 class="ks-card__title">Siège social</h3>
                     <p class="ks-card__text">Rendez-vous sur invitation</p>
                     <p style="color: #0A1628; font-weight: 700; font-size: 1.05rem; margin: auto 0 0; align-self: center;">Québec, QC, Canada</p>
