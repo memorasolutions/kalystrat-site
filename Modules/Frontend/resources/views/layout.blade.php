@@ -1332,6 +1332,17 @@
             color: #0A1628 !important;
         }
 
+        /* a11y UX : style abbr cursor + tooltip Bootstrap (Phase 19) */
+        abbr[title] {
+            cursor: pointer;
+            text-decoration: underline dotted;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+            -webkit-text-decoration: underline dotted;
+        }
+        abbr[title]:hover, abbr[title]:focus-visible {
+            text-decoration-thickness: 2px;
+        }
         /* === Checklist Construz : convertir flex → block pour préserver les espaces autour de <abbr> === */
         .checklist li {
             display: block !important;
@@ -1749,6 +1760,18 @@
                 }
             } catch (e) { /* silent */ }
         })();
+    </script>
+    {{-- Phase 19 : Bootstrap Tooltip activé sur tous les <abbr title="..."> pour UX intuitive --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            if (typeof bootstrap !== 'undefined' && bootstrap.Tooltip) {
+                document.querySelectorAll('abbr[title]').forEach(function(el) {
+                    el.setAttribute('data-bs-toggle', 'tooltip');
+                    el.setAttribute('data-bs-placement', 'top');
+                    new bootstrap.Tooltip(el);
+                });
+            }
+        });
     </script>
     @stack('scripts')
 
