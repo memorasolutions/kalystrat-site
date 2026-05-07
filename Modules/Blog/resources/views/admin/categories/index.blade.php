@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Catégories'), 'subtitle' => __('Blog')])
+@extends('admintabler::layouts.admin', ['title' => __('Catégories'), 'subtitle' => __('Blog')])
 
 @section('content')
 <div class="card h-100 p-0">

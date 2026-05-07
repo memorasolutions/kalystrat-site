@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Nouveau forfait'), 'subtitle' => __('Réservations')])
+@extends('admintabler::layouts.admin', ['title' => __('Nouveau forfait'), 'subtitle' => __('Réservations')])
 
 @section('content')
 <div class="mb-4">

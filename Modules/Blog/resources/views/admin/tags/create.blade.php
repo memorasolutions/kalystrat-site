@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Nouveau tag'), 'subtitle' => __('Blog')])
+@extends('admintabler::layouts.admin', ['title' => __('Nouveau tag'), 'subtitle' => __('Blog')])
 @section('content')
 <div class="card"><div class="card-body">
     <form action="{{ route('admin.blog.tags.store') }}" method="POST">@csrf

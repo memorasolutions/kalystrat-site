@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Modifier la page'), 'subtitle' => __('Pages statiques')])
+@extends('admintabler::layouts.admin', ['title' => __('Modifier la page'), 'subtitle' => __('Pages statiques')])
 
 @section('content')
 

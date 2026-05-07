@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Rétention des données'), 'subtitle' => __('Tableau de bord')])
+@extends('admintabler::layouts.admin', ['title' => __('Rétention des données'), 'subtitle' => __('Tableau de bord')])
 
 @section('breadcrumbs')
 @endsection

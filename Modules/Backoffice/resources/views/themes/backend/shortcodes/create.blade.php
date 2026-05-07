@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Shortcodes'), 'subtitle' => __('Nouveau')])
+@extends('admintabler::layouts.admin', ['title' => __('Shortcodes'), 'subtitle' => __('Nouveau')])
 
 @section('content')
 

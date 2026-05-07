@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Revenus'), 'subtitle' => __('Tableau de bord SaaS')])
+@extends('admintabler::layouts.admin', ['title' => __('Revenus'), 'subtitle' => __('Tableau de bord SaaS')])
 
 @section('content')
 

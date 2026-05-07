@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Journaux'), 'subtitle' => __('Application')])
+@extends('admintabler::layouts.admin', ['title' => __('Journaux'), 'subtitle' => __('Application')])
 
 @section('breadcrumbs')
 @endsection

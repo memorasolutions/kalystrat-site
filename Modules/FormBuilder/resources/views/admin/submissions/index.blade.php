@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => 'Soumissions : ' . $form->title])
+@extends('admintabler::layouts.admin', ['title' => 'Soumissions : ' . $form->title])
 
 @section('content')
 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">

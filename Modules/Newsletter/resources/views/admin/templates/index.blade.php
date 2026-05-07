@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Templates marketing'), 'subtitle' => __('Newsletter')])
+@extends('admintabler::layouts.admin', ['title' => __('Templates marketing'), 'subtitle' => __('Newsletter')])
 
 @section('content')
 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-3">

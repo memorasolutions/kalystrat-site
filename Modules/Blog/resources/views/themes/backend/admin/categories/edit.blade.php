@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Modifier la catégorie'), 'subtitle' => __('Blog')])
+@extends('admintabler::layouts.admin', ['title' => __('Modifier la catégorie'), 'subtitle' => __('Blog')])
 
 @section('content')
 

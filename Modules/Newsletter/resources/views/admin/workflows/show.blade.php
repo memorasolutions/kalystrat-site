@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => $workflow->name, 'subtitle' => 'Workflow'])
+@extends('admintabler::layouts.admin', ['title' => $workflow->name, 'subtitle' => 'Workflow'])
 
 @section('content')
 <div class="row gy-3">

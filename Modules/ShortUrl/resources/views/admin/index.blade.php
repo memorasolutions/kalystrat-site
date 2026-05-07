@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Liens courts'), 'subtitle' => __('Gestion des URLs raccourcies')])
+@extends('admintabler::layouts.admin', ['title' => __('Liens courts'), 'subtitle' => __('Gestion des URLs raccourcies')])
 
 @section('breadcrumbs')
 @endsection

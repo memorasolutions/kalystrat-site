@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Modifier workflow', 'subtitle' => 'Marketing'])
+@extends('admintabler::layouts.admin', ['title' => 'Modifier workflow', 'subtitle' => 'Marketing'])
 
 @section('content')
 <form method="POST" action="{{ route('admin.newsletter.workflows.update', $workflow) }}" id="workflowForm">

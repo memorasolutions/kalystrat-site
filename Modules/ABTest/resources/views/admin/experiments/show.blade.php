@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin')
+@extends('admintabler::layouts.admin')
 @section('title', $experiment->name)
 @section('content')
 <div class="page-content">

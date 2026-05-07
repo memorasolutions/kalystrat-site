@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => 'Test Models', 'subtitle' => 'Modifier'])
+@extends('admintabler::layouts.admin', ['title' => 'Test Models', 'subtitle' => 'Modifier'])
 
 @section('content')
 

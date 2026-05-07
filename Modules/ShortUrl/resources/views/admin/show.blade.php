@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Statistiques'), 'subtitle' => '/s/' . $shortUrl->slug])
+@extends('admintabler::layouts.admin', ['title' => __('Statistiques'), 'subtitle' => '/s/' . $shortUrl->slug])
 
 @section('breadcrumbs')
 @endsection

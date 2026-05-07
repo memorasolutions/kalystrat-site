@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::themes.backend.layouts.admin', ['title' => __('Médias'), 'subtitle' => __('Bibliothèque')])
+@extends('admintabler::layouts.admin', ['title' => __('Médias'), 'subtitle' => __('Bibliothèque')])
 
 @section('content')
 

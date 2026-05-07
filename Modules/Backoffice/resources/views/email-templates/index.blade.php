@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin', ['title' => __('Templates email'), 'subtitle' => __('Liste')])
+@extends('admintabler::layouts.admin', ['title' => __('Templates email'), 'subtitle' => __('Liste')])
 
 @section('content')
 

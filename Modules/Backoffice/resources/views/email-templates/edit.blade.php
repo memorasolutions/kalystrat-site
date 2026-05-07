@@ -1,5 +1,5 @@
 <!-- Author: MEMORA solutions, https://memora.solutions ; info@memora.ca -->
-@extends('backoffice::layouts.admin')
+@extends('admintabler::layouts.admin')
 @section('title', 'Modifier template - ' . $emailTemplate->name)
 @section('content')
 <div class="container-fluid">
