@@ -325,22 +325,22 @@
                 <div class="col-xl-4">
                     <ul class="why-tab-wrap nav nav-pills" role="tablist" aria-label="Liste des six filiales Kalystrat">
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link active" id="ks-pill-1-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-1" type="button" role="tab" aria-controls="ks-pill-1" aria-selected="true">Kalystrat Fondations <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                          <button class="nav-link active" id="ks-pill-1-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-1" type="button" role="tab" aria-controls="ks-pill-1" aria-selected="true">Kalystrat Fondations</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="ks-pill-2-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-2" type="button" role="tab" aria-controls="ks-pill-2" aria-selected="false">Kalystrat Structure <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                          <button class="nav-link" id="ks-pill-2-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-2" type="button" role="tab" aria-controls="ks-pill-2" aria-selected="false">Kalystrat Structure</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                          <button class="nav-link" id="ks-pill-3-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-3" type="button" role="tab" aria-controls="ks-pill-3" aria-selected="false">Kalystrat Toiture et Enveloppe <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                          <button class="nav-link" id="ks-pill-3-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-3" type="button" role="tab" aria-controls="ks-pill-3" aria-selected="false">Kalystrat Toiture et Enveloppe</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ks-pill-4-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-4" type="button" role="tab" aria-controls="ks-pill-4" aria-selected="false">Kalystrat Finition Intérieure <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                            <button class="nav-link" id="ks-pill-4-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-4" type="button" role="tab" aria-controls="ks-pill-4" aria-selected="false">Kalystrat Finition Intérieure</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ks-pill-5-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-5" type="button" role="tab" aria-controls="ks-pill-5" aria-selected="false">Kalystrat Immobilier <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                            <button class="nav-link" id="ks-pill-5-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-5" type="button" role="tab" aria-controls="ks-pill-5" aria-selected="false">Kalystrat Immobilier</button>
                         </li>
                         <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="ks-pill-6-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-6" type="button" role="tab" aria-controls="ks-pill-6" aria-selected="false">Kalystrat Placement Construction <i class="ri-arrow-right-down-line" aria-hidden="true"></i></button>
+                            <button class="nav-link" id="ks-pill-6-tab" data-bs-toggle="pill" data-bs-target="#ks-pill-6" type="button" role="tab" aria-controls="ks-pill-6" aria-selected="false">Kalystrat Placement Construction</button>
                         </li>
                     </ul>
                 </div>
