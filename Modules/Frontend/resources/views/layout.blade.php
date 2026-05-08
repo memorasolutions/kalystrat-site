@@ -1042,13 +1042,20 @@
             color: #0A1628 !important;
         }
 
-        /* .icon-btn — charte Kalystrat navy/gold (override Construz orange #FF6600) */
+        /* .icon-btn — charte Kalystrat navy/gold (override Construz orange #FF6600)
+           T36b-S30 : flex centring strict (SVG inline ne respecte pas line-height:50px native). */
         .about-wrap5 .icon-btn,
         .cta-grid-wrap .icon-btn {
             background-color: var(--ks-navy) !important;
             color: var(--ks-gold) !important;
             border-radius: 0.375rem !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            line-height: 1 !important;
         }
+        .about-wrap5 .icon-btn svg,
+        .cta-grid-wrap .icon-btn svg { display: block; }
         .about-wrap5 .icon-btn:hover,
         .about-wrap5 .icon-btn:focus-visible,
         .cta-grid-wrap .icon-btn:hover,
@@ -1681,10 +1688,10 @@
                 </ul>
             </nav>
             <a href="tel:+14184760987" class="ks-header__cta ks-header__cta--desktop" aria-label="Appeler Kalystrat au 418-476-0987">
-                <i class="ri-phone-line" aria-hidden="true"></i> 418-476-0987
+                <x-frontend::icon name="phone" :size="16"/> 418-476-0987
             </a>
             <button type="button" class="ks-header__hamburger" id="ks-hamburger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="ks-mobile-nav">
-                <i class="ri-menu-line" aria-hidden="true" style="font-size:28px"></i>
+                <x-frontend::icon name="menu" :size="28"/>
             </button>
         </div>
     </header>
@@ -1711,7 +1718,7 @@
             <li><a href="{{ url('/contact') }}" class="ks-mobile-nav__link">Contact</a></li>
         </ul>
         <a href="tel:+14184760987" class="ks-mobile-nav__cta" aria-label="Appeler Kalystrat au 418-476-0987">
-            <i class="ri-phone-line" aria-hidden="true"></i> 418-476-0987
+            <x-frontend::icon name="phone" :size="16"/> 418-476-0987
         </a>
     </nav>
 

@@ -271,7 +271,7 @@
                             <div class="btn-wrap">
                                 <div class="cta-grid-wrap">
                                     <div class="icon-btn">
-                                        <i class="ri-phone-line" aria-hidden="true"></i>
+                                        <x-frontend::icon name="phone" :size="22"/>
                                     </div>
                                     <div class="media-body">
                                         <a class="link" href="tel:+14184760987" aria-label="Téléphoner à Kalystrat">418-476-0987</a>
