@@ -705,6 +705,7 @@
         html body .contact-form .form-control,
         html body .contact-form input.form-control,
         html body .contact-form textarea.form-control,
+        html body .contact-form select.form-select,
         html body .contact-form div.nice-select {
             border: 1px solid rgba(10, 22, 40, 0.18) !important;
             background-color: #FFFFFF !important;
@@ -716,9 +717,22 @@
             min-height: 50px;
             line-height: 1.5;
         }
+        /* T22-S30 — chevron SVG navy custom + padding-right pour caret natif select.form-select */
+        html body .contact-form select.form-select {
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%230A1628'%3E%3Cpath d='M3.204 5h9.592L8 10.481 3.204 5zm-.753.659l4.796 5.48a1 1 0 0 0 1.506 0l4.796-5.48c.566-.647.106-1.659-.753-1.659H3.204a1 1 0 0 0-.753 1.659z'/%3E%3C/svg%3E") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 1rem center !important;
+            background-size: 12px 12px !important;
+            padding-right: 2.75rem !important;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
         html body .contact-form .form-control::placeholder,
         html body .contact-form textarea.form-control::placeholder { color: rgba(10, 22, 40, 0.55); opacity: 1; }
         html body .contact-form .form-control:focus,
+        html body .contact-form select.form-select:focus,
         html body .contact-form div.nice-select:focus,
         html body .contact-form div.nice-select.open {
             border-color: var(--ks-gold) !important;
