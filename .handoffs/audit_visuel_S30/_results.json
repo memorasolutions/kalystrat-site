@@ -1,0 +1,326 @@
+[
+  {
+    "url": "https://kalystrat.test/",
+    "slug": "home",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/home.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/",
+    "slug": "home",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/home.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/",
+    "slug": "home",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/home.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/a-propos",
+    "slug": "about",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/about.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/a-propos",
+    "slug": "about",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/about.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/a-propos",
+    "slug": "about",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/about.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/services",
+    "slug": "services",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/services.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/services",
+    "slug": "services",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/services.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/services",
+    "slug": "services",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/services.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/realisations",
+    "slug": "realisations",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/realisations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/realisations",
+    "slug": "realisations",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/realisations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/realisations",
+    "slug": "realisations",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/realisations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/contact",
+    "slug": "contact",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/contact.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/contact",
+    "slug": "contact",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/contact.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/contact",
+    "slug": "contact",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/contact.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/faq",
+    "slug": "faq",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/faq.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/faq",
+    "slug": "faq",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/faq.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/faq",
+    "slug": "faq",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/faq.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/carrieres",
+    "slug": "carrieres",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/carrieres.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/carrieres",
+    "slug": "carrieres",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/carrieres.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/carrieres",
+    "slug": "carrieres",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/carrieres.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/conseil-consultatif",
+    "slug": "conseil",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/conseil.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/conseil-consultatif",
+    "slug": "conseil",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/conseil.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/conseil-consultatif",
+    "slug": "conseil",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/conseil.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/partenaires",
+    "slug": "partenaires",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/partenaires.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/partenaires",
+    "slug": "partenaires",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/partenaires.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/partenaires",
+    "slug": "partenaires",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/partenaires.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/zones-desservies",
+    "slug": "zones",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/zones.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/zones-desservies",
+    "slug": "zones",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/zones.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/zones-desservies",
+    "slug": "zones",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/zones.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/credits.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/credits.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/credits.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/filiales/fondations",
+    "slug": "filiale-fondations",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/filiale-fondations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/filiales/fondations",
+    "slug": "filiale-fondations",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/filiale-fondations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/filiales/fondations",
+    "slug": "filiale-fondations",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/filiale-fondations.jpg"
+  }
+]

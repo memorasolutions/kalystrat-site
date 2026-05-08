@@ -85,3 +85,8 @@ storage/framework/testing/
 
 # Rapports de session (screenshots Playwright, audits ponctuels)
 .rapports/
+
+# Audits visuels — screenshots regenerables via .scripts/audit-screenshots.mjs
+.handoffs/audit_visuel_*/desktop/
+.handoffs/audit_visuel_*/tablet/
+.handoffs/audit_visuel_*/mobile/
