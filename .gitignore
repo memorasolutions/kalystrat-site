@@ -90,6 +90,8 @@ storage/framework/testing/
 .handoffs/audit_visuel_*/desktop/
 .handoffs/audit_visuel_*/tablet/
 .handoffs/audit_visuel_*/mobile/
+.handoffs/audit_visuel_*/*.jpg
+.handoffs/audit_visuel_*/*.png
 .handoffs/lh_*/*.json
 
 # Backups CSS pré-minification (gardés localement pour rollback rapide)
