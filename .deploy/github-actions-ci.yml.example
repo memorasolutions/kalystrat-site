@@ -16,10 +16,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup PHP 8.3
+      - name: Setup PHP 8.4
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.3'
+          php-version: '8.4'
           extensions: mbstring, dom, fileinfo, sqlite, pdo_sqlite
           coverage: none
 
@@ -46,10 +46,17 @@ jobs:
       - name: Migrate
         run: php artisan migrate --force
 
+      - name: Audit icons vs subset (T29-S30)
+        # Préviens régression dormante des classes ri-* manquantes du subset
+        # kalystrat-icons.css (43 glyphes optimisés S27, woff2 -98% poids).
+        # Référence : .handoffs/audit_visuel_S30_final/SYNTHESIS.md
+        run: bash .scripts/audit-icons-vs-subset.sh
+
       - name: Run Pest (testsuite Feature uniquement)
         # Kalystrat = site marketing : on teste les pages publiques (testsuite Feature),
         # pas les modules Memora boilerplate (Booking, AI, SaaS) qui sont désactivés
         # via modules_statuses.json et dont les tests dépendent de routes non chargées.
+        # phpunit.xml T23-S30 exclut déjà AI/Booking/Translation du testsuite "Modules".
         run: vendor/bin/pest --testsuite=Feature
 
   axe:
@@ -59,9 +66,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup PHP 8.3
+      - name: Setup PHP 8.4
         uses: shivammathur/setup-php@v2
-        with: { php-version: '8.3', extensions: mbstring, dom, sqlite, pdo_sqlite }
+        with: { php-version: '8.4', extensions: mbstring, dom, sqlite, pdo_sqlite }
 
       - name: Setup Node 22
         uses: actions/setup-node@v4
@@ -124,9 +131,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup PHP 8.3
+      - name: Setup PHP 8.4
         uses: shivammathur/setup-php@v2
-        with: { php-version: '8.3', extensions: mbstring, dom, sqlite, pdo_sqlite }
+        with: { php-version: '8.4', extensions: mbstring, dom, sqlite, pdo_sqlite }
 
       - name: Setup Node 22
         uses: actions/setup-node@v4
