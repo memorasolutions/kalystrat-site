@@ -1,7 +1,28 @@
 # Audit Lighthouse + Core Web Vitals — S30
 
-**Date** : 2026-05-08 (S30)
-**Branche** : master, HEAD `e551199`
+**Amendement 2026-05-08 — quick wins T20 (Cache-Control) + T21 (minif CSS) appliqués (commits `c675cb0` + `0eee2ad`).**
+
+| Page | Perf avant → après | LCP | FCP | Speed Index |
+|---|---|---|---|---|
+| home | 88 → 89 ↑ | 3.3s = | 2.0 → 1.8s | 4.7 → 4.4s |
+| services | 88 → **90** ↑ | 3.6 → 3.5s | 1.5s = | 3.8 → 2.6s |
+| realisations | 88 → 89 ↑ | 3.6 → 3.5s | 1.5s = | 3.8s = |
+| contact | 89 → **90** ↑ | 3.6 → 3.5s | 1.5s = | 2.4s = |
+| faq | 87 → 88 ↑ | 3.6s = | 1.5s = | 4.4 → 3.8s |
+
+**Cibles 2026 atteintes sur 2/5 pages mobile** (services, contact). Les 3 autres à 88-89 (manque 1-2 pts).
+
+Audits résolus :
+- `unminified-css` : 17 KiB → 5 KiB savings (-12 KiB) ✅
+- `render-blocking-resources` : 450ms → 300ms savings (-150ms)
+- `total-byte-weight` : -7 KiB par page
+
+Cache-Control .htaccess actif uniquement en prod cPanel Apache (Herd nginx local ignore les directives). Gain réel attendu en prod : +3-5 pts perf supplémentaires sur visites répétées.
+
+---
+
+**Date** : 2026-05-08 (S30 amendée)
+**Branche** : master, HEAD `0eee2ad`
 **Outil** : `lighthouse` 12.8.2 (npm global)
 **Méthode** : 5 pages clés × 2 form-factors = 10 audits Lighthouse simulate.
 **Pages** : home (/), services, realisations, contact, faq.
