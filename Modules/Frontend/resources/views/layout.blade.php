@@ -1028,6 +1028,25 @@
             color: #0A1628 !important;
         }
 
+        /* .icon-btn — charte Kalystrat navy/gold (override Construz orange #FF6600) */
+        .about-wrap5 .icon-btn,
+        .cta-grid-wrap .icon-btn {
+            background-color: var(--ks-navy) !important;
+            color: var(--ks-gold) !important;
+            border-radius: 0.375rem !important;
+        }
+        .about-wrap5 .icon-btn:hover,
+        .about-wrap5 .icon-btn:focus-visible,
+        .cta-grid-wrap .icon-btn:hover,
+        .cta-grid-wrap .icon-btn:focus-visible {
+            background-color: var(--ks-gold) !important;
+            color: var(--ks-navy) !important;
+        }
+        .about-wrap5 .icon-btn i,
+        .cta-grid-wrap .icon-btn i {
+            color: inherit !important;
+        }
+
         /* Select form – taille minimale 44px */
         select.form-select,
         select.nice-select,

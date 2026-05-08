@@ -234,7 +234,7 @@
     {{-- ==============================
          Section À propos – présentation Kalystrat et Ali Salomon
          ============================== --}}
-    <div class="about-area-5 space">
+    <div class="about-area-5 space-bottom" style="padding-top: 30px;">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
             <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>

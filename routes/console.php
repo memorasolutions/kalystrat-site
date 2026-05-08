@@ -12,8 +12,10 @@ use Illuminate\Support\Facades\Schedule;
 use Modules\Backoffice\Models\ScheduledTask;
 
 // Backups (critical — no overlap, single server)
-Schedule::command('backup:run')->dailyAt('03:00')->withoutOverlapping()->onOneServer();
-Schedule::command('backup:clean')->dailyAt('04:00')->withoutOverlapping()->onOneServer();
+// DÉSACTIVÉ 2026-05-08 (T3) : config/backup.php L237 contient placeholder 'your@example.com' qui cause bounces.
+// À RÉACTIVER lors du déploiement prod (D5) après : (1) ajout BACKUP_NOTIFICATION_MAIL dans .env prod, (2) auth SMTP MAIL_USERNAME/MAIL_PASSWORD configurés, (3) refactor config/backup.php L237 → env('BACKUP_NOTIFICATION_MAIL').
+// Schedule::command('backup:run')->dailyAt('03:00')->withoutOverlapping()->onOneServer();
+// Schedule::command('backup:clean')->dailyAt('04:00')->withoutOverlapping()->onOneServer();
 
 // Horizon
 Schedule::command('horizon:snapshot')->everyFiveMinutes();
