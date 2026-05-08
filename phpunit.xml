@@ -14,6 +14,11 @@
         </testsuite>
         <testsuite name="Modules">
             <directory>Modules/*/tests</directory>
+            <!-- T23-S30 : exclure modules désactivés (cf modules_statuses.json) — leurs tests tournent
+                 par auto-discovery PHPUnit alors que leurs ServiceProviders ne sont pas chargés. -->
+            <exclude>Modules/AI/tests</exclude>
+            <exclude>Modules/Booking/tests</exclude>
+            <exclude>Modules/Translation/tests</exclude>
         </testsuite>
     </testsuites>
     <source>
