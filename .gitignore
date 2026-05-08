@@ -90,3 +90,4 @@ storage/framework/testing/
 .handoffs/audit_visuel_*/desktop/
 .handoffs/audit_visuel_*/tablet/
 .handoffs/audit_visuel_*/mobile/
+.handoffs/lh_*/*.json
