@@ -234,7 +234,9 @@
     {{-- ==============================
          Section À propos – présentation Kalystrat et Ali Salomon
          ============================== --}}
-    <div class="about-area-5 space-bottom" style="padding-top: 30px;">
+    {{-- T36-S30 : zéro padding-top sur about-area pour coller la section à la wave hero (demande user 4×).
+         space-bottom retiré aussi car la section suivante why-area-3 a son propre padding-top. --}}
+    <div class="about-area-5" style="padding-top: 0; padding-bottom: 80px;">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
             <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>
