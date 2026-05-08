@@ -131,7 +131,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-check-line"></i>
+                                            <i class="ri-shield-check-fill"></i>
                                         </div>
                                         <div class="rating-text">
                                             Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-star-line"></i>
+                                            <i class="ri-shield-star-fill"></i>
                                         </div>
                                         <div class="rating-text">
                                             Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr>
@@ -166,7 +166,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-star-line"></i>
+                                            <i class="ri-shield-star-fill"></i>
                                         </div>
                                         <div class="rating-text">
                                             Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr>
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-home-heart-line"></i>
+                                            <i class="ri-home-heart-fill"></i>
                                         </div>
                                         <div class="rating-text">
                                             Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr> sur le neuf
@@ -201,7 +201,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-check-line"></i>
+                                            <i class="ri-shield-check-fill"></i>
                                         </div>
                                         <div class="rating-text">
                                             Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active

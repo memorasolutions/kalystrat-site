@@ -1722,8 +1722,8 @@
     <aside class="ks-trust-band" aria-label="Accréditations et garanties Kalystrat">
         <div class="ks-trust-band__inner">
             <span class="ks-trust-band__label">Accréditations</span>
-            <span class="ks-trust-band__item"><i class="ri-shield-check-line" aria-hidden="true"></i> Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</span>
-            <span class="ks-trust-band__item"><i class="ri-home-heart-line" aria-hidden="true"></i> Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></span>
+            <span class="ks-trust-band__item"><i class="ri-shield-check-fill" aria-hidden="true"></i> Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active</span>
+            <span class="ks-trust-band__item"><i class="ri-home-heart-fill" aria-hidden="true"></i> Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></span>
             <span class="ks-trust-band__item"><i class="ri-team-line" aria-hidden="true"></i> Main-d'oeuvre <abbr title="Commission de la construction du Québec">CCQ</abbr></span>
             <span class="ks-trust-band__item"><i class="ri-time-line" aria-hidden="true"></i> Réponse sous 48&nbsp;h ouvrables</span>
         </div>
