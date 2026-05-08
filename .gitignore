@@ -91,3 +91,6 @@ storage/framework/testing/
 .handoffs/audit_visuel_*/tablet/
 .handoffs/audit_visuel_*/mobile/
 .handoffs/lh_*/*.json
+
+# Backups CSS pré-minification (gardés localement pour rollback rapide)
+public/assets/construz-new/css/*.bak-*

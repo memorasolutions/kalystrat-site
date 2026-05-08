@@ -45,7 +45,7 @@
 
     {{-- CSS critiques bloquants (Bootstrap utility + Construz layout above-the-fold) --}}
     <link rel="stylesheet" href="{{ asset('assets/construz-new/css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/construz-new/css/style.min.css') }}">
 
     {{-- CSS icônes : differées via pattern Filament Group loadCSS (media=print + onload swap).
          Économie ~700ms de render-blocking. Fallback noscript pour navigateurs sans JS (~0.3% trafic). --}}
