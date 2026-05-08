@@ -73,7 +73,7 @@
             @foreach(config('kalystrat.filiales', []) as $slug => $f)
             <div class="col-md-6 col-lg-4">
                 <article class="ks-card ks-card--accent" style="--card-accent: {{ $f['hex_couleur'] ?? '#B8A472' }};">
-                    <span class="ks-card__icon" aria-hidden="true"><i class="ri-building-2-line"></i></span>
+                    <span class="ks-card__icon" aria-hidden="true"><x-frontend::icon name="building-2"/></span>
                     <h2 class="ks-card__title ks-card__title--lg">{{ $f['nom_court'] ?? ucfirst($slug) }}</h2>
                     <p class="ks-card__text">{{ $f['specialite'] ?? '' }}</p>
                     @if(!empty($f['services']))

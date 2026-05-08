@@ -82,7 +82,7 @@
                 </div>
 
                 <div class="service-widget" style="background: var(--ks-navy); color: #FFFFFF; padding: 2rem 1.5rem; border-radius: 0.5rem; text-align: center;">
-                    <i class="ri-customer-service-2-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 2.5rem;"></i>
+                    <x-frontend::icon name="customer-service"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 2.5rem; --}}
                     <h3 style="color: #FFFFFF; font-size: 1.125rem; font-weight: 700; margin: 1rem 0 0.5rem;">Besoin d'aide&nbsp;?</h3>
                     <p style="color: #C2C5C9; font-size: 0.9rem; margin-bottom: 1rem;">Notre équipe répond sous 48&nbsp;h ouvrables.</p>
                     <a href="tel:+14184760987" style="display: block; color: var(--ks-gold); font-size: 1.25rem; font-weight: 700; text-decoration: none; min-height: 44px;">418-476-0987</a>
@@ -122,7 +122,7 @@
                         @foreach($filiale['services'] as $s)
                         <div class="col-md-6">
                             <div style="display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.75rem 0;">
-                                <i class="ri-checkbox-circle-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.5rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                                <x-frontend::icon name="checkbox-circle"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.5rem; flex-shrink: 0; margin-top: 0.125rem; --}}
                                 <span style="color: #2C3340;">{{ $s }}</span>
                             </div>
                         </div>
@@ -150,7 +150,7 @@
                     <ul style="padding-left: 0; list-style: none; margin-top: 1rem;">
                         @foreach($filiale['certifications'] as $cert)
                         <li style="display: flex; align-items: flex-start; gap: 0.75rem; padding: 0.5rem 0;">
-                            <i class="ri-shield-check-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.25rem; flex-shrink: 0; margin-top: 0.125rem;"></i>
+                            <x-frontend::icon name="shield-check"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.25rem; flex-shrink: 0; margin-top: 0.125rem; --}}
                             <span style="color: #2C3340; font-size: 0.9375rem;">{{ $cert }}</span>
                         </li>
                         @endforeach
@@ -171,7 +171,7 @@
                         <p style="color: #2C3340; margin-bottom: 1.25rem;">Pour un projet en lien avec cette filiale, contactez-nous par téléphone ou via le formulaire. Réponse sous 48&nbsp;h ouvrables.</p>
                         <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
                             <a href="{{ route('contact') }}?filiale={{ $slug }}" class="btn style2">Formulaire de contact <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
-                            <a href="tel:+14184760987" class="btn style-border4"><i class="ri-phone-line" aria-hidden="true"></i> 418-476-0987</a>
+                            <a href="tel:+14184760987" class="btn style-border4"><x-frontend::icon name="phone"/> 418-476-0987</a>
                         </div>
                     </div>
                 </div>

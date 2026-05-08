@@ -98,28 +98,28 @@
         <div class="row gy-40 mt-50">
             <div class="col-lg-6 col-md-6">
                 <article class="ks-partner-card" aria-labelledby="partner-architectes">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-compass-3-line"></i></div>
+                    <div class="ks-partner-icon" aria-hidden="true"><x-frontend::icon name="compass"/></div>
                     <h3 id="partner-architectes" class="ks-partner-title">Architectes</h3>
                     <p class="ks-partner-desc">Conception et planification techniques. Nous travaillons étroitement avec des architectes québécois pour livrer des projets fidèles à leur vision, conformes au Code de construction du Québec et aux exigences de la <abbr title="Régie du bâtiment du Québec">RBQ</abbr>.</p>
                 </article>
             </div>
             <div class="col-lg-6 col-md-6">
                 <article class="ks-partner-card" aria-labelledby="partner-designers">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-paint-brush-line"></i></div>
+                    <div class="ks-partner-icon" aria-hidden="true"><x-frontend::icon name="paint-brush"/></div>
                     <h3 id="partner-designers" class="ks-partner-title">Designers d'intérieur</h3>
                     <p class="ks-partner-desc">Aménagement et finition haut de gamme. Notre filiale Kalystrat Finition Intérieure exécute les concepts des designers avec précision&nbsp;: choix matériaux, ébénisterie sur mesure, comptoirs et détails finaux.</p>
                 </article>
             </div>
             <div class="col-lg-6 col-md-6">
                 <article class="ks-partner-card" aria-labelledby="partner-courtiers">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-home-4-line"></i></div>
+                    <div class="ks-partner-icon" aria-hidden="true"><x-frontend::icon name="home"/></div>
                     <h3 id="partner-courtiers" class="ks-partner-title">Courtiers immobiliers</h3>
                     <p class="ks-partner-desc">Mise en marché et représentation. Nos partenariats avec des courtiers <abbr title="Organisme d'autoréglementation du courtage immobilier du Québec">OACIQ</abbr> permettent à Kalystrat Immobilier de commercialiser les projets résidentiels neufs et de bénéficier d'une lecture de marché en continu.</p>
                 </article>
             </div>
             <div class="col-lg-6 col-md-6">
                 <article class="ks-partner-card" aria-labelledby="partner-promoteurs">
-                    <div class="ks-partner-icon" aria-hidden="true"><i class="ri-building-3-line"></i></div>
+                    <div class="ks-partner-icon" aria-hidden="true"><x-frontend::icon name="building-3"/></div>
                     <h3 id="partner-promoteurs" class="ks-partner-title">Promoteurs</h3>
                     <p class="ks-partner-desc">Sous-traitance et chaînes de valeur. Kalystrat est un partenaire fiable pour les promoteurs cherchant des équipes <abbr title="Régie du bâtiment du Québec">RBQ</abbr>, <abbr title="Commission de la construction du Québec">CCQ</abbr> et une intégration de bout en bout, du gros œuvre à la livraison clés en main.</p>
                 </article>

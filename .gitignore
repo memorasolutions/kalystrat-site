@@ -96,3 +96,5 @@ storage/framework/testing/
 
 # Backups CSS pré-minification (gardés localement pour rollback rapide)
 public/assets/construz-new/css/*.bak-*
+.videos/
+

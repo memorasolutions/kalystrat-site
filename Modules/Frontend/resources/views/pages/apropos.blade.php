@@ -79,25 +79,25 @@
                 <div class="row mt-4">
                     <div class="col-sm-6 mb-3">
                         <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <i class="ri-checkbox-circle-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.5rem;"></i>
+                            <x-frontend::icon name="checkbox-circle"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.5rem; --}}
                             <span><strong>Six filiales</strong> spécialisées en synergie</span>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <i class="ri-checkbox-circle-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.5rem;"></i>
+                            <x-frontend::icon name="checkbox-circle"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.5rem; --}}
                             <span><strong><abbr title="Régie du bâtiment du Québec">RBQ</abbr></strong> et personnel <strong><abbr title="Commission de la construction du Québec">CCQ</abbr></strong> qualifié</span>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <i class="ri-checkbox-circle-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.5rem;"></i>
+                            <x-frontend::icon name="checkbox-circle"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.5rem; --}}
                             <span><strong>Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr></strong> sur les projets résidentiels neufs</span>
                         </div>
                     </div>
                     <div class="col-sm-6 mb-3">
                         <div style="display: flex; align-items: flex-start; gap: 0.75rem;">
-                            <i class="ri-checkbox-circle-fill" aria-hidden="true" style="color: var(--ks-gold); font-size: 1.5rem;"></i>
+                            <x-frontend::icon name="checkbox-circle"/> {{-- TODO T37 style: color: var(--ks-gold); font-size: 1.5rem; --}}
                             <span><strong>Réponse</strong> sous 48&nbsp;h ouvrables</span>
                         </div>
                     </div>
@@ -326,7 +326,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">01</span>
-                    <i class="ri-git-merge-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="git-merge"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Intégration verticale</h3>
                     <p class="ks-pillar-card__text">Chaque étape du chantier reste à l'interne. On contrôle la chaîne de valeur du premier coup de pelle jusqu'à la remise des clés, ce qui élimine les marges intermédiaires et les délais de coordination.</p>
                 </article>
@@ -334,7 +334,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">02</span>
-                    <i class="ri-team-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="team"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Main-d'œuvre interne</h3>
                     <p class="ks-pillar-card__text">Dans un marché où la CCQ prévoit le recrutement de 16&nbsp;000 nouveaux travailleurs par année jusqu'en 2029, disposer de ses propres équipes n'est pas un luxe — c'est un avantage opérationnel. Nos travailleurs sont formés, encadrés et fidélisés selon les normes de la CCQ.</p>
                 </article>
@@ -342,7 +342,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">03</span>
-                    <i class="ri-refresh-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="refresh"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Demande captive</h3>
                     <p class="ks-pillar-card__text">La filiale immobilière génère des projets que les filiales de construction réalisent. Pas besoin de courir après les contrats quand le carnet de commandes se remplit de l'intérieur.</p>
                 </article>
@@ -350,7 +350,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">04</span>
-                    <i class="ri-links-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="links"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Synergies opérationnelles</h3>
                     <p class="ks-pillar-card__text">Achats groupés, équipements partagés, planification centralisée&nbsp;: quand six filiales parlent le même langage, les économies d'échelle deviennent tangibles dès le premier projet conjoint.</p>
                 </article>
@@ -358,7 +358,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">05</span>
-                    <i class="ri-award-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="award"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Cohérence de marque</h3>
                     <p class="ks-pillar-card__text">Un logo, une promesse, une réputation à défendre partout. Le client ne navigue pas entre cinq entreprises aux standards différents. Il fait affaire avec Kalystrat, point.</p>
                 </article>
@@ -366,7 +366,7 @@
             <div class="col-lg-4 col-md-6">
                 <article class="ks-pillar-card">
                     <span class="ks-pillar-card__number" aria-hidden="true">06</span>
-                    <i class="ri-dashboard-3-line" aria-hidden="true" style="color: #B8A472; font-size: 1.5rem;"></i>
+                    <x-frontend::icon name="dashboard"/> {{-- TODO T37 style: color: #B8A472; font-size: 1.5rem; --}}
                     <h3 class="ks-pillar-card__title">Gestion centralisée</h3>
                     <p class="ks-pillar-card__text">Comptabilité, conformité RBQ, relations CCQ, stratégie&nbsp;: tout converge vers le groupe. Les filiales se concentrent sur leur métier pendant que Kalystrat pilote la vue d'ensemble.</p>
                 </article>

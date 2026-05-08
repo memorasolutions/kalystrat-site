@@ -96,10 +96,10 @@
                 </div>
                 <div class="mt-4" style="background: var(--ks-navy); color: #FFFFFF; padding: 2rem; border-radius: 0.5rem;">
                     <h3 style="color: #FFFFFF; font-size: 1.125rem; font-weight: 700; margin-bottom: 1rem;">Coordonnées</h3>
-                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><i class="ri-phone-line" aria-hidden="true" style="color: var(--ks-gold);"></i> <a href="tel:+14184760987" style="color: var(--ks-gold);">418-476-0987</a></p>
-                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><i class="ri-mail-line" aria-hidden="true" style="color: var(--ks-gold);"></i> <a href="mailto:info@kalystrat.ca" style="color: var(--ks-gold);">info@kalystrat.ca</a></p>
-                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><i class="ri-map-pin-line" aria-hidden="true" style="color: var(--ks-gold);"></i> Québec, QC, Canada</p>
-                    <p style="margin-bottom: 0; color: #FFFFFF;"><i class="ri-time-line" aria-hidden="true" style="color: var(--ks-gold);"></i> Lun – Ven 8&nbsp;h à 17&nbsp;h</p>
+                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><x-frontend::icon name="phone"/> {{-- TODO T37 style: color: var(--ks-gold); --}} <a href="tel:+14184760987" style="color: var(--ks-gold);">418-476-0987</a></p>
+                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><x-frontend::icon name="mail"/> {{-- TODO T37 style: color: var(--ks-gold); --}} <a href="mailto:info@kalystrat.ca" style="color: var(--ks-gold);">info@kalystrat.ca</a></p>
+                    <p style="margin-bottom: 0.5rem; color: #FFFFFF;"><x-frontend::icon name="map-pin"/> {{-- TODO T37 style: color: var(--ks-gold); --}} Québec, QC, Canada</p>
+                    <p style="margin-bottom: 0; color: #FFFFFF;"><x-frontend::icon name="time"/> {{-- TODO T37 style: color: var(--ks-gold); --}} Lun – Ven 8&nbsp;h à 17&nbsp;h</p>
                 </div>
             </div>
 

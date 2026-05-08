@@ -18,7 +18,7 @@
     $_ctaTitle = $ctaTitle ?? 'Discutons de votre projet de construction';
     $_ctaDescription = $ctaDescription ?? 'Téléphone, courriel ou formulaire&nbsp;: choisissez le canal qui vous convient. Réponse sous 48&nbsp;h ouvrables, sans engagement.';
     $_ctaPrimary = $ctaPrimary ?? ['label' => 'Demander une soumission', 'url' => route('contact')];
-    $_ctaSecondary = $ctaSecondary ?? ['label' => '418-476-0987', 'url' => 'tel:+14184760987', 'icon' => 'ri-phone-line'];
+    $_ctaSecondary = $ctaSecondary ?? ['label' => '418-476-0987', 'url' => 'tel:+14184760987', 'icon' => 'phone'];
 @endphp
 
 <section class="ks-cta-discutons" aria-label="Appel à l'action – Discutons de votre projet">
@@ -35,7 +35,7 @@
                     <i class="ri-arrow-right-line" aria-hidden="true"></i>
                 </a>
                 <a href="{{ $_ctaSecondary['url'] }}" class="ks-cta-discutons__btn ks-cta-discutons__btn--secondary">
-                    @if(!empty($_ctaSecondary['icon']))<i class="{{ $_ctaSecondary['icon'] }}" aria-hidden="true"></i>@endif
+                    @if(!empty($_ctaSecondary['icon']))<x-frontend::icon :name="$_ctaSecondary['icon']" :size="16"/>@endif
                     {{ $_ctaSecondary['label'] }}
                 </a>
             </div>

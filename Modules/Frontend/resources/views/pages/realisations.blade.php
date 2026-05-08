@@ -61,37 +61,37 @@
                 $expertises = [
                     [
                         'filiale' => 'Kalystrat Fondations',
-                        'icone' => 'ri-building-4-line',
+                        'icone' => 'building-4',
                         'chantiers' => 'Excavation, coffrage et dalle pour résidentiel et commercial.',
                         'volume' => 'Plusieurs dizaines de fondations livrées chaque année par notre équipe terrain.',
                     ],
                     [
                         'filiale' => 'Kalystrat Structure',
-                        'icone' => 'ri-building-3-line',
+                        'icone' => 'building-3',
                         'chantiers' => 'Charpente bois, ossature et structure légère pour neuf et rénovation.',
                         'volume' => 'Présence régulière sur les chantiers résidentiels du Québec depuis plus de dix ans.',
                     ],
                     [
                         'filiale' => 'Kalystrat Toiture et Enveloppe',
-                        'icone' => 'ri-home-4-line',
+                        'icone' => 'home',
                         'chantiers' => 'Toiture résidentielle et commerciale, revêtement et étanchéité.',
                         'volume' => 'Plusieurs dizaines de toitures réalisées par saison.',
                     ],
                     [
                         'filiale' => 'Kalystrat Finition Intérieure',
-                        'icone' => 'ri-paint-brush-line',
+                        'icone' => 'paint-brush',
                         'chantiers' => 'Gypse, peinture et finition haut de gamme pour résidentiel et condo.',
                         'volume' => 'Travaux de finition livrés régulièrement sur des projets clés en main.',
                     ],
                     [
                         'filiale' => 'Kalystrat Immobilier',
-                        'icone' => 'ri-community-line',
+                        'icone' => 'community',
                         'chantiers' => 'Promotion immobilière résidentielle et multilogements.',
                         'volume' => 'Projets multi-unités en développement actif dans la grande région de Québec.',
                     ],
                     [
                         'filiale' => 'Kalystrat Placement Construction',
-                        'icone' => 'ri-team-line',
+                        'icone' => 'team',
                         'chantiers' => 'Placement de main-d\'oeuvre CCQ qualifiée pour entrepreneurs généraux.',
                         'volume' => 'Mandats récurrents auprès d\'entrepreneurs partenaires au Québec.',
                     ],
@@ -100,7 +100,7 @@
             @foreach($expertises as $e)
             <div class="col-md-6 col-lg-4">
                 <article class="ks-card ks-card--accent" style="--card-accent: #B8A472;">
-                    <span class="ks-card__icon" aria-hidden="true"><i class="{{ $e['icone'] }}"></i></span>
+                    <span class="ks-card__icon" aria-hidden="true"><x-frontend::icon :name="$e['icone']"/></span>
                     <h3 class="ks-card__title">{{ $e['filiale'] }}</h3>
                     <p class="ks-card__text">{{ $e['chantiers'] }}</p>
                     <p style="color: #2C3340; font-size: 0.85rem; margin: 0; font-style: italic;">{{ $e['volume'] }}</p>
@@ -131,7 +131,7 @@
                     <h3 class="ks-card__title ks-card__title--lg">Autoriser la publication de votre projet</h3>
                     <p class="ks-card__text">Vous avez fait affaire avec une de nos filiales et acceptez que votre chantier figure dans cette galerie&nbsp;? Écrivez-nous, nous organisons la séance photo.</p>
                     <a href="mailto:info@kalystrat.ca?subject=Autorisation%20publication%20galerie" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 0.5rem; background: transparent; color: var(--ks-navy); padding: 0.75rem 1.5rem; border: 2px solid var(--ks-navy); border-radius: 0.375rem; text-decoration: none; font-weight: 600; min-height: 44px; margin-top: auto;">
-                        info@kalystrat.ca <i class="ri-mail-line" aria-hidden="true"></i>
+                        info@kalystrat.ca <x-frontend::icon name="mail"/>
                     </a>
                 </article>
             </div>

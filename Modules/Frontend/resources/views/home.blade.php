@@ -131,7 +131,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-check-fill"></i>
+                                            <x-frontend::icon name="shield-check"/>
                                         </div>
                                         <div class="rating-text">
                                             Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active
@@ -139,7 +139,7 @@
                                     </div>
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-star-fill"></i>
+                                            <x-frontend::icon name="shield-star"/>
                                         </div>
                                         <div class="rating-text">
                                             Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr>
@@ -166,7 +166,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-star-fill"></i>
+                                            <x-frontend::icon name="shield-star"/>
                                         </div>
                                         <div class="rating-text">
                                             Membre <abbr title="Association des professionnels de la construction et de l'habitation du Québec">APCHQ</abbr>
@@ -174,7 +174,7 @@
                                     </div>
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-home-heart-fill"></i>
+                                            <x-frontend::icon name="home-heart"/>
                                         </div>
                                         <div class="rating-text">
                                             Garantie <abbr title="Garantie de construction résidentielle">GCR</abbr> sur le neuf
@@ -201,7 +201,7 @@
                                 <div class="hero-rating-wrap" data-ani="slider-custom-anim-left" data-ani-delay="0.1s">
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-shield-check-fill"></i>
+                                            <x-frontend::icon name="shield-check"/>
                                         </div>
                                         <div class="rating-text">
                                             Licence <abbr title="Régie du bâtiment du Québec">RBQ</abbr> active
@@ -209,7 +209,7 @@
                                     </div>
                                     <div class="single-rating-wrap">
                                         <div class="rating" aria-hidden="true">
-                                            <i class="ri-team-line"></i>
+                                            <x-frontend::icon name="team"/>
                                         </div>
                                         <div class="rating-text">
                                             Main-d'œuvre <abbr title="Commission de la construction du Québec">CCQ</abbr> qualifiée
@@ -256,7 +256,7 @@
                 <div class="col-xl-6">
                     <div class="about-wrap5">
                         <div class="title-area mb-40">
-                            <span class="sub-title text-theme">À propos de Kalystrat <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                            <span class="sub-title text-theme">À propos de Kalystrat <x-frontend::icon name="line-chart"/></span>
                             <h2 class="sec-title">Un seul groupe pour bâtir tout ce dont vous avez besoin</h2>
                             <p class="sec-text">Kalystrat est un groupe québécois en construction à intégration verticale. Plutôt que d'orchestrer une dizaine de sous-traitants, vous traitez avec une seule marque qui contrôle l'excavation, la structure, l'enveloppe, la finition, la vente immobilière et le placement de main-d'œuvre.
                             </p>
@@ -300,7 +300,7 @@
                         <div class="about-thumb5 mt-60 d-inline-block">
                             <div class="video-wrap about-img-2">
                                 <img src="{{ asset('assets/img/kalystrat/about-strategy.webp?v=4') }}" loading="lazy" decoding="async" alt="Plans architecturaux, crayon et règle – design Kalystrat">
-                                <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video" aria-label="Regarder la vidéo de présentation Kalystrat"><i class="ri-play-fill" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/watch?v=Mp8IXI1kzvQ" class="play-btn style6 popup-video" aria-label="Regarder la vidéo de présentation Kalystrat"><x-frontend::icon name="play"/></a>
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="title-area text-center">
-                        <span class="sub-title text-theme">Nos filiales <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                        <span class="sub-title text-theme">Nos filiales <x-frontend::icon name="line-chart"/></span>
                         <h2 class="sec-title">Six entreprises, une seule marque pour vos projets</h2>
                     </div>
                 </div>
@@ -571,7 +571,7 @@
                 <div class="col-xl-6">
                     <div class="benefit-wrap5">
                         <div class="title-area mb-40">
-                            <span class="sub-title text-theme">Nos avantages <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                            <span class="sub-title text-theme">Nos avantages <x-frontend::icon name="line-chart"/></span>
                             <h2 class="sec-title">Pourquoi les Québécois choisissent Kalystrat</h2>
                             <p class="sec-text">Un contact, six équipes qui se parlent, des échéanciers tenus. Quand un problème survient, personne ne pointe le sous-traitant d'à côté. C'est nous, au complet.
                             </p>
@@ -674,7 +674,7 @@
                     <div class="col-xl-7">
                         <div class="contact-form-wrap">
                             <div class="title-area">
-                                <span class="sub-title text-theme">Soumission gratuite <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                                <span class="sub-title text-theme">Soumission gratuite <x-frontend::icon name="line-chart"/></span>
                                 <h2 class="sec-title">Vous avez un projet en tête&nbsp;?</h2>
                             </div>
                             <form action="{{ url('/contact/envoyer') }}" method="POST" class="contact-form ajax-contact" aria-label="Formulaire de demande de soumission Kalystrat">
@@ -740,7 +740,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-7">
                     <div class="title-area text-center">
-                        <span class="sub-title text-theme">Nos réalisations <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                        <span class="sub-title text-theme">Nos réalisations <x-frontend::icon name="line-chart"/></span>
                         <h2 class="sec-title">Projets récemment livrés au Québec</h2>
                     </div>
                 </div>
@@ -884,7 +884,7 @@
             <div class="row justify-content-lg-between justify-content-center align-items-center">
                 <div class="col-lg-6">
                     <div class="title-area text-lg-start text-center">
-                        <span class="sub-title text-theme">Joindre Kalystrat <i class="ri-line-chart-line" aria-hidden="true"></i></span>
+                        <span class="sub-title text-theme">Joindre Kalystrat <x-frontend::icon name="line-chart"/></span>
                         <h2 class="sec-title">Carrières dans la construction au Québec</h2>
                     </div>
                 </div>

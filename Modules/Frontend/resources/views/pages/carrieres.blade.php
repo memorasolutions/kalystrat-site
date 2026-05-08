@@ -85,11 +85,11 @@
             <div class="col-md-6 col-lg-6">
                 <article class="blog-card style5" style="background: #FFFFFF; border-radius: 0.5rem; padding: 1.75rem; height: 100%; box-shadow: 0 2px 12px rgba(10,22,40,0.06); border-left: 4px solid var(--ks-gold);">
                     <div class="blog-meta" style="display: flex; gap: 0.75rem; margin-bottom: 1rem; flex-wrap: wrap; font-size: 0.85rem;">
-                        <a href="#" style="color: #2C3340; text-decoration: none;"><i class="ri-building-line" aria-hidden="true"></i> Kalystrat {{ $m['filiale'] }}</a>
+                        <a href="#" style="color: #2C3340; text-decoration: none;"><x-frontend::icon name="building"/> Kalystrat {{ $m['filiale'] }}</a>
                         <span aria-hidden="true" style="color: #595959;">·</span>
-                        <a href="#" style="color: #2C3340; text-decoration: none;"><i class="ri-time-line" aria-hidden="true"></i> Temps plein</a>
+                        <a href="#" style="color: #2C3340; text-decoration: none;"><x-frontend::icon name="time"/> Temps plein</a>
                         <span aria-hidden="true" style="color: #595959;">·</span>
-                        <a href="#" style="color: #2C3340; text-decoration: none;"><i class="ri-map-pin-line" aria-hidden="true"></i> Québec, QC</a>
+                        <a href="#" style="color: #2C3340; text-decoration: none;"><x-frontend::icon name="map-pin"/> Québec, QC</a>
                     </div>
                     <h3 class="blog-title" style="color: var(--ks-navy); font-size: 1.25rem; font-weight: 700; margin-bottom: 0.5rem;">
                         <a href="#postuler" style="color: var(--ks-navy); text-decoration: none;">{{ $m['title'] }}</a>
@@ -119,16 +119,16 @@
         <div class="row g-4">
             @php
                 $avantages = [
-                    ['icon' => 'ri-money-dollar-circle-fill', 'titre' => 'Salaires compétitifs', 'texte' => 'Échelles CCQ respectées, primes pour chefs d\'équipe, paye aux deux semaines.'],
-                    ['icon' => 'ri-shield-cross-fill', 'titre' => 'Avantages sociaux CCQ', 'texte' => 'Régime de retraite, assurances collectives, fonds de vacances.'],
-                    ['icon' => 'ri-graduation-cap-fill', 'titre' => 'Formation continue', 'texte' => 'PAMT, perfectionnement, certifications santé-sécurité défrayés.'],
-                    ['icon' => 'ri-roadster-fill', 'titre' => 'Projets variés', 'texte' => 'Six filiales = chantiers résidentiels, commerciaux et institutionnels.'],
+                    ['icon' => 'money-dollar-circle', 'titre' => 'Salaires compétitifs', 'texte' => 'Échelles CCQ respectées, primes pour chefs d\'équipe, paye aux deux semaines.'],
+                    ['icon' => 'shield-cross', 'titre' => 'Avantages sociaux CCQ', 'texte' => 'Régime de retraite, assurances collectives, fonds de vacances.'],
+                    ['icon' => 'graduation-cap', 'titre' => 'Formation continue', 'texte' => 'PAMT, perfectionnement, certifications santé-sécurité défrayés.'],
+                    ['icon' => 'roadster', 'titre' => 'Projets variés', 'texte' => 'Six filiales = chantiers résidentiels, commerciaux et institutionnels.'],
                 ];
             @endphp
             @foreach($avantages as $a)
             <div class="col-md-6 col-lg-3">
                 <article class="ks-card ks-card--centered ks-card--sober">
-                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><i class="{{ $a['icon'] }}"></i></span>
+                    <span class="ks-card__icon ks-card__icon--circle" aria-hidden="true"><x-frontend::icon :name="$a['icon']"/></span>
                     <h3 class="ks-card__title">{{ $a['titre'] }}</h3>
                     <p class="ks-card__text">{{ $a['texte'] }}</p>
                 </article>

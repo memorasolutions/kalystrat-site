@@ -55,7 +55,7 @@
                 <div class="mt-4" style="background: var(--ks-navy); color: #FFFFFF; padding: 2rem; border-radius: 0.5rem;">
                     <h3 style="color: #FFFFFF; font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem;">Une question hors liste&nbsp;?</h3>
                     <p style="color: #C2C5C9; font-size: 0.9375rem; margin-bottom: 1.25rem;">Notre équipe répond directement par téléphone ou par courriel.</p>
-                    <a href="tel:+14184760987" style="display: inline-block; color: var(--ks-gold); font-size: 1.25rem; font-weight: 700; text-decoration: none; min-height: 44px; padding: 0.5rem 0;"><i class="ri-phone-line" aria-hidden="true"></i> 418-476-0987</a><br>
+                    <a href="tel:+14184760987" style="display: inline-block; color: var(--ks-gold); font-size: 1.25rem; font-weight: 700; text-decoration: none; min-height: 44px; padding: 0.5rem 0;"><x-frontend::icon name="phone"/> 418-476-0987</a><br>
                     <a href="mailto:info@kalystrat.ca" style="color: #FFFFFF; text-decoration: underline; font-size: 0.9375rem; min-height: 44px; display: inline-block; padding: 0.5rem 0;">info@kalystrat.ca</a>
                 </div>
             </div>

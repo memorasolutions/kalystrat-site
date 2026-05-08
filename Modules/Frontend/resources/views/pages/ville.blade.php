@@ -151,7 +151,7 @@
         <div class="row gy-30 mt-50">
             <div class="col-lg-6 col-md-6">
                 <div class="ks-ville-card">
-                    <h3 class="ks-ville-card__title"><i class="ri-map-pin-line" aria-hidden="true"></i>Arrondissements desservis</h3>
+                    <h3 class="ks-ville-card__title"><x-frontend::icon name="map-pin"/>Arrondissements desservis</h3>
                     <ul class="ks-ville-list">
                         @foreach($ville['arrondissements'] as $arr)
                             <li>{{ $arr }}</li>
@@ -161,7 +161,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="ks-ville-card">
-                    <h3 class="ks-ville-card__title"><i class="ri-building-line" aria-hidden="true"></i>Projets types à {{ $ville['nom'] }}</h3>
+                    <h3 class="ks-ville-card__title"><x-frontend::icon name="building"/>Projets types à {{ $ville['nom'] }}</h3>
                     <ul class="ks-ville-list">
                         @foreach($ville['projets_types'] as $proj)
                             <li>{{ $proj }}</li>
@@ -171,7 +171,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="ks-ville-card">
-                    <h3 class="ks-ville-card__title"><i class="ri-shield-check-fill" aria-hidden="true"></i>Réglementation locale</h3>
+                    <h3 class="ks-ville-card__title"><x-frontend::icon name="shield-check"/>Réglementation locale</h3>
                     <ul class="ks-ville-list">
                         @foreach($ville['reglementations'] as $reg)
                             <li>{{ $reg }}</li>
@@ -181,7 +181,7 @@
             </div>
             <div class="col-lg-6 col-md-6">
                 <div class="ks-ville-card">
-                    <h3 class="ks-ville-card__title"><i class="ri-star-fill" aria-hidden="true"></i>Pourquoi choisir Kalystrat à {{ $ville['nom'] }}</h3>
+                    <h3 class="ks-ville-card__title"><x-frontend::icon name="star"/>Pourquoi choisir Kalystrat à {{ $ville['nom'] }}</h3>
                     <ul class="ks-ville-list">
                         @foreach($ville['pourquoi_kalystrat'] as $p)
                             <li>{{ $p }}</li>

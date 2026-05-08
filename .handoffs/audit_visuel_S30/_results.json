@@ -270,33 +270,6 @@
     "screenshotPath": ".handoffs/audit_visuel_S30/mobile/zones.jpg"
   },
   {
-    "url": "https://kalystrat.test/credits",
-    "slug": "credits",
-    "viewport": "desktop",
-    "statusCode": 200,
-    "jsErrors": [],
-    "consoleErrors": [],
-    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/credits.jpg"
-  },
-  {
-    "url": "https://kalystrat.test/credits",
-    "slug": "credits",
-    "viewport": "tablet",
-    "statusCode": 200,
-    "jsErrors": [],
-    "consoleErrors": [],
-    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/credits.jpg"
-  },
-  {
-    "url": "https://kalystrat.test/credits",
-    "slug": "credits",
-    "viewport": "mobile",
-    "statusCode": 200,
-    "jsErrors": [],
-    "consoleErrors": [],
-    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/credits.jpg"
-  },
-  {
     "url": "https://kalystrat.test/filiales/fondations",
     "slug": "filiale-fondations",
     "viewport": "desktop",
@@ -322,5 +295,32 @@
     "jsErrors": [],
     "consoleErrors": [],
     "screenshotPath": ".handoffs/audit_visuel_S30/mobile/filiale-fondations.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "desktop",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/desktop/credits.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "tablet",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/tablet/credits.jpg"
+  },
+  {
+    "url": "https://kalystrat.test/credits",
+    "slug": "credits",
+    "viewport": "mobile",
+    "statusCode": 200,
+    "jsErrors": [],
+    "consoleErrors": [],
+    "screenshotPath": ".handoffs/audit_visuel_S30/mobile/credits.jpg"
   }
 ]
