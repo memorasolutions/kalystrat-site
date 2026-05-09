@@ -31,7 +31,7 @@ $faqs = [
 @endphp
 
 @push('meta')
-<meta name="description" content="Questions fréquentes sur Gestion Kalystrat Inc. : filiales, intégration verticale, soumissions, zones desservies, gouvernance, RBQ, CCQ. Réponses claires d'un holding québécois de construction.">
+<meta name="description" content="FAQ Kalystrat construction au Québec : filiales, intégration verticale, RBQ, CCQ, soumissions, garanties. 23 questions réponses claires.">
 <link rel="canonical" href="{{ url('/faq') }}">
 <meta property="og:title" content="FAQ — Kalystrat construction Québec">
 <meta property="og:type" content="website">

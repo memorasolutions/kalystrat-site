@@ -99,7 +99,7 @@ $metiers = [
         <div class="row clearfix">
             @foreach($metiers as $m)
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:10px">
-                <div style="padding:12px 18px;background:#f7f7f7;border-left:3px solid #FFA000">{{ $m }}</div>
+                <div style="padding:12px 18px;background:#f7f7f7;border-left:3px solid #8F3F00">{{ $m }}</div>
             </div>
             @endforeach
         </div>

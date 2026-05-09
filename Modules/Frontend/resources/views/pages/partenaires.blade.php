@@ -68,7 +68,7 @@ $types = [
         <div class="row clearfix">
             @foreach($types as $t)
             <div class="feature-block_four col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
                     <h4>{{ $t['t'] }}</h4>
                     <div class="text" style="margin-top:10px">{{ $t['d'] }}</div>
                 </div>

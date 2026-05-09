@@ -79,7 +79,7 @@ echo json_encode([
             @foreach($articles as $aslug => $a)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;height:calc(100% - 25px)">
-                    <div style="color:#FFA000;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">{{ $a['categorie'] }}</div>
+                    <div style="color:#8F3F00;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">{{ $a['categorie'] }}</div>
                     <h4><a href="{{ route('blog.show', $aslug) }}">{{ $a['titre'] }}</a></h4>
                     <p style="margin:15px 0 20px;color:#555;line-height:1.6">{{ $a['extrait'] }}</p>
                     <div style="display:flex;justify-content:space-between;align-items:center">

@@ -75,7 +75,7 @@
             @foreach($other as $oslug => $a)
             <div class="col-lg-4 col-md-6 col-sm-12">
                 <div style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px">
-                    <div style="color:#FFA000;font-size:13px;font-weight:600;text-transform:uppercase;margin-bottom:10px">{{ $a['categorie'] }}</div>
+                    <div style="color:#8F3F00;font-size:13px;font-weight:600;text-transform:uppercase;margin-bottom:10px">{{ $a['categorie'] }}</div>
                     <h4><a href="{{ route('blog.show', $oslug) }}">{{ $a['titre'] }}</a></h4>
                     <p style="margin-top:12px;color:#555">{{ $a['extrait'] }}</p>
                     <div style="margin-top:18px"><a href="{{ route('blog.show', $oslug) }}" class="theme-btn btn-style-ten"><span class="text-one">Lire l’article</span><span class="text-two">Lire</span></a></div>

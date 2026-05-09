@@ -11,7 +11,7 @@ $membres = [
 @endphp
 
 @push('meta')
-<meta name="description" content="Équipe Kalystrat : Ali Salomon (Président, fondateur), Jacques Jobidon (droit de la construction), Perry Wong (immobilier). Direction expérimentée et conseil consultatif d'experts indépendants.">
+<meta name="description" content="Équipe Kalystrat : Ali Salomon (Président), six directions de filiales, conseil consultatif (Jacques Jobidon droit, Perry Wong immobilier).">
 <link rel="canonical" href="{{ url('/equipe') }}">
 @endpush
 
@@ -77,7 +77,7 @@ echo json_encode([
             <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Fondateur</span>
+                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Fondateur</span>
                         <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'ali-salomon') }}">Ali Salomon</a></h4>
                         <span style="color:#666">Président et Directeur Général</span>
                         <div style="margin-top:15px;line-height:1.6">Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d’affaires intégré de Gestion Kalystrat Inc. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</div>
@@ -89,7 +89,7 @@ echo json_encode([
             <div class="team-block col-lg-4 col-md-6 col-sm-12">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Direction de filiale</span>
+                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Direction de filiale</span>
                         <h4 style="margin:8px 0">Directeur</h4>
                         <span style="color:#666">{{ $f['nom_court'] }}</span>
                         <div style="margin-top:15px;line-height:1.6">Pilote opérationnel de la filiale, responsable de l’exécution, de la qualité et du respect des échéanciers. Relève directement de la présidence. <em>Nomination à confirmer.</em></div>
@@ -114,9 +114,9 @@ echo json_encode([
             </div>
 
             <div class="team-block col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #FFA000">
+                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #8F3F00">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Droit des affaires</span>
+                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Droit des affaires</span>
                         <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}">Jacques Jobidon</a></h4>
                         <span style="color:#666">Avocat spécialisé en droit de la construction et des sociétés</span>
                         <div style="margin-top:15px;line-height:1.6">Apporte son expertise sur les contrats, les litiges et la conformité réglementaire des chantiers du groupe.</div>
@@ -125,9 +125,9 @@ echo json_encode([
             </div>
 
             <div class="team-block col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #FFA000">
+                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #8F3F00">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Immobilier</span>
+                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Immobilier</span>
                         <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'perry-wong') }}">Perry Wong</a></h4>
                         <span style="color:#666">Spécialiste du marché immobilier québécois</span>
                         <div style="margin-top:15px;line-height:1.6">Conseille Kalystrat Immobilier sur les acquisitions, les analyses de marché et le développement de projets résidentiels et locatifs.</div>

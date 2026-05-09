@@ -94,7 +94,7 @@ echo json_encode([
 <section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
     <div class="auto-container">
         @foreach($termes as $term)
-        <div style="background:#fff;padding:20px 25px;margin-bottom:12px;border-radius:6px;border-left:4px solid #FFA000">
+        <div style="background:#fff;padding:20px 25px;margin-bottom:12px;border-radius:6px;border-left:4px solid #8F3F00">
             <h5 style="margin:0 0 8px 0;color:#222">{{ $term['t'] }}</h5>
             <div style="color:#555;line-height:1.6">{{ $term['d'] }}</div>
         </div>

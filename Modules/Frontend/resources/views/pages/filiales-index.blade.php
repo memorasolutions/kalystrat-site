@@ -3,7 +3,7 @@
 @section('title', 'Nos six filiales spécialisées | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Découvrez les six filiales spécialisées de Gestion Kalystrat Inc. : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Chaîne complète de la construction au Québec.">
+<meta name="description" content="Six filiales Kalystrat : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Chaîne complète de la construction au Québec.">
 <link rel="canonical" href="{{ url('/filiales') }}">
 <meta property="og:title" content="Six filiales Kalystrat — Construction à intégration verticale">
 <meta property="og:description" content="Six métiers, une marque : Fondations, Structure, Toiture, Finition, Immobilier, Placement.">

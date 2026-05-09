@@ -3,7 +3,7 @@
 @section('title', 'Services de construction au Québec | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Catalogue complet de services en construction par Gestion Kalystrat Inc. : excavation, fondations, charpente, toiture, finition, immobilier, placement de main-d'œuvre. Six filiales, une seule marque.">
+<meta name="description" content="Catalogue de services Kalystrat : excavation, fondations, charpente, toiture, finition, immobilier, placement. Six filiales, une marque unifiée au Québec.">
 <link rel="canonical" href="{{ url('/services') }}">
 <meta property="og:title" content="Services de construction Kalystrat">
 <meta property="og:description" content="Six filiales spécialisées : excavation, charpente, toiture, finition, immobilier, placement.">
@@ -75,7 +75,7 @@ echo json_encode([
         <div class="row clearfix">
             @foreach($f['services'] as $service)
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:15px">
-                <div style="padding:15px;background:#fff;border-left:3px solid #FFA000">{{ $service }}</div>
+                <div style="padding:15px;background:#fff;border-left:3px solid #8F3F00">{{ $service }}</div>
             </div>
             @endforeach
         </div>

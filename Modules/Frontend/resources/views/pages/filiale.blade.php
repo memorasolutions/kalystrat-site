@@ -3,7 +3,7 @@
 @section('title', $filiale['nom_court'] . ' | Kalystrat')
 
 @push('meta')
-<meta name="description" content="{{ $filiale['nom_court'] }} — {{ $filiale['specialite'] }}. {{ $filiale['tagline'] }}. Filiale du holding Gestion Kalystrat Inc., basée à Québec.">
+<meta name="description" content="{{ $filiale['nom_court'] }} — {{ $filiale['specialite'] }}. Filiale du holding Kalystrat à intégration verticale, basée à Québec.">
 <link rel="canonical" href="{{ url('/filiales/' . $slug) }}">
 <meta property="og:title" content="{{ $filiale['nom_court'] }}">
 <meta property="og:description" content="{{ $filiale['tagline'] }}">

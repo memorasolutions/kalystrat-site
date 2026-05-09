@@ -231,13 +231,13 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
                     <h4>Phase 1 - Consolidation</h4>
                     <p style="margin-top:12px;line-height:1.7">Établir les fondations opérationnelles du groupe : incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion (comptabilité, RH, marketing, TI), premières relations avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
-                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
                     <h4>Phase 2 - Expansion</h4>
                     <p style="margin-top:12px;line-height:1.7">Diversifier les revenus et augmenter le volume : développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
                 </div>

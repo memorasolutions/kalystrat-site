@@ -108,7 +108,7 @@ $s = $secteurs[$slug];
         <div class="row clearfix">
             @foreach($s['projets'] as $p)
             <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px;border-left:3px solid #FFA000">
+                <div class="inner-box" style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px;border-left:3px solid #8F3F00">
                     <h5>{{ $p }}</h5>
                 </div>
             </div>

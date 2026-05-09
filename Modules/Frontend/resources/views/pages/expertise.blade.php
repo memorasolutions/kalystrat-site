@@ -3,7 +3,7 @@
 @section('title', 'Notre expertise — Méthodes, normes et qualité | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Expertise Kalystrat : méthodes BIM, normes RBQ, sécurité chantier, contrôle qualité interne, préfabrication, conformité Code de construction du Québec. Excellence technique éprouvée.">
+<meta name="description" content="Expertise Kalystrat : BIM, RBQ, CNESST, préfabrication, Code de construction Québec, contrôle qualité centralisé. Excellence technique éprouvée.">
 <link rel="canonical" href="{{ url('/expertise') }}">
 <meta property="og:title" content="Expertise Kalystrat construction">
 <meta property="og:type" content="website">
@@ -73,7 +73,7 @@ $piliers = [
         <div class="row clearfix">
             @foreach($piliers as $p)
             <div class="feature-block_four col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                <div class="inner-box" style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
                     <h4>{{ $p['t'] }}</h4>
                     <div class="text" style="margin-top:10px">{{ $p['d'] }}</div>
                 </div>
