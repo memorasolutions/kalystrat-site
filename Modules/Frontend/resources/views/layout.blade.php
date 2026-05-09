@@ -616,31 +616,26 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T40-S30 : réduire padding hero-style5 (Construz natif 310px 0 270px = trop d'espace blanc/sombre).
-           User a signalé 5× l'espace blanc avant about-area. Cause = padding-bottom 270px du hero
-           qui s'étend sous le contenu texte. Réduit à 80px = transition tight comme thème de base. */
+        /* T40c-S30 : padding hero-style5 minimal (Construz natif 310px 0 270px = énorme espace).
+           User a signalé 6× l'espace blanc/sombre avant about-area. Réduit drastiquement
+           (40px desktop / 20px mobile) pour transition immédiate hero → about-area. */
         .hero-wrapper.hero-5 .hero-style5 {
-            padding: 140px 0 80px !important;
+            padding: 120px 0 40px !important;
         }
         @media (max-width: 991px) {
             .hero-wrapper.hero-5 .hero-style5 {
-                padding: 100px 0 60px !important;
+                padding: 90px 0 20px !important;
             }
         }
         .hero-wrapper.hero-5 .hero-slide {
             background-color: #0A1628; /* meme fallback applique sur slides individuels pour calcul contraste WCAG */
         }
-        /* H.bis Divider stylé bas du slider – courbe SVG blanche pour transition douce vers section blanche suivante */
+        /* H.bis T40c-S30 : SVG wave divider RETIRÉE complètement.
+           User a signalé 6× l'espace blanc avant about-area. Cause finale = la moitié basse du SVG
+           wave (fill blanc pur) qui apparaissait visuellement comme un espace blanc avant la section
+           suivante. Solution radicale : transition photo→blanc directe (pas de courbe douce). */
         .hero-wrapper.hero-5::after {
-            content: "";
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
-            height: 110px;
-            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,55 C360,110 720,0 1080,55 C1260,82 1350,75 1440,55 L1440,110 L0,110 Z'/></svg>") no-repeat bottom / 100% 100%;
-            z-index: 4;
-            pointer-events: none;
+            display: none !important;
         }
         .hero-wrapper.hero-5 .hero-slide {
             position: relative;
