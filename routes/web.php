@@ -30,12 +30,8 @@ Route::get('/csrf-token', fn () => response()->json(['csrf' => csrf_token()]))->
 
 // Legal pages moved to Modules/Privacy
 
-// T46-S30 : Site en attente de nouveau frontend (Frontend module supprimé sur demande user).
-// Route placeholder minimale, sans pollution visuelle. Désactiver dès installation nouveau thème.
-Route::get('/', fn () => response(<<<'HTML'
-<!doctype html>
-<html lang="fr-CA"><head><meta charset="utf-8"><title>Kalystrat — site en préparation</title>
-<meta name="robots" content="noindex,nofollow">
-<style>html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#0A1628;color:#B8A472;display:flex;align-items:center;justify-content:center;text-align:center}</style>
-</head><body><div><h1 style="font-weight:300;letter-spacing:2px">KALYSTRAT</h1><p style="opacity:.6;font-size:14px">site en préparation</p></div></body></html>
-HTML, 200, ['Content-Type' => 'text/html; charset=utf-8']))->name('home.placeholder');
+// T47-S30 : Thème InTime index-6 servi tel quel depuis public/intime/.
+// Aucune modification du HTML d'origine — copie intégrale .themes/frontend_v3/intime → public/intime.
+// Redirige / → /intime/index-6.html. Le thème complet (about, services, projects, blog, contact)
+// est navigable via les liens internes (chemins relatifs résolvent depuis /intime/).
+Route::redirect('/', '/intime/index-6.html', 302)->name('home');
