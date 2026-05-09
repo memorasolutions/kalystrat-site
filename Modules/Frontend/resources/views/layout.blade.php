@@ -616,15 +616,30 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T40c-S30 : padding hero-style5 minimal (Construz natif 310px 0 270px = énorme espace).
-           User a signalé 6× l'espace blanc/sombre avant about-area. Réduit drastiquement
-           (40px desktop / 20px mobile) pour transition immédiate hero → about-area. */
+        /* T40e-S30 : Option A — Photo about-thumb chevauche le hero (overlap negative margin).
+           Pattern UX/UI 2026 (asymétrie + superposition mesurée + profondeur légère). Le hero
+           garde son padding-bottom 100px pour ancrer la photo qui remonte de -120px. La photo
+           crée le pont visuel hero→about, élimine le besoin de divider décoratif (wave/gradient). */
         .hero-wrapper.hero-5 .hero-style5 {
-            padding: 120px 0 40px !important;
+            padding: 140px 0 100px !important;
         }
         @media (max-width: 991px) {
             .hero-wrapper.hero-5 .hero-style5 {
-                padding: 90px 0 20px !important;
+                padding: 100px 0 60px !important;
+            }
+        }
+        /* Photo about-thumb chevauche hero (-120px desktop, 0 mobile) + ombre subtile profondeur.
+           Position relative + z-index 5 pour passer au-dessus de la photo hero. */
+        @media (min-width: 992px) {
+            .about-area-5 .about-thumb5 {
+                margin-top: -120px !important;
+                position: relative;
+                z-index: 5;
+            }
+            .about-area-5 .about-thumb5 .about-img-1 {
+                box-shadow: 0 24px 60px rgba(10, 22, 40, 0.18);
+                border-radius: 0.5rem;
+                overflow: hidden;
             }
         }
         .hero-wrapper.hero-5 .hero-slide {
