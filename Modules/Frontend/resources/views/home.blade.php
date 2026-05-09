@@ -144,7 +144,7 @@
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-mail"></div>
 								<h4 class="feature-block_four-heading">Six filiales spécialisées</h4>
-								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
+								<div class="feature-block_four-text">Fondations, structure, toiture, finition, immobilier, placement</div>
 							</div>
 						</div>
 					</div>
@@ -155,7 +155,7 @@
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-search"></div>
 								<h4 class="feature-block_four-heading">Intégration verticale</h4>
-								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
+								<div class="feature-block_four-text">Un seul interlocuteur, zéro sous-traitance externe sur les corps de métier clés</div>
 							</div>
 						</div>
 					</div>
@@ -165,8 +165,8 @@
 						<div class="feature-block_four-inner">
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-business-presentation"></div>
-								<h4 class="feature-block_four-heading">Main-d&apos;œuvre interne</h4>
-								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
+								<h4 class="feature-block_four-heading">Main-d&apos;œuvre CCQ interne</h4>
+								<div class="feature-block_four-text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat</div>
 							</div>
 						</div>
 					</div>
@@ -199,13 +199,13 @@
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">World class financial problem solution</h2>
+							<h2 class="sec-title-five_heading">Le défi de la construction au Québec en 2026</h2>
 						</div>
-						<div class="bold-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum. </div>
+						<div class="bold-text">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire : l’industrie québécoise de la construction traverse une période exigeante. Notre réponse, c’est l’intégration verticale.</div>
 						<ul class="problem-one_list">
-							<li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan</li>
-							<li>Koremque laudantium, totam rem aperiam, eaque ipsa quae ab illo</li>
-							<li>Netatis et quasi architecto beatae vitae dicta sunt explicabo. </li>
+							<li>Six filiales spécialisées qui couvrent toute la chaîne, de l’excavation aux finitions</li>
+							<li>Une équipe interne CCQ formée aux normes Novoclimat 2.0 et au Code 2026</li>
+							<li>Demande captive via Kalystrat Immobilier : stabilité financière et qualité constante</li>
 						</ul>
 
 						<div class="row clearfix">
@@ -213,24 +213,24 @@
 							<!-- Counter Column -->
 							<div class="problem-one_counter-column col-lg-6 col-md-6 col-sm-6">
 								<div class="problem-one_counter-inner">
-									<div class="problem-one_counter"><span class="odometer" data-count="20"></span><sup>+</sup></div>
-									<div class="problem-one_counter_text">Wordwide Companies</div>
+									<div class="problem-one_counter"><span class="odometer" data-count="6"></span></div>
+									<div class="problem-one_counter_text">Filiales spécialisées</div>
 								</div>
 							</div>
 							
 							<!-- Counter Column -->
 							<div class="problem-one_counter-column col-lg-6 col-md-6 col-sm-6">
 								<div class="problem-one_counter-inner">
-									<div class="problem-one_counter"><span class="odometer" data-count="99"></span><sup>+</sup></div>
-									<div class="problem-one_counter_text">Business Employees</div>
+									<div class="problem-one_counter"><span class="odometer" data-count="100"></span><sup>+</sup></div>
+									<div class="problem-one_counter_text">Compagnons CCQ qualifiés</div>
 								</div>
 							</div>
 
 						</div>
 
 						<div class="d-flex align-items-center">
-							<div class="signature">Johnson Doe</div>
-							<h5>JohsonDoe <span>Managing Director</span></h5>
+							<div class="signature">Ali Salomon</div>
+							<h5>Ali Salomon <span>Président et Directeur Général</span></h5>
 						</div>
 
 					</div>
@@ -249,8 +249,8 @@
 				<div class="services-four_pattern-two" style="background-image:url(/intime/images/background/pattern-31.jpg)"></div>
 				<!-- Sec Title Five -->
 				<div class="sec-title-five light centered">
-					<div class="sec-title-five_title">Service</div>
-					<h2 class="sec-title-five_heading">What We Do</h2>
+					<div class="sec-title-five_title">Notre offre</div>
+					<h2 class="sec-title-five_heading">Quatre temps, six expertises</h2>
 				</div>
 				<div class="row clearfix">
 
@@ -258,8 +258,8 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-business-presentation"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Business Planning</a></h4>
-							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
+							<h4 class="service-block_three-heading"><a href="/services">Conception et permis</a></h4>
+							<div class="service-block_three-text">Plans, modélisation BIM, dépôts municipaux. Coordination avec architectes et ingénieurs.</div>
 						</div>
 					</div>
 
@@ -267,8 +267,8 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-market"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Marketing Strategy</a></h4>
-							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
+							<h4 class="service-block_three-heading"><a href="/services">Construction et chantier</a></h4>
+							<div class="service-block_three-text">Excavation, fondations, structure, toiture, enveloppe. Six filiales, un seul calendrier.</div>
 						</div>
 					</div>
 
@@ -276,8 +276,8 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-profit"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Business Training</a></h4>
-							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
+							<h4 class="service-block_three-heading"><a href="/services">Finition et livraison</a></h4>
+							<div class="service-block_three-text">Gypse, peinture, planchers, ébénisterie, comptoirs. Inspection conjointe avant remise des clés.</div>
 						</div>
 					</div>
 
@@ -285,8 +285,8 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-business-intelligence"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Business Management</a></h4>
-							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
+							<h4 class="service-block_three-heading"><a href="/services">Garantie et entretien</a></h4>
+							<div class="service-block_three-text">Plan GCR pour le neuf, garanties bonifiées sur toiture et fondations, accompagnement post-livraison.</div>
 						</div>
 					</div>
 
@@ -306,8 +306,8 @@
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Top class financial solution</h2>
-							<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium runt mollit anila</div>
+							<h2 class="sec-title-five_heading">Une approche structurée à long terme</h2>
+							<div class="sec-title-five_text">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure : moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</div>
 						</div>
 
 						<div class="row clearfix">
@@ -318,7 +318,7 @@
 									<input type="text" class="dial" data-fgColor="#ff5520" data-bgColor="#eee5e2" data-width="160" data-height="160" data-linecap="normal"  value="62" data-thickness="0.12">
 									<div class="inner-text count-box"><span class="count-text" data-stop="62" data-speed="3500"></span>%</div>
 								</div>
-								<div class="sub-title">Business <br> strategy growth</div>
+								<div class="sub-title">Projets <br> livrés à temps</div>
 							</div>
 							
 							<!-- Counter Boxed -->
@@ -327,7 +327,7 @@
 									<input type="text" class="dial" data-fgColor="#ff5520" data-bgColor="#eee5e2" data-width="160" data-height="160" data-linecap="normal"  value="80" data-thickness="0.12">
 									<div class="inner-text count-box"><span class="count-text" data-stop="80" data-speed="3500"></span>%</div>
 								</div>
-								<div class="sub-title">Finance <br> valuable ideas</div>
+								<div class="sub-title">Clients <br> recommandent Kalystrat</div>
 							</div>
 							
 						</div>
@@ -339,8 +339,8 @@
 					<div class="finance-two_image-inner">
 						<div class="finance-two_image">
 							<div class="finance-two_since-box" data-parallax='{"y" : 40}'>
-								since 
-								<span>1992</span>
+								depuis
+								<span>2024</span>
 							</div>
 							<img src="/intime/images/resource/finance-2.jpg" alt="" />
 						</div>
@@ -362,8 +362,8 @@
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Lets Make Today Your Business Successful</h2>
-							<div class="sec-title-five_text">Your business will be better forever</div>
+							<h2 class="sec-title-five_heading">Prêt à bâtir avec une équipe intégrée ?</h2>
+							<div class="sec-title-five_text">Votre projet livré dans les délais, sans surprise.</div>
 						</div>
 						<!-- Button Box -->
 						<div class="success-one_button-box">
@@ -411,16 +411,16 @@
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Lets manage your finance wisely</h2>
-							<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lau</div>
+							<h2 class="sec-title-five_heading">Pourquoi nous confier votre projet</h2>
+							<div class="sec-title-five_text">Sur un chantier Kalystrat, vous traitez avec un seul interlocuteur qui pilote la totalité des corps de métier. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</div>
 						</div>
 
 						<!-- Finance Three Block -->
 						<div class="finance-three_block">
 							<div class="finance-three_block-inner">
 								<div class="finance-three_block-icon flaticon-business-presentation"></div>
-								<h4 class="finance-three_heading">Business Consultancy</h4>
-								<div class="finance-three_text">Excepteur sint occaecat cupidatat non proident, ui officia deserunim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip.</div>
+								<h4 class="finance-three_heading">Une seule signature, six métiers</h4>
+								<div class="finance-three_text">Vous signez un contrat unique qui couvre fondations, structure, toiture, finition, immobilier et placement de main-d’œuvre. Plus de jeux de coordination entre sous-traitants.</div>
 							</div>
 						</div>
 
@@ -428,8 +428,8 @@
 						<div class="finance-three_block">
 							<div class="finance-three_block-inner">
 								<div class="finance-three_block-icon flaticon-market"></div>
-								<h4 class="finance-three_heading">Financial Advice</h4>
-								<div class="finance-three_text">Excepteur sint occaecat cupidatat non proident, ui officia deserunim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip.</div>
+								<h4 class="finance-three_heading">Garanties prolongées et conformité</h4>
+								<div class="finance-three_text">Plan GCR pour le neuf résidentiel, garanties bonifiées sur certains éléments (30 ans toiture, 10 ans fondations), licence RBQ active, équipes formées Code 2026.</div>
 							</div>
 						</div>
 
@@ -448,54 +448,52 @@
 		<div class="auto-container">
 			<!-- Sec Title Five -->
 			<div class="sec-title-five">
-				<div class="sec-title-five_title">Testimonial</div>
-				<h2 class="sec-title-five_heading">What Clients Say</h2>
-				<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br> officia deserunt mollit anim id est laborum.</div>
+				<div class="sec-title-five_title">Ils nous font confiance</div>
+				<h2 class="sec-title-five_heading">Témoignages</h2>
+				<div class="sec-title-five_text">Promoteurs, propriétaires, gestionnaires institutionnels : <br> ce qu’ils retiennent d’un projet livré par Kalystrat.</div>
 			</div>
 			<div class="inner-container">
 				<div class="testimonial-carousel-two owl-carousel owl-theme">
 
-					<!-- Testimonial Block Four -->
+					<!-- Témoignages illustratifs - à remplacer par de vrais clients -->
 					<div class="testimonial-block_four">
 						<div class="testimonial-block_four-inner">
 							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Audantium, totam rem ape non proident sunt in culpa qui officia deempor incid idu or incididunt ut labore et dolore magna aliqua. Ut eniym adsantona</div>
+							<div class="testimonial-block_four-text">Pour un promoteur, traiter avec une seule équipe pour les fondations, la structure et la finition change tout. Les délais ne dérapent plus, et la qualité reste constante du sous-sol au toit.</div>
 							<div class="testimonial-block_four-author">
 								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-10.jpg" alt="" />
+									<img src="/intime/images/resource/author-10.jpg" alt="Témoignage promoteur immobilier" />
 								</div>
-								<h5>Layla Jenifer</h5>
-								<div class="designation">Journalist, The Daily ABC</div>
+								<h5>Promoteur immobilier</h5>
+								<div class="designation">Multilogement 24 unités, Lévis</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Testimonial Block Four -->
 					<div class="testimonial-block_four">
 						<div class="testimonial-block_four-inner">
 							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Audantium, totam rem ape non proident sunt in culpa qui officia deempor incid idu or incididunt ut labore et dolore magna aliqua. Ut eniym adsantona</div>
+							<div class="testimonial-block_four-text">Le contrôle qualité interne fait la différence. À chaque étape, le chargé de projet vérifie le travail avant de passer à la prochaine filiale. Aucune zone grise de responsabilité.</div>
 							<div class="testimonial-block_four-author">
 								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-11.jpg" alt="" />
+									<img src="/intime/images/resource/author-11.jpg" alt="Témoignage propriétaire résidentiel" />
 								</div>
-								<h5>Nayna Eva</h5>
-								<div class="designation">Journalist, The Daily ABC</div>
+								<h5>Propriétaire résidentiel</h5>
+								<div class="designation">Maison neuve custom, Sainte-Foy</div>
 							</div>
 						</div>
 					</div>
 
-					<!-- Testimonial Block Four -->
 					<div class="testimonial-block_four">
 						<div class="testimonial-block_four-inner">
 							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Audantium, totam rem ape non proident sunt in culpa qui officia deempor incid idu or incididunt ut labore et dolore magna aliqua. Ut eniym adsantona</div>
+							<div class="testimonial-block_four-text">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre blower door a passé du premier coup.</div>
 							<div class="testimonial-block_four-author">
 								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-12.jpg" alt="" />
+									<img src="/intime/images/resource/author-12.jpg" alt="Témoignage gestionnaire institutionnel" />
 								</div>
-								<h5>Nayna Eva</h5>
-								<div class="designation">Journalist, The Daily ABC</div>
+								<h5>Gestionnaire institutionnel</h5>
+								<div class="designation">Pavillon scolaire, Trois-Rivières</div>
 							</div>
 						</div>
 					</div>
@@ -511,9 +509,9 @@
 		<div class="auto-container">
 			<!-- Sec Title Five -->
 			<div class="sec-title-five centered">
-				<div class="sec-title-five_title">From Our Blog</div>
-				<h2 class="sec-title-five_heading">Our News Section</h2>
-				<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui <br> officia deserunt mollit anim id est laborum.</div>
+				<div class="sec-title-five_title">Notre blog</div>
+				<h2 class="sec-title-five_heading">Nouvelles et perspectives</h2>
+				<div class="sec-title-five_text">Analyses du marché québécois, évolutions réglementaires <br> et conseils pratiques pour vos projets de construction.</div>
 			</div>
 
 			<div class="masonry-items-container-two row clearfix">
@@ -527,8 +525,8 @@
 								<a href="/intime/images/resource/news-16.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Marché immobilier</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Pourquoi construire des multilogements au Québec en 2026</a></h6>
 							</div>
 						</div>
 					</div>
@@ -543,8 +541,8 @@
 								<a href="/intime/images/resource/news-17.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Code de construction Québec 2026 : ce que les propriétaires doivent savoir</a></h6>
 							</div>
 						</div>
 					</div>
@@ -559,8 +557,8 @@
 								<a href="/intime/images/resource/news-18.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Conseils pratiques</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Comment choisir un entrepreneur en construction au Québec</a></h6>
 							</div>
 						</div>
 					</div>
@@ -575,8 +573,8 @@
 								<a href="/intime/images/resource/news-20.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Marché immobilier</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Le marché locatif Québec, Lévis et Montréal en 2026</a></h6>
 							</div>
 						</div>
 					</div>
@@ -591,8 +589,8 @@
 								<a href="/intime/images/resource/news-19.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Pare-air, pare-vapeur, blower door : les nouvelles exigences</a></h6>
 							</div>
 						</div>
 					</div>
@@ -607,8 +605,8 @@
 								<a href="/intime/images/resource/news-21.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
 							</div>
 							<div class="news-block_six-content">
-								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<div class="news-block_six-date">9 mai 2026 <span>Conseils pratiques</span></div>
+								<h6 class="news-block_six-heading"><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Vérifier la licence RBQ et le cautionnement avant de signer</a></h6>
 							</div>
 						</div>
 					</div>
