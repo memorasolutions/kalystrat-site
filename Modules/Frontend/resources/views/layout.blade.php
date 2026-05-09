@@ -629,14 +629,16 @@
             }
         }
         /* Photo about-thumb chevauche hero (-120px desktop, 0 mobile) + ombre subtile profondeur.
-           Position relative + z-index 5 pour passer au-dessus de la photo hero. */
+           Position relative + z-index 5 pour passer au-dessus de la photo hero.
+           Scope strict : .col-xl-5 > .about-thumb5 uniquement (la 2e .about-thumb5 dans .about-wrap5
+           ne doit PAS chevaucher — c'est un autre élément). */
         @media (min-width: 992px) {
-            .about-area-5 .about-thumb5 {
+            .about-area-5 .col-xl-5 > .about-thumb5 {
                 margin-top: -120px !important;
                 position: relative;
                 z-index: 5;
             }
-            .about-area-5 .about-thumb5 .about-img-1 {
+            .about-area-5 .col-xl-5 > .about-thumb5 .about-img-1 {
                 box-shadow: 0 24px 60px rgba(10, 22, 40, 0.18);
                 border-radius: 0.5rem;
                 overflow: hidden;
