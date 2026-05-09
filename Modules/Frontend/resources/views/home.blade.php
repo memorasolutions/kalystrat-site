@@ -234,11 +234,10 @@
     {{-- ==============================
          Section À propos – présentation Kalystrat et Ali Salomon
          ============================== --}}
-    {{-- T42-S30 : Option B — Bandeau navy 60px (40 mobile) + ligne gold 2px (accent brand) entre hero et about.
-         Pattern bento contrôlé + profondeur cartes recommandé pp_search Awwwards 2026 B2B construction premium. --}}
-    <div class="ks-hero-about-divider" aria-hidden="true"></div>
-
-    <div class="about-area-5" style="padding-top: 0; padding-bottom: 80px;">
+    {{-- T43-S30 : RESTAURATION Construz home-5 natif (classe .space = padding 100px top+bottom).
+         Remplace toutes les expérimentations T36→T42 qui n'ont pas convaincu user. Retour au thème
+         de base original demandé dès le départ. --}}
+    <div class="about-area-5 space">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
             <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>

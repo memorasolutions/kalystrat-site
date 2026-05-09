@@ -616,65 +616,27 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T42-S30 : Option B (UX/UI 2026 pp_search Awwwards) — Bento contrôlé + card photo flottante
-           + bandeau navy + accent gold + respiration texte. Recommandé B2B construction premium. */
-        .hero-wrapper.hero-5 .hero-style5 {
-            padding: 160px 0 140px !important; /* respiration hero */
-        }
-        @media (max-width: 991px) {
-            .hero-wrapper.hero-5 .hero-style5 {
-                padding: 110px 0 80px !important;
-            }
-        }
-
-        /* Bandeau navy entre hero et about — accent gold en bas (brand) */
-        .ks-hero-about-divider {
-            background-color: var(--ks-navy);
-            height: 60px;
-            border-bottom: 2px solid var(--ks-gold);
-            position: relative;
-            z-index: 1;
-        }
-        @media (max-width: 991px) {
-            .ks-hero-about-divider {
-                height: 40px;
-            }
-        }
-
-        /* Photo about-thumb : card flottante avec shadow forte qui chevauche le bandeau navy + hero */
-        @media (min-width: 992px) {
-            .about-area-5 .col-xl-5 > .about-thumb5 {
-                margin-top: -180px !important;
-                position: relative;
-                z-index: 5;
-            }
-            .about-area-5 .col-xl-5 > .about-thumb5 .about-img-1 {
-                box-shadow: 0 32px 80px rgba(10, 22, 40, 0.25);
-                border-radius: 12px;
-                overflow: hidden;
-                margin-bottom: 32px !important;
-            }
-            /* Texte droit : respiration 100px pour aérer */
-            .about-area-5 .col-xl-6 .about-wrap5 .title-area {
-                padding-top: 100px;
-            }
-        }
-        @media (max-width: 991px) {
-            .about-area-5 .col-xl-5 > .about-thumb5 .about-img-1 {
-                box-shadow: 0 16px 40px rgba(10, 22, 40, 0.18);
-                border-radius: 12px;
-                overflow: hidden;
-            }
-        }
+        /* T43-S30 : RESTAURATION Construz home-5 natif (retrait T36→T42 expérimentations).
+           Hero-style5 retrouve son padding natif Construz. About-area utilise sa classe .space
+           native (100px top+bottom). Wave SVG et card flottante retirées. Le thème Construz
+           original gère son design comme prévu sans nos overrides. */
+        /* (aucune override hero-style5 ni about-thumb5 ni hero-about-divider) */
         .hero-wrapper.hero-5 .hero-slide {
             background-color: #0A1628; /* meme fallback applique sur slides individuels pour calcul contraste WCAG */
         }
-        /* H.bis T40c-S30 : SVG wave divider RETIRÉE complètement.
-           User a signalé 6× l'espace blanc avant about-area. Cause finale = la moitié basse du SVG
-           wave (fill blanc pur) qui apparaissait visuellement comme un espace blanc avant la section
-           suivante. Solution radicale : transition photo→blanc directe (pas de courbe douce). */
+        /* T43-S30 : RESTAURATION wave SVG Construz home-5 (retirée par erreur T40c).
+           Le thème natif a sa courbe blanche en bas du hero pour transition douce vers about-area.
+           Le user a confirmé "comme sur le theme de base" — on rétablit le divider natif. */
         .hero-wrapper.hero-5::after {
-            display: none !important;
+            content: "";
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 110px;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,55 C360,110 720,0 1080,55 C1260,82 1350,75 1440,55 L1440,110 L0,110 Z'/></svg>") no-repeat bottom / 100% 100%;
+            z-index: 4;
+            pointer-events: none;
         }
         .hero-wrapper.hero-5 .hero-slide {
             position: relative;
