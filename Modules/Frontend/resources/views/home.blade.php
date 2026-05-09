@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-CA">
 <head>
 <meta charset="utf-8">
-<title>In-Time Businees Consulting Businees HTML-5 Template | Homepage 06</title>
+<title>Kalystrat — Holding québécois de construction à intégration verticale</title>
 <!-- Stylesheets -->
 <link href="/intime/css/bootstrap.css" rel="stylesheet">
 <link href="/intime/css/style.css" rel="stylesheet">
@@ -38,7 +38,7 @@
             <div class="auto-container">
 				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 					<!-- Logo Box -->
-					<div class="logo"><a href="index.html"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
+					<div class="logo"><a href="/"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
 					
 					<div class="nav-outer d-flex ">
 						
@@ -54,51 +54,51 @@
 							
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
 								<ul class="navigation clearfix">
-									<li class="dropdown"><a href="#">Home</a>
+									<li class="dropdown"><a href="#">Accueil</a>
 										<ul>
-											<li><a href="index.html">Homepage One</a></li>
-											<li><a href="index-2.html">Homepage Two</a></li>
-											<li><a href="index-3.html">Homepage Three</a></li>
-											<li><a href="index-4.html">Homepage Four</a></li>
-											<li><a href="index-5.html">Homepage Five</a></li>
-											<li><a href="index-6.html">Homepage Six</a></li>
-											<li><a href="index-7.html">Homepage Seven</a></li>
+											<li><a href="/">Homepage One</a></li>
+											<li><a href="/">Homepage Two</a></li>
+											<li><a href="/">Homepage Three</a></li>
+											<li><a href="/">Homepage Four</a></li>
+											<li><a href="/">Homepage Five</a></li>
+											<li><a href="/">Homepage Six</a></li>
+											<li><a href="/">Homepage Seven</a></li>
 											<li class="dropdown"><a href="#">Header Styles</a>
 												<ul>
-													<li><a href="index.html">Header Style One</a></li>
-													<li><a href="index-2.html">Header Style Two</a></li>
-													<li><a href="index-3.html">Header Style Three</a></li>
-													<li><a href="index-4.html">Header Style Four</a></li>
-													<li><a href="index-5.html">Header Style Five</a></li>
-													<li><a href="index-6.html">Header Style Six</a></li>
-													<li><a href="index-7.html">Header Style Seven</a></li>
+													<li><a href="/">Header Style One</a></li>
+													<li><a href="/">Header Style Two</a></li>
+													<li><a href="/">Header Style Three</a></li>
+													<li><a href="/">Header Style Four</a></li>
+													<li><a href="/">Header Style Five</a></li>
+													<li><a href="/">Header Style Six</a></li>
+													<li><a href="/">Header Style Seven</a></li>
 												</ul>
 											</li>
 										</ul>
 									</li>
-									<li class="dropdown"><a href="#">About</a>
+									<li class="dropdown"><a href="#">À propos</a>
 										<ul>
-											<li><a href="about.html">About Us</a></li>
-											<li><a href="team.html">Team</a></li>
-											<li><a href="testimonial.html">Testimonial</a></li>
+											<li><a href="/a-propos">About Us</a></li>
+											<li><a href="/equipe">Team</a></li>
+											<li><a href="/projets">Testimonial</a></li>
 										</ul>
 									</li>
 									<li class="dropdown"><a href="#">Services</a>
 										<ul>
-											<li><a href="services.html">Services</a></li>
-											<li><a href="service-detail.html">Service Detail</a></li>
+											<li><a href="/services">Services</a></li>
+											<li><a href="/services">Service Detail</a></li>
 										</ul>
 									</li>
-									<li><a href="projects.html">project</a></li>
+									<li><a href="/projets">Réalisations</a></li>
 									<li class="dropdown"><a href="#">Blog</a>
 										<ul>
-											<li><a href="blog.html">Our Blog</a></li>
-											<li><a href="blog-classic.html">Blog Classic</a></li>
-											<li><a href="blog-detail.html">Blog Detail</a></li>
-											<li><a href="not-found.html">Not Found</a></li>
+											<li><a href="/blog">Our Blog</a></li>
+											<li><a href="/blog">Blog Classic</a></li>
+											<li><a href="/blog">Blog Detail</a></li>
+											<li><a href="/">Not Found</a></li>
 										</ul>
 									</li>
-									<li><a href="contact.html">Contact</a></li>
+									<li><a href="/contact">Contact</a></li>
 								</ul>
 							</div>
 							
@@ -109,10 +109,10 @@
 							
 							<!-- Button Box -->
 							<div class="button-box">
-								<a class="btn-style-ten theme-btn btn-item" href="contact.html">
+								<a class="btn-style-ten theme-btn btn-item" href="/contact">
 									<div class="btn-wrap">
-										<span class="text-one">Get A Quote</span>
-										<span class="text-two">Get A Quote</span>
+										<span class="text-one">Obtenir une soumission</span>
+										<span class="text-two">Obtenir une soumission</span>
 									</div>
 								</a>
 							</div>
@@ -134,7 +134,7 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="index.html" title=""><img src="/intime/images/logo-6.png" alt="" title=""></a>
+						<a href="/" title=""><img src="/intime/images/logo-6.png" alt="" title=""></a>
 					</div>
 					
 					<!-- Right Col -->
@@ -149,10 +149,10 @@
 							
 							<!-- Button Box -->
 							<div class="button-box">
-								<a class="btn-style-ten theme-btn btn-item" href="contact.html">
+								<a class="btn-style-ten theme-btn btn-item" href="/contact">
 									<div class="btn-wrap">
-										<span class="text-one">Get A Quote</span>
-										<span class="text-two">Get A Quote</span>
+										<span class="text-one">Obtenir une soumission</span>
+										<span class="text-two">Obtenir une soumission</span>
 									</div>
 								</a>
 							</div>
@@ -174,7 +174,7 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon fas fa-window-close fa-fw"></span></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="index.html"><img src="/intime/images/logo.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="/"><img src="/intime/images/logo.png" alt="" title=""></a></div>
 				<!-- Search -->
 				<div class="search-box">
 					<form method="post" action="contact.html">
@@ -204,15 +204,15 @@
 						<!-- Content Column -->
 						<div class="content-column col-lg-6 col-md-12 col-sm-12">
 							<div class="inner-column">
-								<div class="slider-six_title">When You Make it</div>
-								<h1 class="slider-six_heading">We Make <br> Finance </h1>
-								<div class="slider-six_text">Lorem ipsum dolor sit amet, consectetur <br> adip isicing elit, sed do eiusmod</div>
+								<div class="slider-six_title">Conçu, réalisé, livré</div>
+								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
+								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
 								<!-- Button Box -->
 								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="about.html">
+									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
 										<div class="btn-wrap">
-											<span class="text-one">Learn more</span>
-											<span class="text-two">Learn more</span>
+											<span class="text-one">Découvrir le groupe</span>
+											<span class="text-two">Découvrir le groupe</span>
 										</div>
 									</a>
 								</div>
@@ -244,15 +244,15 @@
 						<!-- Content Column -->
 						<div class="content-column col-lg-6 col-md-12 col-sm-12">
 							<div class="inner-column">
-								<div class="slider-six_title">When You Make it</div>
-								<h1 class="slider-six_heading">We Make <br> Finance </h1>
-								<div class="slider-six_text">Lorem ipsum dolor sit amet, consectetur <br> adip isicing elit, sed do eiusmod</div>
+								<div class="slider-six_title">Conçu, réalisé, livré</div>
+								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
+								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
 								<!-- Button Box -->
 								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="about.html">
+									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
 										<div class="btn-wrap">
-											<span class="text-one">Learn more</span>
-											<span class="text-two">Learn more</span>
+											<span class="text-one">Découvrir le groupe</span>
+											<span class="text-two">Découvrir le groupe</span>
 										</div>
 									</a>
 								</div>
@@ -284,15 +284,15 @@
 						<!-- Content Column -->
 						<div class="content-column col-lg-6 col-md-12 col-sm-12">
 							<div class="inner-column">
-								<div class="slider-six_title">When You Make it</div>
-								<h1 class="slider-six_heading">We Make <br> Finance </h1>
-								<div class="slider-six_text">Lorem ipsum dolor sit amet, consectetur <br> adip isicing elit, sed do eiusmod</div>
+								<div class="slider-six_title">Conçu, réalisé, livré</div>
+								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
+								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
 								<!-- Button Box -->
 								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="about.html">
+									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
 										<div class="btn-wrap">
-											<span class="text-one">Learn more</span>
-											<span class="text-two">Learn more</span>
+											<span class="text-one">Découvrir le groupe</span>
+											<span class="text-two">Découvrir le groupe</span>
 										</div>
 									</a>
 								</div>
@@ -332,8 +332,8 @@
 						<div class="feature-block_four-inner">
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-mail"></div>
-								<h4 class="feature-block_four-heading">Business solution</h4>
-								<div class="feature-block_four-text">Duis aute irure dolor in reprehend in voluptate velit esse</div>
+								<h4 class="feature-block_four-heading">Six filiales spécialisées</h4>
+								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
 							</div>
 						</div>
 					</div>
@@ -343,8 +343,8 @@
 						<div class="feature-block_four-inner">
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-search"></div>
-								<h4 class="feature-block_four-heading">Critical Analysis</h4>
-								<div class="feature-block_four-text">Duis aute irure dolor in reprehend in voluptate velit esse</div>
+								<h4 class="feature-block_four-heading">Intégration verticale</h4>
+								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
 							</div>
 						</div>
 					</div>
@@ -354,8 +354,8 @@
 						<div class="feature-block_four-inner">
 							<div class="feature-block_four-content">
 								<div class="feature-block_four-icon flaticon-business-presentation"></div>
-								<h4 class="feature-block_four-heading">Profit Allocaton</h4>
-								<div class="feature-block_four-text">Duis aute irure dolor in reprehend in voluptate velit esse</div>
+								<h4 class="feature-block_four-heading">Main-d&apos;œuvre interne</h4>
+								<div class="feature-block_four-text">Du chantier à la livraison, six métiers sous une seule marque</div>
 							</div>
 						</div>
 					</div>
@@ -387,7 +387,7 @@
 					<div class="inner-column">
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
-							<div class="sec-title-five_title">When You Make it</div>
+							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">World class financial problem solution</h2>
 						</div>
 						<div class="bold-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt mollit anim id est laborum. </div>
@@ -447,7 +447,7 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-business-presentation"></div>
-							<h4 class="service-block_three-heading"><a href="service-detail.html">Business Planning</a></h4>
+							<h4 class="service-block_three-heading"><a href="/services">Business Planning</a></h4>
 							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
 						</div>
 					</div>
@@ -456,7 +456,7 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-market"></div>
-							<h4 class="service-block_three-heading"><a href="service-detail.html">Marketing Strategy</a></h4>
+							<h4 class="service-block_three-heading"><a href="/services">Marketing Strategy</a></h4>
 							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
 						</div>
 					</div>
@@ -465,7 +465,7 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-profit"></div>
-							<h4 class="service-block_three-heading"><a href="service-detail.html">Business Training</a></h4>
+							<h4 class="service-block_three-heading"><a href="/services">Business Training</a></h4>
 							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
 						</div>
 					</div>
@@ -474,7 +474,7 @@
 					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-business-intelligence"></div>
-							<h4 class="service-block_three-heading"><a href="service-detail.html">Business Management</a></h4>
+							<h4 class="service-block_three-heading"><a href="/services">Business Management</a></h4>
 							<div class="service-block_three-text">Excepteur sint occaecat cupidatat non proident, sunt in culpa officia deserunt </div>
 						</div>
 					</div>
@@ -494,7 +494,7 @@
 					<div class="finance-two_content-inner">
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
-							<div class="sec-title-five_title">When You Make it</div>
+							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Top class financial solution</h2>
 							<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium runt mollit anila</div>
 						</div>
@@ -550,16 +550,16 @@
 					<div class="success-one_content-inner">
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
-							<div class="sec-title-five_title">When You Make it</div>
+							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Lets Make Today Your Business Successful</h2>
 							<div class="sec-title-five_text">Your business will be better forever</div>
 						</div>
 						<!-- Button Box -->
 						<div class="success-one_button-box">
-							<a class="btn-style-ten theme-btn btn-item" href="about.html">
+							<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
 								<div class="btn-wrap">
-									<span class="text-one">Learn more</span>
-									<span class="text-two">Learn more</span>
+									<span class="text-one">Découvrir le groupe</span>
+									<span class="text-two">Découvrir le groupe</span>
 								</div>
 							</a>
 						</div>
@@ -599,7 +599,7 @@
 					<div class="finance-three_content-inner">
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
-							<div class="sec-title-five_title">When You Make it</div>
+							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Lets manage your finance wisely</h2>
 							<div class="sec-title-five_text">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque lau</div>
 						</div>
@@ -717,7 +717,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -733,7 +733,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -749,7 +749,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -765,7 +765,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -781,7 +781,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -797,7 +797,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">Dec 15, 2020 <span>Finance</span></div>
-								<h6 class="news-block_six-heading"><a href="blog-detail.html">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog">Lorem ipsum dolor sit amet con sectetur adipisicing</a></h6>
 							</div>
 						</div>
 					</div>
@@ -879,7 +879,7 @@
 								<div class="footer-widget links-widget">
 									<h4>Links</h4>
 									<ul class="footer-links">
-										<li><a href="#">Home</a></li>
+										<li><a href="#">Accueil</a></li>
 										<li><a href="#">Services</a></li>
 										<li><a href="#">About Us</a></li>
 										<li><a href="#">Testimonial</a></li>
@@ -928,7 +928,7 @@
 											<img src="/intime/images/resource/news-widget-1.jpg" alt="" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="blog-detail.html">Tips and tricks to boost your business today</a></h6>
+										<h6 class="news-widget_title"><a href="/blog">Tips and tricks to boost your business today</a></h6>
 									</div>
 									
 									<!--News Widget Block-->
@@ -937,7 +937,7 @@
 											<img src="/intime/images/resource/news-widget-2.jpg" alt="" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="blog-detail.html">Advising on the administration of human resource</a></h6>
+										<h6 class="news-widget_title"><a href="/blog">Advising on the administration of human resource</a></h6>
 									</div>
 								</div>
 							</div>
@@ -955,7 +955,7 @@
 					<div class="d-flex justify-content-between align-items-center flex-wrap">
 						
 						<!-- Logo Box -->
-						<div class="logo"><a href="index.html"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
+						<div class="logo"><a href="/"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
 
 						<div class="copyright">2023 &copy; All rights reserved by <a href="#">Themexriver</a></div>
 						
