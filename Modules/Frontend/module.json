@@ -1,0 +1,11 @@
+{
+    "name": "Frontend",
+    "alias": "frontend",
+    "description": "Module Frontend Kalystrat — site public B2B holding construction (intégration verticale, 6 filiales, marché Québec). Architecture SEO/AEO/GEO 2026 (hub-and-spoke, schema.org, llms.txt). Thème InTime intégré comme layout Blade fidèle.",
+    "keywords": ["construction", "kalystrat", "holding", "quebec", "seo", "aeo", "geo"],
+    "priority": 0,
+    "providers": [
+        "Modules\\Frontend\\Providers\\FrontendServiceProvider"
+    ],
+    "files": []
+}

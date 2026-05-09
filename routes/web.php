@@ -30,8 +30,6 @@ Route::get('/csrf-token', fn () => response()->json(['csrf' => csrf_token()]))->
 
 // Legal pages moved to Modules/Privacy
 
-// T47-S30 : Thème InTime index-6 servi tel quel depuis public/intime/.
-// Aucune modification du HTML d'origine — copie intégrale .themes/frontend_v3/intime → public/intime.
-// Redirige / → /intime/index-6.html. Le thème complet (about, services, projects, blog, contact)
-// est navigable via les liens internes (chemins relatifs résolvent depuis /intime/).
-Route::redirect('/', '/intime/index-6.html', 302)->name('home');
+// T48-S30 : Routes Frontend (/, /a-propos, /filiales/*, /services, /zones-desservies/*, etc.)
+// gérées par Modules/Frontend/routes/web.php via FrontendServiceProvider.
+// Architecture SEO/AEO/GEO 2026 hub-and-spoke (cf .notes_diverses/architecture_seo.md).

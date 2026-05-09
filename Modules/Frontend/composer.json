@@ -1,0 +1,18 @@
+{
+    "name": "kalystrat/frontend",
+    "description": "Module Frontend Kalystrat — site public B2B holding construction (thème InTime + SEO/AEO/GEO 2026).",
+    "type": "laravel-module",
+    "autoload": {
+        "psr-4": {
+            "Modules\\Frontend\\": "app/",
+            "Modules\\Frontend\\Database\\Factories\\": "database/factories/",
+            "Modules\\Frontend\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [],
+            "aliases": {}
+        }
+    }
+}
