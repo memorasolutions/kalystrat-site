@@ -616,11 +616,10 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T44-S30 : about-area poussée sous le hero — solution élégante user.
-           margin-top négatif fait remonter le fond blanc + shape sous le bandeau hero,
-           padding-top compensatoire garde le contenu visuellement à sa place.
-           La wave SVG du hero termine maintenant sur un fond blanc (about-area dessous).
-           z-index hero > about pour que le bandeau hero recouvre proprement. */
+        /* T44c-S30 : about-area passe sous hero, padding-top adapté à la wave mince (40px).
+           margin-top -200px : about commence 200px avant heroBottom (passe sous hero photo).
+           padding-top 200px : compense pour que le contenu commence visuellement à heroBottom.
+           Avec wave SVG mince (40px), la zone blanche overlap est minime → transition fluide. */
         .hero-wrapper.hero-5 {
             position: relative;
             z-index: 2;
@@ -640,17 +639,18 @@
         .hero-wrapper.hero-5 .hero-slide {
             background-color: #0A1628; /* meme fallback applique sur slides individuels pour calcul contraste WCAG */
         }
-        /* T43-S30 : RESTAURATION wave SVG Construz home-5 (retirée par erreur T40c).
-           Le thème natif a sa courbe blanche en bas du hero pour transition douce vers about-area.
-           Le user a confirmé "comme sur le theme de base" — on rétablit le divider natif. */
+        /* T44c-S30 : Wave SVG MINCE + path révisé pour fusion avec about (qui passe sous hero).
+           Path : courbe oscille entre y=95 et y=110 (15px de profondeur), zone blanche fillée
+           ~10px max → fusion avec fond blanc d'about-area derrière. La wave dessine la courbe
+           SANS créer de rectangle blanc opaque massif. */
         .hero-wrapper.hero-5::after {
             content: "";
             position: absolute;
             bottom: -1px;
             left: 0;
             right: 0;
-            height: 110px;
-            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 110' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,55 C360,110 720,0 1080,55 C1260,82 1350,75 1440,55 L1440,110 L0,110 Z'/></svg>") no-repeat bottom / 100% 100%;
+            height: 40px;
+            background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 40' preserveAspectRatio='none'><path fill='%23FFFFFF' d='M0,30 C360,40 720,20 1080,30 C1260,38 1350,35 1440,30 L1440,40 L0,40 Z'/></svg>") no-repeat bottom / 100% 100%;
             z-index: 4;
             pointer-events: none;
         }
