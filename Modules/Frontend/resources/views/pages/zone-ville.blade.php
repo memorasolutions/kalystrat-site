@@ -68,7 +68,7 @@ $z = $zones[$ville];
                     <h2>Kalystrat à {{ $z['nom'] }}</h2>
                 </div>
                 <div class="text">
-                    <p>Nos six filiales spécialisées interviennent sur les chantiers de la région de {{ $z['nom'] }}, couvrant tous les types de projets : {{ $z['specialites'] }}.</p>
+                    <p>Nos six filiales spécialisées interviennent sur les chantiers de la région de {{ $z['nom'] }}, couvrant tous les types de projets : {{ $z['specialites'] }}.</p>
                     <p>Que vous soyez un particulier qui souhaite rénover, un promoteur immobilier, un gestionnaire commercial ou une organisation publique, notre équipe locale connaît les particularités du marché et de la réglementation municipale.</p>
                 </div>
             </div>
@@ -86,9 +86,14 @@ $z = $zones[$ville];
     </div>
 </section>
 
+@php $zoneContentPath = 'frontend::partials.zone-content.' . $ville; @endphp
+@if(view()->exists($zoneContentPath))
+    @include($zoneContentPath)
+@endif
+
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un projet à {{ $z['nom'] }} ?</h2>
+        <h2 style="margin-bottom:20px">Un projet à {{ $z['nom'] }} ?</h2>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Soumission</span></div></a>
     </div>
 </section>

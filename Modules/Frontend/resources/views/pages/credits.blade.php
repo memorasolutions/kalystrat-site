@@ -32,17 +32,17 @@
                     <p>Le site utilise comme base le thème HTML <strong>InTime</strong> (Bootstrap, jQuery, Owl Carousel) personnalisé pour Gestion Kalystrat Inc.</p>
 
                     <h4 style="margin-top:30px">Photographies</h4>
-                    <p>Photos de placeholder fournies par le thème InTime. Les photos réelles des chantiers et de l'équipe Kalystrat seront ajoutées progressivement.</p>
+                    <p>Photos de placeholder fournies par le thème InTime. Les photos réelles des chantiers et de l’équipe Kalystrat seront ajoutées progressivement.</p>
 
                     <h4 style="margin-top:30px">Polices</h4>
                     <p>Akzidenz Grotesk (Adobe Fonts / Berthold), licence commerciale.</p>
 
                     <h4 style="margin-top:30px">Bibliothèques tierces</h4>
                     <ul style="margin-top:15px">
-                        <li>Laravel 12 (MIT) — framework backend</li>
-                        <li>Bootstrap (MIT) — grille responsive</li>
-                        <li>jQuery (MIT) — interactions JavaScript</li>
-                        <li>Owl Carousel (MIT) — carousels</li>
+                        <li>Laravel 12 (MIT) - framework backend</li>
+                        <li>Bootstrap (MIT) - grille responsive</li>
+                        <li>jQuery (MIT) - interactions JavaScript</li>
+                        <li>Owl Carousel (MIT) - carousels</li>
                     </ul>
 
                     <h4 style="margin-top:30px">Hébergement</h4>

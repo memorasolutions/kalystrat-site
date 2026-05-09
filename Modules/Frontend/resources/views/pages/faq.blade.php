@@ -73,7 +73,7 @@ echo json_encode([
                     <h2>Vos questions, nos réponses</h2>
                 </div>
                 <div class="text">
-                    <p>Cette page rassemble les questions les plus posées par nos clients, partenaires et candidats. Si votre question ne s'y trouve pas, écrivez-nous via la <a href="{{ route('contact') }}">page Contact</a>.</p>
+                    <p>Cette page rassemble les questions les plus posées par nos clients, partenaires et candidats. Si votre question ne s’y trouve pas, écrivez-nous via la <a href="{{ route('contact') }}">page Contact</a>.</p>
                 </div>
             </div>
         </div>
@@ -93,7 +93,7 @@ echo json_encode([
 
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Une question qui n'apparaît pas ici ?</h2>
+        <h2 style="margin-bottom:20px">Une question qui n’apparaît pas ici ?</h2>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Nous écrire</span><span class="text-two">Nous écrire</span></div></a>
     </div>
 </section>

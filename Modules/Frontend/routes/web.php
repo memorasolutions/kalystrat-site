@@ -71,8 +71,11 @@ Route::get('/faq', [PageController::class, 'faq'])->name('faq');
 // Glossaire — Termes construction QC (E-E-A-T)
 Route::get('/glossaire', [PageController::class, 'glossaire'])->name('glossaire');
 
-// Blog — Articles experts (V2 — placeholder V1)
+// Blog — Articles experts
 Route::get('/blog', [PageController::class, 'blogIndex'])->name('blog.index');
+Route::get('/blog/{slug}', [PageController::class, 'blogShow'])
+    ->where('slug', 'pourquoi-construire-multi-logements-quebec-2026|code-construction-quebec-2026-changements|comment-choisir-entrepreneur-construction-qc-2026')
+    ->name('blog.show');
 
 // Pages légales — Privacy, Conditions, Crédits photos, llms.txt
 Route::view('/credits', 'frontend::pages.credits')->name('credits');

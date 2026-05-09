@@ -56,12 +56,17 @@
                     <h2>{{ $filiale['tagline'] }}</h2>
                 </div>
                 <div class="text">
-                    <p>{{ $filiale['nom_legal'] }} est l'une des six filiales spécialisées de Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Notre expertise s'inscrit dans une chaîne complète, de l'excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
+                    <p>{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+@php $contentPath = 'frontend::partials.filiale-content.' . $slug; @endphp
+@if(view()->exists($contentPath))
+    @include($contentPath)
+@endif
 
 <section class="feature-section-four" style="background-color:#f7f7f7;padding:80px 0">
     <div class="auto-container">
@@ -98,7 +103,7 @@
             <div class="col-lg-6 content-column">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <span class="sub-title">Modèle d'affaires</span>
+                        <span class="sub-title">Modèle d’affaires</span>
                         <h3>Comment nous travaillons</h3>
                     </div>
                     <div class="text">

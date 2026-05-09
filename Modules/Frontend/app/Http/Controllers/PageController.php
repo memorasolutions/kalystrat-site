@@ -37,4 +37,35 @@ class PageController extends Controller
     public function faq(): View { return view('frontend::pages.faq'); }
     public function glossaire(): View { return view('frontend::pages.glossaire'); }
     public function blogIndex(): View { return view('frontend::pages.blog-index'); }
+
+    public function blogShow(string $slug): View
+    {
+        $articles = self::ARTICLES;
+        abort_unless(isset($articles[$slug]), 404);
+        return view('frontend::pages.blog-show', [
+            'slug' => $slug,
+            'article' => $articles[$slug],
+        ]);
+    }
+
+    public const ARTICLES = [
+        'pourquoi-construire-multi-logements-quebec-2026' => [
+            'titre' => 'Pourquoi construire des multilogements au Québec en 2026 ?',
+            'extrait' => 'Crise du logement, programmes incitatifs SCHL, choix du format (4-plex à 50+) et avantage de l’intégration verticale Kalystrat.',
+            'date' => '2026-05-09',
+            'categorie' => 'Marché immobilier',
+        ],
+        'code-construction-quebec-2026-changements' => [
+            'titre' => 'Code de construction Québec 2026 : ce que les propriétaires doivent savoir',
+            'extrait' => 'Nouvelles exigences R-49/R-24, étanchéité 1,5 ach, blower door obligatoire, pare-air continu et impact sur les rénovations majeures.',
+            'date' => '2026-05-09',
+            'categorie' => 'Réglementation',
+        ],
+        'comment-choisir-entrepreneur-construction-qc-2026' => [
+            'titre' => 'Comment choisir un entrepreneur en construction au Québec en 2026 ?',
+            'extrait' => 'Vérification RBQ, contrat et cautionnement, solidité financière et avantages d’un partenaire intégré : 4 piliers pour décider en toute confiance.',
+            'date' => '2026-05-09',
+            'categorie' => 'Conseils pratiques',
+        ],
+    ];
 }

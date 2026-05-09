@@ -48,7 +48,7 @@
                     <h2>Excellence technique appliquée à chaque chantier</h2>
                 </div>
                 <div class="text">
-                    <p>L'expertise Kalystrat ne se résume pas à des compétences individuelles : c'est un système intégré qui combine méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales.</p>
+                    <p>L’expertise Kalystrat ne se résume pas à des compétences individuelles : c’est un système intégré qui combine méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales.</p>
                 </div>
             </div>
         </div>

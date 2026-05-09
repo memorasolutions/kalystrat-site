@@ -1,0 +1,20 @@
+<section class="ks-content-section" style="padding:60px 0">
+  <div class="auto-container">
+    <h2>Bâtir pour les citoyens</h2>
+    <p>Les projets municipaux incarnent un engagement envers la communauté, conçus pour <strong>durer plus de 50 ans</strong> et servir des générations entières. Contrairement aux projets privés, leur objectif n’est pas le profit, mais la qualité du service public, la durabilité et l’inclusion. L’<strong>accessibilité universelle</strong> y est non seulement une obligation légale, mais une valeur fondamentale : rampes, signalisation tactile, toilettes adaptées et espaces publics sans obstacle sont intégrés dès la conception. Le design architectural joue aussi un rôle symbolique, reflétant l’identité locale - que ce soit par les matériaux (bois, pierre), les formes ou les espaces publics intégrés. Enfin, les municipalités opèrent sous une <strong>pression budgétaire constante</strong>, financée par les taxes des citoyens, ce qui exige une transparence totale dans l’attribution des contrats, la gestion des coûts et les délais. Chaque décision de construction est donc évaluée non seulement sur des critères techniques, mais aussi sur son impact social, environnemental et financier à long terme.</p>
+  </div>
+</section>
+
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
+  <div class="auto-container">
+    <h2>Cycles longs et exigences contractuelles</h2>
+    <p>Les projets municipaux se distinguent par leurs cycles de réalisation longs, souvent étalés sur plusieurs années, de la planification initiale à la mise en service. Le processus commence invariablement par un <strong>appel d’offres public via le BSDQ</strong>, suivi d’une analyse rigoureuse des soumissions. Les devis techniques peuvent compter entre 100 et 300 pages, rédigés par des architectes et ingénieurs mandatés par la ville, et couvrent chaque détail constructif. La soumission doit être <strong>cautionnée à 10 %</strong> du montant, garantissant la capacité de l’entrepreneur à honorer son offre. Une fois le contrat attribué, un <strong>ingénieur de surveillance indépendant</strong> est souvent nommé pour superviser la conformité des travaux. Les paiements sont soumis à des retenues de 10 %, libérées seulement après réception finale et expiration des garanties. Ces mécanismes, bien que lourds, visent à protéger les fonds publics, assurer la qualité des infrastructures et prévenir les conflits d’intérêts. Pour les entrepreneurs, maîtriser ce cadre contractuel est essentiel pour participer avec succès au marché municipal.</p>
+  </div>
+</section>
+
+<section class="ks-content-section" style="padding:60px 0">
+  <div class="auto-container">
+    <h2>Types de projets municipaux</h2>
+    <p>Les infrastructures municipales couvrent une grande variété de fonctions essentielles au quotidien des citoyens. Les <strong>garages municipaux</strong> abritent les véhicules d’entretien hivernal, les camions de collecte et les équipements lourds, nécessitant des ateliers spécialisés, des fosses de réparation et des systèmes de ventilation pour les gaz d’échappement. Les <strong>casernes de pompiers</strong> intègrent des glissoires, des salles de briefing, des dortoirs et des aires de stationnement chauffées, le tout conçu pour des interventions rapides 24/7. Les <strong>centres de services citoyens</strong> regroupent bureaux administratifs, salles de réunion et guichets accessibles, souvent dans des bâtiments à faible empreinte carbone. Les <strong>usines de filtration d’eau</strong> ou d’épuration relèvent d’ingénierie civile avancée, avec des bassins, des réacteurs biologiques et des systèmes de contrôle automatisés. Enfin, les <strong>arénas et complexes sportifs</strong> combinent grandes portées, isolation acoustique, chauffage radiant et gestion de la glace, tout en accueillant des centaines d’usagers hebdomadaires. Chaque projet municipal est une vitrine de la capacité d’une ville à investir intelligemment pour le bien commun.</p>
+  </div>
+</section>

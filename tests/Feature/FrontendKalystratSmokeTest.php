@@ -47,6 +47,9 @@ dataset('routes_publiques', [
     ['/secteurs/industriel'],
     ['/secteurs/municipal'],
     ['/credits'],
+    ['/blog/pourquoi-construire-multi-logements-quebec-2026'],
+    ['/blog/code-construction-quebec-2026-changements'],
+    ['/blog/comment-choisir-entrepreneur-construction-qc-2026'],
 ]);
 
 it('chaque route publique répond HTTP 200', function (string $url) {

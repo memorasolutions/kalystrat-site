@@ -42,7 +42,7 @@
         <div class="row clearfix">
             <div class="col-lg-12 content-column">
                 <div class="sec-title">
-                    <span class="sub-title">Rejoignez l'équipe</span>
+                    <span class="sub-title">Rejoignez l’équipe</span>
                     <h2>Construire votre carrière dans la construction</h2>
                 </div>
                 <div class="text">
@@ -109,7 +109,7 @@ $metiers = [
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
         <h2 style="margin-bottom:15px">Envoyer votre candidature</h2>
-        <p style="margin-bottom:20px">Courriel : <a href="mailto:carrieres@kalystrat.ca">carrieres@kalystrat.ca</a></p>
+        <p style="margin-bottom:20px">Courriel : <a href="mailto:carrieres@kalystrat.ca">carrieres@kalystrat.ca</a></p>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Postuler maintenant</span><span class="text-two">Postuler</span></div></a>
     </div>
 </section>

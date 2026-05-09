@@ -59,7 +59,7 @@ echo json_encode([
         <div class="row clearfix">
             <div class="col-lg-12 content-column">
                 <div class="sec-title">
-                    <span class="sub-title">Verticaux d'expertise</span>
+                    <span class="sub-title">Verticaux d’expertise</span>
                     <h2>Cinq marchés, six filiales mobilisées</h2>
                 </div>
                 <div class="text">

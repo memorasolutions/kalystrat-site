@@ -55,14 +55,14 @@
                     <h2>Demandez une soumission gratuite</h2>
                 </div>
                 <div class="text">
-                    <p>Une équipe basée à Québec, six filiales spécialisées, un seul interlocuteur. Décrivez-nous votre projet — résidentiel, commercial ou institutionnel — et nous vous répondrons sous 24 heures ouvrables.</p>
+                    <p>Une équipe basée à Québec, six filiales spécialisées, un seul interlocuteur. Décrivez-nous votre projet - résidentiel, commercial ou institutionnel - et nous vous répondrons sous 24 heures ouvrables.</p>
                 </div>
 
                 <div style="margin-top:30px">
                     <h4 style="margin-bottom:15px">Coordonnées</h4>
                     <p><strong>Adresse</strong><br>Québec, QC, Canada</p>
                     <p><strong>Courriel</strong><br><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></p>
-                    <p><strong>Heures d'ouverture</strong><br>Lundi au vendredi, 8 h à 17 h</p>
+                    <p><strong>Heures d’ouverture</strong><br>Lundi au vendredi, 8 h à 17 h</p>
                 </div>
             </div>
 
@@ -89,7 +89,7 @@
                         <div class="form-group" style="margin-bottom:15px">
                             <label for="filiale" style="display:block;margin-bottom:5px;font-weight:600">Filiale concernée</label>
                             <select id="filiale" name="filiale" style="width:100%;padding:10px;border:1px solid #ddd;border-radius:4px">
-                                <option value="">— Sélectionner —</option>
+                                <option value=""> - Sélectionner - </option>
                                 <option value="multi">Plusieurs filiales / projet global</option>
                                 <option value="fondations">Kalystrat Fondations</option>
                                 <option value="structure">Kalystrat Structure</option>

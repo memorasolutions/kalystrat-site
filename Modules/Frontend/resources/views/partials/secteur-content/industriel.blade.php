@@ -1,0 +1,20 @@
+<section class="ks-content-section" style="padding:60px 0">
+  <div class="auto-container">
+    <h2>Construire pour l’industrie</h2>
+    <p>La construction industrielle au Québec exige des solutions techniques robustes pour répondre aux besoins opérationnels exigeants des usines, entrepôts et centres de production. Les bâtiments industriels se caractérisent par <strong>de grandes portées</strong> (souvent de 30 mètres et plus), des hauteurs sous plafond allant de 8 à 15 mètres, et des planchers conçus pour supporter des charges lourdes, notamment celles des ponts roulants, des équipements lourds ou des palettes empilées. De plus, de nombreuses installations fonctionnent <strong>24 heures sur 24, 7 jours sur 7</strong>, ce qui limite les fenêtres de travaux et exige une coordination minutieuse pour éviter les arrêts de production. Les systèmes de plomberie ne transportent pas seulement de l’eau potable, mais aussi des fluides industriels, des produits chimiques ou des eaux usées spécialisées. La ventilation, quant à elle, doit gérer la poussière, les vapeurs ou les températures extrêmes, souvent selon des normes sectorielles précises (ex. : normes ATEX pour les environnements explosifs). Ces défis font de la construction industrielle un domaine hautement spécialisé, où la précision technique prime sur l’esthétique.</p>
+  </div>
+</section>
+
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
+  <div class="auto-container">
+    <h2>Préfabrication et levage spécialisé</h2>
+    <p>Pour répondre à l’échelle et à la complexité des projets industriels, la <strong>préfabrication</strong> est devenue une pratique standard. Les murs, toitures et structures sont souvent assemblés en usine sous forme de panneaux ou de modules, puis transportés sur site pour un montage rapide. La méthode <strong>tilt-up</strong>, utilisant des panneaux de béton coulés au sol puis redressés par grue, est particulièrement populaire pour les murs porteurs d’entrepôts. Les structures en acier, quant à elles, sont pré-assemblées en atelier pour réduire les temps de chantier. Le levage de ces éléments exige des <strong>grues de capacité élevée (100 tonnes et plus)</strong>, pilotées par des équipes certifiées. La coordination logistique est critique : les livraisons doivent être synchronisées au jour, voire à l’heure près, selon une approche just-in-time pour éviter l’encombrement du site. Cette industrialisation de la construction permet de raccourcir les délais, d’améliorer la qualité et de réduire les risques sur site, tout en maintenant des coûts maîtrisés dans un contexte de main-d’œuvre spécialisée limitée.</p>
+  </div>
+</section>
+
+<section class="ks-content-section" style="padding:60px 0">
+  <div class="auto-container">
+    <h2>Types de projets industriels</h2>
+    <p>Le secteur industriel couvre une large gamme de projets, chacun avec des exigences techniques distinctes. Les <strong>entrepôts logistiques et centres de distribution</strong> nécessitent des quais de chargement nombreux, des planchers extrêmement plats (tolérances au millimètre) et des systèmes de manutention automatisés. Les <strong>usines de transformation</strong> - qu’il s’agisse de métaux, de plastiques ou de produits chimiques - intègrent des lignes de production fixes, des gaines techniques et des zones de confinement. Les <strong>ateliers manufacturiers</strong> privilégient la flexibilité spatiale et les hauteurs libres pour accueillir des équipements modulables. Dans le secteur <strong>agroalimentaire</strong>, les bâtiments doivent respecter les normes <strong>HACCP</strong> (Hazard Analysis Critical Control Point) : murs lisses non poreux, joints étanches, drainage sanitaire, et séparation stricte entre zones propres et sales. Tous ces projets partagent une priorité commune : la fonctionnalité opérationnelle, la sécurité des travailleurs et la conformité aux réglementations sectorielles, souvent supervisées par des organismes comme le MAPAQ ou Transports Canada.</p>
+  </div>
+</section>

@@ -58,7 +58,7 @@ echo json_encode([
                     <h2>Tous les métiers de la construction sous une seule marque</h2>
                 </div>
                 <div class="text">
-                    <p>Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l'intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées, garantissant expertise dédiée, contrôle qualité interne et coordination simplifiée pour vos projets résidentiels, commerciaux et institutionnels.</p>
+                    <p>Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l’intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées, garantissant expertise dédiée, contrôle qualité interne et coordination simplifiée pour vos projets résidentiels, commerciaux et institutionnels.</p>
                 </div>
             </div>
         </div>
@@ -88,7 +88,7 @@ echo json_encode([
 
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un service que vous cherchez ?</h2>
+        <h2 style="margin-bottom:20px">Un service que vous cherchez ?</h2>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Obtenir une soumission</span></div></a>
     </div>
 </section>

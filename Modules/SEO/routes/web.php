@@ -82,6 +82,11 @@ Route::middleware('web')->group(function () {
             $sitemap->add(Url::create('/secteurs/'.$slug)->setPriority(0.75)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
 
+        // Articles blog (PageController::ARTICLES, source unique)
+        foreach (array_keys(\Modules\Frontend\Http\Controllers\PageController::ARTICLES) as $slug) {
+            $sitemap->add(Url::create('/blog/'.$slug)->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY));
+        }
+
         if (class_exists(Article::class)) {
             Article::published()->each(function (Article $article) use ($sitemap) {
                 $sitemap->add(

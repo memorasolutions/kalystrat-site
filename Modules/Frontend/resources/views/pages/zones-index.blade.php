@@ -67,7 +67,7 @@ echo json_encode([
                     <h2>Présents partout au Québec</h2>
                 </div>
                 <div class="text">
-                    <p>Notre siège social est à Québec, mais nos chantiers s'étendent de la rive-sud du Saint-Laurent jusqu'au Saguenay et à la grande région de Montréal. Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province.</p>
+                    <p>Notre siège social est à Québec, mais nos chantiers s’étendent de la rive-sud du Saint-Laurent jusqu’au Saguenay et à la grande région de Montréal. Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province.</p>
                 </div>
             </div>
         </div>

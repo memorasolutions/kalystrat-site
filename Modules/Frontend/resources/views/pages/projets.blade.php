@@ -46,7 +46,7 @@
                     <h2>Une sélection de nos chantiers</h2>
                 </div>
                 <div class="text">
-                    <p>Cette galerie présente quelques-uns de nos projets emblématiques : maisons custom, condominiums, bâtiments commerciaux et institutionnels. Les photos détaillées des chantiers Kalystrat seront ajoutées progressivement à mesure que les phases de construction se terminent.</p>
+                    <p>Cette galerie présente quelques-uns de nos projets emblématiques : maisons custom, condominiums, bâtiments commerciaux et institutionnels. Les photos détaillées des chantiers Kalystrat seront ajoutées progressivement à mesure que les phases de construction se terminent.</p>
                     <p style="margin-top:20px"><em>Galerie en cours de constitution. Pour visualiser des projets en cours, contactez-nous.</em></p>
                 </div>
             </div>

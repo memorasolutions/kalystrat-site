@@ -1,21 +1,40 @@
 @extends('frontend::layouts.intime')
 
-@section('title', 'Blog construction et immobilier | Kalystrat')
+@section('title', 'Blog construction et immobilier au Québec | Kalystrat')
+
+@php $articles = \Modules\Frontend\Http\Controllers\PageController::ARTICLES; @endphp
 
 @push('meta')
-<meta name="description" content="Articles d'experts sur la construction au Québec : intégration verticale, marché immobilier, normes techniques, gestion de projet. Blog Kalystrat.">
+<meta name="description" content="Articles d’experts Kalystrat sur la construction et l’immobilier au Québec en 2026 : Code de construction, multilogements, choix d’entrepreneur, intégration verticale.">
 <link rel="canonical" href="{{ url('/blog') }}">
 @endpush
 
 @push('schema')
-<script type="application/ld+json">@php echo json_encode([
+<script type="application/ld+json">@php
+$itemList = [];
+$pos = 1;
+foreach ($articles as $aslug => $a) {
+    $itemList[] = [
+        '@type' => 'ListItem',
+        'position' => $pos++,
+        'item' => [
+            '@type' => 'Article',
+            'headline' => $a['titre'],
+            'url' => url('/blog/' . $aslug),
+            'datePublished' => $a['date'],
+        ],
+    ];
+}
+echo json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'Blog',
     'name' => 'Blog Kalystrat',
     'url' => url('/blog'),
     'description' => 'Articles experts construction et immobilier au Québec',
     'publisher' => ['@type' => 'Organization', 'name' => 'Gestion Kalystrat Inc.', 'url' => 'https://kalystrat.ca'],
-], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+    'blogPost' => $itemList,
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+@endphp</script>
 <script type="application/ld+json">@php echo json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'BreadcrumbList',
@@ -47,41 +66,37 @@
                     <h2>Construction et immobilier au Québec</h2>
                 </div>
                 <div class="text">
-                    <p>Notre blog partage les apprentissages de chantier, les évolutions du marché immobilier québécois, les nouveautés réglementaires et les retours d'expérience de notre équipe. Articles publiés régulièrement par les chargés de projet, l'équipe immobilière et la direction.</p>
-                    <p style="margin-top:20px"><em>Premiers articles à paraître prochainement.</em></p>
+                    <p>Notre blog rassemble les analyses de marché, les évolutions réglementaires et les conseils pratiques pour les promoteurs, propriétaires, investisseurs et candidats. Chaque article est rédigé par notre équipe ou les chargés de projet Kalystrat, à partir des chantiers en cours et des dossiers réels que nous traitons quotidiennement.</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-@php
-$themes = [
-    'Marché immobilier Québec',
-    'Innovation en construction',
-    'Réglementation et conformité',
-    'Études de cas chantier',
-    'Recrutement et formation',
-    'Développement durable',
-];
-@endphp
-
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
     <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Bientôt</span>
-            <h2>Thématiques à venir</h2>
-        </div>
         <div class="row clearfix">
-            @foreach($themes as $t)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px;text-align:center">
-                    <h5>{{ $t }}</h5>
-                    <div style="margin-top:10px;color:#888"><em>Articles à venir</em></div>
+            @foreach($articles as $aslug => $a)
+            <div class="col-lg-4 col-md-6 col-sm-12">
+                <div style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;height:calc(100% - 25px)">
+                    <div style="color:#FFA000;font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px">{{ $a['categorie'] }}</div>
+                    <h4><a href="{{ route('blog.show', $aslug) }}">{{ $a['titre'] }}</a></h4>
+                    <p style="margin:15px 0 20px;color:#555;line-height:1.6">{{ $a['extrait'] }}</p>
+                    <div style="display:flex;justify-content:space-between;align-items:center">
+                        <span style="font-size:13px;color:#888">{{ \Carbon\Carbon::parse($a['date'])->locale('fr_CA')->isoFormat('LL') }}</span>
+                        <a href="{{ route('blog.show', $aslug) }}" class="theme-btn btn-style-ten"><span class="text-one">Lire</span><span class="text-two">Lire</span></a>
+                    </div>
                 </div>
             </div>
             @endforeach
         </div>
+    </div>
+</section>
+
+<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
+    <div class="auto-container">
+        <h2 style="margin-bottom:20px">Vous avez un projet de construction ?</h2>
+        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Discutons-en</span><span class="text-two">Discutons</span></div></a>
     </div>
 </section>
 

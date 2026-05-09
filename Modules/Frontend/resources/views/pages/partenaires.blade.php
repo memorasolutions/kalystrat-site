@@ -45,7 +45,7 @@
                     <h2>Construire ensemble, mieux et plus vite</h2>
                 </div>
                 <div class="text">
-                    <p>L'intégration verticale de Kalystrat n'élimine pas la collaboration : elle la rend plus efficace. Nous travaillons avec un réseau d'architectes, de designers, d'ingénieurs et de promoteurs qui apportent leur expertise spécifique à nos projets.</p>
+                    <p>L’intégration verticale de Kalystrat n’élimine pas la collaboration : elle la rend plus efficace. Nous travaillons avec un réseau d’architectes, de designers, d’ingénieurs et de promoteurs qui apportent leur expertise spécifique à nos projets.</p>
                 </div>
             </div>
         </div>
@@ -80,7 +80,7 @@ $types = [
 
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Devenir partenaire Kalystrat ?</h2>
+        <h2 style="margin-bottom:20px">Devenir partenaire Kalystrat ?</h2>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Discutons-en</span><span class="text-two">Discutons</span></div></a>
     </div>
 </section>

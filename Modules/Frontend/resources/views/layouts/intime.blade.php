@@ -91,7 +91,7 @@
 									</li>
 									<li class="dropdown"><a href="/filiales">Filiales</a>
 										<ul>
-											<li><a href="/filiales">Vue d'ensemble</a></li>
+											<li><a href="/filiales">Vue d’ensemble</a></li>
 											<li><a href="/filiales/fondations">Fondations</a></li>
 											<li><a href="/filiales/structure">Structure</a></li>
 											<li><a href="/filiales/toiture-enveloppe">Toiture et Enveloppe</a></li>
@@ -108,11 +108,14 @@
 											<li><a href="/projets">Projets</a></li>
 										</ul>
 									</li>
-									<li class="dropdown"><a href="/faq">Ressources</a>
+									<li class="dropdown"><a href="/blog">Ressources</a>
 										<ul>
+											<li><a href="/blog">Blog</a></li>
+											<li><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Multilogements 2026</a></li>
+											<li><a href="/blog/code-construction-quebec-2026-changements">Code construction 2026</a></li>
+											<li><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Choisir un entrepreneur</a></li>
 											<li><a href="/faq">FAQ</a></li>
 											<li><a href="/glossaire">Glossaire</a></li>
-											<li><a href="/blog">Blog</a></li>
 											<li><a href="/carrieres">Carrières</a></li>
 										</ul>
 									</li>
@@ -249,7 +252,7 @@
 							<div class="footer-column col-lg-7 col-md-6 col-sm-12">
 								<div class="footer-widget logo-widget">
 									<h4>À propos</h4>
-									<div class="text">Holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée — du chantier à la livraison.</div>
+									<div class="text">Holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
 									<!-- Social Box -->
 									<ul class="footer-six_social-box">
 										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
@@ -320,7 +323,7 @@
 											<img src="/intime/images/resource/news-widget-1.jpg" alt="" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="/blog">Bâtir ensemble : six métiers, une marque</a></h6>
+										<h6 class="news-widget_title"><a href="/blog">Bâtir ensemble : six métiers, une marque</a></h6>
 									</div>
 									
 									<!--News Widget Block-->
@@ -329,7 +332,7 @@
 											<img src="/intime/images/resource/news-widget-2.jpg" alt="" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="/blog">Pénurie de main-d&apos;œuvre : Kalystrat Placement</a></h6>
+										<h6 class="news-widget_title"><a href="/blog">Pénurie de main-d&apos;œuvre : Kalystrat Placement</a></h6>
 									</div>
 								</div>
 							</div>

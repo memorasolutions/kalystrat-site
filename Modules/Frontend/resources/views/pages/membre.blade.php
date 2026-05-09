@@ -89,7 +89,7 @@ $m = $membres[$slug];
                         <p>{{ $m['bio'] }}</p>
                     </div>
                     <div style="margin-top:25px">
-                        <h4 style="margin-bottom:15px">Domaines d'expertise</h4>
+                        <h4 style="margin-bottom:15px">Domaines d’expertise</h4>
                         <ul style="list-style:none;padding:0">
                             @foreach($m['expertises'] as $exp)
                             <li style="padding:8px 0;border-bottom:1px solid #eee">{{ $exp }}</li>
@@ -104,7 +104,7 @@ $m = $membres[$slug];
 
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Découvrez le reste de l'équipe</h2>
+        <h2 style="margin-bottom:20px">Découvrez le reste de l’équipe</h2>
         <a href="{{ route('equipe') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Voir tous les membres</span><span class="text-two">Voir tous</span></div></a>
     </div>
 </section>

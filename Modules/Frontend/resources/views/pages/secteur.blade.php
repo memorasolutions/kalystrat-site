@@ -94,6 +94,11 @@ $s = $secteurs[$slug];
     </div>
 </section>
 
+@php $secteurContentPath = 'frontend::partials.secteur-content.' . $slug; @endphp
+@if(view()->exists($secteurContentPath))
+    @include($secteurContentPath)
+@endif
+
 <section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
     <div class="auto-container">
         <div class="sec-title centered">
@@ -114,7 +119,7 @@ $s = $secteurs[$slug];
 
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un projet {{ strtolower($s['nom']) }} ?</h2>
+        <h2 style="margin-bottom:20px">Un projet {{ strtolower($s['nom']) }} ?</h2>
         <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Soumission</span></div></a>
     </div>
 </section>

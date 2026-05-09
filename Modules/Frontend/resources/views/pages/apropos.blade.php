@@ -61,7 +61,7 @@
                     <h2>Notre vision</h2>
                 </div>
                 <div class="text">
-                    <p>Gestion Kalystrat Inc. est un holding québécois de construction à intégration verticale, fondé sur une ambition claire&nbsp;: devenir, d'ici huit ans, un groupe de référence dans l'industrie de la construction au Québec. Nous exerçons un contrôle complet sur la chaîne de valeur — de l'excavation aux finitions — tout en développant des projets immobiliers et en assurant le placement stratégique de main-d'œuvre qualifiée.</p>
+                    <p>Gestion Kalystrat Inc. est un holding québécois de construction à intégration verticale, fondé sur une ambition claire&nbsp;: devenir, d’ici huit ans, un groupe de référence dans l’industrie de la construction au Québec. Nous exerçons un contrôle complet sur la chaîne de valeur - de l’excavation aux finitions - tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée.</p>
                 </div>
             </div>
         </div>
@@ -80,10 +80,10 @@
             <div class="col-lg-6 content-column">
                 <div class="inner-column">
                     <div class="sec-title">
-                        <h2>Notre fondateur — Ali Salomon</h2>
+                        <h2>Notre fondateur - Ali Salomon</h2>
                     </div>
                     <div class="text">
-                        <p>Visionnaire et entrepreneur chevronné, Ali Salomon incarne l'ADN de Kalystrat. En tant que Président et Directeur Général, il a conçu un modèle d'affaires unique, centré sur la maîtrise intégrale des métiers de la construction. Son expertise opérationnelle, combinée à une rigueur de gestion à la québécoise, positionne Kalystrat comme un acteur structurant dans un secteur en constante évolution.</p>
+                        <p>Visionnaire et entrepreneur chevronné, Ali Salomon incarne l’ADN de Kalystrat. En tant que Président et Directeur Général, il a conçu un modèle d’affaires unique, centré sur la maîtrise intégrale des métiers de la construction. Son expertise opérationnelle, combinée à une rigueur de gestion à la québécoise, positionne Kalystrat comme un acteur structurant dans un secteur en constante évolution.</p>
                     </div>
                 </div>
             </div>
@@ -123,13 +123,13 @@
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
                     <h5>01. Intégration verticale</h5>
-                    <p>De l'excavation à la finition, chaque étape est exécutée en interne — éliminant les marges des sous-traitants et les délais de coordination.</p>
+                    <p>De l’excavation à la finition, chaque étape est exécutée en interne - éliminant les marges des sous-traitants et les délais de coordination.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>02. Main-d'œuvre interne</h5>
-                    <p>Kalystrat Placement Construction fournit la main-d'œuvre à toutes les filiales, garantissant disponibilité et cohérence de formation.</p>
+                    <h5>02. Main-d’œuvre interne</h5>
+                    <p>Kalystrat Placement Construction fournit la main-d’œuvre à toutes les filiales, garantissant disponibilité et cohérence de formation.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
@@ -141,7 +141,7 @@
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
                     <h5>04. Synergies opérationnelles</h5>
-                    <p>Immobilier → Fondations → Structure → Toiture-Enveloppe → Finition → Placement : la chaîne complète fonctionne en boucle.</p>
+                    <p>Immobilier → Fondations → Structure → Toiture-Enveloppe → Finition → Placement : la chaîne complète fonctionne en boucle.</p>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">

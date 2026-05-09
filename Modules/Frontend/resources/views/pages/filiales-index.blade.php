@@ -58,7 +58,7 @@ echo json_encode([
                     <h2>Six métiers, une marque unifiée</h2>
                 </div>
                 <div class="text">
-                    <p>Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l'intégralité de la chaîne de valeur en construction. De l'excavation aux finitions, du développement immobilier au placement de main-d'œuvre, chaque filiale détient une expertise pointue et travaille en synergie avec les autres divisions du groupe.</p>
+                    <p>Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l’intégralité de la chaîne de valeur en construction. De l’excavation aux finitions, du développement immobilier au placement de main-d’œuvre, chaque filiale détient une expertise pointue et travaille en synergie avec les autres divisions du groupe.</p>
                 </div>
             </div>
         </div>
