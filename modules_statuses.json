@@ -38,7 +38,7 @@
     "Widget": true,
     "Privacy": true,
     "ErrorMonitoring": true,
-    "Frontend": true,
+    "Frontend": false,
     "Kalystrat": true,
     "AdminTabler": true
 }
