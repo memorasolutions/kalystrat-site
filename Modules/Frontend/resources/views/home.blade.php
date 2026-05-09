@@ -201,11 +201,11 @@
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Le défi de la construction au Québec en 2026</h2>
 						</div>
-						<div class="bold-text">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire : l’industrie québécoise de la construction traverse une période exigeante. Notre réponse, c’est l’intégration verticale.</div>
+						<div class="bold-text">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire : l’industrie québécoise de la construction traverse une période exigeante. Notre réponse, c’est l’intégration verticale.</div>
 						<ul class="problem-one_list">
 							<li>Six filiales spécialisées qui couvrent toute la chaîne, de l’excavation aux finitions</li>
 							<li>Une équipe interne CCQ formée aux normes Novoclimat 2.0 et au Code 2026</li>
-							<li>Demande captive via Kalystrat Immobilier : stabilité financière et qualité constante</li>
+							<li>Demande captive via Kalystrat Immobilier : stabilité financière et qualité constante</li>
 						</ul>
 
 						<div class="row clearfix">
@@ -286,7 +286,7 @@
 						<div class="service-block_three-inner">
 							<div class="service-block_three-icon flaticon-business-intelligence"></div>
 							<h4 class="service-block_three-heading"><a href="/services">Garantie et entretien</a></h4>
-							<div class="service-block_three-text">Plan GCR pour le neuf, garanties bonifiées sur toiture et fondations, accompagnement post-livraison.</div>
+							<div class="service-block_three-text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil, accompagnement post-livraison.</div>
 						</div>
 					</div>
 
@@ -307,7 +307,7 @@
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Une approche structurée à long terme</h2>
-							<div class="sec-title-five_text">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure : moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</div>
+							<div class="sec-title-five_text">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure : moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</div>
 						</div>
 
 						<div class="row clearfix">
@@ -362,7 +362,7 @@
 						<!-- Sec Title Five -->
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Prêt à bâtir avec une équipe intégrée ?</h2>
+							<h2 class="sec-title-five_heading">Prêt à bâtir avec une équipe intégrée ?</h2>
 							<div class="sec-title-five_text">Votre projet livré dans les délais, sans surprise.</div>
 						</div>
 						<!-- Button Box -->
@@ -450,7 +450,7 @@
 			<div class="sec-title-five">
 				<div class="sec-title-five_title">Ils nous font confiance</div>
 				<h2 class="sec-title-five_heading">Témoignages</h2>
-				<div class="sec-title-five_text">Promoteurs, propriétaires, gestionnaires institutionnels : <br> ce qu’ils retiennent d’un projet livré par Kalystrat.</div>
+				<div class="sec-title-five_text">Promoteurs, propriétaires, gestionnaires institutionnels : <br> ce qu’ils retiennent d’un projet livré par Kalystrat.</div>
 			</div>
 			<div class="inner-container">
 				<div class="testimonial-carousel-two owl-carousel owl-theme">
@@ -542,7 +542,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Code de construction Québec 2026 : ce que les propriétaires doivent savoir</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Code de construction Québec 2026 : ce que les propriétaires doivent savoir</a></h6>
 							</div>
 						</div>
 					</div>
@@ -590,7 +590,7 @@
 							</div>
 							<div class="news-block_six-content">
 								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Pare-air, pare-vapeur, blower door : les nouvelles exigences</a></h6>
+								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Pare-air, pare-vapeur, blower door : les nouvelles exigences</a></h6>
 							</div>
 						</div>
 					</div>
@@ -655,19 +655,19 @@
 				<div class="col-lg-6 col-md-12 col-sm-12">
 					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
 						<h4>Conformité 2026 maîtrisée</h4>
-						<p style="margin-top:12px;line-height:1.7">Le nouveau Code de construction du Québec impose des standards stricts : étanchéité à l’air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire. Nos équipes sont formées à ces exigences depuis 2023. Pour aller plus loin, consultez notre <a href="{{ route('expertise') }}">page Expertise</a> ou notre <a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">article dédié au Code 2026</a>.</p>
+						<p style="margin-top:12px;line-height:1.7">Le nouveau Code de construction du Québec impose des standards stricts : étanchéité à l’air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire. Nos équipes sont formées à ces exigences depuis 2023. Pour aller plus loin, consultez notre <a href="{{ route('expertise') }}">page Expertise</a> ou notre <a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">article dédié au Code 2026</a>.</p>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">
 					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
 						<h4>Demande captive, stabilité financière</h4>
-						<p style="margin-top:12px;line-height:1.7">Notre filiale <a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Ce flux de chantiers internes assure une charge constante aux cinq autres filiales et confère au groupe une stabilité financière rare dans le secteur. Concrètement : moins de pression pour accepter n’importe quel mandat, plus de rigueur dans la sélection des projets externes.</p>
+						<p style="margin-top:12px;line-height:1.7">Notre filiale <a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Ce flux de chantiers internes assure une charge constante aux cinq autres filiales et confère au groupe une stabilité financière rare dans le secteur. Concrètement : moins de pression pour accepter n’importe quel mandat, plus de rigueur dans la sélection des projets externes.</p>
 					</div>
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">
 					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
 						<h4>Garanties légales et licence RBQ active</h4>
-						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises pour chaque catégorie de travaux et offrons les garanties prévues par la loi : Plan de garantie GCR pour le neuf résidentiel, garantie légale prévue au Code civil du Québec pour les vices structurels. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
+						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises pour chaque catégorie de travaux et offrons les garanties prévues par la loi : Plan de garantie GCR pour le neuf résidentiel, garantie légale prévue au Code civil du Québec pour les vices structurels. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
 					</div>
 				</div>
 			</div>

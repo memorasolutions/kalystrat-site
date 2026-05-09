@@ -83,6 +83,20 @@ $piliers = [
     </div>
 </section>
 
+<section class="ks-content-section" style="padding:60px 0">
+    <div class="auto-container">
+        <h2>L’avantage de l’intégration verticale au quotidien</h2>
+        <p style="line-height:1.7">L’intégration verticale n’est pas un slogan. Sur un chantier Kalystrat, elle se traduit concrètement par six gestes opérationnels qui transforment la façon dont un projet est exécuté. Premier geste : un seul contrat, un seul calendrier maître. Le client signe un mandat unique avec Gestion Kalystrat Inc. ; la holding répartit ensuite les tâches entre les six filiales selon une séquence pensée en amont. Deuxième geste : la coordination interquipes se passe en réunion hebdomadaire, pas par courriels en cascade entre sous-traitants étrangers les uns aux autres. Troisième geste : nos compagnons CCQ travaillent ensemble sur d’autres chantiers, ils se connaissent, ce qui réduit les frictions et accélère le rythme. Quatrième geste : les standards qualité sont définis une fois au niveau du holding et appliqués partout. Cinquième geste : la chaîne d’approvisionnement est mutualisée entre les filiales pour des achats groupés. Sixième geste : un chargé de projet unique pilote tout, ce qui élimine les zones grises de responsabilité.</p>
+    </div>
+</section>
+
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
+    <div class="auto-container">
+        <h2>Reconnaissance sur le chantier et au-delà</h2>
+        <p style="line-height:1.7">Notre marketing terrain prolonge l’expérience client au-delà du contrat. Chacun de nos véhicules de travail porte le lettrage Kalystrat. Sur chaque chantier, un panneau de grande visibilité identifie le projet comme « réalisé par le groupe Kalystrat » et présente l’ensemble des filiales mobilisées. Nos équipements de protection individuelle (casques, vestes, accessoires de sécurité) arborent la marque et le logo Kalystrat, ce qui renforce l’unité visuelle des chantiers et la sécurité des travailleurs. Nous participons aux salons professionnels comme le Salon national de l’habitation et le Congrès de l’APCHQ pour entretenir les relations avec architectes, courtiers et promoteurs. Nos fiches Google Business Profile sont distinctes pour chaque filiale, permettant aux clients locaux de trouver précisément l’expertise qu’ils cherchent.</p>
+    </div>
+</section>
+
 <section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
     <div class="auto-container">
         <h2 style="margin-bottom:20px">Discutez avec nos experts</h2>

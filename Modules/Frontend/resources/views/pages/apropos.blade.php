@@ -184,14 +184,14 @@
         </div>
         <div class="row clearfix">
             <div class="col-lg-12">
-                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif réunira cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers sont déjà nommés et trois sièges sont en cours de recrutement.</p>
+                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif réunira cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers sont déjà nommés et trois sièges sont en cours de recrutement.</p>
             </div>
             <div class="team-block col-lg-6 col-md-6 col-sm-12">
                 <div class="inner-box">
                     <figure class="image"><img src="/intime/images/resource/team-1.jpg" alt="Jacques Jobidon, conseiller en droit de la construction"></figure>
                     <div class="content">
                         <h4>Jacques Jobidon</h4>
-                        <span>Conseiller — Droit des affaires et de la construction</span>
+                        <span>Conseiller - Droit des affaires et de la construction</span>
                     </div>
                 </div>
             </div>
@@ -200,7 +200,7 @@
                     <figure class="image"><img src="/intime/images/resource/team-2.jpg" alt="Perry Wong, spécialiste immobilier québécois"></figure>
                     <div class="content">
                         <h4>Perry Wong</h4>
-                        <span>Conseiller — Immobilier québécois</span>
+                        <span>Conseiller - Immobilier québécois</span>
                     </div>
                 </div>
             </div>
@@ -232,19 +232,19 @@
         <div class="row clearfix">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
-                    <h4>Phase 1 — Consolidation</h4>
-                    <p style="margin-top:12px;line-height:1.7">Établir les fondations opérationnelles du groupe : incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion (comptabilité, RH, marketing, TI), premières relations avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
+                    <h4>Phase 1 - Consolidation</h4>
+                    <p style="margin-top:12px;line-height:1.7">Établir les fondations opérationnelles du groupe : incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion (comptabilité, RH, marketing, TI), premières relations avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
-                    <h4>Phase 2 — Expansion</h4>
-                    <p style="margin-top:12px;line-height:1.7">Diversifier les revenus et augmenter le volume : développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
+                    <h4>Phase 2 - Expansion</h4>
+                    <p style="margin-top:12px;line-height:1.7">Diversifier les revenus et augmenter le volume : développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
                 </div>
             </div>
         </div>
         <div style="text-align:center;margin-top:20px">
-            <p style="font-size:14px;color:#888"><em>Source : plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
+            <p style="font-size:14px;color:#888"><em>Source : plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
         </div>
     </div>
 </section>

@@ -110,13 +110,13 @@ echo json_encode([
         </div>
         <div class="row clearfix">
             <div class="col-lg-12">
-                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif de Kalystrat est conçu pour réunir cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, et immobilier. Deux sièges sont actuellement pourvus, trois autres sont en cours de recrutement.</p>
+                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif de Kalystrat est conçu pour réunir cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, et immobilier. Deux sièges sont actuellement pourvus, trois autres sont en cours de recrutement.</p>
             </div>
 
             <div class="team-block col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #FFA000">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller — Droit des affaires</span>
+                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Droit des affaires</span>
                         <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}">Jacques Jobidon</a></h4>
                         <span style="color:#666">Avocat spécialisé en droit de la construction et des sociétés</span>
                         <div style="margin-top:15px;line-height:1.6">Apporte son expertise sur les contrats, les litiges et la conformité réglementaire des chantiers du groupe.</div>
@@ -127,7 +127,7 @@ echo json_encode([
             <div class="team-block col-lg-6 col-md-12 col-sm-12">
                 <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #FFA000">
                     <div class="content">
-                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller — Immobilier</span>
+                        <span style="font-size:13px;color:#FFA000;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Immobilier</span>
                         <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'perry-wong') }}">Perry Wong</a></h4>
                         <span style="color:#666">Spécialiste du marché immobilier québécois</span>
                         <div style="margin-top:15px;line-height:1.6">Conseille Kalystrat Immobilier sur les acquisitions, les analyses de marché et le développement de projets résidentiels et locatifs.</div>
@@ -141,19 +141,19 @@ echo json_encode([
                     <div class="col-lg-4 col-md-12">
                         <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
                             <strong>Construction et ingénierie</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : expert sénior de l’industrie de la construction au Québec.</span>
+                            <span style="color:#666;font-size:14px">Profil recherché : expert sénior de l’industrie de la construction au Québec.</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
                             <strong>Financement et investissement</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : professionnel en financement d’entreprise et structuration financière.</span>
+                            <span style="color:#666;font-size:14px">Profil recherché : professionnel en financement d’entreprise et structuration financière.</span>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-12">
                         <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
                             <strong>Ressources humaines</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : spécialiste du recrutement et de la gestion de la main-d’œuvre en construction.</span>
+                            <span style="color:#666;font-size:14px">Profil recherché : spécialiste du recrutement et de la gestion de la main-d’œuvre en construction.</span>
                         </div>
                     </div>
                 </div>
