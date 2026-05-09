@@ -616,11 +616,27 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T43-S30 : RESTAURATION Construz home-5 natif (retrait T36→T42 expérimentations).
-           Hero-style5 retrouve son padding natif Construz. About-area utilise sa classe .space
-           native (100px top+bottom). Wave SVG et card flottante retirées. Le thème Construz
-           original gère son design comme prévu sans nos overrides. */
-        /* (aucune override hero-style5 ni about-thumb5 ni hero-about-divider) */
+        /* T44-S30 : about-area poussée sous le hero — solution élégante user.
+           margin-top négatif fait remonter le fond blanc + shape sous le bandeau hero,
+           padding-top compensatoire garde le contenu visuellement à sa place.
+           La wave SVG du hero termine maintenant sur un fond blanc (about-area dessous).
+           z-index hero > about pour que le bandeau hero recouvre proprement. */
+        .hero-wrapper.hero-5 {
+            position: relative;
+            z-index: 2;
+        }
+        .about-area-5 {
+            margin-top: -200px !important;
+            padding-top: 200px !important;
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 991px) {
+            .about-area-5 {
+                margin-top: -120px !important;
+                padding-top: 120px !important;
+            }
+        }
         .hero-wrapper.hero-5 .hero-slide {
             background-color: #0A1628; /* meme fallback applique sur slides individuels pour calcul contraste WCAG */
         }
