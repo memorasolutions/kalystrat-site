@@ -160,6 +160,21 @@
     </div>
 </section>
 
+<!-- Structure organisationnelle -->
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <span class="sub-title">Structure organisationnelle</span>
+            <h2>Une présidence forte, six directions opérationnelles</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-12">
+                <p style="line-height:1.7">Gestion Kalystrat Inc. est dirigée par son fondateur Ali Salomon, Président et Directeur Général, à qui chaque direction de filiale relève directement. Cette structure « gouvernance centralisée, exécution décentralisée » permet à la holding de garder le cap stratégique tout en laissant à chaque filiale l’autonomie nécessaire pour livrer ses chantiers. Les fonctions transverses (comptabilité, ressources humaines, juridique, marketing, technologies de l’information) sont mutualisées au niveau de la société mère, ce qui réduit les frais généraux et harmonise les pratiques. Pour découvrir l’organigramme complet, visitez la <a href="{{ route('equipe') }}">page Équipe</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Conseil consultatif -->
 <section class="team-section">
     <div class="auto-container">
@@ -168,12 +183,15 @@
             <h2>Conseil consultatif</h2>
         </div>
         <div class="row clearfix">
+            <div class="col-lg-12">
+                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif réunira cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers sont déjà nommés et trois sièges sont en cours de recrutement.</p>
+            </div>
             <div class="team-block col-lg-6 col-md-6 col-sm-12">
                 <div class="inner-box">
-                    <figure class="image"><img src="/intime/images/resource/team-1.jpg" alt="Jacques Jobidon, expert droit de la construction"></figure>
+                    <figure class="image"><img src="/intime/images/resource/team-1.jpg" alt="Jacques Jobidon, conseiller en droit de la construction"></figure>
                     <div class="content">
                         <h4>Jacques Jobidon</h4>
-                        <span>Expert en droit de la construction</span>
+                        <span>Conseiller — Droit des affaires et de la construction</span>
                     </div>
                 </div>
             </div>
@@ -182,10 +200,51 @@
                     <figure class="image"><img src="/intime/images/resource/team-2.jpg" alt="Perry Wong, spécialiste immobilier québécois"></figure>
                     <div class="content">
                         <h4>Perry Wong</h4>
-                        <span>Spécialiste en immobilier québécois</span>
+                        <span>Conseiller — Immobilier québécois</span>
                     </div>
                 </div>
             </div>
+            <div class="col-lg-12" style="margin-top:30px">
+                <h4 style="margin-bottom:15px">Sièges en cours de recrutement</h4>
+                <div class="row clearfix">
+                    <div class="col-lg-4 col-md-12">
+                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Construction et ingénierie</strong><br><span style="color:#666;font-size:14px">Expert sénior de l’industrie au Québec.</span></div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Financement et investissement</strong><br><span style="color:#666;font-size:14px">Professionnel en financement d’entreprise.</span></div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Ressources humaines</strong><br><span style="color:#666;font-size:14px">Spécialiste recrutement main-d’œuvre construction.</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stratégie de croissance -->
+<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
+    <div class="auto-container">
+        <div class="sec-title centered">
+            <span class="sub-title">Stratégie de croissance</span>
+            <h2>Deux phases pour bâtir un groupe de référence</h2>
+        </div>
+        <div class="row clearfix">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                    <h4>Phase 1 — Consolidation</h4>
+                    <p style="margin-top:12px;line-height:1.7">Établir les fondations opérationnelles du groupe : incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion (comptabilité, RH, marketing, TI), premières relations avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+                    <h4>Phase 2 — Expansion</h4>
+                    <p style="margin-top:12px;line-height:1.7">Diversifier les revenus et augmenter le volume : développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin-top:20px">
+            <p style="font-size:14px;color:#888"><em>Source : plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
         </div>
     </div>
 </section>

@@ -55,7 +55,7 @@
                     <h2>Demandez une soumission gratuite</h2>
                 </div>
                 <div class="text">
-                    <p>Une équipe basée à Québec, six filiales spécialisées, un seul interlocuteur. Décrivez-nous votre projet - résidentiel, commercial ou institutionnel - et nous vous répondrons sous 24 heures ouvrables.</p>
+                    <p>Une équipe basée à Québec, six filiales spécialisées, un chargé de projet unique pour piloter votre dossier. Décrivez-nous votre projet (résidentiel, commercial ou institutionnel) et nous vous répondrons sous 24 heures ouvrables.</p>
                 </div>
 
                 <div style="margin-top:30px">

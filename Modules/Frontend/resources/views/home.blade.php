@@ -412,7 +412,7 @@
 						<div class="sec-title-five">
 							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
 							<h2 class="sec-title-five_heading">Pourquoi nous confier votre projet</h2>
-							<div class="sec-title-five_text">Sur un chantier Kalystrat, vous traitez avec un seul interlocuteur qui pilote la totalité des corps de métier. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</div>
+							<div class="sec-title-five_text">Sur un chantier Kalystrat, votre chargé de projet pilote la totalité des corps de métier en s’appuyant sur les six directions de filiales du groupe. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</div>
 						</div>
 
 						<!-- Finance Three Block -->
@@ -428,8 +428,8 @@
 						<div class="finance-three_block">
 							<div class="finance-three_block-inner">
 								<div class="finance-three_block-icon flaticon-market"></div>
-								<h4 class="finance-three_heading">Garanties prolongées et conformité</h4>
-								<div class="finance-three_text">Plan GCR pour le neuf résidentiel, garanties bonifiées sur certains éléments (30 ans toiture, 10 ans fondations), licence RBQ active, équipes formées Code 2026.</div>
+								<h4 class="finance-three_heading">Garanties légales et conformité</h4>
+								<div class="finance-three_text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil du Québec pour les vices structurels, licence RBQ active, équipes formées au Code 2026 et aux normes Novoclimat.</div>
 							</div>
 						</div>
 
@@ -641,7 +641,7 @@
 				<div class="col-lg-12 content-column">
 					<div class="sec-title centered">
 						<span class="sub-title">Construire avec Kalystrat</span>
-						<h2>Une marque, six expertises, un seul interlocuteur</h2>
+						<h2>Une marque, six expertises, un chargé de projet unique</h2>
 					</div>
 				</div>
 			</div>
@@ -666,8 +666,8 @@
 				</div>
 				<div class="col-lg-6 col-md-12 col-sm-12">
 					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
-						<h4>Garanties prolongées et licence RBQ active</h4>
-						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises et offrons les garanties obligatoires (Plan de garantie GCR pour le neuf résidentiel, garantie légale 5 ans pour les vices structurels). Sur certains éléments, nous bonifions les couvertures : 30 ans sur les membranes de toiture, 10 ans sur les fondations. Vérifiez notre licence directement sur <em>rbq.gouv.qc.ca</em>.</p>
+						<h4>Garanties légales et licence RBQ active</h4>
+						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises pour chaque catégorie de travaux et offrons les garanties prévues par la loi : Plan de garantie GCR pour le neuf résidentiel, garantie légale prévue au Code civil du Québec pour les vices structurels. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
 					</div>
 				</div>
 			</div>
