@@ -636,5 +636,88 @@
 		</div>
 	</section>
 
+	<!-- Pourquoi Kalystrat - section riche SEO -->
+	<section class="ks-content-section" style="padding:80px 0;background:#fff">
+		<div class="auto-container">
+			<div class="row clearfix">
+				<div class="col-lg-12 content-column">
+					<div class="sec-title centered">
+						<span class="sub-title">Construire avec Kalystrat</span>
+						<h2>Une marque, six expertises, un seul interlocuteur</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row clearfix">
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+						<h4>Intégration verticale réelle</h4>
+						<p style="margin-top:12px;line-height:1.7">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales (<a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a>) collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité et accélère la prise de décision.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+						<h4>Conformité 2026 maîtrisée</h4>
+						<p style="margin-top:12px;line-height:1.7">Le nouveau Code de construction du Québec impose des standards stricts : étanchéité à l’air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire. Nos équipes sont formées à ces exigences depuis 2023. Pour aller plus loin, consultez notre <a href="{{ route('expertise') }}">page Expertise</a> ou notre <a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">article dédié au Code 2026</a>.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+						<h4>Demande captive, stabilité financière</h4>
+						<p style="margin-top:12px;line-height:1.7">Notre filiale <a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Ce flux de chantiers internes assure une charge constante aux cinq autres filiales et confère au groupe une stabilité financière rare dans le secteur. Concrètement : moins de pression pour accepter n’importe quel mandat, plus de rigueur dans la sélection des projets externes.</p>
+					</div>
+				</div>
+				<div class="col-lg-6 col-md-12 col-sm-12">
+					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #FFA000">
+						<h4>Garanties prolongées et licence RBQ active</h4>
+						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises et offrons les garanties obligatoires (Plan de garantie GCR pour le neuf résidentiel, garantie légale 5 ans pour les vices structurels). Sur certains éléments, nous bonifions les couvertures : 30 ans sur les membranes de toiture, 10 ans sur les fondations. Vérifiez notre licence directement sur <em>rbq.gouv.qc.ca</em>.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Notre approche en 4 étapes -->
+	<section class="ks-content-section" style="padding:80px 0;background:#f7f7f7">
+		<div class="auto-container">
+			<div class="sec-title centered">
+				<span class="sub-title">Comment nous travaillons</span>
+				<h2>Notre approche en quatre étapes</h2>
+			</div>
+			<div class="row clearfix">
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
+						<div style="font-size:48px;font-weight:700;color:#FFA000;margin-bottom:10px">01</div>
+						<h5>Évaluation et soumission</h5>
+						<p style="margin-top:10px;line-height:1.6;color:#555">Visite du site, prise de mesures, étude des plans s’ils existent, recommandations techniques et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
+						<div style="font-size:48px;font-weight:700;color:#FFA000;margin-bottom:10px">02</div>
+						<h5>Conception et permis</h5>
+						<p style="margin-top:10px;line-height:1.6;color:#555">Coordination avec architectes et ingénieurs au besoin, modélisation BIM pour les projets commerciaux et institutionnels, dépôt du dossier complet à la municipalité.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
+						<div style="font-size:48px;font-weight:700;color:#FFA000;margin-bottom:10px">03</div>
+						<h5>Exécution intégrée</h5>
+						<p style="margin-top:10px;line-height:1.6;color:#555">Mobilisation de nos six filiales selon un calendrier serré, supervision par un chargé de projet unique, contrôle qualité à chaque étape, communication hebdomadaire avec le client.</p>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6 col-sm-12">
+					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
+						<div style="font-size:48px;font-weight:700;color:#FFA000;margin-bottom:10px">04</div>
+						<h5>Livraison et garanties</h5>
+						<p style="margin-top:10px;line-height:1.6;color:#555">Inspection conjointe, remise des documents (plans tels que construits, manuels d’entretien, certificats), activation du Plan de garantie GCR, accompagnement post-livraison pour les ajustements mineurs.</p>
+					</div>
+				</div>
+			</div>
+			<div style="text-align:center;margin-top:30px">
+				<a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Démarrer un projet</span><span class="text-two">Démarrer</span></div></a>
+			</div>
+		</div>
+	</section>
+
 	<!-- Footer -->
 @endsection

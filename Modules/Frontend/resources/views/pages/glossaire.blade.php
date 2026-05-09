@@ -24,6 +24,16 @@ $termes = [
     ['t' => 'CPE', 'd' => "Centre de la petite enfance. Garderies subventionnées au Québec. Construction réglementée par le ministère de la Famille."],
     ['t' => 'EPI', 'd' => "Équipement de protection individuelle. Casque, lunettes, gants, harnais, chaussures de sécurité — exigés sur tout chantier de construction."],
     ['t' => 'Compagnon', 'd' => "Travailleur certifié dans un métier de la construction (charpentier, briqueteur, etc.) après avoir complété un nombre d'heures requis comme apprenti."],
+    ['t' => 'Tirage de joints', 'd' => "Technique de finition consistant à combler et lisser les joints entre panneaux de gypse à l'aide de pâte et de ruban. La norme niveau 5 exige une surface parfaitement lisse, même sous éclairage rasant."],
+    ['t' => 'Solive', 'd' => "Pièce horizontale en bois ou en acier soutenant le plancher ou le plafond, posée perpendiculairement aux poutres porteuses. Espacement standard 16 pouces centre à centre en résidentiel."],
+    ['t' => 'Lambourde', 'd' => "Petite pièce de bois fixée perpendiculairement aux solives pour supporter un plancher fini (plancher flottant, carrelage). Assure une surface plane et régulière."],
+    ['t' => 'Solage', 'd' => "Fondation périphérique en béton armé située sous le niveau du sol, supportant les murs porteurs d'un bâtiment et transférant les charges au sol stable. Profondeur minimale 1,5 m au QC pour passer sous la ligne de gel."],
+    ['t' => 'Soumission verbale', 'd' => "Offre orale d'un entrepreneur pour réaliser des travaux. Non contraignante ni recevable devant les tribunaux québécois : la Loi sur la protection du consommateur exige un contrat écrit pour tout chantier résidentiel de plus de 200 $."],
+    ['t' => 'Vice caché vs apparent', 'd' => "Un vice caché est un défaut non visible lors de la réception des travaux, rendant l'ouvrage impropre à son usage (article 1726 C.c.Q.). Un vice apparent est observable par un propriétaire diligent et doit être signalé immédiatement pour engager la responsabilité du constructeur."],
+    ['t' => 'Hypothèque légale de construction', 'd' => "Garantie automatique permettant aux entrepreneurs, sous-traitants et fournisseurs non payés d'inscrire un droit sur l'immeuble (article 2724 C.c.Q.). Délai d'inscription : 30 jours après la fin des travaux."],
+    ['t' => 'Bardage métallique', 'd' => "Revêtement extérieur en tôle d'acier ou d'aluminium, souvent utilisé en construction commerciale ou industrielle au Québec pour sa durabilité et sa résistance aux intempéries. Durée de vie 40-50 ans."],
+    ['t' => 'HRV/ERV', 'd' => "Heat Recovery Ventilator (HRV) ou Energy Recovery Ventilator (ERV) : ventilateur récupérateur de chaleur ou d'énergie. Obligatoire dans toute maison neuve au QC depuis 2022 (norme CSA F326)."],
+    ['t' => 'CCQ catégorie compagnon', 'd' => "Statut professionnel du travailleur qui a complété son apprentissage (1500 à 8000 heures selon le métier) et réussi l'examen de qualification provincial. Permet d'exercer en autonomie sur les chantiers."],
 ];
 @endphp
 
