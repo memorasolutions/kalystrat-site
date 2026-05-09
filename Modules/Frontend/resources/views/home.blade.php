@@ -234,10 +234,10 @@
     {{-- ==============================
          Section À propos – présentation Kalystrat et Ali Salomon
          ============================== --}}
-    {{-- T36c-S30 : zéro padding-top + align-items-start sur about-area pour coller la section à la wave hero (demande user 5×).
-         CAUSE RACINE FINALE : `align-items-center` du .row centrait verticalement les 2 colonnes — l'image gauche
-         étant plus haute que le contenu droit (sub-title + h2 + p), le contenu droit était décalé vers le bas,
-         créant un espace blanc visuel AU-DESSUS du label "À PROPOS DE KALYSTRAT" malgré padding-top:0. --}}
+    {{-- T42-S30 : Option B — Bandeau navy 60px (40 mobile) + ligne gold 2px (accent brand) entre hero et about.
+         Pattern bento contrôlé + profondeur cartes recommandé pp_search Awwwards 2026 B2B construction premium. --}}
+    <div class="ks-hero-about-divider" aria-hidden="true"></div>
+
     <div class="about-area-5" style="padding-top: 0; padding-bottom: 80px;">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
             <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">

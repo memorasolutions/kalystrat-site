@@ -616,31 +616,53 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
-        /* T40e-S30 : Option A — Photo about-thumb chevauche le hero (overlap negative margin).
-           Pattern UX/UI 2026 (asymétrie + superposition mesurée + profondeur légère). Le hero
-           garde son padding-bottom 100px pour ancrer la photo qui remonte de -120px. La photo
-           crée le pont visuel hero→about, élimine le besoin de divider décoratif (wave/gradient). */
+        /* T42-S30 : Option B (UX/UI 2026 pp_search Awwwards) — Bento contrôlé + card photo flottante
+           + bandeau navy + accent gold + respiration texte. Recommandé B2B construction premium. */
         .hero-wrapper.hero-5 .hero-style5 {
-            padding: 140px 0 100px !important;
+            padding: 160px 0 140px !important; /* respiration hero */
         }
         @media (max-width: 991px) {
             .hero-wrapper.hero-5 .hero-style5 {
-                padding: 100px 0 60px !important;
+                padding: 110px 0 80px !important;
             }
         }
-        /* Photo about-thumb chevauche hero (-120px desktop, 0 mobile) + ombre subtile profondeur.
-           Position relative + z-index 5 pour passer au-dessus de la photo hero.
-           Scope strict : .col-xl-5 > .about-thumb5 uniquement (la 2e .about-thumb5 dans .about-wrap5
-           ne doit PAS chevaucher — c'est un autre élément). */
+
+        /* Bandeau navy entre hero et about — accent gold en bas (brand) */
+        .ks-hero-about-divider {
+            background-color: var(--ks-navy);
+            height: 60px;
+            border-bottom: 2px solid var(--ks-gold);
+            position: relative;
+            z-index: 1;
+        }
+        @media (max-width: 991px) {
+            .ks-hero-about-divider {
+                height: 40px;
+            }
+        }
+
+        /* Photo about-thumb : card flottante avec shadow forte qui chevauche le bandeau navy + hero */
         @media (min-width: 992px) {
             .about-area-5 .col-xl-5 > .about-thumb5 {
-                margin-top: -120px !important;
+                margin-top: -180px !important;
                 position: relative;
                 z-index: 5;
             }
             .about-area-5 .col-xl-5 > .about-thumb5 .about-img-1 {
-                box-shadow: 0 24px 60px rgba(10, 22, 40, 0.18);
-                border-radius: 0.5rem;
+                box-shadow: 0 32px 80px rgba(10, 22, 40, 0.25);
+                border-radius: 12px;
+                overflow: hidden;
+                margin-bottom: 32px !important;
+            }
+            /* Texte droit : respiration 100px pour aérer */
+            .about-area-5 .col-xl-6 .about-wrap5 .title-area {
+                padding-top: 100px;
+            }
+        }
+        @media (max-width: 991px) {
+            .about-area-5 .col-xl-5 > .about-thumb5 .about-img-1 {
+                box-shadow: 0 16px 40px rgba(10, 22, 40, 0.18);
+                border-radius: 12px;
                 overflow: hidden;
             }
         }
