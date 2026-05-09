@@ -7,11 +7,17 @@ namespace Modules\Frontend\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\View\View;
+use Modules\Frontend\Http\Controllers\FilialeController;
 
 class PageController extends Controller
 {
-    public function apropos(): View { return view('frontend::pages.apropos'); }
-    public function services(): View { return view('frontend::pages.services'); }
+    public function apropos(): View
+    {
+        return view('frontend::pages.apropos', [
+            'filiales' => FilialeController::FILIALES,
+        ]);
+    }
+    public function services(): View { return view('frontend::pages.services', ['filiales' => FilialeController::FILIALES]); }
     public function zonesIndex(): View { return view('frontend::pages.zones-index'); }
     public function zonesShow(string $ville): View { return view('frontend::pages.zone-ville', compact('ville')); }
     public function secteursIndex(): View { return view('frontend::pages.secteurs-index'); }
