@@ -234,14 +234,16 @@
     {{-- ==============================
          Section À propos – présentation Kalystrat et Ali Salomon
          ============================== --}}
-    {{-- T36-S30 : zéro padding-top sur about-area pour coller la section à la wave hero (demande user 4×).
-         space-bottom retiré aussi car la section suivante why-area-3 a son propre padding-top. --}}
+    {{-- T36c-S30 : zéro padding-top + align-items-start sur about-area pour coller la section à la wave hero (demande user 5×).
+         CAUSE RACINE FINALE : `align-items-center` du .row centrait verticalement les 2 colonnes — l'image gauche
+         étant plus haute que le contenu droit (sub-title + h2 + p), le contenu droit était décalé vers le bas,
+         créant un espace blanc visuel AU-DESSUS du label "À PROPOS DE KALYSTRAT" malgré padding-top:0. --}}
     <div class="about-area-5" style="padding-top: 0; padding-bottom: 80px;">
         <div class="about-bg-shape5-1 shape-mockup" data-top="-170px" data-right="0" aria-hidden="true">
             <img src="{{ asset('assets/construz-new/img/bg/about-bg-shape5-1.png?v=2') }}" loading="lazy" decoding="async" alt="">
         </div>
         <div class="container">
-            <div class="row gx-100 align-items-center">
+            <div class="row gx-100 align-items-start">
                 <div class="col-xl-5">
                     <div class="about-thumb5 mb-40 mb-xl-0">
                         <div class="about-img-1 mb-40">

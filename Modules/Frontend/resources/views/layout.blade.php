@@ -616,6 +616,17 @@
             position: relative;
             background-color: #0A1628; /* fallback navy pour audits a11y (les slides ont bg-image en inline mais pas de bg-color) */
         }
+        /* T40-S30 : réduire padding hero-style5 (Construz natif 310px 0 270px = trop d'espace blanc/sombre).
+           User a signalé 5× l'espace blanc avant about-area. Cause = padding-bottom 270px du hero
+           qui s'étend sous le contenu texte. Réduit à 80px = transition tight comme thème de base. */
+        .hero-wrapper.hero-5 .hero-style5 {
+            padding: 140px 0 80px !important;
+        }
+        @media (max-width: 991px) {
+            .hero-wrapper.hero-5 .hero-style5 {
+                padding: 100px 0 60px !important;
+            }
+        }
         .hero-wrapper.hero-5 .hero-slide {
             background-color: #0A1628; /* meme fallback applique sur slides individuels pour calcul contraste WCAG */
         }
