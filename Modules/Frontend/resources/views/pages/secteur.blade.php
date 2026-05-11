@@ -125,7 +125,7 @@ $s = $secteurs[$slug];
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Un projet {{ Str::lower($s['nom']) }}&nbsp;?</h2>
-        <p>Discutez avec un chargé de projet pour valider la faisabilité, le calendrier et les permis municipaux requis.</p>
+        <p>Validez la faisabilité, l’échéancier et les permis municipaux requis avec un de nos coordonnateurs spécialisé dans ce secteur.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>

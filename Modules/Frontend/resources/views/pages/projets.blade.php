@@ -141,8 +141,8 @@ $categories = [
 
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Discutons de votre projet</h2>
-        <p>Visite du site, prise de mesures, étude des plans et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+        <h2>Visiter votre site, mesurer, chiffrer</h2>
+        <p>Trois étapes concrètes après votre premier message : un chargé de projet se déplace, prend les mesures et étudie les plans. Soumission détaillée livrée par écrit.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Démarrer la conversation</a>
     </div>
 </section>

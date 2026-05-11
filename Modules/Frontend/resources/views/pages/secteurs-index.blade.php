@@ -84,7 +84,7 @@ echo json_encode([
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Votre projet n’entre dans aucune case&nbsp;?</h2>
-        <p>Discutez avec un chargé de projet&nbsp;: certains chantiers mixtes (résidentiel + commercial, institutionnel + industriel) demandent une approche sur mesure.</p>
+        <p>Certains chantiers mixtes (résidentiel + commercial, institutionnel + industriel) demandent une approche sur mesure. Soumettez le contexte, nous évaluons.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Discutons-en</a>
     </div>
 </section>

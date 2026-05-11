@@ -54,7 +54,7 @@ echo json_encode([
     <div class="ks-container">
         <div class="ks-section__heading ks-section__heading--left">
             <span class="ks-eyebrow">Structure du groupe</span>
-            <h2 class="ks-h2">Six métiers sous une seule signature</h2>
+            <h2 class="ks-h2">Six filiales, six métiers complémentaires</h2>
         </div>
         <p class="ks-lead">Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l'intégralité de la chaîne de valeur en construction. Chaque filiale est dirigée par un directeur qui relève directement de la présidence, ce qui garantit cohérence stratégique et exécution rigoureuse.</p>
     </div>
@@ -80,7 +80,7 @@ echo json_encode([
 
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Six expertises, un gestionnaire de votre dossier</h2>
+        <h2>Une porte d’entrée unique pour six métiers</h2>
         <p>Discutez de votre projet avec un gestionnaire de votre dossier qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>

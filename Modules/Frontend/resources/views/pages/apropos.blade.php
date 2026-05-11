@@ -356,8 +356,8 @@
 
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Discutons de votre projet</h2>
-        <p>Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier du devis à la réception finale.</p>
+        <h2>Démarrer votre dossier de soumission</h2>
+        <p>Présentez-nous votre projet en quelques lignes. Visite gratuite, étude technique et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>

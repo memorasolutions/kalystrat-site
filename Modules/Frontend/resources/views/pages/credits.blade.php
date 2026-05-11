@@ -3,7 +3,7 @@
 @section('title', 'Crédits et mentions | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Crédits photos, polices et thèmes utilisés sur le site Kalystrat. Mentions légales et tiers.">
+<meta name="description" content="Crédits du site kalystrat.ca : photographies sous licence Pexels, polices Akzidenz Grotesk, frameworks open source. Conformité Loi 25 et mentions tierces.">
 <link rel="canonical" href="{{ url('/credits') }}">
 <meta name="robots" content="index, follow">
 @endpush

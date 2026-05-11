@@ -105,7 +105,7 @@ $z = $zones[$ville];
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Un projet à {{ $z['nom'] }}&nbsp;?</h2>
-        <p>Discutez avec un chargé de projet local pour évaluer votre dossier dans son contexte municipal et réglementaire.</p>
+        <p>Évaluez votre dossier avec un responsable familier du contexte municipal, des servitudes locales et des permis de la région.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>

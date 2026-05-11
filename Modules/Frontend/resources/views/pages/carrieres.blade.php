@@ -71,7 +71,7 @@ $metiers = [
     <div class="ks-container">
         <div class="ks-section__heading">
             <span class="ks-eyebrow">Pourquoi Kalystrat</span>
-            <h2 class="ks-h2">Six raisons de nous rejoindre</h2>
+            <h2 class="ks-h2">Pourquoi travailler chez Kalystrat</h2>
         </div>
         <div class="ks-bento ks-bento--3col">
             @foreach($avantages as $i => $a)
