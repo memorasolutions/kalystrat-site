@@ -3044,3 +3044,261 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   font-family: var(--ks-font-mono, monospace);
   font-size: 0.875em;
 }
+
+/* ============================================================
+   T131 — Footer Kalystrat (Option E : confiance + sitemap-lite + légal)
+   Pattern mai 2026 : architectural premium construction
+   ============================================================ */
+
+.ks-footer {
+  background: var(--ks-navy-900, #0A1628);
+  color: rgba(255,255,255,0.92);
+  font-family: var(--ks-font-body);
+  margin-top: clamp(40px, 6vw, 80px);
+}
+.ks-footer__container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 48px);
+}
+.ks-footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.ks-footer a:hover,
+.ks-footer a:focus-visible {
+  color: var(--ks-gold-500, #B8A472);
+}
+.ks-footer a:focus-visible {
+  outline: 2px solid var(--ks-gold-500, #B8A472);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* Zone 1 : bandeau confiance certifications */
+.ks-footer__trust {
+  background: linear-gradient(180deg, rgba(184,164,114,0.08) 0%, transparent 100%);
+  border-bottom: 1px solid rgba(184,164,114,0.18);
+  padding: clamp(24px, 3vw, 40px) 0;
+}
+.ks-footer__trust-list {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(12px, 2vw, 32px);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 900px) {
+  .ks-footer__trust-list {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+}
+@media (max-width: 480px) {
+  .ks-footer__trust-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+.ks-footer__trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.35rem;
+}
+.ks-footer__trust-badge {
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  color: var(--ks-gold-500, #B8A472);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.ks-footer__trust-label {
+  font-size: 0.75rem;
+  color: rgba(255,255,255,0.78);
+  letter-spacing: 0.02em;
+}
+
+/* Zone 2 : main footer (marque + 3 colonnes) */
+.ks-footer__main {
+  padding: clamp(48px, 6vw, 80px) 0 clamp(32px, 4vw, 48px);
+}
+.ks-footer__grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: start;
+}
+@media (max-width: 1024px) {
+  .ks-footer__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .ks-footer__brand {
+    grid-column: 1 / -1;
+  }
+}
+@media (max-width: 600px) {
+  .ks-footer__grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+/* Bloc marque */
+.ks-footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ks-footer__logo {
+  display: inline-block;
+  max-width: 200px;
+}
+.ks-footer__logo img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.ks-footer__tagline {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.82);
+  margin: 0;
+  max-width: 340px;
+}
+.ks-footer__contact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.ks-footer__contact > li {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9375rem;
+}
+.ks-footer__contact svg {
+  flex-shrink: 0;
+  color: var(--ks-gold-500, #B8A472);
+}
+.ks-footer__phone {
+  color: var(--ks-gold-500, #B8A472) !important;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 1.0625rem;
+  letter-spacing: 0.02em;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ks-footer__phone:hover,
+.ks-footer__phone:focus-visible {
+  color: #fff !important;
+}
+.ks-footer__email {
+  color: rgba(255,255,255,0.92);
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.6rem;
+}
+.ks-footer__address {
+  color: rgba(255,255,255,0.78);
+}
+
+/* Colonnes navigation */
+.ks-footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.ks-footer__col-title {
+  font-family: var(--ks-font-display);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--ks-gold-500, #B8A472);
+  margin: 0 0 0.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(184,164,114,0.22);
+}
+.ks-footer__links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ks-footer__links > li > a {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.85);
+  display: inline-block;
+  padding: 2px 0;
+}
+
+/* Zone 3 : sous-barre légale */
+.ks-footer__legal {
+  background: rgba(0,0,0,0.35);
+  border-top: 1px solid rgba(184,164,114,0.18);
+  padding: clamp(16px, 2vw, 24px) 0;
+  font-size: 0.8125rem;
+  color: rgba(255,255,255,0.72);
+}
+.ks-footer__legal-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ks-footer__copyright {
+  flex: 1 1 280px;
+}
+.ks-footer__legal-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.25rem;
+  margin: 0;
+  padding: 0;
+}
+.ks-footer__legal-links > li:not(:last-child)::after {
+  content: '·';
+  margin-left: 1.25rem;
+  opacity: 0.4;
+}
+.ks-footer__legal-links a {
+  color: rgba(255,255,255,0.72);
+}
+.ks-footer__legal-links a:hover {
+  color: var(--ks-gold-500, #B8A472);
+}
+.ks-footer__signature {
+  flex-shrink: 0;
+}
+.ks-footer__signature a {
+  color: var(--ks-gold-500, #B8A472);
+  font-weight: 600;
+}
+
+/* Dark-mode safe (déjà dark, mais double-secure) */
+@media (prefers-color-scheme: dark) {
+  .ks-footer {
+    background: #050E1A;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ks-footer a {
+    transition: none;
+  }
+}

@@ -239,153 +239,101 @@ if ('serviceWorker' in navigator) {
     @yield('content')
     </main>
 
-	<footer class="main-footer style-six" style="background-image:url(/intime/images/background/pattern-35.jpg)">
-		<div class="auto-container">
-			
-			<!-- Upper Box -->
-			<div class="upper-box">
-				<div class="inner-container">
-					<div class="row clearfix">
-						<div class="col-lg-6 col-md-12 col-sm-12">
-							<h3>Recevez nos actualités</h3>
-						</div>
-						<div class="col-lg-6 col-md-12 col-sm-12">
-							<!-- Subscribe Box -->
-							<div class="subscribe-box">
-								<form method="post" action="contact.html">
-									<div class="form-group">
-										<label for="ks-newsletter-email" class="visually-hidden">Adresse courriel pour l'infolettre</label>
-										<input type="email" id="ks-newsletter-email" name="email" value="" placeholder="Votre courriel" autocomplete="email" aria-label="Adresse courriel pour l'infolettre" required>
-										<button type="submit">S&apos;inscrire</button>
-									</div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
+	<footer class="ks-footer" role="contentinfo">
 
-			<!-- Widgets Section -->
-			<div class="widgets-section">
-				<div class="row clearfix">
-					
-					<!-- Big Column -->
-					<div class="big-column col-lg-5 col-md-12 col-sm-12">
-						<div class="row clearfix">
-							
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-7 col-md-6 col-sm-12">
-								<div class="footer-widget logo-widget">
-									<h4>À propos</h4>
-									<div class="text">Groupe québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
-									<p style="margin-top:1rem;color:var(--ks-gold-500);font-family:var(--ks-font-display);font-weight:700;font-size:0.95rem">
-										<a href="tel:+14184760987" style="color:var(--ks-gold-500)" aria-label="Appeler Kalystrat au 418 476 0987">📞&nbsp;418&nbsp;476-0987</a>
-										&nbsp;·&nbsp;
-										<a href="mailto:info@kalystrat.ca" style="color:var(--ks-gold-500)">info@kalystrat.ca</a>
-									</p>
-									<!-- Social Box -->
-									<ul class="footer-six_social-box">
-										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw" aria-label="Suivre Kalystrat sur Facebook"></a></li>
-										<li class="twitter"><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw" aria-label="Suivre Kalystrat sur Twitter"></a></li>
-										<li class="facebook"><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw" aria-label="Suivre Kalystrat sur Instagram"></a></li>
-										<li class="youtube"><a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw" aria-label="Suivre Kalystrat sur YouTube"></a></li>
-									</ul>
-								</div>
-							</div>
-							
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-5 col-md-6 col-sm-12">
-								<div class="footer-widget links-widget">
-									<h4>Liens utiles</h4>
-									<ul class="footer-links">
-										<li><a href="/a-propos">À propos</a></li>
-										<li><a href="/filiales">Six filiales</a></li>
-										<li><a href="/services">Services</a></li>
-										<li><a href="/expertise">Expertise</a></li>
-										<li><a href="/equipe">Équipe</a></li>
-										<li><a href="/zones-desservies">Zones desservies</a></li>
-										<li><a href="/secteurs">Secteurs</a></li>
-										<li><a href="/faq">FAQ</a></li>
-										<li><a href="/glossaire">Glossaire</a></li>
-										<li><a href="/carrieres">Carrières</a></li>
-										<li><a href="/contact">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					
-					<!-- Big Column -->
-					<div class="big-column col-lg-7 col-md-12 col-sm-12">
-						<div class="row clearfix">
-							
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-5 col-md-6 col-sm-12">
-								<div class="footer-widget instagram-widget">
-									<h4>Galerie</h4>
-									<div class="widget-content">
-										<div class="images-outer clearfix">
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/1.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-1.jpg" alt="Galerie Kalystrat — réalisation 1"></a></figure>
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/2.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-2.jpg" alt="Galerie Kalystrat — réalisation 2"></a></figure>
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/3.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-3.jpg" alt="Galerie Kalystrat — réalisation 3"></a></figure>
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/4.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-4.jpg" alt="Galerie Kalystrat — réalisation 4"></a></figure>
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/5.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-5.jpg" alt="Galerie Kalystrat — réalisation 5"></a></figure>
-											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/6.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-6.jpg" alt="Galerie Kalystrat — réalisation 6"></a></figure>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<!-- Footer Column -->
-							<div class="footer-column col-lg-7 col-md-6 col-sm-12">
-								<div class="footer-widget news-widget">
-									<h4>Actualités</h4>
-									<!--News Widget Block-->
-									<div class="news-widget-block">
-										<div class="news-widget_image">
-											<img src="/intime/images/resource/news-widget-1.jpg" alt="Article — Bâtir ensemble : six métiers, une marque" />
-										</div>
-										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h5 class="news-widget_title"><a href="/blog">Bâtir ensemble : six métiers, une marque</a></h5>
-									</div>
-									
-									<!--News Widget Block-->
-									<div class="news-widget-block">
-										<div class="news-widget_image">
-											<img src="/intime/images/resource/news-widget-2.jpg" alt="Article — Pénurie de main-d'œuvre, Kalystrat Placement" />
-										</div>
-										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h5 class="news-widget_title"><a href="/blog">Pénurie de main-d&apos;œuvre : Kalystrat Placement</a></h5>
-									</div>
-								</div>
-							</div>
-							
-						</div>
-					</div>
-					
-				</div>
+		{{-- Zone 1 : Bandeau confiance (certifications) --}}
+		<div class="ks-footer__trust" aria-label="Certifications et conformité">
+			<div class="ks-footer__container">
+				<ul class="ks-footer__trust-list">
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">RBQ</span><span class="ks-footer__trust-label">Licence active</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">CCQ</span><span class="ks-footer__trust-label">Main-d'œuvre certifiée</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">APCHQ</span><span class="ks-footer__trust-label">Garantie rénovation</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">GCR</span><span class="ks-footer__trust-label">Plan de garantie résidentiel</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">Novoclimat&nbsp;2.0</span><span class="ks-footer__trust-label">Efficacité énergétique</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">Code&nbsp;QC&nbsp;2026</span><span class="ks-footer__trust-label">Conformité totale</span></li>
+				</ul>
 			</div>
-			
 		</div>
-		<div class="footer-bottom">
-			<div class="auto-container">
-				<div class="inner-container">
-					<div class="d-flex justify-content-between align-items-center flex-wrap">
-						
-						<!-- Logo Box -->
-						<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat" title="Kalystrat"></a></div>
 
-						<div class="copyright">&copy; 2026 Gestion Kalystrat Inc. Tous droits réservés.</div>
-						
+		{{-- Zone 2 : Main footer (marque + 3 colonnes sitemap-lite) --}}
+		<div class="ks-footer__main">
+			<div class="ks-footer__container">
+				<div class="ks-footer__grid">
+
+					<div class="ks-footer__brand">
+						<a href="{{ url('/') }}" class="ks-footer__logo" aria-label="Kalystrat — accueil">
+							<img src="/intime/images/logo-6.png" alt="Logo Gestion Kalystrat Inc." width="180" height="60">
+						</a>
+						<p class="ks-footer__tagline">Conçu, réalisé, livré. Groupe québécois de construction à intégration verticale.</p>
+						<ul class="ks-footer__contact">
+							<li>
+								<a href="tel:+14184760987" class="ks-footer__phone" aria-label="Appeler Kalystrat au 418 476 0987">
+									<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20"><path fill="currentColor" d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/></svg>
+									<span>418 476-0987</span>
+								</a>
+							</li>
+							<li>
+								<a href="mailto:info@kalystrat.ca" class="ks-footer__email">
+									<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z M4 6l8 7 8-7"/></svg>
+									<span>info@kalystrat.ca</span>
+								</a>
+							</li>
+							<li class="ks-footer__address">
+								<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M12 22s-7-7.5-7-13a7 7 0 1 1 14 0c0 5.5-7 13-7 13z M12 11a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></svg>
+								<span>Siège social&nbsp;: Québec, QC</span>
+							</li>
+						</ul>
 					</div>
+
+					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-services">
+						<h4 id="ks-footer-nav-services" class="ks-footer__col-title">Services</h4>
+						<ul class="ks-footer__links">
+							<li><a href="{{ route('filiale', 'fondations') }}">Fondations</a></li>
+							<li><a href="{{ route('filiale', 'structure') }}">Structure</a></li>
+							<li><a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et enveloppe</a></li>
+							<li><a href="{{ route('filiale', 'finition-interieure') }}">Finition intérieure</a></li>
+							<li><a href="{{ route('filiale', 'immobilier') }}">Immobilier</a></li>
+							<li><a href="{{ route('filiale', 'placement-construction') }}">Placement construction</a></li>
+						</ul>
+					</nav>
+
+					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-entreprise">
+						<h4 id="ks-footer-nav-entreprise" class="ks-footer__col-title">Entreprise</h4>
+						<ul class="ks-footer__links">
+							<li><a href="{{ route('apropos') }}">À propos</a></li>
+							<li><a href="{{ route('filiales.index') }}">Six filiales</a></li>
+							<li><a href="{{ route('equipe') }}">Équipe</a></li>
+							<li><a href="{{ route('carrieres') }}">Carrières</a></li>
+							<li><a href="{{ route('contact') }}">Contact</a></li>
+						</ul>
+					</nav>
+
+					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-ressources">
+						<h4 id="ks-footer-nav-ressources" class="ks-footer__col-title">Ressources</h4>
+						<ul class="ks-footer__links">
+							<li><a href="{{ route('expertise') }}">Expertise Code QC 2026</a></li>
+							<li><a href="{{ route('blog.index') }}">Blog</a></li>
+							<li><a href="{{ route('faq') }}">FAQ</a></li>
+							<li><a href="{{ route('glossaire') }}">Glossaire</a></li>
+							<li><a href="{{ route('zones.index') }}">Zones desservies</a></li>
+							<li><a href="{{ route('secteurs.index') }}">Secteurs</a></li>
+						</ul>
+					</nav>
+
 				</div>
+			</div>
+		</div>
+
+		{{-- Zone 3 : Sous-barre légale --}}
+		<div class="ks-footer__legal">
+			<div class="ks-footer__container ks-footer__legal-inner">
+				<div class="ks-footer__copyright">&copy; {{ date('Y') }} Gestion Kalystrat Inc. — Tous droits réservés.</div>
+				<ul class="ks-footer__legal-links">
+					<li><a href="{{ url('/politique-confidentialite') }}">Politique Loi 25</a></li>
+					<li><a href="{{ route('credits') }}">Crédits</a></li>
+					<li><a href="/sitemap.xml">Plan du site</a></li>
+				</ul>
+				<div class="ks-footer__signature">Site par <a href="https://memora.ca" rel="noopener external" target="_blank">MEMORA</a></div>
 			</div>
 		</div>
 	</footer>
