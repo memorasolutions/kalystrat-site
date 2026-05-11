@@ -27,7 +27,7 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/projets-hero.jpg')">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/projets-hero.webp')">
     <div class="ks-page-hero__overlay" aria-hidden="true"></div>
     <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
@@ -101,25 +101,34 @@
 
 @php
 $categories = [
-    ['t' => 'Résidentiel haut de gamme', 'd' => "Maisons custom de 250 à 800 m², villas de prestige, propriétés de bord de fleuve. Architecture contemporaine ou classique, finition haut de gamme."],
-    ['t' => 'Multilogements', 'd' => "Condominiums urbains, immeubles locatifs 6 à 60 unités, projets intergénérationnels. Optimisation densité et viabilité financière."],
-    ['t' => 'Commercial bureaux', 'd' => "Édifices de bureaux LEED, commerces de détail, restaurants, espaces de coworking. Délais serrés et qualité d’exécution irréprochable."],
-    ['t' => 'Institutionnel scolaire', 'd' => "Écoles primaires et secondaires, pavillons collégiaux et universitaires, installations sportives. Conformité Code 2026 et standards MEQ."],
-    ['t' => 'Industriel logistique', 'd' => "Entrepôts grande surface, centres de distribution, ateliers de production. Charpente acier ou béton préfabriqué, dalles renforcées."],
-    ['t' => 'Rénovations majeures', 'd' => "Transformations de bâtiments existants, agrandissements, mise aux normes énergétiques. Diagnostic, plans, permis, exécution complète."],
+    ['slug' => 'residentiel', 't' => 'Résidentiel haut de gamme', 'd' => "Maisons custom de 250 à 800 m², villas de prestige, propriétés de bord de fleuve. Architecture contemporaine ou classique, finition haut de gamme."],
+    ['slug' => 'multilog', 't' => 'Multilogements', 'd' => "Condominiums urbains, immeubles locatifs 6 à 60 unités, projets intergénérationnels. Optimisation densité et viabilité financière."],
+    ['slug' => 'commercial', 't' => 'Commercial bureaux', 'd' => "Édifices de bureaux LEED, commerces de détail, restaurants, espaces de coworking. Délais serrés et qualité d’exécution irréprochable."],
+    ['slug' => 'institutionnel', 't' => 'Institutionnel scolaire', 'd' => "Écoles primaires et secondaires, pavillons collégiaux et universitaires, installations sportives. Conformité Code 2026 et standards MEQ."],
+    ['slug' => 'industriel', 't' => 'Industriel logistique', 'd' => "Entrepôts grande surface, centres de distribution, ateliers de production. Charpente acier ou béton préfabriqué, dalles renforcées."],
+    ['slug' => 'renovation', 't' => 'Rénovations majeures', 'd' => "Transformations de bâtiments existants, agrandissements, mise aux normes énergétiques. Diagnostic, plans, permis, exécution complète."],
 ];
 @endphp
 
-<section class="ks-section ks-section--alt">
+<section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading">
-            <span class="ks-eyebrow">Six segments d’expertise</span>
-            <h2 class="ks-h2">Catégories de projets</h2>
-            <p class="ks-lead">Chaque catégorie mobilise une combinaison spécifique de filiales Kalystrat selon les besoins du chantier.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">03</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Six segments d’expertise</span>
+                <h2 class="ks-h2">Catégories de projets</h2>
+                <p class="ks-lead">Chaque catégorie mobilise une combinaison spécifique de filiales Kalystrat selon les besoins du chantier. Filtrez la galerie selon votre type de projet.</p>
+            </div>
         </div>
-        <div class="ks-bento ks-bento--3col">
+        <div class="ks-projet-filters" role="group" aria-label="Filtrer les segments par catégorie">
+            <button type="button" class="ks-projet-filter is-active" data-projet-filter="all" aria-pressed="true">Tous</button>
+            @foreach($categories as $cat)
+            <button type="button" class="ks-projet-filter" data-projet-filter="{{ $cat['slug'] }}" aria-pressed="false">{{ $cat['t'] }}</button>
+            @endforeach
+        </div>
+        <div class="ks-bento ks-bento--3col" data-projet-grid>
             @foreach($categories as $i => $cat)
-            <article class="ks-card ks-card--accent-gold">
+            <article class="ks-card ks-card--accent-gold ks-projet-card" data-projet-cat="{{ $cat['slug'] }}">
                 <span class="ks-eyebrow">Segment {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
                 <h3 class="ks-card__title">{{ $cat['t'] }}</h3>
                 <p class="ks-card__text">{{ $cat['d'] }}</p>
@@ -137,5 +146,34 @@ $categories = [
         <a href="{{ route('contact') }}" class="ks-cta-primary">Démarrer la conversation</a>
     </div>
 </section>
+
+@push('scripts')
+<script>
+(function () {
+    'use strict';
+    var filters = document.querySelectorAll('[data-projet-filter]');
+    var cards = document.querySelectorAll('[data-projet-cat]');
+    if (!filters.length) return;
+    filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            var cat = btn.getAttribute('data-projet-filter');
+            filters.forEach(function (b) {
+                b.classList.toggle('is-active', b === btn);
+                b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
+            });
+            cards.forEach(function (c) {
+                if (cat === 'all' || c.getAttribute('data-projet-cat') === cat) {
+                    c.style.display = '';
+                    c.removeAttribute('aria-hidden');
+                } else {
+                    c.style.display = 'none';
+                    c.setAttribute('aria-hidden', 'true');
+                }
+            });
+        });
+    });
+})();
+</script>
+@endpush
 
 @endsection

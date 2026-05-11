@@ -73,12 +73,15 @@ $s = $secteurs[$slug];
 @section('content')
 
 @php
-    $secteurHero = public_path('intime/images/secteurs/' . $slug . '-hero.jpg');
+    $secteurHeroWebp = public_path('intime/images/secteurs/' . $slug . '-hero.webp');
+    $secteurHeroJpg = public_path('intime/images/secteurs/' . $slug . '-hero.jpg');
+    $secteurHero = file_exists($secteurHeroWebp) ? $secteurHeroWebp : $secteurHeroJpg;
+    $secteurHeroExt = file_exists($secteurHeroWebp) ? 'webp' : 'jpg';
     $secteurHeroExists = file_exists($secteurHero);
 @endphp
 
 <header class="ks-page-hero ks-page-hero--photo"
-    @if($secteurHeroExists) style="--ks-hero-photo: url('/intime/images/secteurs/{{ $slug }}-hero.jpg?v={{ filemtime($secteurHero) }}')" @endif>
+    @if($secteurHeroExists) style="--ks-hero-photo: url('/intime/images/secteurs/{{ $slug }}-hero.{{ $secteurHeroExt }}?v={{ filemtime($secteurHero) }}')" @endif>
     <div class="ks-page-hero__overlay" aria-hidden="true"></div>
     <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">

@@ -1525,6 +1525,162 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 /* ============================================================
+   Filtres portfolio projets (V5b-T110 — tendance 2026 filterable)
+   ============================================================ */
+.ks-projet-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(184, 164, 114, 0.25);
+}
+
+.ks-projet-filter {
+  font-family: var(--ks-font-display);
+  font-size: 0.875rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  border: 1px solid rgba(10, 22, 40, 0.18);
+  border-radius: 3px;
+  color: var(--ks-navy-900);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ks-projet-filter:hover {
+  border-color: var(--ks-gold-500);
+  color: var(--ks-gold-aaa);
+}
+
+.ks-projet-filter.is-active {
+  background: var(--ks-navy-900);
+  color: #fff;
+  border-color: var(--ks-navy-900);
+}
+
+.ks-projet-filter:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .ks-projet-filter {
+    color: var(--ks-text-primary, #F5F1E8);
+    border-color: var(--ks-border-subtle, rgba(255, 255, 255, 0.15));
+  }
+  .ks-projet-filter.is-active {
+    background: var(--ks-gold-500);
+    color: var(--ks-navy-900);
+    border-color: var(--ks-gold-500);
+  }
+}
+
+/* ============================================================
+   Dark mode auto (V5b — tendance 2026 prefers-color-scheme)
+   Switch automatique selon préférence système utilisateur.
+   Contrastes AAA préservés navy → gris très clair, gold → gold-300.
+   ============================================================ */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ks-bg-page: #0F1B2E;
+    --ks-bg-section: #0A1628;
+    --ks-bg-section-alt: #14213D;
+    --ks-bg-card: #1A2740;
+    --ks-text-primary: #F5F1E8;
+    --ks-text-secondary: #C9C2AC;
+    --ks-border-subtle: rgba(255, 255, 255, 0.08);
+  }
+
+  body {
+    background: var(--ks-bg-page);
+    color: var(--ks-text-primary);
+  }
+
+  .ks-section {
+    background: var(--ks-bg-section);
+  }
+
+  .ks-section--alt {
+    background: var(--ks-bg-section-alt);
+  }
+
+  .ks-section.ks-approche,
+  .ks-section.ks-pourquoi {
+    background: linear-gradient(180deg, var(--ks-bg-section) 0%, var(--ks-bg-section-alt) 100%);
+  }
+
+  .ks-h2,
+  .ks-pillar__title,
+  .ks-card__title,
+  .ks-page-section__heading h2 {
+    color: var(--ks-text-primary);
+  }
+
+  .ks-lead,
+  .ks-card__text,
+  .ks-pillar__text {
+    color: var(--ks-text-secondary);
+  }
+
+  .ks-card {
+    background: var(--ks-bg-card);
+    border-color: var(--ks-border-subtle);
+    color: var(--ks-text-primary);
+  }
+
+  .ks-card .ks-card__text,
+  .ks-card p {
+    color: var(--ks-text-secondary);
+  }
+
+  .ks-approche__stat,
+  .ks-pourquoi__card {
+    background: var(--ks-bg-card);
+    border-color: var(--ks-border-subtle);
+    color: var(--ks-text-primary);
+  }
+
+  .ks-approche__ring-num,
+  .ks-pourquoi__num-card,
+  .ks-approche__expertise-ancre strong {
+    color: var(--ks-gold-500);
+  }
+
+  .ks-eyebrow {
+    color: var(--ks-gold-500);
+  }
+
+  .ks-pourquoi__heading .ks-eyebrow,
+  .ks-page-section__heading .ks-eyebrow {
+    color: var(--ks-gold-500);
+  }
+
+  .ks-estimator {
+    background: var(--ks-bg-card);
+    border-color: var(--ks-border-subtle);
+  }
+
+  .ks-estimator__field select,
+  .ks-estimator__field input[type="number"] {
+    background: var(--ks-bg-section);
+    color: var(--ks-text-primary);
+    border-color: var(--ks-border-subtle);
+  }
+
+  .ks-estimator__field label,
+  .ks-estimator__filiales label {
+    color: var(--ks-text-primary);
+  }
+
+  .ks-estimator__cta-note {
+    color: var(--ks-gold-500);
+  }
+}
+
+/* ============================================================
    Estimateur soumission interactif (V5a-B — tendance 2026 outils interactifs)
    ============================================================ */
 .ks-estimator {

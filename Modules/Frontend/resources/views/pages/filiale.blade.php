@@ -42,12 +42,15 @@
 @section('content')
 
 @php
-    $filialeHero = public_path('intime/images/filiales/' . $slug . '-hero.jpg');
+    $filialeHeroWebp = public_path('intime/images/filiales/' . $slug . '-hero.webp');
+    $filialeHeroJpg = public_path('intime/images/filiales/' . $slug . '-hero.jpg');
+    $filialeHero = file_exists($filialeHeroWebp) ? $filialeHeroWebp : $filialeHeroJpg;
+    $filialeHeroExt = file_exists($filialeHeroWebp) ? 'webp' : 'jpg';
     $filialeHeroExists = file_exists($filialeHero);
 @endphp
 
 <header class="ks-page-hero ks-page-hero--photo"
-    @if($filialeHeroExists) style="--ks-hero-photo: url('/intime/images/filiales/{{ $slug }}-hero.jpg?v={{ filemtime($filialeHero) }}')" @endif>
+    @if($filialeHeroExists) style="--ks-hero-photo: url('/intime/images/filiales/{{ $slug }}-hero.{{ $filialeHeroExt }}?v={{ filemtime($filialeHero) }}')" @endif>
     <div class="ks-page-hero__overlay" aria-hidden="true"></div>
     <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">

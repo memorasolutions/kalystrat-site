@@ -39,7 +39,7 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/apropos-hero-montreal-night.jpg')">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/apropos-hero-montreal-night.webp')">
     <div class="ks-page-hero__overlay" aria-hidden="true"></div>
     <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
@@ -123,7 +123,7 @@
             </div>
         </div>
         <figure class="ks-page-section__visual ks-fade-in">
-            <img src="/intime/images/pages/apropos-aerial-cranes.jpg" alt="Vue aérienne d'un chantier urbain en construction à Montréal" loading="lazy" width="940" height="650">
+            <img src="/intime/images/pages/apropos-aerial-cranes.webp" alt="Vue aérienne d'un chantier urbain en construction à Montréal" loading="lazy" width="940" height="650">
             <figcaption>L’intégration verticale en action : du sol au toit, sous une seule marque.</figcaption>
         </figure>
         <div class="ks-bento ks-fade-in">
@@ -183,7 +183,7 @@
             </div>
         </div>
         <figure class="ks-page-section__visual ks-fade-in">
-            <img src="/intime/images/pages/apropos-team-architects.jpg" alt="Deux professionnels en discussion devant un plan de construction" loading="lazy" width="940" height="650">
+            <img src="/intime/images/pages/apropos-team-architects.webp" alt="Deux professionnels en discussion devant un plan de construction" loading="lazy" width="940" height="650">
             <figcaption>Une gouvernance qui s’appuie sur des expertises complémentaires reconnues.</figcaption>
         </figure>
         <div class="ks-bento ks-bento--2col ks-fade-in">

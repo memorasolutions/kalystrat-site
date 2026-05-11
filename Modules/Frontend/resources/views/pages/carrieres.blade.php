@@ -27,7 +27,7 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/carrieres-hero.jpg')">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/carrieres-hero.webp')">
     <div class="ks-page-hero__overlay" aria-hidden="true"></div>
     <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
