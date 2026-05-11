@@ -41,12 +41,14 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/equipe-hero.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Équipe</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
         <h1>Équipe et gouvernance</h1>
         <p class="ks-page-hero__subtitle">Une présidence forte, six directions de filiales, un conseil consultatif d'experts indépendants. Gouvernance centralisée, exécution décentralisée.</p>
     </div>

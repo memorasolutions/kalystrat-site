@@ -39,12 +39,14 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/services-hero.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Services</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
         <h1>Tous les métiers de la construction</h1>
         <p class="ks-page-hero__subtitle">Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l'intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées.</p>
     </div>

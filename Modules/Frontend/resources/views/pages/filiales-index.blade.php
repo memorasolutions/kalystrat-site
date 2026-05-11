@@ -38,12 +38,14 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/apropos-aerial-cranes.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Filiales</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Structure du groupe</span>
         <h1>Six filiales, une marque unifiée</h1>
         <p class="ks-page-hero__subtitle">De l'excavation aux finitions, du développement immobilier au placement de main-d'œuvre, chaque filiale détient une expertise pointue et travaille en synergie avec les autres divisions du groupe.</p>
     </div>

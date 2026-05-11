@@ -48,12 +48,14 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/zone-ville-hero.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Zones desservies</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Couverture provinciale</span>
         <h1>Zones desservies au Québec</h1>
         <p class="ks-page-hero__subtitle">Notre siège est à Québec, mais nos chantiers s’étendent de la rive-sud du Saint-Laurent jusqu’au Saguenay et à la grande région de Montréal. Neuf villes principales couvertes en continu.</p>
     </div>

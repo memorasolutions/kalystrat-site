@@ -40,14 +40,15 @@
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/blog-hero.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('blog.index') }}">Blog</a></li>
             <li>{{ $article['categorie'] }}</li>
         </ul>
-        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $article['categorie'] }}</span>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $article['categorie'] }}</span>
         <h1>{{ $article['titre'] }}</h1>
         <p class="ks-page-hero__subtitle">{{ \Carbon\Carbon::parse($article['date'])->locale('fr_CA')->isoFormat('LL') }} &middot; Lecture estimée 6 à 9 minutes</p>
     </div>
