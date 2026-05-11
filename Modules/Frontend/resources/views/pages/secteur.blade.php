@@ -67,14 +67,21 @@ $s = $secteurs[$slug];
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+@php
+    $secteurHero = public_path('intime/images/secteurs/' . $slug . '-hero.jpg');
+    $secteurHeroExists = file_exists($secteurHero);
+@endphp
+
+<header class="ks-page-hero ks-page-hero--photo"
+    @if($secteurHeroExists) style="--ks-hero-photo: url('/intime/images/secteurs/{{ $slug }}-hero.jpg?v={{ filemtime($secteurHero) }}')" @endif>
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('secteurs.index') }}">Secteurs</a></li>
             <li>{{ $s['nom'] }}</li>
         </ul>
-        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $s['tagline'] }}</span>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $s['tagline'] }}</span>
         <h1>Construction {{ Str::lower($s['nom']) }}</h1>
         <p class="ks-page-hero__subtitle">{!! $s['desc'] !!}</p>
     </div>
@@ -82,19 +89,29 @@ $s = $secteurs[$slug];
 
 @php $secteurContentPath = 'frontend::partials.secteur-content.' . $slug; @endphp
 @if(view()->exists($secteurContentPath))
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container" style="max-width:880px">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">01</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Notre approche</span>
+                <h2 class="ks-h2">Spécificités du secteur {{ Str::lower($s['nom']) }}</h2>
+            </div>
+        </div>
         @include($secteurContentPath)
     </div>
 </section>
 @endif
 
-<section class="ks-section ks-section--alt">
+<section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading">
-            <span class="ks-eyebrow">Types de projets</span>
-            <h2 class="ks-h2">Ce que nous construisons</h2>
-            <p class="ks-lead">Six familles de projets que nos six filiales orchestrent dans le secteur {{ Str::lower($s['nom']) }}.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">02</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Types de projets</span>
+                <h2 class="ks-h2">Ce que nous construisons</h2>
+                <p class="ks-lead">Six familles de projets que nos six filiales orchestrent dans le secteur {{ Str::lower($s['nom']) }}.</p>
+            </div>
         </div>
         <div class="ks-bento ks-bento--3col">
             @foreach($s['projets'] as $i => $p)

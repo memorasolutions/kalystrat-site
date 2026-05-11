@@ -36,25 +36,35 @@
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+@php
+    $filialeHero = public_path('intime/images/filiales/' . $slug . '-hero.jpg');
+    $filialeHeroExists = file_exists($filialeHero);
+@endphp
+
+<header class="ks-page-hero ks-page-hero--photo"
+    @if($filialeHeroExists) style="--ks-hero-photo: url('/intime/images/filiales/{{ $slug }}-hero.jpg?v={{ filemtime($filialeHero) }}')" @endif>
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('filiales.index') }}">Filiales</a></li>
             <li>{{ $filiale['nom_court'] }}</li>
         </ul>
-        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $filiale['specialite'] }}</span>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $filiale['specialite'] }}</span>
         <h1>{{ $filiale['nom_court'] }}</h1>
         <p class="ks-page-hero__subtitle">{{ $filiale['tagline'] }}</p>
     </div>
 </header>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-section__heading--left">
-            <span class="ks-eyebrow">Filiale du groupe</span>
-            <h2 class="ks-h2">Une expertise pointue dans un système intégré</h2>
-            <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., groupe québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">01</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Filiale du groupe</span>
+                <h2 class="ks-h2">Une expertise pointue dans un système intégré</h2>
+                <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., groupe québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -64,12 +74,15 @@
     @include($contentPath)
 @endif
 
-<section class="ks-section ks-section--alt">
+<section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading">
-            <span class="ks-eyebrow">Services offerts</span>
-            <h2 class="ks-h2">Notre offre de services</h2>
-            <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du groupe.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">02</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Services offerts</span>
+                <h2 class="ks-h2">Notre offre de services</h2>
+                <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du groupe.</p>
+            </div>
         </div>
         <div class="ks-bento ks-bento--3col">
             @foreach($filiale['services'] as $i => $service)
@@ -82,9 +95,16 @@
     </div>
 </section>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-bento ks-bento--2col" style="align-items:start">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">03</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Pour qui et comment</span>
+                <h2 class="ks-h2">Clientèle ciblée et modèle d’affaires</h2>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--2col ks-fade-in" style="align-items:start">
             <article class="ks-card ks-card--accent-navy">
                 <span class="ks-eyebrow">Pour qui</span>
                 <h3 class="ks-card__title">Clientèle cible</h3>
@@ -99,12 +119,15 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--dark">
+<section class="ks-section ks-section--dark ks-page-section ks-page-section--dark">
     <div class="ks-container">
-        <div class="ks-section__heading">
-            <span class="ks-eyebrow">Intégration verticale</span>
-            <h2 class="ks-h2">Synergies avec les autres filiales</h2>
-            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Sur un même chantier, {{ $filiale['nom_court'] }} collabore quotidiennement avec les cinq autres filiales du groupe pour livrer un projet cohérent du sous-sol au toit.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">04</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Intégration verticale</span>
+                <h2 class="ks-h2">Synergies avec les autres filiales</h2>
+                <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Sur un même chantier, {{ $filiale['nom_court'] }} collabore quotidiennement avec les cinq autres filiales du groupe pour livrer un projet cohérent du sous-sol au toit.</p>
+            </div>
         </div>
         <div class="ks-bento ks-bento--3col">
             @foreach(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES as $other_slug => $other_f)

@@ -36,14 +36,16 @@
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/contact-hero-meeting.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Contact</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
         <h1>Parlons de votre projet</h1>
-        <p class="ks-page-hero__subtitle">Une équipe basée à Québec, six filiales spécialisées, un chargé de projet unique pour piloter votre dossier. Réponse sous 24 heures ouvrables.</p>
+        <p class="ks-page-hero__subtitle">Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier. Réponse sous 24 heures ouvrables.</p>
     </div>
 </header>
 
@@ -96,21 +98,27 @@
 
             <aside style="display:flex;flex-direction:column;gap:20px">
                 <article class="ks-card ks-card--accent-gold">
-                    <span class="ks-eyebrow">Coordonnées</span>
-                    <h3 class="ks-card__title" style="font-size:1.25rem">Adresse</h3>
-                    <p class="ks-card__text">Québec, QC, Canada</p>
+                    <span class="ks-eyebrow">Bureau</span>
+                    <h3 class="ks-card__title" style="font-size:1.25rem">Québec, QC, Canada</h3>
+                    <p class="ks-card__text">Siège social Capitale-Nationale. Couverture provinciale jusqu’au Saguenay, Trois-Rivières, Montréal et Laval.</p>
                 </article>
 
                 <article class="ks-card ks-card--accent-gold">
                     <span class="ks-eyebrow">Courriel</span>
                     <h3 class="ks-card__title" style="font-size:1.25rem"><a href="mailto:info@kalystrat.ca">info@kalystrat.ca</a></h3>
-                    <p class="ks-card__text">Réponse sous 24 heures ouvrables.</p>
+                    <p class="ks-card__text">Réponse sous 24 heures ouvrables. Privilégier ce canal pour transmettre plans, devis ou documents techniques.</p>
+                </article>
+
+                <article class="ks-card ks-card--accent-navy">
+                    <span class="ks-eyebrow">Soumission rapide</span>
+                    <h3 class="ks-card__title" style="font-size:1.25rem">Délai garanti 5 à 10 jours ouvrables</h3>
+                    <p class="ks-card__text">Visite des lieux, prise de mesures, étude technique et soumission détaillée. Délai contractuel pour le résidentiel.</p>
                 </article>
 
                 <article class="ks-card ks-card--accent-gold">
-                    <span class="ks-eyebrow">Heures d'ouverture</span>
+                    <span class="ks-eyebrow">Heures d’ouverture</span>
                     <h3 class="ks-card__title" style="font-size:1.25rem">Lundi au vendredi</h3>
-                    <p class="ks-card__text">8 h à 17 h, heure de l'Est.</p>
+                    <p class="ks-card__text">8 h à 17 h, heure de l’Est. Visites de chantier ou en bureau sur rendez-vous.</p>
                 </article>
 
                 <article class="ks-card ks-card--dark">
