@@ -175,10 +175,14 @@
 
 <section class="ks-section ks-pillars" id="six-piliers" aria-labelledby="six-piliers-title">
     <div class="ks-container">
-        <div class="ks-section__heading ks-section__heading--left">
-            <span class="ks-eyebrow">Six piliers fondateurs</span>
-            <h2 id="six-piliers-title" class="ks-h2">Six avantages,<br>une marque unifiée.</h2>
-            <p class="ks-lead">L'avantage concurrentiel de Kalystrat repose sur six piliers structurels. Ils ne sont pas des promesses marketing, mais l'architecture opérationnelle du groupe.</p>
+        <div class="ks-section__heading ks-section__heading--split">
+            <div class="ks-section__heading-left">
+                <span class="ks-eyebrow">Six piliers fondateurs</span>
+                <h2 id="six-piliers-title" class="ks-h2">Six avantages,<br>une marque unifiée.</h2>
+            </div>
+            <div class="ks-section__heading-right">
+                <p class="ks-lead">L'avantage concurrentiel de Kalystrat repose sur six piliers structurels. Ils ne sont pas des promesses marketing, mais l'architecture opérationnelle du groupe&nbsp;: de la main-d'œuvre interne à la demande captive, chaque pilier rend les autres plus solides.</p>
+            </div>
         </div>
         <div class="ks-pillars__grid ks-pillars__grid--six">
             <article class="ks-pillar">

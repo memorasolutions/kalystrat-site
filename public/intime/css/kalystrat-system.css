@@ -706,6 +706,34 @@
   margin-left: 0;
 }
 
+/* T132 — Split layout asymétrique (editorial heading pattern 2026) */
+.ks-section__heading--split {
+  text-align: left;
+  max-width: 100%;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) minmax(280px, 1fr);
+  gap: clamp(32px, 5vw, 80px);
+  align-items: end;
+  margin: 0 0 var(--ks-gap-lg);
+}
+@media (max-width: 880px) {
+  .ks-section__heading--split {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+}
+.ks-section__heading-left,
+.ks-section__heading-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.ks-section__heading-right .ks-lead {
+  margin: 0;
+  max-width: 540px;
+}
+
 /* === CTA finale === */
 .ks-cta-section {
   padding: var(--ks-section-py) 0;
@@ -804,24 +832,19 @@
 
 .ks-pillar__num {
   font-family: var(--ks-font-display);
-  font-size: clamp(5rem, 7.5vw, 8rem);
+  font-size: clamp(2.25rem, 3.4vw, 3.25rem);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.04em;
-  margin: 0 0 clamp(1rem, 1.8vw, 1.5rem);
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(0.75rem, 1.2vw, 1.1rem);
   display: block;
-  padding-top: 0.05em;             /* fix glyph clipping top — Akzidenz Grotesk Bold */
-  background: linear-gradient(135deg, var(--ks-gold-500) 0%, var(--ks-gold-700) 60%, var(--ks-gold-900) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  filter: drop-shadow(0 4px 18px rgba(184, 164, 114, 0.22));
-  transition: filter 500ms ease, transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+  padding-top: 0.05em;
+  color: var(--ks-gold-700, #8F3F00);
+  opacity: 0.95;
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .ks-pillar:hover .ks-pillar__num {
-  filter: drop-shadow(0 6px 24px rgba(184, 164, 114, 0.4));
   transform: translateY(-2px);
 }
 
