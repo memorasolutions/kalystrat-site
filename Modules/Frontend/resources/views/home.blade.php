@@ -439,28 +439,24 @@
 
         <div class="ks-pourquoi__grid">
             <article class="ks-pourquoi__card ks-pourquoi__card--hero">
-                <div class="ks-pourquoi__num-card" aria-hidden="true">01</div>
                 <span class="ks-eyebrow">Intégration verticale</span>
                 <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance étrangère</h3>
                 <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
             </article>
 
             <article class="ks-pourquoi__card">
-                <div class="ks-pourquoi__num-card" aria-hidden="true">02</div>
                 <span class="ks-eyebrow">Code QC 2026</span>
                 <h3 class="ks-card__title">Conformité technique maîtrisée</h3>
                 <p class="ks-card__text">Étanchéité 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. Nos équipes maîtrisent l’ensemble des exigences du nouveau Code de construction du Québec. <a href="{{ route('expertise') }}">Voir notre page Expertise</a>.</p>
             </article>
 
             <article class="ks-pourquoi__card">
-                <div class="ks-pourquoi__num-card" aria-hidden="true">03</div>
                 <span class="ks-eyebrow">Stabilité financière</span>
                 <h3 class="ks-card__title">Demande captive interne</h3>
                 <p class="ks-card__text"><a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Le flux de chantiers internes alimente les cinq autres filiales en continu. Résultat&nbsp;: pas de pression à accepter n’importe quel mandat, sélection rigoureuse des projets externes.</p>
             </article>
 
             <article class="ks-pourquoi__card ks-pourquoi__card--wide">
-                <div class="ks-pourquoi__num-card" aria-hidden="true">04</div>
                 <span class="ks-eyebrow">Garanties cumulées</span>
                 <h3 class="ks-card__title">Plan GCR, Code civil, licence RBQ</h3>
                 <p class="ks-card__text">Plan de garantie GCR pour le neuf résidentiel, garantie légale du Code civil du Québec pour les vices structurels, licences RBQ par catégorie de travaux, assurance responsabilité civile professionnelle. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>

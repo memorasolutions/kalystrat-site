@@ -124,7 +124,7 @@ $s = $secteurs[$slug];
         <div class="ks-bento ks-bento--3col">
             @foreach($s['projets'] as $i => $p)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Type {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="ks-eyebrow">Type de projet</span>
                 <h3 class="ks-card__title">{{ $p }}</h3>
             </article>
             @endforeach

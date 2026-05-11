@@ -130,7 +130,7 @@ $categories = [
         <div class="ks-bento ks-bento--3col" data-projet-grid>
             @foreach($categories as $i => $cat)
             <article class="ks-card ks-card--accent-gold ks-projet-card" data-projet-cat="{{ $cat['slug'] }}">
-                <span class="ks-eyebrow">Segment {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="ks-eyebrow">Catégorie</span>
                 <h3 class="ks-card__title">{{ $cat['t'] }}</h3>
                 <p class="ks-card__text">{{ $cat['d'] }}</p>
                 <div class="ks-card__meta" style="color:var(--ks-gray-500);text-transform:none;letter-spacing:0;font-weight:500;font-style:italic">Études de cas à venir</div>

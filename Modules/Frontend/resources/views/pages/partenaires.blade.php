@@ -65,7 +65,7 @@ $types = [
         <div class="ks-bento ks-bento--2col">
             @foreach($types as $i => $type)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Type {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="ks-eyebrow">Catégorie de partenaire</span>
                 <h3 class="ks-card__title">{{ $type['t'] }}</h3>
                 <p class="ks-card__text">{{ $type['d'] }}</p>
             </article>

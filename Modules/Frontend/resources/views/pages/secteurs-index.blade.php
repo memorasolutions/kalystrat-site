@@ -72,7 +72,7 @@ echo json_encode([
         <div class="ks-bento ks-bento--3col">
             @foreach($secteurs as $slug => $s)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Secteur 0{{ $loop->iteration }}</span>
+                <span class="ks-eyebrow">Secteur d’expertise</span>
                 <h3 class="ks-card__title"><a href="{{ route('secteurs.show', $slug) }}">{{ $s['nom'] }}</a></h3>
                 <p class="ks-card__text">{{ $s['desc'] }}</p>
                 <div class="ks-card__cta"><a href="{{ route('secteurs.show', $slug) }}" class="ks-cta-secondary">Détails</a></div>

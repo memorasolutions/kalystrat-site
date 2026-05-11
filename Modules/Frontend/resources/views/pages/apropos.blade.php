@@ -168,7 +168,6 @@
         <div class="ks-piliers-asym ks-fade-in">
             @foreach($piliers as $i => $p)
             <article class="ks-card ks-card--dark ks-piliers-asym__card{{ $i === 0 ? ' ks-piliers-asym__card--hero' : '' }}{{ $i === 5 ? ' ks-piliers-asym__card--wide' : '' }}">
-                <div style="font-family:var(--ks-font-display);font-size:{{ $i === 0 ? '3rem' : '2rem' }};color:var(--ks-gold-500);font-weight:700;line-height:1">{{ $p['n'] }}</div>
                 <h3 class="ks-card__title">{{ $p['t'] }}</h3>
                 <p class="ks-card__text">{{ $p['d'] }}</p>
             </article>
@@ -286,27 +285,27 @@
         </div>
         <div class="ks-bento ks-bento--3col ks-fade-in">
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Centralisé · 01</span>
+                <span class="ks-eyebrow">Service centralisé</span>
                 <h3 class="ks-card__title">Comptabilité et finances</h3>
                 <p class="ks-card__text">Tenue de livres, états financiers consolidés, gestion de la trésorerie, planification fiscale, budgétisation.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Centralisé · 02</span>
+                <span class="ks-eyebrow">Service centralisé</span>
                 <h3 class="ks-card__title">Ressources humaines</h3>
                 <p class="ks-card__text">Recrutement de cadres, paie, avantages sociaux, santé-sécurité au travail, conformité CCQ.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Centralisé · 03</span>
+                <span class="ks-eyebrow">Service centralisé</span>
                 <h3 class="ks-card__title">Juridique</h3>
                 <p class="ks-card__text">Contrats, conformité réglementaire (RBQ, CCQ), propriété intellectuelle, gestion de litiges.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Centralisé · 04</span>
+                <span class="ks-eyebrow">Service centralisé</span>
                 <h3 class="ks-card__title">Marketing</h3>
                 <p class="ks-card__text">Stratégie de marque unifiée, site web, médias sociaux, publicité, relations publiques.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Centralisé · 05</span>
+                <span class="ks-eyebrow">Service centralisé</span>
                 <h3 class="ks-card__title">Technologies de l’information</h3>
                 <p class="ks-card__text">Infrastructure informatique, logiciels de gestion de projet, système ERP, cybersécurité.</p>
             </article>

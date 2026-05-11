@@ -66,7 +66,7 @@ echo json_encode([
         <div class="ks-bento">
             @foreach($filiales as $slug => $f)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Filiale 0{{ $loop->iteration }}</span>
+                <span class="ks-eyebrow">Filiale spécialisée</span>
                 <h3 class="ks-card__title"><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h3>
                 <div class="ks-card__meta" style="color:var(--ks-gray-700);text-transform:none;letter-spacing:0;font-weight:500">{{ $f['specialite'] }}</div>
                 <p class="ks-card__text">{{ $f['tagline'] }}</p>

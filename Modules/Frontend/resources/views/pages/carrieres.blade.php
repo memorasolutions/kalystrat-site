@@ -77,7 +77,7 @@ $metiers = [
         <div class="ks-bento ks-bento--3col">
             @foreach($avantages as $i => $a)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Avantage {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="ks-eyebrow">Avantage</span>
                 <h3 class="ks-card__title">{{ $a['t'] }}</h3>
                 <p class="ks-card__text">{{ $a['d'] }}</p>
             </article>

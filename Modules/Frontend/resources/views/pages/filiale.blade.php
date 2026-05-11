@@ -95,7 +95,7 @@
         <div class="ks-bento ks-bento--3col">
             @foreach($filiale['services'] as $i => $service)
             <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">Service {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <span class="ks-eyebrow">Service</span>
                 <h3 class="ks-card__title">{{ $service }}</h3>
             </article>
             @endforeach
