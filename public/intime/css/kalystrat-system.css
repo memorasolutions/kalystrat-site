@@ -3534,3 +3534,31 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 .ks-zones__geo-list a:focus-visible {
   color: var(--ks-gold-700, #8F3F00);
 }
+
+/* ============================================================
+   T140 — Système logo Kalystrat (header / sticky / mobile / footer)
+   logo-header.svg sur fond clair · logo-white.svg sur fond foncé
+   ============================================================ */
+.main-header .logo img,
+.main-header .nav-logo img,
+.sticky-header .logo img,
+.mobile-menu .nav-logo img {
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
+.main-header .logo a,
+.main-header .nav-logo a,
+.sticky-header .logo a,
+.mobile-menu .nav-logo a {
+  display: inline-block;
+  line-height: 0;
+}
+
+/* Footer brand (.ks-footer__logo déjà CSS T131) — adapté au logo-white SVG */
+.ks-footer__logo img {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
+}

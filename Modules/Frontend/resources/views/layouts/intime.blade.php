@@ -25,7 +25,7 @@ if ('serviceWorker' in navigator) {
     'name' => 'Gestion Kalystrat Inc.',
     'alternateName' => 'Kalystrat',
     'url' => 'https://kalystrat.ca',
-    'logo' => url('/intime/images/logo.png'),
+    'logo' => url('/assets/img/kalystrat/logo.svg'),
     'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
     'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'telephone' => '+1-418-476-0987', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA-QC', 'availableLanguage' => ['French', 'English']],
@@ -54,8 +54,12 @@ if ('serviceWorker' in navigator) {
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-<link rel="shortcut icon" href="/intime/images/favicon.png" type="image/x-icon">
-<link rel="icon" href="/intime/images/favicon.png" type="image/x-icon">
+<!-- T140 — Système favicon Kalystrat (SVG + apple-touch + PNG fallback) -->
+<link rel="icon" type="image/svg+xml" href="/assets/img/kalystrat/favicon.svg">
+<link rel="alternate icon" href="/intime/images/favicon.png" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/kalystrat/apple-touch-icon.png">
+<link rel="mask-icon" href="/assets/img/kalystrat/favicon.svg" color="#0A1628">
+<meta name="theme-color" content="#0A1628">
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -85,7 +89,7 @@ if ('serviceWorker' in navigator) {
             <div class="auto-container">
 				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 					<!-- Logo Box -->
-					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat — Groupe québécois de construction" title="Kalystrat"></a></div>
+					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc. — Groupe québécois de construction" title="Kalystrat" width="180" height="60"></a></div>
 					
 					<div class="nav-outer d-flex ">
 						
@@ -176,7 +180,7 @@ if ('serviceWorker' in navigator) {
 				<div class="d-flex justify-content-between align-items-center">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat" title="Kalystrat"></a>
+						<a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc." title="Kalystrat" width="160" height="50"></a>
 					</div>
 					
 					<!-- Right Col -->
@@ -216,7 +220,7 @@ if ('serviceWorker' in navigator) {
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon fas fa-window-close fa-fw"></span></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo.png" alt="Logo Kalystrat" title="Kalystrat"></a></div>
+                <div class="nav-logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-white.svg" alt="Logo Gestion Kalystrat Inc." title="Kalystrat" width="180" height="60"></a></div>
 				<!-- Search -->
 				<div class="search-box">
 					<form method="post" action="contact.html">
@@ -262,7 +266,7 @@ if ('serviceWorker' in navigator) {
 
 					<div class="ks-footer__brand">
 						<a href="{{ url('/') }}" class="ks-footer__logo" aria-label="Kalystrat — accueil">
-							<img src="/intime/images/logo-6.png" alt="Logo Gestion Kalystrat Inc." width="180" height="60">
+							<img src="/assets/img/kalystrat/logo-white.svg" alt="Logo Gestion Kalystrat Inc." width="200" height="65">
 						</a>
 						<p class="ks-footer__tagline">Conçu, réalisé, livré. Groupe québécois de construction à intégration verticale.</p>
 						<ul class="ks-footer__contact">
