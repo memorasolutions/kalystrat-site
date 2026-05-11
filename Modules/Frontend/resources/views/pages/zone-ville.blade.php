@@ -44,6 +44,81 @@ $z = $zones[$ville];
         ['@type' => 'ListItem', 'position' => 3, 'name' => $z['nom'], 'item' => url('/zones-desservies/' . $ville)],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T138 — Service Schema × 6 filiales par ville (SEO local hyperlocal 2026) --}}
+@php
+$servicesVille = [
+    ['name' => 'Fondations à ' . $z['nom'], 'slug' => 'fondations'],
+    ['name' => 'Charpente structurale à ' . $z['nom'], 'slug' => 'structure'],
+    ['name' => 'Toiture et enveloppe à ' . $z['nom'], 'slug' => 'toiture-enveloppe'],
+    ['name' => 'Finition intérieure à ' . $z['nom'], 'slug' => 'finition-interieure'],
+    ['name' => 'Développement immobilier à ' . $z['nom'], 'slug' => 'immobilier'],
+    ['name' => 'Placement main-d\'œuvre à ' . $z['nom'], 'slug' => 'placement-construction'],
+];
+@endphp
+@foreach($servicesVille as $sv)
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'name' => $sv['name'],
+    'serviceType' => $sv['name'],
+    'provider' => [
+        '@type' => 'GeneralContractor',
+        'name' => 'Gestion Kalystrat Inc.',
+        'url' => url('/'),
+    ],
+    'areaServed' => [
+        '@type' => 'City',
+        'name' => $z['nom'],
+        'address' => ['@type' => 'PostalAddress', 'addressLocality' => $z['nom'], 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
+    ],
+    'url' => url('/filiales/' . $sv['slug']),
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+@endforeach
+
+{{-- T138 — FAQPage locale (AEO hyperlocal 2026) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'Kalystrat intervient-il sur les chantiers à ' . $z['nom'] . ' ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Oui. Gestion Kalystrat Inc. dessert " . $z['nom'] . " via ses six filiales spécialisées (Fondations, Structure, Toiture, Finition, Immobilier, Placement Construction). Spécialités principales sur ce marché : " . $z['specialites'] . ".",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Quel est le délai pour une soumission à ' . $z['nom'] . ' ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Pour un projet résidentiel à " . $z['nom'] . ", la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Les projets commerciaux ou institutionnels avec modélisation BIM peuvent demander un délai plus long selon la complexité.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Quelles régulations municipales s'appliquent à " . $z['nom'] . " ?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Les chantiers à " . $z['nom'] . " respectent le Code de construction du Québec 2026, le règlement municipal local et, le cas échéant, les avis du comité consultatif d'urbanisme pour les secteurs patrimoniaux ou densifiés. Détails techniques disponibles dans la section ci-dessous.",
+            ],
+        ],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T138 — Speakable Schema (AEO LLM-friendly) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    'name' => 'Construction à ' . $z['nom'] . ' | Kalystrat',
+    'url' => url('/zones-desservies/' . $ville),
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-h2', '.ks-lead'],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 @endpush
 
 @section('content')
