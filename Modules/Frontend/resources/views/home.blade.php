@@ -424,7 +424,7 @@ $services = [
                 <span class="ks-eyebrow">Conçu, réalisé, livré</span>
                 <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
                 <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un buzzword. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
-                <p class="ks-lead ks-approche__lead">Six directions de filiales, chacune pilotée par un expert reconnu de son métier, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des spécialisations et la conformité totale au Code de construction du Québec 2026.</p>
+                <p class="ks-lead ks-approche__lead">Six directions de filiales spécialisées, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des expertises métier et la conformité totale au Code de construction du Québec 2026.</p>
                 <p class="ks-lead ks-approche__lead">La direction est appuyée par un <strong>conseil consultatif</strong> réunissant des experts en construction, financement, droit des affaires, ressources humaines et immobilier — dont <strong>Me Jacques Jobidon</strong> (droit de la construction et des sociétés) et <strong>Perry Wong</strong> (immobilier).</p>
                 <div class="ks-approche__expertise" aria-hidden="true">
                     <span class="ks-approche__expertise-label">Expertise structurée</span>
