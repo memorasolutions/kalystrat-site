@@ -21,7 +21,20 @@
         'name' => 'Gestion Kalystrat Inc.',
         'url' => 'https://kalystrat.ca',
         'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
-        'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'areaServed' => 'CA', 'availableLanguage' => ['French', 'English']],
+        'contactPoint' => [
+            '@type' => 'ContactPoint',
+            'contactType' => 'customer service',
+            'telephone' => '+1-418-476-0987',
+            'email' => 'info@kalystrat.ca',
+            'areaServed' => 'CA-QC',
+            'availableLanguage' => ['French', 'English'],
+            'hoursAvailable' => [
+                '@type' => 'OpeningHoursSpecification',
+                'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                'opens' => '08:00',
+                'closes' => '17:00',
+            ],
+        ],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
@@ -153,6 +166,12 @@
             </article>
 
             <aside style="display:flex;flex-direction:column;gap:20px">
+                <article class="ks-card ks-card--accent-gold">
+                    <span class="ks-eyebrow">Téléphone</span>
+                    <h3 class="ks-card__title" style="font-size:1.25rem"><a href="tel:+14184760987" aria-label="Appeler Kalystrat au 418 476 0987">418&nbsp;476-0987</a></h3>
+                    <p class="ks-card__text">Lundi au vendredi, 8&nbsp;h à 17&nbsp;h. Service en français. Hors heures&nbsp;: message vocal redirigé sur courriel.</p>
+                </article>
+
                 <article class="ks-card ks-card--accent-gold">
                     <span class="ks-eyebrow">Bureau</span>
                     <h3 class="ks-card__title" style="font-size:1.25rem">Québec, QC, Canada</h3>

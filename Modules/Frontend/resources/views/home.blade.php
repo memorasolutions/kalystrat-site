@@ -20,6 +20,8 @@
     'logo' => url('/intime/images/logo.svg'),
     'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction.",
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
+    'telephone' => '+1-418-476-0987',
+    'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'telephone' => '+1-418-476-0987', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA-QC', 'availableLanguage' => ['French', 'English']],
     'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
     'subOrganization' => [
         ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Fondations', 'url' => url('/filiales/fondations')],

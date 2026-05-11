@@ -28,7 +28,8 @@ if ('serviceWorker' in navigator) {
     'logo' => url('/intime/images/logo.png'),
     'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
-    'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA', 'availableLanguage' => ['French', 'English']],
+    'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'telephone' => '+1-418-476-0987', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA-QC', 'availableLanguage' => ['French', 'English']],
+    'telephone' => '+1-418-476-0987',
     'subOrganization' => array_map(fn($s, $f) => ['@type' => 'GeneralContractor', 'name' => $f['nom_legal'], 'url' => 'https://kalystrat.ca/filiales/' . $s], array_keys(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES), \Modules\Frontend\Http\Controllers\FilialeController::FILIALES),
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
@@ -277,6 +278,11 @@ if ('serviceWorker' in navigator) {
 								<div class="footer-widget logo-widget">
 									<h4>À propos</h4>
 									<div class="text">Groupe québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
+									<p style="margin-top:1rem;color:var(--ks-gold-500);font-family:var(--ks-font-display);font-weight:700;font-size:0.95rem">
+										<a href="tel:+14184760987" style="color:var(--ks-gold-500)" aria-label="Appeler Kalystrat au 418 476 0987">📞&nbsp;418&nbsp;476-0987</a>
+										&nbsp;·&nbsp;
+										<a href="mailto:info@kalystrat.ca" style="color:var(--ks-gold-500)">info@kalystrat.ca</a>
+									</p>
 									<!-- Social Box -->
 									<ul class="footer-six_social-box">
 										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw" aria-label="Suivre Kalystrat sur Facebook"></a></li>
@@ -462,10 +468,10 @@ if ('serviceWorker' in navigator) {
 })();
 </script>
 
-{{-- V5d-B — Sticky CTA mobile (visible scroll bas) --}}
-<a class="ks-sticky-cta" href="{{ url('/contact') }}" aria-label="Obtenir une soumission" hidden data-ks-sticky-cta>
+{{-- V5d-B — Sticky CTA mobile (visible scroll bas) - tel: direct conversion --}}
+<a class="ks-sticky-cta" href="tel:+14184760987" aria-label="Appeler Kalystrat au 418 476 0987" hidden data-ks-sticky-cta>
     <span class="ks-sticky-cta__icon" aria-hidden="true">📞</span>
-    <span class="ks-sticky-cta__text">Obtenir une soumission</span>
+    <span class="ks-sticky-cta__text">418&nbsp;476-0987</span>
 </a>
 <script>
 (function () {
