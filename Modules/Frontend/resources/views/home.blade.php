@@ -394,34 +394,35 @@
     </div>
 </section>
 
-<section class="ks-section">
+<section class="ks-section ks-process">
     <div class="ks-container">
         <div class="ks-section__heading">
             <span class="ks-eyebrow">Comment nous travaillons</span>
             <h2 class="ks-h2">Notre approche en quatre étapes</h2>
+            <p class="ks-process__lead">Du premier contact à la remise des clés, un parcours linéaire piloté par votre chargé de projet dédié. Délais contractuels, contrôle qualité à chaque étape, garanties activées.</p>
         </div>
-        <div class="ks-bento">
-            <article class="ks-card ks-card--accent-gold">
-                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">01</div>
-                <h3 class="ks-card__title">Évaluation et soumission</h3>
-                <p class="ks-card__text">Visite du site, prise de mesures, étude des plans s’ils existent, recommandations techniques et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
-            </article>
-            <article class="ks-card ks-card--accent-gold">
-                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">02</div>
-                <h3 class="ks-card__title">Conception et permis</h3>
-                <p class="ks-card__text">Coordination avec architectes et ingénieurs au besoin, modélisation BIM pour les projets commerciaux et institutionnels, dépôt du dossier complet à la municipalité.</p>
-            </article>
-            <article class="ks-card ks-card--accent-gold">
-                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">03</div>
-                <h3 class="ks-card__title">Exécution intégrée</h3>
-                <p class="ks-card__text">Mobilisation de nos six filiales selon un calendrier serré, supervision par un chargé de projet unique, contrôle qualité à chaque étape, communication hebdomadaire avec le client.</p>
-            </article>
-            <article class="ks-card ks-card--accent-gold">
-                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">04</div>
-                <h3 class="ks-card__title">Livraison et garanties</h3>
-                <p class="ks-card__text">Inspection conjointe, remise des documents (plans tels que construits, manuels d’entretien, certificats), activation du Plan de garantie GCR, accompagnement post-livraison.</p>
-            </article>
-        </div>
+        <ol class="ks-process__timeline" aria-label="Notre processus en quatre étapes séquentielles">
+            <li class="ks-process__step">
+                <div class="ks-process__num" aria-hidden="true">01</div>
+                <h3 class="ks-process__title">Évaluation et soumission</h3>
+                <p class="ks-process__text">Visite du site, prise de mesures, étude des plans s’ils existent, recommandations techniques et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+            </li>
+            <li class="ks-process__step">
+                <div class="ks-process__num" aria-hidden="true">02</div>
+                <h3 class="ks-process__title">Conception et permis</h3>
+                <p class="ks-process__text">Coordination avec architectes et ingénieurs au besoin, modélisation BIM pour les projets commerciaux et institutionnels, dépôt du dossier complet à la municipalité.</p>
+            </li>
+            <li class="ks-process__step">
+                <div class="ks-process__num" aria-hidden="true">03</div>
+                <h3 class="ks-process__title">Exécution intégrée</h3>
+                <p class="ks-process__text">Mobilisation de nos six filiales selon un calendrier serré, supervision par un chargé de projet unique, contrôle qualité à chaque étape, communication hebdomadaire avec le client.</p>
+            </li>
+            <li class="ks-process__step">
+                <div class="ks-process__num" aria-hidden="true">04</div>
+                <h3 class="ks-process__title">Livraison et garanties</h3>
+                <p class="ks-process__text">Inspection conjointe, remise des documents (plans tels que construits, manuels d’entretien, certificats), activation du Plan de garantie GCR, accompagnement post-livraison.</p>
+            </li>
+        </ol>
     </div>
 </section>
 
