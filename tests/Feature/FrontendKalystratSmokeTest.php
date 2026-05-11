@@ -46,7 +46,6 @@ dataset('routes_publiques', [
     ['/secteurs/institutionnel'],
     ['/secteurs/industriel'],
     ['/secteurs/municipal'],
-    ['/credits'],
     ['/blog/pourquoi-construire-multi-logements-quebec-2026'],
     ['/blog/code-construction-quebec-2026-changements'],
     ['/blog/comment-choisir-entrepreneur-construction-qc-2026'],

@@ -77,6 +77,6 @@ Route::get('/blog/{slug}', [PageController::class, 'blogShow'])
     ->where('slug', 'pourquoi-construire-multi-logements-quebec-2026|code-construction-quebec-2026-changements|comment-choisir-entrepreneur-construction-qc-2026')
     ->name('blog.show');
 
-// Pages légales — Privacy, Conditions, Crédits photos, llms.txt
-Route::view('/credits', 'frontend::pages.credits')->name('credits');
+// Pages légales — Privacy, Conditions, llms.txt
+// T133 — Page /credits supprimée (attribution MEMORA dans footer signature)
 Route::view('/llms.txt', 'frontend::llms')->name('llms');

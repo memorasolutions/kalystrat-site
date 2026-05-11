@@ -330,7 +330,6 @@ if ('serviceWorker' in navigator) {
 				<div class="ks-footer__copyright">&copy; {{ date('Y') }} Gestion Kalystrat Inc. — Tous droits réservés.</div>
 				<ul class="ks-footer__legal-links">
 					<li><a href="{{ url('/politique-confidentialite') }}">Politique Loi 25</a></li>
-					<li><a href="{{ route('credits') }}">Crédits</a></li>
 					<li><a href="/sitemap.xml">Plan du site</a></li>
 				</ul>
 				<div class="ks-footer__signature">Site par <a href="https://memora.ca" rel="noopener external" target="_blank">MEMORA</a></div>
