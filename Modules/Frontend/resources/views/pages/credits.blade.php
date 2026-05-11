@@ -27,18 +27,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/glossaire-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Crédits</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Transparence</span>
-        <h1>Crédits et mentions du site</h1>
-        <p class="ks-page-hero__subtitle">Thèmes, polices, bibliothèques et services qui font fonctionner kalystrat.ca, ainsi que les équipes de conception.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/glossaire-hero.webp"
+    eyebrow="Transparence"
+    title="Crédits et mentions du site"
+    subtitle="Thèmes, polices, bibliothèques et services qui font fonctionner kalystrat.ca, ainsi que les équipes de conception."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Crédits</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 @php
 $credits = [

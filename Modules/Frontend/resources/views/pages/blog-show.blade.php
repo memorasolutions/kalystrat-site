@@ -45,19 +45,18 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/blog-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ route('blog.index') }}">Blog</a></li>
-            <li>{{ $article['categorie'] }}</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $article['categorie'] }}</span>
-        <h1>{{ $article['titre'] }}</h1>
-        <p class="ks-page-hero__subtitle">{{ \Carbon\Carbon::parse($article['date'])->locale('fr_CA')->isoFormat('LL') }} &middot; Lecture estimée 6 à 9 minutes</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/blog-hero.webp"
+    eyebrow="{{ $article['categorie'] }}"
+    title="{{ $article['titre'] }}"
+    subtitle="{{ \Carbon\Carbon::parse($article['date'])->locale('fr_CA')->isoFormat('LL') }} &middot; Lecture estimée 6 à 9 minutes"
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li><a href="{{ route('blog.index') }}">Blog</a></li>
+        <li>{{ $article['categorie'] }}</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container" style="max-width:780px">

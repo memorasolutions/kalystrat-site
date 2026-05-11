@@ -41,28 +41,18 @@
 
 @section('content')
 
-@php
-    $filialeHeroWebp = public_path('intime/images/filiales/' . $slug . '-hero.webp');
-    $filialeHeroJpg = public_path('intime/images/filiales/' . $slug . '-hero.jpg');
-    $filialeHero = file_exists($filialeHeroWebp) ? $filialeHeroWebp : $filialeHeroJpg;
-    $filialeHeroExt = file_exists($filialeHeroWebp) ? 'webp' : 'jpg';
-    $filialeHeroExists = file_exists($filialeHero);
-@endphp
-
-<header class="ks-page-hero ks-page-hero--photo"
-    @if($filialeHeroExists) style="--ks-hero-photo: url('/intime/images/filiales/{{ $slug }}-hero.{{ $filialeHeroExt }}?v={{ filemtime($filialeHero) }}')" @endif>
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ route('filiales.index') }}">Filiales</a></li>
-            <li>{{ $filiale['nom_court'] }}</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $filiale['specialite'] }}</span>
-        <h1>{{ $filiale['nom_court'] }}</h1>
-        <p class="ks-page-hero__subtitle">{{ $filiale['tagline'] }}</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/filiales/{{ $slug }}-hero.webp"
+    eyebrow="{{ $filiale['specialite'] }}"
+    title="{{ $filiale['nom_court'] }}"
+    subtitle="{{ $filiale['tagline'] }}"
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li><a href="{{ route('filiales.index') }}">Filiales</a></li>
+        <li>{{ $filiale['nom_court'] }}</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">

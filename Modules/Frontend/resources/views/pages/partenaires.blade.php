@@ -26,18 +26,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/partenaires-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Partenaires</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Écosystème de la construction</span>
-        <h1>Partenaires et écosystème</h1>
-        <p class="ks-page-hero__subtitle">L’intégration verticale Kalystrat n’élimine pas la collaboration&nbsp;: elle la rend plus efficace. Notre réseau d’architectes, designers, ingénieurs et promoteurs apporte une expertise spécifique à chaque projet.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/partenaires-hero.webp"
+    eyebrow="Écosystème de la construction"
+    title="Partenaires et écosystème"
+    subtitle="L’intégration verticale Kalystrat n’élimine pas la collaboration&nbsp;: elle la rend plus efficace. Notre réseau d’architectes, designers, ingénieurs et promoteurs apporte une expertise spécifique à chaque projet."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Partenaires</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

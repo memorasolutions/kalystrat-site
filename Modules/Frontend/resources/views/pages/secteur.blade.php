@@ -72,28 +72,18 @@ $s = $secteurs[$slug];
 
 @section('content')
 
-@php
-    $secteurHeroWebp = public_path('intime/images/secteurs/' . $slug . '-hero.webp');
-    $secteurHeroJpg = public_path('intime/images/secteurs/' . $slug . '-hero.jpg');
-    $secteurHero = file_exists($secteurHeroWebp) ? $secteurHeroWebp : $secteurHeroJpg;
-    $secteurHeroExt = file_exists($secteurHeroWebp) ? 'webp' : 'jpg';
-    $secteurHeroExists = file_exists($secteurHero);
-@endphp
-
-<header class="ks-page-hero ks-page-hero--photo"
-    @if($secteurHeroExists) style="--ks-hero-photo: url('/intime/images/secteurs/{{ $slug }}-hero.{{ $secteurHeroExt }}?v={{ filemtime($secteurHero) }}')" @endif>
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ route('secteurs.index') }}">Secteurs</a></li>
-            <li>{{ $s['nom'] }}</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $s['tagline'] }}</span>
-        <h1>Construction {{ Str::lower($s['nom']) }}</h1>
-        <p class="ks-page-hero__subtitle">{!! $s['desc'] !!}</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/secteurs/{{ $slug }}-hero.webp"
+    eyebrow="{{ $s['tagline'] }}"
+    title="Construction {{ Str::lower($s['nom']) }}"
+    subtitle="{!! $s['desc'] !!}"
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li><a href="{{ route('secteurs.index') }}">Secteurs</a></li>
+        <li>{{ $s['nom'] }}</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 @php $secteurContentPath = 'frontend::partials.secteur-content.' . $slug; @endphp
 @if(view()->exists($secteurContentPath))

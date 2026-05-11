@@ -66,18 +66,17 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/glossaire-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Glossaire</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Termes techniques</span>
-        <h1>Glossaire de la construction</h1>
-        <p class="ks-page-hero__subtitle">Trente termes techniques que vous rencontrerez sur un contrat, un devis, un plan ou pendant les rencontres de chantier. Définitions adaptées au contexte québécois.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/glossaire-hero.webp"
+    eyebrow="Termes techniques"
+    title="Glossaire de la construction"
+    subtitle="Trente termes techniques que vous rencontrerez sur un contrat, un devis, un plan ou pendant les rencontres de chantier. Définitions adaptées au contexte québécois."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Glossaire</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

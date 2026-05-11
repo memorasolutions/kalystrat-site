@@ -48,19 +48,18 @@ $z = $zones[$ville];
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/zone-ville-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ route('zones.index') }}">Zones desservies</a></li>
-            <li>{{ $z['nom'] }}</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $z['pop'] }} habitants</span>
-        <h1>Construction à {{ $z['nom'] }}</h1>
-        <p class="ks-page-hero__subtitle">{{ $z['specialites'] }}.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/zone-ville-hero.webp"
+    eyebrow="{{ $z['pop'] }} habitants"
+    title="Construction à {{ $z['nom'] }}"
+    subtitle="{{ $z['specialites'] }}."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li><a href="{{ route('zones.index') }}">Zones desservies</a></li>
+        <li>{{ $z['nom'] }}</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

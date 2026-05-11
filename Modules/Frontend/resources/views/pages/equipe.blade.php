@@ -41,18 +41,17 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/equipe-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Équipe</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
-        <h1>Équipe et gouvernance</h1>
-        <p class="ks-page-hero__subtitle">Une présidence forte, six directions de filiales, un conseil consultatif d'experts indépendants. Gouvernance centralisée, exécution décentralisée.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/equipe-hero.webp"
+    eyebrow="Conçu, réalisé, livré"
+    title="Équipe et gouvernance"
+    subtitle="Une présidence forte, six directions de filiales, un conseil consultatif d'experts indépendants. Gouvernance centralisée, exécution décentralisée."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Équipe</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

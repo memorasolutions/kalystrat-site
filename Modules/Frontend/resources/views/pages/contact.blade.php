@@ -49,18 +49,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/contact-hero-meeting.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Contact</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
-        <h1>Parlons de votre projet</h1>
-        <p class="ks-page-hero__subtitle">Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier. Réponse sous 24 heures ouvrables.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/contact-hero-meeting.webp"
+    eyebrow="Conçu, réalisé, livré"
+    title="Parlons de votre projet"
+    subtitle="Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier. Réponse sous 24 heures ouvrables."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Contact</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">

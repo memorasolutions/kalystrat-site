@@ -27,18 +27,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/carrieres-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Carrières</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Rejoindre l’équipe</span>
-        <h1>Carrières chez Kalystrat</h1>
-        <p class="ks-page-hero__subtitle">Le secteur de la construction au Québec compte plus de 11 000 postes vacants. Apprenti, compagnon expérimenté ou cadre de chantier&nbsp;: nous avons probablement une opportunité pour vous.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/carrieres-hero.webp"
+    eyebrow="Rejoindre l’équipe"
+    title="Carrières chez Kalystrat"
+    subtitle="Le secteur de la construction au Québec compte plus de 11 000 postes vacants. Apprenti, compagnon expérimenté ou cadre de chantier&nbsp;: nous avons probablement une opportunité pour vous."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Carrières</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

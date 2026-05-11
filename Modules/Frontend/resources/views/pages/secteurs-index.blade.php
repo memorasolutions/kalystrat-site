@@ -44,18 +44,17 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/projets-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Secteurs</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Verticaux d’expertise</span>
-        <h1>Secteurs desservis</h1>
-        <p class="ks-page-hero__subtitle">Cinq marchés verticaux au Québec, mobilisant les six filiales selon les besoins du chantier&nbsp;: résidentiel, commercial, institutionnel, industriel et municipal.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/projets-hero.webp"
+    eyebrow="Verticaux d’expertise"
+    title="Secteurs desservis"
+    subtitle="Cinq marchés verticaux au Québec, mobilisant les six filiales selon les besoins du chantier&nbsp;: résidentiel, commercial, institutionnel, industriel et municipal."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Secteurs</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

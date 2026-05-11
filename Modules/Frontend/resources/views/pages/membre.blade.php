@@ -67,19 +67,18 @@ $m = $membres[$slug];
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/membre-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li><a href="{{ route('equipe') }}">Équipe</a></li>
-            <li>{{ $m['nom'] }}</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">{{ $m['role'] }}</span>
-        <h1>{{ $m['nom'] }}</h1>
-        <p class="ks-page-hero__subtitle">{!! $m['titre'] !!}</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/membre-hero.webp"
+    eyebrow="{{ $m['role'] }}"
+    title="{{ $m['nom'] }}"
+    subtitle="{!! $m['titre'] !!}"
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li><a href="{{ route('equipe') }}">Équipe</a></li>
+        <li>{{ $m['nom'] }}</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

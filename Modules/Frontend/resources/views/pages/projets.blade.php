@@ -27,18 +27,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/projets-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Projets</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
-        <h1>Projets et réalisations</h1>
-        <p class="ks-page-hero__subtitle">Maisons custom, condominiums, bâtiments commerciaux et institutionnels&nbsp;: nos chantiers en cours et livrés par les six filiales Kalystrat.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/projets-hero.webp"
+    eyebrow="Conçu, réalisé, livré"
+    title="Projets et réalisations"
+    subtitle="Maisons custom, condominiums, bâtiments commerciaux et institutionnels&nbsp;: nos chantiers en cours et livrés par les six filiales Kalystrat."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Projets</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">

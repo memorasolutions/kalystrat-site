@@ -44,18 +44,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/apropos-hero-montreal-night.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>À propos</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
-        <h1>Un groupe québécois de construction à intégration verticale</h1>
-        <p class="ks-page-hero__subtitle">Six filiales spécialisées sous une marque unifiée. Une vision : faire de Gestion Kalystrat Inc. une référence québécoise de la construction intégrée.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/apropos-hero-montreal-night.webp"
+    eyebrow="Conçu, réalisé, livré"
+    title="Un groupe québécois de construction à intégration verticale"
+    subtitle="Six filiales spécialisées sous une marque unifiée. Une vision : faire de Gestion Kalystrat Inc. une référence québécoise de la construction intégrée."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>À propos</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">

@@ -50,18 +50,17 @@
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/expertise-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>Expertise</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
-        <h1>Notre expertise technique</h1>
-        <p class="ks-page-hero__subtitle">Méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/expertise-hero.webp"
+    eyebrow="Conçu, réalisé, livré"
+    title="Notre expertise technique"
+    subtitle="Méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>Expertise</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">

@@ -75,18 +75,17 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/faq-hero.webp')">
-    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
-    <div class="ks-container ks-page-hero__inner">
-        <ul class="ks-page-hero__breadcrumb">
-            <li><a href="{{ url('/') }}">Accueil</a></li>
-            <li>FAQ</li>
-        </ul>
-        <span class="ks-eyebrow ks-page-hero__eyebrow">Tout savoir sur Kalystrat</span>
-        <h1>Questions fréquentes</h1>
-        <p class="ks-page-hero__subtitle">Vingt-trois réponses aux questions les plus posées par nos clients, partenaires et candidats. Si la vôtre n’y figure pas, écrivez-nous.</p>
-    </div>
-</header>
+<x-frontend::page-hero
+    photo="/intime/images/pages/faq-hero.webp"
+    eyebrow="Tout savoir sur Kalystrat"
+    title="Questions fréquentes"
+    subtitle="Vingt-trois réponses aux questions les plus posées par nos clients, partenaires et candidats. Si la vôtre n’y figure pas, écrivez-nous."
+>
+    <x-slot:breadcrumb>
+        <li><a href="{{ url('/') }}">Accueil</a></li>
+        <li>FAQ</li>
+    </x-slot:breadcrumb>
+</x-frontend::page-hero>
 
 <section class="ks-section">
     <div class="ks-container">
