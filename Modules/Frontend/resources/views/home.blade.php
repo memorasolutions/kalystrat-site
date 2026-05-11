@@ -32,6 +32,77 @@
         ['@type' => 'Organization', 'name' => 'Kalystrat Placement Construction', 'url' => url('/filiales/placement-construction')],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T130 — LocalBusiness Schema (SEO local QC) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'GeneralContractor',
+    'name' => 'Gestion Kalystrat Inc.',
+    'url' => url('/'),
+    'logo' => url('/intime/images/logo.svg'),
+    'image' => url('/intime/images/pages/home-showcase-aerial.webp'),
+    'description' => "Groupe québécois de construction à intégration verticale : fondations, structure, toiture, finition, immobilier, placement de main-d'œuvre.",
+    'telephone' => '+1-418-476-0987',
+    'email' => 'info@kalystrat.ca',
+    'priceRange' => '$$',
+    'address' => [
+        '@type' => 'PostalAddress',
+        'addressLocality' => 'Québec',
+        'addressRegion' => 'QC',
+        'addressCountry' => 'CA',
+    ],
+    'geo' => [
+        '@type' => 'GeoCoordinates',
+        'latitude' => 46.8139,
+        'longitude' => -71.2080,
+    ],
+    'areaServed' => [
+        ['@type' => 'AdministrativeArea', 'name' => 'Province of Quebec'],
+        ['@type' => 'City', 'name' => 'Québec'],
+        ['@type' => 'City', 'name' => 'Lévis'],
+        ['@type' => 'City', 'name' => 'Sainte-Foy'],
+        ['@type' => 'City', 'name' => 'Beauport'],
+        ['@type' => 'City', 'name' => 'Sillery'],
+        ['@type' => 'City', 'name' => 'Trois-Rivières'],
+        ['@type' => 'City', 'name' => 'Saguenay'],
+        ['@type' => 'City', 'name' => 'Montréal'],
+        ['@type' => 'City', 'name' => 'Laval'],
+    ],
+    'openingHoursSpecification' => [
+        '@type' => 'OpeningHoursSpecification',
+        'dayOfWeek' => ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+        'opens' => '07:00',
+        'closes' => '17:00',
+    ],
+    'hasCredential' => [
+        ['@type' => 'EducationalOccupationalCredential', 'name' => 'RBQ — Licence Régie du bâtiment du Québec'],
+        ['@type' => 'EducationalOccupationalCredential', 'name' => 'CCQ — Main-d\'œuvre certifiée Commission de la construction du Québec'],
+        ['@type' => 'EducationalOccupationalCredential', 'name' => 'APCHQ — Garantie rénovation'],
+        ['@type' => 'EducationalOccupationalCredential', 'name' => 'GCR — Plan de garantie des bâtiments résidentiels neufs'],
+        ['@type' => 'EducationalOccupationalCredential', 'name' => 'Novoclimat 2.0 — Efficacité énergétique'],
+    ],
+    'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
+    'foundingLocation' => ['@type' => 'Place', 'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA']],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T130 — Speakable Schema (AEO 2026 ChatGPT / Perplexity / Gemini) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    'name' => 'Kalystrat — Groupe québécois de construction à intégration verticale',
+    'url' => url('/'),
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => [
+            'h1',
+            '.ks-page-hero__subtitle',
+            '#six-piliers-title',
+            '#defi-title',
+            '.ks-defi__market-stat',
+            '.ks-approche__commitment-title',
+        ],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 @endpush
 
 @section('content')
@@ -102,39 +173,77 @@
     </div>
 </aside>
 
-<section class="ks-section ks-pillars">
+<section class="ks-section ks-pillars" id="six-piliers" aria-labelledby="six-piliers-title">
     <div class="ks-container">
         <div class="ks-section__heading ks-section__heading--left">
-            <span class="ks-eyebrow">Trois piliers</span>
-            <h2 class="ks-h2">Une marque, six expertises,<br>du sol au toit.</h2>
+            <span class="ks-eyebrow">Six piliers fondateurs</span>
+            <h2 id="six-piliers-title" class="ks-h2">Six avantages,<br>une marque unifiée.</h2>
+            <p class="ks-lead">L'avantage concurrentiel de Kalystrat repose sur six piliers structurels. Ils ne sont pas des promesses marketing, mais l'architecture opérationnelle du groupe.</p>
         </div>
-        <div class="ks-pillars__grid">
+        <div class="ks-pillars__grid ks-pillars__grid--six">
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">01</div>
-                <h3 class="ks-pillar__title">Six filiales spécialisées</h3>
-                <p class="ks-pillar__text">Fondations, structure, toiture, finition, immobilier, placement. Chaque métier est piloté par une direction dédiée.</p>
+                <h3 class="ks-pillar__title">Intégration verticale</h3>
+                <p class="ks-pillar__text">De l'excavation à la finition, chaque étape est exécutée en interne par l'une des six filiales. Les marges des sous-traitants et les délais de coordination sont éliminés.</p>
             </article>
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">02</div>
-                <h3 class="ks-pillar__title">Intégration verticale</h3>
-                <p class="ks-pillar__text">Un chargé de projet unique, zéro sous-traitance externe sur les corps de métier clés. Fin des zones grises de responsabilité.</p>
+                <h3 class="ks-pillar__title">Main-d'œuvre interne</h3>
+                <p class="ks-pillar__text"><a href="{{ route('filiale', 'placement-construction') }}">Kalystrat Placement Construction</a> fournit la main-d'œuvre certifiée CCQ à toutes les filiales du groupe. Disponibilité garantie, formation cohérente.</p>
             </article>
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">03</div>
-                <h3 class="ks-pillar__title">Main-d’œuvre CCQ interne</h3>
-                <p class="ks-pillar__text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat 2.0. Standards de groupe partagés.</p>
+                <h3 class="ks-pillar__title">Demande captive</h3>
+                <p class="ks-pillar__text"><a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et flips, générant un flux de chantiers constant pour les cinq autres filiales.</p>
+            </article>
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">04</div>
+                <h3 class="ks-pillar__title">Synergies opérationnelles</h3>
+                <p class="ks-pillar__text">La chaîne complète tourne en boucle&nbsp;: Immobilier acquiert, Fondations excave, Structure charpente, Toiture protège, Finition complète, Placement fournit la main-d'œuvre à chaque étape.</p>
+            </article>
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">05</div>
+                <h3 class="ks-pillar__title">Cohérence de marque</h3>
+                <p class="ks-pillar__text">Convention « Kalystrat + spécialité » sur les six filiales. Reconnaissance instantanée, confiance projetée auprès des clients, promoteurs et partenaires.</p>
+            </article>
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">06</div>
+                <h3 class="ks-pillar__title">Gestion centralisée</h3>
+                <p class="ks-pillar__text">Comptabilité, ressources humaines, juridique, marketing et technologies de l'information sont mutualisés au niveau du Holding. Frais généraux par filiale réduits, exécution alignée.</p>
             </article>
         </div>
     </div>
 </section>
 
-<section class="ks-section ks-defi" data-defi-section>
+<section class="ks-section ks-defi" data-defi-section aria-labelledby="defi-title">
     <div class="ks-container">
+
+        <div class="ks-defi__market" aria-label="Le marché québécois de la construction en 2026">
+            <span class="ks-eyebrow">Marché 2026 en chiffres</span>
+            <div class="ks-defi__market-grid">
+                <article class="ks-defi__market-stat">
+                    <span class="ks-defi__market-num">59&nbsp;864</span>
+                    <span class="ks-defi__market-label">Mises en chantier au Québec en 2025 (+24&nbsp;%)</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: SCHL</cite>
+                </article>
+                <article class="ks-defi__market-stat">
+                    <span class="ks-defi__market-num">11&nbsp;000</span>
+                    <span class="ks-defi__market-label">Postes vacants en construction au Québec</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: CCQ</cite>
+                </article>
+                <article class="ks-defi__market-stat">
+                    <span class="ks-defi__market-num">19&nbsp;G$</span>
+                    <span class="ks-defi__market-label">Marché québécois de la rénovation en croissance</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ</cite>
+                </article>
+            </div>
+        </div>
+
         <div class="ks-defi__grid">
             <article class="ks-defi__lead">
                 <span class="ks-eyebrow">Conçu, réalisé, livré</span>
-                <h2 class="ks-defi__title">Le défi de la construction<br>au Québec en&nbsp;2026</h2>
-                <p class="ks-defi__intro">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire. L’industrie québécoise traverse une période exigeante.<br><br><strong>Notre réponse&nbsp;: l’intégration verticale.</strong></p>
+                <h2 id="defi-title" class="ks-defi__title">Le défi de la construction<br>au Québec en&nbsp;2026</h2>
+                <p class="ks-defi__intro">Pénurie de main-d'œuvre, hausse des coûts, complexité réglementaire. L'industrie québécoise traverse une période exigeante.<br><br><strong>Notre réponse&nbsp;: l'intégration verticale.</strong></p>
                 <ul class="ks-defi__points">
                     <li>
                         <span class="ks-defi__bullet" aria-hidden="true">→</span>
@@ -361,9 +470,9 @@
     <div class="ks-container">
         <div class="ks-pourquoi__intro">
             <div class="ks-pourquoi__heading">
-                <span class="ks-eyebrow">Pourquoi Kalystrat</span>
-                <h2 id="pourquoi-title" class="ks-h2">Quatre raisons de nous confier votre projet</h2>
-                <p class="ks-lead">Sur un chantier Kalystrat, votre chargé de projet pilote la totalité des corps de métier en s’appuyant sur les six directions de filiales. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</p>
+                <span class="ks-eyebrow">Preuves et garanties</span>
+                <h2 id="pourquoi-title" class="ks-h2">Quatre preuves contractuelles</h2>
+                <p class="ks-lead">Les six piliers ci-dessus décrivent la structure du groupe. Voici quatre preuves concrètes — vérifiables, techniques et contractuelles — que cette structure tient ses promesses sur chaque chantier Kalystrat.</p>
             </div>
         </div>
 

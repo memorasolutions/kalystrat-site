@@ -3302,3 +3302,62 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
     transition: none;
   }
 }
+
+/* ============================================================
+   T130 — Marché 2026 en chiffres (stats sourcées plan Ali)
+   3 stats SCHL / CCQ / APCHQ — anti-hallucination
+   ============================================================ */
+.ks-defi__market {
+  margin-bottom: clamp(48px, 6vw, 80px);
+  padding-bottom: clamp(32px, 4vw, 56px);
+  border-bottom: 1px solid rgba(184,164,114,0.22);
+}
+.ks-defi__market > .ks-eyebrow {
+  display: block;
+  margin-bottom: clamp(16px, 2vw, 28px);
+  color: var(--ks-gold-500, #B8A472);
+}
+.ks-defi__market-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(20px, 3vw, 48px);
+  align-items: start;
+}
+@media (max-width: 720px) {
+  .ks-defi__market-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}
+.ks-defi__market-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  padding: clamp(20px, 2vw, 28px);
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--ks-gold-500, #B8A472);
+  border-radius: 8px;
+}
+.ks-defi__market-num {
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.25rem);
+  line-height: 1;
+  color: var(--ks-gold-500, #B8A472);
+  letter-spacing: -0.02em;
+}
+.ks-defi__market-label {
+  font-size: clamp(0.875rem, 1.1vw, 1rem);
+  line-height: 1.45;
+  color: var(--ks-white, #fff);
+  opacity: 0.92;
+}
+.ks-defi__market-src {
+  display: block;
+  font-style: normal;
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.6);
+  margin-top: 0.35rem;
+}
