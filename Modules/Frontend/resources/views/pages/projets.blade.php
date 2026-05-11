@@ -126,6 +126,7 @@ $categories = [
             <button type="button" class="ks-projet-filter" data-projet-filter="{{ $cat['slug'] }}" aria-pressed="false">{{ $cat['t'] }}</button>
             @endforeach
         </div>
+        <p class="ks-sr-only" role="status" aria-live="polite" data-projet-announce>{{ count($categories) }} segments affichés.</p>
         <div class="ks-bento ks-bento--3col" data-projet-grid>
             @foreach($categories as $i => $cat)
             <article class="ks-card ks-card--accent-gold ks-projet-card" data-projet-cat="{{ $cat['slug'] }}">
@@ -153,10 +154,13 @@ $categories = [
     'use strict';
     var filters = document.querySelectorAll('[data-projet-filter]');
     var cards = document.querySelectorAll('[data-projet-cat]');
+    var announce = document.querySelector('[data-projet-announce]');
     if (!filters.length) return;
     filters.forEach(function (btn) {
         btn.addEventListener('click', function () {
             var cat = btn.getAttribute('data-projet-filter');
+            var label = btn.textContent.trim();
+            var visible = 0;
             filters.forEach(function (b) {
                 b.classList.toggle('is-active', b === btn);
                 b.setAttribute('aria-pressed', b === btn ? 'true' : 'false');
@@ -165,11 +169,17 @@ $categories = [
                 if (cat === 'all' || c.getAttribute('data-projet-cat') === cat) {
                     c.style.display = '';
                     c.removeAttribute('aria-hidden');
+                    visible++;
                 } else {
                     c.style.display = 'none';
                     c.setAttribute('aria-hidden', 'true');
                 }
             });
+            if (announce) {
+                announce.textContent = cat === 'all'
+                    ? visible + ' segments affichés.'
+                    : visible + ' segment' + (visible > 1 ? 's' : '') + ' affiché' + (visible > 1 ? 's' : '') + ' pour la catégorie « ' + label + ' ».';
+            }
         });
     });
 })();

@@ -60,6 +60,9 @@ if ('serviceWorker' in navigator) {
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
+{{-- V5c — View Transitions API (Chrome 111+, ~85% support 2026) --}}
+<meta name="view-transition" content="same-origin">
+
 </head>
 
 <body>

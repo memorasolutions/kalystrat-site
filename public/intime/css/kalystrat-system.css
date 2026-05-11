@@ -1525,6 +1525,88 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 /* ============================================================
+   View Transitions API (V5c-T111 — tendance 2026 fluide nav)
+   Chrome 111+, Edge 111+, Safari 18.2+, ~85% support mai 2026.
+   Effet fade subtil entre navigations same-origin.
+   ============================================================ */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root) {
+  animation: 0.25s cubic-bezier(0.4, 0, 1, 1) both ks-vt-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 0.35s cubic-bezier(0, 0, 0.2, 1) both ks-vt-fade-in;
+}
+
+@keyframes ks-vt-fade-out {
+  to { opacity: 0; transform: translateY(-4px); }
+}
+
+@keyframes ks-vt-fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+/* Préservation hero photo entre pages : view-transition-name partagé */
+.ks-page-hero--photo {
+  view-transition-name: ks-page-hero;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   Container Queries (V5c-T112 — tendance 2026 component responsive)
+   Cards et Bento réagissent à leur container parent, pas viewport
+   ============================================================ */
+.ks-bento,
+.ks-pourquoi__grid,
+.ks-piliers-asym,
+.ks-approche__grid {
+  container-type: inline-size;
+  container-name: ks-bento;
+}
+
+@container ks-bento (max-width: 720px) {
+  .ks-card {
+    padding: 1.25rem;
+  }
+  .ks-card__title {
+    font-size: 1.125rem;
+  }
+}
+
+@container ks-bento (max-width: 480px) {
+  .ks-card {
+    padding: 1rem;
+  }
+  .ks-stat__number {
+    font-size: clamp(2rem, 8cqi, 3rem);
+  }
+}
+
+/* Estimator container query */
+.ks-estimator {
+  container-type: inline-size;
+  container-name: ks-est;
+}
+
+@container ks-est (max-width: 580px) {
+  .ks-estimator__fields {
+    grid-template-columns: 1fr;
+  }
+  .ks-estimator__result {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    Filtres portfolio projets (V5b-T110 — tendance 2026 filterable)
    ============================================================ */
 .ks-projet-filters {
