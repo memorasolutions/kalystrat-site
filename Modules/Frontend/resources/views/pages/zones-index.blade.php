@@ -44,6 +44,50 @@ echo json_encode([
         ['@type' => 'ListItem', 'position' => 2, 'name' => 'Zones desservies', 'item' => 'https://kalystrat.ca/zones-desservies'],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T138b — FAQPage régionale (hub topical authority) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'Quelles régions du Québec Kalystrat dessert-il ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Kalystrat dessert principalement neuf villes au Québec : Québec, Lévis, Sainte-Foy, Beauport, Sillery, Trois-Rivières, Saguenay, Montréal et Laval. Le siège social est à Québec et nos chantiers s'étendent de la rive-sud du Saint-Laurent jusqu'au Saguenay et à la grande région de Montréal.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Mon projet est en dehors de ces neuf villes — êtes-vous disponibles ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Oui, nous évaluons les projets hors zones principales selon l'ampleur du chantier et la disponibilité des équipes. Contactez-nous avec les informations clés (type, surface, échéance) pour confirmer la faisabilité.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Combien de temps pour qualifier ma zone ?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Réponse sous 24 heures ouvrables pour confirmer la disponibilité d'équipe et amorcer le processus de soumission. Pour les chantiers complexes, une visite préalable est planifiée dans les 5 jours suivants.",
+            ],
+        ],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T138b — Speakable Schema (AEO LLM-friendly) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'WebPage',
+    'name' => 'Zones desservies au Québec — Kalystrat',
+    'url' => url('/zones-desservies'),
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-h2', '.ks-lead'],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 @endpush
 
 @section('content')
@@ -70,8 +114,64 @@ echo json_encode([
     </div>
 </section>
 
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading--split">
+            <div class="ks-section__heading-left">
+                <span class="ks-eyebrow">Géographie de la couverture</span>
+                <h2 class="ks-h2">Cinq régions,<br>neuf villes principales.</h2>
+            </div>
+            <div class="ks-section__heading-right">
+                <p class="ks-lead">Notre territoire principal couvre la grande région de Québec, la Rive-Sud, la Mauricie, le Saguenay et la région métropolitaine de Montréal. Chaque ville a ses particularités&nbsp;: sols, permis municipaux, réglementations patrimoniales, saisonnalité des chantiers. Nos équipes sont calibrées pour chacune.</p>
+            </div>
+        </div>
+
+        <div class="ks-zones__geo" aria-label="Regroupement géographique des villes desservies">
+            <article class="ks-zones__geo-group">
+                <h3 class="ks-zones__geo-title">Capitale-Nationale</h3>
+                <ul class="ks-zones__geo-list">
+                    <li><a href="{{ route('zones.ville', 'quebec') }}">Québec</a></li>
+                    <li><a href="{{ route('zones.ville', 'sainte-foy') }}">Sainte-Foy</a></li>
+                    <li><a href="{{ route('zones.ville', 'beauport') }}">Beauport</a></li>
+                    <li><a href="{{ route('zones.ville', 'sillery') }}">Sillery</a></li>
+                </ul>
+            </article>
+            <article class="ks-zones__geo-group">
+                <h3 class="ks-zones__geo-title">Rive-Sud du Saint-Laurent</h3>
+                <ul class="ks-zones__geo-list">
+                    <li><a href="{{ route('zones.ville', 'levis') }}">Lévis</a></li>
+                </ul>
+            </article>
+            <article class="ks-zones__geo-group">
+                <h3 class="ks-zones__geo-title">Mauricie</h3>
+                <ul class="ks-zones__geo-list">
+                    <li><a href="{{ route('zones.ville', 'trois-rivieres') }}">Trois-Rivières</a></li>
+                </ul>
+            </article>
+            <article class="ks-zones__geo-group">
+                <h3 class="ks-zones__geo-title">Saguenay–Lac-Saint-Jean</h3>
+                <ul class="ks-zones__geo-list">
+                    <li><a href="{{ route('zones.ville', 'saguenay') }}">Saguenay</a></li>
+                </ul>
+            </article>
+            <article class="ks-zones__geo-group">
+                <h3 class="ks-zones__geo-title">Grand Montréal</h3>
+                <ul class="ks-zones__geo-list">
+                    <li><a href="{{ route('zones.ville', 'montreal') }}">Montréal</a></li>
+                    <li><a href="{{ route('zones.ville', 'laval') }}">Laval</a></li>
+                </ul>
+            </article>
+        </div>
+    </div>
+</section>
+
 <section class="ks-section ks-section--alt">
     <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Détail par ville</span>
+            <h2 class="ks-h2">Pages locales détaillées</h2>
+            <p class="ks-lead">Chaque page ville couvre les spécificités du territoire&nbsp;: sols, permis, saisonnalité et particularités réglementaires locales.</p>
+        </div>
         <div class="ks-bento ks-bento--3col">
             @foreach($zones as $slug => $z)
             <article class="ks-card ks-card--accent-gold">
