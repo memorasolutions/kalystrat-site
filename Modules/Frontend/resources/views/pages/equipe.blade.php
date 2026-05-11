@@ -43,7 +43,7 @@ echo json_encode([
 
 <x-frontend::page-hero
     photo="/intime/images/pages/equipe-hero.webp"
-    eyebrow="Conçu, réalisé, livré"
+    eyebrow="Présidence et conseil"
     title="Équipe et gouvernance"
     subtitle="Une présidence forte, six directions de filiales, un conseil consultatif d'experts indépendants. Gouvernance centralisée, exécution décentralisée."
 >

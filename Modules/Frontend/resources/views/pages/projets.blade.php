@@ -29,7 +29,7 @@
 
 <x-frontend::page-hero
     photo="/intime/images/pages/projets-hero.webp"
-    eyebrow="Conçu, réalisé, livré"
+    eyebrow="Études de cas"
     title="Projets et réalisations"
     subtitle="Maisons custom, condominiums, bâtiments commerciaux et institutionnels&nbsp;: nos chantiers en cours et livrés par les six filiales Kalystrat."
 >

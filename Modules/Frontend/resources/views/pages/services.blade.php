@@ -41,7 +41,7 @@ echo json_encode([
 
 <x-frontend::page-hero
     photo="/intime/images/pages/services-hero.webp"
-    eyebrow="Conçu, réalisé, livré"
+    eyebrow="Cycle complet"
     title="Tous les métiers de la construction"
     subtitle="Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l'intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées."
 >

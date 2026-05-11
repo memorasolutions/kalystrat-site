@@ -52,7 +52,7 @@
 
 <x-frontend::page-hero
     photo="/intime/images/pages/expertise-hero.webp"
-    eyebrow="Conçu, réalisé, livré"
+    eyebrow="Méthode et qualité"
     title="Notre expertise technique"
     subtitle="Méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales."
 >
@@ -81,7 +81,7 @@ $piliers = [
     ['t' => 'Préfabrication et hors-site', 'd' => "Charpentes, panneaux muraux et modules préfabriqués en atelier pour les projets résidentiels et commerciaux légers. Réduction des délais d'installation et meilleure tolérance dimensionnelle."],
     ['t' => 'Contrôle qualité centralisé', 'd' => "Le groupe centralise les standards qualité à travers les six filiales : un même cahier de charges, mêmes critères de réception, mêmes garanties post-livraison."],
     ['t' => 'Développement durable', 'd' => "Matériaux à faible empreinte carbone, isolation supérieure aux exigences minimales, gestion des déchets de chantier (récupération bois, métal, gypse). Visions LEED et Novoclimat selon projet."],
-    ['t' => 'Gestion de projet intégrée', 'd' => "Un chargé de projet unique coordonne les six filiales pour un même chantier, éliminant les zones grises de responsabilité et accélérant la prise de décision."],
+    ['t' => 'Gestion de projet intégrée', 'd' => "Un coordonnateur dédié coordonne les six filiales pour un même chantier, éliminant les zones grises de responsabilité et accélérant la prise de décision."],
 ];
 @endphp
 

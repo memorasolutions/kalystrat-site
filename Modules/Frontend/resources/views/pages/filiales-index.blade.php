@@ -80,8 +80,8 @@ echo json_encode([
 
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Six expertises, un chargé de projet unique</h2>
-        <p>Discutez de votre projet avec un chargé de projet unique qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
+        <h2>Six expertises, un gestionnaire de votre dossier</h2>
+        <p>Discutez de votre projet avec un gestionnaire de votre dossier qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>

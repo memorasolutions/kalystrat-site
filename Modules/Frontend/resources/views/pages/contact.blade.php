@@ -51,7 +51,7 @@
 
 <x-frontend::page-hero
     photo="/intime/images/pages/contact-hero-meeting.webp"
-    eyebrow="Conçu, réalisé, livré"
+    eyebrow="Démarrer un dossier"
     title="Parlons de votre projet"
     subtitle="Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier. Réponse sous 24 heures ouvrables."
 >
