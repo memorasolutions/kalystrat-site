@@ -44,45 +44,47 @@ echo json_encode([
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Secteurs desservis</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Secteurs</li>
         </ul>
+        <h1>Secteurs desservis</h1>
+        <p class="ks-page-hero__subtitle">Cinq marchés verticaux au Québec, mobilisant les six filiales selon les besoins du chantier&nbsp;: résidentiel, commercial, institutionnel, industriel et municipal.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Verticaux d’expertise</span>
-                    <h2>Cinq marchés, six filiales mobilisées</h2>
-                </div>
-                <div class="text">
-                    <p>Chaque secteur de la construction a ses propres exigences réglementaires, ses standards techniques et ses contraintes budgétaires. Kalystrat adapte sa méthode et ses équipes aux particularités de chacun.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Verticaux d’expertise</span>
+            <h2 class="ks-h2">Cinq marchés, six filiales mobilisées</h2>
+            <p class="ks-lead">Chaque secteur de la construction a ses propres exigences réglementaires, ses standards techniques et ses contraintes budgétaires. Kalystrat adapte sa méthode et ses équipes aux particularités de chacun.</p>
         </div>
     </div>
 </section>
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
-    <div class="auto-container">
-        <div class="row clearfix">
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--3col">
             @foreach($secteurs as $slug => $s)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;margin-bottom:25px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h4><a href="{{ route('secteurs.show', $slug) }}">{{ $s['nom'] }}</a></h4>
-                    <div class="text" style="margin-top:10px;color:#555">{{ $s['desc'] }}</div>
-                    <div style="margin-top:20px"><a href="{{ route('secteurs.show', $slug) }}" class="theme-btn btn-style-ten"><span class="text-one">Détails</span><span class="text-two">Détails</span></a></div>
-                </div>
-            </div>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Secteur 0{{ $loop->iteration }}</span>
+                <h3 class="ks-card__title"><a href="{{ route('secteurs.show', $slug) }}">{{ $s['nom'] }}</a></h3>
+                <p class="ks-card__text">{{ $s['desc'] }}</p>
+                <div class="ks-card__cta"><a href="{{ route('secteurs.show', $slug) }}" class="ks-cta-secondary">Détails</a></div>
+            </article>
             @endforeach
         </div>
+    </div>
+</section>
+
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Votre projet n’entre dans aucune case&nbsp;?</h2>
+        <p>Discutez avec un chargé de projet&nbsp;: certains chantiers mixtes (résidentiel + commercial, institutionnel + industriel) demandent une approche sur mesure.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Discutons-en</a>
     </div>
 </section>
 

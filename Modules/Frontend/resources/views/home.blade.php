@@ -11,722 +11,474 @@
 <meta property="og:url" content="{{ url('/') }}">
 @endpush
 
+@push('schema')
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Organization',
+    'name' => 'Gestion Kalystrat Inc.',
+    'url' => url('/'),
+    'logo' => url('/intime/images/logo.svg'),
+    'description' => "Holding québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction.",
+    'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
+    'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
+    'subOrganization' => [
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Fondations', 'url' => url('/filiales/fondations')],
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Structure', 'url' => url('/filiales/structure')],
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Toiture et Enveloppe', 'url' => url('/filiales/toiture-enveloppe')],
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Finition Intérieure', 'url' => url('/filiales/finition-interieure')],
+        ['@type' => 'Organization', 'name' => 'Kalystrat Immobilier', 'url' => url('/filiales/immobilier')],
+        ['@type' => 'Organization', 'name' => 'Kalystrat Placement Construction', 'url' => url('/filiales/placement-construction')],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+@endpush
+
 @section('content')
-    <!-- End Main Header -->
-	
-	<!-- Main Slider -->
-	<section class="slider-six">
-		<div class="slider-six_pattern-layer" style="background-image:url(/intime/images/main-slider/pattern-5.jpg)"></div>
-		<div class="single-item-carousel owl-carousel owl-theme">
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="auto-container">
-					<div class="row clearfix">
-						<!-- Content Column -->
-						<div class="content-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="slider-six_title">Conçu, réalisé, livré</div>
-								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
-								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
-								<!-- Button Box -->
-								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
-										<div class="btn-wrap">
-											<span class="text-one">Découvrir le groupe</span>
-											<span class="text-two">Découvrir le groupe</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- Image Column -->
-						<div class="image-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="image">
-									<img src="/intime/images/main-slider/image-2.jpg" alt="" />
-								</div>
-								<div class="image-two">
-									<img src="/intime/images/main-slider/image-3.jpg" alt="" />
-								</div>
-								<div class="image-three">
-									<img src="/intime/images/main-slider/image-4.jpg" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="auto-container">
-					<div class="row clearfix">
-						<!-- Content Column -->
-						<div class="content-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="slider-six_title">Conçu, réalisé, livré</div>
-								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
-								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
-								<!-- Button Box -->
-								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
-										<div class="btn-wrap">
-											<span class="text-one">Découvrir le groupe</span>
-											<span class="text-two">Découvrir le groupe</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- Image Column -->
-						<div class="image-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="image">
-									<img src="/intime/images/main-slider/image-2.jpg" alt="" />
-								</div>
-								<div class="image-two">
-									<img src="/intime/images/main-slider/image-3.jpg" alt="" />
-								</div>
-								<div class="image-three">
-									<img src="/intime/images/main-slider/image-4.jpg" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-			<!-- Slide -->
-			<div class="slide">
-				<div class="auto-container">
-					<div class="row clearfix">
-						<!-- Content Column -->
-						<div class="content-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="slider-six_title">Conçu, réalisé, livré</div>
-								<h1 class="slider-six_heading">Bâtir le Québec <br> sous une seule marque</h1>
-								<div class="slider-six_text">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</div>
-								<!-- Button Box -->
-								<div class="slider-six_button-box">
-									<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
-										<div class="btn-wrap">
-											<span class="text-one">Découvrir le groupe</span>
-											<span class="text-two">Découvrir le groupe</span>
-										</div>
-									</a>
-								</div>
-							</div>
-						</div>
-						<!-- Image Column -->
-						<div class="image-column col-lg-6 col-md-12 col-sm-12">
-							<div class="inner-column">
-								<div class="image">
-									<img src="/intime/images/main-slider/image-2.jpg" alt="" />
-								</div>
-								<div class="image-two">
-									<img src="/intime/images/main-slider/image-3.jpg" alt="" />
-								</div>
-								<div class="image-three">
-									<img src="/intime/images/main-slider/image-4.jpg" alt="" />
-								</div>
-							</div>
-						</div>
-					</div>
-					
-				</div>
-			</div>
-			
-		</div>
-	</section>
-	<!-- End Main Slider -->
-	
-	<!-- Feature Four -->
-	<section class="feature-four">
-		<div class="auto-container">
-			<div class="inner-container">
-				<div class="clearfix">
 
-					<!-- Feature Block Four -->
-					<div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-						<div class="feature-block_four-inner">
-							<div class="feature-block_four-content">
-								<div class="feature-block_four-icon flaticon-mail"></div>
-								<h4 class="feature-block_four-heading">Six filiales spécialisées</h4>
-								<div class="feature-block_four-text">Fondations, structure, toiture, finition, immobilier, placement</div>
-							</div>
-						</div>
-					</div>
+<header class="ks-page-hero ks-page-hero--split">
+    @php
+        $heroPosterPath = public_path('intime/videos/hero-poster.jpg');
+        $heroPosterBust = file_exists($heroPosterPath) ? '?v=' . filemtime($heroPosterPath) : '';
+    @endphp
+    <div class="ks-hero-split__visual">
+        <img class="ks-hero-split__poster ks-hero-split__poster--kenburns" src="/intime/videos/hero-poster.jpg{{ $heroPosterBust }}" alt="Chantier de construction résidentielle moderne — coucher de soleil sur grues et immeubles" loading="eager" fetchpriority="high" width="1920" height="1080">
+    </div>
 
-					<!-- Feature Block Four -->
-					<div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-						<div class="feature-block_four-inner">
-							<div class="feature-block_four-content">
-								<div class="feature-block_four-icon flaticon-search"></div>
-								<h4 class="feature-block_four-heading">Intégration verticale</h4>
-								<div class="feature-block_four-text">Un chargé de projet unique, zéro sous-traitance externe sur les corps de métier clés</div>
-							</div>
-						</div>
-					</div>
+    <div class="ks-hero-split__content">
+        <span class="ks-hero-split__eyebrow">Conçu, réalisé, livré</span>
+        <h1>Bâtir le Québec sous une seule marque</h1>
+        <p class="ks-page-hero__subtitle">Six filiales spécialisées, une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.</p>
+        <div class="ks-hero-split__cta">
+            <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
+            <a href="{{ route('apropos') }}" class="ks-cta-secondary" style="color:var(--ks-white);border-color:var(--ks-gold-500)">Découvrir le groupe</a>
+        </div>
+    </div>
 
-					<!-- Feature Block Four -->
-					<div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-						<div class="feature-block_four-inner">
-							<div class="feature-block_four-content">
-								<div class="feature-block_four-icon flaticon-business-presentation"></div>
-								<h4 class="feature-block_four-heading">Main-d&apos;œuvre CCQ interne</h4>
-								<div class="feature-block_four-text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat</div>
-							</div>
-						</div>
-					</div>
+    <div class="ks-hero-stats" aria-label="Chiffres clés Gestion Kalystrat Inc.">
+        <div class="ks-hero-stat">
+            <span class="ks-hero-stat__num">6</span>
+            <span class="ks-hero-stat__label">Filiales spécialisées</span>
+        </div>
+        <div class="ks-hero-stat">
+            <span class="ks-hero-stat__num">100<sup style="font-size:0.45em;color:var(--ks-gold-500)">+</sup></span>
+            <span class="ks-hero-stat__label">Compagnons CCQ</span>
+        </div>
+        <div class="ks-hero-stat">
+            <span class="ks-hero-stat__num">5</span>
+            <span class="ks-hero-stat__label">Secteurs desservis</span>
+        </div>
+        <div class="ks-hero-stat">
+            <span class="ks-hero-stat__num">RBQ</span>
+            <span class="ks-hero-stat__label">Licence active</span>
+        </div>
+    </div>
+</header>
 
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Feature Four -->
 
-	<!-- Problem One -->
-	<section class="problem-one">
-		<div class="problem-one_pattern-layer" style="background-image:url(/intime/images/background/pattern-30.png)"></div>
-		<div class="auto-container">
-			<div class="row clearfix">
+<section class="ks-section ks-pillars">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Trois piliers</span>
+            <h2 class="ks-h2">Une marque, six expertises,<br>du sol au toit.</h2>
+        </div>
+        <div class="ks-pillars__grid">
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">01</div>
+                <h3 class="ks-pillar__title">Six filiales spécialisées</h3>
+                <p class="ks-pillar__text">Fondations, structure, toiture, finition, immobilier, placement. Chaque métier est piloté par une direction dédiée.</p>
+            </article>
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">02</div>
+                <h3 class="ks-pillar__title">Intégration verticale</h3>
+                <p class="ks-pillar__text">Un chargé de projet unique, zéro sous-traitance externe sur les corps de métier clés. Fin des zones grises de responsabilité.</p>
+            </article>
+            <article class="ks-pillar">
+                <div class="ks-pillar__num" aria-hidden="true">03</div>
+                <h3 class="ks-pillar__title">Main-d’œuvre CCQ interne</h3>
+                <p class="ks-pillar__text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat 2.0. Standards holding partagés.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-				<!-- Image Column -->
-				<div class="image-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<div class="image">
-							<span class="icon flaticon-rocket" data-parallax='{"y" : 80}'></span>
-							<img src="/intime/images/resource/problem.png" alt="" />
-						</div>
-					</div>
-				</div>
+<section class="ks-section ks-defi" data-defi-section>
+    <div class="ks-container">
+        <div class="ks-defi__grid">
+            <article class="ks-defi__lead">
+                <span class="ks-eyebrow">Conçu, réalisé, livré</span>
+                <h2 class="ks-defi__title">Le défi de la construction<br>au Québec en&nbsp;2026</h2>
+                <p class="ks-defi__intro">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire. L’industrie québécoise traverse une période exigeante.<br><br><strong>Notre réponse&nbsp;: l’intégration verticale.</strong></p>
+                <ul class="ks-defi__points">
+                    <li>
+                        <span class="ks-defi__bullet" aria-hidden="true">→</span>
+                        <span>Six filiales spécialisées qui couvrent toute la chaîne, de l’excavation aux finitions.</span>
+                    </li>
+                    <li>
+                        <span class="ks-defi__bullet" aria-hidden="true">→</span>
+                        <span>Une équipe interne CCQ formée aux normes Novoclimat 2.0 et au Code 2026.</span>
+                    </li>
+                    <li>
+                        <span class="ks-defi__bullet" aria-hidden="true">→</span>
+                        <span>Demande captive via Kalystrat Immobilier&nbsp;: stabilité financière et qualité constante.</span>
+                    </li>
+                </ul>
+            </article>
 
-				<!-- Content Column -->
-				<div class="content-column col-lg-6 col-md-12 col-sm-12">
-					<div class="inner-column">
-						<!-- Sec Title Five -->
-						<div class="sec-title-five">
-							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Le défi de la construction au Québec en 2026</h2>
-						</div>
-						<div class="bold-text">Pénurie de main-d’œuvre, hausse des coûts, complexité réglementaire : l’industrie québécoise de la construction traverse une période exigeante. Notre réponse, c’est l’intégration verticale.</div>
-						<ul class="problem-one_list">
-							<li>Six filiales spécialisées qui couvrent toute la chaîne, de l’excavation aux finitions</li>
-							<li>Une équipe interne CCQ formée aux normes Novoclimat 2.0 et au Code 2026</li>
-							<li>Demande captive via Kalystrat Immobilier : stabilité financière et qualité constante</li>
-						</ul>
+            <article class="ks-defi__kpi ks-defi__kpi--filiales">
+                <span class="ks-eyebrow">Filiales</span>
+                <span class="ks-defi__num" data-counter data-target="6" data-suffix="">0</span>
+                <p class="ks-defi__caption">Filiales spécialisées sous Gestion Kalystrat Inc.</p>
+                <div class="ks-defi__bars" aria-hidden="true">
+                    <span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+            </article>
 
-						<div class="row clearfix">
-					
-							<!-- Counter Column -->
-							<div class="problem-one_counter-column col-lg-6 col-md-6 col-sm-6">
-								<div class="problem-one_counter-inner">
-									<div class="problem-one_counter"><span class="odometer" data-count="6"></span></div>
-									<div class="problem-one_counter_text">Filiales spécialisées</div>
-								</div>
-							</div>
-							
-							<!-- Counter Column -->
-							<div class="problem-one_counter-column col-lg-6 col-md-6 col-sm-6">
-								<div class="problem-one_counter-inner">
-									<div class="problem-one_counter"><span class="odometer" data-count="100"></span><sup>+</sup></div>
-									<div class="problem-one_counter_text">Compagnons CCQ qualifiés</div>
-								</div>
-							</div>
+            <article class="ks-defi__kpi ks-defi__kpi--compagnons">
+                <span class="ks-eyebrow">Compagnons CCQ</span>
+                <span class="ks-defi__num"><span data-counter data-target="100">0</span><sup>+</sup></span>
+                <p class="ks-defi__caption">Compagnons certifiés sur nos chantiers.</p>
+                <svg class="ks-defi__gauge" aria-hidden="true" viewBox="0 0 120 60">
+                    <path d="M10 55 A50 50 0 0 1 110 55" fill="none" stroke="rgba(184,164,114,0.2)" stroke-width="4" stroke-linecap="round"/>
+                    <path d="M10 55 A50 50 0 0 1 110 55" fill="none" stroke="var(--ks-gold-500)" stroke-width="4" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="157" data-gauge-fill/>
+                </svg>
+            </article>
 
-						</div>
+            <article class="ks-defi__kpi ks-defi__kpi--secteurs">
+                <span class="ks-eyebrow">Secteurs</span>
+                <span class="ks-defi__num" data-counter data-target="5">0</span>
+                <p class="ks-defi__caption">Résidentiel, commercial, institutionnel, industriel, municipal.</p>
+            </article>
 
-						<div class="d-flex align-items-center">
-							<div class="signature">Ali Salomon</div>
-							<h5>Ali Salomon <span>Président et Directeur Général</span></h5>
-						</div>
+            <article class="ks-defi__signature">
+                <div class="ks-defi__sig-name">Ali Salomon</div>
+                <div class="ks-defi__sig-role">Président · Directeur Général</div>
+            </article>
+        </div>
+    </div>
+</section>
 
-					</div>
-				</div>
+<script>
+(function () {
+    var section = document.querySelector('[data-defi-section]');
+    if (!section) return;
+    function animateCounter(el) {
+        var target = parseInt(el.dataset.target, 10) || 0;
+        var duration = 1400;
+        var start = performance.now();
+        function tick(now) {
+            var p = Math.min(1, (now - start) / duration);
+            var eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased);
+            if (p < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+    if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (e) {
+                if (e.isIntersecting) {
+                    section.classList.add('is-revealed');
+                    section.querySelectorAll('[data-counter]').forEach(animateCounter);
+                    io.unobserve(section);
+                }
+            });
+        }, { threshold: 0.25 });
+        io.observe(section);
+    } else {
+        section.classList.add('is-revealed');
+        section.querySelectorAll('[data-counter]').forEach(animateCounter);
+    }
+})();
+</script>
 
-			</div>
-		</div>
-	</section>
-	<!-- End Problem One -->
+<section class="ks-section ks-section--dark ks-process">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Notre offre</span>
+            <h2 class="ks-h2">Quatre temps, six expertises</h2>
+            <p class="ks-process__lead">Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l’intégralité du cycle de construction.</p>
+        </div>
+        <ol class="ks-process__timeline" aria-label="Processus en 4 étapes">
+            <li class="ks-process__step">
+                <span class="ks-process__num">01</span>
+                <h3 class="ks-process__title"><a href="{{ route('services') }}">Conception et permis</a></h3>
+                <p class="ks-process__text">Plans, modélisation BIM, dépôts municipaux. Coordination avec architectes et ingénieurs au besoin.</p>
+            </li>
+            <li class="ks-process__step">
+                <span class="ks-process__num">02</span>
+                <h3 class="ks-process__title"><a href="{{ route('services') }}">Construction et chantier</a></h3>
+                <p class="ks-process__text">Excavation, fondations, structure, toiture, enveloppe. Six filiales, un seul calendrier.</p>
+            </li>
+            <li class="ks-process__step">
+                <span class="ks-process__num">03</span>
+                <h3 class="ks-process__title"><a href="{{ route('services') }}">Finition et livraison</a></h3>
+                <p class="ks-process__text">Gypse, peinture, planchers, ébénisterie, comptoirs. Inspection conjointe avant remise des clés.</p>
+            </li>
+            <li class="ks-process__step">
+                <span class="ks-process__num">04</span>
+                <h3 class="ks-process__title"><a href="{{ route('services') }}">Garantie et entretien</a></h3>
+                <p class="ks-process__text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil, accompagnement post-livraison.</p>
+            </li>
+        </ol>
+    </div>
+</section>
 
-	<!-- Services Four -->
-	<section class="services-four">
-		<div class="services-four_pattern-layer" style="background-image:url(/intime/images/background/3.jpg)"></div>
-		<div class="auto-container">
-			<div class="inner-container">
-				<div class="services-four_pattern-two" style="background-image:url(/intime/images/background/pattern-31.jpg)"></div>
-				<!-- Sec Title Five -->
-				<div class="sec-title-five light centered">
-					<div class="sec-title-five_title">Notre offre</div>
-					<h2 class="sec-title-five_heading">Quatre temps, six expertises</h2>
-				</div>
-				<div class="row clearfix">
+<section class="ks-section ks-approche" id="approche-long-terme" aria-labelledby="approche-title">
+    <div class="ks-container">
+        <div class="ks-approche__grid">
+            <article class="ks-approche__narrative">
+                <span class="ks-eyebrow">Conçu, réalisé, livré</span>
+                <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
+                <p class="ks-lead ks-approche__lead">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure&nbsp;: moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</p>
+                <p class="ks-lead ks-approche__lead">Six directions de filiales, chacune pilotée par un expert reconnu de son métier, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des spécialisations et la conformité totale au Code de construction du Québec 2026.</p>
+                <div class="ks-approche__expertise" aria-hidden="true">
+                    <span class="ks-approche__expertise-label">Expertise structurée</span>
+                    <div class="ks-approche__expertise-grid">
+                        <span class="ks-approche__expertise-ancre"><strong>6</strong> Directeurs spécialistes</span>
+                        <span class="ks-approche__expertise-ancre"><strong>5</strong> Domaines Code 2026</span>
+                        <span class="ks-approche__expertise-ancre"><strong>9</strong> Régions desservies</span>
+                    </div>
+                </div>
+            </article>
+            <aside class="ks-approche__stats" data-approche-stats aria-label="Indicateurs de performance">
+                <article class="ks-approche__stat" data-stat-target="62">
+                    <div class="ks-approche__ring-wrap">
+                        <svg class="ks-approche__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="ks-approche__ring-bg" cx="60" cy="60" r="52"></circle>
+                            <circle class="ks-approche__ring-fg" cx="60" cy="60" r="52" data-ring-fg></circle>
+                        </svg>
+                        <div class="ks-approche__ring-num">
+                            <span data-counter="62" aria-hidden="true">0</span><span class="ks-approche__ring-pct" aria-hidden="true">%</span>
+                            <span class="ks-sr-only">62 %</span>
+                        </div>
+                    </div>
+                    <div class="ks-approche__stat-meta">
+                        <span class="ks-eyebrow">Délais respectés</span>
+                        <p class="ks-approche__stat-label">Projets livrés à temps sur l’ensemble des chantiers Kalystrat</p>
+                    </div>
+                </article>
+                <article class="ks-approche__stat" data-stat-target="80">
+                    <div class="ks-approche__ring-wrap">
+                        <svg class="ks-approche__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
+                            <circle class="ks-approche__ring-bg" cx="60" cy="60" r="52"></circle>
+                            <circle class="ks-approche__ring-fg" cx="60" cy="60" r="52" data-ring-fg></circle>
+                        </svg>
+                        <div class="ks-approche__ring-num">
+                            <span data-counter="80" aria-hidden="true">0</span><span class="ks-approche__ring-pct" aria-hidden="true">%</span>
+                            <span class="ks-sr-only">80 %</span>
+                        </div>
+                    </div>
+                    <div class="ks-approche__stat-meta">
+                        <span class="ks-eyebrow">Recommandation</span>
+                        <p class="ks-approche__stat-label">Clients qui recommandent Kalystrat à leur entourage</p>
+                    </div>
+                </article>
+            </aside>
+        </div>
+    </div>
+</section>
 
-					<!-- Service Block Three -->
-					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
-						<div class="service-block_three-inner">
-							<div class="service-block_three-icon flaticon-business-presentation"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Conception et permis</a></h4>
-							<div class="service-block_three-text">Plans, modélisation BIM, dépôts municipaux. Coordination avec architectes et ingénieurs.</div>
-						</div>
-					</div>
+@push('scripts')
+<script>
+(function () {
+    'use strict';
+    var stats = document.querySelectorAll('[data-approche-stats] .ks-approche__stat');
+    if (!stats.length || !('IntersectionObserver' in window)) {
+        stats.forEach && stats.forEach(function (s) {
+            var t = parseInt(s.getAttribute('data-stat-target'), 10);
+            var n = s.querySelector('[data-counter]');
+            var r = s.querySelector('[data-ring-fg]');
+            if (n) n.textContent = String(t);
+            if (r) r.style.strokeDashoffset = String(327 - (327 * t) / 100);
+        });
+        return;
+    }
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function animate(stat) {
+        var target = parseInt(stat.getAttribute('data-stat-target'), 10);
+        var numEl = stat.querySelector('[data-counter]');
+        var ring  = stat.querySelector('[data-ring-fg]');
+        if (!numEl || !ring) return;
+        var circ = 327;
+        var offset = circ - (circ * target) / 100;
+        if (reduceMotion) {
+            numEl.textContent = String(target);
+            ring.style.transition = 'none';
+            ring.style.strokeDashoffset = String(offset);
+            return;
+        }
+        ring.style.strokeDashoffset = String(offset);
+        var duration = 1800;
+        var start = performance.now();
+        function tick(now) {
+            var t = Math.min((now - start) / duration, 1);
+            var eased = 1 - Math.pow(1 - t, 3);
+            numEl.textContent = String(Math.round(eased * target));
+            if (t < 1) requestAnimationFrame(tick);
+        }
+        requestAnimationFrame(tick);
+    }
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                animate(entry.target);
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+    stats.forEach(function (s) { io.observe(s); });
+})();
+</script>
+@endpush
 
-					<!-- Service Block Three -->
-					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
-						<div class="service-block_three-inner">
-							<div class="service-block_three-icon flaticon-market"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Construction et chantier</a></h4>
-							<div class="service-block_three-text">Excavation, fondations, structure, toiture, enveloppe. Six filiales, un seul calendrier.</div>
-						</div>
-					</div>
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Ils nous font confiance</span>
+            <h2 class="ks-h2">Témoignages</h2>
+            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Promoteurs, propriétaires, gestionnaires institutionnels&nbsp;: ce qu’ils retiennent d’un projet livré par Kalystrat.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col">
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
+                <p class="ks-card__text" style="font-style:italic">Pour un promoteur, traiter avec une seule équipe pour les fondations, la structure et la finition change tout. Les délais ne dérapent plus, et la qualité reste constante du sous-sol au toit.</p>
+                <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
+                    <strong style="color:var(--ks-gold-500);display:block">Promoteur immobilier</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Multilogement 24 unités, Lévis</span>
+                </div>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
+                <p class="ks-card__text" style="font-style:italic">Le contrôle qualité interne fait la différence. À chaque étape, le chargé de projet vérifie le travail avant de passer à la prochaine filiale. Aucune zone grise de responsabilité.</p>
+                <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
+                    <strong style="color:var(--ks-gold-500);display:block">Propriétaire résidentiel</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Maison neuve custom, Sainte-Foy</span>
+                </div>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
+                <p class="ks-card__text" style="font-style:italic">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre blower door a passé du premier coup.</p>
+                <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
+                    <strong style="color:var(--ks-gold-500);display:block">Gestionnaire institutionnel</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Pavillon scolaire, Trois-Rivières</span>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
 
-					<!-- Service Block Three -->
-					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
-						<div class="service-block_three-inner">
-							<div class="service-block_three-icon flaticon-profit"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Finition et livraison</a></h4>
-							<div class="service-block_three-text">Gypse, peinture, planchers, ébénisterie, comptoirs. Inspection conjointe avant remise des clés.</div>
-						</div>
-					</div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Comment nous travaillons</span>
+            <h2 class="ks-h2">Notre approche en quatre étapes</h2>
+        </div>
+        <div class="ks-bento">
+            <article class="ks-card ks-card--accent-gold">
+                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">01</div>
+                <h3 class="ks-card__title">Évaluation et soumission</h3>
+                <p class="ks-card__text">Visite du site, prise de mesures, étude des plans s’ils existent, recommandations techniques et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">02</div>
+                <h3 class="ks-card__title">Conception et permis</h3>
+                <p class="ks-card__text">Coordination avec architectes et ingénieurs au besoin, modélisation BIM pour les projets commerciaux et institutionnels, dépôt du dossier complet à la municipalité.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">03</div>
+                <h3 class="ks-card__title">Exécution intégrée</h3>
+                <p class="ks-card__text">Mobilisation de nos six filiales selon un calendrier serré, supervision par un chargé de projet unique, contrôle qualité à chaque étape, communication hebdomadaire avec le client.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div style="font-family:var(--ks-font-display);font-size:2.5rem;color:var(--ks-gold-700);font-weight:700;line-height:1">04</div>
+                <h3 class="ks-card__title">Livraison et garanties</h3>
+                <p class="ks-card__text">Inspection conjointe, remise des documents (plans tels que construits, manuels d’entretien, certificats), activation du Plan de garantie GCR, accompagnement post-livraison.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-					<!-- Service Block Three -->
-					<div class="service-block_three col-lg-3 col-md-6 col-sm-12">
-						<div class="service-block_three-inner">
-							<div class="service-block_three-icon flaticon-business-intelligence"></div>
-							<h4 class="service-block_three-heading"><a href="/services">Garantie et entretien</a></h4>
-							<div class="service-block_three-text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil, accompagnement post-livraison.</div>
-						</div>
-					</div>
+<section class="ks-section ks-section--alt ks-pourquoi" aria-labelledby="pourquoi-title">
+    <div class="ks-container">
+        <div class="ks-pourquoi__intro">
+            <span class="ks-pourquoi__num" aria-hidden="true">02</span>
+            <div class="ks-pourquoi__heading">
+                <span class="ks-eyebrow">Pourquoi Kalystrat</span>
+                <h2 id="pourquoi-title" class="ks-h2">Quatre raisons de nous confier votre projet</h2>
+                <p class="ks-lead">Sur un chantier Kalystrat, votre chargé de projet pilote la totalité des corps de métier en s’appuyant sur les six directions de filiales. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</p>
+            </div>
+        </div>
 
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Services Four -->
+        <div class="ks-pourquoi__grid">
+            <article class="ks-pourquoi__card ks-pourquoi__card--hero">
+                <div class="ks-pourquoi__num-card" aria-hidden="true">01</div>
+                <span class="ks-eyebrow">Intégration verticale</span>
+                <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance étrangère</h3>
+                <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
+            </article>
 
-	<!-- Finance Two -->
-	<section class="finance-two">
-		<div class="auto-container">
-			<div class="row clearfix">
-				<!-- Content Column -->
-				<div class="finance-two_content-column col-lg-6 col-md-12 col-sm-12">
-					<div class="finance-two_content-inner">
-						<!-- Sec Title Five -->
-						<div class="sec-title-five">
-							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Une approche structurée à long terme</h2>
-							<div class="sec-title-five_text">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure : moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</div>
-						</div>
+            <article class="ks-pourquoi__card">
+                <div class="ks-pourquoi__num-card" aria-hidden="true">02</div>
+                <span class="ks-eyebrow">Code QC 2026</span>
+                <h3 class="ks-card__title">Conformité technique maîtrisée</h3>
+                <p class="ks-card__text">Étanchéité 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. Nos équipes maîtrisent l’ensemble des exigences du nouveau Code de construction du Québec. <a href="{{ route('expertise') }}">Voir notre page Expertise</a>.</p>
+            </article>
 
-						<div class="row clearfix">
-				
-							<!-- Counter Boxed -->
-							<div class="counter-boxed col-lg-5 col-md-6 col-sm-12">
-								<div class="graph-outer">
-									<input type="text" class="dial" data-fgColor="#ff5520" data-bgColor="#eee5e2" data-width="160" data-height="160" data-linecap="normal"  value="62" data-thickness="0.12">
-									<div class="inner-text count-box"><span class="count-text" data-stop="62" data-speed="3500"></span>%</div>
-								</div>
-								<div class="sub-title">Projets <br> livrés à temps</div>
-							</div>
-							
-							<!-- Counter Boxed -->
-							<div class="counter-boxed col-lg-5 col-md-6 col-sm-12">
-								<div class="graph-outer">
-									<input type="text" class="dial" data-fgColor="#ff5520" data-bgColor="#eee5e2" data-width="160" data-height="160" data-linecap="normal"  value="80" data-thickness="0.12">
-									<div class="inner-text count-box"><span class="count-text" data-stop="80" data-speed="3500"></span>%</div>
-								</div>
-								<div class="sub-title">Clients <br> recommandent Kalystrat</div>
-							</div>
-							
-						</div>
+            <article class="ks-pourquoi__card">
+                <div class="ks-pourquoi__num-card" aria-hidden="true">03</div>
+                <span class="ks-eyebrow">Stabilité financière</span>
+                <h3 class="ks-card__title">Demande captive interne</h3>
+                <p class="ks-card__text"><a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Le flux de chantiers internes alimente les cinq autres filiales en continu. Résultat&nbsp;: pas de pression à accepter n’importe quel mandat, sélection rigoureuse des projets externes.</p>
+            </article>
 
-					</div>
-				</div>
-				<!-- Image Column -->
-				<div class="finance-two_image-column col-lg-6 col-md-12 col-sm-12">
-					<div class="finance-two_image-inner">
-						<div class="finance-two_image">
-							<div class="finance-two_since-box" data-parallax='{"y" : 40}'>
-								depuis
-								<span>2024</span>
-							</div>
-							<img src="/intime/images/resource/finance-2.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Finance Two -->
+            <article class="ks-pourquoi__card ks-pourquoi__card--wide">
+                <div class="ks-pourquoi__num-card" aria-hidden="true">04</div>
+                <span class="ks-eyebrow">Garanties cumulées</span>
+                <h3 class="ks-card__title">Plan GCR, Code civil, licence RBQ</h3>
+                <p class="ks-card__text">Plan de garantie GCR pour le neuf résidentiel, garantie légale du Code civil du Québec pour les vices structurels, licences RBQ par catégorie de travaux, assurance responsabilité civile professionnelle. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
+            </article>
+        </div>
+    </div>
+</section>
 
-	<!-- Success One -->
-	<section class="success-one">
-		<div class="success-one_pattern" style="background-image:url(/intime/images/background/pattern-32.jpg)"></div>
-		<div class="auto-container">
-			<div class="row clearfix">
-				<!-- Content Column -->
-				<div class="success-one_content-column col-lg-6 col-md-12 col-sm-12">
-					<div class="success-one_content-inner">
-						<!-- Sec Title Five -->
-						<div class="sec-title-five">
-							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Prêt à bâtir avec une équipe intégrée ?</h2>
-							<div class="sec-title-five_text">Votre projet livré dans les délais, sans surprise.</div>
-						</div>
-						<!-- Button Box -->
-						<div class="success-one_button-box">
-							<a class="btn-style-ten theme-btn btn-item" href="/a-propos">
-								<div class="btn-wrap">
-									<span class="text-one">Découvrir le groupe</span>
-									<span class="text-two">Découvrir le groupe</span>
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Content Column -->
-				<div class="success-one_image-column col-lg-6 col-md-12 col-sm-12">
-					<div class="success-one_image-inner">
-						<div class="success-one_image">
-							<img src="/intime/images/resource/success.jpg" alt="" />
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Success One -->
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Notre blog</span>
+            <h2 class="ks-h2">Nouvelles et perspectives</h2>
+            <p class="ks-lead">Analyses du marché québécois, évolutions réglementaires et conseils pratiques pour vos projets de construction.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col">
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Marché immobilier</span>
+                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}">Pourquoi construire des multilogements au Québec en 2026</a></h3>
+                <p class="ks-card__text">Pénurie de logements, démographie favorable, programmes SCHL : pourquoi le multilogement reste l’asset class la plus solide du marché québécois.</p>
+                <div class="ks-card__cta"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Réglementation</span>
+                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">Code de construction Québec 2026&nbsp;: ce que les propriétaires doivent savoir</a></h3>
+                <p class="ks-card__text">Étanchéité à l’air, isolation R-49, ventilation HRV : les changements majeurs et leur impact concret sur les projets.</p>
+                <div class="ks-card__cta"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Conseils pratiques</span>
+                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}">Comment choisir un entrepreneur en construction au Québec</a></h3>
+                <p class="ks-card__text">Licence RBQ, cautionnement, références chantiers : la grille de vérification avant de signer un contrat de construction.</p>
+                <div class="ks-card__cta"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            </article>
+        </div>
+        <div style="margin-top:48px;text-align:center">
+            <a href="{{ route('blog.index') }}" class="ks-cta-secondary">Voir tous les articles</a>
+        </div>
+    </div>
+</section>
 
-	<!-- Finance Three -->
-	<section class="finance-three">
-		<div class="auto-container">
-			<div class="row clearfix">
-				<!-- Content Column -->
-				<div class="finance-three_image-column col-lg-6 col-md-12 col-sm-12">
-					<div class="finance-three_image-inner">
-						<div class="finance-three_image">
-							<img src="/intime/images/resource/finance-3.jpg" alt="" />
-							<!-- Finance Three Play -->
-							<a class="finance-three_play lightbox-video fa-solid fa-play fa-fw" href="https://www.youtube.com/watch?v=kxPCFljwJws">
-								<i class="ripple"></i>
-							</a>
-						</div>
-					</div>
-				</div>
-				<!-- Content Column -->
-				<div class="finance-three_content-column col-lg-6 col-md-12 col-sm-12">
-					<div class="finance-three_content-inner">
-						<!-- Sec Title Five -->
-						<div class="sec-title-five">
-							<div class="sec-title-five_title">Conçu, réalisé, livré</div>
-							<h2 class="sec-title-five_heading">Pourquoi nous confier votre projet</h2>
-							<div class="sec-title-five_text">Sur un chantier Kalystrat, votre chargé de projet pilote la totalité des corps de métier en s’appuyant sur les six directions de filiales du groupe. Cette unité de commandement transforme la complexité d’un projet de construction en une expérience claire, prévisible et professionnelle.</div>
-						</div>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Prêt à bâtir avec une équipe intégrée&nbsp;?</h2>
+        <p>Votre projet livré dans les délais, sans surprise. Soumission gratuite sous 5 à 10 jours ouvrables.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Démarrer un projet</a>
+    </div>
+</section>
 
-						<!-- Finance Three Block -->
-						<div class="finance-three_block">
-							<div class="finance-three_block-inner">
-								<div class="finance-three_block-icon flaticon-business-presentation"></div>
-								<h4 class="finance-three_heading">Une seule signature, six métiers</h4>
-								<div class="finance-three_text">Vous signez un contrat unique qui couvre fondations, structure, toiture, finition, immobilier et placement de main-d’œuvre. Plus de jeux de coordination entre sous-traitants.</div>
-							</div>
-						</div>
-
-						<!-- Finance Three Block -->
-						<div class="finance-three_block">
-							<div class="finance-three_block-inner">
-								<div class="finance-three_block-icon flaticon-market"></div>
-								<h4 class="finance-three_heading">Garanties légales et conformité</h4>
-								<div class="finance-three_text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil du Québec pour les vices structurels, licence RBQ active, équipes formées au Code 2026 et aux normes Novoclimat.</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- End Finance Three -->
-
-	<!-- Testimonial Five -->
-	<section class="testimonial-five">
-		<div class="testimonial-five_pattern-layer" style="background-image:url(/intime/images/background/pattern-33.jpg)"></div>
-		<div class="testimonial-five_pattern-2" style="background-image:url(/intime/images/resource/testimonial-2.jpg)"></div>
-		<div class="testimonial-five_pattern-3" style="background-image:url(/intime/images/background/pattern-34.jpg)"></div>
-		<div class="auto-container">
-			<!-- Sec Title Five -->
-			<div class="sec-title-five">
-				<div class="sec-title-five_title">Ils nous font confiance</div>
-				<h2 class="sec-title-five_heading">Témoignages</h2>
-				<div class="sec-title-five_text">Promoteurs, propriétaires, gestionnaires institutionnels : <br> ce qu’ils retiennent d’un projet livré par Kalystrat.</div>
-			</div>
-			<div class="inner-container">
-				<div class="testimonial-carousel-two owl-carousel owl-theme">
-
-					<!-- Témoignages illustratifs - à remplacer par de vrais clients -->
-					<div class="testimonial-block_four">
-						<div class="testimonial-block_four-inner">
-							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Pour un promoteur, traiter avec une seule équipe pour les fondations, la structure et la finition change tout. Les délais ne dérapent plus, et la qualité reste constante du sous-sol au toit.</div>
-							<div class="testimonial-block_four-author">
-								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-10.jpg" alt="Témoignage promoteur immobilier" />
-								</div>
-								<h5>Promoteur immobilier</h5>
-								<div class="designation">Multilogement 24 unités, Lévis</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="testimonial-block_four">
-						<div class="testimonial-block_four-inner">
-							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Le contrôle qualité interne fait la différence. À chaque étape, le chargé de projet vérifie le travail avant de passer à la prochaine filiale. Aucune zone grise de responsabilité.</div>
-							<div class="testimonial-block_four-author">
-								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-11.jpg" alt="Témoignage propriétaire résidentiel" />
-								</div>
-								<h5>Propriétaire résidentiel</h5>
-								<div class="designation">Maison neuve custom, Sainte-Foy</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="testimonial-block_four">
-						<div class="testimonial-block_four-inner">
-							<span class="testimonial-block_four-quote fa-solid fa-quote-left fa-fw"></span>
-							<div class="testimonial-block_four-text">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre blower door a passé du premier coup.</div>
-							<div class="testimonial-block_four-author">
-								<div class="testimonial-block_four-author_image">
-									<img src="/intime/images/resource/author-12.jpg" alt="Témoignage gestionnaire institutionnel" />
-								</div>
-								<h5>Gestionnaire institutionnel</h5>
-								<div class="designation">Pavillon scolaire, Trois-Rivières</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</div>
-	</section>
-	<!-- Testimonial Five -->
-
-	<!-- News Six -->
-	<section class="news-six">
-		<div class="auto-container">
-			<!-- Sec Title Five -->
-			<div class="sec-title-five centered">
-				<div class="sec-title-five_title">Notre blog</div>
-				<h2 class="sec-title-five_heading">Nouvelles et perspectives</h2>
-				<div class="sec-title-five_text">Analyses du marché québécois, évolutions réglementaires <br> et conseils pratiques pour vos projets de construction.</div>
-			</div>
-
-			<div class="masonry-items-container-two row clearfix">
-				
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-16.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-16.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Marché immobilier</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Pourquoi construire des multilogements au Québec en 2026</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-17.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-17.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Code de construction Québec 2026 : ce que les propriétaires doivent savoir</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-18.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-18.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Conseils pratiques</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Comment choisir un entrepreneur en construction au Québec</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-20.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-20.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Marché immobilier</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Le marché locatif Québec, Lévis et Montréal en 2026</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-19.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-19.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Réglementation</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/code-construction-quebec-2026-changements">Pare-air, pare-vapeur, blower door : les nouvelles exigences</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<!-- Project Two Block -->
-				<div class="news-block_six masonry-item col-lg-4 col-md-6 col-sm-12">
-					<div class="news-block_six-inner">
-						<div class="news-block_six-image">
-							<img src="/intime/images/resource/news-21.jpg" alt="" />
-							<div class="news-block_six-overlay">
-								<a href="/intime/images/resource/news-21.jpg" class="plus-icon lightbox-image fa-solid fa-plus fa-fw"></a>
-							</div>
-							<div class="news-block_six-content">
-								<div class="news-block_six-date">9 mai 2026 <span>Conseils pratiques</span></div>
-								<h6 class="news-block_six-heading"><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Vérifier la licence RBQ et le cautionnement avant de signer</a></h6>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			</div>
-
-		</div>
-	</section>
-	<!-- End News Six -->
-
-	<section class="clients-two" style="background-image:url(/intime/images/background/pattern-31.png)">
-		<div class="auto-container">
-			<!-- Sponsors Carousel -->
-			<ul class="sponsors-carousel owl-carousel owl-theme">
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/6.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/7.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/8.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/9.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/10.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/6.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/7.png" alt=""></a></figure></li>
-				<li class="slide-item"><figure class="client-two_image-box"><a href="#"><img src="/intime/images/clients/8.png" alt=""></a></figure></li>
-			</ul>
-		</div>
-	</section>
-
-	<!-- Pourquoi Kalystrat - section riche SEO -->
-	<section class="ks-content-section" style="padding:80px 0;background:#fff">
-		<div class="auto-container">
-			<div class="row clearfix">
-				<div class="col-lg-12 content-column">
-					<div class="sec-title centered">
-						<span class="sub-title">Construire avec Kalystrat</span>
-						<h2>Une marque, six expertises, un chargé de projet unique</h2>
-					</div>
-				</div>
-			</div>
-			<div class="row clearfix">
-				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-						<h4>Intégration verticale réelle</h4>
-						<p style="margin-top:12px;line-height:1.7">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales (<a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a>) collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité et accélère la prise de décision.</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-						<h4>Conformité 2026 maîtrisée</h4>
-						<p style="margin-top:12px;line-height:1.7">Le nouveau Code de construction du Québec impose des standards stricts : étanchéité à l’air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire. Nos équipes sont formées à ces exigences depuis 2023. Pour aller plus loin, consultez notre <a href="{{ route('expertise') }}">page Expertise</a> ou notre <a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">article dédié au Code 2026</a>.</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-						<h4>Demande captive, stabilité financière</h4>
-						<p style="margin-top:12px;line-height:1.7">Notre filiale <a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et locatifs. Ce flux de chantiers internes assure une charge constante aux cinq autres filiales et confère au groupe une stabilité financière rare dans le secteur. Concrètement : moins de pression pour accepter n’importe quel mandat, plus de rigueur dans la sélection des projets externes.</p>
-					</div>
-				</div>
-				<div class="col-lg-6 col-md-12 col-sm-12">
-					<div style="padding:30px;background:#f7f7f7;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-						<h4>Garanties légales et licence RBQ active</h4>
-						<p style="margin-top:12px;line-height:1.7">Nous détenons les licences RBQ requises pour chaque catégorie de travaux et offrons les garanties prévues par la loi : Plan de garantie GCR pour le neuf résidentiel, garantie légale prévue au Code civil du Québec pour les vices structurels. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<!-- Notre approche en 4 étapes -->
-	<section class="ks-content-section" style="padding:80px 0;background:#f7f7f7">
-		<div class="auto-container">
-			<div class="sec-title centered">
-				<span class="sub-title">Comment nous travaillons</span>
-				<h2>Notre approche en quatre étapes</h2>
-			</div>
-			<div class="row clearfix">
-				<div class="col-lg-3 col-md-6 col-sm-12">
-					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-						<div style="font-size:48px;font-weight:700;color:#8F3F00;margin-bottom:10px">01</div>
-						<h5>Évaluation et soumission</h5>
-						<p style="margin-top:10px;line-height:1.6;color:#555">Visite du site, prise de mesures, étude des plans s’ils existent, recommandations techniques et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12">
-					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-						<div style="font-size:48px;font-weight:700;color:#8F3F00;margin-bottom:10px">02</div>
-						<h5>Conception et permis</h5>
-						<p style="margin-top:10px;line-height:1.6;color:#555">Coordination avec architectes et ingénieurs au besoin, modélisation BIM pour les projets commerciaux et institutionnels, dépôt du dossier complet à la municipalité.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12">
-					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-						<div style="font-size:48px;font-weight:700;color:#8F3F00;margin-bottom:10px">03</div>
-						<h5>Exécution intégrée</h5>
-						<p style="margin-top:10px;line-height:1.6;color:#555">Mobilisation de nos six filiales selon un calendrier serré, supervision par un chargé de projet unique, contrôle qualité à chaque étape, communication hebdomadaire avec le client.</p>
-					</div>
-				</div>
-				<div class="col-lg-3 col-md-6 col-sm-12">
-					<div style="text-align:center;padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-						<div style="font-size:48px;font-weight:700;color:#8F3F00;margin-bottom:10px">04</div>
-						<h5>Livraison et garanties</h5>
-						<p style="margin-top:10px;line-height:1.6;color:#555">Inspection conjointe, remise des documents (plans tels que construits, manuels d’entretien, certificats), activation du Plan de garantie GCR, accompagnement post-livraison pour les ajustements mineurs.</p>
-					</div>
-				</div>
-			</div>
-			<div style="text-align:center;margin-top:30px">
-				<a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Démarrer un projet</span><span class="text-two">Démarrer</span></div></a>
-			</div>
-		</div>
-	</section>
-
-	<!-- Footer -->
 @endsection

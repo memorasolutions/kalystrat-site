@@ -10,8 +10,8 @@ $zones = [
     'beauport' => ['nom' => 'Beauport', 'desc' => 'Est de Québec. Constructions neuves et rénovations résidentielles.'],
     'sillery' => ['nom' => 'Sillery', 'desc' => 'Quartier patrimonial. Rénovations haut de gamme et adaptations historiques.'],
     'trois-rivieres' => ['nom' => 'Trois-Rivières', 'desc' => 'Mauricie. Couverture commerciale et résidentielle ciblée.'],
-    'saguenay' => ['nom' => 'Saguenay', 'desc' => 'Saguenay—Lac-Saint-Jean. Projets industriels et institutionnels.'],
-    'montreal' => ['nom' => 'Montréal', 'desc' => 'Métropole. Projets d\'envergure commerciaux et institutionnels.'],
+    'saguenay' => ['nom' => 'Saguenay', 'desc' => 'Saguenay-Lac-Saint-Jean. Projets industriels et institutionnels.'],
+    'montreal' => ['nom' => 'Montréal', 'desc' => 'Métropole. Projets d’envergure commerciaux et institutionnels.'],
     'laval' => ['nom' => 'Laval', 'desc' => 'Région métropolitaine. Multilogements et commercial.'],
 ];
 @endphp
@@ -48,44 +48,47 @@ echo json_encode([
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Zones desservies</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Zones desservies</li>
         </ul>
+        <h1>Zones desservies au Québec</h1>
+        <p class="ks-page-hero__subtitle">Notre siège est à Québec, mais nos chantiers s’étendent de la rive-sud du Saint-Laurent jusqu’au Saguenay et à la grande région de Montréal. Neuf villes principales couvertes en continu.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Couverture territoriale</span>
-                    <h2>Présents partout au Québec</h2>
-                </div>
-                <div class="text">
-                    <p>Notre siège social est à Québec, mais nos chantiers s’étendent de la rive-sud du Saint-Laurent jusqu’au Saguenay et à la grande région de Montréal. Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Couverture territoriale</span>
+            <h2 class="ks-h2">Présents partout au Québec</h2>
+            <p class="ks-lead">Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province. Réponse sous 24 heures ouvrables pour qualifier la zone et confirmer la disponibilité de l’équipe.</p>
         </div>
     </div>
 </section>
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
-    <div class="auto-container">
-        <div class="row clearfix">
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--3col">
             @foreach($zones as $slug => $z)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h4><a href="{{ route('zones.ville', $slug) }}">{{ $z['nom'] }}</a></h4>
-                    <div class="text" style="margin-top:10px;color:#555">{{ $z['desc'] }}</div>
-                </div>
-            </div>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Zone</span>
+                <h3 class="ks-card__title"><a href="{{ route('zones.ville', $slug) }}">{{ $z['nom'] }}</a></h3>
+                <p class="ks-card__text">{{ $z['desc'] }}</p>
+                <div class="ks-card__cta"><a href="{{ route('zones.ville', $slug) }}" class="ks-cta-secondary">En savoir plus</a></div>
+            </article>
             @endforeach
         </div>
+    </div>
+</section>
+
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Votre ville n’apparaît pas&nbsp;?</h2>
+        <p>Nous évaluons les projets hors zones principales selon l’ampleur du chantier. Contactez-nous pour valider la faisabilité.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Demander une évaluation</a>
     </div>
 </section>
 

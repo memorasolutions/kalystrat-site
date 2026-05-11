@@ -29,29 +29,24 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Notre expertise</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Expertise</li>
         </ul>
+        <h1>Notre expertise technique</h1>
+        <p class="ks-page-hero__subtitle">Méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Méthodes et standards</span>
-                    <h2>Excellence technique appliquée à chaque chantier</h2>
-                </div>
-                <div class="text">
-                    <p>L’expertise Kalystrat ne se résume pas à des compétences individuelles : c’est un système intégré qui combine méthodes éprouvées, normes provinciales rigoureuses, technologies modernes (BIM, préfabrication) et culture de sécurité partagée par les six filiales.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Méthodes et standards</span>
+            <h2 class="ks-h2">Excellence technique appliquée à chaque chantier</h2>
         </div>
+        <p class="ks-lead">L'expertise Kalystrat ne se résume pas à des compétences individuelles. C'est un système intégré qui combine conformité réglementaire stricte, technologies de pointe et coordination centralisée du holding. Ces huit piliers définissent notre standard opérationnel.</p>
     </div>
 </section>
 
@@ -68,39 +63,88 @@ $piliers = [
 ];
 @endphp
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:80px 0">
-    <div class="auto-container">
-        <div class="row clearfix">
-            @foreach($piliers as $p)
-            <div class="feature-block_four col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <h4>{{ $p['t'] }}</h4>
-                    <div class="text" style="margin-top:10px">{{ $p['d'] }}</div>
-                </div>
-            </div>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento">
+            @foreach($piliers as $i => $p)
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-card__meta">Pilier {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</div>
+                <h3 class="ks-card__title">{{ $p['t'] }}</h3>
+                <p class="ks-card__text">{{ $p['d'] }}</p>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0">
-    <div class="auto-container">
-        <h2>L’avantage de l’intégration verticale au quotidien</h2>
-        <p style="line-height:1.7">L’intégration verticale n’est pas un slogan. Sur un chantier Kalystrat, elle se traduit concrètement par six gestes opérationnels qui transforment la façon dont un projet est exécuté. Premier geste : un seul contrat, un seul calendrier maître. Le client signe un mandat unique avec Gestion Kalystrat Inc. ; la holding répartit ensuite les tâches entre les six filiales selon une séquence pensée en amont. Deuxième geste : la coordination interquipes se passe en réunion hebdomadaire, pas par courriels en cascade entre sous-traitants étrangers les uns aux autres. Troisième geste : nos compagnons CCQ travaillent ensemble sur d’autres chantiers, ils se connaissent, ce qui réduit les frictions et accélère le rythme. Quatrième geste : les standards qualité sont définis une fois au niveau du holding et appliqués partout. Cinquième geste : la chaîne d’approvisionnement est mutualisée entre les filiales pour des achats groupés. Sixième geste : un chargé de projet unique pilote tout, ce qui élimine les zones grises de responsabilité.</p>
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Intégration verticale au quotidien</span>
+            <h2 class="ks-h2">Six gestes opérationnels qui font la différence</h2>
+        </div>
+        <div class="ks-bento">
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">01</div>
+                <h3 class="ks-card__title">Un seul contrat, un seul calendrier</h3>
+                <p class="ks-card__text">Le client signe un mandat unique avec Gestion Kalystrat Inc. La holding répartit ensuite les tâches entre les six filiales selon une séquence pensée en amont.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">02</div>
+                <h3 class="ks-card__title">Coordination hebdomadaire</h3>
+                <p class="ks-card__text">Réunion d'équipes inter-filiales chaque semaine, pas de courriels en cascade entre sous-traitants étrangers les uns aux autres.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">03</div>
+                <h3 class="ks-card__title">Compagnons habitués</h3>
+                <p class="ks-card__text">Nos compagnons CCQ travaillent ensemble sur d'autres chantiers, ils se connaissent. Frictions réduites, rythme accéléré.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">04</div>
+                <h3 class="ks-card__title">Standards holding partagés</h3>
+                <p class="ks-card__text">Les standards qualité sont définis une fois au niveau du holding et appliqués partout, par toutes les filiales, sans interprétation locale.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">05</div>
+                <h3 class="ks-card__title">Achats mutualisés</h3>
+                <p class="ks-card__text">La chaîne d'approvisionnement est mutualisée entre les filiales pour des achats groupés et de meilleures conditions tarifaires.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">06</div>
+                <h3 class="ks-card__title">Chargé de projet unique</h3>
+                <p class="ks-card__text">Un chargé de projet pilote tout. Élimination des zones grises de responsabilité, prise de décision accélérée.</p>
+            </article>
+        </div>
     </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-    <div class="auto-container">
-        <h2>Reconnaissance sur le chantier et au-delà</h2>
-        <p style="line-height:1.7">Notre marketing terrain prolonge l’expérience client au-delà du contrat. Chacun de nos véhicules de travail porte le lettrage Kalystrat. Sur chaque chantier, un panneau de grande visibilité identifie le projet comme « réalisé par le groupe Kalystrat » et présente l’ensemble des filiales mobilisées. Nos équipements de protection individuelle (casques, vestes, accessoires de sécurité) arborent la marque et le logo Kalystrat, ce qui renforce l’unité visuelle des chantiers et la sécurité des travailleurs. Nous participons aux salons professionnels comme le Salon national de l’habitation et le Congrès de l’APCHQ pour entretenir les relations avec architectes, courtiers et promoteurs. Nos fiches Google Business Profile sont distinctes pour chaque filiale, permettant aux clients locaux de trouver précisément l’expertise qu’ils cherchent.</p>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Marketing terrain</span>
+            <h2 class="ks-h2">Reconnaissance sur le chantier et au-delà</h2>
+            <p class="ks-lead">Notre marketing terrain prolonge l'expérience client au-delà du contrat. Cohérence visuelle, sécurité renforcée, présence locale.</p>
+        </div>
+        <div class="ks-bento ks-bento--2col">
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Identification visuelle</span>
+                <h3 class="ks-card__title">Véhicules, EPI, signalisation</h3>
+                <p class="ks-card__text">Lettrage Kalystrat sur tous nos véhicules de travail. Panneau « réalisé par le groupe Kalystrat » sur chaque chantier. Casques, vestes et accessoires de sécurité aux couleurs du groupe.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Présence professionnelle</span>
+                <h3 class="ks-card__title">Salons et fiches GBP</h3>
+                <p class="ks-card__text">Participation au Salon national de l'habitation et au Congrès de l'APCHQ. Fiches Google Business Profile distinctes pour chaque filiale, optimisées pour la recherche locale.</p>
+            </article>
+        </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Discutez avec nos experts</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Nous contacter</span><span class="text-two">Nous contacter</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Discutez avec nos experts</h2>
+        <p>Une équipe formée aux exigences du Code 2026 et aux normes Novoclimat 2.0. Demandez une analyse technique gratuite.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Nous contacter</a>
     </div>
 </section>
 

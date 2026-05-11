@@ -26,62 +26,57 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Partenaires</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Partenaires</li>
         </ul>
+        <h1>Partenaires et écosystème</h1>
+        <p class="ks-page-hero__subtitle">L’intégration verticale Kalystrat n’élimine pas la collaboration&nbsp;: elle la rend plus efficace. Notre réseau d’architectes, designers, ingénieurs et promoteurs apporte une expertise spécifique à chaque projet.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Écosystème de la construction</span>
-                    <h2>Construire ensemble, mieux et plus vite</h2>
-                </div>
-                <div class="text">
-                    <p>L’intégration verticale de Kalystrat n’élimine pas la collaboration : elle la rend plus efficace. Nous travaillons avec un réseau d’architectes, de designers, d’ingénieurs et de promoteurs qui apportent leur expertise spécifique à nos projets.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Écosystème de la construction</span>
+            <h2 class="ks-h2">Construire ensemble, mieux et plus vite</h2>
+            <p class="ks-lead">Six familles de partenaires gravitent autour des six filiales Kalystrat. Chaque profil apporte une compétence pointue qui renforce notre capacité à livrer des projets complexes, conformes et performants.</p>
         </div>
     </div>
 </section>
 
 @php
 $types = [
-    ['t' => 'Architectes et designers', 'd' => "Bureaux d'architecture résidentiels et commerciaux, designers d'intérieur, urbanistes. Nous accompagnons leurs concepts de la planche à dessin jusqu'à la livraison."],
+    ['t' => 'Architectes et designers', 'd' => "Bureaux d’architecture résidentiels et commerciaux, designers d’intérieur, urbanistes. Nous accompagnons leurs concepts de la planche à dessin jusqu’à la livraison."],
     ['t' => 'Ingénieurs', 'd' => "Génie civil, structural, mécanique, électrique, environnemental. Nos chargés de projet coordonnent les disciplines pour livrer un bâtiment conforme et performant."],
     ['t' => 'Promoteurs immobiliers', 'd' => "Développement résidentiel, commercial et mixte. Kalystrat exécute les projets de promoteurs externes en plus des projets internes via Kalystrat Immobilier."],
-    ['t' => 'Courtiers et investisseurs', 'd' => "Courtiers immobiliers, fonds d'investissement immobilier, investisseurs privés. Conseil et exécution sur acquisitions, rénovations et reventes."],
+    ['t' => 'Courtiers et investisseurs', 'd' => "Courtiers immobiliers, fonds d’investissement immobilier, investisseurs privés. Conseil et exécution sur acquisitions, rénovations et reventes."],
     ['t' => 'Fournisseurs spécialisés', 'd' => "Béton, charpente, menuiserie, fenêtres, mécanique du bâtiment. Relations long terme garantissant qualité et délais."],
     ['t' => 'Sous-traitants ciblés', 'd' => "Pour les services hors expertise (climatisation industrielle, levage spécialisé), nous travaillons avec des sous-traitants sélectionnés sur leur fiabilité."],
 ];
 @endphp
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
-    <div class="auto-container">
-        <div class="row clearfix">
-            @foreach($types as $t)
-            <div class="feature-block_four col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <h4>{{ $t['t'] }}</h4>
-                    <div class="text" style="margin-top:10px">{{ $t['d'] }}</div>
-                </div>
-            </div>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--2col">
+            @foreach($types as $i => $type)
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Type {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <h3 class="ks-card__title">{{ $type['t'] }}</h3>
+                <p class="ks-card__text">{{ $type['d'] }}</p>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Devenir partenaire Kalystrat ?</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Discutons-en</span><span class="text-two">Discutons</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Devenir partenaire Kalystrat&nbsp;?</h2>
+        <p>Présentez votre cabinet, votre bureau ou votre entreprise. Nous évaluons les complémentarités avec nos six filiales.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Discutons-en</a>
     </div>
 </section>
 

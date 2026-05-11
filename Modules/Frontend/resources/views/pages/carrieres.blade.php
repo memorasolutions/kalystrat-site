@@ -3,7 +3,7 @@
 @section('title', 'Carrières en construction au Québec | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Travailler chez Kalystrat : six filiales spécialisées, main-d'œuvre CCQ, formation continue, projets diversifiés au Québec. Postulez via Kalystrat Placement Construction.">
+<meta name="description" content="Travailler chez Kalystrat : six filiales spécialisées, main-d’œuvre CCQ, formation continue, projets diversifiés au Québec. Postulez via Kalystrat Placement Construction.">
 <link rel="canonical" href="{{ url('/carrieres') }}">
 @endpush
 
@@ -27,28 +27,23 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Carrières chez Kalystrat</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Carrières</li>
         </ul>
+        <h1>Carrières chez Kalystrat</h1>
+        <p class="ks-page-hero__subtitle">Le secteur de la construction au Québec compte plus de 11 000 postes vacants. Apprenti, compagnon expérimenté ou cadre de chantier&nbsp;: nous avons probablement une opportunité pour vous.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Rejoignez l’équipe</span>
-                    <h2>Construire votre carrière dans la construction</h2>
-                </div>
-                <div class="text">
-                    <p>Le secteur de la construction au Québec compte plus de 11 000 postes vacants. Kalystrat Placement Construction recrute en continu pour ses six filiales et pour des entreprises partenaires. Que vous soyez apprenti, compagnon expérimenté ou cadre de chantier, nous avons probablement une opportunité pour vous.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Rejoignez l’équipe</span>
+            <h2 class="ks-h2">Construire votre carrière dans la construction</h2>
+            <p class="ks-lead">Kalystrat Placement Construction recrute en continu pour les six filiales du groupe et pour les entreprises partenaires. Nous valorisons l’apprentissage progressif, la promotion interne et la stabilité d’emploi.</p>
         </div>
     </div>
 </section>
@@ -56,61 +51,62 @@
 @php
 $avantages = [
     ['t' => 'Diversité de projets', 'd' => "Résidentiel, commercial, institutionnel, industriel, municipal — vous ne ferez jamais deux fois le même chantier."],
-    ['t' => 'Formation continue', 'd' => "Programmes CCQ, formations sécurité, mises à jour techniques. L'évolution professionnelle fait partie du contrat."],
+    ['t' => 'Formation continue', 'd' => "Programmes CCQ, formations sécurité, mises à jour techniques. L’évolution professionnelle fait partie du contrat."],
     ['t' => 'Salaire compétitif', 'd' => "Échelle salariale CCQ + bonus de performance. Avantages sociaux complets pour les postes permanents."],
-    ['t' => 'Stabilité d\'emploi', 'd' => "Six filiales internes assurent un flux continu de chantiers. Moins de mises à pied saisonnières que la moyenne du secteur."],
+    ['t' => 'Stabilité d’emploi', 'd' => "Six filiales internes assurent un flux continu de chantiers. Moins de mises à pied saisonnières que la moyenne du secteur."],
     ['t' => 'Proximité géographique', 'd' => "Sauf cas spéciaux, nos chantiers sont à distance raisonnable de Québec. Moins de déplacements, plus de qualité de vie."],
-    ['t' => 'Évolution interne', 'd' => "Apprenti aujourd'hui, compagnon dans 4 ans, contremaître dans 8 ans. Nous priorisons les promotions internes."],
+    ['t' => 'Évolution interne', 'd' => "Apprenti aujourd’hui, compagnon dans 4 ans, contremaître dans 8 ans. Nous priorisons les promotions internes."],
 ];
 
 $metiers = [
     'Charpentier-menuisier', 'Briqueteur-maçon', 'Plâtrier-tireur de joints', 'Peintre',
-    'Couvreur', 'Ferrailleur', 'Cimentier-applicateur', 'Opérateur d\'équipement lourd',
+    'Couvreur', 'Ferrailleur', 'Cimentier-applicateur', 'Opérateur d’équipement lourd',
     'Électricien (en partenariat)', 'Plombier (en partenariat)', 'Manœuvre spécialisé',
     'Estimateur', 'Chargé de projet', 'Contremaître', 'Surintendant',
 ];
 @endphp
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Pourquoi Kalystrat</span>
-            <h2>Six raisons de nous rejoindre</h2>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Pourquoi Kalystrat</span>
+            <h2 class="ks-h2">Six raisons de nous rejoindre</h2>
         </div>
-        <div class="row clearfix">
-            @foreach($avantages as $a)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px">
-                    <h5>{{ $a['t'] }}</h5>
-                    <div class="text" style="margin-top:10px">{{ $a['d'] }}</div>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--3col">
+            @foreach($avantages as $i => $a)
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Avantage {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <h3 class="ks-card__title">{{ $a['t'] }}</h3>
+                <p class="ks-card__text">{{ $a['d'] }}</p>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="sec-title">
-            <span class="sub-title">Postes recherchés</span>
-            <h2>Métiers en demande</h2>
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Postes recherchés</span>
+            <h2 class="ks-h2">Métiers en demande</h2>
+            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Les quinze profils les plus sollicités sur nos chantiers. Si votre métier n’y figure pas, envoyez-nous quand même votre candidature.</p>
         </div>
-        <div class="row clearfix">
-            @foreach($metiers as $m)
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:10px">
-                <div style="padding:12px 18px;background:#f7f7f7;border-left:3px solid #8F3F00">{{ $m }}</div>
-            </div>
+        <div class="ks-bento ks-bento--3col">
+            @foreach($metiers as $i => $m)
+            <article class="ks-card ks-card--dark" style="padding:18px 22px">
+                <div class="ks-card__meta" style="color:var(--ks-gold-500)">{{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</div>
+                <p class="ks-card__text" style="margin:0;font-weight:500;color:var(--ks-white);font-family:var(--ks-font-display);font-size:1.125rem">{{ $m }}</p>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:15px">Envoyer votre candidature</h2>
-        <p style="margin-bottom:20px">Courriel : <a href="mailto:carrieres@kalystrat.ca">carrieres@kalystrat.ca</a></p>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Postuler maintenant</span><span class="text-two">Postuler</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Envoyer votre candidature</h2>
+        <p>Courriel direct&nbsp;: <a href="mailto:carrieres@kalystrat.ca" style="color:var(--ks-gold-500);text-decoration:underline">carrieres@kalystrat.ca</a>. Réponse sous 5 jours ouvrables.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Postuler maintenant</a>
     </div>
 </section>
 

@@ -1,0 +1,1935 @@
+/*!
+ * Kalystrat Design System 2026
+ * Charte officielle stricte : navy #0A1628 + gold #B8A472 + Akzidenz Grotesk
+ * Polices : Akzidenz Grotesk (titres + body) + Caveat (signature)
+ * WCAG AAA : tous ratios texte ≥ 7:1 vérifiés.
+ */
+
+/* T78 — Akzidenz Grotesk (police officielle charte v2 Kalystrat) */
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Akzidenz Grotesk';
+  src: url('/assets/fonts/AkzidenzGrotesk-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* Palette charte officielle Kalystrat (charte v2 vérifiée) */
+  --ks-navy-900: #0A1628;
+  --ks-navy-700: #1A2840;
+  --ks-navy-500: #2C3E5C;
+  --ks-gold-500: #B8A472;
+  --ks-gold-700: #8C7B4F;          /* AA seulement sur blanc 4.15:1, à utiliser sur fond foncé */
+  --ks-gold-900: #6B5C38;          /* 6.54:1 sur blanc — AAA large, AA normal */
+  --ks-gold-aaa: #5A4D2E;           /* 8.28:1 sur blanc — AAA NORMAL TEXT garanti (eyebrow fond clair) */
+  --ks-orange-700: #8F3F00;        /* DEPRECATED — orange Construz, à éliminer (charte = navy/gold seulement) */
+  --ks-gray-900: #1a1a1a;
+  --ks-gray-700: #4a4a4a;
+  --ks-gray-500: #888;
+  --ks-gray-300: #d6d6d6;
+  --ks-gray-100: #f7f7f7;
+  --ks-white: #ffffff;
+
+  /* Typographie charte officielle Kalystrat — Akzidenz Grotesk partout */
+  --ks-font-display: 'Akzidenz Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --ks-font-body: 'Akzidenz Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  --ks-h1-size: clamp(2.5rem, 5vw, 4.5rem);     /* 40-72px */
+  --ks-h2-size: clamp(1.75rem, 3.5vw, 2.75rem);  /* 28-44px */
+  --ks-h3-size: clamp(1.375rem, 2.2vw, 1.75rem); /* 22-28px */
+  --ks-h4-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  --ks-body-size: clamp(1rem, 1.05vw, 1.125rem); /* 16-18px */
+  --ks-lead-size: clamp(1.125rem, 1.4vw, 1.375rem);
+  --ks-line-height: 1.7;
+  --ks-line-height-tight: 1.2;
+
+  /* Espacement rythme 8px */
+  --ks-section-py: clamp(60px, 10vw, 120px);
+  --ks-section-py-sm: clamp(40px, 6vw, 80px);
+  --ks-card-padding: clamp(24px, 3vw, 40px);
+  --ks-gap: clamp(16px, 2vw, 32px);
+  --ks-gap-lg: clamp(24px, 3vw, 48px);
+
+  /* Rayons + ombres */
+  --ks-radius-sm: 8px;
+  --ks-radius-md: 12px;
+  --ks-radius-lg: 20px;
+  --ks-shadow-card: 0 4px 16px rgba(10, 22, 40, 0.06);
+  --ks-shadow-card-hover: 0 12px 32px rgba(10, 22, 40, 0.14);
+  --ks-shadow-section: 0 1px 0 rgba(10, 22, 40, 0.05);
+
+  /* Transitions */
+  --ks-transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* === Sections === */
+.ks-section {
+  padding: var(--ks-section-py) 0;
+  position: relative;
+}
+
+.ks-section--sm {
+  padding: var(--ks-section-py-sm) 0;
+}
+
+.ks-section--alt {
+  background: var(--ks-gray-100);
+}
+
+.ks-section--dark {
+  background: var(--ks-navy-900);
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.ks-section--dark h1,
+.ks-section--dark h2,
+.ks-section--dark h3,
+.ks-section--dark h4 {
+  color: var(--ks-white);
+}
+
+.ks-section--dark .ks-eyebrow {
+  color: var(--ks-gold-500);
+}
+
+.ks-container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-left: clamp(20px, 4vw, 40px);
+  padding-right: clamp(20px, 4vw, 40px);
+}
+
+/* === Typographie 2026 === */
+.ks-h1,
+.ks-section h1.ks-h1 {
+  font-family: var(--ks-font-display);
+  font-size: var(--ks-h1-size);
+  line-height: var(--ks-line-height-tight);
+  font-weight: 700;
+  color: var(--ks-navy-900);
+  margin-bottom: 0.5em;
+  letter-spacing: -0.02em;
+}
+
+.ks-h2 {
+  font-family: var(--ks-font-display);
+  font-size: var(--ks-h2-size);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--ks-navy-900);
+  margin-bottom: 0.6em;
+  letter-spacing: -0.015em;
+}
+
+.ks-h3 {
+  font-family: var(--ks-font-display);
+  font-size: var(--ks-h3-size);
+  line-height: 1.3;
+  font-weight: 700;
+  color: var(--ks-navy-900);
+  margin-bottom: 0.6em;
+}
+
+.ks-eyebrow {
+  display: inline-block;
+  font-family: var(--ks-font-body);
+  font-size: 0.8125rem;            /* 13px */
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ks-gold-aaa);       /* WCAG AAA strict 8.28:1 sur blanc */
+  margin-bottom: 1rem;
+}
+
+.ks-lead {
+  font-family: var(--ks-font-body);
+  font-size: var(--ks-lead-size);
+  line-height: var(--ks-line-height);
+  color: var(--ks-gray-700);
+  max-width: 65ch;
+}
+
+.ks-section p {
+  font-size: var(--ks-body-size);
+  line-height: var(--ks-line-height);
+  color: var(--ks-gray-700);
+}
+
+.ks-section p strong {
+  color: var(--ks-navy-900);
+  font-weight: 600;
+}
+
+.ks-section--dark p {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ks-section--dark p strong {
+  color: var(--ks-gold-500);
+}
+
+/* === Bento layout === */
+.ks-bento {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--ks-gap);
+  margin-top: var(--ks-gap-lg);
+}
+
+.ks-bento--2col {
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+}
+
+.ks-bento--3col {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+@media (min-width: 1024px) {
+  .ks-bento--feature {
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .ks-bento--feature > .ks-card:first-child {
+    grid-column: span 1;
+    grid-row: span 2;
+  }
+}
+
+/* === Cards === */
+.ks-card {
+  background: var(--ks-white);
+  border-radius: var(--ks-radius-md);
+  padding: var(--ks-card-padding);
+  box-shadow: var(--ks-shadow-card);
+  transition: transform var(--ks-transition), box-shadow var(--ks-transition);
+  border: 1px solid rgba(10, 22, 40, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.ks-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--ks-shadow-card-hover);
+}
+
+.ks-card--accent-gold {
+  border-left: 4px solid var(--ks-gold-500);
+}
+
+.ks-card--accent-navy {
+  border-left: 4px solid var(--ks-navy-900);
+}
+
+.ks-card--accent-orange {
+  border-left: 4px solid var(--ks-orange-700);
+}
+
+.ks-card--dark {
+  background: var(--ks-navy-700);
+  color: rgba(255, 255, 255, 0.92);
+  border-color: var(--ks-navy-500);
+}
+
+.ks-card--dark h3,
+.ks-card--dark h4,
+.ks-card--dark h5 {
+  color: var(--ks-white);
+}
+
+.ks-card--dark p {
+  color: rgba(255, 255, 255, 0.78);
+}
+
+.ks-card__title {
+  font-family: var(--ks-font-display);
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: var(--ks-navy-900);
+  margin: 0.5rem 0;
+}
+
+.ks-card__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--ks-transition);
+}
+
+.ks-card__title a:hover {
+  color: var(--ks-orange-700);
+}
+
+.ks-card__meta {
+  font-family: var(--ks-font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ks-orange-700);
+  margin-bottom: 0.5rem;
+}
+
+.ks-card__text {
+  flex: 1;
+  font-size: var(--ks-body-size);
+  line-height: var(--ks-line-height);
+  color: var(--ks-gray-700);
+  margin-bottom: 1.25rem;
+}
+
+.ks-card__cta {
+  margin-top: auto;
+}
+
+/* === CTA buttons === */
+.ks-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--ks-gold-500);
+  color: var(--ks-navy-900);
+  font-family: var(--ks-font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  transition: background var(--ks-transition), transform var(--ks-transition);
+}
+
+.ks-cta-primary:hover {
+  background: var(--ks-gold-700);
+  color: var(--ks-white);
+  transform: translateY(-2px);
+}
+
+.ks-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--ks-navy-900);
+  font-family: var(--ks-font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  border: 2px solid var(--ks-navy-900);
+  cursor: pointer;
+  transition: background var(--ks-transition), color var(--ks-transition);
+}
+
+.ks-cta-secondary:hover {
+  background: var(--ks-navy-900);
+  color: var(--ks-white);
+}
+
+/* === Page hero === */
+.ks-page-hero {
+  background: linear-gradient(135deg, var(--ks-navy-900) 0%, var(--ks-navy-700) 100%);
+  color: var(--ks-white);
+  padding: clamp(80px, 12vw, 160px) 0 clamp(60px, 8vw, 100px);
+  position: relative;
+  overflow: hidden;
+}
+
+.ks-page-hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -10%;
+  width: 60%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(184, 164, 114, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.ks-page-hero h1 {
+  font-family: var(--ks-font-display);
+  font-size: var(--ks-h1-size);
+  line-height: var(--ks-line-height-tight);
+  font-weight: 700;
+  color: var(--ks-white);
+  max-width: 18ch;
+  margin-bottom: 0.4em;
+  letter-spacing: -0.02em;
+}
+
+.ks-page-hero__subtitle {
+  font-family: var(--ks-font-body);
+  font-size: var(--ks-lead-size);
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 60ch;
+  line-height: var(--ks-line-height);
+}
+
+.ks-page-hero__breadcrumb {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ks-page-hero__breadcrumb li::after {
+  content: '›';
+  margin-left: 0.5rem;
+  color: var(--ks-gold-500);
+}
+
+.ks-page-hero__breadcrumb li:last-child::after {
+  display: none;
+}
+
+.ks-page-hero__breadcrumb a {
+  color: var(--ks-gold-500);
+  text-decoration: none;
+  transition: color var(--ks-transition);
+}
+
+.ks-page-hero__breadcrumb a:hover {
+  color: var(--ks-white);
+}
+
+/* === Hero cinématique full-bleed WOW (T63 v4 + T76 anti-superposition CTA/Bento) === */
+.ks-page-hero--split {
+  padding: 0;
+  height: clamp(720px, 88svh, 860px);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+@media (max-width: 720px) {
+  .ks-page-hero--split {
+    height: auto;
+    min-height: clamp(640px, 88svh, 760px);
+  }
+}
+
+.ks-page-hero--split::after {
+  display: none;
+}
+
+.ks-hero-split__visual {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.ks-hero-split__visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 55%;
+}
+
+.ks-hero-split__poster {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+/* T74/T75 — Ken Burns CSS animation (linear pour mouvement perceptible immédiat) */
+.ks-hero-split__poster--kenburns {
+  animation: ks-kenburns 20s linear infinite alternate;
+  transform-origin: 30% 70%;
+  will-change: transform;
+}
+
+@keyframes ks-kenburns {
+  0%   { transform: scale(1) translate(0, 0); }
+  100% { transform: scale(1.15) translate(-3%, -2%); }
+}
+
+.ks-hero-split__visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background:
+    linear-gradient(180deg, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.45) 40%, rgba(10, 22, 40, 0.55) 70%, rgba(10, 22, 40, 0.85) 100%);
+}
+
+@media (min-width: 980px) {
+  .ks-hero-split__visual::before {
+    background:
+      linear-gradient(95deg, rgba(10, 22, 40, 0.92) 0%, rgba(10, 22, 40, 0.78) 30%, rgba(10, 22, 40, 0.5) 55%, rgba(10, 22, 40, 0.4) 78%, rgba(10, 22, 40, 0.55) 100%),
+      linear-gradient(180deg, rgba(10, 22, 40, 0.45) 0%, transparent 20%, transparent 65%, rgba(10, 22, 40, 0.75) 100%);
+  }
+}
+
+.ks-hero-split__visual::after {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 65%;
+  height: 65%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(184, 164, 114, 0.22) 0%, transparent 65%);
+  z-index: 4;
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.ks-hero-split__content {
+  position: relative;
+  z-index: 5;
+  height: 100%;
+  padding: clamp(110px, 12vw, 170px) clamp(20px, 5vw, 60px) clamp(220px, 18vw, 260px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (min-width: 980px) {
+  .ks-hero-split__content {
+    padding: clamp(130px, 12vw, 180px) clamp(40px, 6vw, 100px) clamp(180px, 14vw, 220px);
+    max-width: 1380px;
+  }
+  .ks-hero-split__content > * {
+    max-width: 56%;
+  }
+}
+
+.ks-hero-split__content h1 {
+  max-width: none;
+  font-size: clamp(2.5rem, 5vw, 4.75rem);
+  line-height: 1.04;
+  text-wrap: balance;
+  margin-bottom: 0.4em;
+  text-shadow: 0 2px 24px rgba(0, 0, 0, 0.4);
+}
+
+.ks-hero-stats {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 6;
+  width: 100%;
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 60px) clamp(24px, 3vw, 44px);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+@media (min-width: 720px) {
+  .ks-hero-stats {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (min-width: 980px) {
+  .ks-hero-stats {
+    padding: 0 clamp(40px, 6vw, 100px) clamp(32px, 4vw, 52px);
+  }
+}
+
+.ks-hero-stat {
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.55) 0%, rgba(10, 22, 40, 0.35) 100%);
+  backdrop-filter: blur(18px) saturate(1.4);
+  -webkit-backdrop-filter: blur(18px) saturate(1.4);
+  border: 1px solid rgba(184, 164, 114, 0.4);
+  border-top-color: rgba(184, 164, 114, 0.55);
+  border-radius: var(--ks-radius-md);
+  padding: clamp(16px, 1.6vw, 22px) clamp(18px, 1.8vw, 26px);
+  color: var(--ks-white);
+  transition: transform var(--ks-transition), border-color var(--ks-transition), background var(--ks-transition);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.ks-hero-stat:hover {
+  transform: translateY(-4px);
+  border-color: var(--ks-gold-500);
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.7) 0%, rgba(10, 22, 40, 0.5) 100%);
+}
+
+.ks-hero-stat__num {
+  font-family: var(--ks-font-display);
+  font-size: clamp(2.25rem, 3.2vw, 3rem);
+  font-weight: 700;
+  color: var(--ks-gold-500);
+  line-height: 1;
+  display: block;
+  letter-spacing: -0.01em;
+}
+
+.ks-hero-stat__label {
+  font-family: var(--ks-font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.92);
+  margin-top: 0.5rem;
+  display: block;
+  line-height: 1.35;
+}
+
+.ks-hero-split__cta {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-top: clamp(1.75rem, 3vw, 2.5rem);
+}
+
+.ks-hero-split__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--ks-gold-500);
+  font-family: var(--ks-font-body);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem;
+}
+
+.ks-hero-split__eyebrow::before {
+  content: '';
+  width: 32px;
+  height: 1px;
+  background: var(--ks-gold-500);
+}
+
+/* T73 — Ancien scroll-driven ks-hero-zoom retiré (conflit avec ks-kenburns infinite alternate) */
+
+/* === Stats / chiffres clés === */
+.ks-stat {
+  text-align: center;
+  padding: 1rem;
+}
+
+.ks-stat__number {
+  font-family: var(--ks-font-display);
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 700;
+  color: var(--ks-gold-500);
+  line-height: 1;
+  display: block;
+}
+
+.ks-stat__label {
+  font-family: var(--ks-font-body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ks-gray-700);
+  margin-top: 0.5rem;
+}
+
+.ks-section--dark .ks-stat__label {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* === Listes === */
+.ks-list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.ks-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.75rem;
+  font-size: var(--ks-body-size);
+  line-height: var(--ks-line-height);
+  color: var(--ks-gray-700);
+}
+
+.ks-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 12px;
+  height: 2px;
+  background: var(--ks-gold-500);
+}
+
+/* === Section heading === */
+.ks-section__heading {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto var(--ks-gap-lg);
+}
+
+.ks-section__heading--left {
+  text-align: left;
+  margin-left: 0;
+}
+
+/* === CTA finale === */
+.ks-cta-section {
+  padding: var(--ks-section-py) 0;
+  background: var(--ks-navy-900);
+  color: var(--ks-white);
+  text-align: center;
+}
+
+.ks-cta-section h2 {
+  font-family: var(--ks-font-display);
+  font-size: var(--ks-h2-size);
+  font-weight: 700;
+  color: var(--ks-white);
+  margin-bottom: 1rem;
+  max-width: 22ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ks-cta-section p {
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 50ch;
+  margin: 0 auto 2rem;
+  font-size: var(--ks-lead-size);
+}
+
+/* === Micro-animations désactivées par défaut ===
+ * .ks-fade-in reste opacity:1 (pas d'effet visuel intrusif).
+ * Tendance #5 micro-animations (78/100) reportée — priorité stabilité visuelle.
+ * Réactivable via classe body.ks-anim-on si besoin futur.
+ */
+
+/* === Mobile-first ajustements === */
+@media (max-width: 768px) {
+  .ks-bento {
+    gap: 16px;
+  }
+  .ks-card {
+    padding: 24px;
+  }
+  .ks-page-hero {
+    padding: 100px 0 50px;
+  }
+}
+
+/* === T77 — Section Trois piliers cinéma (Awwwards mai 2026 100%) === */
+.ks-pillars {
+  padding: clamp(80px, 10vw, 140px) 0 clamp(80px, 10vw, 140px);
+}
+
+.ks-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(48px, 5vw, 88px);
+  margin-top: clamp(56px, 6vw, 96px);
+  position: relative;
+  counter-reset: pillar;
+}
+
+@media (min-width: 980px) {
+  .ks-pillars__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ks-pillar {
+  position: relative;
+  padding: clamp(20px, 2.4vw, 32px) 0 clamp(20px, 2.4vw, 32px) clamp(32px, 3.5vw, 56px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Ligne verticale unifiée — uniforme gold subtle, intensifie au hover (T79 fix coupure perçue) */
+.ks-pillar::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--ks-gold-500);
+  opacity: 0.45;
+  transition: opacity 500ms ease, width 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-pillar:hover {
+  transform: translateY(-4px);
+}
+
+.ks-pillar:hover::before {
+  opacity: 1;
+  width: 3px;
+}
+
+.ks-pillar__num {
+  font-family: var(--ks-font-display);
+  font-size: clamp(5rem, 7.5vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0 0 clamp(1rem, 1.8vw, 1.5rem);
+  display: block;
+  padding-top: 0.05em;             /* fix glyph clipping top — Akzidenz Grotesk Bold */
+  background: linear-gradient(135deg, var(--ks-gold-500) 0%, var(--ks-gold-700) 60%, var(--ks-gold-900) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 4px 18px rgba(184, 164, 114, 0.22));
+  transition: filter 500ms ease, transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-pillar:hover .ks-pillar__num {
+  filter: drop-shadow(0 6px 24px rgba(184, 164, 114, 0.4));
+  transform: translateY(-2px);
+}
+
+.ks-pillar__title {
+  font-family: var(--ks-font-display);
+  font-size: clamp(1.5rem, 2.2vw, 2.125rem);
+  font-weight: 700;
+  line-height: 1.12;
+  color: var(--ks-navy-900);
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(0.875rem, 1.4vw, 1.25rem);
+  max-width: 14ch;
+  text-wrap: balance;
+}
+
+.ks-pillar__text {
+  font-family: var(--ks-font-body);
+  font-size: var(--ks-body-size);
+  line-height: 1.65;
+  color: var(--ks-gray-700);
+  margin: 0;
+  max-width: 32ch;
+}
+
+/* Scroll-driven reveal stagger (CSS natif 2026 — 96% support, fallback gracieux) */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ks-pillar {
+      animation: ks-pillar-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 10% cover 30%;
+    }
+    @keyframes ks-pillar-rise {
+      from { opacity: 0; transform: translateY(40px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .ks-pillar {
+    padding-left: 24px;
+  }
+  .ks-pillar__num {
+    font-size: clamp(4rem, 16vw, 6rem);
+  }
+}
+
+/* === T85 — Section "Quatre temps" timeline horizontale (Awwwards mai 2026 Vinci/Skanska) === */
+.ks-process {
+  padding: clamp(80px, 10vw, 140px) 0;
+}
+
+.ks-process__lead {
+  color: var(--ks-white) !important;
+  font-weight: 500;
+  max-width: 65ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--ks-lead-size);
+  line-height: 1.6;
+}
+
+.ks-process__timeline {
+  list-style: none;
+  padding: 0;
+  margin: clamp(56px, 6vw, 96px) 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(24px, 2.6vw, 40px);
+  position: relative;
+  counter-reset: step;
+}
+
+/* Ligne horizontale gold qui connecte les 4 jalons */
+.ks-process__timeline::before {
+  content: '';
+  position: absolute;
+  top: clamp(40px, 4vw, 56px);
+  left: 12.5%;
+  right: 12.5%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(184, 164, 114, 0.45) 8%, rgba(184, 164, 114, 0.45) 92%, transparent 100%);
+  z-index: 0;
+}
+
+.ks-process__step {
+  position: relative;
+  padding-top: clamp(72px, 7.5vw, 104px);
+  text-align: center;
+  z-index: 1;
+}
+
+/* Dot sur la timeline */
+.ks-process__step::before {
+  content: '';
+  position: absolute;
+  top: clamp(34px, 3.7vw, 48px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--ks-navy-900);
+  border: 2px solid var(--ks-gold-500);
+  transition: background 400ms ease, transform 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-process__step:hover::before {
+  background: var(--ks-gold-500);
+  transform: translateX(-50%) scale(1.4);
+}
+
+.ks-process__num {
+  display: block;
+  font-family: var(--ks-font-display);
+  font-size: clamp(3rem, 4.2vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--ks-gold-500);
+  margin-bottom: clamp(0.75rem, 1.2vw, 1rem);
+  filter: drop-shadow(0 3px 14px rgba(184, 164, 114, 0.22));
+  transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-process__step:hover .ks-process__num {
+  transform: translateY(-3px);
+}
+
+.ks-process__title {
+  font-family: var(--ks-font-display);
+  font-size: clamp(1.125rem, 1.5vw, 1.375rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--ks-white);
+  margin: 0 0 clamp(0.625rem, 1vw, 0.875rem);
+  letter-spacing: -0.01em;
+}
+
+.ks-process__title a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--ks-transition);
+}
+
+.ks-process__title a:hover {
+  color: var(--ks-gold-500);
+}
+
+.ks-process__text {
+  font-family: var(--ks-font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.55;
+  color: var(--ks-white);
+  margin: 0;
+  padding: 0 clamp(8px, 1vw, 16px);
+}
+
+/* Scroll-driven stagger reveal */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .ks-process__step {
+      animation: ks-process-rise linear both;
+      animation-timeline: view();
+      animation-range: entry 5% cover 25%;
+    }
+    @keyframes ks-process-rise {
+      from { opacity: 0; transform: translateY(28px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+}
+
+/* Mobile : passage timeline verticale */
+@media (max-width: 900px) {
+  .ks-process__timeline {
+    grid-template-columns: 1fr;
+    gap: clamp(36px, 6vw, 56px);
+    padding-left: clamp(32px, 6vw, 48px);
+  }
+  .ks-process__timeline::before {
+    top: 0;
+    bottom: 0;
+    left: clamp(16px, 3vw, 24px);
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(180deg, transparent 0%, rgba(184, 164, 114, 0.45) 6%, rgba(184, 164, 114, 0.45) 94%, transparent 100%);
+  }
+  .ks-process__step {
+    padding-top: 0;
+    padding-left: clamp(36px, 5vw, 56px);
+    text-align: left;
+  }
+  .ks-process__step::before {
+    top: clamp(8px, 1.5vw, 16px);
+    left: clamp(-22px, -3.5vw, -28px);
+    transform: none;
+  }
+  .ks-process__step:hover::before {
+    transform: scale(1.4);
+  }
+  .ks-process__text {
+    padding: 0;
+  }
+}
+
+/* T84 — Override .ks-section p {color:gray-700} pour section dark Défi (lisibilité PERÇUE) */
+.ks-section.ks-defi p,
+.ks-section.ks-defi li,
+.ks-section.ks-defi .ks-defi__intro,
+.ks-section.ks-defi .ks-defi__caption {
+  color: var(--ks-white);
+}
+
+.ks-section.ks-defi .ks-defi__intro strong {
+  color: var(--ks-gold-500);
+}
+
+/* === T80 — Section "Défi 2026" Bento cinématique (Awwwards mai 2026 100%) === */
+.ks-defi {
+  background: linear-gradient(180deg, var(--ks-navy-900) 0%, var(--ks-navy-700) 100%);
+  color: var(--ks-white);
+  padding: clamp(80px, 10vw, 140px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* WCAG AAA fix : eyebrow gold-500 sur navy = 7.42:1 (vs gold-700 4.37:1 ÉCHEC) */
+.ks-defi .ks-eyebrow,
+.ks-section--dark .ks-eyebrow {
+  color: var(--ks-gold-500);
+}
+
+.ks-defi::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -15%;
+  width: 60%;
+  height: 80%;
+  background: radial-gradient(ellipse at center, rgba(184, 164, 114, 0.12) 0%, transparent 65%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ks-defi__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(20px, 2vw, 28px);
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 980px) {
+  .ks-defi__grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas:
+      "lead   filiales compagnons"
+      "lead   secteurs signature";
+  }
+  .ks-defi__lead       { grid-area: lead; }
+  .ks-defi__kpi--filiales   { grid-area: filiales; }
+  .ks-defi__kpi--compagnons { grid-area: compagnons; }
+  .ks-defi__kpi--secteurs   { grid-area: secteurs; }
+  .ks-defi__signature  { grid-area: signature; }
+}
+
+.ks-defi__lead {
+  padding: clamp(32px, 4vw, 56px);
+  background: linear-gradient(160deg, rgba(26, 40, 64, 0.92) 0%, rgba(10, 22, 40, 0.85) 100%);
+  border: 1px solid rgba(184, 164, 114, 0.28);
+  border-radius: var(--ks-radius-lg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ks-defi__title {
+  font-family: var(--ks-font-display);
+  font-size: clamp(2rem, 3.4vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: -0.025em;
+  color: var(--ks-white);
+  margin: 0 0 clamp(1rem, 1.6vw, 1.5rem);
+  text-wrap: balance;
+}
+
+.ks-defi__intro {
+  font-family: var(--ks-font-body);
+  font-size: clamp(1.125rem, 1.35vw, 1.3125rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: var(--ks-white);
+  margin: 0 0 clamp(1.25rem, 1.8vw, 1.75rem);
+}
+
+.ks-defi__intro strong {
+  color: var(--ks-gold-500);
+  font-weight: 700;
+}
+
+.ks-defi__points {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ks-defi__points li {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  font-size: clamp(1rem, 1.1vw, 1.0625rem);
+  font-weight: 500;
+  color: var(--ks-white);
+  line-height: 1.55;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(184, 164, 114, 0.18);
+}
+
+.ks-defi__points li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.ks-defi__bullet {
+  color: var(--ks-gold-500);
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-size: 1.15em;
+}
+
+/* Cartes KPI fond opaque navy + accent gold (lisibilité AAA WCAG perçue) */
+.ks-defi__kpi {
+  padding: clamp(24px, 2.6vw, 36px);
+  background: linear-gradient(160deg, rgba(26, 40, 64, 0.95) 0%, rgba(10, 22, 40, 0.92) 100%);
+  border: 1px solid rgba(184, 164, 114, 0.32);
+  border-radius: var(--ks-radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+  transition: transform 600ms cubic-bezier(0.16, 1, 0.3, 1), border-color 400ms ease, box-shadow 400ms ease;
+}
+
+.ks-defi__kpi:hover {
+  transform: translateY(-4px);
+  border-color: rgba(184, 164, 114, 0.5);
+  box-shadow: 0 18px 48px rgba(184, 164, 114, 0.18);
+}
+
+.ks-defi__num {
+  font-family: var(--ks-font-display);
+  font-size: clamp(3.5rem, 5.5vw, 5.75rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ks-gold-500);
+  letter-spacing: -0.04em;
+  margin: 0.5rem 0 0.75rem;
+  display: block;
+  filter: drop-shadow(0 4px 14px rgba(184, 164, 114, 0.18));
+}
+
+.ks-defi__num sup {
+  font-size: 0.4em;
+  vertical-align: super;
+  font-weight: 700;
+  margin-left: 0.05em;
+  color: var(--ks-gold-500);
+}
+
+.ks-defi__caption {
+  font-family: var(--ks-font-body);
+  font-size: 0.9375rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--ks-white);
+  margin: 0;
+  max-width: 24ch;
+}
+
+/* Tuile filiales — barres verticales graphique */
+.ks-defi__bars {
+  display: flex;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 1.25rem;
+  width: 100%;
+  height: 32px;
+  align-items: flex-end;
+}
+
+.ks-defi__bars span {
+  flex: 1;
+  background: linear-gradient(180deg, var(--ks-gold-500) 0%, var(--ks-gold-700) 100%);
+  border-radius: 2px;
+  transform-origin: bottom;
+  animation: ks-bars-rise 1.2s ease-out backwards;
+}
+
+.ks-defi__bars span:nth-child(1) { height: 30%; animation-delay: 0.1s; }
+.ks-defi__bars span:nth-child(2) { height: 50%; animation-delay: 0.2s; }
+.ks-defi__bars span:nth-child(3) { height: 75%; animation-delay: 0.3s; }
+.ks-defi__bars span:nth-child(4) { height: 60%; animation-delay: 0.4s; }
+.ks-defi__bars span:nth-child(5) { height: 90%; animation-delay: 0.5s; }
+.ks-defi__bars span:nth-child(6) { height: 100%; animation-delay: 0.6s; }
+
+@keyframes ks-bars-rise {
+  from { transform: scaleY(0); opacity: 0; }
+  to   { transform: scaleY(1); opacity: 1; }
+}
+
+/* Tuile compagnons — gauge SVG semi-circulaire */
+.ks-defi__gauge {
+  width: 100%;
+  max-width: 140px;
+  height: auto;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.ks-defi__gauge [data-gauge-fill] {
+  transition: stroke-dashoffset 1.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-defi.is-revealed .ks-defi__gauge [data-gauge-fill] {
+  stroke-dashoffset: 24;  /* ~85% rempli */
+}
+
+/* Signature Ali */
+.ks-defi__signature {
+  padding: clamp(24px, 2.6vw, 36px);
+  background: linear-gradient(135deg, rgba(184, 164, 114, 0.18) 0%, rgba(184, 164, 114, 0.06) 100%);
+  border: 1px solid rgba(184, 164, 114, 0.4);
+  border-radius: var(--ks-radius-md);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.ks-defi__sig-name {
+  font-family: 'Caveat', 'Akzidenz Grotesk', sans-serif;
+  font-size: clamp(2.25rem, 3vw, 3rem);
+  font-weight: 700;
+  color: var(--ks-gold-500);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  margin: 0 0 0.5rem;
+  font-style: normal;
+}
+
+.ks-defi__sig-role {
+  font-family: var(--ks-font-body);
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.85);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin: 0 0 1rem;
+}
+
+.ks-defi__sig-since {
+  font-family: var(--ks-font-body);
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(184, 164, 114, 0.18);
+}
+
+.ks-defi__sig-since strong {
+  color: var(--ks-gold-500);
+  font-weight: 700;
+}
+
+/* Apparition cinématique au scroll (intersection observer flag .is-revealed) */
+.ks-defi:not(.is-revealed) .ks-defi__kpi,
+.ks-defi:not(.is-revealed) .ks-defi__signature {
+  opacity: 0;
+  transform: translateY(28px);
+}
+
+.ks-defi__kpi,
+.ks-defi__signature {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 700ms cubic-bezier(0.16, 1, 0.3, 1), transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.ks-defi.is-revealed .ks-defi__kpi--filiales   { transition-delay: 100ms; }
+.ks-defi.is-revealed .ks-defi__kpi--compagnons { transition-delay: 200ms; }
+.ks-defi.is-revealed .ks-defi__kpi--secteurs   { transition-delay: 300ms; }
+.ks-defi.is-revealed .ks-defi__signature       { transition-delay: 400ms; }
+
+/* Override Caveat — chargée hero, on déclare ici aussi pour signature */
+@font-face {
+  font-family: 'Caveat';
+  src: url('/assets/fonts/Caveat-Regular.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@media (max-width: 720px) {
+  .ks-defi__num {
+    font-size: clamp(3rem, 14vw, 4.5rem);
+  }
+}
+
+/* === T83 — Skip link WCAG 2.4.1 + visually-hidden utility + focus-visible AAA === */
+.ks-skip-link {
+  position: absolute;
+  top: -100px;
+  left: 16px;
+  z-index: 100000;
+  background: var(--ks-navy-900);
+  color: var(--ks-gold-500);
+  padding: 14px 24px;
+  border: 2px solid var(--ks-gold-500);
+  border-radius: var(--ks-radius-sm);
+  font-family: var(--ks-font-body);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  transition: top 200ms ease;
+}
+
+.ks-skip-link:focus,
+.ks-skip-link:focus-visible {
+  top: 16px;
+  outline: 3px solid var(--ks-gold-500);
+  outline-offset: 2px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* Logo target-size 24×24 minimum (WCAG 2.5.8) — padding zone clic */
+.main-header .logo a,
+.sticky-header .logo a,
+footer .logo a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 8px 0;
+}
+
+/* Focus visible AAA sur tous éléments interactifs (WCAG 2.4.7 + 2.4.13) */
+.main-header a:focus-visible,
+.main-header button:focus-visible,
+.main-menu .navigation a:focus-visible,
+footer a:focus-visible,
+footer button:focus-visible {
+  outline: 3px solid var(--ks-gold-500);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* === Override boutons InTime existants pour cohérence === */
+/* T70+T82 — Bouton charte stricte : navy + texte blanc 18.13:1 AAA (élimine orange Construz) */
+.theme-btn.btn-style-ten {
+  background-color: var(--ks-navy-900) !important;
+}
+
+.theme-btn.btn-style-ten:before {
+  background: var(--ks-gold-500) !important;
+}
+
+.theme-btn.btn-style-ten .text-one,
+.theme-btn.btn-style-ten .text-two,
+.theme-btn.btn-style-ten .btn-wrap {
+  color: var(--ks-white) !important;
+}
+
+.theme-btn.btn-style-ten:hover {
+  background-color: var(--ks-gold-500) !important;
+}
+
+.theme-btn.btn-style-ten:hover .text-one,
+.theme-btn.btn-style-ten:hover .text-two,
+.theme-btn.btn-style-ten:hover .btn-wrap {
+  color: var(--ks-navy-900) !important;
+}
+
+/* T82 — Footer texte sur fond foncé (charte navy/gold) */
+footer .news-widget_title a,
+footer h4,
+footer h6,
+footer .news-widget_title,
+footer .links li a,
+footer .links a {
+  color: var(--ks-white) !important;
+}
+
+footer p,
+footer .copyright,
+footer .news-widget_date,
+footer .footer-text {
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+
+footer h3, footer h4, footer h5, footer h6 {
+  color: var(--ks-gold-500) !important;
+}
+
+footer a:hover {
+  color: var(--ks-gold-500) !important;
+}
+
+/* Bouton newsletter S'inscrire — élimination orange Construz, navy charte */
+footer button[type="submit"],
+footer .newsletter-form button,
+.newsletter button[type="submit"] {
+  background: var(--ks-navy-900) !important;
+  color: var(--ks-white) !important;
+  border-color: var(--ks-gold-500) !important;
+}
+
+footer button[type="submit"]:hover,
+footer .newsletter-form button:hover,
+.newsletter button[type="submit"]:hover {
+  background: var(--ks-gold-500) !important;
+  color: var(--ks-navy-900) !important;
+}
+
+/* T70 — Focus visible clavier (WCAG 2.4.7 + 2.4.13 nouveau WCAG 2.2) */
+.theme-btn.btn-style-ten:focus-visible,
+.ks-cta-primary:focus-visible,
+.ks-cta-secondary:focus-visible {
+  outline: 3px solid var(--ks-gold-500);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 6px rgba(184, 164, 114, 0.25);
+}
+
+/* === T69 — Header transparent + liens blancs sur pages avec hero foncé (WCAG AAA fix) === */
+body:has(.ks-page-hero) .main-header .header-upper .navigation > li > a,
+body:has(.ks-page-hero) .main-header .header-upper .navbar-toggler,
+body:has(.ks-page-hero) .main-header .header-upper .mobile-nav-toggler {
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+body:has(.ks-page-hero) .main-header .header-upper .navigation > li > a:hover,
+body:has(.ks-page-hero) .main-header .header-upper .navigation > li.dropdown:hover > a {
+  color: var(--ks-gold-500);
+}
+
+body:has(.ks-page-hero) .main-header .header-upper .navigation > li.dropdown > ul a {
+  color: var(--ks-navy-900);
+  text-shadow: none;
+}
+
+body:has(.ks-page-hero) .main-header.fixed-header .header-upper .navigation > li > a,
+body:has(.ks-page-hero) .main-header.fixed-header .header-upper .navbar-toggler,
+body:has(.ks-page-hero) .main-header.fixed-header .header-upper .mobile-nav-toggler {
+  color: var(--ks-navy-900);
+  text-shadow: none;
+}
+
+body:has(.ks-page-hero) .sticky-header .navigation > li > a {
+  color: var(--ks-navy-900);
+  text-shadow: none;
+}
+
+/* ============================================================
+   Section "Une approche structurée à long terme" (T87 2026-05-10)
+   Bento 2 zones : narrative left + 2 circular progress rings right
+   Continuité visuelle home : Akzidenz Grotesk + navy/gold AAA
+   ============================================================ */
+
+.ks-sr-only {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ============================================================
+   Section « Pourquoi Kalystrat » — T93 (Bento asymétrique mai 2026)
+   Numéro section XXL gold + border-top + 4 cards (1 hero + 3 std)
+   Séparation visible mais sobre (ton-sur-ton + accent gold)
+   ============================================================ */
+.ks-pourquoi {
+  position: relative;
+  background: linear-gradient(180deg, #FFFFFF 0%, var(--ks-white-50, #FAFAF8) 100%);
+  border-top: 2px solid var(--ks-gold-500);
+  padding-block: clamp(4rem, 8vw, 6.5rem);
+}
+
+.ks-pourquoi::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: clamp(120px, 20vw, 260px);
+  height: 2px;
+  background: var(--ks-gold-700);
+  transform: translateX(-50%);
+}
+
+.ks-pourquoi__intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+@media (max-width: 720px) {
+  .ks-pourquoi__intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+.ks-pourquoi__num {
+  font-family: var(--ks-font-display);
+  font-size: clamp(5rem, 10vw, 9rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, var(--ks-gold-500) 0%, var(--ks-gold-700) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--ks-gold-700);
+  display: inline-block;
+}
+
+.ks-pourquoi__heading .ks-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ks-pourquoi__heading .ks-h2 {
+  margin: 0 0 1rem;
+}
+
+.ks-pourquoi__grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.ks-pourquoi__card {
+  position: relative;
+  background: #fff;
+  padding: clamp(1.5rem, 3vw, 2.25rem);
+  border-radius: 4px;
+  border-left: 3px solid var(--ks-gold-500);
+  box-shadow: 0 10px 28px -16px rgba(10, 22, 40, 0.18);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.ks-pourquoi__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 36px -16px rgba(10, 22, 40, 0.28);
+}
+
+.ks-pourquoi__card--hero {
+  grid-column: 1;
+  grid-row: 1 / 3;
+  background: linear-gradient(180deg, #fff 0%, #FCFAF5 100%);
+  border-left-width: 4px;
+}
+
+.ks-pourquoi__card--wide {
+  grid-column: 2 / 4;
+  grid-row: 2;
+}
+
+@media (max-width: 960px) {
+  .ks-pourquoi__grid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+  }
+  .ks-pourquoi__card--hero {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+  .ks-pourquoi__card--wide {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ks-pourquoi__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ks-pourquoi__num-card {
+  font-family: var(--ks-font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--ks-gold-aaa);
+  margin-bottom: 0.75rem;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.ks-pourquoi__card--hero .ks-pourquoi__num-card {
+  font-size: 2.75rem;
+}
+
+.ks-pourquoi__card .ks-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ks-pourquoi__card .ks-card__title {
+  margin: 0 0 0.75rem;
+}
+
+.ks-pourquoi__card .ks-card__text {
+  margin: 0;
+}
+
+.ks-pourquoi__card .ks-card__text a {
+  color: var(--ks-gold-aaa);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ks-pourquoi__card .ks-card__text a:hover {
+  color: var(--ks-navy-900);
+}
+
+/* ============================================================
+   Scroll-triggered reveal — T92 (sobre, tendance mai 2026)
+   IntersectionObserver + classes minimales : 14px / 550ms / 1×
+   FOUC-safe : classes appliquées par JS, état défaut visible
+   ============================================================ */
+.ks-reveal-init {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.55s cubic-bezier(0.25, 0.1, 0.25, 1),
+              transform 0.55s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: opacity, transform;
+}
+
+.ks-reveal-show {
+  opacity: 1;
+  transform: translateY(0);
+  will-change: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-reveal-init,
+  .ks-reveal-show {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.ks-approche {
+  position: relative;
+  background: var(--ks-white-50, #FAFAF8);
+  overflow: hidden;
+}
+
+.ks-approche::before {
+  content: "";
+  position: absolute;
+  top: 0; right: 0;
+  width: clamp(120px, 18vw, 240px);
+  height: 4px;
+  background: linear-gradient(90deg, transparent, var(--ks-gold-500));
+}
+
+.ks-approche__grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .ks-approche__grid {
+    grid-template-columns: 1fr;
+    gap: clamp(2rem, 6vw, 3rem);
+  }
+}
+
+/* Narrative left */
+.ks-approche__narrative {
+  position: relative;
+  padding-left: clamp(1rem, 2.5vw, 2rem);
+  border-left: 3px solid var(--ks-gold-500);
+}
+
+.ks-approche__title {
+  margin: 0.75rem 0 1.5rem !important;
+  color: var(--ks-navy-900);
+}
+
+.ks-section.ks-approche .ks-approche__lead {
+  color: var(--ks-navy-900);
+  opacity: 0.85;
+}
+
+.ks-approche__lead + .ks-approche__lead {
+  margin-top: 1rem;
+}
+
+/* Triade expertise (T89 — remplace timeline horizon) */
+.ks-approche__expertise {
+  margin-top: 2.25rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(10, 22, 40, 0.12);
+}
+
+.ks-approche__expertise-label {
+  display: block;
+  font-family: var(--ks-font-display);
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ks-gold-aaa);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+}
+
+.ks-approche__expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+
+@media (max-width: 600px) {
+  .ks-approche__expertise-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ks-approche__expertise-ancre {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-family: var(--ks-font-display);
+  font-size: 0.875rem;
+  color: var(--ks-navy-900);
+  padding: 0.65rem 0.85rem;
+  background: #fff;
+  border-left: 3px solid var(--ks-gold-500);
+  border-radius: 0 2px 2px 0;
+  line-height: 1.3;
+}
+
+.ks-approche__expertise-ancre strong {
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: var(--ks-gold-aaa);
+  letter-spacing: -0.02em;
+}
+
+.ks-approche__expertise-ancre strong sup {
+  font-size: 0.55em;
+  color: var(--ks-gold-500);
+  font-weight: 700;
+}
+
+/* Stats right (2 cards with ring SVG) */
+.ks-approche__stats {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.ks-approche__stat {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  padding: 1.5rem 1.75rem;
+  background: #fff;
+  border: 1px solid rgba(184, 164, 114, 0.25);
+  border-radius: 4px;
+  box-shadow: 0 10px 30px -12px rgba(10, 22, 40, 0.18);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.ks-approche__stat::before {
+  content: "";
+  position: absolute;
+  top: 0; bottom: 0; left: 0;
+  width: 4px;
+  background: linear-gradient(180deg, var(--ks-gold-500), var(--ks-gold-700));
+}
+
+.ks-approche__stat:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px -12px rgba(10, 22, 40, 0.25);
+}
+
+@media (max-width: 480px) {
+  .ks-approche__stat {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    padding: 1.5rem 1.25rem;
+  }
+}
+
+.ks-approche__ring-wrap {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+}
+
+.ks-approche__ring {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: rotate(-90deg);
+}
+
+.ks-approche__ring-bg {
+  fill: none;
+  stroke: rgba(184, 164, 114, 0.18);
+  stroke-width: 8;
+}
+
+.ks-approche__ring-fg {
+  fill: none;
+  stroke: var(--ks-gold-700);
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 327;
+  stroke-dashoffset: 327;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.ks-approche__ring-num {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 1.875rem;
+  color: var(--ks-gold-aaa);
+  letter-spacing: -0.02em;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.ks-approche__ring-pct {
+  font-size: 1.125rem;
+  margin-left: 2px;
+  color: var(--ks-gold-aaa);
+  align-self: center;
+}
+
+.ks-approche__stat-meta .ks-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ks-approche__stat-label {
+  margin: 0;
+  font-family: var(--ks-font-body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ks-navy-900);
+  opacity: 0.85;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-approche__ring-fg {
+    transition: none;
+  }
+  .ks-approche__stat {
+    transition: none;
+  }
+}
+

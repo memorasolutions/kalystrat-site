@@ -40,25 +40,22 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1 style="max-width:900px">{{ $article['titre'] }}</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('blog.index') }}">Blog</a></li>
             <li>{{ $article['categorie'] }}</li>
         </ul>
+        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $article['categorie'] }}</span>
+        <h1>{{ $article['titre'] }}</h1>
+        <p class="ks-page-hero__subtitle">{{ \Carbon\Carbon::parse($article['date'])->locale('fr_CA')->isoFormat('LL') }} &middot; Lecture estimée 6 à 9 minutes</p>
     </div>
-</section>
+</header>
 
-<section class="ks-content-section" style="padding:60px 0">
-    <div class="auto-container" style="max-width:820px">
-        <div style="margin-bottom:25px;color:#888;font-size:14px">
-            <span>{{ \Carbon\Carbon::parse($article['date'])->locale('fr_CA')->isoFormat('LL') }}</span>
-            <span style="margin:0 10px">·</span>
-            <span>{{ $article['categorie'] }}</span>
-        </div>
-        <article>
+<section class="ks-section">
+    <div class="ks-container" style="max-width:780px">
+        <article class="ks-article-content" style="font-family:var(--ks-font-body);font-size:var(--ks-body-size);line-height:var(--ks-line-height);color:var(--ks-gray-700)">
             @php $articleContent = 'frontend::partials.blog-content.' . $slug; @endphp
             @if(view()->exists($articleContent))
                 @include($articleContent)
@@ -67,22 +64,31 @@
     </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-    <div class="auto-container">
-        <h2 style="text-align:center;margin-bottom:40px">Autres articles</h2>
-        <div class="row clearfix">
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Continuer la lecture</span>
+            <h2 class="ks-h2">Autres articles</h2>
+        </div>
+        <div class="ks-bento ks-bento--3col">
             @php $other = collect(\Modules\Frontend\Http\Controllers\PageController::ARTICLES)->except($slug)->take(3); @endphp
             @foreach($other as $oslug => $a)
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="background:#fff;padding:25px;border-radius:8px;margin-bottom:20px">
-                    <div style="color:#8F3F00;font-size:13px;font-weight:600;text-transform:uppercase;margin-bottom:10px">{{ $a['categorie'] }}</div>
-                    <h4><a href="{{ route('blog.show', $oslug) }}">{{ $a['titre'] }}</a></h4>
-                    <p style="margin-top:12px;color:#555">{{ $a['extrait'] }}</p>
-                    <div style="margin-top:18px"><a href="{{ route('blog.show', $oslug) }}" class="theme-btn btn-style-ten"><span class="text-one">Lire l’article</span><span class="text-two">Lire</span></a></div>
-                </div>
-            </div>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">{{ $a['categorie'] }}</span>
+                <h3 class="ks-card__title"><a href="{{ route('blog.show', $oslug) }}">{{ $a['titre'] }}</a></h3>
+                <p class="ks-card__text">{{ $a['extrait'] }}</p>
+                <div class="ks-card__cta"><a href="{{ route('blog.show', $oslug) }}" class="ks-cta-secondary">Lire l’article</a></div>
+            </article>
             @endforeach
         </div>
+    </div>
+</section>
+
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Prêt à passer à l’action&nbsp;?</h2>
+        <p>L’équipe Kalystrat évalue votre projet et propose une stratégie adaptée à vos contraintes budgétaires et réglementaires.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

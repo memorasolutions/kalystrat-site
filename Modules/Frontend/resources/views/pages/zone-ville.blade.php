@@ -19,7 +19,7 @@ $z = $zones[$ville];
 @section('title', 'Construction à ' . $z['nom'] . ' | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Services de construction à {{ $z['nom'] }} par Kalystrat. {{ $z['specialites'] }}. Holding québécois à intégration verticale, six filiales spécialisées.">
+<meta name="description" content="Services de construction à {{ $z['nom'] }} par Kalystrat. {{ Str::limit($z['specialites'], 110) }}. Holding québécois à intégration verticale.">
 <link rel="canonical" href="{{ url('/zones-desservies/' . $ville) }}">
 <meta property="og:title" content="Construction Kalystrat à {{ $z['nom'] }}">
 @endpush
@@ -48,53 +48,65 @@ $z = $zones[$ville];
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Construction à {{ $z['nom'] }}</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('zones.index') }}">Zones desservies</a></li>
             <li>{{ $z['nom'] }}</li>
         </ul>
+        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $z['pop'] }} habitants</span>
+        <h1>Construction à {{ $z['nom'] }}</h1>
+        <p class="ks-page-hero__subtitle">{{ $z['specialites'] }}.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-8 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">{{ $z['pop'] }} habitants</span>
-                    <h2>Kalystrat à {{ $z['nom'] }}</h2>
-                </div>
-                <div class="text">
-                    <p>Nos six filiales spécialisées interviennent sur les chantiers de la région de {{ $z['nom'] }}, couvrant tous les types de projets : {{ $z['specialites'] }}.</p>
-                    <p>Que vous soyez un particulier qui souhaite rénover, un promoteur immobilier, un gestionnaire commercial ou une organisation publique, notre équipe locale connaît les particularités du marché et de la réglementation municipale.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 content-column">
-                <div class="inner-column" style="background:#f7f7f7;padding:25px;border-radius:8px">
-                    <h4>Filiales actives</h4>
-                    <ul style="list-style:none;padding:0;margin-top:15px">
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--2col" style="align-items:start">
+            <article>
+                <span class="ks-eyebrow">Présence locale</span>
+                <h2 class="ks-h2" style="font-size:clamp(1.75rem, 3vw, 2.5rem)">Kalystrat à {{ $z['nom'] }}</h2>
+                <p class="ks-lead">Nos six filiales spécialisées interviennent sur les chantiers de la région de {{ $z['nom'] }}, couvrant tous les types de projets&nbsp;: {{ $z['specialites'] }}.</p>
+                <p class="ks-lead">Que vous soyez un particulier qui souhaite rénover, un promoteur immobilier, un gestionnaire commercial ou une organisation publique, notre équipe locale connaît les particularités du marché et de la réglementation municipale.</p>
+            </article>
+
+            <aside style="display:flex;flex-direction:column;gap:20px;position:sticky;top:100px">
+                <article class="ks-card ks-card--accent-gold">
+                    <span class="ks-eyebrow">Filiales actives</span>
+                    <h3 class="ks-card__title" style="font-size:1.25rem">Six métiers mobilisés</h3>
+                    <ul style="list-style:none;padding:0;margin:1rem 0 0">
                         @foreach(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES as $slug => $f)
-                        <li style="padding:8px 0;border-bottom:1px solid #ddd"><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></li>
+                        <li style="padding:10px 0;border-bottom:1px solid var(--ks-gray-300);font-weight:500"><a href="{{ route('filiale', $slug) }}" style="color:var(--ks-navy-900);text-decoration:none">{{ $f['nom_court'] }}</a></li>
                         @endforeach
                     </ul>
-                </div>
-            </div>
+                </article>
+
+                <article class="ks-card ks-card--dark">
+                    <span class="ks-eyebrow">Soumission</span>
+                    <h3 class="ks-card__title" style="font-size:1.25rem">Projet à {{ $z['nom'] }}&nbsp;?</h3>
+                    <p class="ks-card__text">Visite, prise de mesures et soumission détaillée sous 5 à 10 jours ouvrables.</p>
+                    <div class="ks-card__cta"><a href="{{ route('contact') }}" class="ks-cta-secondary" style="color:var(--ks-white);border-color:var(--ks-gold-500)">Nous contacter</a></div>
+                </article>
+            </aside>
         </div>
     </div>
 </section>
 
 @php $zoneContentPath = 'frontend::partials.zone-content.' . $ville; @endphp
 @if(view()->exists($zoneContentPath))
-    @include($zoneContentPath)
+<section class="ks-section ks-section--alt">
+    <div class="ks-container" style="max-width:880px">
+        @include($zoneContentPath)
+    </div>
+</section>
 @endif
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un projet à {{ $z['nom'] }} ?</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Soumission</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Un projet à {{ $z['nom'] }}&nbsp;?</h2>
+        <p>Discutez avec un chargé de projet local pour évaluer votre dossier dans son contexte municipal et réglementaire.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

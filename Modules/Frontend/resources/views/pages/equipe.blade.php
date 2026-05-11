@@ -4,8 +4,8 @@
 
 @php
 $membres = [
-    'ali-salomon' => ['nom' => 'Ali Salomon', 'titre' => 'Président et Directeur Général', 'role' => 'Fondateur', 'desc' => "Visionnaire et entrepreneur chevronné, Ali Salomon a conçu le modèle d'affaires intégré sur lequel repose Gestion Kalystrat Inc. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe."],
-    'jacques-jobidon' => ['nom' => 'Jacques Jobidon', 'titre' => 'Conseiller — Droit de la construction', 'role' => 'Conseil consultatif', 'desc' => "Expert reconnu en droit de la construction au Québec, Jacques Jobidon apporte son expertise sur les contrats, la gestion des litiges et la conformité réglementaire des chantiers du groupe."],
+    'ali-salomon' => ['nom' => 'Ali Salomon', 'titre' => 'Président et Directeur Général', 'role' => 'Fondateur', 'desc' => "Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d'affaires intégré de Gestion Kalystrat Inc. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe."],
+    'jacques-jobidon' => ['nom' => 'Jacques Jobidon', 'titre' => 'Conseiller — Droit de la construction', 'role' => 'Conseil consultatif', 'desc' => "Avocat reconnu en droit de la construction au Québec, Jacques Jobidon apporte son expertise sur les contrats, la gestion des litiges et la conformité réglementaire des chantiers du groupe."],
     'perry-wong' => ['nom' => 'Perry Wong', 'titre' => 'Conseiller — Immobilier québécois', 'role' => 'Conseil consultatif', 'desc' => "Spécialiste en immobilier québécois, Perry Wong conseille Kalystrat Immobilier sur les acquisitions de terrains, les analyses de marché et le développement de projets résidentiels et locatifs."],
 ];
 @endphp
@@ -41,171 +41,138 @@ echo json_encode([
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Équipe et gouvernance</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Équipe</li>
         </ul>
+        <h1>Équipe et gouvernance</h1>
+        <p class="ks-page-hero__subtitle">Une présidence forte, six directions de filiales, un conseil consultatif d'experts indépendants. Gouvernance centralisée, exécution décentralisée.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Direction et conseil</span>
-                    <h2>Une gouvernance centralisée, une exécution décentralisée</h2>
-                </div>
-                <div class="text">
-                    <p>Gestion Kalystrat Inc. est dirigée par son fondateur Ali Salomon, Président et Directeur Général, qui supervise l’ensemble de la stratégie et des opérations du groupe. Chaque filiale est pilotée par un directeur dédié relevant directement de la présidence. Cette structure permet une vision unifiée à l’échelle du holding et une exécution rigoureuse au niveau de chaque métier. En complément, un conseil consultatif d’experts indépendants éclaire les décisions stratégiques.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Direction</span>
+            <h2 class="ks-h2">Présidence et direction des filiales</h2>
+            <p class="ks-lead">Le fondateur Ali Salomon dirige le groupe et chaque direction de filiale lui relève directement. Cette structure permet une vision unifiée à l'échelle du holding et une exécution rigoureuse au niveau de chaque métier.</p>
         </div>
-    </div>
-</section>
-
-<section class="ks-content-section" style="padding:60px 0;background-color:#f7f7f7">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Direction</span>
-            <h2>Présidence et direction des filiales</h2>
-        </div>
-        <div class="row clearfix">
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px">
-                    <div class="content">
-                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Fondateur</span>
-                        <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'ali-salomon') }}">Ali Salomon</a></h4>
-                        <span style="color:#666">Président et Directeur Général</span>
-                        <div style="margin-top:15px;line-height:1.6">Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d’affaires intégré de Gestion Kalystrat Inc. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</div>
-                        <div style="margin-top:20px"><a href="{{ route('equipe.membre', 'ali-salomon') }}" class="theme-btn btn-style-ten"><span class="text-one">Profil complet</span><span class="text-two">Profil</span></a></div>
-                    </div>
-                </div>
-            </div>
+        <div class="ks-bento">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Fondateur</span>
+                <h3 class="ks-card__title"><a href="{{ route('equipe.membre', 'ali-salomon') }}">Ali Salomon</a></h3>
+                <div class="ks-card__meta">Président et Directeur Général</div>
+                <p class="ks-card__text">Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d'affaires intégré de Gestion Kalystrat Inc. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</p>
+                <div class="ks-card__cta"><a href="{{ route('equipe.membre', 'ali-salomon') }}" class="ks-cta-secondary">Profil complet</a></div>
+            </article>
             @foreach(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES as $fslug => $f)
-            <div class="team-block col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px">
-                    <div class="content">
-                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Direction de filiale</span>
-                        <h4 style="margin:8px 0">Directeur</h4>
-                        <span style="color:#666">{{ $f['nom_court'] }}</span>
-                        <div style="margin-top:15px;line-height:1.6">Pilote opérationnel de la filiale, responsable de l’exécution, de la qualité et du respect des échéanciers. Relève directement de la présidence. <em>Nomination à confirmer.</em></div>
-                        <div style="margin-top:20px"><a href="{{ route('filiale', $fslug) }}" class="theme-btn btn-style-ten"><span class="text-one">Voir la filiale</span><span class="text-two">Filiale</span></a></div>
-                    </div>
-                </div>
-            </div>
+            <article class="ks-card">
+                <span class="ks-eyebrow">Direction de filiale</span>
+                <h3 class="ks-card__title">Directeur</h3>
+                <div class="ks-card__meta" style="color:var(--ks-gray-700);text-transform:none;letter-spacing:0;font-weight:500">{{ $f['nom_court'] }}</div>
+                <p class="ks-card__text">Pilote opérationnel de la filiale, responsable de l'exécution, de la qualité et du respect des échéanciers. Relève directement de la présidence. <em>Nomination à confirmer.</em></p>
+                <div class="ks-card__cta"><a href="{{ route('filiale', $fslug) }}" class="ks-cta-secondary">Voir la filiale</a></div>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Conseil consultatif</span>
-            <h2>Cinq sièges, deux conseillers nommés</h2>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Conseil consultatif</span>
+            <h2 class="ks-h2">Cinq sièges, deux conseillers nommés</h2>
+            <p class="ks-lead">Le conseil réunira cinq profils complémentaires&nbsp;: construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux sièges sont actuellement pourvus.</p>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif de Kalystrat est conçu pour réunir cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, et immobilier. Deux sièges sont actuellement pourvus, trois autres sont en cours de recrutement.</p>
-            </div>
-
-            <div class="team-block col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <div class="content">
-                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Droit des affaires</span>
-                        <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}">Jacques Jobidon</a></h4>
-                        <span style="color:#666">Avocat spécialisé en droit de la construction et des sociétés</span>
-                        <div style="margin-top:15px;line-height:1.6">Apporte son expertise sur les contrats, les litiges et la conformité réglementaire des chantiers du groupe.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="team-block col-lg-6 col-md-12 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <div class="content">
-                        <span style="font-size:13px;color:#8F3F00;font-weight:600;text-transform:uppercase;letter-spacing:1px">Conseiller - Immobilier</span>
-                        <h4 style="margin:8px 0"><a href="{{ route('equipe.membre', 'perry-wong') }}">Perry Wong</a></h4>
-                        <span style="color:#666">Spécialiste du marché immobilier québécois</span>
-                        <div style="margin-top:15px;line-height:1.6">Conseille Kalystrat Immobilier sur les acquisitions, les analyses de marché et le développement de projets résidentiels et locatifs.</div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-lg-12" style="margin-top:30px">
-                <h4>Sièges en cours de recrutement</h4>
-                <div class="row clearfix" style="margin-top:15px">
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
-                            <strong>Construction et ingénierie</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : expert sénior de l’industrie de la construction au Québec.</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
-                            <strong>Financement et investissement</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : professionnel en financement d’entreprise et structuration financière.</span>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:25px;background:#f7f7f7;border-radius:8px;margin-bottom:15px">
-                            <strong>Ressources humaines</strong><br>
-                            <span style="color:#666;font-size:14px">Profil recherché : spécialiste du recrutement et de la gestion de la main-d’œuvre en construction.</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--2col">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Conseiller — Droit des affaires</span>
+                <h3 class="ks-card__title"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}">Jacques Jobidon</a></h3>
+                <div class="ks-card__meta">Avocat, droit de la construction et des sociétés</div>
+                <p class="ks-card__text">Apporte son expertise sur les contrats, les litiges et la conformité réglementaire des chantiers du groupe (RBQ, CCQ, articles 2118, 2724 du Code civil du Québec).</p>
+                <div class="ks-card__cta"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}" class="ks-cta-secondary">Profil complet</a></div>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Conseiller — Immobilier</span>
+                <h3 class="ks-card__title"><a href="{{ route('equipe.membre', 'perry-wong') }}">Perry Wong</a></h3>
+                <div class="ks-card__meta">Spécialiste du marché immobilier québécois</div>
+                <p class="ks-card__text">Conseille Kalystrat Immobilier sur les acquisitions, les analyses de marché et le développement de projets résidentiels et locatifs dans les zones urbaines en croissance.</p>
+                <div class="ks-card__cta"><a href="{{ route('equipe.membre', 'perry-wong') }}" class="ks-cta-secondary">Profil complet</a></div>
+            </article>
         </div>
     </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Services centralisés</span>
-            <h2>Les fonctions de soutien au niveau de la holding</h2>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">À pourvoir</span>
+            <h2 class="ks-h2">Trois sièges en cours de recrutement</h2>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Comptabilité et finances</h5>
-                    <p style="margin-top:10px;color:#555">Tenue de livres, états financiers consolidés, gestion de la trésorerie, planification fiscale, budgétisation.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Ressources humaines</h5>
-                    <p style="margin-top:10px;color:#555">Recrutement de cadres, paie, avantages sociaux, santé-sécurité au travail, conformité CCQ.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Juridique</h5>
-                    <p style="margin-top:10px;color:#555">Contrats, conformité réglementaire (RBQ, CCQ), propriété intellectuelle, gestion des litiges.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Marketing</h5>
-                    <p style="margin-top:10px;color:#555">Stratégie de marque unifiée, site web, médias sociaux, publicité et relations publiques.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Technologies de l’information</h5>
-                    <p style="margin-top:10px;color:#555">Infrastructure informatique, logiciels de gestion de projet, système ERP, cybersécurité.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <div style="padding:25px;background:#fff;border-radius:8px;margin-bottom:20px">
-                    <h5>Stratégie et acquisitions</h5>
-                    <p style="margin-top:10px;color:#555">Direction stratégique du groupe, acquisitions, allocation des ressources entre filiales.</p>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--3col">
+            <article class="ks-card">
+                <div class="ks-card__meta">Profil recherché</div>
+                <h3 class="ks-card__title">Construction et ingénierie</h3>
+                <p class="ks-card__text">Expert sénior de l'industrie de la construction au Québec, idéalement avec expérience en grand chantier institutionnel ou industriel.</p>
+            </article>
+            <article class="ks-card">
+                <div class="ks-card__meta">Profil recherché</div>
+                <h3 class="ks-card__title">Financement et investissement</h3>
+                <p class="ks-card__text">Professionnel en financement d'entreprise et structuration financière, expérience holding et acquisitions un atout.</p>
+            </article>
+            <article class="ks-card">
+                <div class="ks-card__meta">Profil recherché</div>
+                <h3 class="ks-card__title">Ressources humaines</h3>
+                <p class="ks-card__text">Spécialiste du recrutement et de la gestion de la main-d'œuvre en construction, connaissance approfondie de la CCQ.</p>
+            </article>
         </div>
+    </div>
+</section>
+
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Services centralisés</span>
+            <h2 class="ks-h2">Six fonctions transverses au niveau du holding</h2>
+            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">La centralisation des fonctions de soutien au niveau de Gestion Kalystrat Inc. maximise l'efficacité et réduit les frais généraux pour chaque filiale.</p>
+        </div>
+        <div class="ks-bento">
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Comptabilité et finances</div>
+                <p class="ks-card__text">Tenue de livres, états financiers consolidés, gestion de la trésorerie, planification fiscale, budgétisation.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Ressources humaines</div>
+                <p class="ks-card__text">Recrutement de cadres, paie, avantages sociaux, santé-sécurité au travail, conformité CCQ.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Juridique</div>
+                <p class="ks-card__text">Contrats, conformité réglementaire (RBQ, CCQ), propriété intellectuelle, gestion des litiges.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Marketing</div>
+                <p class="ks-card__text">Stratégie de marque unifiée, site web, médias sociaux, publicité et relations publiques.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Technologies de l'information</div>
+                <p class="ks-card__text">Infrastructure informatique, logiciels de gestion de projet, système ERP, cybersécurité.</p>
+            </article>
+            <article class="ks-card ks-card--dark">
+                <div class="ks-card__meta">Stratégie et acquisitions</div>
+                <p class="ks-card__text">Direction stratégique du groupe, acquisitions, allocation des ressources entre filiales.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Vous voulez en savoir plus ?</h2>
+        <p>Rencontrez l'équipe et découvrez comment notre structure intégrée peut piloter votre projet.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Nous contacter</a>
     </div>
 </section>
 

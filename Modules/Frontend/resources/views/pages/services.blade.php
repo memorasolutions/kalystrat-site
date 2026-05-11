@@ -39,57 +39,44 @@ echo json_encode([
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Nos services</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Services</li>
         </ul>
+        <h1>Tous les métiers de la construction</h1>
+        <p class="ks-page-hero__subtitle">Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l'intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées.</p>
     </div>
-</section>
-
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Une chaîne complète</span>
-                    <h2>Tous les métiers de la construction sous une seule marque</h2>
-                </div>
-                <div class="text">
-                    <p>Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l’intégralité du cycle de construction. Chaque service est exécuté par une de nos six filiales spécialisées, garantissant expertise dédiée, contrôle qualité interne et coordination simplifiée pour vos projets résidentiels, commerciaux et institutionnels.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+</header>
 
 @foreach($filiales as $slug => $f)
-<section class="feature-section-four" style="padding:60px 0;{{ $loop->even ? 'background-color:#f7f7f7' : '' }}">
-    <div class="auto-container">
-        <div class="sec-title">
-            <span class="sub-title">{{ $f['specialite'] }}</span>
-            <h3><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h3>
+<section class="ks-section{{ $loop->odd ? ' ks-section--alt' : '' }}">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Filiale 0{{ $loop->iteration }} — {{ $f['specialite'] }}</span>
+            <h2 class="ks-h2"><a href="{{ route('filiale', $slug) }}" style="color:inherit;text-decoration:none">{{ $f['nom_court'] }}</a></h2>
+            <p class="ks-lead">{{ $f['tagline'] }}</p>
         </div>
-        <div class="row clearfix">
+        <div class="ks-bento ks-bento--3col">
             @foreach($f['services'] as $service)
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:15px">
-                <div style="padding:15px;background:#fff;border-left:3px solid #8F3F00">{{ $service }}</div>
-            </div>
+            <article class="ks-card ks-card--accent-gold" style="padding:20px 24px">
+                <p class="ks-card__text" style="margin:0;font-weight:500;color:var(--ks-navy-900)">{{ $service }}</p>
+            </article>
             @endforeach
         </div>
-        <div style="margin-top:25px">
-            <a href="{{ route('filiale', $slug) }}" class="theme-btn btn-style-ten"><span class="text-one">Voir la filiale {{ $f['nom_court'] }}</span><span class="text-two">Voir la filiale</span></a>
+        <div style="margin-top:32px">
+            <a href="{{ route('filiale', $slug) }}" class="ks-cta-secondary">Découvrir la filiale {{ $f['nom_court'] }}</a>
         </div>
     </div>
 </section>
 @endforeach
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un service que vous cherchez ?</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Obtenir une soumission</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Un service que vous cherchez ?</h2>
+        <p>Décrivez-nous votre projet (résidentiel, commercial, institutionnel) et obtenez une soumission détaillée sous 5 à 10 jours ouvrables.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

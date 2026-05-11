@@ -27,56 +27,63 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Projets et réalisations</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Projets</li>
         </ul>
+        <h1>Projets et réalisations</h1>
+        <p class="ks-page-hero__subtitle">Maisons custom, condominiums, bâtiments commerciaux et institutionnels&nbsp;: nos chantiers en cours et livrés par les six filiales Kalystrat.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Études de cas</span>
-                    <h2>Une sélection de nos chantiers</h2>
-                </div>
-                <div class="text">
-                    <p>Cette galerie présente quelques-uns de nos projets emblématiques : maisons custom, condominiums, bâtiments commerciaux et institutionnels. Les photos détaillées des chantiers Kalystrat seront ajoutées progressivement à mesure que les phases de construction se terminent.</p>
-                    <p style="margin-top:20px"><em>Galerie en cours de constitution. Pour visualiser des projets en cours, contactez-nous.</em></p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Études de cas</span>
+            <h2 class="ks-h2">Une sélection de nos chantiers</h2>
+            <p class="ks-lead">Cette galerie présente quelques-uns de nos projets emblématiques. Les photos détaillées seront ajoutées progressivement à mesure que les phases de construction se terminent. <em>Pour visualiser des projets en cours, contactez-nous directement.</em></p>
         </div>
     </div>
 </section>
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:60px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Bientôt</span>
-            <h2>Catégories de projets</h2>
+@php
+$categories = [
+    ['t' => 'Résidentiel haut de gamme', 'd' => "Maisons custom de 250 à 800 m², villas de prestige, propriétés de bord de fleuve. Architecture contemporaine ou classique, finition haut de gamme."],
+    ['t' => 'Multilogements', 'd' => "Condominiums urbains, immeubles locatifs 6 à 60 unités, projets intergénérationnels. Optimisation densité et viabilité financière."],
+    ['t' => 'Commercial bureaux', 'd' => "Édifices de bureaux LEED, commerces de détail, restaurants, espaces de coworking. Délais serrés et qualité d’exécution irréprochable."],
+    ['t' => 'Institutionnel scolaire', 'd' => "Écoles primaires et secondaires, pavillons collégiaux et universitaires, installations sportives. Conformité Code 2026 et standards MEQ."],
+    ['t' => 'Industriel logistique', 'd' => "Entrepôts grande surface, centres de distribution, ateliers de production. Charpente acier ou béton préfabriqué, dalles renforcées."],
+    ['t' => 'Rénovations majeures', 'd' => "Transformations de bâtiments existants, agrandissements, mise aux normes énergétiques. Diagnostic, plans, permis, exécution complète."],
+];
+@endphp
+
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Six segments d’expertise</span>
+            <h2 class="ks-h2">Catégories de projets</h2>
+            <p class="ks-lead">Chaque catégorie mobilise une combinaison spécifique de filiales Kalystrat selon les besoins du chantier.</p>
         </div>
-        <div class="row clearfix">
-            @foreach(['Résidentiel haut de gamme', 'Multilogements', 'Commercial bureaux', 'Institutionnel scolaire', 'Industriel logistique', 'Rénovations majeures'] as $cat)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;margin-bottom:20px;text-align:center">
-                    <h5>{{ $cat }}</h5>
-                    <div class="text" style="margin-top:10px;color:#888"><em>Études de cas à venir</em></div>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--3col">
+            @foreach($categories as $i => $cat)
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Segment {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <h3 class="ks-card__title">{{ $cat['t'] }}</h3>
+                <p class="ks-card__text">{{ $cat['d'] }}</p>
+                <div class="ks-card__meta" style="color:var(--ks-gray-500);text-transform:none;letter-spacing:0;font-weight:500;font-style:italic">Études de cas à venir</div>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Discutons de votre projet</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Démarrer la conversation</span><span class="text-two">Démarrer</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Discutons de votre projet</h2>
+        <p>Visite du site, prise de mesures, étude des plans et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Démarrer la conversation</a>
     </div>
 </section>
 

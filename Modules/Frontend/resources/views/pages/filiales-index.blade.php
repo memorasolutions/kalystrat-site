@@ -8,7 +8,6 @@
 <meta property="og:title" content="Six filiales Kalystrat — Construction à intégration verticale">
 <meta property="og:description" content="Six métiers, une marque : Fondations, Structure, Toiture, Finition, Immobilier, Placement.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="{{ url('/filiales') }}">
 @endpush
 
 @push('schema')
@@ -39,53 +38,50 @@ echo json_encode([
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>Nos six filiales</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>Filiales</li>
         </ul>
+        <h1>Six filiales, une marque unifiée</h1>
+        <p class="ks-page-hero__subtitle">De l'excavation aux finitions, du développement immobilier au placement de main-d'œuvre, chaque filiale détient une expertise pointue et travaille en synergie avec les autres divisions du groupe.</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">Structure du groupe</span>
-                    <h2>Six métiers, une marque unifiée</h2>
-                </div>
-                <div class="text">
-                    <p>Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l’intégralité de la chaîne de valeur en construction. De l’excavation aux finitions, du développement immobilier au placement de main-d’œuvre, chaque filiale détient une expertise pointue et travaille en synergie avec les autres divisions du groupe.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Structure du groupe</span>
+            <h2 class="ks-h2">Six métiers sous une seule signature</h2>
         </div>
+        <p class="ks-lead">Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l'intégralité de la chaîne de valeur en construction. Chaque filiale est dirigée par un directeur qui relève directement de la présidence, ce qui garantit cohérence stratégique et exécution rigoureuse.</p>
     </div>
 </section>
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:80px 0">
-    <div class="auto-container">
-        <div class="row clearfix">
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento">
             @foreach($filiales as $slug => $f)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box" style="padding:30px;background:#fff;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06);margin-bottom:30px">
-                    <h4><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h4>
-                    <div class="text" style="margin:15px 0"><strong>{{ $f['specialite'] }}</strong></div>
-                    <div class="text" style="margin-bottom:20px">{{ $f['tagline'] }}</div>
-                    <a href="{{ route('filiale', $slug) }}" class="theme-btn btn-style-ten"><span class="text-one">En savoir plus</span><span class="text-two">En savoir plus</span></a>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Filiale 0{{ $loop->iteration }}</span>
+                <h3 class="ks-card__title"><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h3>
+                <div class="ks-card__meta" style="color:var(--ks-gray-700);text-transform:none;letter-spacing:0;font-weight:500">{{ $f['specialite'] }}</div>
+                <p class="ks-card__text">{{ $f['tagline'] }}</p>
+                <div class="ks-card__cta">
+                    <a href="{{ route('filiale', $slug) }}" class="ks-cta-secondary">En savoir plus</a>
                 </div>
-            </div>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Un seul interlocuteur, six expertises</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Obtenir une soumission</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Six expertises, un chargé de projet unique</h2>
+        <p>Discutez de votre projet avec un chargé de projet unique qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

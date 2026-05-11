@@ -36,29 +36,25 @@
 
 @section('content')
 
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>{{ $filiale['nom_court'] }}</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li><a href="{{ route('filiales.index') }}">Filiales</a></li>
             <li>{{ $filiale['nom_court'] }}</li>
         </ul>
+        <span class="ks-eyebrow" style="color:var(--ks-gold-500);margin-bottom:1rem;display:block">{{ $filiale['specialite'] }}</span>
+        <h1>{{ $filiale['nom_court'] }}</h1>
+        <p class="ks-page-hero__subtitle">{{ $filiale['tagline'] }}</p>
     </div>
-</section>
+</header>
 
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <span class="sub-title">{{ $filiale['specialite'] }}</span>
-                    <h2>{{ $filiale['tagline'] }}</h2>
-                </div>
-                <div class="text">
-                    <p>{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Filiale du groupe</span>
+            <h2 class="ks-h2">Une expertise pointue dans un système intégré</h2>
+            <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
         </div>
     </div>
 </section>
@@ -68,78 +64,68 @@
     @include($contentPath)
 @endif
 
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:80px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Services offerts</span>
-            <h2>Notre offre de services</h2>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Services offerts</span>
+            <h2 class="ks-h2">Notre offre de services</h2>
+            <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du holding.</p>
         </div>
-        <div class="row clearfix">
-            @foreach($filiale['services'] as $service)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <h4>{{ $service }}</h4>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--3col">
+            @foreach($filiale['services'] as $i => $service)
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Service {{ str_pad($i + 1, 2, '0', STR_PAD_LEFT) }}</span>
+                <h3 class="ks-card__title">{{ $service }}</h3>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="about-section-two alternate">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-6 content-column">
-                <div class="inner-column">
-                    <div class="sec-title">
-                        <span class="sub-title">Pour qui</span>
-                        <h3>Clientèle cible</h3>
-                    </div>
-                    <div class="text">
-                        <p>{{ $filiale['cibles'] }}</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 content-column">
-                <div class="inner-column">
-                    <div class="sec-title">
-                        <span class="sub-title">Modèle d’affaires</span>
-                        <h3>Comment nous travaillons</h3>
-                    </div>
-                    <div class="text">
-                        <p>{{ $filiale['modele'] }}</p>
-                    </div>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--2col" style="align-items:start">
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Pour qui</span>
+                <h3 class="ks-card__title">Clientèle cible</h3>
+                <p class="ks-card__text">{{ $filiale['cibles'] }}</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Modèle d’affaires</span>
+                <h3 class="ks-card__title">Comment nous travaillons</h3>
+                <p class="ks-card__text">{{ $filiale['modele'] }}</p>
+            </article>
         </div>
     </div>
 </section>
 
-<section class="feature-section-four" style="padding:80px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Intégration verticale</span>
-            <h2>Synergies avec les autres filiales</h2>
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading">
+            <span class="ks-eyebrow">Intégration verticale</span>
+            <h2 class="ks-h2">Synergies avec les autres filiales</h2>
+            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Sur un même chantier, {{ $filiale['nom_court'] }} collabore quotidiennement avec les cinq autres filiales du groupe pour livrer un projet cohérent du sous-sol au toit.</p>
         </div>
-        <div class="row clearfix">
+        <div class="ks-bento ks-bento--3col">
             @foreach(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES as $other_slug => $other_f)
                 @if($other_slug !== $slug)
-                <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                    <div class="inner-box">
-                        <h4><a href="{{ route('filiale', $other_slug) }}">{{ $other_f['nom_court'] }}</a></h4>
-                        <div class="text">{{ $other_f['specialite'] }}</div>
-                    </div>
-                </div>
+                <article class="ks-card ks-card--dark">
+                    <span class="ks-eyebrow" style="color:var(--ks-gold-500)">Filiale</span>
+                    <h3 class="ks-card__title"><a href="{{ route('filiale', $other_slug) }}">{{ $other_f['nom_court'] }}</a></h3>
+                    <p class="ks-card__text">{{ $other_f['specialite'] }}</p>
+                    <div class="ks-card__cta"><a href="{{ route('filiale', $other_slug) }}" class="ks-cta-secondary" style="color:var(--ks-white);border-color:var(--ks-gold-500)">Découvrir</a></div>
+                </article>
                 @endif
             @endforeach
         </div>
     </div>
 </section>
 
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Discutons de votre projet</h2>
-        <a href="{{ route('contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Obtenir une soumission</span><span class="text-two">Obtenir une soumission</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Discutons de votre projet {{ Str::lower($filiale['specialite']) }}</h2>
+        <p>Visite, prise de mesures, étude technique et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

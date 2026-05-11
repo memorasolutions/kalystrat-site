@@ -3,11 +3,10 @@
 @section('title', 'À propos | Kalystrat — Holding québécois de construction')
 
 @push('meta')
-<meta name="description" content="Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée. Fondateur Ali Salomon.">
-<meta name="keywords" content="Kalystrat, holding construction Québec, intégration verticale, Ali Salomon, six filiales construction">
+<meta name="description" content="Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée.">
 <link rel="canonical" href="{{ url('/a-propos') }}">
 <meta property="og:title" content="À propos de Gestion Kalystrat Inc.">
-<meta property="og:description" content="Holding québécois à intégration verticale. Six filiales spécialisées, une marque unifiée.">
+<meta property="og:description" content="Holding québécois à intégration verticale. Six filiales, une marque unifiée.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url('/a-propos') }}">
 @endpush
@@ -38,222 +37,185 @@
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 @endpush
 
-
 @section('content')
 
-<!-- Page Title -->
-<section class="page-title" style="background-image:url(/intime/images/background/2.jpg)">
-    <div class="auto-container">
-        <h1>À propos de Gestion Kalystrat Inc.</h1>
-        <ul class="bread-crumb clearfix">
+<header class="ks-page-hero">
+    <div class="ks-container">
+        <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>À propos</li>
         </ul>
+        <h1>À propos de Gestion Kalystrat Inc.</h1>
+        <p class="ks-page-hero__subtitle">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui couvrent toute la chaîne, du sol au plafond.</p>
+    </div>
+</header>
+
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
+            <span class="ks-eyebrow">Notre vision</span>
+            <h2 class="ks-h2">Bâtir un groupe intégré de référence au Québec</h2>
+        </div>
+        <p class="ks-lead ks-fade-in">Gestion Kalystrat Inc. exerce un contrôle complet sur la chaîne de valeur, de l’excavation aux finitions, tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée. Notre ambition&nbsp;: devenir, d’ici huit ans, un acteur structurant de l’industrie québécoise de la construction.</p>
     </div>
 </section>
 
-<!-- Notre vision -->
-<section class="about-section-two">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-12 content-column">
-                <div class="sec-title">
-                    <h2>Notre vision</h2>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--feature ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Fondateur</span>
+                <h3 class="ks-card__title">Ali Salomon</h3>
+                <div class="ks-card__meta">Président et Directeur Général</div>
+                <p class="ks-card__text">Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d’affaires intégré de Kalystrat&nbsp;: six filiales spécialisées qui travaillent en synergie sous une marque unifiée. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</p>
+                <div class="ks-card__cta">
+                    <a href="{{ route('equipe.membre', 'ali-salomon') }}" class="ks-cta-secondary">Profil complet</a>
                 </div>
-                <div class="text">
-                    <p>Gestion Kalystrat Inc. est un holding québécois de construction à intégration verticale, fondé sur une ambition claire&nbsp;: devenir, d’ici huit ans, un groupe de référence dans l’industrie de la construction au Québec. Nous exerçons un contrôle complet sur la chaîne de valeur - de l’excavation aux finitions - tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée.</p>
-                </div>
-            </div>
+            </article>
+
+            <article class="ks-card">
+                <div class="ks-stat__number">6</div>
+                <div class="ks-stat__label">Filiales spécialisées</div>
+                <p class="ks-card__text" style="margin-top:1rem">Une chaîne complète sous une seule marque.</p>
+            </article>
+
+            <article class="ks-card">
+                <div class="ks-stat__number">9</div>
+                <div class="ks-stat__label">Régions Québec desservies</div>
+                <p class="ks-card__text" style="margin-top:1rem">Couverture provinciale du holding, de la Capitale-Nationale à la Mauricie.</p>
+            </article>
+
+            <article class="ks-card">
+                <div class="ks-stat__number">100<sup style="font-size:0.55em;color:var(--ks-gold-500)">%</sup></div>
+                <div class="ks-stat__label">Code QC 2026 maîtrisé</div>
+                <p class="ks-card__text" style="margin-top:1rem">Étanchéité à l’air, R-49 toiture, ventilation HRV. Nos équipes maîtrisent l’ensemble du Code 2026.</p>
+            </article>
+
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Siège social</span>
+                <h3 class="ks-card__title">Québec</h3>
+                <p class="ks-card__text">Ancré dans la Capitale-Nationale, avec une couverture territoriale jusqu’au Saguenay, Trois-Rivières, Montréal et Laval.</p>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- Notre fondateur -->
-<section class="about-section">
-    <div class="auto-container">
-        <div class="row clearfix">
-            <div class="col-lg-6 image-column">
-                <div class="image-box">
-                    <figure class="image"><img src="/intime/images/resource/about-1.jpg" alt="Ali Salomon, Président et Directeur Général de Gestion Kalystrat Inc."></figure>
-                </div>
-            </div>
-            <div class="col-lg-6 content-column">
-                <div class="inner-column">
-                    <div class="sec-title">
-                        <h2>Notre fondateur - Ali Salomon</h2>
-                    </div>
-                    <div class="text">
-                        <p>Visionnaire et entrepreneur chevronné, Ali Salomon incarne l’ADN de Kalystrat. En tant que Président et Directeur Général, il a conçu un modèle d’affaires unique, centré sur la maîtrise intégrale des métiers de la construction. Son expertise opérationnelle, combinée à une rigueur de gestion à la québécoise, positionne Kalystrat comme un acteur structurant dans un secteur en constante évolution.</p>
-                    </div>
-                </div>
-            </div>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-fade-in">
+            <span class="ks-eyebrow">Structure du groupe</span>
+            <h2 class="ks-h2">Six filiales, une marque unifiée</h2>
+            <p class="ks-lead">La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance. Chaque filiale est dirigée par un directeur dédié relevant directement de la présidence.</p>
         </div>
-    </div>
-</section>
-
-<!-- 6 filiales, 1 marque -->
-<section class="feature-section-four" style="background-color:#f7f7f7;padding:80px 0">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Structure du groupe</span>
-            <h2>6 filiales, 1 marque</h2>
-        </div>
-        <div class="row clearfix">
+        <div class="ks-bento ks-fade-in">
             @foreach($filiales as $slug => $f)
-            <div class="feature-block_four col-lg-4 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <h4><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h4>
-                    <div class="text">{{ $f['specialite'] }}</div>
-                    <a href="{{ route('filiale', $slug) }}" class="theme-btn btn-style-ten" style="margin-top:18px"><span class="text-one">En savoir plus</span><span class="text-two">En savoir plus</span></a>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">{{ $f['specialite'] }}</span>
+                <h3 class="ks-card__title"><a href="{{ route('filiale', $slug) }}">{{ $f['nom_court'] }}</a></h3>
+                <p class="ks-card__text">{{ $f['tagline'] }}</p>
+                <div class="ks-card__cta">
+                    <a href="{{ route('filiale', $slug) }}" class="ks-cta-secondary">En savoir plus</a>
                 </div>
-            </div>
+            </article>
             @endforeach
         </div>
     </div>
 </section>
 
-<!-- Avantage concurrentiel - 6 piliers -->
-<section class="about-section-two alternate">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Pourquoi Kalystrat</span>
-            <h2>Notre avantage concurrentiel</h2>
+<section class="ks-section ks-section--dark">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-fade-in">
+            <span class="ks-eyebrow">Pourquoi Kalystrat</span>
+            <h2 class="ks-h2">Six piliers d’avantage concurrentiel</h2>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>01. Intégration verticale</h5>
-                    <p>De l’excavation à la finition, chaque étape est exécutée en interne - éliminant les marges des sous-traitants et les délais de coordination.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>02. Main-d’œuvre interne</h5>
-                    <p>Kalystrat Placement Construction fournit la main-d’œuvre à toutes les filiales, garantissant disponibilité et cohérence de formation.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>03. Demande captive</h5>
-                    <p>Kalystrat Immobilier développe ses propres projets, générant un flux de travail constant pour les cinq autres filiales.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>04. Synergies opérationnelles</h5>
-                    <p>Immobilier → Fondations → Structure → Toiture-Enveloppe → Finition → Placement : la chaîne complète fonctionne en boucle.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>05. Cohérence de marque</h5>
-                    <p>La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6 col-sm-12" style="margin-bottom:30px">
-                <div class="inner-box" style="background:#fff;padding:30px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,0.06)">
-                    <h5>06. Gestion centralisée</h5>
-                    <p>Comptabilité, RH, juridique, marketing et TI centralisés au niveau du holding réduisent les frais généraux par filiale.</p>
-                </div>
-            </div>
+        @php
+        $piliers = [
+            ['n' => '01', 't' => 'Intégration verticale', 'd' => "De l’excavation à la finition, chaque étape est exécutée en interne. Élimination des marges des sous-traitants et des délais de coordination."],
+            ['n' => '02', 't' => 'Main-d’œuvre interne', 'd' => "Kalystrat Placement Construction fournit la main-d’œuvre à toutes les filiales. Disponibilité garantie, formation cohérente."],
+            ['n' => '03', 't' => 'Demande captive', 'd' => "Kalystrat Immobilier développe ses propres projets et génère un flux de travail constant pour les cinq autres filiales."],
+            ['n' => '04', 't' => 'Synergies opérationnelles', 'd' => "Immobilier puis Fondations, Structure, Toiture-Enveloppe, Finition, Placement. La chaîne complète fonctionne en boucle."],
+            ['n' => '05', 't' => 'Cohérence de marque', 'd' => "La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires."],
+            ['n' => '06', 't' => 'Gestion centralisée', 'd' => "Comptabilité, RH, juridique, marketing, TI centralisés au niveau du holding. Frais généraux réduits par filiale."],
+        ];
+        @endphp
+        <div class="ks-bento ks-fade-in">
+            @foreach($piliers as $p)
+            <article class="ks-card ks-card--dark">
+                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">{{ $p['n'] }}</div>
+                <h3 class="ks-card__title">{{ $p['t'] }}</h3>
+                <p class="ks-card__text">{{ $p['d'] }}</p>
+            </article>
+            @endforeach
         </div>
     </div>
 </section>
 
-<!-- Structure organisationnelle -->
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Structure organisationnelle</span>
-            <h2>Une présidence forte, six directions opérationnelles</h2>
+<section class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-fade-in">
+            <span class="ks-eyebrow">Gouvernance</span>
+            <h2 class="ks-h2">Conseil consultatif</h2>
+            <p class="ks-lead">Cinq sièges complémentaires&nbsp;: construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers nommés, trois sièges en cours de recrutement.</p>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <p style="line-height:1.7">Gestion Kalystrat Inc. est dirigée par son fondateur Ali Salomon, Président et Directeur Général, à qui chaque direction de filiale relève directement. Cette structure « gouvernance centralisée, exécution décentralisée » permet à la holding de garder le cap stratégique tout en laissant à chaque filiale l’autonomie nécessaire pour livrer ses chantiers. Les fonctions transverses (comptabilité, ressources humaines, juridique, marketing, technologies de l’information) sont mutualisées au niveau de la société mère, ce qui réduit les frais généraux et harmonise les pratiques. Pour découvrir l’organigramme complet, visitez la <a href="{{ route('equipe') }}">page Équipe</a>.</p>
-            </div>
+        <div class="ks-bento ks-bento--2col ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Conseiller — Droit des affaires</span>
+                <h3 class="ks-card__title"><a href="{{ route('equipe.membre', 'jacques-jobidon') }}">Jacques Jobidon</a></h3>
+                <p class="ks-card__text">Avocat spécialisé en droit de la construction et des sociétés. Conseille la présidence sur les contrats inter-filiales, la conformité réglementaire (RBQ, CCQ), la gestion des litiges.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Conseiller — Immobilier</span>
+                <h3 class="ks-card__title"><a href="{{ route('equipe.membre', 'perry-wong') }}">Perry Wong</a></h3>
+                <p class="ks-card__text">Promoteur et expert reconnu du marché immobilier québécois. Conseille Kalystrat Immobilier sur les acquisitions de terrains, l’analyse de marché, la structuration de projets.</p>
+            </article>
         </div>
-    </div>
-</section>
-
-<!-- Conseil consultatif -->
-<section class="team-section">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Gouvernance</span>
-            <h2>Conseil consultatif</h2>
-        </div>
-        <div class="row clearfix">
-            <div class="col-lg-12">
-                <p style="line-height:1.7;margin-bottom:25px">Le conseil consultatif réunira cinq profils complémentaires : construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers sont déjà nommés et trois sièges sont en cours de recrutement.</p>
-            </div>
-            <div class="team-block col-lg-6 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <figure class="image"><img src="/intime/images/resource/team-1.jpg" alt="Jacques Jobidon, conseiller en droit de la construction"></figure>
-                    <div class="content">
-                        <h4>Jacques Jobidon</h4>
-                        <span>Conseiller - Droit des affaires et de la construction</span>
-                    </div>
-                </div>
-            </div>
-            <div class="team-block col-lg-6 col-md-6 col-sm-12">
-                <div class="inner-box">
-                    <figure class="image"><img src="/intime/images/resource/team-2.jpg" alt="Perry Wong, spécialiste immobilier québécois"></figure>
-                    <div class="content">
-                        <h4>Perry Wong</h4>
-                        <span>Conseiller - Immobilier québécois</span>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-12" style="margin-top:30px">
-                <h4 style="margin-bottom:15px">Sièges en cours de recrutement</h4>
-                <div class="row clearfix">
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Construction et ingénierie</strong><br><span style="color:#666;font-size:14px">Expert sénior de l’industrie au Québec.</span></div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Financement et investissement</strong><br><span style="color:#666;font-size:14px">Professionnel en financement d’entreprise.</span></div>
-                    </div>
-                    <div class="col-lg-4 col-md-12">
-                        <div style="padding:20px;background:#f7f7f7;border-radius:8px;margin-bottom:15px"><strong>Ressources humaines</strong><br><span style="color:#666;font-size:14px">Spécialiste recrutement main-d’œuvre construction.</span></div>
-                    </div>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--3col" style="margin-top:24px">
+            <article class="ks-card">
+                <div class="ks-card__meta">À pourvoir</div>
+                <h4 class="ks-card__title" style="font-size:1.125rem">Construction et ingénierie</h4>
+                <p class="ks-card__text">Profil recherché&nbsp;: expert sénior de l’industrie de la construction au Québec.</p>
+            </article>
+            <article class="ks-card">
+                <div class="ks-card__meta">À pourvoir</div>
+                <h4 class="ks-card__title" style="font-size:1.125rem">Financement et investissement</h4>
+                <p class="ks-card__text">Profil recherché&nbsp;: professionnel en financement d’entreprise et structuration financière.</p>
+            </article>
+            <article class="ks-card">
+                <div class="ks-card__meta">À pourvoir</div>
+                <h4 class="ks-card__title" style="font-size:1.125rem">Ressources humaines</h4>
+                <p class="ks-card__text">Profil recherché&nbsp;: spécialiste du recrutement et de la gestion de la main-d’œuvre en construction.</p>
+            </article>
         </div>
     </div>
 </section>
 
-<!-- Stratégie de croissance -->
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-    <div class="auto-container">
-        <div class="sec-title centered">
-            <span class="sub-title">Stratégie de croissance</span>
-            <h2>Deux phases pour bâtir un groupe de référence</h2>
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-fade-in">
+            <span class="ks-eyebrow">Stratégie de croissance</span>
+            <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>
         </div>
-        <div class="row clearfix">
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <h4>Phase 1 - Consolidation</h4>
-                    <p style="margin-top:12px;line-height:1.7">Établir les fondations opérationnelles du groupe : incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion (comptabilité, RH, marketing, TI), premières relations avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12">
-                <div style="padding:30px;background:#fff;border-radius:8px;margin-bottom:25px;border-left:4px solid #8F3F00">
-                    <h4>Phase 2 - Expansion</h4>
-                    <p style="margin-top:12px;line-height:1.7">Diversifier les revenus et augmenter le volume : développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
-                </div>
-            </div>
+        <div class="ks-bento ks-bento--2col ks-fade-in">
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-card__meta">Phase 1</div>
+                <h3 class="ks-card__title">Consolidation</h3>
+                <p class="ks-card__text">Établir les fondations opérationnelles du groupe&nbsp;: incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion, premières relations commerciales avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-card__meta">Phase 2</div>
+                <h3 class="ks-card__title">Expansion</h3>
+                <p class="ks-card__text">Diversifier les revenus et augmenter le volume&nbsp;: développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
+            </article>
         </div>
-        <div style="text-align:center;margin-top:20px">
-            <p style="font-size:14px;color:#888"><em>Source : plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
-        </div>
+        <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:var(--ks-gray-500)"><em>Source&nbsp;: plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
     </div>
 </section>
 
-<!-- CTA finale -->
-<section class="call-to-action" style="background:#f7f7f7;padding:60px 0;text-align:center">
-    <div class="auto-container">
-        <h2 style="margin-bottom:20px">Discutons de votre projet</h2>
-        <a href="{{ url('/contact') }}" class="theme-btn btn-style-ten"><div class="btn-wrap"><span class="text-one">Nous contacter</span><span class="text-two">Nous contacter</span></div></a>
+<section class="ks-cta-section">
+    <div class="ks-container">
+        <h2>Discutons de votre projet</h2>
+        <p>Une équipe basée à Québec, six filiales spécialisées, un chargé de projet unique pour piloter votre dossier de A à Z.</p>
+        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
 

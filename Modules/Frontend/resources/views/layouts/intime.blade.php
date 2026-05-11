@@ -2,6 +2,19 @@
 <html lang="fr-CA">
 <head>
 <meta charset="utf-8">
+<script>
+// Kill-switch service worker — élimine SW cachés qui bloqueraient les ressources média (T67 2026-05-10)
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function (regs) {
+        regs.forEach(function (r) { r.unregister(); });
+    });
+    if (window.caches && caches.keys) {
+        caches.keys().then(function (names) {
+            names.forEach(function (n) { caches.delete(n); });
+        });
+    }
+}
+</script>
 <title>@yield('title', 'Kalystrat — Holding québécois de construction à intégration verticale')</title>
 @stack('meta')
 
@@ -13,7 +26,6 @@
     'alternateName' => 'Kalystrat',
     'url' => 'https://kalystrat.ca',
     'logo' => url('/intime/images/logo.png'),
-    'foundingDate' => '2024',
     'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
     'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA', 'availableLanguage' => ['French', 'English']],
@@ -30,9 +42,11 @@
 
 @stack('schema')
 <!-- Stylesheets -->
+@php $ksCssBust = file_exists(public_path('intime/css/kalystrat-system.css')) ? '?v=' . filemtime(public_path('intime/css/kalystrat-system.css')) : ''; @endphp
 <link href="/intime/css/bootstrap.css" rel="stylesheet">
 <link href="/intime/css/style.css" rel="stylesheet">
 <link href="/intime/css/responsive.css" rel="stylesheet">
+<link href="/intime/css/kalystrat-system.css{{ $ksCssBust }}" rel="stylesheet">
 
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;700&display=swap" rel="stylesheet">
@@ -49,22 +63,25 @@
 </head>
 
 <body>
- 
+
+{{-- T83 — Skip link WCAG 2.4.1 (premier focusable, sauter au main) --}}
+<a class="ks-skip-link" href="#main">Aller au contenu principal</a>
+
 <div class="page-wrapper">
-	
+
     <!-- Preloader -->
     <div class="preloader"></div>
 	<!-- End Preloader -->
- 	
+
  	<!-- Main Header / Header Style Four -->
-    <header class="main-header header-style-six">
-    	
+    <header class="main-header header-style-six" role="banner">
+
 		<!-- Header Upper -->
         <div class="header-upper">
             <div class="auto-container">
 				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 					<!-- Logo Box -->
-					<div class="logo"><a href="/"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
+					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat — Holding québécois de construction" title="Kalystrat"></a></div>
 					
 					<div class="nav-outer d-flex ">
 						
@@ -155,7 +172,7 @@
 				<div class="d-flex justify-content-between align-items-center">
 					<!-- Logo -->
 					<div class="logo">
-						<a href="/" title=""><img src="/intime/images/logo-6.png" alt="" title=""></a>
+						<a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat" title="Kalystrat"></a>
 					</div>
 					
 					<!-- Right Col -->
@@ -195,12 +212,13 @@
             <div class="menu-backdrop"></div>
             <div class="close-btn"><span class="icon fas fa-window-close fa-fw"></span></div>
             <nav class="menu-box">
-                <div class="nav-logo"><a href="/"><img src="/intime/images/logo.png" alt="" title=""></a></div>
+                <div class="nav-logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo.png" alt="Logo Kalystrat" title="Kalystrat"></a></div>
 				<!-- Search -->
 				<div class="search-box">
 					<form method="post" action="contact.html">
 						<div class="form-group">
-							<input type="search" name="search-field" value="" placeholder="SEARCH HERE" required>
+							<label for="ks-search-popup" class="visually-hidden">Rechercher sur le site</label>
+							<input type="search" id="ks-search-popup" name="search-field" value="" placeholder="Rechercher" aria-label="Rechercher sur le site" required>
 							<button type="submit"><span class="icon flaticon-001-loupe"></span></button>
 						</div>
 					</form>
@@ -213,7 +231,9 @@
     </header>
 
     {{-- Layout dynamique : chaque page injecte son contenu via @yield('content') --}}
+    <main id="main" role="main" tabindex="-1">
     @yield('content')
+    </main>
 
 	<footer class="main-footer style-six" style="background-image:url(/intime/images/background/pattern-35.jpg)">
 		<div class="auto-container">
@@ -230,7 +250,8 @@
 							<div class="subscribe-box">
 								<form method="post" action="contact.html">
 									<div class="form-group">
-										<input type="email" name="search-field" value="" placeholder="Votre courriel" required>
+										<label for="ks-newsletter-email" class="visually-hidden">Adresse courriel pour l'infolettre</label>
+										<input type="email" id="ks-newsletter-email" name="email" value="" placeholder="Votre courriel" autocomplete="email" aria-label="Adresse courriel pour l'infolettre" required>
 										<button type="submit">S&apos;inscrire</button>
 									</div>
 								</form>
@@ -255,10 +276,10 @@
 									<div class="text">Holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
 									<!-- Social Box -->
 									<ul class="footer-six_social-box">
-										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw"></a></li>
-										<li class="twitter"><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw"></a></li>
-										<li class="facebook"><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw"></a></li>
-										<li class="youtube"><a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw"></a></li>
+										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw" aria-label="Suivre Kalystrat sur Facebook"></a></li>
+										<li class="twitter"><a href="https://www.facebook.com/" class="fa-brands fa-twitter fa-fw" aria-label="Suivre Kalystrat sur Twitter"></a></li>
+										<li class="facebook"><a href="https://instagram.com/" class="fa-solid fa-instagram fa-fw" aria-label="Suivre Kalystrat sur Instagram"></a></li>
+										<li class="youtube"><a href="https://www.youtube.com/" class="fa-brands fa-youtube fa-fw" aria-label="Suivre Kalystrat sur YouTube"></a></li>
 									</ul>
 								</div>
 							</div>
@@ -297,17 +318,17 @@
 									<div class="widget-content">
 										<div class="images-outer clearfix">
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/1.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-1.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/1.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-1.jpg" alt="Galerie Kalystrat — réalisation 1"></a></figure>
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/2.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-2.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/2.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-2.jpg" alt="Galerie Kalystrat — réalisation 2"></a></figure>
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/3.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-3.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/3.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-3.jpg" alt="Galerie Kalystrat — réalisation 3"></a></figure>
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/4.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-4.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/4.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-4.jpg" alt="Galerie Kalystrat — réalisation 4"></a></figure>
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/5.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-5.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/5.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-5.jpg" alt="Galerie Kalystrat — réalisation 5"></a></figure>
 											<!--Image Box-->
-											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/6.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-6.jpg" alt=""></a></figure>
+											<figure class="image-box"><a class="lightbox-image" href="/intime/images/gallery/6.jpg"><img src="/intime/images/gallery/footer-gallery-thumb-6.jpg" alt="Galerie Kalystrat — réalisation 6"></a></figure>
 										</div>
 									</div>
 								</div>
@@ -320,19 +341,19 @@
 									<!--News Widget Block-->
 									<div class="news-widget-block">
 										<div class="news-widget_image">
-											<img src="/intime/images/resource/news-widget-1.jpg" alt="" />
+											<img src="/intime/images/resource/news-widget-1.jpg" alt="Article — Bâtir ensemble : six métiers, une marque" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="/blog">Bâtir ensemble : six métiers, une marque</a></h6>
+										<h5 class="news-widget_title"><a href="/blog">Bâtir ensemble : six métiers, une marque</a></h5>
 									</div>
 									
 									<!--News Widget Block-->
 									<div class="news-widget-block">
 										<div class="news-widget_image">
-											<img src="/intime/images/resource/news-widget-2.jpg" alt="" />
+											<img src="/intime/images/resource/news-widget-2.jpg" alt="Article — Pénurie de main-d'œuvre, Kalystrat Placement" />
 										</div>
 										<div class="news-widget_post-date">Nov 08, 2020</div>
-										<h6 class="news-widget_title"><a href="/blog">Pénurie de main-d&apos;œuvre : Kalystrat Placement</a></h6>
+										<h5 class="news-widget_title"><a href="/blog">Pénurie de main-d&apos;œuvre : Kalystrat Placement</a></h5>
 									</div>
 								</div>
 							</div>
@@ -350,9 +371,9 @@
 					<div class="d-flex justify-content-between align-items-center flex-wrap">
 						
 						<!-- Logo Box -->
-						<div class="logo"><a href="/"><img src="/intime/images/logo-6.png" alt="" title=""></a></div>
+						<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat" title="Kalystrat"></a></div>
 
-						<div class="copyright">2023 &copy; All rights reserved by <a href="#">Themexriver</a>copy; 2026 Gestion Kalystrat Inc. Tous droits réservés.</div>
+						<div class="copyright">&copy; 2026 Gestion Kalystrat Inc. Tous droits réservés.</div>
 						
 					</div>
 				</div>
@@ -364,11 +385,12 @@
 	<!-- Search Popup -->
 	<div class="search-popup">
 		<div class="color-layer"></div>
-		<button class="close-search"><span class="fas fa-times fa-fw"></span></button>
+		<button class="close-search" aria-label="Fermer la recherche"><span class="fas fa-times fa-fw" aria-hidden="true"></span></button>
 		<form method="post" action="blog.html">
 			<div class="form-group">
-				<input type="search" name="search-field" value="" placeholder="Rechercher..." required="">
-				<button type="submit"><i class="flaticon-search"></i></button>
+				<label for="ks-search-main" class="visually-hidden">Rechercher sur le site</label>
+				<input type="search" id="ks-search-main" name="search-field" value="" placeholder="Rechercher…" aria-label="Rechercher sur le site" required>
+				<button type="submit" aria-label="Lancer la recherche"><i class="flaticon-search" aria-hidden="true"></i></button>
 			</div>
 		</form>
 	</div>
@@ -399,7 +421,32 @@
 
 <script src="/intime/js/script.js"></script>
 
+
 <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
 <!--[if lt IE 9]><script src="/intime/js/respond.js"></script><![endif]-->
+
+@stack('scripts')
+
+<script>
+(function () {
+    'use strict';
+    if (!('IntersectionObserver' in window)) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    var targets = document.querySelectorAll(
+        '.ks-section:not(.ks-page-hero):not(.no-reveal), [data-ks-reveal]'
+    );
+    if (!targets.length) return;
+    targets.forEach(function (el) { el.classList.add('ks-reveal-init'); });
+    var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('ks-reveal-show');
+                io.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
+    targets.forEach(function (el) { io.observe(el); });
+})();
+</script>
 
 </body>
