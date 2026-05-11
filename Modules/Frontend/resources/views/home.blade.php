@@ -218,38 +218,6 @@
 })();
 </script>
 
-<section class="ks-section ks-section--dark ks-process">
-    <div class="ks-container">
-        <div class="ks-section__heading">
-            <span class="ks-eyebrow">Notre offre</span>
-            <h2 class="ks-h2">Quatre temps, six expertises</h2>
-            <p class="ks-process__lead">Du premier coup de pelle à la pose des dernières moulures, Kalystrat couvre l’intégralité du cycle de construction.</p>
-        </div>
-        <ol class="ks-process__timeline" aria-label="Processus en 4 étapes">
-            <li class="ks-process__step">
-                <span class="ks-process__num">01</span>
-                <h3 class="ks-process__title"><a href="{{ route('services') }}">Conception et permis</a></h3>
-                <p class="ks-process__text">Plans, modélisation BIM, dépôts municipaux. Coordination avec architectes et ingénieurs au besoin.</p>
-            </li>
-            <li class="ks-process__step">
-                <span class="ks-process__num">02</span>
-                <h3 class="ks-process__title"><a href="{{ route('services') }}">Construction et chantier</a></h3>
-                <p class="ks-process__text">Excavation, fondations, structure, toiture, enveloppe. Six filiales, un seul calendrier.</p>
-            </li>
-            <li class="ks-process__step">
-                <span class="ks-process__num">03</span>
-                <h3 class="ks-process__title"><a href="{{ route('services') }}">Finition et livraison</a></h3>
-                <p class="ks-process__text">Gypse, peinture, planchers, ébénisterie, comptoirs. Inspection conjointe avant remise des clés.</p>
-            </li>
-            <li class="ks-process__step">
-                <span class="ks-process__num">04</span>
-                <h3 class="ks-process__title"><a href="{{ route('services') }}">Garantie et entretien</a></h3>
-                <p class="ks-process__text">Plan GCR pour le neuf résidentiel, garantie légale du Code civil, accompagnement post-livraison.</p>
-            </li>
-        </ol>
-    </div>
-</section>
-
 <section class="ks-section ks-approche" id="approche-long-terme" aria-labelledby="approche-title">
     <div class="ks-container">
         <div class="ks-approche__grid">
@@ -357,6 +325,33 @@
 })();
 </script>
 @endpush
+
+@php
+    $showcasePath = public_path('intime/images/pages/home-showcase-aerial.webp');
+    $showcaseBust = file_exists($showcasePath) ? '?v=' . filemtime($showcasePath) : '';
+@endphp
+<section class="ks-showcase" aria-label="Vue aérienne d'un chantier Kalystrat au coucher du soleil" style="--ks-showcase-img: url('/intime/images/pages/home-showcase-aerial.webp{{ $showcaseBust }}')">
+    <div class="ks-showcase__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-showcase__inner">
+        <span class="ks-eyebrow ks-showcase__eyebrow">Sur le terrain au Québec</span>
+        <h2 class="ks-showcase__title">Du sol au sommet,<br>une seule discipline.</h2>
+        <p class="ks-showcase__text">Chaque chantier mobilise les six filiales selon un calendrier unique. La coordination devient un avantage opérationnel, pas un goulot d'étranglement.</p>
+        <div class="ks-showcase__kpis">
+            <div class="ks-showcase__kpi">
+                <span class="ks-showcase__kpi-num">6</span>
+                <span class="ks-showcase__kpi-lbl">Filiales mobilisées</span>
+            </div>
+            <div class="ks-showcase__kpi">
+                <span class="ks-showcase__kpi-num">1</span>
+                <span class="ks-showcase__kpi-lbl">Calendrier maître</span>
+            </div>
+            <div class="ks-showcase__kpi">
+                <span class="ks-showcase__kpi-num">9</span>
+                <span class="ks-showcase__kpi-lbl">Régions desservies</span>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="ks-section ks-section--dark">
     <div class="ks-container">
@@ -472,23 +467,38 @@
             <p class="ks-lead">Analyses du marché québécois, évolutions réglementaires et conseils pratiques pour vos projets de construction.</p>
         </div>
         <div class="ks-bento ks-bento--3col">
-            <article class="ks-card ks-card--accent-navy">
-                <span class="ks-eyebrow">Marché immobilier</span>
-                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}">Pourquoi construire des multilogements au Québec en 2026</a></h3>
-                <p class="ks-card__text">Pénurie de logements, démographie favorable, programmes SCHL : pourquoi le multilogement reste l’asset class la plus solide du marché québécois.</p>
-                <div class="ks-card__cta"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            <article class="ks-card ks-card--thumb">
+                <a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}" class="ks-card__thumb-link" aria-label="Lire : Pourquoi construire des multilogements au Québec en 2026">
+                    <img src="/intime/images/blog/blog-multilog.webp" alt="Immeuble résidentiel multilogements moderne" loading="lazy" width="940" height="650" class="ks-card__thumb">
+                </a>
+                <div class="ks-card__body">
+                    <span class="ks-eyebrow">Marché immobilier</span>
+                    <h3 class="ks-card__title"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}">Pourquoi construire des multilogements au Québec en 2026</a></h3>
+                    <p class="ks-card__text">Pénurie de logements, démographie favorable, programmes SCHL&nbsp;: pourquoi le multilogement reste l'asset class la plus solide du marché québécois.</p>
+                    <div class="ks-card__cta"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}" class="ks-cta-secondary">Lire l'article</a></div>
+                </div>
             </article>
-            <article class="ks-card ks-card--accent-navy">
-                <span class="ks-eyebrow">Réglementation</span>
-                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">Code de construction Québec 2026&nbsp;: ce que les propriétaires doivent savoir</a></h3>
-                <p class="ks-card__text">Étanchéité à l’air, isolation R-49, ventilation HRV : les changements majeurs et leur impact concret sur les projets.</p>
-                <div class="ks-card__cta"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            <article class="ks-card ks-card--thumb">
+                <a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}" class="ks-card__thumb-link" aria-label="Lire : Code de construction Québec 2026, changements pour les propriétaires">
+                    <img src="/intime/images/blog/blog-code-construction.webp" alt="Plan architectural et règlement de construction" loading="lazy" width="940" height="650" class="ks-card__thumb">
+                </a>
+                <div class="ks-card__body">
+                    <span class="ks-eyebrow">Réglementation</span>
+                    <h3 class="ks-card__title"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}">Code de construction Québec 2026&nbsp;: ce que les propriétaires doivent savoir</a></h3>
+                    <p class="ks-card__text">Étanchéité à l'air, isolation R-49, ventilation HRV&nbsp;: les changements majeurs et leur impact concret sur les projets.</p>
+                    <div class="ks-card__cta"><a href="{{ route('blog.show', 'code-construction-quebec-2026-changements') }}" class="ks-cta-secondary">Lire l'article</a></div>
+                </div>
             </article>
-            <article class="ks-card ks-card--accent-navy">
-                <span class="ks-eyebrow">Conseils pratiques</span>
-                <h3 class="ks-card__title"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}">Comment choisir un entrepreneur en construction au Québec</a></h3>
-                <p class="ks-card__text">Licence RBQ, cautionnement, références chantiers : la grille de vérification avant de signer un contrat de construction.</p>
-                <div class="ks-card__cta"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}" class="ks-cta-secondary">Lire l’article</a></div>
+            <article class="ks-card ks-card--thumb">
+                <a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}" class="ks-card__thumb-link" aria-label="Lire : Comment choisir un entrepreneur en construction au Québec">
+                    <img src="/intime/images/blog/blog-choisir-entrepreneur.webp" alt="Deux ouvriers en équipement de sécurité validant un accord" loading="lazy" width="940" height="650" class="ks-card__thumb">
+                </a>
+                <div class="ks-card__body">
+                    <span class="ks-eyebrow">Conseils pratiques</span>
+                    <h3 class="ks-card__title"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}">Comment choisir un entrepreneur en construction au Québec</a></h3>
+                    <p class="ks-card__text">Licence RBQ, cautionnement, références chantiers&nbsp;: la grille de vérification avant de signer un contrat de construction.</p>
+                    <div class="ks-card__cta"><a href="{{ route('blog.show', 'comment-choisir-entrepreneur-construction-qc-2026') }}" class="ks-cta-secondary">Lire l'article</a></div>
+                </div>
             </article>
         </div>
         <div style="margin-top:48px;text-align:center">

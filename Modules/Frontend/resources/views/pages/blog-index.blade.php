@@ -73,13 +73,20 @@ echo json_encode([
     <div class="ks-container">
         <div class="ks-bento ks-bento--3col">
             @foreach($articles as $aslug => $a)
-            <article class="ks-card ks-card--accent-gold">
-                <span class="ks-eyebrow">{{ $a['categorie'] }}</span>
-                <h3 class="ks-card__title"><a href="{{ route('blog.show', $aslug) }}">{{ $a['titre'] }}</a></h3>
-                <p class="ks-card__text">{{ $a['extrait'] }}</p>
-                <div class="ks-card__cta" style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
-                    <span style="font-size:0.875rem;color:var(--ks-gray-500)">{{ \Carbon\Carbon::parse($a['date'])->locale('fr_CA')->isoFormat('LL') }}</span>
-                    <a href="{{ route('blog.show', $aslug) }}" class="ks-cta-secondary">Lire l’article</a>
+            <article class="ks-card ks-card--thumb">
+                @if(!empty($a['image']))
+                <a href="{{ route('blog.show', $aslug) }}" class="ks-card__thumb-link" aria-label="Lire : {{ $a['titre'] }}">
+                    <img src="{{ $a['image'] }}" alt="{{ $a['alt'] ?? $a['titre'] }}" loading="lazy" width="940" height="650" class="ks-card__thumb">
+                </a>
+                @endif
+                <div class="ks-card__body">
+                    <span class="ks-eyebrow">{{ $a['categorie'] }}</span>
+                    <h3 class="ks-card__title"><a href="{{ route('blog.show', $aslug) }}">{{ $a['titre'] }}</a></h3>
+                    <p class="ks-card__text">{{ $a['extrait'] }}</p>
+                    <div class="ks-card__cta" style="display:flex;justify-content:space-between;align-items:center;gap:1rem">
+                        <span style="font-size:0.875rem;color:var(--ks-gray-500)">{{ \Carbon\Carbon::parse($a['date'])->locale('fr_CA')->isoFormat('LL') }}</span>
+                        <a href="{{ route('blog.show', $aslug) }}" class="ks-cta-secondary">Lire l’article</a>
+                    </div>
                 </div>
             </article>
             @endforeach

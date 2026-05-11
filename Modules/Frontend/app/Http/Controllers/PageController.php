@@ -54,18 +54,24 @@ class PageController extends Controller
             'extrait' => 'Crise du logement, programmes incitatifs SCHL, choix du format (4-plex à 50+) et avantage de l’intégration verticale Kalystrat.',
             'date' => '2026-05-09',
             'categorie' => 'Marché immobilier',
+            'image' => '/intime/images/blog/blog-multilog.webp',
+            'alt' => 'Immeuble résidentiel multilogements moderne',
         ],
         'code-construction-quebec-2026-changements' => [
             'titre' => 'Code de construction Québec 2026 : ce que les propriétaires doivent savoir',
             'extrait' => 'Nouvelles exigences R-49/R-24, étanchéité 1,5 ach, blower door obligatoire, pare-air continu et impact sur les rénovations majeures.',
             'date' => '2026-05-09',
             'categorie' => 'Réglementation',
+            'image' => '/intime/images/blog/blog-code-construction.webp',
+            'alt' => 'Plan architectural et règlement de construction',
         ],
         'comment-choisir-entrepreneur-construction-qc-2026' => [
             'titre' => 'Comment choisir un entrepreneur en construction au Québec en 2026 ?',
             'extrait' => 'Vérification RBQ, contrat et cautionnement, solidité financière et avantages d’un partenaire intégré : 4 piliers pour décider en toute confiance.',
             'date' => '2026-05-09',
             'categorie' => 'Conseils pratiques',
+            'image' => '/intime/images/blog/blog-choisir-entrepreneur.webp',
+            'alt' => 'Deux ouvriers en équipement de sécurité validant un accord',
         ],
     ];
 }
