@@ -2376,9 +2376,10 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 .ks-page-hero--photo .ks-page-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg,
-    rgba(10, 22, 40, 0.45) 0%,
-    rgba(10, 22, 40, 0.85) 100%);
+  background: linear-gradient(135deg,
+    rgba(10, 22, 40, 0.92) 0%,
+    rgba(10, 22, 40, 0.72) 50%,
+    rgba(184, 164, 114, 0.28) 100%);
   z-index: 0;
 }
 
@@ -2400,13 +2401,18 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 .ks-page-hero--photo h1 {
-  color: #fff;
+  color: #fff !important;
   margin: 0 0 1rem;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.35);
 }
 
 .ks-page-hero--photo .ks-page-hero__subtitle {
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255, 255, 255, 0.92) !important;
   max-width: 780px;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
 }
 
 /* Section avec numéro XXL gold */
