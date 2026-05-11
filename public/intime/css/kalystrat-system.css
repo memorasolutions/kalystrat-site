@@ -2307,27 +2307,12 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 .ks-pourquoi {
   position: relative;
   background: linear-gradient(180deg, #FFFFFF 0%, var(--ks-white-50, #FAFAF8) 100%);
-  border-top: 2px solid var(--ks-gold-500);
   padding-block: clamp(4rem, 8vw, 6.5rem);
 }
 
-.ks-pourquoi::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: clamp(120px, 20vw, 260px);
-  height: 2px;
-  background: var(--ks-gold-700);
-  transform: translateX(-50%);
-}
-
 .ks-pourquoi__intro {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: clamp(1.5rem, 4vw, 3rem);
-  align-items: start;
   margin-bottom: clamp(2.5rem, 5vw, 4rem);
+  max-width: 880px;
 }
 
 @media (max-width: 720px) {

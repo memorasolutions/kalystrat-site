@@ -429,7 +429,6 @@
 <section class="ks-section ks-section--alt ks-pourquoi" aria-labelledby="pourquoi-title">
     <div class="ks-container">
         <div class="ks-pourquoi__intro">
-            <span class="ks-pourquoi__num" aria-hidden="true">02</span>
             <div class="ks-pourquoi__heading">
                 <span class="ks-eyebrow">Pourquoi Kalystrat</span>
                 <h2 id="pourquoi-title" class="ks-h2">Quatre raisons de nous confier votre projet</h2>
