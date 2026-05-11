@@ -100,6 +100,92 @@
             '#defi-title',
             '.ks-defi__market-stat',
             '.ks-approche__commitment-title',
+            '.ks-faq__question',
+            '.ks-faq__answer',
+        ],
+    ],
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+
+{{-- T136 — Service Schema × 6 filiales (SEO type 2026) --}}
+@php
+$services = [
+    ['name' => 'Fondations, coffrage et excavation', 'slug' => 'fondations', 'desc' => 'Excavation, coffrage de fondations, coulée de béton, drains français, dalles, imperméabilisation. Résidentiel, commercial, institutionnel.'],
+    ['name' => 'Charpente structurale (bois, acier, hybride)', 'slug' => 'structure', 'desc' => 'Ossature bois, charpente acier, systèmes hybrides, poutrelles, fermes de toit, structures préfabriquées.'],
+    ['name' => 'Toiture et enveloppe du bâtiment', 'slug' => 'toiture-enveloppe', 'desc' => 'Toits plats et en pente, membranes élastomères, TPO, EPDM, pare-air, pare-vapeur, isolation thermique, revêtements extérieurs.'],
+    ['name' => 'Finition intérieure haut de gamme et accessible', 'slug' => 'finition-interieure', 'desc' => 'Gypse, peinture, moulures, planchers (bois franc, céramique, vinyle), ébénisterie sur mesure, comptoirs, portes et quincaillerie.'],
+    ['name' => 'Développement immobilier et revente', 'slug' => 'immobilier', 'desc' => 'Acquisition de terrains, construction résidentielle et multi-logements, rénovations et flips, portefeuille locatif.'],
+    ['name' => 'Placement de main-d\'œuvre construction', 'slug' => 'placement-construction', 'desc' => 'Recrutement et placement temporaire ou permanent de travailleurs qualifiés CCQ, formation, intégration, gestion paie et conformité.'],
+];
+@endphp
+@foreach($services as $s)
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'Service',
+    'serviceType' => $s['name'],
+    'name' => 'Kalystrat ' . ucfirst(str_replace('-', ' ', $s['slug'])),
+    'description' => $s['desc'],
+    'provider' => [
+        '@type' => 'GeneralContractor',
+        'name' => 'Gestion Kalystrat Inc.',
+        'url' => url('/'),
+    ],
+    'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Province of Quebec'],
+    'url' => url('/filiales/' . $s['slug']),
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+@endforeach
+
+{{-- T136 — FAQPage Schema AEO 2026 (réponses LLM-friendly) --}}
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'FAQPage',
+    'mainEntity' => [
+        [
+            '@type' => 'Question',
+            'name' => 'Quelles régions du Québec Kalystrat dessert-il ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Kalystrat dessert neuf régions principales au Québec : Québec, Lévis, Sainte-Foy, Beauport, Sillery, Trois-Rivières, Saguenay, Montréal et Laval. Le siège social est à Québec et nous intervenons partout dans la province pour les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Quel est le délai pour obtenir une soumission ?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est ferme à prix forfaitaire, avec calendrier d'étapes contractuelles.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Quelles garanties offrez-vous sur vos chantiers ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Trois garanties cumulées : (1) Plan de garantie GCR pour le neuf résidentiel ; (2) garantie légale du Code civil du Québec sur les vices structurels ; (3) licence RBQ vérifiable directement sur rbq.gouv.qc.ca. Kalystrat détient aussi l'accréditation APCHQ rénovation et la conformité Novoclimat 2.0.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Êtes-vous conformes au Code de construction du Québec 2026 ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "Oui, 100 % conforme. Nos équipes maîtrisent les exigences du Code 2026 : étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par blower door avant livraison.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => "Que signifie « intégration verticale » chez Kalystrat ?",
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales : Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages : un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.",
+            ],
+        ],
+        [
+            '@type' => 'Question',
+            'name' => 'Comment vérifier la licence RBQ de Kalystrat ?',
+            'acceptedAnswer' => [
+                '@type' => 'Answer',
+                'text' => "La licence Régie du bâtiment du Québec (RBQ) est vérifiable publiquement sur le site officiel rbq.gouv.qc.ca, section « Registre des détenteurs de licence ». Le numéro de licence est communiqué dès le premier contact commercial. Nos catégories couvrent toutes les opérations de fondations, structure, toiture, finition et développement immobilier.",
+            ],
         ],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
@@ -339,6 +425,7 @@
                 <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
                 <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un buzzword. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
                 <p class="ks-lead ks-approche__lead">Six directions de filiales, chacune pilotée par un expert reconnu de son métier, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des spécialisations et la conformité totale au Code de construction du Québec 2026.</p>
+                <p class="ks-lead ks-approche__lead">La direction est appuyée par un <strong>conseil consultatif</strong> réunissant des experts en construction, financement, droit des affaires, ressources humaines et immobilier — dont <strong>Me Jacques Jobidon</strong> (droit de la construction et des sociétés) et <strong>Perry Wong</strong> (immobilier).</p>
                 <div class="ks-approche__expertise" aria-hidden="true">
                     <span class="ks-approche__expertise-label">Expertise structurée</span>
                     <div class="ks-approche__expertise-grid">
@@ -483,7 +570,7 @@
         <div class="ks-pourquoi__grid">
             <article class="ks-pourquoi__card ks-pourquoi__card--hero">
                 <span class="ks-eyebrow">Intégration verticale</span>
-                <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance étrangère</h3>
+                <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance sur les corps de métier clés</h3>
                 <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
             </article>
 
@@ -504,6 +591,63 @@
                 <h3 class="ks-card__title">Plan GCR, Code civil, licence RBQ</h3>
                 <p class="ks-card__text">Plan de garantie GCR pour le neuf résidentiel, garantie légale du Code civil du Québec pour les vices structurels, licences RBQ par catégorie de travaux, assurance responsabilité civile professionnelle. Notre licence est vérifiable directement sur <em>rbq.gouv.qc.ca</em>.</p>
             </article>
+        </div>
+    </div>
+</section>
+
+<section class="ks-section ks-section--alt ks-faq" id="faq-rapide" aria-labelledby="faq-rapide-title">
+    <div class="ks-container">
+        <div class="ks-section__heading--split">
+            <div class="ks-section__heading-left">
+                <span class="ks-eyebrow">Questions rapides</span>
+                <h2 id="faq-rapide-title" class="ks-h2">Six réponses,<br>une décision claire.</h2>
+            </div>
+            <div class="ks-section__heading-right">
+                <p class="ks-lead">Les questions les plus posées par les promoteurs, propriétaires et gestionnaires institutionnels au premier contact. Une lecture rapide pour valider que Kalystrat répond à votre besoin avant d'engager une soumission.</p>
+            </div>
+        </div>
+
+        <ul class="ks-faq__list">
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Quelles régions du Québec Kalystrat dessert-il&nbsp;?</summary>
+                    <p class="ks-faq__answer">Kalystrat dessert neuf régions principales&nbsp;: Québec, Lévis, Sainte-Foy, Beauport, Sillery, Trois-Rivières, Saguenay, Montréal et Laval. Le siège social est à Québec et nous intervenons partout dans la province pour les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.</p>
+                </details>
+            </li>
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Quel est le délai pour obtenir une soumission&nbsp;?</summary>
+                    <p class="ks-faq__answer">Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est ferme à prix forfaitaire, avec calendrier d'étapes contractuelles.</p>
+                </details>
+            </li>
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Quelles garanties offrez-vous sur vos chantiers&nbsp;?</summary>
+                    <p class="ks-faq__answer">Trois garanties cumulées&nbsp;: (1) Plan de garantie GCR pour le neuf résidentiel&nbsp;; (2) garantie légale du Code civil du Québec sur les vices structurels&nbsp;; (3) licence RBQ vérifiable sur <em>rbq.gouv.qc.ca</em>. Kalystrat détient aussi l'accréditation APCHQ rénovation et la conformité Novoclimat 2.0.</p>
+                </details>
+            </li>
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Êtes-vous conformes au Code de construction du Québec 2026&nbsp;?</summary>
+                    <p class="ks-faq__answer">Oui, 100&nbsp;% conforme. Nos équipes maîtrisent les exigences du Code 2026&nbsp;: étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par <em>blower door</em> avant livraison.</p>
+                </details>
+            </li>
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Que signifie «&nbsp;intégration verticale&nbsp;» chez Kalystrat&nbsp;?</summary>
+                    <p class="ks-faq__answer">L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales&nbsp;: Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages&nbsp;: un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.</p>
+                </details>
+            </li>
+            <li class="ks-faq__item">
+                <details>
+                    <summary class="ks-faq__question">Comment vérifier la licence RBQ de Kalystrat&nbsp;?</summary>
+                    <p class="ks-faq__answer">La licence Régie du bâtiment du Québec (RBQ) est vérifiable publiquement sur <em>rbq.gouv.qc.ca</em>, section «&nbsp;Registre des détenteurs de licence&nbsp;». Le numéro de licence est communiqué dès le premier contact commercial. Nos catégories couvrent toutes les opérations de fondations, structure, toiture, finition et développement immobilier.</p>
+                </details>
+            </li>
+        </ul>
+
+        <div class="ks-faq__cta">
+            <a href="{{ route('faq') }}" class="ks-cta-secondary">Voir toutes les questions fréquentes</a>
         </div>
     </div>
 </section>
