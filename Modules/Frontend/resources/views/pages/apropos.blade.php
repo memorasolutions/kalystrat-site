@@ -56,7 +56,19 @@
     </x-slot:breadcrumb>
 </x-frontend::page-hero>
 
-<section class="ks-section ks-page-section">
+<x-frontend::page-toc :items="[
+    ['id' => 'vision', 'num' => '01', 'label' => 'Notre vision'],
+    ['id' => 'direction', 'num' => '02', 'label' => 'Direction et chiffres'],
+    ['id' => 'structure', 'num' => '03', 'label' => 'Structure du groupe'],
+    ['id' => 'piliers', 'num' => '04', 'label' => 'Pourquoi Kalystrat'],
+    ['id' => 'gouvernance', 'num' => '05', 'label' => 'Gouvernance'],
+    ['id' => 'marche', 'num' => '06', 'label' => 'Marché québécois 2026'],
+    ['id' => 'chaine-valeur', 'num' => '07', 'label' => 'Chaîne de valeur'],
+    ['id' => 'services-centralises', 'num' => '08', 'label' => 'Services centralisés'],
+    ['id' => 'croissance', 'num' => '09', 'label' => 'Stratégie de croissance'],
+]"/>
+
+<section id="vision" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">01</span>
@@ -69,7 +81,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--alt ks-page-section">
+<section id="direction" class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">02</span>
@@ -116,7 +128,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-page-section">
+<section id="structure" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">03</span>
@@ -145,7 +157,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--dark ks-page-section ks-page-section--dark">
+<section id="piliers" class="ks-section ks-section--dark ks-page-section ks-page-section--dark">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">04</span>
@@ -175,7 +187,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-page-section">
+<section id="gouvernance" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">05</span>
@@ -221,7 +233,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-page-section">
+<section id="marche" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">06</span>
@@ -251,7 +263,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-page-section">
+<section id="chaine-valeur" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">07</span>
@@ -272,7 +284,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--alt ks-page-section">
+<section id="services-centralises" class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">08</span>
@@ -317,7 +329,7 @@
     </div>
 </section>
 
-<section class="ks-section ks-page-section">
+<section id="croissance" class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">09</span>

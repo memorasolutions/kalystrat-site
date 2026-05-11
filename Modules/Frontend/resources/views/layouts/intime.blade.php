@@ -491,6 +491,54 @@ if ('serviceWorker' in navigator) {
 </script>
 
 <script>
+{{-- T126 — Scroll-spy TOC IntersectionObserver --}}
+(function () {
+    'use strict';
+    var toc = document.querySelector('[data-ks-toc]');
+    if (!toc) return;
+    var links = toc.querySelectorAll('[data-ks-toc-link]');
+    var toggle = toc.querySelector('[data-ks-toc-toggle]');
+    var ids = Array.from(links).map(function (l) { return l.getAttribute('href').slice(1); });
+    var sections = ids.map(function (id) { return document.getElementById(id); }).filter(Boolean);
+
+    function setActive(id) {
+        links.forEach(function (l) {
+            var href = l.getAttribute('href').slice(1);
+            var active = href === id;
+            l.classList.toggle('is-active', active);
+            if (active) l.setAttribute('aria-current', 'true');
+            else l.removeAttribute('aria-current');
+        });
+    }
+
+    if ('IntersectionObserver' in window && sections.length) {
+        var io = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) setActive(entry.target.id);
+            });
+        }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+        sections.forEach(function (s) { io.observe(s); });
+    }
+
+    if (toggle) {
+        toggle.addEventListener('click', function () {
+            var open = toc.hasAttribute('data-ks-toc-open');
+            if (open) toc.removeAttribute('data-ks-toc-open');
+            else toc.setAttribute('data-ks-toc-open', '');
+            toggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+        });
+        // Auto-close mobile drawer on link click
+        links.forEach(function (l) {
+            l.addEventListener('click', function () {
+                toc.removeAttribute('data-ks-toc-open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
+})();
+</script>
+
+<script>
 (function () {
     'use strict';
     if (!('IntersectionObserver' in window)) return;
