@@ -65,9 +65,9 @@
   --ks-line-height: 1.7;
   --ks-line-height-tight: 1.2;
 
-  /* Espacement rythme 8px */
-  --ks-section-py: clamp(60px, 10vw, 120px);
-  --ks-section-py-sm: clamp(40px, 6vw, 80px);
+  /* Espacement rythme 8px — T137 densification post 11+ sections home */
+  --ks-section-py: clamp(48px, 7vw, 88px);
+  --ks-section-py-sm: clamp(32px, 5vw, 56px);
   --ks-card-padding: clamp(24px, 3vw, 40px);
   --ks-gap: clamp(16px, 2vw, 32px);
   --ks-gap-lg: clamp(24px, 3vw, 48px);
@@ -781,7 +781,7 @@
 
 /* === T77 — Section Trois piliers cinéma (Awwwards mai 2026 100%) === */
 .ks-pillars {
-  padding: clamp(80px, 10vw, 140px) 0 clamp(80px, 10vw, 140px);
+  padding: clamp(64px, 8vw, 100px) 0 clamp(64px, 8vw, 100px);
 }
 
 .ks-pillars__grid {
@@ -895,7 +895,7 @@
 
 /* === T85 — Section "Quatre temps" timeline horizontale (Awwwards mai 2026 Vinci/Skanska) === */
 .ks-process {
-  padding: clamp(80px, 10vw, 140px) 0;
+  padding: clamp(64px, 8vw, 100px) 0;
 }
 
 .ks-process__lead {
@@ -1070,7 +1070,7 @@
 .ks-defi {
   background: linear-gradient(180deg, var(--ks-navy-900) 0%, var(--ks-navy-700) 100%);
   color: var(--ks-white);
-  padding: clamp(80px, 10vw, 140px) 0;
+  padding: clamp(64px, 8vw, 100px) 0;
   position: relative;
   overflow: hidden;
 }
