@@ -2993,3 +2993,54 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
     transition: none;
   }
 }
+
+/* T129 — Cards engagement contractuel (remplacement rings stats 62/80 fabriqués) */
+.ks-approche__commitment {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: clamp(16px, 2vw, 24px);
+  padding: clamp(20px, 2.5vw, 32px);
+  background: var(--ks-white, #fff);
+  border-radius: var(--ks-radius-lg, 16px);
+  border-left: 4px solid var(--ks-gold-500);
+  box-shadow: 0 4px 20px rgba(10,22,40,0.06);
+}
+.ks-approche__commitment + .ks-approche__commitment {
+  margin-top: 1.25rem;
+}
+.ks-approche__commitment-icon {
+  width: 56px;
+  height: 56px;
+  display: block;
+  color: var(--ks-gold-700, #8F3F00);
+  flex-shrink: 0;
+}
+.ks-approche__commitment-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ks-approche__commitment-title {
+  font-family: var(--ks-font-display);
+  font-size: clamp(1.125rem, 1.6vw, 1.375rem);
+  font-weight: 700;
+  color: var(--ks-navy-900);
+  margin: 0;
+  line-height: 1.2;
+}
+.ks-approche__commitment-text {
+  font-family: var(--ks-font-body);
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  color: var(--ks-navy-900);
+  opacity: 0.88;
+  margin: 0;
+}
+.ks-approche__commitment-text em {
+  font-style: normal;
+  background: var(--ks-gray-100, #F5F5F0);
+  padding: 0 4px;
+  border-radius: 3px;
+  font-family: var(--ks-font-mono, monospace);
+  font-size: 0.875em;
+}

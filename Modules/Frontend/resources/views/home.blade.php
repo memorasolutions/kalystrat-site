@@ -224,7 +224,7 @@
             <article class="ks-approche__narrative">
                 <span class="ks-eyebrow">Conçu, réalisé, livré</span>
                 <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
-                <p class="ks-lead ks-approche__lead">L’intégration verticale n’est pas un buzzword. C’est une discipline opérationnelle qui se mesure&nbsp;: moins d’imprévus de coordination, des délais respectés, une qualité homogène du sous-sol au toit. Voici nos résultats concrets sur les chantiers livrés.</p>
+                <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un buzzword. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
                 <p class="ks-lead ks-approche__lead">Six directions de filiales, chacune pilotée par un expert reconnu de son métier, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des spécialisations et la conformité totale au Code de construction du Québec 2026.</p>
                 <div class="ks-approche__expertise" aria-hidden="true">
                     <span class="ks-approche__expertise-label">Expertise structurée</span>
@@ -235,96 +235,32 @@
                     </div>
                 </div>
             </article>
-            <aside class="ks-approche__stats" data-approche-stats aria-label="Indicateurs de performance">
-                <article class="ks-approche__stat" data-stat-target="62">
-                    <div class="ks-approche__ring-wrap">
-                        <svg class="ks-approche__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-                            <circle class="ks-approche__ring-bg" cx="60" cy="60" r="52"></circle>
-                            <circle class="ks-approche__ring-fg" cx="60" cy="60" r="52" data-ring-fg></circle>
-                        </svg>
-                        <div class="ks-approche__ring-num">
-                            <span data-counter="62" aria-hidden="true">0</span><span class="ks-approche__ring-pct" aria-hidden="true">%</span>
-                            <span class="ks-sr-only">62 %</span>
-                        </div>
-                    </div>
-                    <div class="ks-approche__stat-meta">
-                        <span class="ks-eyebrow">Délais respectés</span>
-                        <p class="ks-approche__stat-label">Projets livrés à temps sur l’ensemble des chantiers Kalystrat</p>
+            <aside class="ks-approche__stats" aria-label="Engagements contractuels Kalystrat">
+                <article class="ks-approche__commitment">
+                    <svg class="ks-approche__commitment-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9 11l3 3 8-8M20 12v6a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h9"/>
+                    </svg>
+                    <div class="ks-approche__commitment-meta">
+                        <span class="ks-eyebrow">Engagement contractuel</span>
+                        <h3 class="ks-approche__commitment-title">Prix forfaitaire et calendrier écrit</h3>
+                        <p class="ks-approche__commitment-text">Soumission ferme avec calendrier d'étapes contractuelles. Avenants signés conjointement, jamais d'augmentation unilatérale du devis initial.</p>
                     </div>
                 </article>
-                <article class="ks-approche__stat" data-stat-target="80">
-                    <div class="ks-approche__ring-wrap">
-                        <svg class="ks-approche__ring" viewBox="0 0 120 120" aria-hidden="true" focusable="false">
-                            <circle class="ks-approche__ring-bg" cx="60" cy="60" r="52"></circle>
-                            <circle class="ks-approche__ring-fg" cx="60" cy="60" r="52" data-ring-fg></circle>
-                        </svg>
-                        <div class="ks-approche__ring-num">
-                            <span data-counter="80" aria-hidden="true">0</span><span class="ks-approche__ring-pct" aria-hidden="true">%</span>
-                            <span class="ks-sr-only">80 %</span>
-                        </div>
-                    </div>
-                    <div class="ks-approche__stat-meta">
-                        <span class="ks-eyebrow">Recommandation</span>
-                        <p class="ks-approche__stat-label">Clients qui recommandent Kalystrat à leur entourage</p>
+                <article class="ks-approche__commitment">
+                    <svg class="ks-approche__commitment-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M12 2l8 4v6c0 5-3.5 9.5-8 10-4.5-.5-8-5-8-10V6l8-4z"/>
+                        <path fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4"/>
+                    </svg>
+                    <div class="ks-approche__commitment-meta">
+                        <span class="ks-eyebrow">Garanties cumulées</span>
+                        <h3 class="ks-approche__commitment-title">Plan GCR · Code civil · licence RBQ</h3>
+                        <p class="ks-approche__commitment-text">Plan de garantie GCR pour le neuf résidentiel, garantie légale du Code civil du Québec sur vices structurels, licence RBQ vérifiable sur <em>rbq.gouv.qc.ca</em>.</p>
                     </div>
                 </article>
             </aside>
         </div>
     </div>
 </section>
-
-@push('scripts')
-<script>
-(function () {
-    'use strict';
-    var stats = document.querySelectorAll('[data-approche-stats] .ks-approche__stat');
-    if (!stats.length || !('IntersectionObserver' in window)) {
-        stats.forEach && stats.forEach(function (s) {
-            var t = parseInt(s.getAttribute('data-stat-target'), 10);
-            var n = s.querySelector('[data-counter]');
-            var r = s.querySelector('[data-ring-fg]');
-            if (n) n.textContent = String(t);
-            if (r) r.style.strokeDashoffset = String(327 - (327 * t) / 100);
-        });
-        return;
-    }
-    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    function animate(stat) {
-        var target = parseInt(stat.getAttribute('data-stat-target'), 10);
-        var numEl = stat.querySelector('[data-counter]');
-        var ring  = stat.querySelector('[data-ring-fg]');
-        if (!numEl || !ring) return;
-        var circ = 327;
-        var offset = circ - (circ * target) / 100;
-        if (reduceMotion) {
-            numEl.textContent = String(target);
-            ring.style.transition = 'none';
-            ring.style.strokeDashoffset = String(offset);
-            return;
-        }
-        ring.style.strokeDashoffset = String(offset);
-        var duration = 1800;
-        var start = performance.now();
-        function tick(now) {
-            var t = Math.min((now - start) / duration, 1);
-            var eased = 1 - Math.pow(1 - t, 3);
-            numEl.textContent = String(Math.round(eased * target));
-            if (t < 1) requestAnimationFrame(tick);
-        }
-        requestAnimationFrame(tick);
-    }
-    var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-                animate(entry.target);
-                io.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.4 });
-    stats.forEach(function (s) { io.observe(s); });
-})();
-</script>
-@endpush
 
 @php
     $showcasePath = public_path('intime/images/pages/home-showcase-aerial.webp');
