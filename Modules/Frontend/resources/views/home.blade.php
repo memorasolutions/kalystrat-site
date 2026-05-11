@@ -73,6 +73,32 @@
     </div>
 </header>
 
+<aside class="ks-trust-row" aria-label="Signaux de conformité et de qualité">
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">RBQ</span>
+        <span class="ks-trust-row__label">Licence active</span>
+    </div>
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">CCQ</span>
+        <span class="ks-trust-row__label">Main-d’œuvre certifiée</span>
+    </div>
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">APCHQ</span>
+        <span class="ks-trust-row__label">Garantie rénovation</span>
+    </div>
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">GCR</span>
+        <span class="ks-trust-row__label">Garantie neuf résidentiel</span>
+    </div>
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">Novoclimat 2.0</span>
+        <span class="ks-trust-row__label">Efficacité énergétique</span>
+    </div>
+    <div class="ks-trust-row__item">
+        <span class="ks-trust-row__badge">Code QC 2026</span>
+        <span class="ks-trust-row__label">Conformité totale</span>
+    </div>
+</aside>
 
 <section class="ks-section ks-pillars">
     <div class="ks-container">

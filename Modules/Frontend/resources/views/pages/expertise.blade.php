@@ -16,6 +16,27 @@
     'name' => 'Expertise Kalystrat',
     'url' => url('/expertise'),
     'about' => 'Méthodes, normes, qualité, BIM, sécurité en construction',
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-h2', '.ks-card__title'],
+    ],
+    'inLanguage' => 'fr-CA',
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+<script type="application/ld+json">@php echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'HowTo',
+    'name' => 'Comment obtenir une soumission Kalystrat',
+    'description' => 'Cinq étapes du premier contact à la soumission détaillée pour votre projet de construction au Québec.',
+    'inLanguage' => 'fr-CA',
+    'totalTime' => 'P10D',
+    'estimatedCost' => ['@type' => 'MonetaryAmount', 'currency' => 'CAD', 'value' => '0'],
+    'step' => [
+        ['@type' => 'HowToStep', 'position' => 1, 'name' => 'Premier contact', 'text' => 'Vous nous transmettez le type de projet, la surface estimée et vos contraintes via le formulaire ou par courriel à info@kalystrat.ca.'],
+        ['@type' => 'HowToStep', 'position' => 2, 'name' => 'Visite et étude', 'text' => 'Un chargé de projet visite le site, prend les mesures et étudie les plans techniques. Visite gratuite pour le résidentiel.'],
+        ['@type' => 'HowToStep', 'position' => 3, 'name' => 'Évaluation interne', 'text' => 'Les filiales concernées (fondations, structure, toiture, finition) chiffrent leur portion sous la coordination du chargé de projet.'],
+        ['@type' => 'HowToStep', 'position' => 4, 'name' => 'Soumission détaillée', 'text' => 'Document écrit livré sous 5 à 10 jours ouvrables avec ventilation par filiale, échéancier et conditions contractuelles.'],
+        ['@type' => 'HowToStep', 'position' => 5, 'name' => 'Validation et signature', 'text' => 'Rencontre de validation, ajustements éventuels, signature du contrat unique Kalystrat couvrant l’ensemble des travaux.'],
+    ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
     '@context' => 'https://schema.org',

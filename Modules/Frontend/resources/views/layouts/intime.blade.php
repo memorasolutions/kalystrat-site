@@ -430,6 +430,60 @@ if ('serviceWorker' in navigator) {
 
 @stack('scripts')
 
+{{-- V5d-A — Bannière de consentement Loi 25 / RGPD / LPRPDE --}}
+<div class="ks-cookie-banner" role="region" aria-label="Avis de confidentialité" hidden data-ks-cookie>
+    <div class="ks-cookie-banner__inner">
+        <div class="ks-cookie-banner__content">
+            <strong>Confidentialité</strong>
+            Ce site utilise des témoins essentiels au fonctionnement et des outils de mesure d’audience. Conformément à la <strong>Loi&nbsp;25 du Québec</strong> et au RGPD, vous pouvez accepter, refuser ou consulter notre <a href="{{ url('/politique-confidentialite') }}">politique de confidentialité</a>.
+        </div>
+        <div class="ks-cookie-banner__actions">
+            <button type="button" class="ks-cookie-banner__btn ks-cookie-banner__btn--decline" data-ks-cookie-decline>Refuser</button>
+            <button type="button" class="ks-cookie-banner__btn ks-cookie-banner__btn--accept" data-ks-cookie-accept>Accepter</button>
+        </div>
+    </div>
+</div>
+<script>
+(function () {
+    'use strict';
+    var STORAGE_KEY = 'ks-cookie-consent-v1';
+    var banner = document.querySelector('[data-ks-cookie]');
+    if (!banner) return;
+    if (localStorage.getItem(STORAGE_KEY)) return;
+    banner.hidden = false;
+    document.querySelector('[data-ks-cookie-accept]').addEventListener('click', function () {
+        localStorage.setItem(STORAGE_KEY, 'accepted-' + Date.now());
+        banner.hidden = true;
+    });
+    document.querySelector('[data-ks-cookie-decline]').addEventListener('click', function () {
+        localStorage.setItem(STORAGE_KEY, 'declined-' + Date.now());
+        banner.hidden = true;
+    });
+})();
+</script>
+
+{{-- V5d-B — Sticky CTA mobile (visible scroll bas) --}}
+<a class="ks-sticky-cta" href="{{ url('/contact') }}" aria-label="Obtenir une soumission" hidden data-ks-sticky-cta>
+    <span class="ks-sticky-cta__icon" aria-hidden="true">📞</span>
+    <span class="ks-sticky-cta__text">Obtenir une soumission</span>
+</a>
+<script>
+(function () {
+    'use strict';
+    var cta = document.querySelector('[data-ks-sticky-cta]');
+    if (!cta) return;
+    var revealAt = 600;
+    function check() {
+        if (window.innerWidth >= 768) { cta.hidden = true; return; }
+        if (window.scrollY > revealAt) { cta.hidden = false; }
+        else { cta.hidden = true; }
+    }
+    window.addEventListener('scroll', check, { passive: true });
+    window.addEventListener('resize', check);
+    check();
+})();
+</script>
+
 <script>
 (function () {
     'use strict';

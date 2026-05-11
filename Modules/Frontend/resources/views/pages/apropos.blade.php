@@ -18,6 +18,11 @@
     'name' => 'À propos de Gestion Kalystrat Inc.',
     'description' => 'Groupe québécois de construction à intégration verticale.',
     'url' => 'https://kalystrat.ca/a-propos',
+    'inLanguage' => 'fr-CA',
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-h2', '.ks-lead'],
+    ],
     'mainEntity' => [
         '@type' => 'Organization',
         'name' => 'Gestion Kalystrat Inc.',
@@ -248,10 +253,76 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--alt ks-page-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">07</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Chaîne de valeur intégrée</span>
+                <h2 class="ks-h2">Une boucle complète, six maillons, une seule signature</h2>
+                <p class="ks-lead">Chaque projet suit le même circuit interne, de l’acquisition jusqu’à la livraison clé en main. Aucune rupture, aucun délai de coordination avec un sous-traitant externe.</p>
+            </div>
+        </div>
+        <ol class="ks-chain ks-fade-in" aria-label="Chaîne de valeur intégrée Kalystrat">
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">01</span><strong>Kalystrat Immobilier</strong><span class="ks-chain__role">Acquiert terrain ou propriété</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">02</span><strong>Kalystrat Fondations</strong><span class="ks-chain__role">Excave et coule la fondation</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">03</span><strong>Kalystrat Structure</strong><span class="ks-chain__role">Charpente le bâtiment</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">04</span><strong>Kalystrat Toiture et Enveloppe</strong><span class="ks-chain__role">Protège et étanchéifie</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">05</span><strong>Kalystrat Finition Intérieure</strong><span class="ks-chain__role">Complète les espaces</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">06</span><strong>Kalystrat Placement Construction</strong><span class="ks-chain__role">Fournit la main-d’œuvre à chaque étape</span></li>
+        </ol>
+    </div>
+</section>
+
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">08</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Services centralisés</span>
+                <h2 class="ks-h2">Gouvernance centralisée, exécution décentralisée</h2>
+                <p class="ks-lead">Cinq fonctions de soutien sont mutualisées à l’échelle du groupe pour réduire les frais généraux par filiale et garantir la cohérence opérationnelle.</p>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Centralisé · 01</span>
+                <h3 class="ks-card__title">Comptabilité et finances</h3>
+                <p class="ks-card__text">Tenue de livres, états financiers consolidés, gestion de la trésorerie, planification fiscale, budgétisation.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Centralisé · 02</span>
+                <h3 class="ks-card__title">Ressources humaines</h3>
+                <p class="ks-card__text">Recrutement de cadres, paie, avantages sociaux, santé-sécurité au travail, conformité CCQ.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Centralisé · 03</span>
+                <h3 class="ks-card__title">Juridique</h3>
+                <p class="ks-card__text">Contrats, conformité réglementaire (RBQ, CCQ), propriété intellectuelle, gestion de litiges.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Centralisé · 04</span>
+                <h3 class="ks-card__title">Marketing</h3>
+                <p class="ks-card__text">Stratégie de marque unifiée, site web, médias sociaux, publicité, relations publiques.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Centralisé · 05</span>
+                <h3 class="ks-card__title">Technologies de l’information</h3>
+                <p class="ks-card__text">Infrastructure informatique, logiciels de gestion de projet, système ERP, cybersécurité.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Avantage groupe</span>
+                <h3 class="ks-card__title">Frais généraux réduits par filiale</h3>
+                <p class="ks-card__text">La mutualisation des fonctions support permet à chaque filiale de concentrer ses ressources sur l’exécution opérationnelle, sans recréer une structure administrative complète.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">09</span>
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Stratégie de croissance</span>
                 <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>
