@@ -164,9 +164,9 @@
             ['n' => '06', 't' => 'Gestion centralisée', 'd' => "Comptabilité, RH, juridique, marketing, TI centralisés à l'échelle du groupe. Frais généraux réduits par filiale."],
         ];
         @endphp
-        <div class="ks-piliers-asym ks-fade-in">
+        <div class="ks-bento ks-bento--3col ks-fade-in">
             @foreach($piliers as $i => $p)
-            <article class="ks-card ks-card--dark ks-piliers-asym__card{{ $i === 0 ? ' ks-piliers-asym__card--hero' : '' }}{{ $i === 5 ? ' ks-piliers-asym__card--wide' : '' }}">
+            <article class="ks-card ks-card--dark">
                 <h3 class="ks-card__title">{{ $p['t'] }}</h3>
                 <p class="ks-card__text">{{ $p['d'] }}</p>
             </article>
