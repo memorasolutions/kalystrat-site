@@ -37,6 +37,11 @@ Route::get('/zones-desservies/{ville}', [PageController::class, 'zonesShow'])
     ->where('ville', 'quebec|levis|sainte-foy|beauport|sillery|trois-rivieres|saguenay|montreal|laval')
     ->name('zones.ville');
 
+// T138c — Sous-pages quartier premium (cluster topical authority niveau 2)
+Route::view('/zones-desservies/quebec/vieux-quebec', 'frontend::pages.quartiers.vieux-quebec')->name('quartier.vieux-quebec');
+Route::view('/zones-desservies/montreal/plateau-mont-royal', 'frontend::pages.quartiers.plateau-mont-royal')->name('quartier.plateau-mont-royal');
+Route::view('/zones-desservies/montreal/westmount', 'frontend::pages.quartiers.westmount')->name('quartier.westmount');
+
 // Secteurs — B2B verticaux (résidentiel, commercial, institutionnel, industriel, municipal)
 Route::get('/secteurs', [PageController::class, 'secteursIndex'])->name('secteurs.index');
 Route::get('/secteurs/{slug}', [PageController::class, 'secteursShow'])

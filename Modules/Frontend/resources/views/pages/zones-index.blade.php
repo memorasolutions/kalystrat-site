@@ -127,10 +127,11 @@ echo json_encode([
         </div>
 
         <div class="ks-zones__geo" aria-label="Regroupement géographique des villes desservies">
-            <article class="ks-zones__geo-group">
+<article class="ks-zones__geo-group">
                 <h3 class="ks-zones__geo-title">Capitale-Nationale</h3>
                 <ul class="ks-zones__geo-list">
                     <li><a href="{{ route('zones.ville', 'quebec') }}">Québec</a></li>
+                    <li><a href="{{ route('quartier.vieux-quebec') }}" style="font-size:0.875rem;padding-left:0.75rem;opacity:0.85">↳ Vieux-Québec</a></li>
                     <li><a href="{{ route('zones.ville', 'sainte-foy') }}">Sainte-Foy</a></li>
                     <li><a href="{{ route('zones.ville', 'beauport') }}">Beauport</a></li>
                     <li><a href="{{ route('zones.ville', 'sillery') }}">Sillery</a></li>
@@ -154,10 +155,12 @@ echo json_encode([
                     <li><a href="{{ route('zones.ville', 'saguenay') }}">Saguenay</a></li>
                 </ul>
             </article>
-            <article class="ks-zones__geo-group">
+<article class="ks-zones__geo-group">
                 <h3 class="ks-zones__geo-title">Grand Montréal</h3>
                 <ul class="ks-zones__geo-list">
                     <li><a href="{{ route('zones.ville', 'montreal') }}">Montréal</a></li>
+                    <li><a href="{{ route('quartier.plateau-mont-royal') }}" style="font-size:0.875rem;padding-left:0.75rem;opacity:0.85">↳ Plateau-Mont-Royal</a></li>
+                    <li><a href="{{ route('quartier.westmount') }}" style="font-size:0.875rem;padding-left:0.75rem;opacity:0.85">↳ Westmount</a></li>
                     <li><a href="{{ route('zones.ville', 'laval') }}">Laval</a></li>
                 </ul>
             </article>
