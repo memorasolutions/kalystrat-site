@@ -64,12 +64,14 @@ echo json_encode([
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/faq-hero.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>FAQ</li>
         </ul>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Tout savoir sur Kalystrat</span>
         <h1>Questions fréquentes</h1>
         <p class="ks-page-hero__subtitle">Vingt-trois réponses aux questions les plus posées par nos clients, partenaires et candidats. Si la vôtre n’y figure pas, écrivez-nous.</p>
     </div>
