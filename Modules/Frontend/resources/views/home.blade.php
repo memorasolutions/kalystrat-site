@@ -1,6 +1,6 @@
 @extends('frontend::layouts.intime')
 
-@section('title', 'Kalystrat — Holding québécois de construction à intégration verticale')
+@section('title', 'Kalystrat — Groupe québécois de construction à intégration verticale')
 
 @push('meta')
 <meta name="description" content="Six filiales spécialisées sous une marque unifiée. Du chantier à la livraison, Kalystrat orchestre votre projet de construction au Québec.">
@@ -18,7 +18,7 @@
     'name' => 'Gestion Kalystrat Inc.',
     'url' => url('/'),
     'logo' => url('/intime/images/logo.svg'),
-    'description' => "Holding québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction.",
+    'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction.",
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
     'founder' => ['@type' => 'Person', 'name' => 'Ali Salomon', 'jobTitle' => 'Président et Directeur Général'],
     'subOrganization' => [
@@ -94,7 +94,7 @@
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">03</div>
                 <h3 class="ks-pillar__title">Main-d’œuvre CCQ interne</h3>
-                <p class="ks-pillar__text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat 2.0. Standards holding partagés.</p>
+                <p class="ks-pillar__text">Compagnons certifiés, formés au Code 2026 et aux normes Novoclimat 2.0. Standards de groupe partagés.</p>
             </article>
         </div>
     </div>

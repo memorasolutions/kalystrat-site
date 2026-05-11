@@ -1,12 +1,12 @@
 @extends('frontend::layouts.intime')
 
-@section('title', 'À propos | Kalystrat — Holding québécois de construction')
+@section('title', 'À propos | Kalystrat — Groupe québécois de construction')
 
 @push('meta')
-<meta name="description" content="Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée.">
+<meta name="description" content="Gestion Kalystrat Inc., groupe québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée.">
 <link rel="canonical" href="{{ url('/a-propos') }}">
 <meta property="og:title" content="À propos de Gestion Kalystrat Inc.">
-<meta property="og:description" content="Holding québécois à intégration verticale. Six filiales, une marque unifiée.">
+<meta property="og:description" content="Groupe québécois à intégration verticale. Six filiales, une marque unifiée.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url('/a-propos') }}">
 @endpush
@@ -16,7 +16,7 @@
     '@context' => 'https://schema.org',
     '@type' => 'AboutPage',
     'name' => 'À propos de Gestion Kalystrat Inc.',
-    'description' => 'Holding québécois de construction à intégration verticale.',
+    'description' => 'Groupe québécois de construction à intégration verticale.',
     'url' => 'https://kalystrat.ca/a-propos',
     'mainEntity' => [
         '@type' => 'Organization',
@@ -39,29 +39,41 @@
 
 @section('content')
 
-<header class="ks-page-hero">
-    <div class="ks-container">
+<header class="ks-page-hero ks-page-hero--photo" style="--ks-hero-photo: url('/intime/images/pages/apropos-hero-montreal-night.jpg')">
+    <div class="ks-page-hero__overlay" aria-hidden="true"></div>
+    <div class="ks-container ks-page-hero__inner">
         <ul class="ks-page-hero__breadcrumb">
             <li><a href="{{ url('/') }}">Accueil</a></li>
             <li>À propos</li>
         </ul>
-        <h1>À propos de Gestion Kalystrat Inc.</h1>
-        <p class="ks-page-hero__subtitle">Holding québécois de construction à intégration verticale. Six filiales spécialisées qui couvrent toute la chaîne, du sol au plafond.</p>
+        <span class="ks-eyebrow ks-page-hero__eyebrow">Conçu, réalisé, livré</span>
+        <h1>Un groupe québécois de construction à intégration verticale</h1>
+        <p class="ks-page-hero__subtitle">Six filiales spécialisées sous une marque unifiée. Une vision : faire de Gestion Kalystrat Inc. une référence québécoise de la construction intégrée.</p>
     </div>
 </header>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
-            <span class="ks-eyebrow">Notre vision</span>
-            <h2 class="ks-h2">Bâtir un groupe intégré de référence au Québec</h2>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">01</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Notre vision</span>
+                <h2 class="ks-h2">Bâtir un groupe intégré de référence au Québec</h2>
+            </div>
         </div>
-        <p class="ks-lead ks-fade-in">Gestion Kalystrat Inc. exerce un contrôle complet sur la chaîne de valeur, de l’excavation aux finitions, tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée. Notre ambition&nbsp;: devenir, d’ici huit ans, un acteur structurant de l’industrie québécoise de la construction.</p>
+        <p class="ks-lead ks-fade-in">Gestion Kalystrat Inc. exerce un contrôle complet sur la chaîne de valeur, de l’excavation aux finitions, tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée. Notre ambition&nbsp;: devenir un acteur structurant de l’industrie québécoise de la construction, en bâtissant un groupe intégré de référence.</p>
     </div>
 </section>
 
-<section class="ks-section ks-section--alt">
+<section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">02</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Direction et chiffres</span>
+                <h2 class="ks-h2">Une direction pilotée depuis Québec</h2>
+            </div>
+        </div>
         <div class="ks-bento ks-bento--feature ks-fade-in">
             <article class="ks-card ks-card--accent-gold">
                 <span class="ks-eyebrow">Fondateur</span>
@@ -82,7 +94,7 @@
             <article class="ks-card">
                 <div class="ks-stat__number">9</div>
                 <div class="ks-stat__label">Régions Québec desservies</div>
-                <p class="ks-card__text" style="margin-top:1rem">Couverture provinciale du holding, de la Capitale-Nationale à la Mauricie.</p>
+                <p class="ks-card__text" style="margin-top:1rem">Couverture provinciale du groupe, de la Capitale-Nationale à la Mauricie.</p>
             </article>
 
             <article class="ks-card">
@@ -100,13 +112,20 @@
     </div>
 </section>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-fade-in">
-            <span class="ks-eyebrow">Structure du groupe</span>
-            <h2 class="ks-h2">Six filiales, une marque unifiée</h2>
-            <p class="ks-lead">La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance. Chaque filiale est dirigée par un directeur dédié relevant directement de la présidence.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">03</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Structure du groupe</span>
+                <h2 class="ks-h2">Six filiales, une marque unifiée</h2>
+                <p class="ks-lead">La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance. Chaque filiale est dirigée par un directeur dédié relevant directement de la présidence.</p>
+            </div>
         </div>
+        <figure class="ks-page-section__visual ks-fade-in">
+            <img src="/intime/images/pages/apropos-aerial-cranes.jpg" alt="Vue aérienne d'un chantier urbain en construction à Montréal" loading="lazy" width="940" height="650">
+            <figcaption>L’intégration verticale en action : du sol au toit, sous une seule marque.</figcaption>
+        </figure>
         <div class="ks-bento ks-fade-in">
             @foreach($filiales as $slug => $f)
             <article class="ks-card ks-card--accent-gold">
@@ -122,11 +141,14 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--dark">
+<section class="ks-section ks-section--dark ks-page-section ks-page-section--dark">
     <div class="ks-container">
-        <div class="ks-section__heading ks-fade-in">
-            <span class="ks-eyebrow">Pourquoi Kalystrat</span>
-            <h2 class="ks-h2">Six piliers d’avantage concurrentiel</h2>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">04</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Pourquoi Kalystrat</span>
+                <h2 class="ks-h2">Six piliers d’avantage concurrentiel</h2>
+            </div>
         </div>
         @php
         $piliers = [
@@ -135,7 +157,7 @@
             ['n' => '03', 't' => 'Demande captive', 'd' => "Kalystrat Immobilier développe ses propres projets et génère un flux de travail constant pour les cinq autres filiales."],
             ['n' => '04', 't' => 'Synergies opérationnelles', 'd' => "Immobilier puis Fondations, Structure, Toiture-Enveloppe, Finition, Placement. La chaîne complète fonctionne en boucle."],
             ['n' => '05', 't' => 'Cohérence de marque', 'd' => "La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires."],
-            ['n' => '06', 't' => 'Gestion centralisée', 'd' => "Comptabilité, RH, juridique, marketing, TI centralisés au niveau du holding. Frais généraux réduits par filiale."],
+            ['n' => '06', 't' => 'Gestion centralisée', 'd' => "Comptabilité, RH, juridique, marketing, TI centralisés à l'échelle du groupe. Frais généraux réduits par filiale."],
         ];
         @endphp
         <div class="ks-bento ks-fade-in">
@@ -150,13 +172,20 @@
     </div>
 </section>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-fade-in">
-            <span class="ks-eyebrow">Gouvernance</span>
-            <h2 class="ks-h2">Conseil consultatif</h2>
-            <p class="ks-lead">Cinq sièges complémentaires&nbsp;: construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers nommés, trois sièges en cours de recrutement.</p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">05</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Gouvernance</span>
+                <h2 class="ks-h2">Conseil consultatif</h2>
+                <p class="ks-lead">Cinq sièges complémentaires&nbsp;: construction et ingénierie, financement et investissement, droit des affaires, ressources humaines, immobilier. Deux conseillers nommés, trois sièges en cours de recrutement.</p>
+            </div>
         </div>
+        <figure class="ks-page-section__visual ks-fade-in">
+            <img src="/intime/images/pages/apropos-team-architects.jpg" alt="Deux professionnels en discussion devant un plan de construction" loading="lazy" width="940" height="650">
+            <figcaption>Une gouvernance qui s’appuie sur des expertises complémentaires reconnues.</figcaption>
+        </figure>
         <div class="ks-bento ks-bento--2col ks-fade-in">
             <article class="ks-card ks-card--accent-gold">
                 <span class="ks-eyebrow">Conseiller — Droit des affaires</span>
@@ -189,11 +218,14 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--alt">
+<section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-fade-in">
-            <span class="ks-eyebrow">Stratégie de croissance</span>
-            <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">06</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Stratégie de croissance</span>
+                <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>
+            </div>
         </div>
         <div class="ks-bento ks-bento--2col ks-fade-in">
             <article class="ks-card ks-card--accent-navy">
@@ -214,7 +246,7 @@
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Discutons de votre projet</h2>
-        <p>Une équipe basée à Québec, six filiales spécialisées, un chargé de projet unique pour piloter votre dossier de A à Z.</p>
+        <p>Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier du devis à la réception finale.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>

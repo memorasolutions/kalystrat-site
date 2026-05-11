@@ -57,7 +57,7 @@ echo json_encode([
         <div class="ks-section__heading">
             <span class="ks-eyebrow">Direction</span>
             <h2 class="ks-h2">Présidence et direction des filiales</h2>
-            <p class="ks-lead">Le fondateur Ali Salomon dirige le groupe et chaque direction de filiale lui relève directement. Cette structure permet une vision unifiée à l'échelle du holding et une exécution rigoureuse au niveau de chaque métier.</p>
+            <p class="ks-lead">Le fondateur Ali Salomon dirige le groupe et chaque direction de filiale lui relève directement. Cette structure permet une vision unifiée à l'échelle du groupe et une exécution rigoureuse au niveau de chaque métier.</p>
         </div>
         <div class="ks-bento">
             <article class="ks-card ks-card--accent-gold">
@@ -121,7 +121,7 @@ echo json_encode([
             <article class="ks-card">
                 <div class="ks-card__meta">Profil recherché</div>
                 <h3 class="ks-card__title">Financement et investissement</h3>
-                <p class="ks-card__text">Professionnel en financement d'entreprise et structuration financière, expérience holding et acquisitions un atout.</p>
+                <p class="ks-card__text">Professionnel en financement d'entreprise et structuration financière, expérience en société de portefeuille et acquisitions un atout.</p>
             </article>
             <article class="ks-card">
                 <div class="ks-card__meta">Profil recherché</div>
@@ -136,7 +136,7 @@ echo json_encode([
     <div class="ks-container">
         <div class="ks-section__heading">
             <span class="ks-eyebrow">Services centralisés</span>
-            <h2 class="ks-h2">Six fonctions transverses au niveau du holding</h2>
+            <h2 class="ks-h2">Six fonctions transverses à l'échelle du groupe</h2>
             <p class="ks-lead" style="color:rgba(255,255,255,0.85)">La centralisation des fonctions de soutien au niveau de Gestion Kalystrat Inc. maximise l'efficacité et réduit les frais généraux pour chaque filiale.</p>
         </div>
         <div class="ks-bento">

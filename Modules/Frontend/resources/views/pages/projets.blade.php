@@ -3,7 +3,7 @@
 @section('title', 'Projets et réalisations | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Réalisations Kalystrat : projets résidentiels, commerciaux et institutionnels au Québec. Galerie de chantiers livrés par les six filiales du holding.">
+<meta name="description" content="Réalisations Kalystrat : projets résidentiels, commerciaux et institutionnels au Québec. Galerie de chantiers livrés par les six filiales du groupe.">
 <link rel="canonical" href="{{ url('/projets') }}">
 @endpush
 

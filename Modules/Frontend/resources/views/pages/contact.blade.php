@@ -6,7 +6,7 @@
 <meta name="description" content="Contactez Gestion Kalystrat Inc. pour votre projet de construction au Québec. Soumission gratuite, conseil intégré sur six métiers, équipe basée à Québec.">
 <link rel="canonical" href="{{ url('/contact') }}">
 <meta property="og:title" content="Contact — Kalystrat">
-<meta property="og:description" content="Demandez une soumission gratuite. Holding québécois de construction.">
+<meta property="og:description" content="Demandez une soumission gratuite. Groupe québécois de construction.">
 <meta property="og:type" content="website">
 @endpush
 

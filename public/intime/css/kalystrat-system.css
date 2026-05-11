@@ -1525,6 +1525,137 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 /* ============================================================
+   Pages secondaires — Vague 1 (T94+) — Composants partagés
+   .ks-page-hero--photo : hero avec photo background + overlay navy
+   .ks-page-section : section avec numéro XXL gold + heading inline
+   .ks-page-section__visual : figure imagée stylisée
+   ============================================================ */
+.ks-page-hero--photo {
+  position: relative;
+  min-height: clamp(280px, 38vh, 420px);
+  background-image: var(--ks-hero-photo);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: flex;
+  align-items: flex-end;
+  padding-block: clamp(2.5rem, 6vw, 5rem);
+  overflow: hidden;
+}
+
+.ks-page-hero--photo .ks-page-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg,
+    rgba(10, 22, 40, 0.45) 0%,
+    rgba(10, 22, 40, 0.85) 100%);
+  z-index: 0;
+}
+
+.ks-page-hero--photo .ks-page-hero__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.ks-page-hero--photo .ks-page-hero__breadcrumb a,
+.ks-page-hero--photo .ks-page-hero__breadcrumb {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.ks-page-hero--photo .ks-page-hero__eyebrow {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: var(--ks-gold-500);
+  letter-spacing: 0.14em;
+}
+
+.ks-page-hero--photo h1 {
+  color: #fff;
+  margin: 0 0 1rem;
+}
+
+.ks-page-hero--photo .ks-page-hero__subtitle {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 780px;
+}
+
+/* Section avec numéro XXL gold */
+.ks-page-section__intro {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+  align-items: start;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+@media (max-width: 720px) {
+  .ks-page-section__intro {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+}
+
+.ks-page-section__num {
+  font-family: var(--ks-font-display);
+  font-size: clamp(4rem, 8vw, 7rem);
+  font-weight: 700;
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  background: linear-gradient(180deg, var(--ks-gold-500) 0%, var(--ks-gold-700) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--ks-gold-700);
+  display: inline-block;
+}
+
+.ks-page-section--dark .ks-page-section__num {
+  background: linear-gradient(180deg, var(--ks-gold-500) 0%, var(--ks-gold-300, #D4C7A4) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.ks-page-section__heading .ks-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.ks-page-section__heading .ks-h2 {
+  margin: 0 0 0.75rem;
+}
+
+/* Figure stylisée pour visuels intégrés */
+.ks-page-section__visual {
+  margin: clamp(2rem, 4vw, 3rem) 0;
+  border-left: 3px solid var(--ks-gold-500);
+  padding-left: clamp(1rem, 2vw, 1.5rem);
+}
+
+.ks-page-section__visual img {
+  width: 100%;
+  height: auto;
+  max-height: 480px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 16px 40px -16px rgba(10, 22, 40, 0.35);
+  display: block;
+}
+
+.ks-page-section__visual figcaption {
+  margin-top: 0.75rem;
+  font-family: var(--ks-font-body);
+  font-size: 0.875rem;
+  color: var(--ks-gold-aaa);
+  font-style: italic;
+}
+
+.ks-page-section--dark .ks-page-section__visual figcaption {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* ============================================================
    Section « Pourquoi Kalystrat » — T93 (Bento asymétrique mai 2026)
    Numéro section XXL gold + border-top + 4 cards (1 hero + 3 std)
    Séparation visible mais sobre (ton-sur-ton + accent gold)

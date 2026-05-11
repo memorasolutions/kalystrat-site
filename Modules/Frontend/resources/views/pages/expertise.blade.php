@@ -46,7 +46,7 @@
             <span class="ks-eyebrow">Méthodes et standards</span>
             <h2 class="ks-h2">Excellence technique appliquée à chaque chantier</h2>
         </div>
-        <p class="ks-lead">L'expertise Kalystrat ne se résume pas à des compétences individuelles. C'est un système intégré qui combine conformité réglementaire stricte, technologies de pointe et coordination centralisée du holding. Ces huit piliers définissent notre standard opérationnel.</p>
+        <p class="ks-lead">L'expertise Kalystrat ne se résume pas à des compétences individuelles. C'est un système intégré qui combine conformité réglementaire stricte, technologies de pointe et coordination centralisée du groupe. Ces huit piliers définissent notre standard opérationnel.</p>
     </div>
 </section>
 
@@ -57,7 +57,7 @@ $piliers = [
     ['t' => 'Sécurité chantier (CNESST)', 'd' => "Programme de prévention conforme aux exigences CNESST. Formation SIMDUT, ASP Construction et premiers soins pour tous les travailleurs. Tolérance zéro sur les manquements EPI."],
     ['t' => 'BIM et numérisation', 'd' => "Modélisation 3D pour les projets commerciaux et institutionnels. Coordination MEP via Revit. Détection de conflits avant exécution pour réduire les imprévus de chantier."],
     ['t' => 'Préfabrication et hors-site', 'd' => "Charpentes, panneaux muraux et modules préfabriqués en atelier pour les projets résidentiels et commerciaux légers. Réduction des délais d'installation et meilleure tolérance dimensionnelle."],
-    ['t' => 'Contrôle qualité centralisé', 'd' => "Le holding centralise les standards qualité à travers les six filiales : un même cahier de charges, mêmes critères de réception, mêmes garanties post-livraison."],
+    ['t' => 'Contrôle qualité centralisé', 'd' => "Le groupe centralise les standards qualité à travers les six filiales : un même cahier de charges, mêmes critères de réception, mêmes garanties post-livraison."],
     ['t' => 'Développement durable', 'd' => "Matériaux à faible empreinte carbone, isolation supérieure aux exigences minimales, gestion des déchets de chantier (récupération bois, métal, gypse). Visions LEED et Novoclimat selon projet."],
     ['t' => 'Gestion de projet intégrée', 'd' => "Un chargé de projet unique coordonne les six filiales pour un même chantier, éliminant les zones grises de responsabilité et accélérant la prise de décision."],
 ];
@@ -87,7 +87,7 @@ $piliers = [
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">01</div>
                 <h3 class="ks-card__title">Un seul contrat, un seul calendrier</h3>
-                <p class="ks-card__text">Le client signe un mandat unique avec Gestion Kalystrat Inc. La holding répartit ensuite les tâches entre les six filiales selon une séquence pensée en amont.</p>
+                <p class="ks-card__text">Le client signe un mandat unique avec Gestion Kalystrat Inc. Le groupe répartit ensuite les tâches entre les six filiales selon une séquence pensée en amont.</p>
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">02</div>
@@ -101,8 +101,8 @@ $piliers = [
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">04</div>
-                <h3 class="ks-card__title">Standards holding partagés</h3>
-                <p class="ks-card__text">Les standards qualité sont définis une fois au niveau du holding et appliqués partout, par toutes les filiales, sans interprétation locale.</p>
+                <h3 class="ks-card__title">Standards de groupe partagés</h3>
+                <p class="ks-card__text">Les standards qualité sont définis une fois à l'échelle du groupe et appliqués partout, par toutes les filiales, sans interprétation locale.</p>
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">05</div>

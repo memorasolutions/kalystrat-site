@@ -3,7 +3,7 @@
 @section('title', $filiale['nom_court'] . ' | Kalystrat')
 
 @push('meta')
-<meta name="description" content="{{ $filiale['nom_court'] }} — {{ $filiale['specialite'] }}. Filiale du holding Kalystrat à intégration verticale, basée à Québec.">
+<meta name="description" content="{{ $filiale['nom_court'] }} — {{ $filiale['specialite'] }}. Filiale du groupe Kalystrat à intégration verticale, basée à Québec.">
 <link rel="canonical" href="{{ url('/filiales/' . $slug) }}">
 <meta property="og:title" content="{{ $filiale['nom_court'] }}">
 <meta property="og:description" content="{{ $filiale['tagline'] }}">
@@ -54,7 +54,7 @@
         <div class="ks-section__heading ks-section__heading--left">
             <span class="ks-eyebrow">Filiale du groupe</span>
             <h2 class="ks-h2">Une expertise pointue dans un système intégré</h2>
-            <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., holding québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
+            <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., groupe québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
         </div>
     </div>
 </section>
@@ -69,7 +69,7 @@
         <div class="ks-section__heading">
             <span class="ks-eyebrow">Services offerts</span>
             <h2 class="ks-h2">Notre offre de services</h2>
-            <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du holding.</p>
+            <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du groupe.</p>
         </div>
         <div class="ks-bento ks-bento--3col">
             @foreach($filiale['services'] as $i => $service)

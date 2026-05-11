@@ -15,7 +15,7 @@ if ('serviceWorker' in navigator) {
     }
 }
 </script>
-<title>@yield('title', 'Kalystrat — Holding québécois de construction à intégration verticale')</title>
+<title>@yield('title', 'Kalystrat — Groupe québécois de construction à intégration verticale')</title>
 @stack('meta')
 
 {{-- Organization JSON-LD global (toutes pages) --}}
@@ -81,7 +81,7 @@ if ('serviceWorker' in navigator) {
             <div class="auto-container">
 				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
 					<!-- Logo Box -->
-					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat — Holding québécois de construction" title="Kalystrat"></a></div>
+					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/intime/images/logo-6.png" alt="Logo Kalystrat — Groupe québécois de construction" title="Kalystrat"></a></div>
 					
 					<div class="nav-outer d-flex ">
 						
@@ -273,7 +273,7 @@ if ('serviceWorker' in navigator) {
 							<div class="footer-column col-lg-7 col-md-6 col-sm-12">
 								<div class="footer-widget logo-widget">
 									<h4>À propos</h4>
-									<div class="text">Holding québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
+									<div class="text">Groupe québécois de construction à intégration verticale. Six filiales spécialisées sous une marque unifiée - du chantier à la livraison.</div>
 									<!-- Social Box -->
 									<ul class="footer-six_social-box">
 										<li class="facebook"><a href="https://www.twitter.com/" class="fa-brands fa-facebook-f fa-fw" aria-label="Suivre Kalystrat sur Facebook"></a></li>

@@ -21,7 +21,7 @@ echo json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'CollectionPage',
     'name' => 'Filiales Kalystrat',
-    'description' => 'Six filiales spécialisées sous le holding Gestion Kalystrat Inc.',
+    'description' => 'Six filiales spécialisées sous le groupe Gestion Kalystrat Inc.',
     'url' => url('/filiales'),
     'mainEntity' => ['@type' => 'ItemList', 'itemListElement' => $items],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);

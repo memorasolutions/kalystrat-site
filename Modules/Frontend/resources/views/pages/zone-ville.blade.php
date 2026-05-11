@@ -19,7 +19,7 @@ $z = $zones[$ville];
 @section('title', 'Construction à ' . $z['nom'] . ' | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Services de construction à {{ $z['nom'] }} par Kalystrat. {{ Str::limit($z['specialites'], 110) }}. Holding québécois à intégration verticale.">
+<meta name="description" content="Services de construction à {{ $z['nom'] }} par Kalystrat. {{ Str::limit($z['specialites'], 110) }}. Groupe québécois à intégration verticale.">
 <link rel="canonical" href="{{ url('/zones-desservies/' . $ville) }}">
 <meta property="og:title" content="Construction Kalystrat à {{ $z['nom'] }}">
 @endpush
