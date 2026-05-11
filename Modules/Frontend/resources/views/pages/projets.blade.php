@@ -40,12 +40,61 @@
     </div>
 </header>
 
-<section class="ks-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-section__heading ks-section__heading--left">
-            <span class="ks-eyebrow">Études de cas</span>
-            <h2 class="ks-h2">Une sélection de nos chantiers</h2>
-            <p class="ks-lead">Cette galerie présente quelques-uns de nos projets emblématiques. Les photos détaillées seront ajoutées progressivement à mesure que les phases de construction se terminent. <em>Pour visualiser des projets en cours, contactez-nous directement.</em></p>
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">01</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Approche projet</span>
+                <h2 class="ks-h2">Une sélection de nos chantiers</h2>
+                <p class="ks-lead">Pour chaque projet, nous documentons trois temps&nbsp;: le défi opérationnel, notre solution intégrée, les résultats mesurés. Les photos détaillées seront ajoutées progressivement à mesure que les phases de construction se terminent.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">02</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Études de cas type</span>
+                <h2 class="ks-h2">Défi, solution, résultats mesurés</h2>
+                <p class="ks-lead">Trois scénarios représentatifs des projets que Kalystrat orchestre. Format adopté dès le premier projet livré pour documenter la performance opérationnelle du groupe.</p>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--2col ks-fade-in" style="margin-bottom:2rem">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Cas type 01 · Multilogement</span>
+                <h3 class="ks-card__title">Condominium 12 unités, Capitale-Nationale</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;padding:1rem;background:rgba(184,164,114,0.08);border-radius:4px">
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">−18&nbsp;%</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Coûts de coordination<br>(vs sous-traitance externe)</span></div>
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">12&nbsp;j</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Délais récupérés<br>sur l’échéancier prévu</span></div>
+                </div>
+                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> coordonner fondations, structure, toiture et finition sans rupture de calendrier sur un terrain argileux. <strong>Solution&nbsp;:</strong> les quatre filiales Kalystrat sur le même chantier, sous un seul chargé de projet. <strong>Résultats&nbsp;:</strong> livraison à temps, contrôle qualité interne sans zone grise.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <span class="ks-eyebrow">Cas type 02 · Rénovation premium</span>
+                <h3 class="ks-card__title">Rénovation maison patrimoniale, Sillery</h3>
+                <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;padding:1rem;background:rgba(10,22,40,0.05);border-radius:4px">
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">100&nbsp;%</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Conformité Code QC 2026<br>(étanchéité, R-49, HRV)</span></div>
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">0</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Avenant facturé<br>au client final</span></div>
+                </div>
+                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> moderniser l’enveloppe énergétique sans dénaturer le caractère architectural d’origine. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et Enveloppe + Finition Intérieure coordonnées sous une seule signature. <strong>Résultats&nbsp;:</strong> conformité Code 2026 atteinte du premier coup, budget initial respecté.</p>
+            </article>
+        </div>
+        <div class="ks-bento ks-bento--feature ks-fade-in" style="grid-template-columns:1fr">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Cas type 03 · Commercial occupé</span>
+                <h3 class="ks-card__title">Réfection toiture immeuble de bureaux, Trois-Rivières</h3>
+                <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1rem 0;padding:1rem;background:rgba(184,164,114,0.08);border-radius:4px">
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">2 400&nbsp;m²</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Surface refaite TPO</span></div>
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">Zéro</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Interruption d’activité<br>locataires</span></div>
+                    <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">+8&nbsp;ans</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Durée de vie<br>vs ancienne membrane</span></div>
+                </div>
+                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> remplacer une membrane élastomère en fin de vie sur un édifice de bureaux occupé, sans déranger les locataires. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et Enveloppe + Placement Construction pour mobiliser une équipe nuit/fin de semaine. Phasage par sections étanches. <strong>Résultats&nbsp;:</strong> aucune fuite signalée depuis livraison, locataires satisfaits, garantie système 20 ans sur la nouvelle membrane TPO.</p>
+                <p class="ks-card__text" style="margin-top:1rem;font-style:italic;color:var(--ks-gray-500);font-size:0.875rem">Études de cas représentatives du modèle d’exécution Kalystrat. Les projets nommés seront documentés au fur et à mesure des livraisons, avec accord client.</p>
+            </article>
         </div>
     </div>
 </section>

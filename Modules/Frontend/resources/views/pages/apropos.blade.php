@@ -160,10 +160,10 @@
             ['n' => '06', 't' => 'Gestion centralisée', 'd' => "Comptabilité, RH, juridique, marketing, TI centralisés à l'échelle du groupe. Frais généraux réduits par filiale."],
         ];
         @endphp
-        <div class="ks-bento ks-fade-in">
-            @foreach($piliers as $p)
-            <article class="ks-card ks-card--dark">
-                <div style="font-family:var(--ks-font-display);font-size:2rem;color:var(--ks-gold-500);font-weight:700">{{ $p['n'] }}</div>
+        <div class="ks-piliers-asym ks-fade-in">
+            @foreach($piliers as $i => $p)
+            <article class="ks-card ks-card--dark ks-piliers-asym__card{{ $i === 0 ? ' ks-piliers-asym__card--hero' : '' }}{{ $i === 5 ? ' ks-piliers-asym__card--wide' : '' }}">
+                <div style="font-family:var(--ks-font-display);font-size:{{ $i === 0 ? '3rem' : '2rem' }};color:var(--ks-gold-500);font-weight:700;line-height:1">{{ $p['n'] }}</div>
                 <h3 class="ks-card__title">{{ $p['t'] }}</h3>
                 <p class="ks-card__text">{{ $p['d'] }}</p>
             </article>
@@ -218,10 +218,40 @@
     </div>
 </section>
 
-<section class="ks-section ks-section--alt ks-page-section">
+<section class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">06</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Marché québécois 2026</span>
+                <h2 class="ks-h2">Une fenêtre stratégique pour la construction intégrée</h2>
+                <p class="ks-lead">Trois forces convergent sur le marché québécois&nbsp;: demande record en habitation, marché de la rénovation en pleine expansion, et pénurie chronique de main-d’œuvre. Notre modèle intégré répond directement à ces trois enjeux.</p>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number">59 864</div>
+                <div class="ks-stat__label">Mises en chantier 2025</div>
+                <p class="ks-card__text" style="margin-top:1rem">Au Québec, +24&nbsp;% en un an. Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number">19<sup style="font-size:0.55em;color:var(--ks-gold-500)"> G$</sup></div>
+                <div class="ks-stat__label">Marché rénovation Québec</div>
+                <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment premium. Kalystrat Finition Intérieure et Toiture-Enveloppe s’y positionnent.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number">11 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">+</sup></div>
+                <div class="ks-stat__label">Postes vacants construction</div>
+                <p class="ks-card__text" style="margin-top:1rem">Pénurie de main-d’œuvre chronique au Québec. Kalystrat Placement Construction sert d’abord les filiales internes, puis la clientèle externe.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">07</span>
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Stratégie de croissance</span>
                 <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>

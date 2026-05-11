@@ -1525,6 +1525,171 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 /* ============================================================
+   Estimateur soumission interactif (V5a-B — tendance 2026 outils interactifs)
+   ============================================================ */
+.ks-estimator {
+  background: #fff;
+  border: 1px solid rgba(184, 164, 114, 0.25);
+  border-left: 4px solid var(--ks-gold-500);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  border-radius: 4px;
+  box-shadow: 0 16px 36px -20px rgba(10, 22, 40, 0.2);
+}
+
+.ks-estimator__fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1rem, 2vw, 1.5rem);
+  margin-bottom: 1.5rem;
+}
+
+.ks-estimator__field--full {
+  grid-column: 1 / -1;
+}
+
+@media (max-width: 600px) {
+  .ks-estimator__fields {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ks-estimator__field label {
+  display: block;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--ks-navy-900);
+  margin-bottom: 0.5rem;
+}
+
+.ks-estimator__field select,
+.ks-estimator__field input[type="number"] {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(10, 22, 40, 0.18);
+  border-radius: 3px;
+  font-family: var(--ks-font-body);
+  font-size: 1rem;
+  background: #fff;
+  color: var(--ks-navy-900);
+}
+
+.ks-estimator__field select:focus,
+.ks-estimator__field input:focus {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 2px;
+}
+
+.ks-estimator__filiales {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.5rem 1rem;
+}
+
+.ks-estimator__filiales label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--ks-font-body);
+  font-weight: 400;
+  font-size: 0.9375rem;
+  color: var(--ks-navy-900);
+  cursor: pointer;
+  padding: 0.4rem 0.5rem;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.ks-estimator__filiales label:hover {
+  background: rgba(184, 164, 114, 0.08);
+}
+
+.ks-estimator__result {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--ks-navy-900) 0%, #1a2740 100%);
+  color: #fff;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .ks-estimator__result {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ks-estimator__result-block .ks-eyebrow {
+  display: block;
+  color: var(--ks-gold-500);
+  margin-bottom: 0.5rem;
+}
+
+.ks-estimator__result-value {
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.15;
+  color: #fff;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.ks-estimator__result-note {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0;
+}
+
+.ks-estimator__cta-note {
+  font-style: italic;
+  color: var(--ks-gold-aaa);
+  font-size: 0.9375rem;
+  margin: 0;
+  text-align: center;
+}
+
+/* ============================================================
+   Piliers Bento asymétrique (V5a-D — anti pattern "3 cards" 2026)
+   1 hero card + 4 std cards + 1 wide card row 3
+   ============================================================ */
+.ks-piliers-asym {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  grid-auto-rows: minmax(180px, auto);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.ks-piliers-asym__card--hero {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.ks-piliers-asym__card--wide {
+  grid-column: 2 / 4;
+  grid-row: 3;
+}
+
+@media (max-width: 960px) {
+  .ks-piliers-asym {
+    grid-template-columns: 1fr 1fr;
+  }
+  .ks-piliers-asym__card--hero,
+  .ks-piliers-asym__card--wide {
+    grid-column: 1 / -1;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .ks-piliers-asym {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ============================================================
    Pages secondaires — Vague 1 (T94+) — Composants partagés
    .ks-page-hero--photo : hero avec photo background + overlay navy
    .ks-page-section : section avec numéro XXL gold + heading inline

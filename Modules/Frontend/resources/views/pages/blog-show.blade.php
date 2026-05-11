@@ -26,6 +26,11 @@
     'author' => ['@type' => 'Organization', 'name' => 'Gestion Kalystrat Inc.', 'url' => 'https://kalystrat.ca'],
     'publisher' => ['@type' => 'Organization', 'name' => 'Gestion Kalystrat Inc.', 'url' => 'https://kalystrat.ca'],
     'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => url('/blog/' . $slug)],
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-article-content p', '.ks-article-content h2'],
+    ],
+    'inLanguage' => 'fr-CA',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
     '@context' => 'https://schema.org',

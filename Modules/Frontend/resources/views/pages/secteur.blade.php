@@ -53,6 +53,11 @@ $s = $secteurs[$slug];
     'description' => str_replace('&nbsp;', ' ', $s['desc']),
     'provider' => ['@type' => 'GeneralContractor', 'name' => 'Gestion Kalystrat Inc.', 'url' => 'https://kalystrat.ca'],
     'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Québec, Canada'],
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-h2', '.ks-card__text'],
+    ],
+    'inLanguage' => 'fr-CA',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
     '@context' => 'https://schema.org',

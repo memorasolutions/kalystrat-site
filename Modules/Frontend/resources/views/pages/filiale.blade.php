@@ -22,6 +22,11 @@
     'url' => url('/filiales/' . $slug),
     'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Québec, Canada'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-card__title', '.ks-card__text'],
+    ],
+    'inLanguage' => 'fr-CA',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
     '@context' => 'https://schema.org',

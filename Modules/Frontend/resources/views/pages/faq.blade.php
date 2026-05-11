@@ -49,7 +49,18 @@ $mainEntity = array_map(fn($f) => [
 echo json_encode([
     '@context' => 'https://schema.org',
     '@type' => 'FAQPage',
+    'name' => 'Questions fréquentes — Kalystrat',
+    'inLanguage' => 'fr-CA',
+    'speakable' => [
+        '@type' => 'SpeakableSpecification',
+        'cssSelector' => ['.ks-faq-question', '.ks-faq-answer'],
+    ],
     'mainEntity' => $mainEntity,
+    'publisher' => [
+        '@type' => 'Organization',
+        'name' => 'Gestion Kalystrat Inc.',
+        'url' => 'https://kalystrat.ca',
+    ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
 @endphp</script>
 <script type="application/ld+json">@php echo json_encode([
@@ -91,12 +102,12 @@ echo json_encode([
     <div class="ks-container">
         <div style="display:flex;flex-direction:column;gap:14px;max-width:920px;margin:0 auto">
             @foreach($faqs as $i => $f)
-            <details style="background:var(--ks-white);padding:24px 28px;border-radius:var(--ks-radius-md);box-shadow:var(--ks-shadow-card);border-left:4px solid var(--ks-gold-500)" {{ $i === 0 ? 'open' : '' }}>
-                <summary style="font-family:var(--ks-font-display);font-weight:700;font-size:1.125rem;cursor:pointer;color:var(--ks-navy-900);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
+            <details class="ks-faq-item" style="background:var(--ks-white);padding:24px 28px;border-radius:var(--ks-radius-md);box-shadow:var(--ks-shadow-card);border-left:4px solid var(--ks-gold-500)" {{ $i === 0 ? 'open' : '' }}>
+                <summary class="ks-faq-question" style="font-family:var(--ks-font-display);font-weight:700;font-size:1.125rem;cursor:pointer;color:var(--ks-navy-900);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:1rem">
                     <span>{!! $f['q'] !!}</span>
-                    <span style="color:var(--ks-gold-700);font-size:1.5rem;flex-shrink:0">+</span>
+                    <span style="color:var(--ks-gold-700);font-size:1.5rem;flex-shrink:0" aria-hidden="true">+</span>
                 </summary>
-                <div style="margin-top:1rem;line-height:var(--ks-line-height);color:var(--ks-gray-700);font-size:var(--ks-body-size)">{!! $f['r'] !!}</div>
+                <div class="ks-faq-answer" style="margin-top:1rem;line-height:var(--ks-line-height);color:var(--ks-gray-700);font-size:var(--ks-body-size)">{!! $f['r'] !!}</div>
             </details>
             @endforeach
         </div>

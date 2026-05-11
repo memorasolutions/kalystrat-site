@@ -49,6 +49,62 @@
     </div>
 </header>
 
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">01</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Estimateur express</span>
+                <h2 class="ks-h2">Une fourchette budgétaire en 30 secondes</h2>
+                <p class="ks-lead">Sélectionnez le type de projet, la surface et les filiales requises. L’outil retourne une fourchette indicative basée sur les coûts moyens du marché québécois. <em>Soumission détaillée toujours réalisée en visite après contact.</em></p>
+            </div>
+        </div>
+        <div class="ks-estimator ks-fade-in" data-ks-estimator>
+            <div class="ks-estimator__fields">
+                <div class="ks-estimator__field">
+                    <label for="est-type">Type de projet</label>
+                    <select id="est-type" data-est-type>
+                        <option value="residentiel" data-cost="2400">Résidentiel haut de gamme</option>
+                        <option value="multilog" data-cost="1900">Multilogement (4-60 unités)</option>
+                        <option value="commercial" data-cost="2100">Commercial / bureaux</option>
+                        <option value="institutionnel" data-cost="2600">Institutionnel</option>
+                        <option value="industriel" data-cost="1400">Industriel / entrepôt</option>
+                        <option value="renovation" data-cost="1700">Rénovation majeure</option>
+                    </select>
+                </div>
+                <div class="ks-estimator__field">
+                    <label for="est-surface">Surface au sol (m²)</label>
+                    <input id="est-surface" type="number" min="50" max="10000" step="50" value="200" data-est-surface>
+                </div>
+                <div class="ks-estimator__field ks-estimator__field--full">
+                    <label>Filiales impliquées (cochez)</label>
+                    <div class="ks-estimator__filiales">
+                        <label><input type="checkbox" value="1.0" data-est-filiale checked> Fondations</label>
+                        <label><input type="checkbox" value="1.0" data-est-filiale checked> Structure</label>
+                        <label><input type="checkbox" value="1.0" data-est-filiale checked> Toiture-Enveloppe</label>
+                        <label><input type="checkbox" value="1.0" data-est-filiale checked> Finition Intérieure</label>
+                        <label><input type="checkbox" value="0.0" data-est-filiale> Immobilier (dév.)</label>
+                        <label><input type="checkbox" value="0.0" data-est-filiale> Placement (main-d’œuvre)</label>
+                    </div>
+                </div>
+            </div>
+            <div class="ks-estimator__result" role="status" aria-live="polite">
+                <div class="ks-estimator__result-block">
+                    <span class="ks-eyebrow">Fourchette budgétaire estimée</span>
+                    <div class="ks-estimator__result-value" data-est-budget>—</div>
+                    <p class="ks-estimator__result-note">Indicatif, hors taxes. Variation ±25 % selon spécifications.</p>
+                </div>
+                <div class="ks-estimator__result-block">
+                    <span class="ks-eyebrow">Délai indicatif</span>
+                    <div class="ks-estimator__result-value" data-est-delai>—</div>
+                    <p class="ks-estimator__result-note">Estimation grossière de la durée d’exécution sur chantier.</p>
+                </div>
+            </div>
+            <p class="ks-estimator__cta-note">Pour une soumission précise et détaillée, complétez le formulaire ci-dessous. Visite incluse.</p>
+        </div>
+    </div>
+</section>
+
 <section class="ks-section">
     <div class="ks-container">
         <div class="ks-bento ks-bento--2col" style="align-items:start">
@@ -131,5 +187,53 @@
         </div>
     </div>
 </section>
+
+@push('scripts')
+<script>
+(function () {
+    'use strict';
+    var root = document.querySelector('[data-ks-estimator]');
+    if (!root) return;
+    var typeSel = root.querySelector('[data-est-type]');
+    var surfInput = root.querySelector('[data-est-surface]');
+    var filiales = root.querySelectorAll('[data-est-filiale]');
+    var budgetEl = root.querySelector('[data-est-budget]');
+    var delaiEl = root.querySelector('[data-est-delai]');
+
+    function fmt(n) {
+        return new Intl.NumberFormat('fr-CA').format(Math.round(n));
+    }
+
+    function compute() {
+        var opt = typeSel.options[typeSel.selectedIndex];
+        var baseCost = parseFloat(opt.getAttribute('data-cost')) || 2000;
+        var surface = Math.max(50, Math.min(10000, parseFloat(surfInput.value) || 200));
+        var multiplier = 0;
+        filiales.forEach(function (cb) {
+            if (cb.checked) multiplier += parseFloat(cb.value) || 0;
+        });
+        // Si 4 filiales cochées (1+1+1+1 = 4) → multiplier = 4 → ratio normal 1.0
+        // Moins = scope réduit, plus = scope augmenté
+        var scopeRatio = multiplier / 4;
+        if (scopeRatio < 0.5) scopeRatio = 0.5;
+        var baseTotal = baseCost * surface * scopeRatio;
+        var low = baseTotal * 0.85;
+        var high = baseTotal * 1.25;
+        budgetEl.textContent = fmt(low) + ' $ – ' + fmt(high) + ' $';
+
+        // Délai : 1 mois pour 100 m², 0.4 multiplicateur par filiale active
+        var weeks = Math.round((surface / 100) * 4 * Math.max(0.7, scopeRatio));
+        var weeksLow = Math.max(2, weeks - 2);
+        var weeksHigh = weeks + 4;
+        delaiEl.textContent = weeksLow + ' à ' + weeksHigh + ' semaines';
+    }
+
+    typeSel.addEventListener('change', compute);
+    surfInput.addEventListener('input', compute);
+    filiales.forEach(function (cb) { cb.addEventListener('change', compute); });
+    compute();
+})();
+</script>
+@endpush
 
 @endsection
