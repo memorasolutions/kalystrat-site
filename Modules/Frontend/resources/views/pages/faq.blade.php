@@ -9,7 +9,7 @@ $faqs = [
     ['q' => "Qu’est-ce qu’une intégration verticale en construction&nbsp;?", 'r' => "L’intégration verticale signifie que Kalystrat exécute en interne toutes les étapes d’un projet de construction, sans dépendre de sous-traitants externes. Cette approche élimine les marges en cascade, réduit les délais de coordination et garantit une cohérence de qualité du début à la fin du chantier."],
     ['q' => "Dans quelles régions du Québec Kalystrat opère-t-elle&nbsp;?", 'r' => "Kalystrat dessert principalement la région de Québec et ses environs (Lévis, Sainte-Foy, Beauport, Sillery), avec une expansion graduelle vers Trois-Rivières, le Saguenay, Montréal et Laval pour les projets d’envergure."],
     ['q' => "Kalystrat travaille-t-elle pour le résidentiel et le commercial&nbsp;?", 'r' => "Oui. Le groupe sert quatre verticaux&nbsp;: résidentiel (maisons unifamiliales, condos, multilogements), commercial (bureaux, centres commerciaux), institutionnel (écoles, hôpitaux) et industriel/municipal (entrepôts, infrastructures publiques)."],
-    ['q' => "Comment obtenir une soumission&nbsp;?", 'r' => "Vous pouvez remplir le formulaire de la page Contact ou nous écrire directement à info@kalystrat.ca. Une équipe vous rappelle sous 24 heures ouvrables pour évaluer la portée du projet et planifier une rencontre."],
+    ['q' => "Comment obtenir une soumission&nbsp;?", 'r' => "Vous pouvez remplir le formulaire de la page Contact ou nous écrire directement à info@kalystrat.ca. Une équipe vous rappelle sous 72 heures ouvrables pour évaluer la portée du projet et planifier une rencontre."],
     ['q' => "Combien de temps prend une soumission&nbsp;?", 'r' => "Pour un projet résidentiel standard, comptez 5 à 10 jours ouvrables après la rencontre initiale. Pour un projet commercial ou institutionnel complexe, le délai est de 2 à 4 semaines selon le niveau de détail des plans fournis."],
     ['q' => "Kalystrat fournit-elle de la main-d’œuvre à d’autres entrepreneurs&nbsp;?", 'r' => "Oui, via Kalystrat Placement Construction, qui place des travailleurs qualifiés et semi-qualifiés (CCQ) chez d’autres entrepreneurs généraux, sous-traitants et promoteurs immobiliers. Le placement peut être temporaire ou permanent."],
     ['q' => "Qui est le fondateur de Kalystrat&nbsp;?", 'r' => "Ali Salomon est le fondateur, président et directeur général de Gestion Kalystrat Inc. Il a conçu le modèle d’affaires intégré sur lequel repose le groupe et supervise la gouvernance globale appuyé d’un conseil consultatif."],
@@ -116,7 +116,7 @@ echo json_encode([
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Une question qui n’apparaît pas ici&nbsp;?</h2>
-        <p>L’équipe Kalystrat répond sous 24 heures ouvrables pour les sujets techniques, commerciaux ou administratifs.</p>
+        <p>L’équipe Kalystrat répond sous 72 heures ouvrables pour les sujets techniques, commerciaux ou administratifs.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Nous écrire</a>
     </div>
 </section>

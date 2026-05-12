@@ -71,7 +71,7 @@ echo json_encode([
             'name' => "Combien de temps pour qualifier ma zone ?",
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "Réponse sous 24 heures ouvrables pour confirmer la disponibilité d'équipe et amorcer le processus de soumission. Pour les chantiers complexes, une visite préalable est planifiée dans les 5 jours suivants.",
+                'text' => "Réponse sous 72 heures ouvrables pour confirmer la disponibilité d'équipe et amorcer le processus de soumission. Pour les chantiers complexes, une visite préalable est planifiée dans les 5 jours suivants.",
             ],
         ],
     ],
@@ -109,7 +109,7 @@ echo json_encode([
         <div class="ks-section__heading ks-section__heading--left">
             <span class="ks-eyebrow">Couverture territoriale</span>
             <h2 class="ks-h2">Présents partout au Québec</h2>
-            <p class="ks-lead">Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province. Réponse sous 24 heures ouvrables pour qualifier la zone et confirmer la disponibilité de l’équipe.</p>
+            <p class="ks-lead">Que votre projet soit résidentiel, commercial ou institutionnel, nous évaluons sa faisabilité dans toute la province. Réponse sous 72 heures ouvrables pour qualifier la zone et confirmer la disponibilité de l’équipe.</p>
         </div>
     </div>
 </section>

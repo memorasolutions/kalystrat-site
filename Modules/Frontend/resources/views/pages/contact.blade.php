@@ -51,7 +51,7 @@
 
 <x-frontend::page-hero
     photo="/intime/images/pages/contact-hero-meeting.webp"
-    eyebrow="Réponse sous 24 h ouvrables"
+    eyebrow="Réponse sous 72 h ouvrables"
     title="Parlons de votre projet"
     subtitle="Une équipe basée à Québec, six filiales spécialisées, un chargé de projet dédié à votre dossier. Écrivez-nous ci-dessous ou appelez directement."
 >
@@ -112,7 +112,7 @@
                         <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 6l6 6-6 6"/></svg>
                     </button>
 
-                    <p class="ks-contact-form__note">Réponse sous <strong>24 heures ouvrables</strong>. Aucune obligation, aucun frais. Vos informations restent confidentielles (<a href="{{ url('/politique-confidentialite') }}">Loi 25</a>).</p>
+                    <p class="ks-contact-form__note">Réponse sous <strong>72 heures ouvrables</strong>. Aucune obligation, aucun frais. Vos informations restent confidentielles (<a href="{{ url('/politique-confidentialite') }}">Loi 25</a>).</p>
                 </form>
             </div>
 
@@ -127,7 +127,7 @@
                 <div class="ks-contact-card">
                     <span class="ks-eyebrow">Courriel</span>
                     <a href="mailto:info@kalystrat.ca" class="ks-contact-card__email">info@kalystrat.ca</a>
-                    <p class="ks-contact-card__meta">Plans, devis, documents techniques. Réponse sous 24&nbsp;h ouvrables.</p>
+                    <p class="ks-contact-card__meta">Plans, devis, documents techniques. Réponse sous 72&nbsp;h ouvrables.</p>
                 </div>
 
                 <div class="ks-contact-card">
