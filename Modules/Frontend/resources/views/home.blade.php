@@ -341,7 +341,7 @@ $services = [
                     </li>
                     <li>
                         <span class="ks-defi__bullet" aria-hidden="true">→</span>
-                        <span>Une équipe interne CCQ formée aux normes Novoclimat 2.0 et au Code 2026.</span>
+                        <span>Une équipe interne de compagnons certifiés CCQ, formée aux normes Novoclimat 2.0 et au Code 2026.</span>
                     </li>
                     <li>
                         <span class="ks-defi__bullet" aria-hidden="true">→</span>
