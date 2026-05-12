@@ -4256,3 +4256,199 @@ body, body * {
   background-image: url('/assets/img/kalystrat/preloader.svg') !important;
   background-color: #ffffff !important;
 }
+
+/* ============================================================
+   T170 — Mobile menu Kalystrat premium 2026 (drawer + blur + typo XL + CTA sticky)
+   Override .mobile-menu InTime (CSS plus spécifique gagne)
+   ============================================================ */
+
+/* Drawer right, backdrop blur premium */
+.ks-mobile-menu .menu-backdrop {
+  background: rgba(10, 22, 40, 0.55) !important;
+  backdrop-filter: blur(8px) saturate(140%);
+  -webkit-backdrop-filter: blur(8px) saturate(140%);
+}
+.mobile-menu-visible .ks-mobile-menu .menu-backdrop {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+.ks-mobile-menu__box {
+  display: flex !important;
+  flex-direction: column;
+  height: 100vh !important;
+  height: 100dvh !important;
+  width: min(92vw, 420px) !important;
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.98) 0%, rgba(26, 40, 64, 0.98) 100%) !important;
+  padding: 0 !important;
+  overflow: hidden;
+  box-shadow: -16px 0 48px rgba(0, 0, 0, 0.4);
+}
+.ks-mobile-menu__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  background: rgba(184, 164, 114, 0.12) !important;
+  color: var(--ks-gold-500) !important;
+  border: 1px solid rgba(184, 164, 114, 0.30);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.15s ease;
+  z-index: 2;
+}
+.ks-mobile-menu__close:hover,
+.ks-mobile-menu__close:focus-visible {
+  background: var(--ks-gold-500) !important;
+  color: var(--ks-navy-900) !important;
+  transform: rotate(90deg);
+}
+.ks-mobile-menu__close:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 3px;
+}
+
+/* Branding top */
+.ks-mobile-menu__brand {
+  padding: 28px 28px 18px;
+  border-bottom: 1px solid rgba(184, 164, 114, 0.18);
+  flex-shrink: 0;
+}
+.ks-mobile-menu__brand img {
+  height: 44px;
+  width: auto;
+}
+
+/* Navigation scrollable */
+.ks-mobile-menu__nav {
+  list-style: none;
+  margin: 0;
+  padding: 18px 0;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.ks-mobile-menu__nav > li {
+  border-bottom: 1px solid rgba(184, 164, 114, 0.08);
+}
+.ks-mobile-menu__nav > li:last-child {
+  border-bottom: none;
+}
+
+/* Liens principaux : typo XL premium */
+.ks-mobile-menu__link {
+  display: block;
+  padding: 16px 28px;
+  font-family: var(--ks-font-display);
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 700;
+  color: var(--ks-white);
+  text-decoration: none;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease, padding 0.2s ease;
+}
+.ks-mobile-menu__link:hover,
+.ks-mobile-menu__link:focus-visible {
+  color: var(--ks-gold-500);
+  padding-left: 36px;
+}
+.ks-mobile-menu__link:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: -2px;
+}
+
+/* Sous-items petits sous chaque heading */
+.ks-mobile-menu__sub {
+  list-style: none;
+  margin: 0;
+  padding: 0 28px 14px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.ks-mobile-menu__sub a {
+  display: block;
+  padding: 8px 0;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.72);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+.ks-mobile-menu__sub a:hover,
+.ks-mobile-menu__sub a:focus-visible {
+  color: var(--ks-gold-500);
+  transform: translateX(4px);
+}
+.ks-mobile-menu__sub a:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* CTA sticky bas (thumb-zone) */
+.ks-mobile-menu__cta {
+  flex-shrink: 0;
+  padding: 18px 24px calc(18px + env(safe-area-inset-bottom, 0));
+  background: rgba(10, 22, 40, 0.95);
+  border-top: 1px solid var(--ks-gold-500);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.ks-mobile-menu__cta-tel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background: rgba(184, 164, 114, 0.10);
+  border: 1px solid rgba(184, 164, 114, 0.32);
+  border-radius: 10px;
+  color: var(--ks-gold-500);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+.ks-mobile-menu__cta-tel:hover,
+.ks-mobile-menu__cta-tel:focus-visible {
+  background: rgba(184, 164, 114, 0.18);
+  color: var(--ks-gold-500);
+}
+.ks-mobile-menu__cta-primary {
+  display: block;
+  padding: 16px 18px;
+  background: var(--ks-gold-500);
+  color: var(--ks-navy-900);
+  text-align: center;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.ks-mobile-menu__cta-primary:hover,
+.ks-mobile-menu__cta-primary:focus-visible {
+  background: #D4B968;
+  color: var(--ks-navy-900);
+  transform: translateY(-1px);
+}
+
+/* Réduit le bruit des textes uppercase imposés par CSS InTime sur menu mobile */
+.ks-mobile-menu__link,
+.ks-mobile-menu__sub a {
+  text-transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-mobile-menu__box,
+  .ks-mobile-menu__close,
+  .ks-mobile-menu__link,
+  .ks-mobile-menu__sub a,
+  .ks-mobile-menu__cta-tel,
+  .ks-mobile-menu__cta-primary {
+    transition: none !important;
+  }
+}

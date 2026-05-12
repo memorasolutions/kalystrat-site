@@ -215,23 +215,65 @@ if ('serviceWorker' in navigator) {
         </div>
 		<!-- End Sticky Menu -->
 		
-		<!-- Mobile Menu  -->
-        <div class="mobile-menu">
+		<!-- T170 — Mobile Menu Kalystrat premium 2026 (drawer right + backdrop blur + typo XL + CTA sticky) -->
+        <div class="mobile-menu ks-mobile-menu" role="dialog" aria-modal="true" aria-label="Menu de navigation principal">
             <div class="menu-backdrop"></div>
-            <div class="close-btn"><span class="icon fas fa-window-close fa-fw"></span></div>
-            <nav class="menu-box">
-                <div class="nav-logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-white.svg" alt="Logo Gestion Kalystrat Inc." title="Kalystrat" width="180" height="60"></a></div>
-				<!-- Search -->
-				<div class="search-box">
-					<form method="post" action="contact.html">
-						<div class="form-group">
-							<label for="ks-search-popup" class="visually-hidden">Rechercher sur le site</label>
-							<input type="search" id="ks-search-popup" name="search-field" value="" placeholder="Rechercher" aria-label="Rechercher sur le site" required>
-							<button type="submit"><span class="icon flaticon-001-loupe"></span></button>
-						</div>
-					</form>
-				</div>
-                <div class="menu-outer"><!--Here Menu Will Come Automatically Via Javascript / Same Menu as in Header--></div>
+            <button type="button" class="close-btn ks-mobile-menu__close" aria-label="Fermer le menu">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+            <nav class="menu-box ks-mobile-menu__box" aria-label="Navigation mobile">
+                <div class="ks-mobile-menu__brand">
+                    <a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-white.svg" alt="Kalystrat" width="160" height="52"></a>
+                </div>
+                <ul class="ks-mobile-menu__nav">
+                    <li><a href="/" class="ks-mobile-menu__link">Accueil</a></li>
+                    <li class="ks-mobile-menu__group">
+                        <a href="/a-propos" class="ks-mobile-menu__link">À propos</a>
+                        <ul class="ks-mobile-menu__sub">
+                            <li><a href="/a-propos">Notre vision</a></li>
+                            <li><a href="/expertise">Notre expertise</a></li>
+                            <li><a href="/equipe">Équipe et conseil</a></li>
+                            <li><a href="/partenaires">Partenaires</a></li>
+                        </ul>
+                    </li>
+                    <li class="ks-mobile-menu__group">
+                        <a href="/filiales" class="ks-mobile-menu__link">Filiales</a>
+                        <ul class="ks-mobile-menu__sub">
+                            <li><a href="/filiales/fondations">Fondations</a></li>
+                            <li><a href="/filiales/structure">Structure</a></li>
+                            <li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
+                            <li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
+                            <li><a href="/filiales/immobilier">Immobilier</a></li>
+                            <li><a href="/filiales/placement-construction">Placement construction</a></li>
+                        </ul>
+                    </li>
+                    <li class="ks-mobile-menu__group">
+                        <a href="/services" class="ks-mobile-menu__link">Services</a>
+                        <ul class="ks-mobile-menu__sub">
+                            <li><a href="/services">Tous nos services</a></li>
+                            <li><a href="/secteurs">Secteurs desservis</a></li>
+                            <li><a href="/zones-desservies">Zones desservies</a></li>
+                            <li><a href="/projets">Projets</a></li>
+                        </ul>
+                    </li>
+                    <li class="ks-mobile-menu__group">
+                        <a href="/blog" class="ks-mobile-menu__link">Ressources</a>
+                        <ul class="ks-mobile-menu__sub">
+                            <li><a href="/blog">Blog</a></li>
+                            <li><a href="/faq">FAQ</a></li>
+                            <li><a href="/glossaire">Glossaire</a></li>
+                            <li><a href="/carrieres">Carrières</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/contact" class="ks-mobile-menu__link">Contact</a></li>
+                </ul>
+                <div class="ks-mobile-menu__cta">
+                    <a href="tel:+14184760987" class="ks-mobile-menu__cta-tel" aria-label="Appeler Kalystrat">
+                        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        <span>(418) 476-0987</span>
+                    </a>
+                    <a href="{{ route('contact') }}" class="ks-mobile-menu__cta-primary">Démarrer un projet →</a>
+                </div>
             </nav>
         </div>
 		<!-- End Mobile Menu -->
