@@ -2455,7 +2455,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
    ============================================================ */
 .ks-page-hero--photo {
   position: relative;
-  min-height: clamp(280px, 38vh, 420px);
+  min-height: clamp(320px, 42vh, 460px);
   background-image: var(--ks-hero-photo);
   background-size: cover;
   background-position: center;
@@ -2463,17 +2463,23 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   color: #fff;
   display: flex;
   align-items: flex-end;
-  padding-block: clamp(2.5rem, 6vw, 5rem);
+  /* T189 fix : padding-top ≥ header absolu 103px pour breadcrumb sous header.
+     padding-bottom plus contenu. */
+  padding-top: clamp(120px, 11vw, 160px);
+  padding-bottom: clamp(40px, 5vw, 80px);
   overflow: hidden;
 }
 
 .ks-page-hero--photo .ks-page-hero__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-    rgba(10, 22, 40, 0.92) 0%,
-    rgba(10, 22, 40, 0.72) 50%,
-    rgba(184, 164, 114, 0.28) 100%);
+  /* T189 fix : overlay top renforcé navy 96% → 85% → 72% pour breadcrumb AAA
+     quelle que soit la luminosité photo */
+  background: linear-gradient(180deg,
+    rgba(10, 22, 40, 0.96) 0%,
+    rgba(10, 22, 40, 0.85) 20%,
+    rgba(10, 22, 40, 0.72) 60%,
+    rgba(184, 164, 114, 0.30) 100%);
   z-index: 0;
 }
 
