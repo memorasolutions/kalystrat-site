@@ -166,7 +166,7 @@ if ('serviceWorker' in navigator) {
 						</div>
 						
 						<!-- Mobile Navigation Toggler — T183 WCAG 2.5.5 AAA (button + aria + 44x44 via CSS) -->
-						<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><span class="icon fa-solid fa-bars fa-fw" aria-hidden="true"></span></button>
+						<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><svg class="mobile-nav-toggler__icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
 						
 					</div>
 					
@@ -204,7 +204,7 @@ if ('serviceWorker' in navigator) {
 							</div>
 							
 							<!-- Mobile Navigation Toggler — T183 WCAG 2.5.5 AAA (button + aria + 44x44 via CSS) -->
-							<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><span class="icon fa-solid fa-bars fa-fw" aria-hidden="true"></span></button>
+							<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><svg class="mobile-nav-toggler__icon" viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="18" x2="20" y2="18"/></svg></button>
 							
 						</div>
 						
