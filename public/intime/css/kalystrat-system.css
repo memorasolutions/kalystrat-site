@@ -4342,3 +4342,62 @@ body.mobile-menu-visible .ks-tabbar {
     animation: none !important;
   }
 }
+
+/* ============================================================
+   T183 — Hamburger header WCAG 2.5.5 AAA Target Size (≥44×44 CSS px)
+   + Logo header agrandi pour viewport mobile
+   - <button> sémantique, aria-label, aria-controls, aria-expanded
+   - Zone tactile min 44×44 (rect avant fix : 23×59 = WIDTH fail AAA)
+   - focus-visible : outline gold 3px + offset (WCAG 2.4.7 + 1.4.11)
+   - Logo mobile : clamp 220→260px (vs 170-200px) pour cohérence visuelle
+   - Wrap dans @media max-width:1023px : laisse desktop unchanged
+   ============================================================ */
+@media (max-width: 1023px) {
+  .main-header .mobile-nav-toggler,
+  .main-header .sticky-header .mobile-nav-toggler {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 10px !important;
+    margin: 0 0 0 8px;
+    background: transparent;
+    border: 0;
+    border-radius: 8px;
+    cursor: pointer;
+    color: inherit;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .main-header .mobile-nav-toggler .icon,
+  .main-header .sticky-header .mobile-nav-toggler .icon {
+    font-size: 26px;
+    line-height: 1;
+    display: inline-block;
+  }
+  .main-header .mobile-nav-toggler:focus-visible,
+  .main-header .sticky-header .mobile-nav-toggler:focus-visible {
+    outline: 3px solid var(--ks-gold-500);
+    outline-offset: 2px;
+    box-shadow: 0 0 0 6px rgba(184, 164, 114, 0.25);
+  }
+  .main-header .mobile-nav-toggler:hover,
+  .main-header .sticky-header .mobile-nav-toggler:hover {
+    background: rgba(10, 22, 40, 0.06);
+  }
+  body:has(.ks-page-hero) .main-header:not(.fixed-header) .mobile-nav-toggler:hover {
+    background: rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* Logo mobile agrandi (header + sticky-header) — viewport < 768px */
+@media (max-width: 767px) {
+  .main-header .logo img,
+  .main-header .nav-logo img {
+    width: clamp(220px, 62vw, 260px) !important;
+  }
+  .sticky-header .logo img {
+    width: clamp(200px, 56vw, 240px) !important;
+  }
+}

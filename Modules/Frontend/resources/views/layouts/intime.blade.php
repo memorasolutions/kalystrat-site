@@ -165,8 +165,8 @@ if ('serviceWorker' in navigator) {
 							
 						</div>
 						
-						<!-- Mobile Navigation Toggler -->
-						<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+						<!-- Mobile Navigation Toggler — T183 WCAG 2.5.5 AAA (button + aria + 44x44 via CSS) -->
+						<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><span class="icon fa-solid fa-bars fa-fw" aria-hidden="true"></span></button>
 						
 					</div>
 					
@@ -203,8 +203,8 @@ if ('serviceWorker' in navigator) {
 								</a>
 							</div>
 							
-							<!-- Mobile Navigation Toggler -->
-							<div class="mobile-nav-toggler"><span class="icon fa-solid fa-bars fa-fw"></span></div>
+							<!-- Mobile Navigation Toggler — T183 WCAG 2.5.5 AAA (button + aria + 44x44 via CSS) -->
+							<button type="button" class="mobile-nav-toggler" aria-label="Ouvrir le menu de navigation" aria-controls="mobile-menu-panel" aria-expanded="false"><span class="icon fa-solid fa-bars fa-fw" aria-hidden="true"></span></button>
 							
 						</div>
 						
