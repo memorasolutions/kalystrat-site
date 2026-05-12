@@ -63,7 +63,7 @@ if ('serviceWorker' in navigator) {
 
 <!-- Responsive -->
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">{{-- T161 — Pas de maximum-scale ni user-scalable=0 (WCAG 1.4.4) --}}
 
 {{-- V5c — View Transitions API (Chrome 111+, ~85% support 2026) --}}
 <meta name="view-transition" content="same-origin">
@@ -293,7 +293,7 @@ if ('serviceWorker' in navigator) {
 					</div>
 
 					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-services">
-						<h4 id="ks-footer-nav-services" class="ks-footer__col-title">Services</h4>
+						<h3 id="ks-footer-nav-services" class="ks-footer__col-title">Services</h3>
 						<ul class="ks-footer__links">
 							<li><a href="{{ route('filiale', 'fondations') }}">Fondations</a></li>
 							<li><a href="{{ route('filiale', 'structure') }}">Structure</a></li>
@@ -305,7 +305,7 @@ if ('serviceWorker' in navigator) {
 					</nav>
 
 					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-entreprise">
-						<h4 id="ks-footer-nav-entreprise" class="ks-footer__col-title">Entreprise</h4>
+						<h3 id="ks-footer-nav-entreprise" class="ks-footer__col-title">Entreprise</h3>
 						<ul class="ks-footer__links">
 							<li><a href="{{ route('apropos') }}">À propos</a></li>
 							<li><a href="{{ route('filiales.index') }}">Six filiales</a></li>
@@ -316,7 +316,7 @@ if ('serviceWorker' in navigator) {
 					</nav>
 
 					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-ressources">
-						<h4 id="ks-footer-nav-ressources" class="ks-footer__col-title">Ressources</h4>
+						<h3 id="ks-footer-nav-ressources" class="ks-footer__col-title">Ressources</h3>
 						<ul class="ks-footer__links">
 							<li><a href="{{ route('expertise') }}">Expertise Code QC 2026</a></li>
 							<li><a href="{{ route('blog.index') }}">Blog</a></li>

@@ -4085,16 +4085,16 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
 }
 .ks-sticky-contact__close {
   position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 32px;
-  height: 32px;
+  top: 8px;
+  right: 8px;
+  width: 44px;        /* T164 — WCAG 2.5.5 Target Size AAA 44x44 */
+  height: 44px;
   display: grid;
   place-items: center;
   background: transparent;
   color: rgba(255, 255, 255, 0.65);
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
   transition: color 0.2s ease, background 0.2s ease;
 }
@@ -4203,4 +4203,21 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
   .ks-sticky-contact__fab-btn {
     transition: none !important;
   }
+}
+
+/* ============================================================
+   T165 — Override --main-color InTime (#c20b0b rouge) → gold-aaa
+   Anti-régression : tous les liens, boutons, accents InTime
+   héritent désormais d'une couleur charte Kalystrat WCAG AAA
+   ============================================================ */
+:root {
+  --main-color: var(--ks-gold-aaa);                /* #5A4D2E = 8.28:1 sur blanc AAA */
+  --main-color-rgb: 90, 77, 46;                    /* gold-aaa decimal */
+}
+/* Liens contenu (sans surclassement Construz/InTime) doivent rester soulignés
+   pour WCAG 1.4.1 Use of Color (anti-régression liens-sur-paragraphe) */
+.ks-section a:not(.ks-cta-primary):not(.ks-cta-secondary):not(.theme-btn):not(.ks-sticky-contact__action):not(.ks-defi__action):not([class*="btn"]):not([class*="nav"]):not([class*="card"]):not(.ks-footer__col-link) {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-thickness: 1px;
 }
