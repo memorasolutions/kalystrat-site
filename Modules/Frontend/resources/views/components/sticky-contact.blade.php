@@ -64,21 +64,18 @@
 (function() {
     var bar = document.querySelector('[data-sticky-bar]');
     if (!bar) return;
-    var COOKIE = 'ks_sticky_dismissed';
-    function getCookie(name) {
-        var m = document.cookie.match(new RegExp('(^|;)\\s*' + name + '=([^;]+)'));
-        return m ? m[2] : null;
+    // T177 — Dismiss = sessionStorage (réapparait au prochain onglet/visit)
+    //         Anti-fatigue user sans perte conversion long-terme.
+    //         Migration : supprime l'ancien cookie 24h si présent.
+    document.cookie = 'ks_sticky_dismissed=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    if (sessionStorage.getItem('ks_sticky_dismissed') === '1') {
+        bar.classList.add('is-dismissed');
     }
-    function setCookie(name, val, hours) {
-        var d = new Date(); d.setTime(d.getTime() + hours * 3600 * 1000);
-        document.cookie = name + '=' + val + ';expires=' + d.toUTCString() + ';path=/;samesite=lax';
-    }
-    if (getCookie(COOKIE)) bar.classList.add('is-dismissed');
     var dismissBtn = bar.querySelector('[data-sticky-dismiss]');
     if (dismissBtn) {
         dismissBtn.addEventListener('click', function() {
             bar.classList.add('is-dismissed');
-            setCookie(COOKIE, '1', 24);
+            try { sessionStorage.setItem('ks_sticky_dismissed', '1'); } catch (e) {}
         });
     }
     // Bouton Menu : ouvre le drawer mobile (mêmes triggers que .navbar-toggler/.mobile-nav-toggler)
