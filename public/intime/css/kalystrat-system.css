@@ -1178,7 +1178,7 @@
 }
 
 .ks-defi__bullet {
-  color: var(--ks-gold-aaa);          /* T139 — WCAG AAA 8.28:1 sur fond clair (vs gold-500 2.44:1) */
+  color: var(--ks-gold-500);          /* T158 — WCAG AAA 7.42:1 sur navy-900 (gold-aaa erronément choisi en T139 sur fond clair, section ks-defi est DARK) */
   font-weight: 700;
   flex-shrink: 0;
   margin-top: 2px;
