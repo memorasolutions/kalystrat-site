@@ -4221,3 +4221,29 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
   text-underline-offset: 2px;
   text-decoration-thickness: 1px;
 }
+
+/* ============================================================
+   T166-v2 — Override text-transform: capitalize InTime
+   InTime theme appliquait Title Case (capitalize) sur menu/cards/footer.
+   Règle FR-QC stricte : sentence case partout sauf eyebrows/CTA intentionnels.
+   ============================================================ */
+
+/* Reset capitalize GLOBAL avec !important : sentence case strict FR-QC.
+   Préserve uniquement uppercase explicite via classe Kalystrat (eyebrow/CTA). */
+body, body * {
+  text-transform: none !important;
+}
+.ks-eyebrow,
+.ks-cta-primary,
+.ks-cta-secondary,
+.ks-sticky-contact__tab-text,
+.ks-sticky-contact__eyebrow,
+.ks-footer__trust-label,
+.ks-footer__trust-badge,
+.ks-defi__market-src,
+.ks-cookie-banner__btn,
+.theme-btn.btn-style-ten .text-one,
+.theme-btn.btn-style-ten .text-two,
+.theme-btn.btn-style-ten .btn-wrap {
+  text-transform: uppercase !important;
+}
