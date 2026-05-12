@@ -4392,3 +4392,26 @@ body.mobile-menu-visible .ks-sticky-bar {
     transition: none !important;
   }
 }
+
+/* ============================================================
+   T173 — Anti-collision sticky-bar mobile + TOC + cookie banner
+   - Mobile : TOC toggle caché (drawer T170 prend le relais)
+   - Sticky-bar margin-bottom dynamique quand cookie banner visible
+   ============================================================ */
+
+/* Cacher le toggle Sommaire mobile (drawer T170 contient la nav principale) */
+@media (max-width: 720px) {
+  .ks-page-toc__mobile-toggle {
+    display: none !important;
+  }
+}
+
+/* Quand cookie banner visible : pousser sticky-bar au-dessus (anti-collision) */
+body:has(.ks-cookie-banner:not([hidden])) .ks-sticky-bar {
+  bottom: clamp(72px, 18vw, 110px);
+}
+@media (max-width: 720px) {
+  body:has(.ks-cookie-banner:not([hidden])) .ks-sticky-bar {
+    bottom: clamp(96px, 30vw, 160px);
+  }
+}
