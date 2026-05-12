@@ -3177,7 +3177,9 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   background: var(--ks-navy-900, #0A1628);
   color: rgba(255,255,255,0.92);
   font-family: var(--ks-font-body);
-  margin-top: clamp(40px, 6vw, 80px);
+  /* T157 — Transition fine ligne or (tendance 2026 luxe/corporate, anti-gap blanc daté) */
+  margin-top: 0;
+  border-top: 1px solid var(--ks-gold-500, #B8A472);
 }
 .ks-footer__container {
   max-width: 1320px;
