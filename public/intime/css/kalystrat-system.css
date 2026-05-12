@@ -4387,10 +4387,10 @@ body.mobile-menu-visible .ks-tabbar {
   .main-header .sticky-header .right-box {
     display: none !important;
   }
-  /* Logo sizing mobile sur fond navy : généreux mais pas excessif */
+  /* Logo sizing mobile sur fond navy : généreux (T187-v2 user feedback "logo plus gros") */
   .main-header .header-upper .logo img,
   .main-header .header-upper .logo picture {
-    width: clamp(200px, 56vw, 240px) !important;
+    width: clamp(260px, 72vw, 320px) !important;
     height: auto !important;
     max-width: 100%;
     display: block;
@@ -4398,16 +4398,20 @@ body.mobile-menu-visible .ks-tabbar {
   }
   .main-header .sticky-header .logo img,
   .main-header .sticky-header .logo picture {
-    width: clamp(180px, 50vw, 220px) !important;
+    width: clamp(220px, 62vw, 280px) !important;
     height: auto !important;
     max-width: 100%;
     display: block;
     margin: 0 auto;
   }
-  /* Padding header compact 56-64px hauteur totale */
+  /* Padding header compact réduit (T187-v2 : densifier, moins vide) */
   .main-header .header-upper .inner-container {
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  .main-header .sticky-header > .auto-container > .d-flex {
+    padding-top: 2px;
+    padding-bottom: 2px;
   }
 }
 
