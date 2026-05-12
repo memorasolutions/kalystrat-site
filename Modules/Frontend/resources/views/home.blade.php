@@ -354,26 +354,22 @@ $services = [
                 <span class="ks-eyebrow">Filiales</span>
                 <span class="ks-defi__num" data-counter data-target="6" data-suffix="">0</span>
                 <p class="ks-defi__caption">Six filiales assemblées en un seul groupe cohérent.</p>
-                {{-- T148 — Puzzle 6 pièces assemblées (métaphore intégration verticale) --}}
+                {{-- T154 — Vraies pièces de casse-tête avec tabs/blanks demi-cercles
+                     6 pièces 3 cols × 2 rows, parfaitement emboîtées (intégration verticale)
+                     Grille de base : 70×30 par pièce, tab rayon 5 --}}
                 <svg class="ks-defi__puzzle" aria-hidden="true" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
-                    {{-- 6 pièces rectangulaires arrondies (3 cols × 2 rows), gradient opacity --}}
-                    <rect data-puzzle-piece="1" x="6"   y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.55"/>
-                    <rect data-puzzle-piece="2" x="84"  y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.72"/>
-                    <rect data-puzzle-piece="3" x="162" y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.88"/>
-                    <rect data-puzzle-piece="4" x="6"   y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.68"/>
-                    <rect data-puzzle-piece="5" x="84"  y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.82"/>
-                    <rect data-puzzle-piece="6" x="162" y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)"/>
-                    {{-- Points de connexion gold entre pièces (suggère assemblage) --}}
-                    {{-- 2 jonctions horizontales rangée haut --}}
-                    <circle cx="81" cy="22" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    <circle cx="159" cy="22" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    {{-- 2 jonctions horizontales rangée bas --}}
-                    <circle cx="81" cy="58" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    <circle cx="159" cy="58" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    {{-- 3 jonctions verticales entre rangées --}}
-                    <circle cx="42" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    <circle cx="120" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
-                    <circle cx="198" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    {{-- Pièce 1 (haut-gauche)   : droite=TAB, bas=TAB --}}
+                    <path data-puzzle-piece="1" d="M 8 8 H 70 V 18 a5 5 0 0 1 0 10 V 38 H 48 a5 5 0 0 1 -10 0 H 8 Z" fill="var(--ks-gold-500)" opacity="0.55" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
+                    {{-- Pièce 2 (haut-centre)  : gauche=BLANK, droite=TAB, bas=TAB --}}
+                    <path data-puzzle-piece="2" d="M 70 8 V 18 a5 5 0 0 0 0 10 V 38 H 78 V 18 a5 5 0 0 0 0 -10 V 8 H 70 Z M 78 8 H 140 V 18 a5 5 0 0 1 0 10 V 38 H 118 a5 5 0 0 1 -10 0 H 78 V 28 a5 5 0 0 0 0 -10 V 8 Z" fill="var(--ks-gold-500)" opacity="0.70" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
+                    {{-- Pièce 3 (haut-droite)  : gauche=BLANK, bas=TAB --}}
+                    <path data-puzzle-piece="3" d="M 140 8 V 18 a5 5 0 0 0 0 10 V 38 H 148 V 18 a5 5 0 0 0 0 -10 V 8 H 140 Z M 148 8 H 232 V 38 H 188 a5 5 0 0 1 -10 0 H 148 V 28 a5 5 0 0 0 0 -10 V 8 Z" fill="var(--ks-gold-500)" opacity="0.85" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
+                    {{-- Pièce 4 (bas-gauche)   : haut=BLANK, droite=TAB --}}
+                    <path data-puzzle-piece="4" d="M 8 38 H 38 a5 5 0 0 0 10 0 H 70 V 48 a5 5 0 0 1 0 10 V 72 H 8 Z" fill="var(--ks-gold-500)" opacity="0.68" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
+                    {{-- Pièce 5 (bas-centre)   : haut=BLANK, gauche=BLANK, droite=TAB --}}
+                    <path data-puzzle-piece="5" d="M 70 38 V 48 a5 5 0 0 0 0 10 V 72 H 78 V 58 a5 5 0 0 0 0 -10 V 38 H 70 Z M 78 38 H 108 a5 5 0 0 0 10 0 H 140 V 48 a5 5 0 0 1 0 10 V 72 H 78 V 58 a5 5 0 0 0 0 -10 V 38 Z" fill="var(--ks-gold-500)" opacity="0.82" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
+                    {{-- Pièce 6 (bas-droite)   : haut=BLANK, gauche=BLANK --}}
+                    <path data-puzzle-piece="6" d="M 140 38 V 48 a5 5 0 0 0 0 10 V 72 H 148 V 58 a5 5 0 0 0 0 -10 V 38 H 140 Z M 148 38 H 178 a5 5 0 0 0 10 0 H 232 V 72 H 148 V 58 a5 5 0 0 0 0 -10 V 38 Z" fill="var(--ks-gold-500)" stroke="var(--ks-navy-900)" stroke-width="0.6"/>
                 </svg>
             </article>
 
