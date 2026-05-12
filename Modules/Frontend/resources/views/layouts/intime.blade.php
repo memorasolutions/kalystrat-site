@@ -225,45 +225,55 @@ if ('serviceWorker' in navigator) {
                 <div class="ks-mobile-menu__brand">
                     <a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-white.svg" alt="Kalystrat" width="160" height="52"></a>
                 </div>
+                {{-- T179 — Accordéon natif <details> : 1 ouvert à la fois (JS), pas de scroll global --}}
                 <ul class="ks-mobile-menu__nav">
                     <li><a href="/" class="ks-mobile-menu__link">Accueil</a></li>
                     <li class="ks-mobile-menu__group">
-                        <a href="/a-propos" class="ks-mobile-menu__link">À propos</a>
-                        <ul class="ks-mobile-menu__sub">
-                            <li><a href="/a-propos">Notre vision</a></li>
-                            <li><a href="/expertise">Notre expertise</a></li>
-                            <li><a href="/equipe">Équipe et conseil</a></li>
-                            <li><a href="/partenaires">Partenaires</a></li>
-                        </ul>
+                        <details class="ks-mobile-menu__acc">
+                            <summary class="ks-mobile-menu__link">À propos <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
+                            <ul class="ks-mobile-menu__sub">
+                                <li><a href="/a-propos">Notre vision</a></li>
+                                <li><a href="/expertise">Notre expertise</a></li>
+                                <li><a href="/equipe">Équipe et conseil</a></li>
+                                <li><a href="/partenaires">Partenaires</a></li>
+                            </ul>
+                        </details>
                     </li>
                     <li class="ks-mobile-menu__group">
-                        <a href="/filiales" class="ks-mobile-menu__link">Filiales</a>
-                        <ul class="ks-mobile-menu__sub">
-                            <li><a href="/filiales/fondations">Fondations</a></li>
-                            <li><a href="/filiales/structure">Structure</a></li>
-                            <li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
-                            <li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
-                            <li><a href="/filiales/immobilier">Immobilier</a></li>
-                            <li><a href="/filiales/placement-construction">Placement construction</a></li>
-                        </ul>
+                        <details class="ks-mobile-menu__acc">
+                            <summary class="ks-mobile-menu__link">Filiales <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
+                            <ul class="ks-mobile-menu__sub">
+                                <li><a href="/filiales">Vue d'ensemble</a></li>
+                                <li><a href="/filiales/fondations">Fondations</a></li>
+                                <li><a href="/filiales/structure">Structure</a></li>
+                                <li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
+                                <li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
+                                <li><a href="/filiales/immobilier">Immobilier</a></li>
+                                <li><a href="/filiales/placement-construction">Placement construction</a></li>
+                            </ul>
+                        </details>
                     </li>
                     <li class="ks-mobile-menu__group">
-                        <a href="/services" class="ks-mobile-menu__link">Services</a>
-                        <ul class="ks-mobile-menu__sub">
-                            <li><a href="/services">Tous nos services</a></li>
-                            <li><a href="/secteurs">Secteurs desservis</a></li>
-                            <li><a href="/zones-desservies">Zones desservies</a></li>
-                            <li><a href="/projets">Projets</a></li>
-                        </ul>
+                        <details class="ks-mobile-menu__acc">
+                            <summary class="ks-mobile-menu__link">Services <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
+                            <ul class="ks-mobile-menu__sub">
+                                <li><a href="/services">Tous nos services</a></li>
+                                <li><a href="/secteurs">Secteurs desservis</a></li>
+                                <li><a href="/zones-desservies">Zones desservies</a></li>
+                                <li><a href="/projets">Projets</a></li>
+                            </ul>
+                        </details>
                     </li>
                     <li class="ks-mobile-menu__group">
-                        <a href="/blog" class="ks-mobile-menu__link">Ressources</a>
-                        <ul class="ks-mobile-menu__sub">
-                            <li><a href="/blog">Blog</a></li>
-                            <li><a href="/faq">FAQ</a></li>
-                            <li><a href="/glossaire">Glossaire</a></li>
-                            <li><a href="/carrieres">Carrières</a></li>
-                        </ul>
+                        <details class="ks-mobile-menu__acc">
+                            <summary class="ks-mobile-menu__link">Ressources <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
+                            <ul class="ks-mobile-menu__sub">
+                                <li><a href="/blog">Blog</a></li>
+                                <li><a href="/faq">FAQ</a></li>
+                                <li><a href="/glossaire">Glossaire</a></li>
+                                <li><a href="/carrieres">Carrières</a></li>
+                            </ul>
+                        </details>
                     </li>
                     <li><a href="/contact" class="ks-mobile-menu__link">Contact</a></li>
                 </ul>
@@ -533,6 +543,22 @@ if ('serviceWorker' in navigator) {
         });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     targets.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+{{-- T179 — Accordéon mobile menu exclusif (1 ouvert à la fois, anti-scroll) --}}
+<script>
+(function() {
+    var accordeons = document.querySelectorAll('.ks-mobile-menu__acc');
+    accordeons.forEach(function(det) {
+        det.addEventListener('toggle', function() {
+            if (det.open) {
+                accordeons.forEach(function(other) {
+                    if (other !== det) other.open = false;
+                });
+            }
+        });
+    });
 })();
 </script>
 

@@ -4006,21 +4006,33 @@ body, body * {
   overflow: hidden;
   box-shadow: -16px 0 48px rgba(0, 0, 0, 0.4);
 }
+/* T179 — Close button position fixed top-right viewport (pas dans drawer), forme parfaite */
 .ks-mobile-menu__close {
-  position: absolute;
-  top: 14px;
+  position: fixed !important;
+  top: calc(14px + env(safe-area-inset-top, 0));
   right: 14px;
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  background: rgba(184, 164, 114, 0.12) !important;
+  width: 44px !important;
+  height: 44px !important;
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  background: rgba(184, 164, 114, 0.18) !important;
   color: var(--ks-gold-500) !important;
-  border: 1px solid rgba(184, 164, 114, 0.30);
-  border-radius: 50%;
+  border: 1px solid var(--ks-gold-500) !important;
+  border-radius: 50% !important;
   cursor: pointer;
   transition: background 0.2s ease, transform 0.15s ease;
-  z-index: 2;
+  z-index: 100;
+  line-height: 0;
+}
+.ks-mobile-menu__close svg {
+  width: 20px !important;
+  height: 20px !important;
+  flex-shrink: 0;
+  display: block;
 }
 .ks-mobile-menu__close:hover,
 .ks-mobile-menu__close:focus-visible {
@@ -4262,5 +4274,62 @@ body.mobile-menu-visible .ks-tabbar {
 @media (prefers-reduced-motion: reduce) {
   .ks-tabbar__item {
     transition: none !important;
+  }
+}
+
+/* ============================================================
+   T179 — Accordéon mobile menu (<details>) + chevron rotation
+   1 ouvert à la fois (JS exclusivité). Pas de scroll global.
+   ============================================================ */
+
+.ks-mobile-menu__acc {
+  display: block;
+}
+.ks-mobile-menu__acc > summary {
+  list-style: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.ks-mobile-menu__acc > summary::-webkit-details-marker { display: none; }
+.ks-mobile-menu__acc > summary::marker { display: none; }
+
+/* Chevron animé navy/gold */
+.ks-mobile-menu__chev {
+  width: 12px;
+  height: 12px;
+  flex-shrink: 0;
+  border-right: 2px solid var(--ks-gold-500);
+  border-bottom: 2px solid var(--ks-gold-500);
+  transform: rotate(45deg);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-right: 8px;
+}
+.ks-mobile-menu__acc[open] > summary .ks-mobile-menu__chev {
+  transform: rotate(-135deg);
+}
+
+/* Sub-items du <details> : conservent l'ancien style */
+.ks-mobile-menu__acc > .ks-mobile-menu__sub {
+  animation: ks-mobile-acc-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+@keyframes ks-mobile-acc-in {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Forcer le nav du drawer à ne pas dépasser ; le CTA bas reste collé */
+.ks-mobile-menu__nav {
+  overflow-y: auto; /* fallback safe si contenu accordéon ouvert > viewport */
+  scrollbar-width: thin;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-mobile-menu__chev,
+  .ks-mobile-menu__acc > .ks-mobile-menu__sub {
+    transition: none !important;
+    animation: none !important;
   }
 }
