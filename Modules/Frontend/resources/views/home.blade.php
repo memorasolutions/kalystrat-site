@@ -313,12 +313,12 @@ $services = [
             <div class="ks-defi__market-grid">
                 <article class="ks-defi__market-stat">
                     <span class="ks-defi__market-num">59&nbsp;864</span>
-                    <span class="ks-defi__market-label">Mises en chantier au Québec en 2025 (+24&nbsp;%)</span>
+                    <span class="ks-defi__market-label">Mises en chantier au Québec en 2025 (+23&nbsp;%)</span>
                     <cite class="ks-defi__market-src">Source&nbsp;: SCHL</cite>
                 </article>
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">11&nbsp;000</span>
-                    <span class="ks-defi__market-label">Postes vacants en construction au Québec</span>
+                    <span class="ks-defi__market-num">17&nbsp;000</span>
+                    <span class="ks-defi__market-label">Travailleurs supplémentaires recherchés chaque année en construction</span>
                     <cite class="ks-defi__market-src">Source&nbsp;: CCQ</cite>
                 </article>
                 <article class="ks-defi__market-stat">

@@ -31,7 +31,7 @@
     photo="/intime/images/pages/carrieres-hero.webp"
     eyebrow="Rejoindre l’équipe"
     title="Carrières chez Kalystrat"
-    subtitle="Le secteur de la construction au Québec compte plus de 11 000 postes vacants. Apprenti, compagnon expérimenté ou cadre de chantier&nbsp;: nous avons probablement une opportunité pour vous."
+    subtitle="Le secteur de la construction au Québec doit attirer environ 17 000 travailleurs supplémentaires chaque année (source CCQ). Apprenti, compagnon expérimenté ou cadre de chantier&nbsp;: nous avons probablement une opportunité pour vous."
 >
     <x-slot:breadcrumb>
         <li><a href="{{ url('/') }}">Accueil</a></li>

@@ -247,7 +247,7 @@
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">59 864</div>
                 <div class="ks-stat__label">Mises en chantier 2025</div>
-                <p class="ks-card__text" style="margin-top:1rem">Au Québec, +24&nbsp;% en un an. Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
+                <p class="ks-card__text" style="margin-top:1rem">Au Québec, +23&nbsp;% en un an (source SCHL). Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">19<sup style="font-size:0.55em;color:var(--ks-gold-500)"> G$</sup></div>
@@ -255,9 +255,9 @@
                 <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment premium. Kalystrat Finition Intérieure et Toiture-Enveloppe s’y positionnent.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <div class="ks-stat__number">11 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">+</sup></div>
-                <div class="ks-stat__label">Postes vacants construction</div>
-                <p class="ks-card__text" style="margin-top:1rem">Pénurie de main-d’œuvre chronique au Québec. Kalystrat Placement Construction sert d’abord les filiales internes, puis la clientèle externe.</p>
+                <div class="ks-stat__number">17 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">/an</sup></div>
+                <div class="ks-stat__label">Travailleurs recherchés par année</div>
+                <p class="ks-card__text" style="margin-top:1rem">Selon la CCQ, le Québec doit attirer environ 17 000 travailleurs supplémentaires chaque année pour répondre à la demande en construction. Kalystrat Placement Construction sert d'abord les filiales internes, puis la clientèle externe.</p>
             </article>
         </div>
     </div>
