@@ -3659,13 +3659,13 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   line-height: 0;
 }
 
-/* T147 — Sur pages avec hero photo (overlay sombre), passer le logo en
-   variant blanc via filter brightness/invert. Le sticky-header (fond clair
-   au scroll) garde le logo navy original. */
+/* T181 — Logo header navy par défaut (visible sur tous fonds clairs).
+   T147 ancien filter:invert retiré car cause logo invisible sur mobile
+   (header fond blanc opaque + logo blanc = invisible).
+   Logo navy reste lisible sur hero photo via drop-shadow si nécessaire. */
 body:has(.ks-page-hero) .main-header:not(.fixed-header) .header-upper .logo img {
-  filter: brightness(0) invert(1);
+  filter: none;
 }
-/* Cohérence : sticky scroll = fond blanc → logo navy original (pas d'invert) */
 body:has(.ks-page-hero) .sticky-header.fixed-header .logo img,
 body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
   filter: none;
