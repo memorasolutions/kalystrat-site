@@ -358,37 +358,38 @@ $services = [
                      Pièces 80×40 avec demi-cercles (rayon 8) tabs/blanks
                      Checkerboard gold/navy : intégration verticale, 6 filiales unies --}}
                 <svg class="ks-defi__puzzle" aria-hidden="true" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
-                    {{-- 6 pièces en dégradé doré : intégration verticale, un seul groupe unifié
+                    {{-- 6 pièces avec 3 nuances dorées TOUTES WCAG AAA (7:1+) sur navy-900
+                         gold-500 #B8A472 = 7.42:1 / amber #D4B968 = 9.44:1 / cream #E5D5A8 = 12.44:1
                          Stroke navy subtil pour séparer chaque pièce visuellement --}}
                     {{-- P1 haut-gauche : top=flat, right=TAB, bottom=TAB, left=flat --}}
                     <path data-puzzle-piece="1"
                           d="M 0,0 H 80 V 12 a8,8 0 0,1 0,16 V 40 H 48 a8,8 0 0,1 -16,0 H 0 Z"
-                          fill="var(--ks-gold-500)"
+                          fill="#B8A472"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                     {{-- P2 haut-centre : top=flat, right=TAB, bottom=TAB, left=BLANK --}}
                     <path data-puzzle-piece="2"
                           d="M 80,0 H 160 V 12 a8,8 0 0,1 0,16 V 40 H 128 a8,8 0 0,1 -16,0 H 80 V 28 a8,8 0 0,0 0,-16 V 0 Z"
-                          fill="var(--ks-gold-700)"
+                          fill="#D4B968"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                     {{-- P3 haut-droite : top=flat, right=flat, bottom=BLANK, left=BLANK --}}
                     <path data-puzzle-piece="3"
                           d="M 160,0 H 240 V 40 H 208 a8,8 0 0,0 -16,0 H 160 V 28 a8,8 0 0,0 0,-16 V 0 Z"
-                          fill="var(--ks-gold-500)"
+                          fill="#E5D5A8"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                     {{-- P4 bas-gauche : top=BLANK, right=BLANK, bottom=flat, left=flat --}}
                     <path data-puzzle-piece="4"
                           d="M 0,40 H 32 a8,8 0 0,0 16,0 H 80 V 52 a8,8 0 0,0 0,16 V 80 H 0 V 40 Z"
-                          fill="var(--ks-gold-700)"
+                          fill="#D4B968"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                     {{-- P5 bas-centre : top=BLANK, right=TAB, bottom=flat, left=TAB --}}
                     <path data-puzzle-piece="5"
                           d="M 80,40 H 112 a8,8 0 0,0 16,0 H 160 V 52 a8,8 0 0,1 0,16 V 80 H 80 V 68 a8,8 0 0,1 0,-16 V 40 Z"
-                          fill="var(--ks-gold-500)"
+                          fill="#E5D5A8"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                     {{-- P6 bas-droite : top=TAB, right=flat, bottom=flat, left=BLANK --}}
                     <path data-puzzle-piece="6"
                           d="M 160,40 H 192 a8,8 0 0,1 16,0 H 240 V 80 H 160 V 68 a8,8 0 0,0 0,-16 V 40 Z"
-                          fill="var(--ks-gold-700)"
+                          fill="#B8A472"
                           stroke="var(--ks-navy-900)" stroke-width="0.6" stroke-linejoin="round"/>
                 </svg>
             </article>
