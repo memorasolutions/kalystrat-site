@@ -353,10 +353,28 @@ $services = [
             <article class="ks-defi__kpi ks-defi__kpi--filiales">
                 <span class="ks-eyebrow">Filiales</span>
                 <span class="ks-defi__num" data-counter data-target="6" data-suffix="">0</span>
-                <p class="ks-defi__caption">Filiales spécialisées sous Gestion Kalystrat Inc.</p>
-                <div class="ks-defi__bars" aria-hidden="true">
-                    <span></span><span></span><span></span><span></span><span></span><span></span>
-                </div>
+                <p class="ks-defi__caption">Six filiales assemblées en un seul groupe cohérent.</p>
+                {{-- T148 — Puzzle 6 pièces assemblées (métaphore intégration verticale) --}}
+                <svg class="ks-defi__puzzle" aria-hidden="true" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+                    {{-- 6 pièces rectangulaires arrondies (3 cols × 2 rows), gradient opacity --}}
+                    <rect data-puzzle-piece="1" x="6"   y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.55"/>
+                    <rect data-puzzle-piece="2" x="84"  y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.72"/>
+                    <rect data-puzzle-piece="3" x="162" y="8"  width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.88"/>
+                    <rect data-puzzle-piece="4" x="6"   y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.68"/>
+                    <rect data-puzzle-piece="5" x="84"  y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)" opacity="0.82"/>
+                    <rect data-puzzle-piece="6" x="162" y="44" width="72" height="28" rx="3" fill="var(--ks-gold-500)"/>
+                    {{-- Points de connexion gold entre pièces (suggère assemblage) --}}
+                    {{-- 2 jonctions horizontales rangée haut --}}
+                    <circle cx="81" cy="22" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    <circle cx="159" cy="22" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    {{-- 2 jonctions horizontales rangée bas --}}
+                    <circle cx="81" cy="58" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    <circle cx="159" cy="58" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    {{-- 3 jonctions verticales entre rangées --}}
+                    <circle cx="42" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    <circle cx="120" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                    <circle cx="198" cy="40" r="2.5" fill="var(--ks-navy-900)" stroke="var(--ks-gold-500)" stroke-width="1.5"/>
+                </svg>
             </article>
 
             <article class="ks-defi__kpi ks-defi__kpi--compagnons">

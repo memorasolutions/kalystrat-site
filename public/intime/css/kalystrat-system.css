@@ -1266,9 +1266,11 @@
   to   { transform: scaleY(1); opacity: 1; }
 }
 
-/* T143/T144 — KPI Défi 2026 : visuels différenciés (journey + bars sectors) */
+/* T143/T144/T148 — KPI Défi 2026 : visuels différenciés
+   journey (compagnons) + puzzle (filiales) + sectors (bars graduées) */
 .ks-defi__journey,
-.ks-defi__sectors {
+.ks-defi__sectors,
+.ks-defi__puzzle {
   width: 100%;
   max-width: none;
   height: auto;
@@ -1326,6 +1328,35 @@
 .ks-defi__sectors rect:nth-child(4) { animation-delay: 0.32s; }
 .ks-defi__sectors rect:nth-child(5) { animation-delay: 0.40s; }
 
+/* T148 — Puzzle 6 pièces : animation cascade « assemblage »
+   Chaque pièce entre légèrement décalée puis se met en place */
+.ks-defi__puzzle [data-puzzle-piece] {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: ks-puzzle-assemble 0.7s cubic-bezier(0.34, 1.4, 0.64, 1) backwards;
+}
+.ks-defi__puzzle [data-puzzle-piece="1"] { animation-delay: 0.10s; }
+.ks-defi__puzzle [data-puzzle-piece="2"] { animation-delay: 0.20s; }
+.ks-defi__puzzle [data-puzzle-piece="3"] { animation-delay: 0.30s; }
+.ks-defi__puzzle [data-puzzle-piece="4"] { animation-delay: 0.40s; }
+.ks-defi__puzzle [data-puzzle-piece="5"] { animation-delay: 0.50s; }
+.ks-defi__puzzle [data-puzzle-piece="6"] { animation-delay: 0.60s; }
+.ks-defi__puzzle circle {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: ks-puzzle-snap 0.4s ease-out 0.85s backwards;
+}
+@keyframes ks-puzzle-assemble {
+  0%   { opacity: 0; transform: scale(0.4) translateY(-6px); }
+  60%  { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes ks-puzzle-snap {
+  0%   { opacity: 0; transform: scale(0); }
+  60%  { opacity: 1; transform: scale(1.4); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .ks-defi__journey [data-journey-path] {
     stroke-dashoffset: 0;
@@ -1339,7 +1370,9 @@
   .ks-defi__journey [data-journey-ring] {
     animation: none;
   }
-  .ks-defi__sectors rect {
+  .ks-defi__sectors rect,
+  .ks-defi__puzzle [data-puzzle-piece],
+  .ks-defi__puzzle circle {
     animation: none;
   }
 }
