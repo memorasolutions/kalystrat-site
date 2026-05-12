@@ -464,27 +464,7 @@ if ('serviceWorker' in navigator) {
 })();
 </script>
 
-{{-- V5d-B — Sticky CTA mobile (visible scroll bas) - tel: direct conversion --}}
-<a class="ks-sticky-cta" href="tel:+14184760987" aria-label="Appeler Kalystrat au 418 476 0987" hidden data-ks-sticky-cta>
-    <span class="ks-sticky-cta__icon" aria-hidden="true">📞</span>
-    <span class="ks-sticky-cta__text">418&nbsp;476-0987</span>
-</a>
-<script>
-(function () {
-    'use strict';
-    var cta = document.querySelector('[data-ks-sticky-cta]');
-    if (!cta) return;
-    var revealAt = 600;
-    function check() {
-        if (window.innerWidth >= 768) { cta.hidden = true; return; }
-        if (window.scrollY > revealAt) { cta.hidden = false; }
-        else { cta.hidden = true; }
-    }
-    window.addEventListener('scroll', check, { passive: true });
-    window.addEventListener('resize', check);
-    check();
-})();
-</script>
+{{-- V5d-B sticky-cta tel SUPPRIMÉ T175 : remplacé par sticky-bar T174 qui contient déjà le bouton Appeler en mobile (DRY total, anti-duplication) --}}
 
 <script>
 {{-- T126 — Scroll-spy TOC IntersectionObserver --}}

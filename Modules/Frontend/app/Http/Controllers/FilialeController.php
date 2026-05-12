@@ -98,7 +98,7 @@ class FilialeController extends Controller
             'nom_court' => 'Kalystrat Placement Construction',
             'nom_legal' => 'Kalystrat Placement Construction Inc.',
             'specialite' => 'Agence de placement de main-d\'œuvre construction',
-            'tagline' => 'Main-d\'œuvre qualifiée CCQ : 11 000 postes vacants au QC',
+            'tagline' => 'Main-d\'œuvre qualifiée CCQ : 17 000 travailleurs/an recherchés au QC',
             'services' => [
                 'Recrutement de travailleurs qualifiés et semi-qualifiés',
                 'Formation et intégration',
