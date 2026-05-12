@@ -899,7 +899,7 @@
 }
 
 .ks-process__lead {
-  color: var(--ks-white) !important;
+  color: var(--ks-gray-700);
   font-weight: 500;
   max-width: 65ch;
   margin-left: auto;
