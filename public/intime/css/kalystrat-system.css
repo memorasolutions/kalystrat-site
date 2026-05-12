@@ -4434,3 +4434,11 @@ body.mobile-menu-visible .ks-sticky-bar {
     transition: none !important;
   }
 }
+
+/* T176 — Sticky-bar mobile-only (≤ 1023px). Sur desktop le header
+   contient déjà le bouton « Obtenir une soumission » prominent. */
+@media (min-width: 1024px) {
+  .ks-sticky-bar {
+    display: none !important;
+  }
+}
