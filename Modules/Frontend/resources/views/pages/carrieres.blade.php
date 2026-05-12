@@ -106,7 +106,7 @@ $metiers = [
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Envoyer votre candidature</h2>
-        <p>Courriel direct&nbsp;: <a href="mailto:carrieres@kalystrat.ca" style="color:var(--ks-gold-500);text-decoration:underline">carrieres@kalystrat.ca</a>. Réponse sous 5 jours ouvrables.</p>
+        <p>Courriel direct&nbsp;: <a href="#" class="ks-email-protect" data-u="carrieres" data-d="kalystrat.ca" style="color:var(--ks-gold-500);text-decoration:underline" aria-label="Envoyer un courriel à carrieres chez kalystrat point ca" rel="nofollow noopener">…</a>. Réponse sous 5 jours ouvrables.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Postuler maintenant</a>
     </div>
 </section>

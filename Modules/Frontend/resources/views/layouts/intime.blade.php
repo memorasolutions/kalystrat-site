@@ -280,9 +280,9 @@ if ('serviceWorker' in navigator) {
 								</a>
 							</li>
 							<li>
-								<a href="mailto:info@kalystrat.ca" class="ks-footer__email">
+								<a href="#" class="ks-footer__email ks-email-protect" data-u="info" data-d="kalystrat.ca" data-keep-slot="1" aria-label="Envoyer un courriel à info chez kalystrat point ca" rel="nofollow noopener">
 									<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="20" height="20"><path fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z M4 6l8 7 8-7"/></svg>
-									<span>info@kalystrat.ca</span>
+									<span data-email-display>Cliquer pour révéler</span>
 								</a>
 							</li>
 							<li class="ks-footer__address">
@@ -511,6 +511,38 @@ if ('serviceWorker' in navigator) {
         });
     }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
     targets.forEach(function (el) { io.observe(el); });
+})();
+</script>
+
+{{-- T169 — Anti-harvesting courriels : assemble user@domain au runtime (jamais en HTML brut) --}}
+<script>
+(function () {
+    function buildEmail(el) {
+        var u = el.dataset.u, d = el.dataset.d;
+        if (!u || !d) return null;
+        return u + '@' + d;
+    }
+    document.querySelectorAll('.ks-email-protect').forEach(function (el) {
+        var email = buildEmail(el);
+        if (!email) return;
+        el.setAttribute('href', 'mailto:' + email);
+        // Cas A : remplir le slot principal si vide ou placeholder '…'
+        if (!el.hasAttribute('data-keep-slot') && (el.textContent.trim() === '' || el.textContent.trim() === '…')) {
+            el.textContent = email;
+        }
+        // Cas B : remplir un sous-élément marqué [data-email-display]
+        var display = el.querySelector('[data-email-display]');
+        if (display) display.textContent = email;
+    });
+    document.addEventListener('click', function (e) {
+        var link = e.target.closest('.ks-email-protect');
+        if (!link) return;
+        var email = buildEmail(link);
+        if (email && link.getAttribute('href') === '#') {
+            e.preventDefault();
+            window.location.href = 'mailto:' + email;
+        }
+    });
 })();
 </script>
 

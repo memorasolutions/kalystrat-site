@@ -75,6 +75,11 @@
 
                 <form method="POST" action="{{ route('contact.submit') }}" class="ks-contact-form" novalidate>
                     @csrf
+                    {{-- T169 — Honeypot anti-bot (champ piège caché, aria-hidden + tabindex=-1, doit rester vide) --}}
+                    <div aria-hidden="true" style="position:absolute;left:-9999px;top:-9999px;width:1px;height:1px;overflow:hidden;opacity:0;pointer-events:none">
+                        <label for="website">Ne pas remplir ce champ</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" value="">
+                    </div>
                     <div class="ks-contact-form__field">
                         <label for="nom" class="ks-contact-form__label">Nom complet <span aria-hidden="true">*</span></label>
                         <input type="text" id="nom" name="nom" autocomplete="name" required class="ks-contact-form__input">
@@ -126,7 +131,7 @@
 
                 <div class="ks-contact-card">
                     <span class="ks-eyebrow">Courriel</span>
-                    <a href="mailto:info@kalystrat.ca" class="ks-contact-card__email">info@kalystrat.ca</a>
+                    <a href="#" class="ks-contact-card__email ks-email-protect" data-u="info" data-d="kalystrat.ca" aria-label="Envoyer un courriel à info chez kalystrat point ca" rel="nofollow noopener">…</a>
                     <p class="ks-contact-card__meta">Plans, devis, documents techniques. Réponse sous 72&nbsp;h ouvrables.</p>
                 </div>
 

@@ -47,14 +47,14 @@
                 </a>
             </li>
             <li>
-                <a href="mailto:info@kalystrat.ca" class="ks-sticky-contact__action" data-action="email">
+                <a href="#" class="ks-sticky-contact__action ks-email-protect" data-u="info" data-d="kalystrat.ca" data-keep-slot="1" data-action="email" aria-label="Envoyer un courriel à info chez kalystrat point ca" rel="nofollow noopener">
                     <svg class="ks-sticky-contact__action-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
                     </svg>
                     <span class="ks-sticky-contact__action-label">
                         <span class="ks-sticky-contact__action-title">Courriel</span>
-                        <span class="ks-sticky-contact__action-detail">info@kalystrat.ca</span>
+                        <span class="ks-sticky-contact__action-detail" data-email-display>Cliquer pour révéler</span>
                     </span>
                 </a>
             </li>
@@ -91,7 +91,7 @@
             </svg>
             <span class="ks-sr-only">Appeler</span>
         </a>
-        <a href="mailto:info@kalystrat.ca" class="ks-sticky-contact__fab-btn" aria-label="Envoyer un courriel">
+        <a href="#" class="ks-sticky-contact__fab-btn ks-email-protect" data-u="info" data-d="kalystrat.ca" data-keep-slot="1" aria-label="Envoyer un courriel" rel="nofollow noopener">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                 <polyline points="22,6 12,13 2,6"/>

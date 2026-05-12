@@ -31,8 +31,30 @@ class PageController extends Controller
     public function contact(): View { return view('frontend::pages.contact'); }
     public function contactSubmit(Request $request): \Illuminate\Http\RedirectResponse
     {
-        // V2 : envoi email + validation. Pour V1, juste redirect avec flash.
-        return redirect()->route('contact')->with('status', 'Merci, votre demande a été envoyée.');
+        // T169 — Honeypot anti-bot : champ "website" caché DOIT rester vide
+        if (filled($request->input('website'))) {
+            // Silently accept (bot detection — pas de feedback pour ne pas révéler le piège)
+            return redirect()->route('contact')->with('status', 'Merci, votre demande a été envoyée.');
+        }
+        // Rate limit per IP : 3 soumissions / 10 min
+        $key = 'contact-submit:' . $request->ip();
+        if (\Illuminate\Support\Facades\RateLimiter::tooManyAttempts($key, 3)) {
+            return back()->withInput()->withErrors([
+                'message' => 'Trop de tentatives. Veuillez réessayer dans quelques minutes.',
+            ]);
+        }
+        \Illuminate\Support\Facades\RateLimiter::hit($key, 600);
+        // Validation server-side
+        $request->validate([
+            'nom' => 'required|string|max:120',
+            'email' => 'required|email|max:200',
+            'entreprise' => 'nullable|string|max:200',
+            'message' => 'nullable|string|max:5000',
+            'telephone' => 'nullable|string|max:30',
+            'rappel' => 'nullable|in:1',
+        ]);
+        // V2 : envoi Mail::to(...)->send(new ContactMessage(...))
+        return redirect()->route('contact')->with('status', 'Merci, votre demande a été envoyée. Nous vous répondrons sous 72 heures ouvrables.');
     }
     public function faq(): View { return view('frontend::pages.faq'); }
     public function glossaire(): View { return view('frontend::pages.glossaire'); }
