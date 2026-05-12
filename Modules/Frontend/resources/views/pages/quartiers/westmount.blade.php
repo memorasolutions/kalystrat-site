@@ -16,7 +16,7 @@ $q = [
 @section('title', 'Construction et rénovation à Westmount | Kalystrat')
 
 @push('meta')
-<meta name="description" content="Construction et rénovation résidentielle haut de gamme à Westmount par Kalystrat. Finition intérieure premium, ébénisterie sur mesure, conformité aux exigences architecturales de la Cité.">
+<meta name="description" content="Construction et rénovation résidentielle haut de gamme à Westmount par Kalystrat. Finition intérieure haut de gamme, ébénisterie sur mesure, conformité aux exigences architecturales de la Cité.">
 <link rel="canonical" href="{{ url('/zones-desservies/montreal/westmount') }}">
 @endpush
 
@@ -26,7 +26,7 @@ $q = [
     '@type' => 'LocalBusiness',
     'name' => 'Gestion Kalystrat Inc. — Westmount',
     'url' => url('/zones-desservies/montreal/westmount'),
-    'description' => 'Construction et rénovation résidentielle haut de gamme à Westmount, finition premium, ébénisterie sur mesure',
+    'description' => 'Construction et rénovation résidentielle haut de gamme à Westmount, finition haut de gamme, ébénisterie sur mesure',
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Westmount', 'addressRegion' => 'QC', 'addressCountry' => 'CA', 'postalCode' => 'H3Y'],
     'geo' => ['@type' => 'GeoCoordinates', 'latitude' => $q['lat'], 'longitude' => $q['lng']],
     'areaServed' => ['@type' => 'City', 'name' => 'Westmount'],
@@ -49,7 +49,7 @@ $q = [
     photo="{{ $q['photo'] }}"
     eyebrow="{{ $q['classement'] }}"
     title="Construction et rénovation à Westmount"
-    subtitle="{{ $q['specialite_top'] }}. Encadrement architectural strict de la Cité de Westmount, finitions premium, ébénisterie sur mesure."
+    subtitle="{{ $q['specialite_top'] }}. Encadrement architectural strict de la Cité de Westmount, finitions haut de gamme, ébénisterie sur mesure."
 >
     <x-slot:breadcrumb>
         <li><a href="{{ url('/') }}">Accueil</a></li>
@@ -74,7 +74,7 @@ $q = [
         <ul>
             <li><strong>Construction résidentielle haut de gamme</strong>&nbsp;: nouvelles constructions sur terrains rares, agrandissements respectueux du voisinage architectural.</li>
             <li><strong>Rénovation patrimoniale résidentielle</strong>&nbsp;: restauration de boiseries d'époque, conservation de planchers en bois franc d'origine, fenêtres sur mesure.</li>
-            <li><strong>Finition intérieure premium</strong>&nbsp;: ébénisterie sur mesure, comptoirs en pierre naturelle, planchers en bois exotique, plafonniers de plâtre ornés.</li>
+            <li><strong>Finition intérieure haut de gamme</strong>&nbsp;: ébénisterie sur mesure, comptoirs en pierre naturelle, planchers en bois exotique, plafonniers de plâtre ornés.</li>
             <li><strong>Mises aux normes énergétiques discrètes</strong>&nbsp;: isolation R-24 / R-49 et ventilation HRV intégrées sans altérer le caractère architectural protégé.</li>
         </ul>
 
@@ -86,7 +86,7 @@ $q = [
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Projet de prestige à Westmount&nbsp;?</h2>
-        <p>Demandez une évaluation discrète et détaillée. Notre équipe coordonne l'expertise architecturale, le volet patrimonial et la finition premium pour les clients de Westmount.</p>
+        <p>Demandez une évaluation discrète et détaillée. Notre équipe coordonne l'expertise architecturale, le volet patrimonial et la finition haut de gamme pour les clients de Westmount.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Demander une évaluation</a>
     </div>
 </section>

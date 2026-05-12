@@ -113,7 +113,7 @@ $services = [
     ['name' => 'Charpente structurale (bois, acier, hybride)', 'slug' => 'structure', 'desc' => 'Ossature bois, charpente acier, systèmes hybrides, poutrelles, fermes de toit, structures préfabriquées.'],
     ['name' => 'Toiture et enveloppe du bâtiment', 'slug' => 'toiture-enveloppe', 'desc' => 'Toits plats et en pente, membranes élastomères, TPO, EPDM, pare-air, pare-vapeur, isolation thermique, revêtements extérieurs.'],
     ['name' => 'Finition intérieure haut de gamme et accessible', 'slug' => 'finition-interieure', 'desc' => 'Gypse, peinture, moulures, planchers (bois franc, céramique, vinyle), ébénisterie sur mesure, comptoirs, portes et quincaillerie.'],
-    ['name' => 'Développement immobilier et revente', 'slug' => 'immobilier', 'desc' => 'Acquisition de terrains, construction résidentielle et multi-logements, rénovations et flips, portefeuille locatif.'],
+    ['name' => 'Développement immobilier et revente', 'slug' => 'immobilier', 'desc' => 'Acquisition de terrains, construction résidentielle et multi-logements, rénovations et reventes après rénovation, portefeuille locatif.'],
     ['name' => 'Placement de main-d\'œuvre construction', 'slug' => 'placement-construction', 'desc' => 'Recrutement et placement temporaire ou permanent de travailleurs qualifiés CCQ, formation, intégration, gestion paie et conformité.'],
 ];
 @endphp
@@ -152,7 +152,7 @@ $services = [
             'name' => "Quel est le délai pour obtenir une soumission ?",
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est ferme à prix forfaitaire, avec calendrier d'étapes contractuelles.",
+                'text' => "Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est clair, à prix forfaitaire, avec un calendrier d'étapes partagé.",
             ],
         ],
         [
@@ -168,7 +168,7 @@ $services = [
             'name' => 'Êtes-vous conformes au Code de construction du Québec 2026 ?',
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "Oui, 100 % conforme. Nos équipes maîtrisent les exigences du Code 2026 : étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par blower door avant livraison.",
+                'text' => "Oui, 100 % conforme. Nos équipes maîtrisent les exigences du Code 2026 : étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par test d'étanchéité (blower door) avant livraison.",
             ],
         ],
         [
@@ -284,7 +284,7 @@ $services = [
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">03</div>
                 <h3 class="ks-pillar__title">Demande captive</h3>
-                <p class="ks-pillar__text"><a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et flips, générant un flux de chantiers constant pour les cinq autres filiales.</p>
+                <p class="ks-pillar__text"><a href="{{ route('filiale', 'immobilier') }}">Kalystrat Immobilier</a> développe ses propres projets résidentiels et opérations de revalorisation, générant un flux de chantiers constant pour les cinq autres filiales.</p>
             </article>
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">04</div>
@@ -299,7 +299,7 @@ $services = [
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">06</div>
                 <h3 class="ks-pillar__title">Gestion centralisée</h3>
-                <p class="ks-pillar__text">Comptabilité, ressources humaines, juridique, marketing et technologies de l'information sont mutualisés au niveau du Holding. Frais généraux par filiale réduits, exécution alignée.</p>
+                <p class="ks-pillar__text">Comptabilité, ressources humaines, juridique, marketing et technologies de l'information sont mutualisés au niveau de la société mère. Frais généraux par filiale réduits, exécution alignée.</p>
             </article>
         </div>
     </div>
@@ -462,7 +462,7 @@ $services = [
             <article class="ks-approche__narrative">
                 <span class="ks-eyebrow">Conçu, réalisé, livré</span>
                 <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
-                <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un buzzword. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
+                <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un slogan creux. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
                 <p class="ks-lead ks-approche__lead">Six directions de filiales spécialisées, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des expertises métier et la conformité totale au Code de construction du Québec 2026.</p>
                 <p class="ks-lead ks-approche__lead">La direction est appuyée par un <strong>conseil consultatif</strong> réunissant des experts en construction, financement, droit des affaires, ressources humaines et immobilier — dont <strong>Me Jacques Jobidon</strong> (droit de la construction et des sociétés) et <strong>Perry Wong</strong> (immobilier).</p>
                 <div class="ks-approche__expertise" aria-hidden="true">
@@ -482,7 +482,7 @@ $services = [
                     <div class="ks-approche__commitment-meta">
                         <span class="ks-eyebrow">Engagement contractuel</span>
                         <h3 class="ks-approche__commitment-title">Prix forfaitaire et calendrier écrit</h3>
-                        <p class="ks-approche__commitment-text">Soumission ferme avec calendrier d'étapes contractuelles. Avenants signés conjointement, jamais d'augmentation unilatérale du devis initial.</p>
+                        <p class="ks-approche__commitment-text">Devis clair à prix forfaitaire, accompagné d'un calendrier d'étapes partagé. Tout ajustement est signé conjointement&nbsp;: aucune surprise sur la facture finale.</p>
                     </div>
                 </article>
                 <article class="ks-approche__commitment">
@@ -554,7 +554,7 @@ $services = [
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
-                <p class="ks-card__text" style="font-style:italic">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre blower door a passé du premier coup.</p>
+                <p class="ks-card__text" style="font-style:italic">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre test d'étanchéité a passé du premier coup.</p>
                 <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
                     <strong style="color:var(--ks-gold-500);display:block">Gestionnaire institutionnel</strong>
                     <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Pavillon scolaire, Trois-Rivières</span>
@@ -656,7 +656,7 @@ $services = [
             <li class="ks-faq__item">
                 <details>
                     <summary class="ks-faq__question">Quel est le délai pour obtenir une soumission&nbsp;?</summary>
-                    <p class="ks-faq__answer">Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est ferme à prix forfaitaire, avec calendrier d'étapes contractuelles.</p>
+                    <p class="ks-faq__answer">Pour un projet résidentiel, la soumission détaillée est livrée sous 5 à 10 jours ouvrables après la visite et la prise de mesures. Pour les projets commerciaux ou institutionnels avec modélisation BIM, le délai varie selon la complexité technique. Le devis est clair, à prix forfaitaire, avec un calendrier d'étapes partagé.</p>
                 </details>
             </li>
             <li class="ks-faq__item">
@@ -668,7 +668,7 @@ $services = [
             <li class="ks-faq__item">
                 <details>
                     <summary class="ks-faq__question">Êtes-vous conformes au Code de construction du Québec 2026&nbsp;?</summary>
-                    <p class="ks-faq__answer">Oui, 100&nbsp;% conforme. Nos équipes maîtrisent les exigences du Code 2026&nbsp;: étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par <em>blower door</em> avant livraison.</p>
+                    <p class="ks-faq__answer">Oui, 100&nbsp;% conforme. Nos équipes maîtrisent les exigences du Code 2026&nbsp;: étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par un test d'étanchéité (<em>blower door</em>) avant livraison.</p>
                 </details>
             </li>
             <li class="ks-faq__item">
@@ -706,7 +706,7 @@ $services = [
                 <div class="ks-card__body">
                     <span class="ks-eyebrow">Marché immobilier</span>
                     <h3 class="ks-card__title"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}">Pourquoi construire des multilogements au Québec en 2026</a></h3>
-                    <p class="ks-card__text">Pénurie de logements, démographie favorable, programmes SCHL&nbsp;: pourquoi le multilogement reste l'asset class la plus solide du marché québécois.</p>
+                    <p class="ks-card__text">Pénurie de logements, démographie favorable, programmes SCHL&nbsp;: pourquoi le multilogement reste la catégorie d'actif la plus solide du marché québécois.</p>
                     <div class="ks-card__cta"><a href="{{ route('blog.show', 'pourquoi-construire-multi-logements-quebec-2026') }}" class="ks-cta-secondary">Lire l'article</a></div>
                 </div>
             </article>

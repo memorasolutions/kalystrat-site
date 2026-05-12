@@ -73,7 +73,7 @@
                 <p class="ks-card__text"><strong>Défi&nbsp;:</strong> coordonner fondations, structure, toiture et finition sans rupture de calendrier sur un terrain argileux. <strong>Solution&nbsp;:</strong> les quatre filiales Kalystrat sur le même chantier, sous un seul chargé de projet. <strong>Résultats&nbsp;:</strong> livraison à temps, contrôle qualité interne sans zone grise.</p>
             </article>
             <article class="ks-card ks-card--accent-navy">
-                <span class="ks-eyebrow">Cas type 02 · Rénovation premium</span>
+                <span class="ks-eyebrow">Cas type 02 · Rénovation haut de gamme</span>
                 <h3 class="ks-card__title">Rénovation maison patrimoniale, Sillery</h3>
                 <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1rem 0;padding:1rem;background:rgba(10,22,40,0.05);border-radius:4px">
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">100&nbsp;%</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Conformité Code QC 2026<br>(étanchéité, R-49, HRV)</span></div>

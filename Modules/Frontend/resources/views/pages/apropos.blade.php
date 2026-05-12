@@ -252,7 +252,7 @@
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">19<sup style="font-size:0.55em;color:var(--ks-gold-500)"> G$</sup></div>
                 <div class="ks-stat__label">Marché rénovation Québec</div>
-                <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment premium. Kalystrat Finition Intérieure et Toiture-Enveloppe s’y positionnent.</p>
+                <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment haut de gamme. Kalystrat Finition Intérieure et Toiture-Enveloppe s’y positionnent.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">17 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">/an</sup></div>
