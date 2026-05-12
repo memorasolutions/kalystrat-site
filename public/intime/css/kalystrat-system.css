@@ -1266,8 +1266,8 @@
   to   { transform: scaleY(1); opacity: 1; }
 }
 
-/* T143 — Graphique de progression croissante (compagnons) + secteurs (5 colonnes) */
-.ks-defi__growth,
+/* T143/T144 — KPI Défi 2026 : visuels différenciés (journey + bars sectors) */
+.ks-defi__journey,
 .ks-defi__sectors {
   width: 100%;
   max-width: none;
@@ -1276,25 +1276,46 @@
   padding-top: 1.25rem;
 }
 
-.ks-defi__growth rect {
-  transform-origin: bottom;
-  animation: ks-bars-rise 1.4s cubic-bezier(0.16, 1, 0.3, 1) backwards;
+/* T144 — Trajectoire SVG growth journey (Compagnons CCQ)
+   Courbe ascendante draw + continuation pointillée + pulse cercle arrivée */
+.ks-defi__journey [data-journey-path] {
+  stroke-dasharray: 260;
+  stroke-dashoffset: 260;
+  animation: ks-journey-draw 2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
 }
-.ks-defi__growth rect:nth-child(1) { animation-delay: 0.05s; }
-.ks-defi__growth rect:nth-child(2) { animation-delay: 0.12s; }
-.ks-defi__growth rect:nth-child(3) { animation-delay: 0.19s; }
-.ks-defi__growth rect:nth-child(4) { animation-delay: 0.26s; }
-.ks-defi__growth rect:nth-child(5) { animation-delay: 0.33s; }
-.ks-defi__growth rect:nth-child(6) { animation-delay: 0.40s; }
-.ks-defi__growth path {
-  stroke-dasharray: 60;
-  stroke-dashoffset: 60;
-  animation: ks-growth-arrow 1.2s ease-out 0.6s forwards;
+.ks-defi__journey [data-journey-tail] {
+  opacity: 0;
+  animation: ks-journey-fade-in 0.8s ease-out 1.6s forwards;
 }
-@keyframes ks-growth-arrow {
-  to { stroke-dashoffset: 0; }
+.ks-defi__journey [data-journey-pulse] {
+  transform-origin: 200px 14px;
+  transform-box: fill-box;
+  animation: ks-journey-pop 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 1.4s backwards;
+}
+.ks-defi__journey [data-journey-ring] {
+  transform-origin: 200px 14px;
+  transform-box: fill-box;
+  opacity: 0;
+  animation: ks-journey-ring 2.4s ease-out 2s infinite;
 }
 
+@keyframes ks-journey-draw {
+  to { stroke-dashoffset: 0; }
+}
+@keyframes ks-journey-fade-in {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 0.65; transform: translateX(0); }
+}
+@keyframes ks-journey-pop {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes ks-journey-ring {
+  0%   { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2.4); }
+}
+
+/* T143 — Secteurs : 5 colonnes graduées */
 .ks-defi__sectors rect {
   transform-origin: bottom;
   animation: ks-bars-rise 1.2s cubic-bezier(0.16, 1, 0.3, 1) backwards;
@@ -1306,8 +1327,18 @@
 .ks-defi__sectors rect:nth-child(5) { animation-delay: 0.40s; }
 
 @media (prefers-reduced-motion: reduce) {
-  .ks-defi__growth rect,
-  .ks-defi__growth path,
+  .ks-defi__journey [data-journey-path] {
+    stroke-dashoffset: 0;
+    animation: none;
+  }
+  .ks-defi__journey [data-journey-tail],
+  .ks-defi__journey [data-journey-pulse] {
+    opacity: 1;
+    animation: none;
+  }
+  .ks-defi__journey [data-journey-ring] {
+    animation: none;
+  }
   .ks-defi__sectors rect {
     animation: none;
   }

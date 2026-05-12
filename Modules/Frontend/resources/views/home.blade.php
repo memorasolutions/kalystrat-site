@@ -363,18 +363,40 @@ $services = [
                 <span class="ks-eyebrow">Compagnons CCQ</span>
                 <span class="ks-defi__num"><span data-counter data-target="100">0</span><sup>+</sup></span>
                 <p class="ks-defi__caption">Compagnons certifiés sur nos chantiers, et en croissance continue.</p>
-                {{-- T143 — Graphique progression croissante (6 barres montantes + flèche + ligne pointillée « plus à venir ») --}}
-                <svg class="ks-defi__growth" aria-hidden="true" viewBox="0 0 220 70" preserveAspectRatio="xMidYMid meet">
-                    <g class="ks-defi__growth-bars">
-                        <rect x="6"   y="56" width="18" height="10" rx="2" fill="rgba(184,164,114,0.32)"/>
-                        <rect x="32"  y="48" width="18" height="18" rx="2" fill="rgba(184,164,114,0.46)"/>
-                        <rect x="58"  y="38" width="18" height="28" rx="2" fill="rgba(184,164,114,0.62)"/>
-                        <rect x="84"  y="26" width="18" height="40" rx="2" fill="rgba(184,164,114,0.80)"/>
-                        <rect x="110" y="14" width="18" height="52" rx="2" fill="var(--ks-gold-500)"/>
-                        <rect x="136" y="4"  width="18" height="62" rx="2" fill="var(--ks-gold-500)" opacity="0.92"/>
-                    </g>
-                    <path d="M165 12 L210 12" stroke="var(--ks-gold-500)" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round" opacity="0.7"/>
-                    <path d="M205 7 L213 12 L205 17" fill="none" stroke="var(--ks-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                {{-- T144 — Option D : Trajectoire « growth journey » (path courbe + dep/arr cercles + flèche pointillée) --}}
+                <svg class="ks-defi__journey" aria-hidden="true" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
+                    {{-- Courbe ascendante du point de départ au point d'arrivée --}}
+                    <path d="M14 66 C 60 64, 90 50, 120 38 S 180 18, 200 14"
+                          fill="none"
+                          stroke="var(--ks-gold-500)"
+                          stroke-width="2.5"
+                          stroke-linecap="round"
+                          data-journey-path/>
+                    {{-- Continuation pointillée vers la droite (croissance future) --}}
+                    <path d="M200 14 L230 8"
+                          fill="none"
+                          stroke="var(--ks-gold-500)"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-dasharray="2 5"
+                          opacity="0.65"
+                          data-journey-tail/>
+                    {{-- Petite flèche au bout de la continuation --}}
+                    <path d="M223 4 L232 8 L225 13"
+                          fill="none"
+                          stroke="var(--ks-gold-500)"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          opacity="0.85"/>
+                    {{-- Cercle départ (petit, opaque léger) --}}
+                    <circle cx="14" cy="66" r="4"
+                            fill="rgba(184,164,114,0.55)"
+                            stroke="var(--ks-gold-500)"
+                            stroke-width="1.5"/>
+                    {{-- Cercle arrivée (plus gros, plein, anneau d'accent) --}}
+                    <circle cx="200" cy="14" r="7" fill="var(--ks-gold-500)" data-journey-pulse/>
+                    <circle cx="200" cy="14" r="7" fill="none" stroke="var(--ks-gold-500)" stroke-width="1" opacity="0.35" data-journey-ring/>
                 </svg>
             </article>
 
