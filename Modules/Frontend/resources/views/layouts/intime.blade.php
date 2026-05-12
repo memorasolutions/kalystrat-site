@@ -119,10 +119,10 @@ if ('serviceWorker' in navigator) {
 											<li><a href="/filiales">Vue d’ensemble</a></li>
 											<li><a href="/filiales/fondations">Fondations</a></li>
 											<li><a href="/filiales/structure">Structure</a></li>
-											<li><a href="/filiales/toiture-enveloppe">Toiture et Enveloppe</a></li>
-											<li><a href="/filiales/finition-interieure">Finition Intérieure</a></li>
+											<li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
+											<li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
 											<li><a href="/filiales/immobilier">Immobilier</a></li>
-											<li><a href="/filiales/placement-construction">Placement Construction</a></li>
+											<li><a href="/filiales/placement-construction">Placement construction</a></li>
 										</ul>
 									</li>
 									<li class="dropdown"><a href="/services">Services</a>

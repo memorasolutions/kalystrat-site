@@ -18,7 +18,7 @@
     'name' => 'Gestion Kalystrat Inc.',
     'url' => url('/'),
     'logo' => url('/assets/img/kalystrat/logo.svg'),
-    'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition Intérieure, Immobilier, Placement Construction.",
+    'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition intérieure, Immobilier, Placement construction.",
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
     'telephone' => '+1-418-476-0987',
     'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'telephone' => '+1-418-476-0987', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA-QC', 'availableLanguage' => ['French', 'English']],
@@ -176,7 +176,7 @@ $services = [
             'name' => "Que signifie « intégration verticale » chez Kalystrat ?",
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales : Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages : un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.",
+                'text' => "L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales : Fondations, Structure, Toiture et enveloppe, Finition intérieure, Immobilier, Placement construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages : un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.",
             ],
         ],
         [
@@ -645,7 +645,7 @@ $services = [
             <article class="ks-pourquoi__card ks-pourquoi__card--hero">
                 <span class="ks-eyebrow">Intégration verticale</span>
                 <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance sur les corps de métier clés</h3>
-                <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et Enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition Intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement Construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
+                <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
             </article>
 
             <article class="ks-pourquoi__card">
@@ -709,7 +709,7 @@ $services = [
             <li class="ks-faq__item">
                 <details>
                     <summary class="ks-faq__question">Que signifie «&nbsp;intégration verticale&nbsp;» chez Kalystrat&nbsp;?</summary>
-                    <p class="ks-faq__answer">L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales&nbsp;: Fondations, Structure, Toiture et Enveloppe, Finition Intérieure, Immobilier, Placement Construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages&nbsp;: un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.</p>
+                    <p class="ks-faq__answer">L'intégration verticale signifie que Kalystrat exécute chaque étape d'un projet en interne via ses six filiales&nbsp;: Fondations, Structure, Toiture et enveloppe, Finition intérieure, Immobilier, Placement construction. Aucune sous-traitance externe sur les corps de métier clés. Avantages&nbsp;: un seul calendrier maître, un chargé de projet unique, qualité homogène du sous-sol au toit.</p>
                 </details>
             </li>
             <li class="ks-faq__item">
