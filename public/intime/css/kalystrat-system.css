@@ -4387,10 +4387,12 @@ body.mobile-menu-visible .ks-tabbar {
   .main-header .sticky-header .right-box {
     display: none !important;
   }
-  /* Logo sizing mobile sur fond navy : généreux (T187-v2 user feedback "logo plus gros") */
+  /* T188 — Logo sizing mobile 48px strict (Apple HIG 44pt + chrome total ≤120px)
+     Logo ratio Kalystrat 400:70 = 5.71:1 → width 200px ≈ height 35px.
+     Avec padding 3+3=6px → header total ~41-48px. */
   .main-header .header-upper .logo img,
   .main-header .header-upper .logo picture {
-    width: clamp(260px, 72vw, 320px) !important;
+    width: clamp(180px, 52vw, 230px) !important;
     height: auto !important;
     max-width: 100%;
     display: block;
@@ -4398,20 +4400,45 @@ body.mobile-menu-visible .ks-tabbar {
   }
   .main-header .sticky-header .logo img,
   .main-header .sticky-header .logo picture {
-    width: clamp(220px, 62vw, 280px) !important;
+    width: clamp(160px, 46vw, 210px) !important;
     height: auto !important;
     max-width: 100%;
     display: block;
     margin: 0 auto;
   }
-  /* Padding header compact réduit (T187-v2 : densifier, moins vide) */
+  /* Hauteur header explicite 48px (T188 strict, chrome total ≤120px) */
+  .main-header .header-upper,
+  .main-header .header-upper > .auto-container,
   .main-header .header-upper .inner-container {
-    padding-top: 4px;
-    padding-bottom: 4px;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1;
+    align-items: center;
   }
+  .main-header .sticky-header,
+  .main-header .sticky-header > .auto-container,
   .main-header .sticky-header > .auto-container > .d-flex {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    height: 48px;
+    min-height: 48px;
+    max-height: 48px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1;
+    align-items: center;
+  }
+  /* Reset padding hérité InTime .logo + .logo a (20px+8px → 0) pour atteindre 48px réel */
+  .main-header .header-upper .logo,
+  .main-header .sticky-header .logo {
+    padding: 0 !important;
+  }
+  .main-header .header-upper .logo > a,
+  .main-header .sticky-header .logo > a {
+    padding: 0 !important;
+    display: inline-block;
+    line-height: 0 !important;
   }
 }
 
