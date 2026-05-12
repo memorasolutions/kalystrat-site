@@ -362,10 +362,19 @@ $services = [
             <article class="ks-defi__kpi ks-defi__kpi--compagnons">
                 <span class="ks-eyebrow">Compagnons CCQ</span>
                 <span class="ks-defi__num"><span data-counter data-target="100">0</span><sup>+</sup></span>
-                <p class="ks-defi__caption">Compagnons certifiés sur nos chantiers.</p>
-                <svg class="ks-defi__gauge" aria-hidden="true" viewBox="0 0 120 60">
-                    <path d="M10 55 A50 50 0 0 1 110 55" fill="none" stroke="rgba(184,164,114,0.2)" stroke-width="4" stroke-linecap="round"/>
-                    <path d="M10 55 A50 50 0 0 1 110 55" fill="none" stroke="var(--ks-gold-500)" stroke-width="4" stroke-linecap="round" stroke-dasharray="157" stroke-dashoffset="157" data-gauge-fill/>
+                <p class="ks-defi__caption">Compagnons certifiés sur nos chantiers, et en croissance continue.</p>
+                {{-- T143 — Graphique progression croissante (6 barres montantes + flèche + ligne pointillée « plus à venir ») --}}
+                <svg class="ks-defi__growth" aria-hidden="true" viewBox="0 0 220 70" preserveAspectRatio="xMidYMid meet">
+                    <g class="ks-defi__growth-bars">
+                        <rect x="6"   y="56" width="18" height="10" rx="2" fill="rgba(184,164,114,0.32)"/>
+                        <rect x="32"  y="48" width="18" height="18" rx="2" fill="rgba(184,164,114,0.46)"/>
+                        <rect x="58"  y="38" width="18" height="28" rx="2" fill="rgba(184,164,114,0.62)"/>
+                        <rect x="84"  y="26" width="18" height="40" rx="2" fill="rgba(184,164,114,0.80)"/>
+                        <rect x="110" y="14" width="18" height="52" rx="2" fill="var(--ks-gold-500)"/>
+                        <rect x="136" y="4"  width="18" height="62" rx="2" fill="var(--ks-gold-500)" opacity="0.92"/>
+                    </g>
+                    <path d="M165 12 L210 12" stroke="var(--ks-gold-500)" stroke-width="2" stroke-dasharray="3 4" stroke-linecap="round" opacity="0.7"/>
+                    <path d="M205 7 L213 12 L205 17" fill="none" stroke="var(--ks-gold-500)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
             </article>
 
@@ -373,6 +382,14 @@ $services = [
                 <span class="ks-eyebrow">Secteurs</span>
                 <span class="ks-defi__num" data-counter data-target="5">0</span>
                 <p class="ks-defi__caption">Résidentiel, commercial, institutionnel, industriel, municipal.</p>
+                {{-- T143 — Dessin secteurs (5 colonnes verticales graduées, miroir des autres KPI) --}}
+                <svg class="ks-defi__sectors" aria-hidden="true" viewBox="0 0 220 60" preserveAspectRatio="xMidYMid meet">
+                    <rect x="10"  y="22" width="32" height="34" rx="2" fill="var(--ks-gold-500)" opacity="0.55"/>
+                    <rect x="50"  y="14" width="32" height="42" rx="2" fill="var(--ks-gold-500)" opacity="0.70"/>
+                    <rect x="90"  y="8"  width="32" height="48" rx="2" fill="var(--ks-gold-500)" opacity="0.85"/>
+                    <rect x="130" y="14" width="32" height="42" rx="2" fill="var(--ks-gold-500)" opacity="0.70"/>
+                    <rect x="170" y="22" width="32" height="34" rx="2" fill="var(--ks-gold-500)" opacity="0.55"/>
+                </svg>
             </article>
 
             <article class="ks-defi__signature">
