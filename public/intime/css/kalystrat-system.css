@@ -3623,3 +3623,249 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
 }
+
+/* ============================================================
+   T146 — Page Contact simplifiée (4 champs core + reveal téléphone)
+   Best practices B2B construction mai 2026
+   ============================================================ */
+.ks-contact-grid {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: clamp(32px, 4vw, 64px);
+  align-items: start;
+}
+@media (max-width: 880px) {
+  .ks-contact-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* Formulaire */
+.ks-contact-form-wrap {
+  background: var(--ks-white, #fff);
+  border-radius: var(--ks-radius-lg, 16px);
+  padding: clamp(28px, 3.5vw, 48px);
+  box-shadow: 0 4px 24px rgba(10, 22, 40, 0.06);
+  border-top: 4px solid var(--ks-gold-500);
+}
+
+.ks-contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.ks-contact-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.ks-contact-form__label {
+  font-family: var(--ks-font-display);
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--ks-navy-900);
+  letter-spacing: 0.01em;
+}
+.ks-contact-form__label > span[aria-hidden] {
+  color: var(--ks-gold-700, #8C7B4F);
+  margin-left: 0.15em;
+}
+.ks-contact-form__hint {
+  color: var(--ks-gray-500, #767676);
+  font-weight: 400;
+  font-size: 0.85em;
+  margin-left: 0.4em;
+}
+.ks-contact-form__input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--ks-gray-300, #d8d8d2);
+  border-radius: var(--ks-radius-sm, 8px);
+  font-family: var(--ks-font-body);
+  font-size: 1rem;
+  color: var(--ks-navy-900);
+  background: var(--ks-white);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.ks-contact-form__input:hover {
+  border-color: var(--ks-gold-500);
+}
+.ks-contact-form__input:focus,
+.ks-contact-form__input:focus-visible {
+  outline: none;
+  border-color: var(--ks-gold-700, #8C7B4F);
+  box-shadow: 0 0 0 3px rgba(184, 164, 114, 0.22);
+}
+/* Validation rouge SEULEMENT après interaction utilisateur (anti-flash au load) */
+.ks-contact-form__input:user-invalid {
+  border-color: #B00020;
+}
+.ks-contact-form__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.5;
+}
+.ks-contact-form__textarea::placeholder {
+  color: var(--ks-gray-500, #767676);
+  font-style: italic;
+  font-size: 0.9375rem;
+}
+
+/* Option checkbox rappel */
+.ks-contact-form__option {
+  margin-top: 0.25rem;
+}
+.ks-contact-form__checkbox {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  color: var(--ks-navy-900);
+  user-select: none;
+}
+.ks-contact-form__checkbox input {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--ks-gold-500);
+  cursor: pointer;
+}
+.ks-contact-form__field--phone {
+  margin-top: 0.5rem;
+  animation: ks-reveal 0.3s ease-out;
+}
+@keyframes ks-reveal {
+  from { opacity: 0; transform: translateY(-4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* CTA submit (large, premium) */
+.ks-contact-form__submit {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  align-self: flex-start;
+  margin-top: 0.75rem;
+  padding: 16px 32px;
+  background: var(--ks-navy-900);
+  color: var(--ks-white);
+  border: 0;
+  border-radius: var(--ks-radius-sm, 8px);
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 1rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(10, 22, 40, 0.18);
+}
+.ks-contact-form__submit:hover {
+  background: var(--ks-gold-700, #8C7B4F);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(10, 22, 40, 0.24);
+}
+.ks-contact-form__submit:focus-visible {
+  outline: 3px solid var(--ks-gold-500);
+  outline-offset: 3px;
+}
+.ks-contact-form__submit svg {
+  transition: transform 0.2s ease;
+}
+.ks-contact-form__submit:hover svg {
+  transform: translateX(3px);
+}
+
+.ks-contact-form__note {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--ks-gray-500, #767676);
+  line-height: 1.55;
+}
+.ks-contact-form__note a {
+  color: var(--ks-gold-700, #8C7B4F);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.ks-contact-success {
+  padding: 16px 20px;
+  background: rgba(46, 125, 50, 0.08);
+  border-left: 4px solid #2e7d32;
+  border-radius: 8px;
+  color: #1B5E20;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+/* Sidebar coordonnées */
+.ks-contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(16px, 2vw, 24px);
+  position: sticky;
+  top: 100px;
+}
+@media (max-width: 880px) {
+  .ks-contact-sidebar {
+    position: static;
+  }
+}
+.ks-contact-card {
+  padding: clamp(20px, 2.5vw, 28px);
+  background: var(--ks-white);
+  border-radius: var(--ks-radius-md, 12px);
+  border-left: 3px solid var(--ks-gold-500);
+  box-shadow: 0 2px 12px rgba(10, 22, 40, 0.05);
+}
+.ks-contact-card .ks-eyebrow {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+.ks-contact-card__phone {
+  display: block;
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 2vw, 1.75rem);
+  color: var(--ks-gold-700, #8C7B4F);
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  line-height: 1.1;
+}
+.ks-contact-card__phone:hover,
+.ks-contact-card__phone:focus-visible {
+  color: var(--ks-navy-900);
+}
+.ks-contact-card__email {
+  display: block;
+  font-family: var(--ks-font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--ks-navy-900);
+  text-decoration: none;
+  word-break: break-all;
+  line-height: 1.2;
+}
+.ks-contact-card__email:hover,
+.ks-contact-card__email:focus-visible {
+  color: var(--ks-gold-700, #8C7B4F);
+}
+.ks-contact-card__address {
+  margin: 0;
+  font-family: var(--ks-font-display);
+  font-weight: 600;
+  font-size: 1.0625rem;
+  color: var(--ks-navy-900);
+}
+.ks-contact-card__meta {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ks-navy-900);
+  opacity: 0.78;
+}
+.ks-contact-card__meta a {
+  color: var(--ks-gold-700, #8C7B4F);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
