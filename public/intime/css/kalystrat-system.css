@@ -4175,270 +4175,92 @@ body, body * {
     transition: none !important;
   }
 }
-/* ============================================================
-   T173 — Anti-collision sticky-bar mobile + TOC + cookie banner
-   - Mobile : TOC toggle caché (drawer T170 prend le relais)
-   - Sticky-bar margin-bottom dynamique quand cookie banner visible
-   ============================================================ */
-
-/* Cacher le toggle Sommaire mobile (drawer T170 contient la nav principale) */
-@media (max-width: 720px) {
-  .ks-page-toc__mobile-toggle {
-    display: none !important;
-  }
-}
-
-/* Quand cookie banner visible : pousser sticky-bar au-dessus (anti-collision) */
-body:has(.ks-cookie-banner:not([hidden])) .ks-sticky-bar {
-  bottom: clamp(72px, 18vw, 110px);
-}
-@media (max-width: 720px) {
-  body:has(.ks-cookie-banner:not([hidden])) .ks-sticky-bar {
-    bottom: clamp(96px, 30vw, 160px);
-  }
-}
 
 /* ============================================================
-   T174 — Sticky-bar « app feel » (Option E hybride 2026)
-   Bottom navigation style natif sans installation PWA.
-   3 icônes nav (Menu / Tel / Filiales) + CTA primaire Démarrer.
+   T178 — Bottom tab bar native mobile (iOS/Android-like)
+   Bord-à-bord bas écran. Permanent. Pas de dismiss. Pas de margin.
+   Desktop ≥ 1024px : caché (header complet suffit).
    ============================================================ */
 
-.ks-sticky-bar {
+.ks-tabbar {
   position: fixed;
-  left: 0; right: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
   z-index: 950;
-  pointer-events: none;
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-}
-.ks-sticky-bar > * { pointer-events: auto; }
-.ks-sticky-bar.is-dismissed {
-  transform: translateY(120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-.ks-sticky-bar__inner {
-  position: relative;
-  max-width: 760px;
-  margin: 0 auto 12px;
-  padding: 12px 56px 12px 16px;
-  background: linear-gradient(180deg, rgba(10, 22, 40, 0.96) 0%, rgba(26, 40, 64, 0.96) 100%);
-  border: 1px solid var(--ks-gold-500);
-  border-radius: 14px;
-  box-shadow: 0 14px 42px rgba(10, 22, 40, 0.42);
-  backdrop-filter: blur(10px) saturate(140%);
-  -webkit-backdrop-filter: blur(10px) saturate(140%);
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.ks-sticky-bar__dismiss {
-  position: absolute;
-  top: 8px; right: 8px;
-  width: 28px; height: 28px;
-  display: grid; place-items: center;
-  background: rgba(184, 164, 114, 0.10);
-  border: 1px solid rgba(184, 164, 114, 0.22);
-  color: rgba(255, 255, 255, 0.65);
-  border-radius: 50%;
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
-}
-.ks-sticky-bar__dismiss:hover,
-.ks-sticky-bar__dismiss:focus-visible {
-  color: var(--ks-gold-500);
-  background: rgba(184, 164, 114, 0.20);
-  transform: rotate(90deg);
-}
-.ks-sticky-bar__dismiss:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 2px;
-}
-
-.ks-sticky-bar__copy {
-  margin: 0;
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.92);
-  font-weight: 500;
-  line-height: 1.35;
-}
-.ks-sticky-bar__badge {
-  display: inline-block;
-  margin-right: 6px;
-  padding: 2px 8px;
-  background: var(--ks-gold-500);
-  color: var(--ks-navy-900);
-  font-size: 0.6875rem;
-  font-weight: 800;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  border-radius: 999px;
-  vertical-align: 2px;
-}
-
-/* T174 — Bottom nav row : 3 icônes nav + CTA primaire */
-.ks-sticky-bar__nav {
   display: grid;
-  grid-template-columns: repeat(3, 1fr) auto;
-  gap: 6px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: stretch;
+  background: var(--ks-navy-900);
+  border-top: 1px solid var(--ks-gold-500);
+  padding: 6px 4px;
+  padding-bottom: calc(6px + env(safe-area-inset-bottom, 0));
+  box-shadow: 0 -4px 16px rgba(10, 22, 40, 0.30);
 }
-.ks-sticky-bar__nav-btn {
+
+.ks-tabbar__item {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 4px;
-  min-height: 56px;
-  padding: 8px 6px;
-  background: rgba(184, 164, 114, 0.08);
-  border: 1px solid rgba(184, 164, 114, 0.22);
-  border-radius: 10px;
-  color: var(--ks-gold-500);
+  min-height: 52px;
+  padding: 6px 4px;
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.78);
   text-decoration: none;
   font: inherit;
   cursor: pointer;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
-.ks-sticky-bar__nav-btn:hover,
-.ks-sticky-bar__nav-btn:focus-visible {
-  background: rgba(184, 164, 114, 0.18);
-  border-color: var(--ks-gold-500);
+.ks-tabbar__item:hover,
+.ks-tabbar__item:focus-visible {
+  background: rgba(184, 164, 114, 0.10);
   color: var(--ks-gold-500);
-  transform: translateY(-1px);
 }
-.ks-sticky-bar__nav-btn:focus-visible {
+.ks-tabbar__item:focus-visible {
   outline: 2px solid var(--ks-gold-500);
-  outline-offset: 2px;
+  outline-offset: -2px;
 }
-.ks-sticky-bar__nav-btn svg {
+.ks-tabbar__icon {
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
 }
-.ks-sticky-bar__nav-label {
+.ks-tabbar__label {
   font-size: 0.6875rem;
   font-weight: 600;
   letter-spacing: 0.02em;
-  color: rgba(255, 255, 255, 0.78);
   text-transform: none;
   line-height: 1;
 }
-.ks-sticky-bar__nav-btn:hover .ks-sticky-bar__nav-label,
-.ks-sticky-bar__nav-btn:focus-visible .ks-sticky-bar__nav-label {
-  color: var(--ks-white);
-}
 
-.ks-sticky-bar__primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 10px 16px;
-  min-height: 56px;
-  min-width: 110px;
+/* Item primaire (Démarrer) : accent gold pour CTA conversion */
+.ks-tabbar__item--primary {
+  color: var(--ks-gold-500);
+}
+.ks-tabbar__item--primary:hover,
+.ks-tabbar__item--primary:focus-visible {
   background: var(--ks-gold-500);
   color: var(--ks-navy-900);
-  font-family: var(--ks-font-display);
-  font-weight: 700;
-  font-size: 0.875rem;
-  text-decoration: none;
-  border-radius: 10px;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-.ks-sticky-bar__primary:hover,
-.ks-sticky-bar__primary:focus-visible {
-  background: #D4B968;
-  color: var(--ks-navy-900);
-  transform: translateY(-1px);
-}
-.ks-sticky-bar__primary:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 3px;
 }
 
-.ks-sticky-bar__trust {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 8px;
-  font-size: 0.6875rem;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.68);
-  font-weight: 600;
-}
-.ks-sticky-bar__trust-check {
-  color: var(--ks-gold-500);
-  font-weight: 800;
-  margin-left: 4px;
+/* Cacher la tabbar quand le drawer mobile est ouvert (anti-cache contenu drawer) */
+body.mobile-menu-visible .ks-tabbar {
+  display: none;
 }
 
-/* Mobile (< 720px) : compact + safe-area iPhone notch */
-@media (max-width: 720px) {
-  .ks-sticky-bar__inner {
-    margin: 0 8px calc(8px + env(safe-area-inset-bottom, 0));
-    padding: 10px 44px 10px 12px;
-    border-radius: 12px;
-    gap: 6px;
+/* Desktop ≥ 1024px : tabbar mobile-only par design */
+@media (min-width: 1024px) {
+  .ks-tabbar {
+    display: none !important;
   }
-  .ks-sticky-bar__copy { font-size: 0.75rem; }
-  .ks-sticky-bar__nav {
-    grid-template-columns: 1fr 1fr 1fr 1.2fr;
-    gap: 4px;
-  }
-  .ks-sticky-bar__nav-btn {
-    min-height: 52px;
-    padding: 6px 2px;
-  }
-  .ks-sticky-bar__nav-label { font-size: 0.625rem; }
-  .ks-sticky-bar__primary {
-    min-width: 0;
-    padding: 8px 10px;
-    font-size: 0.8125rem;
-    min-height: 52px;
-    flex-direction: column;
-    gap: 2px;
-    line-height: 1.1;
-  }
-}
-
-/* Cacher la sticky-bar quand le drawer mobile est ouvert */
-body.mobile-menu-visible .ks-sticky-bar {
-  transform: translateY(120%);
-  opacity: 0;
-  pointer-events: none;
-}
-
-/* T172 — Force close button drawer mobile parfaitement rond */
-.ks-mobile-menu__close {
-  aspect-ratio: 1 / 1;
-  flex-shrink: 0;
-  padding: 0;
-}
-.ks-mobile-menu__close svg {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .ks-sticky-bar,
-  .ks-sticky-bar__dismiss,
-  .ks-sticky-bar__nav-btn,
-  .ks-sticky-bar__primary {
+  .ks-tabbar__item {
     transition: none !important;
-  }
-}
-
-/* T176 — Sticky-bar mobile-only (≤ 1023px). Sur desktop le header
-   contient déjà le bouton « Obtenir une soumission » prominent. */
-@media (min-width: 1024px) {
-  .ks-sticky-bar {
-    display: none !important;
   }
 }
