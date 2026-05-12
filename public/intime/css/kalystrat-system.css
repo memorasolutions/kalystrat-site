@@ -4352,70 +4352,18 @@ body.mobile-menu-visible .ks-tabbar {
    - Logo mobile : clamp 220→260px (vs 170-200px) pour cohérence visuelle
    - Wrap dans @media max-width:1023px : laisse desktop unchanged
    ============================================================ */
+/* T185 — Mobile/tablet (0-1023px) : hamburger top RETIRÉ visuellement
+   Le bouton "Menu" du bottom tabbar (T178) ouvre le même drawer via
+   programmatic .click() sur .mobile-nav-toggler (sticky-contact.blade.php).
+   Display:none n'empêche pas .click() de déclencher le handler jQuery.
+   Header mobile devient logo-only = pattern Material 3 / Apple HIG 2026
+   quand bottom nav existe (Baymard : "ne pas dupliquer la nav primaire").
+   Élément conservé dans le DOM (rôle invisible pour AT, déclenché par tabbar).
+   Desktop ≥ 1024px : .mobile-nav-toggler reste display:none (base InTime). */
 @media (max-width: 1023px) {
-  /* T184 — Hamburger affordance visible mai 2026 (Apple HIG / Material 3 inspired)
-     - Tap target 48×48 (> AAA min 44)
-     - SVG inline 28×28 stroke-width 2.5 (vs FA fa-bars 26px riquiqui)
-     - Background semi-opaque + border 1.5px = affordance bouton claire
-     - Variants : hero photo (navy/blanc) vs hors hero (blanc/navy) */
   .main-header .mobile-nav-toggler,
   .main-header .sticky-header .mobile-nav-toggler {
-    display: inline-flex !important;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    min-width: 48px;
-    min-height: 48px;
-    padding: 0 !important;
-    margin: 0 0 0 8px;
-    background: rgba(255, 255, 255, 0.92);
-    border: 1.5px solid var(--ks-navy-900);
-    border-radius: 10px;
-    cursor: pointer;
-    color: var(--ks-navy-900);
-    appearance: none;
-    -webkit-appearance: none;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
-    transition: background 0.15s ease, border-color 0.15s ease, transform 0.1s ease;
-  }
-  .main-header .mobile-nav-toggler .mobile-nav-toggler__icon,
-  .main-header .sticky-header .mobile-nav-toggler .mobile-nav-toggler__icon {
-    width: 28px;
-    height: 28px;
-    display: block;
-    color: inherit;
-  }
-  /* Sur hero photo (page non scrollée) : fond navy semi-opaque + barres blanches */
-  body:has(.ks-page-hero) .main-header:not(.fixed-header) .header-upper .mobile-nav-toggler {
-    background: rgba(10, 22, 40, 0.70);
-    border-color: rgba(255, 255, 255, 0.85);
-    color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    text-shadow: none;
-  }
-  /* États hover / focus-visible / active — WCAG 2.4.7 + 1.4.11 */
-  .main-header .mobile-nav-toggler:hover,
-  .main-header .sticky-header .mobile-nav-toggler:hover {
-    background: var(--ks-navy-900);
-    border-color: var(--ks-navy-900);
-    color: #ffffff;
-  }
-  body:has(.ks-page-hero) .main-header:not(.fixed-header) .mobile-nav-toggler:hover {
-    background: rgba(10, 22, 40, 0.95);
-    border-color: var(--ks-gold-500);
-  }
-  .main-header .mobile-nav-toggler:focus-visible,
-  .main-header .sticky-header .mobile-nav-toggler:focus-visible {
-    outline: 3px solid var(--ks-gold-500);
-    outline-offset: 2px;
-    box-shadow: 0 0 0 6px rgba(184, 164, 114, 0.30);
-  }
-  .main-header .mobile-nav-toggler:active,
-  .main-header .sticky-header .mobile-nav-toggler:active {
-    transform: scale(0.96);
+    display: none !important;
   }
 }
 
