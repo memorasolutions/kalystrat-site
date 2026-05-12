@@ -3247,7 +3247,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 .ks-footer__logo {
   display: inline-block;
-  max-width: 200px;
+  max-width: 320px;        /* T153 — agrandi pour cohérence header T147 */
 }
 .ks-footer__logo img {
   width: 100%;
@@ -3637,9 +3637,11 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
 }
 
 /* Footer brand (.ks-footer__logo déjà CSS T131) — adapté au logo-white SVG */
-.ks-footer__logo img {
-  max-width: 220px;
-  height: auto;
+/* T153 — Agrandissement footer logo pour cohérence visuelle avec header T147 */
+.ks-footer .ks-footer__brand .ks-footer__logo img {
+  width: clamp(240px, 22vw, 320px) !important;
+  max-width: 100%;
+  height: auto !important;
   display: block;
   filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
 }

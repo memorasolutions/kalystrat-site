@@ -266,7 +266,7 @@ if ('serviceWorker' in navigator) {
 
 					<div class="ks-footer__brand">
 						<a href="{{ url('/') }}" class="ks-footer__logo" aria-label="Kalystrat — accueil">
-							<img src="/assets/img/kalystrat/logo-white.svg" alt="Logo Gestion Kalystrat Inc." width="200" height="65">
+							<img src="/assets/img/kalystrat/logo-white.svg" alt="Logo Gestion Kalystrat Inc." width="320" height="105">
 						</a>
 						<p class="ks-footer__tagline">Conçu, réalisé, livré. Groupe québécois de construction à intégration verticale.</p>
 						<ul class="ks-footer__contact">
