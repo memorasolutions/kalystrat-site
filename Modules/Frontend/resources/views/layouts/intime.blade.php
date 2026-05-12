@@ -243,6 +243,9 @@ if ('serviceWorker' in navigator) {
     @yield('content')
     </main>
 
+    {{-- T159 — Sticky contact hybride (tab desktop + FAB mobile) --}}
+    <x-frontend::sticky-contact />
+
 	<footer class="ks-footer" role="contentinfo">
 
 		{{-- Zone 1 : Bandeau confiance (certifications) --}}
