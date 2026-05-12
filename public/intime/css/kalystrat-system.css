@@ -3927,283 +3927,6 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
   text-underline-offset: 2px;
 }
 
-/* ============================================================
-   T159 — Sticky contact hybride (tab desktop + FAB mobile)
-   Tendance mai 2026 : device-aware UX, glassmorphism premium,
-   WCAG AAA contraste, focus visible, ESC, prefers-reduced-motion.
-   ============================================================ */
-
-.ks-sticky-contact {
-  position: fixed;
-  z-index: 950; /* < cookie banner (1000), > footer */
-  pointer-events: none; /* enfants ré-activent */
-}
-.ks-sticky-contact > * { pointer-events: auto; }
-
-/* === DESKTOP TAB === */
-.ks-sticky-contact__tab {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  padding: 18px 10px;
-  background: var(--ks-navy-900);
-  color: var(--ks-gold-500);
-  border: 1px solid var(--ks-gold-500);
-  border-right: none;
-  border-radius: 12px 0 0 12px;
-  font-family: var(--ks-font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  cursor: pointer;
-  box-shadow: -4px 0 16px rgba(10, 22, 40, 0.25);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, color 0.2s ease, background 0.2s ease;
-}
-.ks-sticky-contact__tab-text {
-  writing-mode: vertical-rl;
-  transform: rotate(180deg);
-  white-space: nowrap;
-}
-.ks-sticky-contact__tab-icon { width: 18px; height: 18px; }
-.ks-sticky-contact__tab:hover,
-.ks-sticky-contact__tab:focus-visible {
-  background: var(--ks-gold-500);
-  color: var(--ks-navy-900);
-  box-shadow: -6px 0 24px rgba(184, 164, 114, 0.35);
-}
-.ks-sticky-contact__tab:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 3px;
-}
-.ks-sticky-contact.is-open .ks-sticky-contact__tab {
-  transform: translateY(-50%) translateX(-340px);
-}
-
-/* === DESKTOP PANEL === */
-.ks-sticky-contact__panel {
-  position: fixed;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%) translateX(100%);
-  width: 340px;
-  max-width: calc(100vw - 24px);
-  padding: 28px 24px 24px;
-  background: rgba(10, 22, 40, 0.92);
-  backdrop-filter: blur(14px) saturate(140%);
-  -webkit-backdrop-filter: blur(14px) saturate(140%);
-  border: 1px solid var(--ks-gold-500);
-  border-right: none;
-  border-radius: 16px 0 0 16px;
-  color: var(--ks-white);
-  box-shadow: -8px 0 32px rgba(10, 22, 40, 0.45);
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-  opacity: 0;
-  visibility: hidden;
-}
-.ks-sticky-contact.is-open .ks-sticky-contact__panel {
-  transform: translateY(-50%) translateX(0);
-  opacity: 1;
-  visibility: visible;
-}
-.ks-sticky-contact__header {
-  margin-bottom: 18px;
-  padding-bottom: 14px;
-  border-bottom: 1px solid rgba(184, 164, 114, 0.25);
-}
-.ks-sticky-contact__eyebrow {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--ks-gold-500);
-  margin-bottom: 4px;
-}
-.ks-sticky-contact__title {
-  margin: 0;
-  font-family: var(--ks-font-display);
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--ks-white);
-  line-height: 1.15;
-}
-.ks-sticky-contact__actions {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-.ks-sticky-contact__action {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 12px 14px;
-  border-radius: 10px;
-  background: rgba(184, 164, 114, 0.08);
-  border: 1px solid rgba(184, 164, 114, 0.20);
-  color: var(--ks-white);
-  text-decoration: none;
-  transition: background 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
-}
-.ks-sticky-contact__action:hover,
-.ks-sticky-contact__action:focus-visible {
-  background: rgba(184, 164, 114, 0.18);
-  border-color: var(--ks-gold-500);
-  transform: translateX(-3px);
-}
-.ks-sticky-contact__action:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 2px;
-}
-.ks-sticky-contact__action-icon {
-  flex-shrink: 0;
-  width: 22px;
-  height: 22px;
-  color: var(--ks-gold-500);
-}
-.ks-sticky-contact__action-label {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
-}
-.ks-sticky-contact__action-title {
-  font-weight: 600;
-  font-size: 0.9375rem;
-  color: var(--ks-white);
-}
-.ks-sticky-contact__action-detail {
-  font-size: 0.8125rem;
-  color: rgba(255, 255, 255, 0.72);
-}
-.ks-sticky-contact__close {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  width: 44px;        /* T164 — WCAG 2.5.5 Target Size AAA 44x44 */
-  height: 44px;
-  display: grid;
-  place-items: center;
-  background: transparent;
-  color: rgba(255, 255, 255, 0.65);
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-.ks-sticky-contact__close:hover,
-.ks-sticky-contact__close:focus-visible {
-  color: var(--ks-gold-500);
-  background: rgba(184, 164, 114, 0.12);
-}
-.ks-sticky-contact__close:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 2px;
-}
-.ks-sticky-contact__close svg { width: 18px; height: 18px; }
-
-/* === MOBILE FAB === */
-.ks-sticky-contact__fab {
-  display: none; /* desktop : invisible */
-  position: fixed;
-  bottom: 18px;
-  right: 18px;
-  gap: 8px;
-  padding: 8px;
-  background: var(--ks-navy-900);
-  border: 1px solid var(--ks-gold-500);
-  border-radius: 999px;
-  box-shadow: 0 10px 28px rgba(10, 22, 40, 0.45);
-}
-.ks-sticky-contact__fab-btn {
-  display: grid;
-  place-items: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background: rgba(184, 164, 114, 0.10);
-  color: var(--ks-gold-500);
-  text-decoration: none;
-  transition: background 0.2s ease, transform 0.15s ease;
-}
-.ks-sticky-contact__fab-btn:hover,
-.ks-sticky-contact__fab-btn:focus-visible,
-.ks-sticky-contact__fab-btn:active {
-  background: rgba(184, 164, 114, 0.22);
-  transform: scale(1.06);
-}
-.ks-sticky-contact__fab-btn:focus-visible {
-  outline: 2px solid var(--ks-gold-500);
-  outline-offset: 2px;
-}
-.ks-sticky-contact__fab-btn svg { width: 22px; height: 22px; }
-.ks-sticky-contact__fab-btn--primary {
-  width: auto;
-  padding: 0 18px;
-  background: var(--ks-gold-500);
-  color: var(--ks-navy-900);
-  border-radius: 999px;
-  gap: 8px;
-}
-.ks-sticky-contact__fab-btn--primary:hover,
-.ks-sticky-contact__fab-btn--primary:focus-visible,
-.ks-sticky-contact__fab-btn--primary:active {
-  background: #D4B968;
-}
-.ks-sticky-contact__fab-label {
-  font-size: 0.875rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-}
-
-/* sr-only utility (déjà défini ailleurs? sécurité) */
-.ks-sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
-}
-
-/* === BREAKPOINTS === */
-@media (max-width: 1023.98px) {
-  .ks-sticky-contact__tab,
-  .ks-sticky-contact__panel { display: none !important; }
-  .ks-sticky-contact__fab { display: flex; align-items: center; }
-}
-@media (max-width: 480px) {
-  .ks-sticky-contact__fab {
-    bottom: 14px;
-    right: 14px;
-  }
-  .ks-sticky-contact__fab-btn--primary {
-    padding: 0 14px;
-  }
-  .ks-sticky-contact__fab-label {
-    font-size: 0.8125rem;
-  }
-}
-
-/* === Reduced motion === */
-@media (prefers-reduced-motion: reduce) {
-  .ks-sticky-contact__tab,
-  .ks-sticky-contact__panel,
-  .ks-sticky-contact__action,
-  .ks-sticky-contact__fab-btn {
-    transition: none !important;
-  }
-}
 
 /* ============================================================
    T165 — Override --main-color InTime (#c20b0b rouge) → gold-aaa
@@ -4449,6 +4172,223 @@ body, body * {
   .ks-mobile-menu__sub a,
   .ks-mobile-menu__cta-tel,
   .ks-mobile-menu__cta-primary {
+    transition: none !important;
+  }
+}
+
+/* ============================================================
+   T171 — Sticky-bar bottom premium 2026 (psychologie conversion)
+   Une seule UX cross-device : full-width mobile, max-width centrée desktop.
+   Micro-copy + 2 CTA + social proof. Dismissable cookie 24h.
+   ============================================================ */
+
+.ks-sticky-bar {
+  position: fixed;
+  left: 0; right: 0;
+  bottom: 0;
+  z-index: 950; /* < cookie banner (1000), > footer/page */
+  pointer-events: none; /* enfants réactivent */
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+}
+.ks-sticky-bar > * { pointer-events: auto; }
+.ks-sticky-bar.is-dismissed {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Inner card : centrée desktop, full-width mobile */
+.ks-sticky-bar__inner {
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto 12px;
+  padding: 14px 56px 14px 20px;
+  background: linear-gradient(180deg, rgba(10, 22, 40, 0.96) 0%, rgba(26, 40, 64, 0.96) 100%);
+  border: 1px solid var(--ks-gold-500);
+  border-radius: 14px;
+  box-shadow: 0 14px 42px rgba(10, 22, 40, 0.42);
+  backdrop-filter: blur(10px) saturate(140%);
+  -webkit-backdrop-filter: blur(10px) saturate(140%);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto;
+  gap: 8px 18px;
+  align-items: center;
+}
+
+/* Dismiss button discret (X coin top-right) */
+.ks-sticky-bar__dismiss {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 28px; height: 28px;
+  display: grid; place-items: center;
+  background: rgba(184, 164, 114, 0.10);
+  border: 1px solid rgba(184, 164, 114, 0.22);
+  color: rgba(255, 255, 255, 0.65);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, transform 0.15s ease;
+}
+.ks-sticky-bar__dismiss:hover,
+.ks-sticky-bar__dismiss:focus-visible {
+  color: var(--ks-gold-500);
+  background: rgba(184, 164, 114, 0.20);
+  transform: rotate(90deg);
+}
+.ks-sticky-bar__dismiss:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 2px;
+}
+
+/* Copy + badge "Gratuit" */
+.ks-sticky-bar__copy {
+  grid-column: 1 / -1;
+  margin: 0;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 500;
+  line-height: 1.35;
+  letter-spacing: 0.01em;
+}
+.ks-sticky-bar__badge {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 2px 9px;
+  background: var(--ks-gold-500);
+  color: var(--ks-navy-900);
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 999px;
+  vertical-align: 2px;
+}
+
+/* CTA row (tel + primary button) */
+.ks-sticky-bar__cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  grid-column: 1 / -1;
+}
+.ks-sticky-bar__tel {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px;
+  background: rgba(184, 164, 114, 0.10);
+  border: 1px solid rgba(184, 164, 114, 0.35);
+  border-radius: 10px;
+  color: var(--ks-gold-500);
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.15s ease;
+  min-height: 44px;
+}
+.ks-sticky-bar__tel:hover,
+.ks-sticky-bar__tel:focus-visible {
+  background: rgba(184, 164, 114, 0.20);
+  color: var(--ks-gold-500);
+}
+.ks-sticky-bar__tel:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 2px;
+}
+.ks-sticky-bar__tel-num {
+  white-space: nowrap;
+}
+.ks-sticky-bar__primary {
+  flex: 1 1 auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 18px;
+  min-height: 44px;
+  background: var(--ks-gold-500);
+  color: var(--ks-navy-900);
+  font-family: var(--ks-font-display);
+  font-weight: 700;
+  font-size: 0.9375rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: background 0.2s ease, transform 0.15s ease;
+}
+.ks-sticky-bar__primary:hover,
+.ks-sticky-bar__primary:focus-visible {
+  background: #D4B968;
+  color: var(--ks-navy-900);
+  transform: translateY(-1px);
+}
+.ks-sticky-bar__primary:focus-visible {
+  outline: 2px solid var(--ks-gold-500);
+  outline-offset: 3px;
+}
+
+/* Trust badges (social proof) */
+.ks-sticky-bar__trust {
+  grid-column: 1 / -1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.6875rem;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.68);
+  font-weight: 600;
+}
+.ks-sticky-bar__trust-check {
+  color: var(--ks-gold-500);
+  font-weight: 800;
+  margin-left: 4px;
+}
+
+/* Tablet + mobile (< 720px) : compact, padding inset bottom safe-area */
+@media (max-width: 720px) {
+  .ks-sticky-bar__inner {
+    margin: 0 8px calc(8px + env(safe-area-inset-bottom, 0));
+    padding: 12px 44px 12px 14px;
+    border-radius: 12px;
+    gap: 6px 12px;
+  }
+  .ks-sticky-bar__copy { font-size: 0.8125rem; }
+  .ks-sticky-bar__tel { padding: 10px 12px; font-size: 0.8125rem; }
+  .ks-sticky-bar__tel-num { display: none; } /* mobile : icône seule */
+  .ks-sticky-bar__primary { padding: 12px 14px; font-size: 0.875rem; }
+}
+
+/* Cacher la sticky-bar quand le drawer mobile est ouvert (anti-cache) */
+body.mobile-menu-visible .ks-sticky-bar {
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* T172 — Force close button drawer mobile parfaitement rond (anti-oval) */
+.ks-mobile-menu__close {
+  aspect-ratio: 1 / 1;
+  flex-shrink: 0;
+  padding: 0;
+}
+.ks-mobile-menu__close svg {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ks-sticky-bar,
+  .ks-sticky-bar__dismiss,
+  .ks-sticky-bar__tel,
+  .ks-sticky-bar__primary {
     transition: none !important;
   }
 }
