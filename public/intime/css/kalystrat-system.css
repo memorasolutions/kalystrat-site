@@ -4247,3 +4247,12 @@ body, body * {
 .theme-btn.btn-style-ten .btn-wrap {
   text-transform: uppercase !important;
 }
+
+/* ============================================================
+   T167 — Preloader Kalystrat (anti logo Windows InTime)
+   Override SVG : 4 carrés rouge/cyan/vert/bleu → navy/gold charte
+   ============================================================ */
+.preloader {
+  background-image: url('/assets/img/kalystrat/preloader.svg') !important;
+  background-color: #ffffff !important;
+}
