@@ -3597,14 +3597,22 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 
 /* ============================================================
-   T140 — Système logo Kalystrat (header / sticky / mobile / footer)
-   logo-header.svg sur fond clair · logo-white.svg sur fond foncé
+   T140 + T147 — Système logo Kalystrat (header / sticky / mobile / footer)
+   logo-header.svg sur fond clair · variant white sur hero photo
    ============================================================ */
-.main-header .logo img,
+.main-header .logo img {
+  width: clamp(200px, 18vw, 260px);
+  height: auto;
+  display: block;
+}
 .main-header .nav-logo img,
-.sticky-header .logo img,
 .mobile-menu .nav-logo img {
-  max-width: 200px;
+  width: clamp(180px, 16vw, 220px);
+  height: auto;
+  display: block;
+}
+.sticky-header .logo img {
+  width: clamp(170px, 14vw, 200px);
   height: auto;
   display: block;
 }
@@ -3614,6 +3622,18 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 .mobile-menu .nav-logo a {
   display: inline-block;
   line-height: 0;
+}
+
+/* T147 — Sur pages avec hero photo (overlay sombre), passer le logo en
+   variant blanc via filter brightness/invert. Le sticky-header (fond clair
+   au scroll) garde le logo navy original. */
+body:has(.ks-page-hero) .main-header:not(.fixed-header) .header-upper .logo img {
+  filter: brightness(0) invert(1);
+}
+/* Cohérence : sticky scroll = fond blanc → logo navy original (pas d'invert) */
+body:has(.ks-page-hero) .sticky-header.fixed-header .logo img,
+body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
+  filter: none;
 }
 
 /* Footer brand (.ks-footer__logo déjà CSS T131) — adapté au logo-white SVG */
