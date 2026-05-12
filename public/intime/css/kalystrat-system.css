@@ -4355,11 +4355,7 @@ body.mobile-menu-visible .ks-tabbar {
 /* T185 — Mobile/tablet (0-1023px) : hamburger top RETIRÉ visuellement
    Le bouton "Menu" du bottom tabbar (T178) ouvre le même drawer via
    programmatic .click() sur .mobile-nav-toggler (sticky-contact.blade.php).
-   Display:none n'empêche pas .click() de déclencher le handler jQuery.
-   Header mobile devient logo-only = pattern Material 3 / Apple HIG 2026
-   quand bottom nav existe (Baymard : "ne pas dupliquer la nav primaire").
-   Élément conservé dans le DOM (rôle invisible pour AT, déclenché par tabbar).
-   Desktop ≥ 1024px : .mobile-nav-toggler reste display:none (base InTime). */
+   Display:none n'empêche pas .click() de déclencher le handler jQuery. */
 @media (max-width: 1023px) {
   .main-header .mobile-nav-toggler,
   .main-header .sticky-header .mobile-nav-toggler {
@@ -4367,13 +4363,62 @@ body.mobile-menu-visible .ks-tabbar {
   }
 }
 
-/* Logo mobile agrandi (header + sticky-header) — viewport < 768px */
+/* ============================================================
+   T187 — Header mobile H1 : bandeau navy uni + logo centré full-width
+   Pattern dominant 2026 (pp_search) : "aplat clair OU sombre uni, priorité
+   lisibilité, marque, performance". Sombre choisi pour cohérence footer +
+   logo blanc/gold ressort puissamment (AAA 17:1 garanti).
+   Mobile/tablet ≤1023px uniquement. Desktop ≥1024px : intact.
+   Header passe de transparent (T69 hero) à navy solid sur ALL pages mobile.
+   ============================================================ */
+@media (max-width: 1023px) {
+  .main-header .header-upper,
+  .main-header .sticky-header {
+    background: var(--ks-navy-900) !important;
+    border-bottom: 1px solid rgba(184, 164, 114, 0.25);
+  }
+  /* Logo centré horizontalement : justify-content center sur le wrapper */
+  .main-header .header-upper .inner-container,
+  .main-header .sticky-header > .auto-container > .d-flex {
+    justify-content: center !important;
+  }
+  /* Nav-outer hidden mobile (contient main-menu desktop + outer-box + toggler tous hidden) */
+  .main-header .header-upper .nav-outer,
+  .main-header .sticky-header .right-box {
+    display: none !important;
+  }
+  /* Logo sizing mobile sur fond navy : généreux mais pas excessif */
+  .main-header .header-upper .logo img,
+  .main-header .header-upper .logo picture {
+    width: clamp(200px, 56vw, 240px) !important;
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  .main-header .sticky-header .logo img,
+  .main-header .sticky-header .logo picture {
+    width: clamp(180px, 50vw, 220px) !important;
+    height: auto !important;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  /* Padding header compact 56-64px hauteur totale */
+  .main-header .header-upper .inner-container {
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+}
+
+/* Logo mobile : taille adaptée pour cohabiter avec ks-header-tel (T186)
+   Logo 180→200px + tel ~144px + gap = tient dans viewport 360-430px sans wrap */
 @media (max-width: 767px) {
   .main-header .logo img,
   .main-header .nav-logo img {
-    width: clamp(220px, 62vw, 260px) !important;
+    width: clamp(170px, 48vw, 200px) !important;
   }
   .sticky-header .logo img {
-    width: clamp(200px, 56vw, 240px) !important;
+    width: clamp(160px, 44vw, 190px) !important;
   }
 }

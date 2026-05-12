@@ -88,8 +88,8 @@ if ('serviceWorker' in navigator) {
         <div class="header-upper">
             <div class="auto-container">
 				<div class="inner-container d-flex justify-content-between align-items-center flex-wrap">
-					<!-- Logo Box -->
-					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc. — Groupe québécois de construction" title="Kalystrat" width="180" height="60"></a></div>
+					<!-- Logo Box — T187 <picture> swap blanc/gold sur mobile fond navy -->
+					<div class="logo"><a href="/" aria-label="Kalystrat — accueil"><picture><source media="(max-width: 1023px)" srcset="/assets/img/kalystrat/logo-white.svg"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc. — Groupe québécois de construction" title="Kalystrat" width="180" height="60"></picture></a></div>
 					
 					<div class="nav-outer d-flex ">
 						
@@ -178,9 +178,9 @@ if ('serviceWorker' in navigator) {
         <div class="sticky-header">
             <div class="auto-container">
 				<div class="d-flex justify-content-between align-items-center">
-					<!-- Logo -->
+					<!-- Logo (sticky-header) — T187 <picture> swap blanc/gold sur mobile fond navy -->
 					<div class="logo">
-						<a href="/" aria-label="Kalystrat — accueil"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc." title="Kalystrat" width="160" height="50"></a>
+						<a href="/" aria-label="Kalystrat — accueil"><picture><source media="(max-width: 1023px)" srcset="/assets/img/kalystrat/logo-white.svg"><img src="/assets/img/kalystrat/logo-header.svg" alt="Logo Gestion Kalystrat Inc." title="Kalystrat" width="160" height="50"></picture></a>
 					</div>
 					
 					<!-- Right Col -->
