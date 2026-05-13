@@ -58,14 +58,16 @@
 
 <x-frontend::page-toc :items="[
     ['id' => 'vision', 'num' => '01', 'label' => 'Notre vision'],
-    ['id' => 'direction', 'num' => '02', 'label' => 'Direction et chiffres'],
+    ['id' => 'direction', 'num' => '02', 'label' => 'Direction et équipe'],
     ['id' => 'structure', 'num' => '03', 'label' => 'Structure du groupe'],
     ['id' => 'piliers', 'num' => '04', 'label' => 'Pourquoi Kalystrat'],
-    ['id' => 'gouvernance', 'num' => '05', 'label' => 'Gouvernance'],
+    ['id' => 'gouvernance', 'num' => '05', 'label' => 'Conseil consultatif'],
     ['id' => 'marche', 'num' => '06', 'label' => 'Marché québécois 2026'],
     ['id' => 'chaine-valeur', 'num' => '07', 'label' => 'Chaîne de valeur'],
     ['id' => 'services-centralises', 'num' => '08', 'label' => 'Services centralisés'],
     ['id' => 'croissance', 'num' => '09', 'label' => 'Stratégie de croissance'],
+    ['id' => 'partenaires', 'num' => '10', 'label' => 'Partenaires'],
+    ['id' => 'carrieres', 'num' => '11', 'label' => 'Carrières'],
 ]"/>
 
 <section id="vision" class="ks-section ks-page-section">
@@ -81,7 +83,7 @@
     </div>
 </section>
 
-<section id="direction" class="ks-section ks-section--alt ks-page-section">
+<section id="direction" class="ks-section ks-section--alt ks-page-section" data-anchor-alias="equipe ali-salomon">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">02</span>
@@ -187,7 +189,7 @@
     </div>
 </section>
 
-<section id="gouvernance" class="ks-section ks-page-section">
+<section id="gouvernance" class="ks-section ks-page-section" data-anchor-alias="conseil jacques-jobidon perry-wong">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">05</span>
@@ -351,6 +353,86 @@
             </article>
         </div>
         <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:var(--ks-gray-500)"><em>Source&nbsp;: plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
+    </div>
+</section>
+
+{{-- Ancres invisibles pour 301 /equipe/{slug} → /a-propos#{slug} (T193) --}}
+<span id="ali-salomon" class="ks-sr-only" aria-hidden="true">Ali Salomon — voir section Direction</span>
+<span id="jacques-jobidon" class="ks-sr-only" aria-hidden="true">Jacques Jobidon — voir section Gouvernance</span>
+<span id="perry-wong" class="ks-sr-only" aria-hidden="true">Perry Wong — voir section Gouvernance</span>
+<span id="equipe" class="ks-sr-only" aria-hidden="true">Équipe — voir section Direction</span>
+<span id="conseil" class="ks-sr-only" aria-hidden="true">Conseil consultatif — voir section Gouvernance</span>
+
+{{-- T193-B — Section Partenaires fusionnée depuis /partenaires (supprimée, 301) --}}
+<section id="partenaires" class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">10</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Écosystème</span>
+                <h2 class="ks-h2">Partenaires d'affaires</h2>
+                <p class="ks-lead">Architectes, designers, promoteurs, courtiers immobiliers, fournisseurs spécialisés. Construire ensemble, mieux et plus vite.</p>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--2col ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Catégorie</span>
+                <h3 class="ks-card__title">Architectes et designers</h3>
+                <p class="ks-card__text">Cabinets d'architecture et firmes de design intérieur qui complètent l'offre des six filiales sur les projets résidentiels et commerciaux haut de gamme.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Catégorie</span>
+                <h3 class="ks-card__title">Promoteurs et courtiers</h3>
+                <p class="ks-card__text">Promoteurs immobiliers et courtiers qui orientent leurs projets vers la chaîne intégrée Kalystrat (fondations à finitions, main-d'œuvre interne).</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Catégorie</span>
+                <h3 class="ks-card__title">Fournisseurs spécialisés</h3>
+                <p class="ks-card__text">Manufacturiers de matériaux, fournisseurs d'équipement et sous-traitants techniques (génie civil, structure préfabriquée, systèmes mécaniques).</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Catégorie</span>
+                <h3 class="ks-card__title">Institutionnels et municipaux</h3>
+                <p class="ks-card__text">Donneurs d'ouvrage publics et institutionnels (écoles, hôpitaux, infrastructure) qui exigent une exécution intégrée et conforme.</p>
+            </article>
+        </div>
+        <div class="ks-card__cta" style="text-align:center;margin-top:2rem">
+            <a href="{{ route('contact') }}" class="ks-cta-secondary">Devenir partenaire Kalystrat</a>
+        </div>
+    </div>
+</section>
+
+{{-- T193-B — Section Carrières fusionnée depuis /carrieres (supprimée, 301) --}}
+<section id="carrieres" class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-page-section__num" aria-hidden="true">11</span>
+            <div class="ks-page-section__heading">
+                <span class="ks-eyebrow">Rejoindre l'équipe</span>
+                <h2 class="ks-h2">Carrières dans la construction</h2>
+                <p class="ks-lead">Kalystrat Placement Construction recrute en continu. Travailleurs qualifiés CCQ, semi-qualifiés et professionnels de gestion, pour les six filiales du groupe et pour des clients externes.</p>
+            </div>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in">
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Avantage</span>
+                <h3 class="ks-card__title">Chantiers diversifiés</h3>
+                <p class="ks-card__text">Fondations, structure, toiture, finition, immobilier. Six métiers, des projets résidentiels et commerciaux, du courant à l'institutionnel.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Avantage</span>
+                <h3 class="ks-card__title">Continuité d'emploi</h3>
+                <p class="ks-card__text">Demande captive interne grâce à Kalystrat Immobilier qui développe ses propres projets. Moins de creux, plus d'heures travaillées par année.</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow">Avantage</span>
+                <h3 class="ks-card__title">Formation continue</h3>
+                <p class="ks-card__text">Programmes de formation interne, mentorat par les compagnons CCQ, perfectionnement technique sur les nouvelles normes du Code 2026.</p>
+            </article>
+        </div>
+        <div class="ks-card__cta" style="text-align:center;margin-top:2rem">
+            <a href="{{ route('contact') }}" class="ks-cta-secondary">Envoyer une candidature</a>
+        </div>
     </div>
 </section>
 
