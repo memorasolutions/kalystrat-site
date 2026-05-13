@@ -1725,6 +1725,20 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   transform: translateY(-50%);
   z-index: 90;
   pointer-events: none;
+  opacity: 1;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+/* T192 — Cachée tant que hero visible (cause incertitude user : overlap visuel hero).
+   JS ajoute cette classe via IntersectionObserver(.ks-page-hero) dans intime.blade.php. */
+.ks-page-toc.ks-page-toc--hidden {
+  opacity: 0;
+  transform: translateY(-50%) translateX(-12px);
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ks-page-toc {
+    transition: none;
+  }
 }
 
 .ks-page-toc__mobile-toggle {

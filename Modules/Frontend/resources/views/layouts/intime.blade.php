@@ -506,6 +506,22 @@ if ('serviceWorker' in navigator) {
         sections.forEach(function (s) { io.observe(s); });
     }
 
+    // T192 — Cacher TOC tant que hero visible (pattern 2026 corporate B2B)
+    var hero = document.querySelector('.ks-page-hero');
+    if (hero && 'IntersectionObserver' in window) {
+        toc.classList.add('ks-page-toc--hidden'); // hidden au load
+        var heroIO = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    toc.classList.add('ks-page-toc--hidden');
+                } else {
+                    toc.classList.remove('ks-page-toc--hidden');
+                }
+            });
+        }, { rootMargin: '0px', threshold: 0.1 });
+        heroIO.observe(hero);
+    }
+
     if (toggle) {
         toggle.addEventListener('click', function () {
             var open = toc.hasAttribute('data-ks-toc-open');
