@@ -631,9 +631,9 @@ $services = [
     <div class="ks-container">
         <div class="ks-pourquoi__intro">
             <div class="ks-pourquoi__heading">
-                <span class="ks-eyebrow">Preuves et garanties</span>
-                <h2 id="pourquoi-title" class="ks-h2">Quatre preuves contractuelles</h2>
-                <p class="ks-lead">Les six piliers ci-dessus décrivent la structure du groupe. Voici quatre preuves concrètes — vérifiables, techniques et contractuelles — que cette structure tient ses promesses sur chaque chantier Kalystrat.</p>
+                <span class="ks-eyebrow">Engagements contractuels</span>
+                <h2 id="pourquoi-title" class="ks-h2">Quatre garanties techniques et juridiques</h2>
+                <p class="ks-lead">Conformité Code QC 2026, plan de garantie GCR, licence RBQ vérifiable et demande captive interne. Quatre engagements concrets sur chaque chantier Kalystrat.</p>
             </div>
         </div>
 
@@ -647,7 +647,7 @@ $services = [
             <article class="ks-pourquoi__card">
                 <span class="ks-eyebrow">Code QC 2026</span>
                 <h3 class="ks-card__title">Conformité technique maîtrisée</h3>
-                <p class="ks-card__text">Étanchéité 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. Nos équipes maîtrisent l’ensemble des exigences du nouveau Code de construction du Québec. <a href="{{ route('expertise') }}">Voir notre page Expertise</a>.</p>
+                <p class="ks-card__text">Étanchéité 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. Nos équipes maîtrisent l’ensemble des exigences du nouveau Code de construction du Québec (chapitre I — Bâtiment 2021-2025). <a href="{{ route('filiales.index') }}">Voir nos six filiales</a>.</p>
             </article>
 
             <article class="ks-pourquoi__card">
