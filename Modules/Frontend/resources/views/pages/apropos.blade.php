@@ -79,7 +79,7 @@
                 <h2 class="ks-h2">Bâtir un groupe intégré de référence au Québec</h2>
             </div>
         </div>
-        <p class="ks-lead ks-fade-in">Gestion Kalystrat Inc. exerce un contrôle complet sur la chaîne de valeur, de l’excavation aux finitions, tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée. Notre ambition&nbsp;: devenir un acteur structurant de l’industrie québécoise de la construction, en bâtissant un groupe intégré de référence.</p>
+        <p class="ks-lead ks-fade-in">Gestion Kalystrat Inc. exerce un contrôle complet sur la chaîne de valeur, de l’excavation aux finitions, tout en développant des projets immobiliers et en assurant le placement stratégique de main-d’œuvre qualifiée. Notre ambition&nbsp;: devenir une référence québécoise de la construction intégrée.</p>
     </div>
 </section>
 
@@ -97,7 +97,7 @@
                 <span class="ks-eyebrow">Fondateur</span>
                 <h3 class="ks-card__title">Ali Salomon</h3>
                 <div class="ks-card__meta">Président et Directeur Général</div>
-                <p class="ks-card__text">Visionnaire et entrepreneur, Ali Salomon a conçu le modèle d’affaires intégré de Kalystrat&nbsp;: six filiales spécialisées qui travaillent en synergie sous une marque unifiée. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</p>
+                <p class="ks-card__text">Ali Salomon a conçu le modèle d’affaires intégré de Kalystrat&nbsp;: six filiales spécialisées qui travaillent en synergie sous une marque unifiée. Il supervise la stratégie globale, les acquisitions et la gouvernance du groupe.</p>
                 <div class="ks-card__cta">
                     <a href="{{ route('equipe.membre', 'ali-salomon') }}" class="ks-cta-secondary">Profil complet</a>
                 </div>
@@ -137,7 +137,7 @@
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Structure du groupe</span>
                 <h2 class="ks-h2">Six filiales, une marque unifiée</h2>
-                <p class="ks-lead">La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance. Chaque filiale est dirigée par un directeur dédié relevant directement de la présidence.</p>
+                <p class="ks-lead">La convention « Kalystrat + Spécialité » rend chaque filiale identifiable au premier coup d’œil sur un chantier ou un contrat. Chaque filiale est dirigée par un directeur relevant directement de la présidence.</p>
             </div>
         </div>
         <figure class="ks-page-section__visual ks-fade-in">
@@ -249,7 +249,7 @@
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">+35&nbsp;%</div>
                 <div class="ks-stat__label">Mises en chantier 2025</div>
-                <p class="ks-card__text" style="margin-top:1rem">Au Québec, +23&nbsp;% en un an (source SCHL). Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
+                <p class="ks-card__text" style="margin-top:1rem">+35&nbsp;% de mises en chantier au H1 2025 vs H1 2024 (source&nbsp;: APCHQ, mi-année 2025). Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">19<sup style="font-size:0.55em;color:var(--ks-gold-500)"> G$</sup></div>
@@ -337,7 +337,7 @@
             <span class="ks-page-section__num" aria-hidden="true">09</span>
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Stratégie de croissance</span>
-                <h2 class="ks-h2">Deux phases pour bâtir un groupe de référence</h2>
+                <h2 class="ks-h2">Deux phases pour structurer la croissance du groupe</h2>
             </div>
         </div>
         <div class="ks-bento ks-bento--2col ks-fade-in">
