@@ -263,7 +263,7 @@ $services = [
                 <h2 id="six-piliers-title" class="ks-h2">Six avantages,<br>une marque unifiée.</h2>
             </div>
             <div class="ks-section__heading-right">
-                <p class="ks-lead">L'avantage concurrentiel de Kalystrat repose sur six piliers structurels. Ils ne sont pas des promesses marketing, mais l'architecture opérationnelle du groupe&nbsp;: de la main-d'œuvre interne à la demande captive, chaque pilier rend les autres plus solides.</p>
+                <p class="ks-lead">L'avantage concurrentiel de Kalystrat repose sur six piliers structurels qui définissent l'architecture opérationnelle du groupe&nbsp;: intégration verticale, main-d'œuvre interne, demande captive, synergies, cohérence de marque et gestion centralisée.</p>
             </div>
         </div>
         <div class="ks-pillars__grid ks-pillars__grid--six">
@@ -349,7 +349,7 @@ $services = [
             <article class="ks-defi__kpi ks-defi__kpi--filiales">
                 <span class="ks-eyebrow">Filiales</span>
                 <span class="ks-defi__num" data-counter data-target="6" data-suffix="">0</span>
-                <p class="ks-defi__caption">Six filiales assemblées en un seul groupe cohérent.</p>
+                <p class="ks-defi__caption">Six filiales assemblées en un seul groupe.</p>
                 {{-- T154-v2 — Vrai casse-tête jigsaw 6 pièces 3×2
                      Pièces 80×40 avec demi-cercles (rayon 8) tabs/blanks
                      Checkerboard gold/navy : intégration verticale, 6 filiales unies --}}
@@ -493,7 +493,7 @@ $services = [
             <article class="ks-approche__narrative">
                 <span class="ks-eyebrow">Conçu, réalisé, livré</span>
                 <h2 id="approche-title" class="ks-h2 ks-approche__title">Une approche structurée à long terme</h2>
-                <p class="ks-lead ks-approche__lead">L'intégration verticale n'est pas un slogan creux. C'est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
+                <p class="ks-lead ks-approche__lead">L'intégration verticale est une discipline opérationnelle&nbsp;: moins d'imprévus de coordination, calendrier maître unique pour les six filiales, qualité homogène du sous-sol au toit.</p>
                 <p class="ks-lead ks-approche__lead">Six directions de filiales spécialisées, alignées sous une même gouvernance. Notre crédibilité repose sur la profondeur des expertises métier et la conformité totale au Code de construction du Québec 2026.</p>
                 <p class="ks-lead ks-approche__lead">La direction est appuyée par un <strong>conseil consultatif</strong> réunissant des experts en construction, financement, droit des affaires, ressources humaines et immobilier — dont <strong>Me Jacques Jobidon</strong> (droit de la construction et des sociétés) et <strong>Perry Wong</strong> (immobilier).</p>
                 <div class="ks-approche__expertise" aria-hidden="true">
@@ -641,7 +641,7 @@ $services = [
             <article class="ks-pourquoi__card ks-pourquoi__card--hero">
                 <span class="ks-eyebrow">Intégration verticale</span>
                 <h3 class="ks-card__title">Six filiales sous une marque, zéro sous-traitance sur les corps de métier clés</h3>
-                <p class="ks-card__text">Chez Kalystrat, l’intégration n’est pas un mot creux. Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
+                <p class="ks-card__text">Nos six filiales — <a href="{{ route('filiale', 'fondations') }}">Fondations</a>, <a href="{{ route('filiale', 'structure') }}">Structure</a>, <a href="{{ route('filiale', 'toiture-enveloppe') }}">Toiture et enveloppe</a>, <a href="{{ route('filiale', 'finition-interieure') }}">Finition intérieure</a>, <a href="{{ route('filiale', 'immobilier') }}">Immobilier</a> et <a href="{{ route('filiale', 'placement-construction') }}">Placement construction</a> — collaborent au quotidien sur les mêmes chantiers. Cette proximité élimine les zones grises de responsabilité, accélère la prise de décision et garantit une qualité homogène du sous-sol au toit.</p>
             </article>
 
             <article class="ks-pourquoi__card">
@@ -699,7 +699,7 @@ $services = [
             <li class="ks-faq__item">
                 <details>
                     <summary class="ks-faq__question">Êtes-vous conformes au Code de construction du Québec 2026&nbsp;?</summary>
-                    <p class="ks-faq__answer">Oui, 100&nbsp;% conforme. Nos équipes maîtrisent les exigences du Code 2026&nbsp;: étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par un test d'étanchéité (<em>blower door</em>) avant livraison.</p>
+                    <p class="ks-faq__answer">Oui. Nos équipes maîtrisent les exigences du Code 2026&nbsp;: étanchéité à l'air 1,5 ach@50Pa, isolation R-49 toiture et R-24 murs, ventilation HRV obligatoire, normes Novoclimat 2.0. La conformité est intégrée dès la conception et validée par un test d'étanchéité (<em>blower door</em>) avant livraison.</p>
                 </details>
             </li>
             <li class="ks-faq__item">
