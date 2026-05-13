@@ -18,7 +18,7 @@
     'name' => 'Gestion Kalystrat Inc.',
     'url' => url('/'),
     'logo' => url('/assets/img/kalystrat/logo.svg'),
-    'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture-Enveloppe, Finition intérieure, Immobilier, Placement construction.",
+    'description' => "Groupe québécois de construction à intégration verticale. Six filiales spécialisées : Fondations, Structure, Toiture et enveloppe, Finition intérieure, Immobilier, Placement construction.",
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
     'telephone' => '+1-418-476-0987',
     'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'telephone' => '+1-418-476-0987', 'email' => 'info@kalystrat.ca', 'areaServed' => 'CA-QC', 'availableLanguage' => ['French', 'English']],
@@ -26,10 +26,10 @@
     'subOrganization' => [
         ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Fondations', 'url' => url('/filiales/fondations')],
         ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Structure', 'url' => url('/filiales/structure')],
-        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Toiture et Enveloppe', 'url' => url('/filiales/toiture-enveloppe')],
-        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Finition Intérieure', 'url' => url('/filiales/finition-interieure')],
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Toiture et enveloppe', 'url' => url('/filiales/toiture-enveloppe')],
+        ['@type' => 'GeneralContractor', 'name' => 'Kalystrat Finition intérieure', 'url' => url('/filiales/finition-interieure')],
         ['@type' => 'Organization', 'name' => 'Kalystrat Immobilier', 'url' => url('/filiales/immobilier')],
-        ['@type' => 'Organization', 'name' => 'Kalystrat Placement Construction', 'url' => url('/filiales/placement-construction')],
+        ['@type' => 'Organization', 'name' => 'Kalystrat Placement construction', 'url' => url('/filiales/placement-construction')],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 
@@ -275,7 +275,7 @@ $services = [
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">02</div>
                 <h3 class="ks-pillar__title">Main-d'œuvre interne</h3>
-                <p class="ks-pillar__text"><a href="{{ route('filiale', 'placement-construction') }}">Kalystrat Placement Construction</a> fournit la main-d'œuvre certifiée CCQ à toutes les filiales du groupe. Disponibilité garantie, formation cohérente.</p>
+                <p class="ks-pillar__text"><a href="{{ route('filiale', 'placement-construction') }}">Kalystrat Placement construction</a> fournit la main-d'œuvre certifiée CCQ à toutes les filiales du groupe. Disponibilité garantie, formation cohérente.</p>
             </article>
             <article class="ks-pillar">
                 <div class="ks-pillar__num" aria-hidden="true">03</div>

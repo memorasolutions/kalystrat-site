@@ -1,7 +1,7 @@
 <section class="ks-content-section" style="padding:60px 0">
   <div class="auto-container">
     <h2>L’art de la finition intérieure</h2>
-    <p>Chez Kalystrat Finition Intérieure Inc., nous croyons que les détails font la différence. Une finition intérieure soignée n’est pas qu’une question d’esthétique : elle détermine la valeur perçue d’un espace, son confort d’usage quotidien et sa longévité. Chaque joint, chaque surface et chaque angle sont traités avec une rigueur artisanale qui respecte à la fois les plans des designers et architectes, tout en anticipant les besoins réels des occupants.</p>
+    <p>Chez Kalystrat Finition intérieure Inc., nous croyons que les détails font la différence. Une finition intérieure soignée n’est pas qu’une question d’esthétique : elle détermine la valeur perçue d’un espace, son confort d’usage quotidien et sa longévité. Chaque joint, chaque surface et chaque angle sont traités avec une rigueur artisanale qui respecte à la fois les plans des designers et architectes, tout en anticipant les besoins réels des occupants.</p>
     <p>Le choix des matériaux est fondamental. Nous privilégions des produits qui allient performance, durabilité et beauté, en veillant à leur compatibilité avec l’ensemble du concept architectural. Pour le gypse, par exemple, nous appliquons systématiquement la norme de finition <strong>niveau 5</strong>, la plus exigeante de l’industrie, garantissant des murs parfaitement lisses, sans imperfections visibles, même sous un éclairage rasant.</p>
     <p>L’harmonie esthétique naît de la cohérence entre tous les éléments : moulures, planchers, peinture et ébénisterie doivent dialoguer naturellement. C’est cette synergie que nous maîtrisons, transformant chaque chantier en un espace raffiné, fonctionnel et intemporel.</p>
   </div>
@@ -34,7 +34,7 @@
 <section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
   <div class="auto-container">
     <h2>Durabilité et entretien</h2>
-    <p>Un bel intérieur mérite d’être protégé dans le temps. Chez Kalystrat Finition Intérieure Inc., nous intégrons la durabilité dès la sélection des matériaux : <strong>bois certifié FSC</strong>, peintures à faible teneur en COV (comme les gammes Aura et Regal Select de Benjamin Moore), et colles sans formaldéhyde.</p>
+    <p>Un bel intérieur mérite d’être protégé dans le temps. Chez Kalystrat Finition intérieure Inc., nous intégrons la durabilité dès la sélection des matériaux : <strong>bois certifié FSC</strong>, peintures à faible teneur en COV (comme les gammes Aura et Regal Select de Benjamin Moore), et colles sans formaldéhyde.</p>
     <p>L’entretien approprié prolonge considérablement la vie des finitions. Pour le <strong>bois franc</strong>, un huilage ou une réapplication de finition tous les 5 ans préserve l’éclat et la résistance. Les joints de <strong>céramique</strong> doivent être scellés tous les 2 à 3 ans pour éviter les infiltrations et les moisissures. Les <strong>comptoirs en quartz</strong>, bien qu’extrêmement résistants, gagnent à être nettoyés avec des produits non abrasifs et non acides.</p>
     <p>La <strong>peinture de qualité supérieure</strong> résiste mieux aux rayures, à l’humidité et à la décoloration, tout en améliorant la qualité de l’air intérieur. En combinant des matériaux durables et des pratiques d’entretien simples, nous aidons nos clients à conserver la beauté et la fonctionnalité de leurs espaces pendant des décennies.</p>
   </div>

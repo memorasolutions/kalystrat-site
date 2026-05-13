@@ -138,7 +138,7 @@ echo json_encode([
             <article class="ks-card">
                 <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">02</span>
                 <h3 class="ks-card__title">Main-d'œuvre captive</h3>
-                <p class="ks-card__text">Kalystrat Placement Construction fournit la main-d'œuvre à toutes les filiales. Disponibilité garantie, cohérence de formation, qualité d'exécution.</p>
+                <p class="ks-card__text">Kalystrat Placement construction fournit la main-d'œuvre à toutes les filiales. Disponibilité garantie, cohérence de formation, qualité d'exécution.</p>
             </article>
             <article class="ks-card">
                 <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">03</span>
@@ -186,7 +186,7 @@ echo json_encode([
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">17&nbsp;000</div>
                 <div class="ks-stat__label">Travailleurs/an recherchés QC</div>
-                <p class="ks-card__text" style="margin-top:1rem">Besoin annuel en main-d'œuvre qualifiée selon la CCQ. Kalystrat Placement Construction y répond.</p>
+                <p class="ks-card__text" style="margin-top:1rem">Besoin annuel en main-d'œuvre qualifiée selon la CCQ. Kalystrat Placement construction y répond.</p>
             </article>
         </div>
     </div>

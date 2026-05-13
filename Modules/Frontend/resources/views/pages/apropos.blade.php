@@ -110,9 +110,9 @@
             </article>
 
             <article class="ks-card">
-                <div class="ks-stat__number">9</div>
-                <div class="ks-stat__label">Régions Québec desservies</div>
-                <p class="ks-card__text" style="margin-top:1rem">Couverture provinciale du groupe, de la Capitale-Nationale à la Mauricie.</p>
+                <div class="ks-stat__number">6</div>
+                <div class="ks-stat__label">Villes desservies</div>
+                <p class="ks-card__text" style="margin-top:1rem">Couverture région de Québec&nbsp;: Québec, Lévis, Sainte-Foy, Beauport, Sillery et Vieux-Québec.</p>
             </article>
 
             <article class="ks-card">
@@ -171,7 +171,7 @@
         @php
         $piliers = [
             ['n' => '01', 't' => 'Intégration verticale', 'd' => "De l’excavation à la finition, chaque étape est exécutée en interne. Élimination des marges des sous-traitants et des délais de coordination."],
-            ['n' => '02', 't' => 'Main-d’œuvre interne', 'd' => "Kalystrat Placement Construction fournit la main-d’œuvre à toutes les filiales. Disponibilité garantie, formation cohérente."],
+            ['n' => '02', 't' => 'Main-d’œuvre interne', 'd' => "Kalystrat Placement construction fournit la main-d’œuvre à toutes les filiales. Disponibilité garantie, formation cohérente."],
             ['n' => '03', 't' => 'Demande captive', 'd' => "Kalystrat Immobilier développe ses propres projets et génère un flux de travail constant pour les cinq autres filiales."],
             ['n' => '04', 't' => 'Synergies opérationnelles', 'd' => "Immobilier puis Fondations, Structure, Toiture-Enveloppe, Finition, Placement. La chaîne complète fonctionne en boucle."],
             ['n' => '05', 't' => 'Cohérence de marque', 'd' => "La convention « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires."],
@@ -254,12 +254,12 @@
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">19<sup style="font-size:0.55em;color:var(--ks-gold-500)"> G$</sup></div>
                 <div class="ks-stat__label">Marché rénovation Québec</div>
-                <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment haut de gamme. Kalystrat Finition Intérieure et Toiture-Enveloppe s’y positionnent.</p>
+                <p class="ks-card__text" style="margin-top:1rem">En pleine expansion, avec une tendance marquée vers le segment haut de gamme. Kalystrat Finition intérieure et Toiture-Enveloppe s’y positionnent.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">17 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">/an</sup></div>
                 <div class="ks-stat__label">Travailleurs recherchés par année</div>
-                <p class="ks-card__text" style="margin-top:1rem">Selon la CCQ, le Québec doit attirer environ 17 000 travailleurs supplémentaires chaque année pour répondre à la demande en construction. Kalystrat Placement Construction sert d'abord les filiales internes, puis la clientèle externe.</p>
+                <p class="ks-card__text" style="margin-top:1rem">Selon la CCQ, le Québec doit attirer environ 17 000 travailleurs supplémentaires chaque année pour répondre à la demande en construction. Kalystrat Placement construction sert d'abord les filiales internes, puis la clientèle externe.</p>
             </article>
         </div>
     </div>
@@ -279,9 +279,9 @@
             <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">01</span><strong>Kalystrat Immobilier</strong><span class="ks-chain__role">Acquiert terrain ou propriété</span></li>
             <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">02</span><strong>Kalystrat Fondations</strong><span class="ks-chain__role">Excave et coule la fondation</span></li>
             <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">03</span><strong>Kalystrat Structure</strong><span class="ks-chain__role">Charpente le bâtiment</span></li>
-            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">04</span><strong>Kalystrat Toiture et Enveloppe</strong><span class="ks-chain__role">Protège et étanchéifie</span></li>
-            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">05</span><strong>Kalystrat Finition Intérieure</strong><span class="ks-chain__role">Complète les espaces</span></li>
-            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">06</span><strong>Kalystrat Placement Construction</strong><span class="ks-chain__role">Fournit la main-d’œuvre à chaque étape</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">04</span><strong>Kalystrat Toiture et enveloppe</strong><span class="ks-chain__role">Protège et étanchéifie</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">05</span><strong>Kalystrat Finition intérieure</strong><span class="ks-chain__role">Complète les espaces</span></li>
+            <li class="ks-chain__step"><span class="ks-chain__num" aria-hidden="true">06</span><strong>Kalystrat Placement construction</strong><span class="ks-chain__role">Fournit la main-d’œuvre à chaque étape</span></li>
         </ol>
     </div>
 </section>
@@ -344,12 +344,12 @@
             <article class="ks-card ks-card--accent-navy">
                 <div class="ks-card__meta">Phase 1</div>
                 <h3 class="ks-card__title">Consolidation</h3>
-                <p class="ks-card__text">Établir les fondations opérationnelles du groupe&nbsp;: incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement Construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion, premières relations commerciales avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
+                <p class="ks-card__text">Établir les fondations opérationnelles du groupe&nbsp;: incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion, premières relations commerciales avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-card__meta">Phase 2</div>
                 <h3 class="ks-card__title">Expansion</h3>
-                <p class="ks-card__text">Diversifier les revenus et augmenter le volume&nbsp;: développement de la clientèle externe de Kalystrat Placement Construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition Intérieure.</p>
+                <p class="ks-card__text">Diversifier les revenus et augmenter le volume&nbsp;: développement de la clientèle externe de Kalystrat Placement construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition intérieure.</p>
             </article>
         </div>
         <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:var(--ks-gray-500)"><em>Source&nbsp;: plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
@@ -410,7 +410,7 @@
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Rejoindre l'équipe</span>
                 <h2 class="ks-h2">Carrières dans la construction</h2>
-                <p class="ks-lead">Kalystrat Placement Construction recrute en continu. Travailleurs qualifiés CCQ, semi-qualifiés et professionnels de gestion, pour les six filiales du groupe et pour des clients externes.</p>
+                <p class="ks-lead">Kalystrat Placement construction recrute en continu. Travailleurs qualifiés CCQ, semi-qualifiés et professionnels de gestion, pour les six filiales du groupe et pour des clients externes.</p>
             </div>
         </div>
         <div class="ks-bento ks-bento--3col ks-fade-in">

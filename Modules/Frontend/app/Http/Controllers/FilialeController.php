@@ -48,8 +48,8 @@ class FilialeController extends Controller
             'modele' => 'Projets de rénovation + contrats de finition pour construction neuve',
         ],
         'toiture-enveloppe' => [
-            'nom_court' => 'Kalystrat Toiture et Enveloppe',
-            'nom_legal' => 'Kalystrat Toiture et Enveloppe Inc.',
+            'nom_court' => 'Kalystrat Toiture et enveloppe',
+            'nom_legal' => 'Kalystrat Toiture et enveloppe Inc.',
             'specialite' => 'Systèmes de toiture et enveloppe du bâtiment',
             'tagline' => 'Étanchéité, isolation, revêtement : protégez votre bâtiment',
             'services' => [
@@ -64,8 +64,8 @@ class FilialeController extends Controller
             'modele' => 'Contrats au projet + entretien récurrents + garanties prolongées',
         ],
         'finition-interieure' => [
-            'nom_court' => 'Kalystrat Finition Intérieure',
-            'nom_legal' => 'Kalystrat Finition Intérieure Inc.',
+            'nom_court' => 'Kalystrat Finition intérieure',
+            'nom_legal' => 'Kalystrat Finition intérieure Inc.',
             'specialite' => 'Finition intérieure haut de gamme et accessible',
             'tagline' => 'Du gypse au comptoir : finition impeccable',
             'services' => [
@@ -95,8 +95,8 @@ class FilialeController extends Controller
             'modele' => 'Profit sur ventes + revenus locatifs récurrents',
         ],
         'placement-construction' => [
-            'nom_court' => 'Kalystrat Placement Construction',
-            'nom_legal' => 'Kalystrat Placement Construction Inc.',
+            'nom_court' => 'Kalystrat Placement construction',
+            'nom_legal' => 'Kalystrat Placement construction Inc.',
             'specialite' => 'Agence de placement de main-d\'œuvre construction',
             'tagline' => 'Main-d\'œuvre qualifiée CCQ : 17 000 travailleurs/an recherchés au QC',
             'services' => [

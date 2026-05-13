@@ -79,7 +79,7 @@
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">100&nbsp;%</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Conformité Code QC 2026<br>(étanchéité, R-49, HRV)</span></div>
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">0</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Avenant facturé<br>au client final</span></div>
                 </div>
-                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> moderniser l’enveloppe énergétique sans dénaturer le caractère architectural d’origine. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et Enveloppe + Finition Intérieure coordonnées sous une seule signature. <strong>Résultats&nbsp;:</strong> conformité Code 2026 atteinte du premier coup, budget initial respecté.</p>
+                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> moderniser l’enveloppe énergétique sans dénaturer le caractère architectural d’origine. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et enveloppe + Finition Intérieure coordonnées sous une seule signature. <strong>Résultats&nbsp;:</strong> conformité Code 2026 atteinte du premier coup, budget initial respecté.</p>
             </article>
         </div>
         <div class="ks-bento ks-bento--feature ks-fade-in" style="grid-template-columns:1fr">
@@ -91,7 +91,7 @@
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">Zéro</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Interruption d’activité<br>locataires</span></div>
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">+8&nbsp;ans</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Durée de vie<br>vs ancienne membrane</span></div>
                 </div>
-                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> remplacer une membrane élastomère en fin de vie sur un édifice de bureaux occupé, sans déranger les locataires. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et Enveloppe + Placement Construction pour mobiliser une équipe nuit/fin de semaine. Phasage par sections étanches. <strong>Résultats&nbsp;:</strong> aucune fuite signalée depuis livraison, locataires satisfaits, garantie système 20 ans sur la nouvelle membrane TPO.</p>
+                <p class="ks-card__text"><strong>Défi&nbsp;:</strong> remplacer une membrane élastomère en fin de vie sur un édifice de bureaux occupé, sans déranger les locataires. <strong>Solution&nbsp;:</strong> Kalystrat Toiture et enveloppe + Placement Construction pour mobiliser une équipe nuit/fin de semaine. Phasage par sections étanches. <strong>Résultats&nbsp;:</strong> aucune fuite signalée depuis livraison, locataires satisfaits, garantie système 20 ans sur la nouvelle membrane TPO.</p>
                 <p class="ks-card__text" style="margin-top:1rem;font-style:italic;color:var(--ks-gray-500);font-size:0.875rem">Études de cas représentatives du modèle d’exécution Kalystrat. Les projets nommés seront documentés au fur et à mesure des livraisons, avec accord client.</p>
             </article>
         </div>

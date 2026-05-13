@@ -11,7 +11,7 @@ return [
     ],
     [
         'question' => 'Quelles sont les 6 filiales de Kalystrat ?',
-        'answer'   => "Les six filiales de Kalystrat sont : Kalystrat Fondations, Kalystrat Structure, Kalystrat Toiture et Enveloppe, Kalystrat Finition Intérieure, Kalystrat Immobilier et Kalystrat Placement Construction. Chacune de ces entités maîtrise son domaine d'expertise tout en collaborant étroitement avec les autres, assurant ainsi une intégration verticale complète et une cohérence dans la réalisation des projets de construction au Québec.",
+        'answer'   => "Les six filiales de Kalystrat sont : Kalystrat Fondations, Kalystrat Structure, Kalystrat Toiture et enveloppe, Kalystrat Finition intérieure, Kalystrat Immobilier et Kalystrat Placement construction. Chacune de ces entités maîtrise son domaine d'expertise tout en collaborant étroitement avec les autres, assurant ainsi une intégration verticale complète et une cohérence dans la réalisation des projets de construction au Québec.",
     ],
     [
         'question' => 'Qui est le fondateur de Kalystrat ?',
@@ -43,7 +43,7 @@ return [
     ],
     [
         'question' => 'Kalystrat fait-il de la rénovation ?',
-        'answer'   => "Oui, Kalystrat réalise des projets de rénovation résidentielle et commerciale, notamment par l'entremise de sa filiale Kalystrat Finition Intérieure. Que ce soit pour une mise à niveau, une transformation complète ou des travaux spécialisés, les équipes appliquent les mêmes standards de qualité, de sécurité et de conformité aux normes RBQ que pour les projets neufs.",
+        'answer'   => "Oui, Kalystrat réalise des projets de rénovation résidentielle et commerciale, notamment par l'entremise de sa filiale Kalystrat Finition intérieure. Que ce soit pour une mise à niveau, une transformation complète ou des travaux spécialisés, les équipes appliquent les mêmes standards de qualité, de sécurité et de conformité aux normes RBQ que pour les projets neufs.",
     ],
     [
         'question' => 'Quelles régions du Québec Kalystrat dessert-il ?',
@@ -55,7 +55,7 @@ return [
     ],
     [
         'question' => 'Kalystrat fournit-il aussi de la main-d\'œuvre ?',
-        'answer'   => "Oui, via sa filiale Kalystrat Placement Construction, le groupe offre des services de placement de main-d'œuvre qualifiée dans le secteur de la construction. Ces travailleurs sont formés, certifiés selon les exigences de la CCQ et de la RBQ, et peuvent être déployés sur des chantiers résidentiels ou commerciaux à travers le Québec, en appui à des entrepreneurs ou à des projets internes.",
+        'answer'   => "Oui, via sa filiale Kalystrat Placement construction, le groupe offre des services de placement de main-d'œuvre qualifiée dans le secteur de la construction. Ces travailleurs sont formés, certifiés selon les exigences de la CCQ et de la RBQ, et peuvent être déployés sur des chantiers résidentiels ou commerciaux à travers le Québec, en appui à des entrepreneurs ou à des projets internes.",
     ],
     [
         'question' => 'Comment contacter Kalystrat ?',
@@ -75,7 +75,7 @@ return [
     ],
     [
         'question' => 'Kalystrat fait-il des rénovations patrimoniales dans le Vieux-Québec et Sillery ?',
-        'answer'   => "Oui, via notre filiale Kalystrat Finition Intérieure, nous réalisons des rénovations patrimoniales dans le Vieux-Québec et Sillery avec des équipes spécialisées dans les maisons centenaires. Nous respectons strictement le règlement sur le patrimoine bâti de la Ville de Québec, restaurons les façades traditionnelles, intégrons des isolations invisibles et traitons la charpente en bois ancien avec soin. Nos interventions allient discrétion, savoir-faire artisanal et exigence premium.",
+        'answer'   => "Oui, via notre filiale Kalystrat Finition intérieure, nous réalisons des rénovations patrimoniales dans le Vieux-Québec et Sillery avec des équipes spécialisées dans les maisons centenaires. Nous respectons strictement le règlement sur le patrimoine bâti de la Ville de Québec, restaurons les façades traditionnelles, intégrons des isolations invisibles et traitons la charpente en bois ancien avec soin. Nos interventions allient discrétion, savoir-faire artisanal et exigence premium.",
     ],
     [
         'question' => 'Kalystrat dessert-il Montréal et les autres régions du Québec ?',
