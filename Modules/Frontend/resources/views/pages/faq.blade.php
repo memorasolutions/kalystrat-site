@@ -30,6 +30,35 @@ $faqs = [
 ];
 
 $faqsRaw = array_map(fn($f) => ['q' => str_replace('&nbsp;', ' ', $f['q']), 'r' => str_replace('&nbsp;', ' ', $f['r'])], $faqs);
+
+// T193-D — Glossaire fusionné depuis /glossaire (supprimée, 301 → /faq#glossaire)
+$termes = [
+    ['t' => 'RBQ', 'd' => "Régie du bâtiment du Québec. Organisme provincial qui régule la construction au Québec : licences entrepreneurs, qualifications, conformité au Code."],
+    ['t' => 'CCQ', 'd' => "Commission de la construction du Québec. Organisme qui gère la formation, la certification et les relations de travail dans l'industrie."],
+    ['t' => 'Code de construction du Québec', 'd' => "Règlement provincial qui établit les exigences minimales de conception, construction et rénovation des bâtiments. Chapitre Bâtiment, Plomberie, Énergie, etc."],
+    ['t' => 'Cautionnement', 'd' => "Garantie financière fournie par l'entrepreneur (souvent via une compagnie de cautionnement) pour assurer l'exécution des travaux et le paiement des sous-traitants et fournisseurs."],
+    ['t' => 'Hypothèque légale', 'd' => "Garantie automatique qu'un fournisseur ou sous-traitant impayé peut faire publier sur l'immeuble pour sécuriser sa créance. Délais de péremption : 30 jours après fin des travaux."],
+    ['t' => 'BIM', 'd' => "Building Information Modeling. Modélisation 3D paramétrée d'un bâtiment intégrant géométrie, matériaux, systèmes mécaniques et planning. Permet la coordination des disciplines avant chantier."],
+    ['t' => 'Pare-air et pare-vapeur', 'd' => "Membranes de l'enveloppe du bâtiment. Le pare-air contrôle l'infiltration d'air, le pare-vapeur contrôle le passage de l'humidité. Critiques pour l'efficacité énergétique."],
+    ['t' => 'Coffrage', 'd' => "Structure temporaire (bois, acier, aluminium) qui maintient le béton frais en position le temps qu'il durcisse. Spécialité de Kalystrat Fondations."],
+    ['t' => 'Drain français', 'd' => "Système de drainage périphérique installé au pied des fondations pour évacuer l'eau du sol et éviter l'humidité dans le sous-sol. Obligatoire au Québec pour les bâtiments avec sous-sol."],
+    ['t' => 'Charpente', 'd' => "Structure portante d'un bâtiment (poutres, colonnes, fermes, solives). Peut être en bois (résidentiel, commercial léger), en acier (commercial, industriel) ou hybride."],
+    ['t' => 'Membrane élastomère', 'd' => "Type de toiture moderne, souple, soudée à chaud. Excellente longévité (25-30 ans) et adaptée aux toits plats commerciaux et institutionnels."],
+    ['t' => 'EPDM / TPO', 'd' => "Matériaux de toiture synthétiques pour toits plats. EPDM (caoutchouc) noir et durable ; TPO (thermoplastique) blanc et réfléchissant pour réduire le coût de climatisation."],
+    ['t' => 'LEED', 'd' => "Leadership in Energy and Environmental Design. Certification internationale de bâtiments écologiques. 4 niveaux : Certifié, Argent, Or, Platine."],
+    ['t' => 'Novoclimat', 'd' => "Programme québécois de certification de maisons à haute performance énergétique. Exigences supérieures au Code et incitatifs financiers pour les acheteurs."],
+    ['t' => 'Plan de garantie GCR', 'd' => "Garantie de Construction Résidentielle. Plan obligatoire pour neuf résidentiel au Québec, couvre vices et défauts pendant 5 ans."],
+    ['t' => 'Lotissement', 'd' => "Division d'un terrain en plusieurs lots constructibles. Nécessite approbation municipale, plan d'arpentage et installation des services (eau, égout, électricité, voirie)."],
+    ['t' => 'EPI', 'd' => "Équipement de protection individuelle. Casque, lunettes, gants, harnais, chaussures de sécurité — exigés sur tout chantier de construction."],
+    ['t' => 'Compagnon CCQ', 'd' => "Travailleur certifié dans un métier de la construction (charpentier, briqueteur, etc.) après avoir complété 1500 à 8000 heures d'apprentissage et l'examen provincial."],
+    ['t' => 'Tirage de joints', 'd' => "Technique de finition consistant à combler et lisser les joints entre panneaux de gypse à l'aide de pâte et de ruban. La norme niveau 5 exige une surface parfaitement lisse, même sous éclairage rasant."],
+    ['t' => 'Solive', 'd' => "Pièce horizontale en bois ou en acier soutenant le plancher ou le plafond, posée perpendiculairement aux poutres porteuses. Espacement standard 16 pouces centre à centre en résidentiel."],
+    ['t' => 'Solage', 'd' => "Fondation périphérique en béton armé située sous le niveau du sol, supportant les murs porteurs d'un bâtiment et transférant les charges au sol stable. Profondeur minimale 1,5 m au QC pour passer sous la ligne de gel."],
+    ['t' => 'Vice caché vs apparent', 'd' => "Un vice caché est un défaut non visible lors de la réception des travaux, rendant l'ouvrage impropre à son usage (article 1726 C.c.Q.). Un vice apparent est observable par un propriétaire diligent et doit être signalé immédiatement."],
+    ['t' => 'Bardage métallique', 'd' => "Revêtement extérieur en tôle d'acier ou d'aluminium, souvent utilisé en construction commerciale ou industrielle au Québec pour sa durabilité et sa résistance aux intempéries. Durée de vie 40-50 ans."],
+    ['t' => 'HRV / ERV', 'd' => "Heat Recovery Ventilator (HRV) ou Energy Recovery Ventilator (ERV) : ventilateur récupérateur de chaleur ou d'énergie. Obligatoire dans toute maison neuve au QC depuis 2022 (norme CSA F326)."],
+];
+$termesRaw = array_map(fn($t) => ['t' => $t['t'], 'd' => str_replace('&nbsp;', ' ', $t['d'])], $termes);
 @endphp
 
 @push('meta')
@@ -71,6 +100,17 @@ echo json_encode([
         ['@type' => 'ListItem', 'position' => 2, 'name' => 'FAQ', 'item' => 'https://kalystrat.ca/faq'],
     ],
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
+{{-- T193-D — Schema.org DefinedTermSet pour le glossaire fusionné (#glossaire ancre) --}}
+<script type="application/ld+json">@php
+$defs = array_map(fn($t) => ['@type' => 'DefinedTerm', 'name' => $t['t'], 'description' => $t['d']], $termesRaw);
+echo json_encode([
+    '@context' => 'https://schema.org',
+    '@type' => 'DefinedTermSet',
+    'name' => 'Glossaire de la construction au Québec',
+    'url' => url('/faq#glossaire'),
+    'hasDefinedTerm' => $defs,
+], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+@endphp</script>
 @endpush
 
 @section('content')
@@ -113,10 +153,35 @@ echo json_encode([
     </div>
 </section>
 
+{{-- T193-D — Glossaire fusionné depuis /glossaire (301 → /faq#glossaire) --}}
+<section id="glossaire" class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Vocabulaire technique</span>
+            <h2 class="ks-h2">Glossaire de la construction au Québec</h2>
+            <p class="ks-lead">Vingt-quatre termes techniques que vous rencontrerez sur un contrat, un devis, un plan ou pendant les rencontres de chantier. Définitions adaptées au contexte québécois et mises à jour avec le Code 2026.</p>
+        </div>
+    </div>
+</section>
+
+<section class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--3col">
+            @foreach($termes as $term)
+            <article class="ks-card ks-card--accent-gold">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Terme</span>
+                <h3 class="ks-card__title">{{ $term['t'] }}</h3>
+                <p class="ks-card__text">{!! $term['d'] !!}</p>
+            </article>
+            @endforeach
+        </div>
+    </div>
+</section>
+
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Une question qui n’apparaît pas ici&nbsp;?</h2>
-        <p>L’équipe Kalystrat répond sous 72 heures ouvrables pour les sujets techniques, commerciaux ou administratifs.</p>
+        <h2>Une question ou un terme qui n'apparaît pas ici&nbsp;?</h2>
+        <p>L'équipe Kalystrat répond sous 72 heures ouvrables pour les sujets techniques, commerciaux ou administratifs.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Nous écrire</a>
     </div>
 </section>
