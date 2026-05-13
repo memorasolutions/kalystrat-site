@@ -44,7 +44,7 @@
   --ks-gold-700: #8C7B4F;          /* AA seulement sur blanc 4.15:1, à utiliser sur fond foncé */
   --ks-gold-900: #6B5C38;          /* 6.54:1 sur blanc — AAA large, AA normal */
   --ks-gold-aaa: #5A4D2E;           /* 8.28:1 sur blanc — AAA NORMAL TEXT garanti (eyebrow fond clair) */
-  --ks-orange-700: #8F3F00;        /* DEPRECATED — orange Construz, à éliminer (charte = navy/gold seulement) */
+  /* T193-cleanup : --ks-orange-700 (#8F3F00) supprimée. Charte 100% navy/gold uniquement. */
   --ks-gray-900: #1a1a1a;
   --ks-gray-700: #4a4a4a;
   --ks-gray-500: #888;
@@ -244,7 +244,7 @@
 }
 
 .ks-card--accent-orange {
-  border-left: 4px solid var(--ks-orange-700);
+  border-left: 4px solid var(--ks-gold-700);
 }
 
 .ks-card--dark {
@@ -278,7 +278,7 @@
 }
 
 .ks-card__title a:hover {
-  color: var(--ks-orange-700);
+  color: var(--ks-gold-700);
 }
 
 .ks-card__meta {
@@ -287,7 +287,7 @@
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--ks-orange-700);
+  color: var(--ks-gold-700);
   margin-bottom: 0.5rem;
 }
 
@@ -839,7 +839,7 @@
   margin: 0 0 clamp(0.75rem, 1.2vw, 1.1rem);
   display: block;
   padding-top: 0.05em;
-  color: var(--ks-gold-700, #8F3F00);
+  color: var(--ks-gold-700, #8C7B4F);
   opacity: 0.95;
   transition: transform 500ms cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -3155,7 +3155,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   width: 56px;
   height: 56px;
   display: block;
-  color: var(--ks-gold-700, #8F3F00);
+  color: var(--ks-gold-700, #8C7B4F);
   flex-shrink: 0;
 }
 .ks-approche__commitment-meta {
@@ -3556,7 +3556,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   font-family: var(--ks-font-display);
   font-size: 1.5rem;
   font-weight: 300;
-  color: var(--ks-gold-700, #8F3F00);
+  color: var(--ks-gold-700, #8C7B4F);
   transition: transform 0.3s ease;
   line-height: 1;
 }
@@ -3626,7 +3626,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--ks-gold-700, #8F3F00);
+  color: var(--ks-gold-700, #8C7B4F);
   margin: 0 0 0.75rem;
   padding-bottom: 0.5rem;
   border-bottom: 1px solid rgba(184,164,114,0.2);
@@ -3648,7 +3648,7 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
 }
 .ks-zones__geo-list a:hover,
 .ks-zones__geo-list a:focus-visible {
-  color: var(--ks-gold-700, #8F3F00);
+  color: var(--ks-gold-700, #8C7B4F);
 }
 
 /* ============================================================
@@ -3871,7 +3871,7 @@ body:has(.ks-page-hero) .main-header.fixed-header .header-upper .logo img {
 .ks-contact-success {
   padding: 16px 20px;
   background: rgba(46, 125, 50, 0.08);
-  border-left: 4px solid #2e7d32;
+  border-left: 4px solid #1B5E20;
   border-radius: 8px;
   color: #1B5E20;
   font-weight: 500;
