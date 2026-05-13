@@ -56,7 +56,7 @@ echo json_encode([
             <span class="ks-eyebrow">Structure du groupe</span>
             <h2 class="ks-h2">Six filiales, six métiers complémentaires</h2>
         </div>
-        <p class="ks-lead">Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l'intégralité de la chaîne de valeur en construction. Chaque filiale est dirigée par un directeur qui relève directement de la présidence, ce qui garantit cohérence stratégique et exécution rigoureuse.</p>
+        <p class="ks-lead">Gestion Kalystrat Inc. opère via six filiales spécialisées qui couvrent l'intégralité de la chaîne de valeur en construction. Chaque filiale est dirigée par un directeur relevant directement de la présidence&nbsp;: une seule chaîne de décision du président jusqu'au chantier.</p>
     </div>
 </section>
 
@@ -124,8 +124,8 @@ echo json_encode([
     <div class="ks-container">
         <div class="ks-section__heading ks-section__heading--left">
             <span class="ks-eyebrow">Avantage concurrentiel</span>
-            <h2 class="ks-h2">Six piliers qui rendent Kalystrat unique</h2>
-            <p class="ks-lead">Notre modèle s'articule autour de six piliers structurels. Ils ne sont pas des promesses marketing&nbsp;: ils sont l'architecture opérationnelle du groupe.</p>
+            <h2 class="ks-h2">Six piliers qui définissent l'architecture du groupe</h2>
+            <p class="ks-lead">Notre modèle s'articule autour de six piliers structurels qui forment l'architecture opérationnelle du groupe&nbsp;: intégration verticale, main-d'œuvre interne, demande captive, synergies, cohérence de marque et gestion centralisée.</p>
         </div>
         <div class="ks-bento ks-bento--3col">
             <article class="ks-card">
@@ -151,7 +151,7 @@ echo json_encode([
             <article class="ks-card">
                 <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">05</span>
                 <h3 class="ks-card__title">Cohérence de marque</h3>
-                <p class="ks-card__text">La convention de dénomination « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires.</p>
+                <p class="ks-card__text">La convention de dénomination « Kalystrat + Spécialité » rend chaque filiale identifiable au premier coup d'œil sur un chantier, un contrat ou une soumission.</p>
             </article>
             <article class="ks-card">
                 <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">06</span>
@@ -174,12 +174,12 @@ echo json_encode([
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">+19&nbsp;%</div>
                 <div class="ks-stat__label">Marché annuel rénovation QC</div>
-                <p class="ks-card__text" style="margin-top:1rem">Volume du marché de la rénovation résidentielle et commerciale au Québec en 2026 (source&nbsp;: APCHQ).</p>
+                <p class="ks-card__text" style="margin-top:1rem">Hausse des dépenses de rénovation résidentielle au Québec, H1 2025 vs H1 2024 (source&nbsp;: APCHQ, mi-année 2025).</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">+35&nbsp;%</div>
                 <div class="ks-stat__label">Mises en chantier 2025 (+23&nbsp;%)</div>
-                <p class="ks-card__text" style="margin-top:1rem">Hausse marquée de la construction résidentielle au Québec (source&nbsp;: SCHL).</p>
+                <p class="ks-card__text" style="margin-top:1rem">Hausse des mises en chantier résidentielles au Québec, H1 2025 vs H1 2024 (source&nbsp;: APCHQ, mi-année 2025).</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">17&nbsp;000</div>
