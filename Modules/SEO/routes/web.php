@@ -42,45 +42,33 @@ Route::middleware('web')->group(function () {
     })->name('llms-full');
 
     Route::get('/sitemap.xml', function () {
-        // S31 Sitemap Kalystrat — architecture SEO/AEO/GEO 2026 complète.
+        // T193 Sitemap Kalystrat — architecture pillar/cluster anti-cannibalisation.
+        // Seules les URLs canoniques 200 sont listées (jamais d'URL redirigée 301).
         $sitemap = Sitemap::create()
             ->add(Url::create('/')->setPriority(1.0)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
             ->add(Url::create('/a-propos')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/expertise')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/equipe')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/equipe/ali-salomon')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
-            ->add(Url::create('/equipe/jacques-jobidon')->setPriority(0.6)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
-            ->add(Url::create('/equipe/perry-wong')->setPriority(0.6)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
-            ->add(Url::create('/partenaires')->setPriority(0.6)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/services')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
             ->add(Url::create('/projets')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/carrieres')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
             ->add(Url::create('/contact')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
             ->add(Url::create('/faq')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
-            ->add(Url::create('/glossaire')->setPriority(0.6)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY))
             ->add(Url::create('/blog')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_WEEKLY))
             ->add(Url::create('/credits')->setPriority(0.3)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
             ->add(Url::create('/politique-confidentialite')->setPriority(0.5)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
             ->add(Url::create('/conditions-utilisation')->setPriority(0.5)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY))
             ->add(Url::create('/politique-cookies')->setPriority(0.3)->setChangeFrequency(Url::CHANGE_FREQUENCY_YEARLY));
 
-        // 6 filiales (depuis FilialeController::FILIALES, source unique de vérité)
+        // 6 filiales (pillar + cluster, depuis FilialeController::FILIALES, source unique de vérité)
         $sitemap->add(Url::create('/filiales')->setPriority(0.9)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         foreach (array_keys(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES) as $slug) {
             $sitemap->add(Url::create('/filiales/'.$slug)->setPriority(0.85)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
 
-        // 9 zones desservies
+        // Zones desservies — Capitale-Nationale uniquement (Kalystrat = ville de Québec, pas province)
         $sitemap->add(Url::create('/zones-desservies')->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-        foreach (['quebec', 'levis', 'sainte-foy', 'beauport', 'sillery', 'trois-rivieres', 'saguenay', 'montreal', 'laval'] as $slug) {
+        foreach (['quebec', 'levis', 'sainte-foy', 'beauport', 'sillery'] as $slug) {
             $sitemap->add(Url::create('/zones-desservies/'.$slug)->setPriority(0.7)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
         }
-
-        // 5 secteurs verticaux
-        $sitemap->add(Url::create('/secteurs')->setPriority(0.8)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-        foreach (['residentiel', 'commercial', 'institutionnel', 'industriel', 'municipal'] as $slug) {
-            $sitemap->add(Url::create('/secteurs/'.$slug)->setPriority(0.75)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
-        }
+        // 1 quartier premium Vieux-Québec
+        $sitemap->add(Url::create('/zones-desservies/quebec/vieux-quebec')->setPriority(0.65)->setChangeFrequency(Url::CHANGE_FREQUENCY_MONTHLY));
 
         // Articles blog (PageController::ARTICLES, source unique)
         foreach (array_keys(\Modules\Frontend\Http\Controllers\PageController::ARTICLES) as $slug) {
