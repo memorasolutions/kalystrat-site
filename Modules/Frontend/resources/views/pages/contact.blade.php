@@ -138,7 +138,7 @@
                 <div class="ks-contact-card">
                     <span class="ks-eyebrow">Bureau</span>
                     <p class="ks-contact-card__address">Québec, QC, Canada</p>
-                    <p class="ks-contact-card__meta">Siège social Capitale-Nationale. Couverture provinciale (<a href="{{ route('zones.index') }}">9 régions desservies</a>).</p>
+                    <p class="ks-contact-card__meta">Siège social Capitale-Nationale (<a href="{{ route('zones.index') }}">5 villes desservies</a>&nbsp;: Québec, Lévis, Sainte-Foy, Beauport, Sillery).</p>
                 </div>
             </aside>
 
