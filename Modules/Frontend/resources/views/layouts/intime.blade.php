@@ -104,49 +104,38 @@ if ('serviceWorker' in navigator) {
 							</div>
 							
 							<div class="navbar-collapse collapse clearfix" id="navbarSupportedContent">
-								<ul class="navigation clearfix">
-									<li><a href="/">Accueil</a></li>
-									<li class="dropdown"><a href="/a-propos">À propos</a>
-										<ul>
-											<li><a href="/a-propos">Notre vision</a></li>
-											<li><a href="/expertise">Notre expertise</a></li>
-											<li><a href="/equipe">Équipe et conseil</a></li>
-											<li><a href="/partenaires">Partenaires</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="/filiales">Filiales</a>
-										<ul>
-											<li><a href="/filiales">Vue d’ensemble</a></li>
-											<li><a href="/filiales/fondations">Fondations</a></li>
-											<li><a href="/filiales/structure">Structure</a></li>
-											<li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
-											<li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
-											<li><a href="/filiales/immobilier">Immobilier</a></li>
-											<li><a href="/filiales/placement-construction">Placement construction</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="/services">Services</a>
-										<ul>
-											<li><a href="/services">Tous nos services</a></li>
-											<li><a href="/secteurs">Secteurs desservis</a></li>
-											<li><a href="/zones-desservies">Zones desservies</a></li>
-											<li><a href="/projets">Projets</a></li>
-										</ul>
-									</li>
-									<li class="dropdown"><a href="/blog">Ressources</a>
-										<ul>
-											<li><a href="/blog">Blog</a></li>
-											<li><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Multilogements 2026</a></li>
-											<li><a href="/blog/code-construction-quebec-2026-changements">Code construction 2026</a></li>
-											<li><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Choisir un entrepreneur</a></li>
-											<li><a href="/faq">FAQ</a></li>
-											<li><a href="/glossaire">Glossaire</a></li>
-											<li><a href="/carrieres">Carrières</a></li>
-										</ul>
-									</li>
-									<li><a href="/contact">Contact</a></li>
-								</ul>
-							</div>
+									{{-- T193-E — Nav simplifiée 5 entrées (anti-cannibalisation T193) :
+									     Accueil | À propos | Filiales ▾ | Projets | Blog ▾ | Contact
+									     /services /expertise /secteurs /equipe /partenaires /carrieres /glossaire
+									     fusionnés dans /a-propos et /filiales via 301. --}}
+									<ul class="navigation clearfix">
+										<li><a href="/">Accueil</a></li>
+										<li><a href="/a-propos">À propos</a></li>
+										<li class="dropdown"><a href="/filiales">Filiales</a>
+											<ul>
+												<li><a href="/filiales">Vue d’ensemble</a></li>
+												<li><a href="/filiales/fondations">Fondations</a></li>
+												<li><a href="/filiales/structure">Structure</a></li>
+												<li><a href="/filiales/toiture-enveloppe">Toiture et enveloppe</a></li>
+												<li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
+												<li><a href="/filiales/immobilier">Immobilier</a></li>
+												<li><a href="/filiales/placement-construction">Placement construction</a></li>
+												<li><a href="/zones-desservies">Zones desservies</a></li>
+											</ul>
+										</li>
+										<li><a href="/projets">Projets</a></li>
+										<li class="dropdown"><a href="/blog">Blog</a>
+											<ul>
+												<li><a href="/blog">Tous les articles</a></li>
+												<li><a href="/blog/pourquoi-construire-multi-logements-quebec-2026">Multilogements 2026</a></li>
+												<li><a href="/blog/code-construction-quebec-2026-changements">Code construction 2026</a></li>
+												<li><a href="/blog/comment-choisir-entrepreneur-construction-qc-2026">Choisir un entrepreneur</a></li>
+												<li><a href="/faq">Foire aux questions</a></li>
+											</ul>
+										</li>
+										<li><a href="/contact">Contact</a></li>
+									</ul>
+								</div>
 							
 						</nav>
 						<!-- Main Menu End-->
