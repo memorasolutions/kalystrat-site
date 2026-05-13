@@ -4459,3 +4459,31 @@ body.mobile-menu-visible .ks-tabbar {
     width: clamp(160px, 44vw, 190px) !important;
   }
 }
+
+/* ============================================================
+   T189 — Fix vrais positifs WCAG AAA (post-audit MCP /home)
+   1. Focus-visible explicite : logo header + premier lien nav
+   2. Target size AAA ≥24px : FAQ <summary>, footer links sm
+   ============================================================ */
+.main-header .logo a:focus-visible,
+.sticky-header .logo a:focus-visible,
+.main-header .navigation > li > a:focus-visible {
+  outline: 3px solid var(--ks-gold-500);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* FAQ summary target size AAA min 24px height (WCAG 2.5.8) */
+.ks-faq__question {
+  min-height: 44px;
+  padding-block: 12px;
+  display: flex;
+  align-items: center;
+}
+/* Footer small links (MEMORA, politique-confidentialite) target size ≥24px */
+.ks-footer-credits a,
+.ks-footer-bottom a {
+  display: inline-block;
+  min-height: 24px;
+  padding-block: 4px;
+  line-height: 1.5;
+}
