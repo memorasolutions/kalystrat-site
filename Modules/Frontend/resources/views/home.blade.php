@@ -391,9 +391,9 @@ $services = [
             </article>
 
             <article class="ks-defi__kpi ks-defi__kpi--compagnons">
-                <span class="ks-eyebrow">Compagnons CCQ</span>
-                <span class="ks-defi__num"><span data-counter data-target="100">0</span><sup>+</sup></span>
-                <p class="ks-defi__caption">Compagnons certifiés sur nos chantiers, et en croissance continue.</p>
+                <span class="ks-eyebrow">Main-d'œuvre certifiée</span>
+                <span class="ks-defi__num">CCQ</span>
+                <p class="ks-defi__caption">Bassin de compagnons certifiés mobilisables via Kalystrat Placement construction, en croissance.</p>
                 {{-- T144 — Option D : Trajectoire « growth journey » (path courbe + dep/arr cercles + flèche pointillée) --}}
                 <svg class="ks-defi__journey" aria-hidden="true" viewBox="0 0 240 80" preserveAspectRatio="xMidYMid meet">
                     {{-- Courbe ascendante du point de départ au point d'arrivée --}}
