@@ -222,9 +222,9 @@ if ('serviceWorker' in navigator) {
                             <summary class="ks-mobile-menu__link">À propos <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
                             <ul class="ks-mobile-menu__sub">
                                 <li><a href="/a-propos">Notre vision</a></li>
-                                <li><a href="/expertise">Notre expertise</a></li>
-                                <li><a href="/equipe">Équipe et conseil</a></li>
-                                <li><a href="/partenaires">Partenaires</a></li>
+                                <li><a href="/a-propos#equipe">Équipe et conseil</a></li>
+                                <li><a href="/a-propos#partenaires">Partenaires</a></li>
+                                <li><a href="/a-propos#carrieres">Carrières</a></li>
                             </ul>
                         </details>
                     </li>
@@ -239,28 +239,18 @@ if ('serviceWorker' in navigator) {
                                 <li><a href="/filiales/finition-interieure">Finition intérieure</a></li>
                                 <li><a href="/filiales/immobilier">Immobilier</a></li>
                                 <li><a href="/filiales/placement-construction">Placement construction</a></li>
-                            </ul>
-                        </details>
-                    </li>
-                    <li class="ks-mobile-menu__group">
-                        <details class="ks-mobile-menu__acc">
-                            <summary class="ks-mobile-menu__link">Services <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
-                            <ul class="ks-mobile-menu__sub">
-                                <li><a href="/services">Tous nos services</a></li>
-                                <li><a href="/secteurs">Secteurs desservis</a></li>
                                 <li><a href="/zones-desservies">Zones desservies</a></li>
-                                <li><a href="/projets">Projets</a></li>
                             </ul>
                         </details>
                     </li>
+                    <li><a href="/projets" class="ks-mobile-menu__link">Projets</a></li>
                     <li class="ks-mobile-menu__group">
                         <details class="ks-mobile-menu__acc">
                             <summary class="ks-mobile-menu__link">Ressources <span class="ks-mobile-menu__chev" aria-hidden="true"></span></summary>
                             <ul class="ks-mobile-menu__sub">
                                 <li><a href="/blog">Blog</a></li>
-                                <li><a href="/faq">FAQ</a></li>
-                                <li><a href="/glossaire">Glossaire</a></li>
-                                <li><a href="/carrieres">Carrières</a></li>
+                                <li><a href="/faq">Foire aux questions</a></li>
+                                <li><a href="/faq#glossaire">Glossaire</a></li>
                             </ul>
                         </details>
                     </li>
@@ -350,8 +340,8 @@ if ('serviceWorker' in navigator) {
 						<ul class="ks-footer__links">
 							<li><a href="{{ route('apropos') }}">À propos</a></li>
 							<li><a href="{{ route('filiales.index') }}">Six filiales</a></li>
-							<li><a href="{{ route('equipe') }}">Équipe</a></li>
-							<li><a href="{{ route('carrieres') }}">Carrières</a></li>
+							<li><a href="{{ route('apropos') }}#equipe">Équipe</a></li>
+							<li><a href="{{ route('apropos') }}#carrieres">Carrières</a></li>
 							<li><a href="{{ route('contact') }}">Contact</a></li>
 						</ul>
 					</nav>
@@ -359,12 +349,11 @@ if ('serviceWorker' in navigator) {
 					<nav class="ks-footer__col" aria-labelledby="ks-footer-nav-ressources">
 						<h3 id="ks-footer-nav-ressources" class="ks-footer__col-title">Ressources</h3>
 						<ul class="ks-footer__links">
-							<li><a href="{{ route('expertise') }}">Expertise Code QC 2026</a></li>
+							<li><a href="{{ route('projets') }}">Projets</a></li>
 							<li><a href="{{ route('blog.index') }}">Blog</a></li>
-							<li><a href="{{ route('faq') }}">FAQ</a></li>
-							<li><a href="{{ route('glossaire') }}">Glossaire</a></li>
+							<li><a href="{{ route('faq') }}">Foire aux questions</a></li>
+							<li><a href="{{ route('faq') }}#glossaire">Glossaire</a></li>
 							<li><a href="{{ route('zones.index') }}">Zones desservies</a></li>
-							<li><a href="{{ route('secteurs.index') }}">Secteurs</a></li>
 						</ul>
 					</nav>
 
@@ -377,7 +366,7 @@ if ('serviceWorker' in navigator) {
 			<div class="ks-footer__container ks-footer__legal-inner">
 				<div class="ks-footer__copyright">&copy; {{ date('Y') }} Gestion Kalystrat Inc. — Tous droits réservés.</div>
 				<ul class="ks-footer__legal-links">
-					<li><a href="{{ url('/politique-confidentialite') }}">Politique Loi 25</a></li>
+					<li><a href="{{ url('/politique-confidentialite') }}">Politique de confidentialité</a></li>
 					<li><a href="/sitemap.xml">Plan du site</a></li>
 				</ul>
 				<div class="ks-footer__signature">Site par <a href="https://memora.ca" rel="noopener external" target="_blank">MEMORA</a></div>
