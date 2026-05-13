@@ -78,10 +78,124 @@ echo json_encode([
     </div>
 </section>
 
+{{-- T193-C — Chaîne de valeur intégrée (plan d'affaires Ali) --}}
+<section id="chaine-valeur" class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Intégration verticale</span>
+            <h2 class="ks-h2">La chaîne de valeur, sous un seul groupe</h2>
+            <p class="ks-lead">De l'acquisition du terrain à la remise des clés, chaque étape s'enchaîne sans rupture grâce à six filiales spécialisées qui se relaient sur le même chantier.</p>
+        </div>
+        <ol class="ks-bento ks-bento--6col" style="counter-reset:step;list-style:none;padding:0">
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 01</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Immobilier</h3>
+                <p class="ks-card__text">Acquisition du terrain, étude de faisabilité, conception du projet.</p>
+            </li>
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 02</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Fondations</h3>
+                <p class="ks-card__text">Excavation, coffrage, coulée du béton, imperméabilisation.</p>
+            </li>
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 03</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Structure</h3>
+                <p class="ks-card__text">Charpente bois, acier ou hybride. Assemblage de l'ossature primaire.</p>
+            </li>
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 04</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Toiture et enveloppe</h3>
+                <p class="ks-card__text">Étanchéité, isolation, revêtement extérieur. Protège le bâtiment.</p>
+            </li>
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 05</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Finition intérieure</h3>
+                <p class="ks-card__text">Gypse, peinture, planchers, ébénisterie sur mesure. Complète les espaces.</p>
+            </li>
+            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Transversal</span>
+                <h3 class="ks-card__title" style="font-size:1.125rem">Placement construction</h3>
+                <p class="ks-card__text">Main-d'œuvre qualifiée CCQ fournie à chaque étape. Disponibilité garantie.</p>
+            </li>
+        </ol>
+    </div>
+</section>
+
+{{-- T193-C — Six piliers de l'avantage concurrentiel (plan d'affaires Ali) --}}
+<section id="piliers" class="ks-section ks-section--alt">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Avantage concurrentiel</span>
+            <h2 class="ks-h2">Six piliers qui rendent Kalystrat unique</h2>
+            <p class="ks-lead">Notre modèle s'articule autour de six piliers structurels. Ils ne sont pas des promesses marketing&nbsp;: ils sont l'architecture opérationnelle du groupe.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col">
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">01</span>
+                <h3 class="ks-card__title">Intégration verticale</h3>
+                <p class="ks-card__text">De l'excavation à la finition finale, chaque étape est exécutée en interne. Marges sous-traitants éliminées, délais de coordination réduits.</p>
+            </article>
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">02</span>
+                <h3 class="ks-card__title">Main-d'œuvre captive</h3>
+                <p class="ks-card__text">Kalystrat Placement Construction fournit la main-d'œuvre à toutes les filiales. Disponibilité garantie, cohérence de formation, qualité d'exécution.</p>
+            </article>
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">03</span>
+                <h3 class="ks-card__title">Demande captive</h3>
+                <p class="ks-card__text">Kalystrat Immobilier développe ses propres projets, ce qui génère un flux de travail constant pour les cinq autres filiales du groupe.</p>
+            </article>
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">04</span>
+                <h3 class="ks-card__title">Synergies opérationnelles</h3>
+                <p class="ks-card__text">La chaîne complète fonctionne en boucle&nbsp;: Immobilier développe, Fondations excave, Structure charpente, Toiture protège, Finition complète, Placement fournit.</p>
+            </article>
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">05</span>
+                <h3 class="ks-card__title">Cohérence de marque</h3>
+                <p class="ks-card__text">La convention de dénomination « Kalystrat + Spécialité » construit la reconnaissance et inspire confiance auprès des clients et partenaires.</p>
+            </article>
+            <article class="ks-card">
+                <span class="ks-page-section__num" aria-hidden="true" style="font-size:2.5rem">06</span>
+                <h3 class="ks-card__title">Gestion centralisée</h3>
+                <p class="ks-card__text">Comptabilité, ressources humaines, juridique, marketing et TI sont centralisés au niveau de la holding. Frais généraux des filiales réduits.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
+{{-- T193-C — Marché Québécois 2026 (plan d'affaires Ali, données réelles) --}}
+<section id="marche" class="ks-section">
+    <div class="ks-container">
+        <div class="ks-section__heading ks-section__heading--left">
+            <span class="ks-eyebrow">Marché 2026 en chiffres</span>
+            <h2 class="ks-h2">Une demande structurelle au Québec</h2>
+            <p class="ks-lead">Le marché québécois de la construction et de la rénovation est en croissance soutenue. Pénurie de main-d'œuvre, demande record en habitation, renouvellement du parc bâti.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col">
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">19&nbsp;G$</div>
+                <div class="ks-stat__label">Marché annuel rénovation QC</div>
+                <p class="ks-card__text" style="margin-top:1rem">Volume du marché de la rénovation résidentielle et commerciale au Québec en 2026 (source&nbsp;: APCHQ).</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">59&nbsp;864</div>
+                <div class="ks-stat__label">Mises en chantier 2025 (+23&nbsp;%)</div>
+                <p class="ks-card__text" style="margin-top:1rem">Hausse marquée de la construction résidentielle au Québec (source&nbsp;: SCHL).</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold">
+                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">17&nbsp;000</div>
+                <div class="ks-stat__label">Travailleurs/an recherchés QC</div>
+                <p class="ks-card__text" style="margin-top:1rem">Besoin annuel en main-d'œuvre qualifiée selon la CCQ. Kalystrat Placement Construction y répond.</p>
+            </article>
+        </div>
+    </div>
+</section>
+
 <section class="ks-cta-section">
     <div class="ks-container">
-        <h2>Une porte d’entrée unique pour six métiers</h2>
-        <p>Discutez de votre projet avec un gestionnaire de votre dossier qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
+        <h2>Une porte d'entrée unique pour six métiers</h2>
+        <p>Discutez de votre projet avec un chargé de dossier qui pilote la totalité des corps de métier en s'appuyant sur les six directions de filiales.</p>
         <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
     </div>
 </section>
