@@ -8,7 +8,7 @@
             </figure>
             <div>
                 <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
-                <h2 class="ks-h2" style="margin-top:0.5rem">La charpente est le squelette qui soutient toute la performance</h2>
+                <h2 class="ks-h2" style="margin-top:0.5rem">Charpente certifiée : portées optimisées et Code 2026 garanti</h2>
                 <p class="ks-lead">Le choix bois, acier ou hybride n'est pas une préférence&nbsp;: c'est une décision technique qui détermine portée, sécurité incendie et performance énergétique. Au Québec, la neige (60 à 90&nbsp;kg/m²) et les vents dominants imposent des marges de calcul strictes.</p>
                 <p class="ks-card__text">Chez Kalystrat Structure, chaque projet débute par une étude structurale rigoureuse selon le Code de construction du Québec — Chapitre I, Bâtiment. Matériaux certifiés (épinette-sapin-pin de qualité #2+, acier ASTM), calculs ingénieur sur projets &gt; 600&nbsp;m².</p>
             </div>

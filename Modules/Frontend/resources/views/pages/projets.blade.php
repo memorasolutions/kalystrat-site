@@ -58,8 +58,8 @@
             <span class="ks-page-section__num" aria-hidden="true">02</span>
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Études de cas type</span>
-                <h2 class="ks-h2">Défi, solution, résultats mesurés</h2>
-                <p class="ks-lead">Trois scénarios représentatifs des projets que Kalystrat orchestre. Format adopté dès le premier projet livré pour documenter la performance opérationnelle du groupe.</p>
+                <h2 class="ks-h2">Défi, solution, performance cible</h2>
+                <p class="ks-lead">Trois scénarios représentatifs des mandats que Kalystrat orchestre. Les chiffres présentés correspondent aux objectifs de performance du modèle intégré, validés sur chaque chantier livré. Le format sera enrichi des résultats réels documentés au fur et à mesure des livraisons.</p>
             </div>
         </div>
         <div class="ks-bento ks-bento--2col ks-fade-in" style="margin-bottom:2rem">
