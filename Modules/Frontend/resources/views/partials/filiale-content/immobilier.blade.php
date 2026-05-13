@@ -1,40 +1,96 @@
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>Le bras développement de Kalystrat</h2>
-    <p>Kalystrat Immobilier Inc. agit comme le moteur stratégique du groupe Kalystrat en matière de développement immobilier. Sa mission va bien au-delà de la simple construction : elle consiste à créer une demande captive et continue pour l’ensemble des cinq autres filiales du groupe. Chaque projet résidentiel lancé - qu’il s’agisse d’un duplex, d’un triplex ou d’un immeuble de 12 logements - déclenche une chaîne intégrée de services internes : conception architecturale, génie civil, finition intérieure, gestion locative et maintenance technique.</p>
-    <p>Ce modèle <strong>en étoile</strong>, centré sur l’immobilier comme noyau, confère un avantage concurrentiel majeur face aux promoteurs externes. Grâce à la maîtrise verticale de la chaîne de valeur, Kalystrat Immobilier assure une vitesse d’exécution accrue, une cohérence de qualité sur l’ensemble des phases, et une coordination fluide entre les expertises internes. Résultat : des projets livrés plus rapidement, avec moins de retards, et un contrôle total sur les coûts et les normes. Cette synergie interne transforme chaque maison ou immeuble en un levier de croissance pour tout le groupe.</p>
-  </div>
+{{-- T198-D5 — Refonte design 2026 : Hero magazine + Timeline + 3 contraintes + Trust --}}
+
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--split-photo ks-fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px, 3vw, 48px);align-items:center">
+            <figure style="margin:0;overflow:hidden;border-radius:var(--ks-radius-lg);box-shadow:var(--ks-shadow-card)">
+                <img src="/intime/images/filiales/immobilier-method.webp" alt="Immeuble résidentiel multilogements moderne, façade contemporaine" loading="lazy" width="940" height="650" style="width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:940/650">
+            </figure>
+            <div>
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
+                <h2 class="ks-h2" style="margin-top:0.5rem">Le bras développement qui crée la demande captive du groupe</h2>
+                <p class="ks-lead">La région de Québec fait face à une pénurie persistante de logements neufs. Le marché de la rénovation représente 19 G$ selon l'APCHQ. La demande multilogements explose, portée par l'urbanisation et les politiques de densification.</p>
+                <p class="ks-card__text">Kalystrat Immobilier privilégie la densification urbaine, revitalise les quartiers sous-utilisés et développe des multilogements de qualité conçus pour durer. Chaque projet lancé déclenche une chaîne intégrée pour les cinq autres filiales&nbsp;: fondations, structure, toiture, finition, placement.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Marché immobilier québécois 2026</h2>
-    <p>En 2026, la région de Québec fait face à une <strong>pénurie persistante de logements neufs</strong>, particulièrement dans la Capitale-Nationale et la rive-sud immédiate. La demande pour les immeubles de plus de quatre logements explose, portée par l’urbanisation, le vieillissement de la population et les politiques publiques favorisant la densification. Les incitatifs fédéraux - notamment ceux liés au logement abordable et aux projets à densité élevée - renforcent cette tendance, tout en soulignant les défis d’abordabilité qui freinent l’accès à la propriété pour de nombreux ménages.</p>
-    <p>Kalystrat Immobilier répond à ce contexte avec une stratégie claire : privilégier la <strong>densification urbaine</strong>, revitaliser les quartiers sous-utilisés et développer des multilogements de qualité, conçus pour durer. Plutôt que de se disperser sur des projets unifamiliaux périphériques, nous concentrons nos efforts là où la demande est la plus forte et la plus durable. Cette approche nous permet non seulement de capter les subventions gouvernementales pertinentes, mais aussi de contribuer activement à la résilience et à la vitalité des communautés urbaines québécoises.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Notre méthode</span>
+            <h2 class="ks-h2">Cinq étapes du terrain à la livraison</h2>
+            <p class="ks-lead">Acquisition, conception, construction, commercialisation&nbsp;: pilotage intégré pour maximiser rendement et qualité.</p>
+        </div>
+
+        <ol class="ks-timeline ks-fade-in" style="list-style:none;padding:0;margin-top:clamp(32px, 4vw, 56px);display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:clamp(16px, 1.6vw, 24px);counter-reset:step">
+            @php
+            $etapes = [
+                ['titre' => 'Acquisition terrain', 'desc' => 'Étude de marché, zonage, géotechnique. Cibles 4-12 unités dans Capitale-Nationale.'],
+                ['titre' => 'Montage financier', 'desc' => 'Subventions SCHL, programme rénovation, prêts construction, période grâce 2 ans.'],
+                ['titre' => 'Construction intégrée', 'desc' => 'Exécution par les 5 filiales sœurs. Coordination centralisée, calendrier maîtrisé.'],
+                ['titre' => 'Commercialisation', 'desc' => 'Vente unités neuves ou constitution portefeuille locatif. Marketing premium.'],
+                ['titre' => 'Livraison et suivi', 'desc' => 'Inspection finale, transfert, garantie GCR, suivi locataires ou propriétaires.'],
+            ];
+            @endphp
+            @foreach($etapes as $i => $etape)
+            <li style="position:relative;padding:clamp(20px, 2.4vw, 28px);background:var(--ks-white);border-radius:var(--ks-radius-lg);border-top:3px solid var(--ks-gold-500);box-shadow:var(--ks-shadow-card)">
+                <div style="font-size:clamp(2rem, 4vw, 2.75rem);font-weight:800;color:var(--ks-gold-aaa);line-height:1;letter-spacing:-0.02em">{{ str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) }}</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem;margin-bottom:0.5rem">{{ $etape['titre'] }}</h3>
+                <p class="ks-card__text" style="font-size:0.9375rem">{!! $etape['desc'] !!}</p>
+            </li>
+            @endforeach
+        </ol>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>Notre méthode d’acquisition</h2>
-    <h3 style="margin-top:25px">Veille de marché</h3>
-    <p>Nous analysons en continu les tendances de zonage, la démographie locale, la qualité des sols et la dynamique de quartier pour identifier les opportunités à fort potentiel.</p>
-    <h3 style="margin-top:25px">Évaluation et due diligence</h3>
-    <p>Chaque site potentiel fait l’objet d’une <strong>étude environnementale Phase I</strong>, d’une évaluation géotechnique et d’une vérification rigoureuse des titres de propriété au registre foncier.</p>
-    <h3 style="margin-top:25px">Montage financier</h3>
-    <p>Nous structurons un financement sur mesure combinant capital propre, dettes bancaires et partenariats avec des investisseurs qualifiés, toujours aligné sur la rentabilité du projet et le calendrier d’exécution.</p>
-    <h3 style="margin-top:25px">Permis et zonage municipal</h3>
-    <p>Nos équipes gèrent activement les démarches auprès des municipalités pour obtenir les autorisations nécessaires, en anticipant les exigences réglementaires liées à la densité, au stationnement et à l’aménagement.</p>
-    <h3 style="margin-top:25px">Lancement de la construction</h3>
-    <p>Dès l’obtention des permis, nous déclenchons la phase de construction en coordination étroite avec les autres filiales du groupe, assurant une transition fluide et efficace de la conception à l’exécution.</p>
-  </div>
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Marché immobilier 2026</span>
+            <h2 class="ks-h2">Trois chiffres qui structurent la stratégie</h2>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">19 G$</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Marché rénovation QC</h3>
+                <p class="ks-card__text">Estimation APCHQ 2026. Rénovation résidentielle + multilogements + commercial. Croissance soutenue.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">4-12</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Unités par projet</h3>
+                <p class="ks-card__text">Focus multilogements. Densification urbaine&nbsp;: créneau idéal pour incitatifs SCHL et programmes provinciaux.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">6</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Filiales en synergie</h3>
+                <p class="ks-card__text">Demande captive interne&nbsp;: chaque projet alimente fondations, structure, toiture, finition, placement.</p>
+            </article>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Constitution d’un portefeuille locatif durable</h2>
-    <p>Kalystrat Immobilier adopte une stratégie de <em>buy-and-hold</em> (acquisition et conservation à long terme) ciblant principalement les immeubles multilogements. Plutôt que de réaliser des profits à court terme via des reventes rapides, nous bâtissons un portefeuille locatif à long terme, géré entièrement en interne par notre filiale dédiée. Cette approche assure un contrôle total sur la qualité des services offerts aux locataires et la pérennité des actifs.</p>
-    <p>Les loyers sont indexés conformément aux balises établies par le <strong>Tribunal administratif du logement</strong>, garantissant transparence et équité. Nous intégrons systématiquement les programmes gouvernementaux comme RénoClimat pour améliorer l’efficacité énergétique de nos bâtiments, tout en optimisant la fiscalité via des mécanismes tels que les prêts garantis par la SCHL, les REER autogérés et la capitalisation des dépenses en améliorations majeures.</p>
-    <p>Enfin, nous respectons scrupuleusement la <strong>Loi 25</strong> sur la protection des renseignements personnels, assurant la confidentialité et la sécurité des données de nos locataires. Ce cadre rigoureux transforme chaque immeuble en un actif locatif rentable, éthique et durable.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Garanties et accompagnement</span>
+            <h2 class="ks-h2">Programmes et garanties bonifiés</h2>
+            <p class="ks-lead">Acheteurs propriétés neuves, locataires, investisseurs immobiliers&nbsp;: chaque profil bénéficie de garanties solides et d'un accompagnement personnalisé.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">GCR</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Plan de garantie résidentielle obligatoire neufs Québec</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">SCHL</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Programmes prêt construction logements locatifs (taux préférentiels)</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">APCHQ</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Membre Association professionnelle des constructeurs d'habitations</p>
+            </article>
+        </div>
+    </div>
 </section>

@@ -1,32 +1,96 @@
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>Maîtriser l’ossature de votre projet</h2>
-    <p>La charpente constitue le squelette de tout bâtiment, qu’il soit résidentiel ou commercial léger. Chez Kalystrat Structure Inc., nous considérons que choisir la bonne ossature n’est pas une simple question de préférence, mais une décision technique fondamentale qui influence la durabilité, la sécurité et la performance énergétique de la construction. Au Québec, les exigences du Code de construction - Chapitre I, Bâtiment, imposent des normes strictes en matière de résistance aux charges environnementales, notamment la neige (variant de 60 à 90 kg/m² selon la région) et les vents dominants. C’est pourquoi nous travaillons exclusivement avec des matériaux certifiés : bois d’épinette-sapin-pin (ESP ou SPF) de qualité #2 et mieux, conforme aux normes du Conseil canadien du bois, et acier structural répondant aux spécifications ASTM. Le choix entre bois, acier ou une solution hybride dépend de plusieurs facteurs : portée souhaitée, type d’occupation, contraintes budgétaires et calendrier de réalisation. Une analyse rigoureuse des charges statiques et dynamiques permet d’optimiser la structure tout en respectant les marges de sécurité requises. Chez Kalystrat, chaque projet débute par une étude structurale approfondie, garantissant que l’ossature supportera non seulement les charges de service, mais aussi les imprévus climatiques propres à notre environnement nordique.</p>
-  </div>
+{{-- T198-D2 — Refonte design 2026 : Hero magazine + Timeline + 3 contraintes + Trust --}}
+
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--split-photo ks-fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px, 3vw, 48px);align-items:center">
+            <figure style="margin:0;overflow:hidden;border-radius:var(--ks-radius-lg);box-shadow:var(--ks-shadow-card)">
+                <img src="/intime/images/filiales/structure-method.webp" alt="Charpente bois en cours d'assemblage, poutres et fermes de toit visibles" loading="lazy" width="940" height="650" style="width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:940/650">
+            </figure>
+            <div>
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
+                <h2 class="ks-h2" style="margin-top:0.5rem">La charpente est le squelette qui soutient toute la performance</h2>
+                <p class="ks-lead">Le choix bois, acier ou hybride n'est pas une préférence&nbsp;: c'est une décision technique qui détermine portée, sécurité incendie et performance énergétique. Au Québec, la neige (60 à 90&nbsp;kg/m²) et les vents dominants imposent des marges de calcul strictes.</p>
+                <p class="ks-card__text">Chez Kalystrat Structure, chaque projet débute par une étude structurale rigoureuse selon le Code de construction du Québec — Chapitre I, Bâtiment. Matériaux certifiés (épinette-sapin-pin de qualité #2+, acier ASTM), calculs ingénieur sur projets &gt; 600&nbsp;m².</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Quel système de charpente choisir ?</h2>
-    <h3 style="margin-top:25px">Bois d’œuvre</h3>
-    <p>Idéal pour les projets résidentiels unifamiliaux ou multifamiliaux de petite échelle, le bois d’œuvre offre un excellent rapport coût-efficacité, une rapidité d’installation et une empreinte carbone réduite. Sa légèreté facilite la manutention sur site, tandis que sa flexibilité permet des ajustements rapides en chantier.</p>
-    <h3 style="margin-top:25px">Acier</h3>
-    <p>Pour les bâtiments commerciaux légers, les entrepôts ou les structures nécessitant de grandes portées sans appuis intermédiaires, l’acier s’impose. Incombustible, non susceptible aux insectes et à la pourriture, il assure une longévité exceptionnelle. Son module d’élasticité élevé permet de concevoir des espaces ouverts modernes, tout en répondant aux normes anti-incendie les plus strictes.</p>
-    <h3 style="margin-top:25px">Hybride bois-acier</h3>
-    <p>Combinaison stratégique des deux matériaux, le système hybride gagne en popularité au Québec, particulièrement pour les projets de logements multifamiliaux ou les bâtiments mixtes. Il permet d’exploiter la légèreté et l’isolation thermique du bois pour les murs, tout en tirant parti de la résistance et de la portée de l’acier pour les planchers ou les toitures. Cette approche modulaire s’inscrit parfaitement dans les tendances de construction 2026, où performance, rapidité et durabilité sont au cœur des priorités.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Notre méthode</span>
+            <h2 class="ks-h2">Cinq étapes pour une charpente performante</h2>
+            <p class="ks-lead">De l'étude initiale à l'assemblage final, chaque chantier suit un protocole calibré pour la précision et la rapidité.</p>
+        </div>
+
+        <ol class="ks-timeline ks-fade-in" style="list-style:none;padding:0;margin-top:clamp(32px, 4vw, 56px);display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:clamp(16px, 1.6vw, 24px);counter-reset:step">
+            @php
+            $etapes = [
+                ['titre' => 'Étude structurale', 'desc' => 'Analyse des charges, neige, vent. Choix du système&nbsp;: bois, acier ou hybride.'],
+                ['titre' => 'Conception ingénieur', 'desc' => 'Plans techniques certifiés. Justification calculs pour projets &gt; 600&nbsp;m².'],
+                ['titre' => 'Préfabrication', 'desc' => 'Fermes, poutrelles, panneaux muraux assemblés en atelier contrôlé.'],
+                ['titre' => 'Assemblage', 'desc' => 'Levage et assemblage sur site. Gain calendrier 30-40&nbsp;% vs charpente traditionnelle.'],
+                ['titre' => 'Inspection finale', 'desc' => 'Vérification dimensionnelle, ancrages, conformité plans. Documentation complète.'],
+            ];
+            @endphp
+            @foreach($etapes as $i => $etape)
+            <li style="position:relative;padding:clamp(20px, 2.4vw, 28px);background:var(--ks-white);border-radius:var(--ks-radius-lg);border-top:3px solid var(--ks-gold-500);box-shadow:var(--ks-shadow-card)">
+                <div style="font-size:clamp(2rem, 4vw, 2.75rem);font-weight:800;color:var(--ks-gold-aaa);line-height:1;letter-spacing:-0.02em">{{ str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) }}</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem;margin-bottom:0.5rem">{{ $etape['titre'] }}</h3>
+                <p class="ks-card__text" style="font-size:0.9375rem">{!! $etape['desc'] !!}</p>
+            </li>
+            @endforeach
+        </ol>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>Préfabrication et hors-site</h2>
-    <p>La préfabrication hors-site est une tendance majeure en construction au Québec en 2026, et Kalystrat Structure Inc. en a fait une pierre angulaire de son approche. En concevant et en assemblant les éléments structuraux - comme les fermes de toit, les poutrelles et les panneaux muraux - dans un atelier contrôlé, nous obtenons une précision dimensionnelle supérieure à celle réalisable en chantier. Cet environnement chauffé et abrité élimine les retards liés aux intempéries, réduit considérablement les pertes de matériaux (jusqu’à 20 % d’économie) et améliore la qualité globale de l’assemblage. Les composants préfabriqués sont livrés prêts à être installés, ce qui accélère le calendrier global du projet de 30 à 40 %. Pour les promoteurs et entrepreneurs, cela signifie une meilleure prévisibilité des coûts, une réduction des risques sur site et une main-d’œuvre plus efficace. De plus, la traçabilité des matériaux et la standardisation des procédés garantissent une conformité continue aux exigences du Code de construction du Québec. Chez Kalystrat, la préfabrication n’est pas qu’une méthode : c’est une promesse de qualité, de rapidité et de durabilité.</p>
-  </div>
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Spécificités québécoises</span>
+            <h2 class="ks-h2">Trois enjeux que toute charpente doit gérer</h2>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">90&nbsp;kg/m²</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Charge de neige</h3>
+                <p class="ks-card__text">Variable selon région (60 à 90&nbsp;kg/m²). Calculs neige + vent obligatoires Code QC, marges de sécurité élevées.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">R-49</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Isolation toiture 2026</h3>
+                <p class="ks-card__text">Code de construction QC 2026. Charpente conçue dès le départ pour accueillir l'isolation pleine épaisseur.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">−20&nbsp;%</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Pertes matériaux</h3>
+                <p class="ks-card__text">Préfabrication en atelier&nbsp;: précision dimensionnelle supérieure, économie matériaux jusqu'à 20&nbsp;% vs chantier.</p>
+            </article>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Conformité et expertise</h2>
-    <p>Construire au Québec exige une rigueur réglementaire sans compromis. Chez Kalystrat Structure Inc., chaque structure est conçue en pleine conformité avec le Code de construction du Québec - Chapitre I, Bâtiment, ainsi qu’avec les avis techniques du Conseil canadien du bois (CCMC). Notre entreprise détient une licence RBQ valide dans les catégories pertinentes à la construction d’ossatures, garantissant que nos équipes sont qualifiées pour intervenir sur des projets résidentiels et commerciaux légers. Pour les bâtiments dépassant 600 m² ou présentant des complexités structurales, nous collaborons systématiquement avec des ingénieurs en structure accrédités, chargés de produire les calculs de charge, les plans techniques et les justifications nécessaires à l’approbation municipale. Enfin, tous nos projets éligibles sont couverts par le Plan de garantie des bâtiments résidentiels neufs (GCR), offrant aux propriétaires une sécurité supplémentaire quant à la qualité et à la pérennité de leur investissement. Notre expertise ne se limite pas à la fabrication : elle englobe l’ensemble du cycle de vie de la structure, de la conception initiale à la livraison finale, en passant par une documentation complète et une assistance technique en chantier.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Conformité et certifications</span>
+            <h2 class="ks-h2">Une charpente certifiée et garantie</h2>
+            <p class="ks-lead">Kalystrat Structure Inc. opère sous licence RBQ et collabore systématiquement avec ingénieurs accrédités pour les projets complexes. Conformité Code QC + avis techniques CCMC.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">RBQ</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Licence catégories charpenterie résidentielle et commerciale légère</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">CCMC</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Conseil canadien du bois — avis techniques et certification matériaux</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">GCR</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Plan de garantie des bâtiments résidentiels neufs</p>
+            </article>
+        </div>
+    </div>
 </section>

@@ -1,37 +1,96 @@
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>L’enveloppe : le bouclier du bâtiment</h2>
-    <p>L’enveloppe d’un bâtiment joue un rôle fondamental dans sa performance globale. Bien plus qu’une simple façade ou toiture, elle constitue le bouclier protecteur contre les éléments extérieurs : pluie, vent, chaleur, froid et humidité. Au Québec, avec l’entrée en vigueur progressive de la réglementation RVNRG 2026, l’étanchéité à l’air, à l’eau et à la vapeur devient non seulement une exigence technique, mais une obligation légale pour assurer l’efficacité énergétique et la durabilité des constructions.</p>
-    <p>Une enveloppe performante repose sur une hiérarchie précise : d’abord un <strong>pare-air continu</strong> pour limiter les infiltrations d’air non contrôlées, ensuite un <strong>pare-vapeur</strong> stratégiquement positionné pour éviter la condensation dans les parois, suivi d’une <strong>isolation thermique</strong> adéquate (R-49 pour les toitures, R-24 pour les murs), et enfin un <strong>revêtement extérieur</strong> résistant aux intempéries. Chez Kalystrat Toiture et enveloppe Inc., nous concevons chaque enveloppe comme un système intégré, où chaque composant travaille en synergie pour maximiser la performance, la longévité et le confort des occupants.</p>
-  </div>
+{{-- T198-D3 — Refonte design 2026 : Hero magazine + Timeline + 3 contraintes + Trust --}}
+
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-bento ks-bento--split-photo ks-fade-in" style="display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px, 3vw, 48px);align-items:center">
+            <figure style="margin:0;overflow:hidden;border-radius:var(--ks-radius-lg);box-shadow:var(--ks-shadow-card)">
+                <img src="/intime/images/filiales/toiture-enveloppe-method.webp" alt="Vue aérienne de toiture commerciale avec membrane et drainage" loading="lazy" width="940" height="650" style="width:100%;height:auto;display:block;object-fit:cover;aspect-ratio:940/650">
+            </figure>
+            <div>
+                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
+                <h2 class="ks-h2" style="margin-top:0.5rem">L'enveloppe protège votre bâtiment 25 à 30 ans</h2>
+                <p class="ks-lead">Pluie, vent, chaleur, froid, humidité&nbsp;: l'enveloppe est le bouclier. Avec la réglementation RVNRG 2026, l'étanchéité à l'air et à l'eau devient une obligation légale, pas juste une exigence technique.</p>
+                <p class="ks-card__text">Chez Kalystrat Toiture et enveloppe, nous concevons chaque système comme un tout intégré&nbsp;: pare-air continu + pare-vapeur stratégique + isolation R-49 toiture + revêtement durable. Membranes TPO/EPDM/élastomère certifiées, garantie manufacturier 25-30 ans, garantie installation 5-10 ans.</p>
+            </div>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Choisir le bon type de toiture</h2>
-    <h3 style="margin-top:25px">Toitures plates</h3>
-    <p>Idéales pour les bâtiments commerciaux et institutionnels, les toitures plates utilisent des membranes synthétiques durables. La <strong>membrane élastomère</strong> (APP/SBS) offre une excellente résistance aux UV et une durée de vie de 25 à 30 ans. Le <strong>TPO blanc</strong> est hautement réfléchissant, réduisant l’effet d’îlot de chaleur urbain, tandis que l’<strong>EPDM noir</strong> excelle par sa flexibilité et sa résistance aux températures extrêmes.</p>
-    <h3 style="margin-top:25px">Toitures inclinées</h3>
-    <p>Pour les résidences et bâtiments à caractère patrimonial, les toitures inclinées combinent esthétique et performance. Les <strong>bardeaux d’asphalte</strong> (25 ans) demeurent populaires pour leur coût abordable. Le <strong>bardeau métallique</strong> (50 ans) allie légèreté, durabilité et recyclabilité. L’<strong>ardoise naturelle</strong> ou ses alternatives modernes s’imposent pour les projets de prestige ou de restauration.</p>
-    <h3 style="margin-top:25px">Toits verts</h3>
-    <p>Les <strong>toits verts</strong> transforment les surfaces inutilisées en écosystèmes urbains. Ils améliorent la rétention des eaux pluviales, offrent une isolation acoustique naturelle, réduisent les coûts énergétiques et contribuent activement au verdissement des villes québécoises.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Notre méthode</span>
+            <h2 class="ks-h2">Cinq étapes pour une enveloppe durable</h2>
+            <p class="ks-lead">Du diagnostic à l'entretien préventif, chaque chantier suit un protocole calibré pour zéro infiltration.</p>
+        </div>
+
+        <ol class="ks-timeline ks-fade-in" style="list-style:none;padding:0;margin-top:clamp(32px, 4vw, 56px);display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:clamp(16px, 1.6vw, 24px);counter-reset:step">
+            @php
+            $etapes = [
+                ['titre' => 'Inspection technique', 'desc' => 'Diagnostic complet&nbsp;: membrane, drains, solins, isolation, ponts thermiques.'],
+                ['titre' => 'Dépose et préparation', 'desc' => 'Retrait des matériaux usés. Préparation du support, ragréage, séchage.'],
+                ['titre' => 'Pare-air et isolation', 'desc' => 'Pare-air continu, pare-vapeur, isolation R-49 toiture / R-24 murs sans ponts thermiques.'],
+                ['titre' => 'Membrane et revêtement', 'desc' => 'Pose membrane TPO/EPDM/élastomère. Revêtements extérieurs durables.'],
+                ['titre' => 'Test blower door', 'desc' => 'Test étanchéité à l\'air ≤ 1,5 ach@50Pa. Conformité Novoclimat 2.0.'],
+            ];
+            @endphp
+            @foreach($etapes as $i => $etape)
+            <li style="position:relative;padding:clamp(20px, 2.4vw, 28px);background:var(--ks-white);border-radius:var(--ks-radius-lg);border-top:3px solid var(--ks-gold-500);box-shadow:var(--ks-shadow-card)">
+                <div style="font-size:clamp(2rem, 4vw, 2.75rem);font-weight:800;color:var(--ks-gold-aaa);line-height:1;letter-spacing:-0.02em">{{ str_pad((string)($i + 1), 2, '0', STR_PAD_LEFT) }}</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem;margin-bottom:0.5rem">{{ $etape['titre'] }}</h3>
+                <p class="ks-card__text" style="font-size:0.9375rem">{!! $etape['desc'] !!}</p>
+            </li>
+            @endforeach
+        </ol>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0">
-  <div class="auto-container">
-    <h2>Performance énergétique 2026</h2>
-    <p>Avec la mise en œuvre de la réglementation québécoise RVNRG 2026 et les exigences renforcées du programme <strong>Novoclimat 2.0</strong>, les normes d’efficacité énergétique deviennent plus strictes que jamais. Dès 2026, tous les nouveaux bâtiments devront afficher une étiquette énergétique nationale, reflétant leur consommation réelle.</p>
-    <p>Les exigences techniques sont claires : une <strong>valeur R minimale de R-49 pour les toitures</strong> et <strong>R-24 pour les murs</strong>. Un <strong>pare-air continu</strong> est maintenant obligatoire sur l’ensemble de l’enveloppe, sans rupture. L’élimination des <strong>ponts thermiques</strong> - zones de déperdition de chaleur - est essentielle pour atteindre ces cibles. Enfin, un <strong>test d'étanchéité à l'air (<em>blower door</em>)</strong> certifié doit démontrer une étanchéité à l’air conforme aux seuils de Novoclimat (souvent &le; 1,5 ach@50Pa).</p>
-    <p>Chez Kalystrat, nous intégrons ces exigences dès la phase de conception. Nos détails techniques, nos matériaux et nos méthodes d’installation sont calibrés pour dépasser les normes minimales, garantissant ainsi une conformité totale et une réelle performance sur le terrain.</p>
-  </div>
+<section class="ks-section ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Spécificités climat</span>
+            <h2 class="ks-h2">Trois performances Code QC 2026</h2>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">R-49</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Isolation toiture</h3>
+                <p class="ks-card__text">Valeur minimale Code 2026. R-24 sur murs. Pare-air continu obligatoire, élimination ponts thermiques.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">1,5 ach</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Étanchéité Novoclimat</h3>
+                <p class="ks-card__text">Test blower door à 50&nbsp;Pa. Seuil Novoclimat 2.0. Étiquette énergétique nationale obligatoire 2026.</p>
+            </article>
+            <article class="ks-card ks-card--accent-navy">
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">25-30&nbsp;ans</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Garantie membrane</h3>
+                <p class="ks-card__text">Membranes TPO blanche, EPDM noire, élastomère APP/SBS. Garantie manufacturier prolongée.</p>
+            </article>
+        </div>
+    </div>
 </section>
 
-<section class="ks-content-section" style="padding:60px 0;background:#f7f7f7">
-  <div class="auto-container">
-    <h2>Garanties prolongées et entretien</h2>
-    <p>Investir dans une enveloppe performante, c’est aussi s’assurer de sa pérennité. Kalystrat Toiture et enveloppe Inc. offre des <strong>garanties manufacturier allant de 25 à 30 ans</strong> sur les membranes et revêtements, couvrant les défauts de matériaux. À cela s’ajoute notre <strong>garantie d’installation de 5 à 10 ans</strong>, témoignant de notre confiance dans la qualité de notre main-d’œuvre et de nos procédés.</p>
-    <p>Pour prolonger la durée de vie de votre toiture et de votre enveloppe, nous proposons un <strong>plan d’entretien préventif annuel</strong>. Celui-ci inclut une inspection complète des <strong>drains</strong>, des <strong>solins</strong>, des joints de <strong>calfeutrage</strong>, ainsi que des revêtements extérieurs. Un entretien régulier permet de détecter précocement les signes d’usure, d’éviter les infiltrations coûteuses et de maintenir la performance énergétique initiale.</p>
-    <p>Enfin, nos travaux ouvrent souvent droit à des <strong>subventions gouvernementales</strong> telles que <strong>RénoVert</strong> (pour les toits verts et matériaux durables) et <strong>RénoClimat</strong> (pour les améliorations d’efficacité énergétique). Notre équipe vous accompagne dans le montage de votre dossier pour maximiser vos retours financiers.</p>
-  </div>
+<section class="ks-section ks-section--alt ks-page-section">
+    <div class="ks-container">
+        <div class="ks-page-section__intro ks-fade-in">
+            <span class="ks-eyebrow">Garanties et subventions</span>
+            <h2 class="ks-h2">Entretien préventif et subventions accessibles</h2>
+            <p class="ks-lead">Au-delà de la garantie manufacturier 25-30 ans et garantie installation 5-10 ans, nous accompagnons le montage des dossiers RénoVert et RénoClimat pour maximiser vos retours.</p>
+        </div>
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">RBQ</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Licence active toiture résidentielle, commerciale et institutionnelle</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">RénoVert</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Subventions toits verts et matériaux durables certifiés</p>
+            </article>
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(20px, 2.4vw, 32px)">
+                <div style="font-family:var(--ks-font-display);font-size:1.5rem;font-weight:800;color:var(--ks-navy-900);letter-spacing:0.04em">Novoclimat</div>
+                <p class="ks-card__text" style="margin-top:0.5rem;font-size:0.9375rem">Programme efficacité énergétique 2.0&nbsp;: conformité totale</p>
+            </article>
+        </div>
+    </div>
 </section>

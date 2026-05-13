@@ -9,6 +9,7 @@
 <meta property="og:description" content="{{ $filiale['tagline'] }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ url('/filiales/' . $slug) }}">
+<meta property="og:image" content="{{ url('/intime/images/filiales/' . $slug . '-hero-2026.webp') }}">
 @endpush
 
 @push('schema')
@@ -20,11 +21,17 @@
     'parentOrganization' => ['@type' => 'Organization', 'name' => 'Gestion Kalystrat Inc.', 'url' => 'https://kalystrat.ca'],
     'description' => $filiale['specialite'],
     'url' => url('/filiales/' . $slug),
-    'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Québec, Canada'],
+    'image' => url('/intime/images/filiales/' . $slug . '-hero-2026.webp'),
+    'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Capitale-Nationale, Québec'],
     'address' => ['@type' => 'PostalAddress', 'addressLocality' => 'Québec', 'addressRegion' => 'QC', 'addressCountry' => 'CA'],
+    'hasOfferCatalog' => [
+        '@type' => 'OfferCatalog',
+        'name' => $filiale['specialite'],
+        'itemListElement' => array_map(fn($s) => ['@type' => 'Offer', 'itemOffered' => ['@type' => 'Service', 'name' => $s]], $filiale['services']),
+    ],
     'speakable' => [
         '@type' => 'SpeakableSpecification',
-        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-card__title', '.ks-card__text'],
+        'cssSelector' => ['h1', '.ks-page-hero__subtitle', '.ks-card__title', '.ks-kpi__value'],
     ],
     'inLanguage' => 'fr-CA',
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
@@ -42,7 +49,7 @@
 @section('content')
 
 <x-frontend::page-hero
-    photo="/intime/images/filiales/{{ $slug }}-hero.webp"
+    photo="/intime/images/filiales/{{ $slug }}-hero-2026.webp"
     eyebrow="{{ $filiale['specialite'] }}"
     title="{{ $filiale['nom_court'] }}"
     subtitle="{{ $filiale['tagline'] }}"
@@ -54,6 +61,7 @@
     </x-slot:breadcrumb>
 </x-frontend::page-hero>
 
+{{-- T198 — Section 01 : Intro pillar + Bento KPI 3 chiffres clés --}}
 <section class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
@@ -64,14 +72,27 @@
                 <p class="ks-lead">{{ $filiale['nom_legal'] }} est l’une des six filiales spécialisées de Gestion Kalystrat Inc., groupe québécois de construction à intégration verticale. Notre expertise s’inscrit dans une chaîne complète, de l’excavation à la livraison, garantissant cohérence technique et synergie avec les autres divisions du groupe.</p>
             </div>
         </div>
+
+        @if(!empty($filiale['kpi']))
+        <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(32px, 4vw, 56px)">
+            @foreach($filiale['kpi'] as $k)
+            <article class="ks-card ks-card--accent-gold" style="text-align:center;padding:clamp(24px, 3vw, 40px)">
+                <div class="ks-stat__number" style="font-size:clamp(2.5rem, 5vw, 4rem);color:var(--ks-navy-900);font-weight:800;line-height:1.05">{!! $k['valeur'] !!}</div>
+                <div class="ks-stat__label" style="margin-top:0.5rem;color:var(--ks-gold-aaa);font-weight:600;text-transform:uppercase;letter-spacing:0.08em;font-size:0.8125rem">{{ $k['label'] }}</div>
+            </article>
+            @endforeach
+        </div>
+        @endif
     </div>
 </section>
 
+{{-- T198 — Contenu spécifique filiale (partial enrichi avec photos) --}}
 @php $contentPath = 'frontend::partials.filiale-content.' . $slug; @endphp
 @if(view()->exists($contentPath))
     @include($contentPath)
 @endif
 
+{{-- T198 — Section 02 : Services Bento 3col --}}
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
@@ -79,11 +100,11 @@
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Services offerts</span>
                 <h2 class="ks-h2">Notre offre de services</h2>
-                <p class="ks-lead">Liste exhaustive des prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du groupe.</p>
+                <p class="ks-lead">Prestations exécutées par les équipes {{ $filiale['nom_court'] }}, sous le contrôle qualité du groupe.</p>
             </div>
         </div>
         <div class="ks-bento ks-bento--3col">
-            @foreach($filiale['services'] as $i => $service)
+            @foreach($filiale['services'] as $service)
             <article class="ks-card ks-card--accent-gold">
                 <span class="ks-eyebrow">Service</span>
                 <h3 class="ks-card__title">{{ $service }}</h3>
@@ -93,6 +114,7 @@
     </div>
 </section>
 
+{{-- T198 — Section 03 : Pour qui + Comment (Bento 2col) --}}
 <section class="ks-section ks-page-section">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
@@ -117,24 +139,29 @@
     </div>
 </section>
 
+{{-- T198 — Section 04 : Synergies (3 filiales connexes, pas 5) --}}
+@php
+$synergiesSlugs = $filiale['synergies'] ?? array_diff(array_keys(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES), [$slug]);
+@endphp
 <section class="ks-section ks-section--dark ks-page-section ks-page-section--dark">
     <div class="ks-container">
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">04</span>
             <div class="ks-page-section__heading">
                 <span class="ks-eyebrow">Intégration verticale</span>
-                <h2 class="ks-h2">Synergies avec les autres filiales</h2>
-                <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Sur un même chantier, {{ $filiale['nom_court'] }} collabore quotidiennement avec les cinq autres filiales du groupe pour livrer un projet cohérent du sous-sol au toit.</p>
+                <h2 class="ks-h2">Synergies avec les filiales du groupe</h2>
+                <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Sur un même chantier, {{ $filiale['nom_court'] }} collabore quotidiennement avec ces filiales connexes pour livrer un projet cohérent.</p>
             </div>
         </div>
         <div class="ks-bento ks-bento--3col">
-            @foreach(\Modules\Frontend\Http\Controllers\FilialeController::FILIALES as $other_slug => $other_f)
-                @if($other_slug !== $slug)
+            @foreach($synergiesSlugs as $synergie_slug)
+                @php $other_f = \Modules\Frontend\Http\Controllers\FilialeController::FILIALES[$synergie_slug] ?? null; @endphp
+                @if($other_f)
                 <article class="ks-card ks-card--dark">
-                    <span class="ks-eyebrow" style="color:var(--ks-gold-500)">Filiale</span>
-                    <h3 class="ks-card__title"><a href="{{ route('filiale', $other_slug) }}">{{ $other_f['nom_court'] }}</a></h3>
+                    <span class="ks-eyebrow" style="color:var(--ks-gold-500)">Filiale connexe</span>
+                    <h3 class="ks-card__title"><a href="{{ route('filiale', $synergie_slug) }}">{{ $other_f['nom_court'] }}</a></h3>
                     <p class="ks-card__text">{{ $other_f['specialite'] }}</p>
-                    <div class="ks-card__cta"><a href="{{ route('filiale', $other_slug) }}" class="ks-cta-secondary" style="color:var(--ks-white);border-color:var(--ks-gold-500)">Découvrir</a></div>
+                    <div class="ks-card__cta"><a href="{{ route('filiale', $synergie_slug) }}" class="ks-cta-secondary" style="color:var(--ks-white);border-color:var(--ks-gold-500)">Découvrir</a></div>
                 </article>
                 @endif
             @endforeach
@@ -142,11 +169,15 @@
     </div>
 </section>
 
+{{-- T198 — CTA enrichi : navy + tel + soumission --}}
 <section class="ks-cta-section">
     <div class="ks-container">
         <h2>Discutons de votre projet {{ Str::lower($filiale['specialite']) }}</h2>
         <p>Visite, prise de mesures, étude technique et soumission détaillée sous 5 à 10 jours ouvrables pour le résidentiel.</p>
-        <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;margin-top:1.5rem">
+            <a href="{{ route('contact') }}" class="ks-cta-primary">Obtenir une soumission</a>
+            <a href="tel:+14184760987" class="ks-cta-secondary" aria-label="Appeler Kalystrat au 418 476 0987">418&nbsp;476-0987</a>
+        </div>
     </div>
 </section>
 

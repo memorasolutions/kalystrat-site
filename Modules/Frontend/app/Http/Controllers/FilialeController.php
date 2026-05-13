@@ -31,6 +31,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Promoteurs résidentiels, entrepreneurs généraux, propriétaires (réparations), municipalités',
             'modele' => 'Contrats au projet + exécution interne pour Kalystrat Immobilier',
+            'kpi' => [
+                ['valeur' => '1,5 m', 'label' => 'Profondeur min sous ligne de gel'],
+                ['valeur' => '35 MPa', 'label' => 'Béton structural résidentiel'],
+                ['valeur' => '100%', 'label' => 'Code QC 2026 conforme'],
+            ],
+            'synergies' => ['structure', 'toiture-enveloppe', 'placement-construction'],
         ],
         'structure' => [
             'nom_court' => 'Kalystrat Structure',
@@ -46,6 +52,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Propriétaires résidentiels (rénovation), promoteurs (condos, multilogements), commercial',
             'modele' => 'Projets de rénovation + contrats de finition pour construction neuve',
+            'kpi' => [
+                ['valeur' => '3 systèmes', 'label' => 'Bois, acier, hybride'],
+                ['valeur' => 'R-49', 'label' => 'Toiture isolée Code 2026'],
+                ['valeur' => '1,5 ach', 'label' => 'Étanchéité blower door'],
+            ],
+            'synergies' => ['fondations', 'toiture-enveloppe', 'finition-interieure'],
         ],
         'toiture-enveloppe' => [
             'nom_court' => 'Kalystrat Toiture et enveloppe',
@@ -62,6 +74,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Résidentiel, commercial (bureaux, centres commerciaux), institutionnel (écoles, hôpitaux)',
             'modele' => 'Contrats au projet + entretien récurrents + garanties prolongées',
+            'kpi' => [
+                ['valeur' => '20-25 ans', 'label' => 'Garantie membrane TPO/EPDM'],
+                ['valeur' => '-40°C', 'label' => 'Résistance gel-dégel'],
+                ['valeur' => 'R-49', 'label' => 'Isolation toiture Code 2026'],
+            ],
+            'synergies' => ['structure', 'finition-interieure', 'immobilier'],
         ],
         'finition-interieure' => [
             'nom_court' => 'Kalystrat Finition intérieure',
@@ -79,6 +97,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Propriétaires résidentiels (rénovation), promoteurs (condos), commercial',
             'modele' => 'Rénovation (clientèle directe) + contrats de finition pour construction neuve',
+            'kpi' => [
+                ['valeur' => 'Sur mesure', 'label' => 'Ébénisterie et comptoirs'],
+                ['valeur' => '7 corps de métier', 'label' => 'Coordonnés en interne'],
+                ['valeur' => '0 sous-traitance', 'label' => 'Finition hors groupe'],
+            ],
+            'synergies' => ['structure', 'toiture-enveloppe', 'immobilier'],
         ],
         'immobilier' => [
             'nom_court' => 'Kalystrat Immobilier',
@@ -93,6 +117,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Acheteurs propriétés neuves, locataires, investisseurs immobiliers',
             'modele' => 'Profit sur ventes + revenus locatifs récurrents',
+            'kpi' => [
+                ['valeur' => '4-12 unités', 'label' => 'Focus multilogements'],
+                ['valeur' => '19 G$', 'label' => 'Marché rénovation QC 2026'],
+                ['valeur' => '6 filiales', 'label' => 'Demande captive interne'],
+            ],
+            'synergies' => ['fondations', 'toiture-enveloppe', 'finition-interieure'],
         ],
         'placement-construction' => [
             'nom_court' => 'Kalystrat Placement construction',
@@ -107,6 +137,12 @@ class FilialeController extends Controller
             ],
             'cibles' => 'Filiales Kalystrat (interne) + entrepreneurs généraux, sous-traitants, promoteurs',
             'modele' => 'Marge sur taux horaire facturé (15-25%) + frais placement permanent',
+            'kpi' => [
+                ['valeur' => '17 000', 'label' => 'Travailleurs CCQ/an au QC'],
+                ['valeur' => '24-48 h', 'label' => 'Dépannage chantier urgent'],
+                ['valeur' => '100%', 'label' => 'Main-d\'œuvre certifiée CCQ'],
+            ],
+            'synergies' => ['fondations', 'structure', 'toiture-enveloppe'],
         ],
     ];
 
