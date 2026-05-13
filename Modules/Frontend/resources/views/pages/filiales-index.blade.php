@@ -78,7 +78,7 @@ echo json_encode([
     </div>
 </section>
 
-{{-- T193-C — Chaîne de valeur intégrée (plan d'affaires Ali) --}}
+{{-- T201 — Chaîne de valeur intégrée : timeline horizontale 5 étapes séquentielles + 1 carte transversale full-width --}}
 <section id="chaine-valeur" class="ks-section">
     <div class="ks-container">
         <div class="ks-section__heading ks-section__heading--left">
@@ -86,38 +86,36 @@ echo json_encode([
             <h2 class="ks-h2">La chaîne de valeur, sous un seul groupe</h2>
             <p class="ks-lead">De l'acquisition du terrain à la remise des clés, chaque étape s'enchaîne sans rupture grâce à six filiales spécialisées qui se relaient sur le même chantier.</p>
         </div>
-        <ol class="ks-bento ks-bento--6col" style="counter-reset:step;list-style:none;padding:0">
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 01</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Immobilier</h3>
-                <p class="ks-card__text">Acquisition du terrain, étude de faisabilité, conception du projet.</p>
+
+        @php
+        $etapesChaine = [
+            ['num' => '01', 'titre' => 'Immobilier', 'desc' => 'Acquisition du terrain, étude de faisabilité, conception du projet.', 'slug' => 'immobilier'],
+            ['num' => '02', 'titre' => 'Fondations', 'desc' => 'Excavation, coffrage, coulée du béton, imperméabilisation.', 'slug' => 'fondations'],
+            ['num' => '03', 'titre' => 'Structure', 'desc' => 'Charpente bois, acier ou hybride. Assemblage de l\'ossature primaire.', 'slug' => 'structure'],
+            ['num' => '04', 'titre' => 'Toiture et enveloppe', 'desc' => 'Étanchéité, isolation, revêtement extérieur. Protège le bâtiment.', 'slug' => 'toiture-enveloppe'],
+            ['num' => '05', 'titre' => 'Finition intérieure', 'desc' => 'Gypse, peinture, planchers, ébénisterie sur mesure. Complète les espaces.', 'slug' => 'finition-interieure'],
+        ];
+        @endphp
+
+        {{-- Timeline horizontale 5 étapes séquentielles --}}
+        <ol class="ks-fade-in" style="list-style:none;padding:0;margin:clamp(32px, 4vw, 56px) 0 0;display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:clamp(16px, 1.6vw, 24px)">
+            @foreach($etapesChaine as $i => $etape)
+            <li style="position:relative;padding:clamp(24px, 2.6vw, 32px);background:var(--ks-white);border-radius:var(--ks-radius-lg);border-top:3px solid var(--ks-gold-500);box-shadow:var(--ks-shadow-card)">
+                <div style="font-family:var(--ks-font-display);font-size:clamp(2.25rem, 4.5vw, 3rem);font-weight:800;color:var(--ks-gold-aaa);line-height:1;letter-spacing:-0.02em">{{ $etape['num'] }}</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem;margin-bottom:0.5rem;font-size:1.125rem"><a href="{{ route('filiale', $etape['slug']) }}" style="color:inherit;text-decoration:none">{{ $etape['titre'] }}</a></h3>
+                <p class="ks-card__text" style="font-size:0.9375rem">{{ $etape['desc'] }}</p>
             </li>
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 02</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Fondations</h3>
-                <p class="ks-card__text">Excavation, coffrage, coulée du béton, imperméabilisation.</p>
-            </li>
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 03</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Structure</h3>
-                <p class="ks-card__text">Charpente bois, acier ou hybride. Assemblage de l'ossature primaire.</p>
-            </li>
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 04</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Toiture et enveloppe</h3>
-                <p class="ks-card__text">Étanchéité, isolation, revêtement extérieur. Protège le bâtiment.</p>
-            </li>
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Étape 05</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Finition intérieure</h3>
-                <p class="ks-card__text">Gypse, peinture, planchers, ébénisterie sur mesure. Complète les espaces.</p>
-            </li>
-            <li class="ks-card ks-card--accent-gold" style="counter-increment:step">
-                <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Transversal</span>
-                <h3 class="ks-card__title" style="font-size:1.125rem">Placement construction</h3>
-                <p class="ks-card__text">Main-d'œuvre qualifiée CCQ fournie à chaque étape. Disponibilité garantie.</p>
-            </li>
+            @endforeach
         </ol>
+
+        {{-- Carte transversale Placement (full-width, accent différencié navy fond) --}}
+        <article class="ks-fade-in" style="margin-top:clamp(20px, 2.4vw, 32px);padding:clamp(28px, 3vw, 40px);background:var(--ks-navy-900);color:var(--ks-white);border-radius:var(--ks-radius-lg);box-shadow:var(--ks-shadow-card);display:grid;grid-template-columns:auto 1fr;gap:clamp(20px, 2.4vw, 32px);align-items:center">
+            <div style="font-family:var(--ks-font-display);font-size:clamp(2.25rem, 4.5vw, 3rem);font-weight:800;color:var(--ks-gold-500);line-height:1;letter-spacing:-0.02em;white-space:nowrap">Transversal</div>
+            <div>
+                <h3 class="ks-card__title" style="color:var(--ks-white);margin:0 0 0.5rem;font-size:1.25rem"><a href="{{ route('filiale', 'placement-construction') }}" style="color:inherit;text-decoration:none">Placement construction</a></h3>
+                <p style="margin:0;color:rgba(255,255,255,0.85);line-height:var(--ks-line-height)">Main-d'œuvre qualifiée CCQ fournie à chaque étape, des fondations à la finition. Disponibilité garantie pour les cinq filiales et nos partenaires externes.</p>
+            </div>
+        </article>
     </div>
 </section>
 
