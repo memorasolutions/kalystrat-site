@@ -124,7 +124,7 @@
             <article class="ks-card ks-card--accent-navy">
                 <span class="ks-eyebrow">Siège social</span>
                 <h3 class="ks-card__title">Québec</h3>
-                <p class="ks-card__text">Ancré dans la Capitale-Nationale, avec une couverture territoriale jusqu’au Saguenay, Trois-Rivières, Montréal et Laval.</p>
+                <p class="ks-card__text">Ancré dans la Capitale-Nationale : Québec, Lévis, Sainte-Foy, Beauport, Sillery et le Vieux-Québec.</p>
             </article>
         </div>
     </div>
@@ -141,7 +141,7 @@
             </div>
         </div>
         <figure class="ks-page-section__visual ks-fade-in">
-            <img src="/intime/images/pages/apropos-aerial-cranes.webp" alt="Vue aérienne d'un chantier urbain en construction à Montréal" loading="lazy" width="940" height="650">
+            <img src="/intime/images/pages/apropos-aerial-cranes.webp" alt="Vue aérienne d'un chantier urbain en construction à Québec" loading="lazy" width="940" height="650">
             <figcaption>L’intégration verticale en action : du sol au toit, sous une seule marque.</figcaption>
         </figure>
         <div class="ks-bento ks-fade-in">

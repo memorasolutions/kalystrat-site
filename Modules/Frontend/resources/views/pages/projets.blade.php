@@ -85,7 +85,7 @@
         <div class="ks-bento ks-bento--feature ks-fade-in" style="grid-template-columns:1fr">
             <article class="ks-card ks-card--accent-gold">
                 <span class="ks-eyebrow">Cas type 03 · Commercial occupé</span>
-                <h3 class="ks-card__title">Réfection toiture immeuble de bureaux, Trois-Rivières</h3>
+                <h3 class="ks-card__title">Réfection toiture immeuble de bureaux, Sainte-Foy</h3>
                 <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));gap:1rem;margin:1rem 0;padding:1rem;background:rgba(184,164,114,0.08);border-radius:4px">
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">2 400&nbsp;m²</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Surface refaite TPO</span></div>
                     <div><strong style="color:var(--ks-gold-aaa);font-size:1.5rem">Zéro</strong><br><span style="font-size:0.875rem;color:var(--ks-navy-900)">Interruption d’activité<br>locataires</span></div>

@@ -57,16 +57,12 @@
         'longitude' => -71.2080,
     ],
     'areaServed' => [
-        ['@type' => 'AdministrativeArea', 'name' => 'Province of Quebec'],
+        ['@type' => 'AdministrativeArea', 'name' => 'Capitale-Nationale, Québec'],
         ['@type' => 'City', 'name' => 'Québec'],
         ['@type' => 'City', 'name' => 'Lévis'],
         ['@type' => 'City', 'name' => 'Sainte-Foy'],
         ['@type' => 'City', 'name' => 'Beauport'],
         ['@type' => 'City', 'name' => 'Sillery'],
-        ['@type' => 'City', 'name' => 'Trois-Rivières'],
-        ['@type' => 'City', 'name' => 'Saguenay'],
-        ['@type' => 'City', 'name' => 'Montréal'],
-        ['@type' => 'City', 'name' => 'Laval'],
     ],
     'openingHoursSpecification' => [
         '@type' => 'OpeningHoursSpecification',
@@ -129,7 +125,7 @@ $services = [
         'name' => 'Gestion Kalystrat Inc.',
         'url' => url('/'),
     ],
-    'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Province of Quebec'],
+    'areaServed' => ['@type' => 'AdministrativeArea', 'name' => 'Capitale-Nationale, Québec'],
     'url' => url('/filiales/' . $s['slug']),
 ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES); @endphp</script>
 @endforeach
@@ -144,7 +140,7 @@ $services = [
             'name' => 'Quelles régions du Québec Kalystrat dessert-il ?',
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => "Kalystrat dessert neuf régions principales au Québec : Québec, Lévis, Sainte-Foy, Beauport, Sillery, Trois-Rivières, Saguenay, Montréal et Laval. Le siège social est à Québec et nous intervenons partout dans la province pour les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.",
+                'text' => "Kalystrat dessert la région de Québec (Capitale-Nationale) : Québec, Lévis, Sainte-Foy, Beauport, Sillery et le Vieux-Québec. Le siège social est à Québec et nous intervenons sur les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.",
             ],
         ],
         [
@@ -592,7 +588,7 @@ $services = [
                 <p class="ks-card__text" style="font-style:italic">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre test d'étanchéité a passé du premier coup.</p>
                 <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
                     <strong style="color:var(--ks-gold-500);display:block">Gestionnaire institutionnel</strong>
-                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Pavillon scolaire, Trois-Rivières</span>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Pavillon scolaire, Capitale-Nationale</span>
                 </div>
             </article>
         </div>
@@ -685,7 +681,7 @@ $services = [
             <li class="ks-faq__item">
                 <details>
                     <summary class="ks-faq__question">Quelles régions du Québec Kalystrat dessert-il&nbsp;?</summary>
-                    <p class="ks-faq__answer">Kalystrat dessert neuf régions principales&nbsp;: Québec, Lévis, Sainte-Foy, Beauport, Sillery, Trois-Rivières, Saguenay, Montréal et Laval. Le siège social est à Québec et nous intervenons partout dans la province pour les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.</p>
+                    <p class="ks-faq__answer">Kalystrat dessert la région de Québec (Capitale-Nationale)&nbsp;: Québec, Lévis, Sainte-Foy, Beauport, Sillery et le Vieux-Québec. Le siège social est à Québec et nous intervenons sur les projets résidentiels, commerciaux, institutionnels, industriels et municipaux.</p>
                 </details>
             </li>
             <li class="ks-faq__item">

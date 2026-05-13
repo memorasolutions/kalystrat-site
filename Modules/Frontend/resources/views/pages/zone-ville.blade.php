@@ -7,10 +7,6 @@ $zones = [
     'sainte-foy' => ['nom' => 'Sainte-Foy', 'lat' => 46.7826, 'lng' => -71.2978, 'pop' => 'Quartier Québec', 'specialites' => 'Finition haut de gamme, rénovation patrimoniale, commercial Université Laval'],
     'beauport' => ['nom' => 'Beauport', 'lat' => 46.8810, 'lng' => -71.1894, 'pop' => 'Arrondissement Québec', 'specialites' => 'Constructions neuves, rénovations résidentielles, lotissements'],
     'sillery' => ['nom' => 'Sillery', 'lat' => 46.7700, 'lng' => -71.2700, 'pop' => 'Quartier Québec', 'specialites' => 'Rénovations patrimoniales, constructions de prestige, agrandissements'],
-    'trois-rivieres' => ['nom' => 'Trois-Rivières', 'lat' => 46.3433, 'lng' => -72.5410, 'pop' => '140 000+', 'specialites' => 'Résidentiel, commercial centre-ville, institutionnel'],
-    'saguenay' => ['nom' => 'Saguenay', 'lat' => 48.4280, 'lng' => -71.0680, 'pop' => '145 000+', 'specialites' => 'Industriel, institutionnel, projets miniers et forestiers'],
-    'montreal' => ['nom' => 'Montréal', 'lat' => 45.5019, 'lng' => -73.5674, 'pop' => '1.7M+', 'specialites' => 'Commercial bureaux, condominiums urbains, institutionnel'],
-    'laval' => ['nom' => 'Laval', 'lat' => 45.6066, 'lng' => -73.7124, 'pop' => '440 000+', 'specialites' => 'Multilogements, commercial banlieue, lotissements'],
 ];
 abort_unless(isset($zones[$ville]), 404);
 $z = $zones[$ville];
