@@ -9,7 +9,7 @@
             <div>
                 <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
                 <h2 class="ks-h2" style="margin-top:0.5rem">La pénurie de main-d'œuvre construction au Québec se résout par le bassin captif</h2>
-                <p class="ks-lead">La CCQ identifie 17 000 travailleurs/an recherchés au Québec. Pénurie qui ralentit les chantiers, gonfle les coûts, fragilise les calendriers. Notre modèle unique répond à cette urgence.</p>
+                <p class="ks-lead">La CCQ identifie 17 000 personnes par année à recruter pour les 5 prochaines années (Perspectives professionnelles 2024-2028). Pénurie qui ralentit les chantiers, gonfle les coûts, fragilise les calendriers. Notre modèle unique répond à cette urgence.</p>
                 <p class="ks-card__text">Kalystrat Placement construction maintient un bassin permanent de travailleurs CCQ qualifiés prêts à intervenir. Formations PAMT internes, programme d'intégration apprentis, relations long terme avec compagnons certifiés. Dépannage chantier urgent en 24 à 48 heures.</p>
             </div>
         </div>

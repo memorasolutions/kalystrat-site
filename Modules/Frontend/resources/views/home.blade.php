@@ -305,22 +305,22 @@ $services = [
     <div class="ks-container">
 
         <div class="ks-defi__market" aria-label="Le marché québécois de la construction en 2026">
-            <span class="ks-eyebrow">Marché 2026 en chiffres</span>
+            <span class="ks-eyebrow">Marché québécois en chiffres documentés</span>
             <div class="ks-defi__market-grid">
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">59&nbsp;864</span>
-                    <span class="ks-defi__market-label">Mises en chantier au Québec en 2025 (+23&nbsp;%)</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: SCHL</cite>
+                    <span class="ks-defi__market-num">+35&nbsp;%</span>
+                    <span class="ks-defi__market-label">Mises en chantier résidentielles, H1&nbsp;2025 vs H1&nbsp;2024</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (mi-année 2025)</cite>
                 </article>
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">17&nbsp;000</span>
-                    <span class="ks-defi__market-label">Travailleurs supplémentaires recherchés chaque année en construction</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: CCQ</cite>
+                    <span class="ks-defi__market-num">+19&nbsp;%</span>
+                    <span class="ks-defi__market-label">Dépenses rénovation résidentielle, H1&nbsp;2025 vs H1&nbsp;2024</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (mi-année 2025)</cite>
                 </article>
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">19&nbsp;G$</span>
-                    <span class="ks-defi__market-label">Marché québécois de la rénovation en croissance</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ</cite>
+                    <span class="ks-defi__market-num">32&nbsp;000&nbsp;$</span>
+                    <span class="ks-defi__market-label">Budget moyen par projet de rénovation résidentielle</span>
+                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (avril 2026)</cite>
                 </article>
             </div>
         </div>

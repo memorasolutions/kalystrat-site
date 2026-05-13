@@ -32,7 +32,7 @@
                 ['titre' => 'Évaluation du sol', 'desc' => 'Analyse géotechnique du site, capacité portante et risque de gonflement argileux.'],
                 ['titre' => 'Excavation', 'desc' => 'Profondeur précise sous la ligne de gel (1,5 m min), stabilité des parois en milieu urbain.'],
                 ['titre' => 'Coffrage', 'desc' => 'Coffrages robustes et étanches, géométrie exacte selon plans d\'ingénierie.'],
-                ['titre' => 'Coulée', 'desc' => 'Béton 35 MPa, contrôle de la consistance, protocoles spécifiques pour coulage hivernal.'],
+                ['titre' => 'Coulée', 'desc' => 'Béton 20-25 MPa selon exposition gel-dégel, contrôle de la consistance, protocoles spécifiques pour coulage hivernal.'],
                 ['titre' => 'Imperméabilisation', 'desc' => 'Membranes haute performance + drains français + dalle isolante.'],
             ];
             @endphp
@@ -66,9 +66,9 @@
                 <p class="ks-card__text">Rive-sud du Saint-Laurent et certains secteurs de la Capitale-Nationale. Gonflement à l'eau&nbsp;: drains français obligatoires.</p>
             </article>
             <article class="ks-card ks-card--accent-navy">
-                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">35 MPa</div>
-                <h3 class="ks-card__title" style="margin-top:0.75rem">Béton structural</h3>
-                <p class="ks-card__text">Résistance minimale aux charges et agressions environnementales. Additifs antigel pour coulage hivernal.</p>
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">20 MPa</div>
+                <h3 class="ks-card__title" style="margin-top:0.75rem">Béton fondations résidentielles</h3>
+                <p class="ks-card__text">Minimum standard CNB/CCQ pour semelles, murs et dalles (ABQ Technobéton n°9). Classes 25 MPa+ pour exposition gel-dégel ou sels déglaçants.</p>
             </article>
         </div>
     </div>

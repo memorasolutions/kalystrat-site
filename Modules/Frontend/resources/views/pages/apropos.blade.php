@@ -247,7 +247,7 @@
         </div>
         <div class="ks-bento ks-bento--3col ks-fade-in">
             <article class="ks-card ks-card--accent-gold">
-                <div class="ks-stat__number">59 864</div>
+                <div class="ks-stat__number">+35&nbsp;%</div>
                 <div class="ks-stat__label">Mises en chantier 2025</div>
                 <p class="ks-card__text" style="margin-top:1rem">Au Québec, +23&nbsp;% en un an (source SCHL). Déficit structurel persistant qui maintient une demande soutenue pour la construction neuve.</p>
             </article>
@@ -259,7 +259,7 @@
             <article class="ks-card ks-card--accent-gold">
                 <div class="ks-stat__number">17 000<sup style="font-size:0.55em;color:var(--ks-gold-500)">/an</sup></div>
                 <div class="ks-stat__label">Travailleurs recherchés par année</div>
-                <p class="ks-card__text" style="margin-top:1rem">Selon la CCQ, le Québec doit attirer environ 17 000 travailleurs supplémentaires chaque année pour répondre à la demande en construction. Kalystrat Placement construction sert d'abord les filiales internes, puis la clientèle externe.</p>
+                <p class="ks-card__text" style="margin-top:1rem">Selon la CCQ (Perspectives professionnelles 2024-2028), le Québec a besoin d'environ 17 000 personnes par année dans toutes les régions pour répondre à la demande en construction. Kalystrat Placement construction sert d'abord les filiales internes, puis la clientèle externe.</p>
             </article>
         </div>
     </div>

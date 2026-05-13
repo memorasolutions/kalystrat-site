@@ -9,7 +9,7 @@
             <div>
                 <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
                 <h2 class="ks-h2" style="margin-top:0.5rem">Le bras développement qui crée la demande captive du groupe</h2>
-                <p class="ks-lead">La région de Québec fait face à une pénurie persistante de logements neufs. Le marché de la rénovation représente 19 G$ selon l'APCHQ. La demande multilogements explose, portée par l'urbanisation et les politiques de densification.</p>
+                <p class="ks-lead">La région de Québec fait face à une pénurie persistante de logements neufs. Les dépenses de rénovation résidentielle au Québec ont augmenté de 19&nbsp;% au H1 2025 vs H1 2024 selon l'APCHQ. La demande multilogements explose, portée par l'urbanisation et les politiques de densification.</p>
                 <p class="ks-card__text">Kalystrat Immobilier privilégie la densification urbaine, revitalise les quartiers sous-utilisés et développe des multilogements de qualité conçus pour durer. Chaque projet lancé déclenche une chaîne intégrée pour les cinq autres filiales&nbsp;: fondations, structure, toiture, finition, placement.</p>
             </div>
         </div>
@@ -53,7 +53,7 @@
         </div>
         <div class="ks-bento ks-bento--3col ks-fade-in" style="margin-top:clamp(24px, 3vw, 40px)">
             <article class="ks-card ks-card--accent-navy">
-                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">19 G$</div>
+                <div class="ks-stat__number" style="color:var(--ks-navy-900);font-size:clamp(2rem, 3.5vw, 2.75rem);font-weight:800">+19&nbsp;%</div>
                 <h3 class="ks-card__title" style="margin-top:0.75rem">Marché rénovation QC</h3>
                 <p class="ks-card__text">Estimation APCHQ 2026. Rénovation résidentielle + multilogements + commercial. Croissance soutenue.</p>
             </article>

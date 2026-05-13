@@ -32,9 +32,9 @@ class FilialeController extends Controller
             'cibles' => 'Promoteurs résidentiels, entrepreneurs généraux, propriétaires (réparations), municipalités',
             'modele' => 'Contrats au projet + exécution interne pour Kalystrat Immobilier',
             'kpi' => [
-                ['valeur' => '1,5 m', 'label' => 'Profondeur min sous ligne de gel'],
-                ['valeur' => '35 MPa', 'label' => 'Béton structural résidentiel'],
-                ['valeur' => '100%', 'label' => 'Code QC 2026 conforme'],
+                ['valeur' => '1,2-1,5 m', 'label' => 'Profondeur min sous ligne de gel (APCHQ, sud Québec)'],
+                ['valeur' => '20 MPa', 'label' => 'Béton fondations résidentielles (ABQ Technobéton n°9)'],
+                ['valeur' => 'Code QC', 'label' => 'Conformité chapitre I — Bâtiment 2021-2025'],
             ],
             'synergies' => ['structure', 'toiture-enveloppe', 'placement-construction'],
         ],
@@ -119,7 +119,7 @@ class FilialeController extends Controller
             'modele' => 'Profit sur ventes + revenus locatifs récurrents',
             'kpi' => [
                 ['valeur' => '4-12 unités', 'label' => 'Focus multilogements'],
-                ['valeur' => '19 G$', 'label' => 'Marché rénovation QC 2026'],
+                ['valeur' => '+19 %', 'label' => 'Dépenses rénovation H1 2025 (APCHQ)'],
                 ['valeur' => '6 filiales', 'label' => 'Demande captive interne'],
             ],
             'synergies' => ['fondations', 'toiture-enveloppe', 'finition-interieure'],
@@ -128,7 +128,7 @@ class FilialeController extends Controller
             'nom_court' => 'Kalystrat Placement construction',
             'nom_legal' => 'Kalystrat Placement construction Inc.',
             'specialite' => 'Agence de placement de main-d\'œuvre construction',
-            'tagline' => 'Main-d\'œuvre qualifiée CCQ : 17 000 travailleurs/an recherchés au QC',
+            'tagline' => 'Main-d\'œuvre qualifiée CCQ : 17 000 personnes recherchées par année au Québec (Perspectives professionnelles 2024-2028)',
             'services' => [
                 'Recrutement de travailleurs qualifiés et semi-qualifiés',
                 'Formation et intégration',
@@ -138,7 +138,7 @@ class FilialeController extends Controller
             'cibles' => 'Filiales Kalystrat (interne) + entrepreneurs généraux, sous-traitants, promoteurs',
             'modele' => 'Marge sur taux horaire facturé (15-25%) + frais placement permanent',
             'kpi' => [
-                ['valeur' => '17 000', 'label' => 'Travailleurs CCQ/an au QC'],
+                ['valeur' => '17 000', 'label' => 'Personnes/an à recruter au QC (CCQ 2024-2028)'],
                 ['valeur' => '24-48 h', 'label' => 'Dépannage chantier urgent'],
                 ['valeur' => '100%', 'label' => 'Main-d\'œuvre certifiée CCQ'],
             ],

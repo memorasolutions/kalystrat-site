@@ -172,12 +172,12 @@ echo json_encode([
         </div>
         <div class="ks-bento ks-bento--3col">
             <article class="ks-card ks-card--accent-gold">
-                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">19&nbsp;G$</div>
+                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">+19&nbsp;%</div>
                 <div class="ks-stat__label">Marché annuel rénovation QC</div>
                 <p class="ks-card__text" style="margin-top:1rem">Volume du marché de la rénovation résidentielle et commerciale au Québec en 2026 (source&nbsp;: APCHQ).</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">59&nbsp;864</div>
+                <div class="ks-stat__number" style="font-size:3rem;color:var(--ks-gold-aaa)">+35&nbsp;%</div>
                 <div class="ks-stat__label">Mises en chantier 2025 (+23&nbsp;%)</div>
                 <p class="ks-card__text" style="margin-top:1rem">Hausse marquée de la construction résidentielle au Québec (source&nbsp;: SCHL).</p>
             </article>
