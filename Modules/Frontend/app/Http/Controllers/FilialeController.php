@@ -18,7 +18,7 @@ class FilialeController extends Controller
             'nom_court' => 'Kalystrat Fondations',
             'nom_legal' => 'Kalystrat Fondations Inc.',
             'specialite' => 'Fondations, coffrage et excavation',
-            'tagline' => 'L\'amont de la structure : fondations solides pour bâtiments durables',
+            'tagline' => 'Excavation et coffrage : l\'expertise géotechnique en amont de la structure.',
             'services' => [
                 'Excavation de terrain et nivellement',
                 'Coffrage de fondations (résidentiel et commercial)',

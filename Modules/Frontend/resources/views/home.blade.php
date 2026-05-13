@@ -214,8 +214,8 @@ $services = [
             <span class="ks-hero-stat__label">Filiales spécialisées</span>
         </div>
         <div class="ks-hero-stat">
-            <span class="ks-hero-stat__num">100<sup style="font-size:0.45em;color:var(--ks-gold-500)">+</sup></span>
-            <span class="ks-hero-stat__label">Compagnons CCQ</span>
+            <span class="ks-hero-stat__num">CCQ</span>
+            <span class="ks-hero-stat__label">Bassin de main-d'œuvre mobilisable</span>
         </div>
         <div class="ks-hero-stat">
             <span class="ks-hero-stat__num">5</span>
@@ -305,22 +305,22 @@ $services = [
     <div class="ks-container">
 
         <div class="ks-defi__market" aria-label="Le marché québécois de la construction en 2026">
-            <span class="ks-eyebrow">Marché québécois en chiffres documentés</span>
+            <span class="ks-eyebrow">Le marché québécois en chiffres</span>
             <div class="ks-defi__market-grid">
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">+35&nbsp;%</span>
-                    <span class="ks-defi__market-label">Mises en chantier résidentielles, H1&nbsp;2025 vs H1&nbsp;2024</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (mi-année 2025)</cite>
+                    <span class="ks-defi__market-num">59&nbsp;864</span>
+                    <span class="ks-defi__market-label">Mises en chantier au Québec en 2025 (+24&nbsp;%)</span>
+                    <cite class="ks-defi__market-src">Plan d'affaires Kalystrat — données SCHL/APCHQ 2025</cite>
                 </article>
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">+19&nbsp;%</span>
-                    <span class="ks-defi__market-label">Dépenses rénovation résidentielle, H1&nbsp;2025 vs H1&nbsp;2024</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (mi-année 2025)</cite>
+                    <span class="ks-defi__market-num">11&nbsp;000</span>
+                    <span class="ks-defi__market-label">Postes vacants en construction au Québec</span>
+                    <cite class="ks-defi__market-src">Plan d'affaires Kalystrat — pénurie main-d'œuvre</cite>
                 </article>
                 <article class="ks-defi__market-stat">
-                    <span class="ks-defi__market-num">32&nbsp;000&nbsp;$</span>
-                    <span class="ks-defi__market-label">Budget moyen par projet de rénovation résidentielle</span>
-                    <cite class="ks-defi__market-src">Source&nbsp;: APCHQ (avril 2026)</cite>
+                    <span class="ks-defi__market-num">19&nbsp;G$</span>
+                    <span class="ks-defi__market-label">Marché de la rénovation résidentielle au Québec</span>
+                    <cite class="ks-defi__market-src">Plan d'affaires Kalystrat — secteur en croissance</cite>
                 </article>
             </div>
         </div>
@@ -501,7 +501,7 @@ $services = [
                     <div class="ks-approche__expertise-grid">
                         <span class="ks-approche__expertise-ancre"><strong>6</strong> Directeurs spécialistes</span>
                         <span class="ks-approche__expertise-ancre"><strong>5</strong> Domaines Code 2026</span>
-                        <span class="ks-approche__expertise-ancre"><strong>9</strong> Régions desservies</span>
+                        <span class="ks-approche__expertise-ancre"><strong>5</strong> Villes Capitale-Nationale</span>
                     </div>
                 </div>
             </article>
@@ -552,8 +552,8 @@ $services = [
                 <span class="ks-showcase__kpi-lbl">Calendrier maître</span>
             </div>
             <div class="ks-showcase__kpi">
-                <span class="ks-showcase__kpi-num">9</span>
-                <span class="ks-showcase__kpi-lbl">Régions desservies</span>
+                <span class="ks-showcase__kpi-num">5</span>
+                <span class="ks-showcase__kpi-lbl">Villes desservies</span>
             </div>
         </div>
     </div>
@@ -562,33 +562,33 @@ $services = [
 <section class="ks-section ks-section--dark">
     <div class="ks-container">
         <div class="ks-section__heading">
-            <span class="ks-eyebrow">Ils nous font confiance</span>
-            <h2 class="ks-h2">Témoignages</h2>
-            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Promoteurs, propriétaires, gestionnaires institutionnels&nbsp;: ce qu’ils retiennent d’un projet livré par Kalystrat.</p>
+            <span class="ks-eyebrow">Cas types de chantiers</span>
+            <h2 class="ks-h2">Trois scénarios de mandats représentatifs</h2>
+            <p class="ks-lead" style="color:rgba(255,255,255,0.85)">Profils-types de projets que Kalystrat orchestre avec ses six filiales. Témoignages clients authentifiés ajoutés progressivement à mesure que les chantiers se terminent.</p>
         </div>
         <div class="ks-bento ks-bento--3col">
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
                 <p class="ks-card__text" style="font-style:italic">Pour un promoteur, traiter avec une seule équipe pour les fondations, la structure et la finition change tout. Les délais ne dérapent plus, et la qualité reste constante du sous-sol au toit.</p>
                 <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
-                    <strong style="color:var(--ks-gold-500);display:block">Promoteur immobilier</strong>
-                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Multilogement 24 unités, Lévis</span>
+                    <strong style="color:var(--ks-gold-500);display:block">Cas type 01 — Promoteur immobilier</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Profil&nbsp;: multilogement 24 unités, Capitale-Nationale</span>
                 </div>
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
                 <p class="ks-card__text" style="font-style:italic">Le contrôle qualité interne fait la différence. À chaque étape, le chargé de projet vérifie le travail avant de passer à la prochaine filiale. Aucune zone grise de responsabilité.</p>
                 <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
-                    <strong style="color:var(--ks-gold-500);display:block">Propriétaire résidentiel</strong>
-                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Maison neuve custom, Sainte-Foy</span>
+                    <strong style="color:var(--ks-gold-500);display:block">Cas type 02 — Propriétaire résidentiel</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Profil&nbsp;: maison neuve sur mesure, secteur Sainte-Foy</span>
                 </div>
             </article>
             <article class="ks-card ks-card--dark">
                 <div style="font-family:var(--ks-font-display);font-size:3rem;color:var(--ks-gold-500);line-height:1;margin-bottom:1rem">“</div>
                 <p class="ks-card__text" style="font-style:italic">Les exigences du Code 2026 sur l’étanchéité à l’air sont sévères. L’équipe Kalystrat avait anticipé ces normes dès la conception. Notre test d'étanchéité a passé du premier coup.</p>
                 <div style="margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,0.15)">
-                    <strong style="color:var(--ks-gold-500);display:block">Gestionnaire institutionnel</strong>
-                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Pavillon scolaire, Capitale-Nationale</span>
+                    <strong style="color:var(--ks-gold-500);display:block">Cas type 03 — Gestionnaire institutionnel</strong>
+                    <span style="color:rgba(255,255,255,0.7);font-size:0.875rem">Profil&nbsp;: pavillon scolaire, Capitale-Nationale</span>
                 </div>
             </article>
         </div>

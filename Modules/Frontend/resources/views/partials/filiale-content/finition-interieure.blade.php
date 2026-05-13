@@ -8,8 +8,8 @@
             </figure>
             <div>
                 <span class="ks-eyebrow" style="color:var(--ks-gold-aaa)">Pourquoi Kalystrat</span>
-                <h2 class="ks-h2" style="margin-top:0.5rem">Les détails déterminent la valeur perçue de l'espace</h2>
-                <p class="ks-lead">Une finition soignée n'est pas qu'une question d'esthétique&nbsp;: elle détermine le confort d'usage quotidien et la longévité. Chaque joint, chaque surface, chaque angle est traité avec rigueur artisanale.</p>
+                <h2 class="ks-h2" style="margin-top:0.5rem">La finition intérieure, levier de valeur immobilière</h2>
+                <p class="ks-lead">Performance acoustique, confort d'usage quotidien, longévité des surfaces&nbsp;: chaque détail détermine la valeur perçue à la revente ou à la location. Joints, surfaces, angles traités avec rigueur artisanale.</p>
                 <p class="ks-card__text">Chez Kalystrat Finition intérieure, nous coordonnons en interne 7 corps de métier — gypse, peinture, moulures, planchers, ébénisterie, comptoirs, portes — sans sous-traitance hors groupe. Plans des designers et architectes respectés, besoins réels des occupants anticipés.</p>
             </div>
         </div>
