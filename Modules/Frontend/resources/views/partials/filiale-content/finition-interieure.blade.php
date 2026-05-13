@@ -18,7 +18,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Notre méthode</span>
             <h2 class="ks-h2">Cinq étapes pour une finition impeccable</h2>
             <p class="ks-lead">De la prise de mesures à la livraison clé en main, chaque chantier suit un protocole calibré pour zéro reprise.</p>
@@ -47,7 +47,7 @@
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Différenciateurs Kalystrat</span>
             <h2 class="ks-h2">Trois engagements qui font la différence</h2>
         </div>
@@ -73,7 +73,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Garanties et conformité</span>
             <h2 class="ks-h2">Standards et garanties haut de gamme</h2>
             <p class="ks-lead">Kalystrat Finition intérieure Inc. opère sous licence RBQ. Adhésion APCHQ pour habitation, conformité Code QC 2026, garantie main-d'œuvre standard sur chaque chantier.</p>

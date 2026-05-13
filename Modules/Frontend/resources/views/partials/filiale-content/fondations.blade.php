@@ -20,7 +20,7 @@
 {{-- Méthode en 5 étapes — Timeline horizontale 2026 --}}
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Notre méthode</span>
             <h2 class="ks-h2">Cinq étapes pour une fondation durable</h2>
             <p class="ks-lead">Chaque chantier suit un protocole établi pour garantir la qualité, peu importe la complexité du sol ou la saison.</p>
@@ -50,7 +50,7 @@
 {{-- Climat québécois : 3 contraintes techniques (Bento 3col) --}}
 <section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Climat québécois</span>
             <h2 class="ks-h2">Trois contraintes que toute fondation doit affronter</h2>
         </div>
@@ -77,7 +77,7 @@
 {{-- Garanties et conformité : Trust badges row --}}
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Garanties et conformité</span>
             <h2 class="ks-h2">Un partenaire de confiance pour vos projets</h2>
             <p class="ks-lead">Kalystrat Fondations Inc. opère sous licence RBQ et couvre chaque chantier neuf résidentiel par le Plan de garantie GCR. Solidité administrative, technique et financière.</p>

@@ -18,7 +18,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Notre méthode</span>
             <h2 class="ks-h2">Cinq étapes pour une enveloppe durable</h2>
             <p class="ks-lead">Du diagnostic à l'entretien préventif, chaque chantier suit un protocole calibré pour zéro infiltration.</p>
@@ -47,7 +47,7 @@
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Spécificités climat</span>
             <h2 class="ks-h2">Trois performances Code QC 2026</h2>
         </div>
@@ -73,7 +73,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Garanties et subventions</span>
             <h2 class="ks-h2">Entretien préventif et subventions accessibles</h2>
             <p class="ks-lead">Au-delà de la garantie manufacturier 25-30 ans et garantie installation 5-10 ans, nous accompagnons le montage des dossiers RénoVert et RénoClimat pour maximiser vos retours.</p>

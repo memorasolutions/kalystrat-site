@@ -18,7 +18,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Notre méthode</span>
             <h2 class="ks-h2">Cinq étapes du recrutement au suivi chantier</h2>
             <p class="ks-lead">Recrutement, formation, placement, suivi&nbsp;: chaque étape contribue à la qualité et la sécurité des équipes déployées.</p>
@@ -47,7 +47,7 @@
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Engagements de service</span>
             <h2 class="ks-h2">Trois garanties opérationnelles</h2>
         </div>
@@ -73,7 +73,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Certifications et conformité</span>
             <h2 class="ks-h2">Une agence régulée et certifiée</h2>
             <p class="ks-lead">Toutes les opérations sont conformes aux exigences CCQ, CNESST et programme PAMT. Cinq filiales sœurs internes + clientèle externe (entrepreneurs généraux, sous-traitants, promoteurs).</p>

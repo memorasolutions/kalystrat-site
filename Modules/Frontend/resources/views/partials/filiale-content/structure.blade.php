@@ -18,7 +18,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Notre méthode</span>
             <h2 class="ks-h2">Cinq étapes pour une charpente performante</h2>
             <p class="ks-lead">De l'étude initiale à l'assemblage final, chaque chantier suit un protocole calibré pour la précision et la rapidité.</p>
@@ -47,7 +47,7 @@
 
 <section class="ks-section ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Spécificités québécoises</span>
             <h2 class="ks-h2">Trois enjeux que toute charpente doit gérer</h2>
         </div>
@@ -73,7 +73,7 @@
 
 <section class="ks-section ks-section--alt ks-page-section">
     <div class="ks-container">
-        <div class="ks-page-section__intro ks-fade-in">
+        <div class="ks-section__heading ks-section__heading--left ks-fade-in">
             <span class="ks-eyebrow">Conformité et certifications</span>
             <h2 class="ks-h2">Une charpente certifiée et garantie</h2>
             <p class="ks-lead">Kalystrat Structure Inc. opère sous licence RBQ et collabore systématiquement avec ingénieurs accrédités pour les projets complexes. Conformité Code QC + avis techniques CCMC.</p>
