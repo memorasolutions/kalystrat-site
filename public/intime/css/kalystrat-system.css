@@ -3515,13 +3515,13 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   list-style: none;
   margin: clamp(32px, 4vw, 56px) 0 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: clamp(16px, 1.6vw, 24px);
+  /* T196 — Layout multi-column masonry (évite trou vertical si <details open>) */
+  column-count: 2;
+  column-gap: clamp(16px, 1.6vw, 24px);
 }
 @media (max-width: 880px) {
   .ks-faq__list {
-    grid-template-columns: 1fr;
+    column-count: 1;
   }
 }
 .ks-faq__item {
@@ -3530,6 +3530,12 @@ body:has(.ks-page-hero) .sticky-header .navigation > li > a {
   border-left: 3px solid var(--ks-gold-500, #B8A472);
   box-shadow: 0 2px 12px rgba(10,22,40,0.05);
   transition: box-shadow 0.25s ease;
+  /* T196 — Empêche fragmentation card entre 2 colonnes CSS multi-column */
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  margin-bottom: clamp(16px, 1.6vw, 24px);
+  display: block;
 }
 .ks-faq__item:hover {
   box-shadow: 0 6px 20px rgba(10,22,40,0.1);
