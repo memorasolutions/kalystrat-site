@@ -336,23 +336,24 @@
         <div class="ks-page-section__intro ks-fade-in">
             <span class="ks-page-section__num" aria-hidden="true">09</span>
             <div class="ks-page-section__heading">
-                <span class="ks-eyebrow">Stratégie de croissance</span>
-                <h2 class="ks-h2">Deux phases pour structurer la croissance du groupe</h2>
+                <span class="ks-eyebrow">Trajectoire à 8 ans (horizon 2034)</span>
+                <h2 class="ks-h2">Deux phases pour devenir un groupe intégré de référence</h2>
+                <p class="ks-lead">La vision Kalystrat se déploie sur huit ans, en deux phases distinctes&nbsp;: consolidation puis expansion. Chaque phase a des livrables précis, mesurables et publics.</p>
             </div>
         </div>
         <div class="ks-bento ks-bento--2col ks-fade-in">
             <article class="ks-card ks-card--accent-navy">
-                <div class="ks-card__meta">Phase 1</div>
-                <h3 class="ks-card__title">Consolidation</h3>
-                <p class="ks-card__text">Établir les fondations opérationnelles du groupe&nbsp;: incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion, premières relations commerciales avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
+                <div class="ks-card__meta">Phase 1 · Consolidation</div>
+                <h3 class="ks-card__title">Bâtir les fondations opérationnelles</h3>
+                <p class="ks-card__text">Incorporation et structuration des six filiales avec licences RBQ et assurances, constitution de la force de travail interne via Kalystrat Placement construction, exécution des premiers projets de Kalystrat Immobilier comme preuve de concept, mise en place des systèmes centralisés de gestion, premières relations commerciales avec entrepreneurs généraux, déploiement de l’identité de marque.</p>
             </article>
             <article class="ks-card ks-card--accent-gold">
-                <div class="ks-card__meta">Phase 2</div>
-                <h3 class="ks-card__title">Expansion</h3>
-                <p class="ks-card__text">Diversifier les revenus et augmenter le volume&nbsp;: développement de la clientèle externe de Kalystrat Placement construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition intérieure.</p>
+                <div class="ks-card__meta">Phase 2 · Expansion</div>
+                <h3 class="ks-card__title">Diversifier les revenus et augmenter le volume</h3>
+                <p class="ks-card__text">Développement de la clientèle externe de Kalystrat Placement construction, croissance du portefeuille immobilier, partenariats récurrents avec entrepreneurs généraux, investissement dans l’équipement et la machinerie pour fondations et structure, embauche de directeurs dédiés à chaque filiale, lancement de projets de rénovation haut de gamme via Kalystrat Finition intérieure.</p>
             </article>
         </div>
-        <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:var(--ks-gray-500)"><em>Source&nbsp;: plan d’affaires Gestion Kalystrat Inc., avril 2026.</em></p>
+        <p style="text-align:center;margin-top:2rem;font-size:0.875rem;color:var(--ks-gray-500)"><em>Source&nbsp;: plan d’affaires Gestion Kalystrat Inc., avril 2026. Horizon de référence&nbsp;: 2034.</em></p>
     </div>
 </section>
 
