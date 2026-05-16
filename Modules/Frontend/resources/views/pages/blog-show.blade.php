@@ -9,8 +9,22 @@
 <meta property="og:description" content="{{ $article['extrait'] }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="{{ url('/blog/' . $slug) }}">
+@php
+    $ogImageWebp = $article['image'] ?? '';
+    $ogImageJpg = $ogImageWebp ? preg_replace('/\.(webp|avif)$/i', '.jpg', $ogImageWebp) : '/intime/images/blog/blog-multilog.jpg';
+@endphp
+<meta property="og:image" content="{{ url($ogImageJpg) }}">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:alt" content="{{ $article['alt'] ?? $article['titre'] }}">
+<meta property="og:site_name" content="Kalystrat">
+<meta property="og:locale" content="fr_CA">
 <meta property="article:published_time" content="{{ $article['date'] }}T08:00:00-04:00">
 <meta property="article:section" content="{{ $article['categorie'] }}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $article['titre'] }}">
+<meta name="twitter:description" content="{{ $article['extrait'] }}">
+<meta name="twitter:image" content="{{ url($ogImageJpg) }}">
+<meta name="twitter:image:alt" content="{{ $article['alt'] ?? $article['titre'] }}">
 @endpush
 
 @push('schema')
@@ -65,6 +79,11 @@
             @if(view()->exists($articleContent))
                 @include($articleContent)
             @endif
+
+            <x-frontend::share-buttons
+                :title="$article['titre']"
+                :url="url('/blog/' . $slug)"
+            />
         </article>
     </div>
 </section>
