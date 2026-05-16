@@ -21,7 +21,7 @@
 <p>En résumé&nbsp;: si votre projet est une maison unifamiliale, un duplex ou un triplex de trois étages ou moins, c’est la Partie 11 du Chapitre I qui s’applique — pas le Chapitre I.1. Cette séparation est confirmée par la Régie du bâtiment du Québec dans ses fiches explicatives.</p>
 
 <h2 id="isolation">Isolation thermique&nbsp;: ce que le Code exige (zone 7A — Québec)</h2>
-<p>Québec se situe en <strong>zone climatique 7A</strong>, l’une des plus froides au Canada. Cette classification influence directement les exigences minimales d’isolation thermique prévues au Code, notamment dans la Partie 11 applicable aux maisons de petite taille. Le Code fixe des valeurs minimales en RSI (résistance thermique métrique) qui varient légèrement selon la localité, mais qui définissent clairement les seuils à respecter pour les murs, les toits et les planchers exposés au froid.</p>
+<p>Québec se situe en <strong>zone climatique 7A</strong>, parmi les zones les plus froides du sud du Québec selon le système de degrés-jours retenu pour l’efficacité énergétique (certaines localités du Nord-du-Québec sont en zone 8, encore plus rigoureuses). Cette classification influence directement les exigences minimales d’isolation thermique prévues au Code, notamment dans la Partie 11 applicable aux maisons de petite taille. Le Code fixe des valeurs minimales en RSI (résistance thermique métrique) qui varient légèrement selon la localité, mais qui définissent clairement les seuils à respecter pour les murs, les toits et les planchers exposés au froid.</p>
 <p>Pour les murs hors sol, le Code exige une résistance thermique minimale comprise entre RSI 3,60 et 4,31, ce qui équivaut approximativement à une valeur R de 21 à 24 en unités impériales. Pour les plafonds ou toits (notamment les entretoits), la fourchette est plus élevée&nbsp;: RSI 7,2 à 9,0 (soit R-41 à R-51). Enfin, les planchers situés au-dessus d’un vide sanitaire non chauffé doivent atteindre au moins RSI 5,3, ce qui correspond à une valeur R légèrement supérieure à R-30.</p>
 <p>Ces valeurs représentent le minimum légal&nbsp;: elles ne tiennent pas compte des ponts thermiques ni des pertes par infiltration d’air. Le respect de ces seuils ne garantit pas à lui seul un confort thermique optimal ni une consommation énergétique réduite — d’où l’intérêt de programmes volontaires comme Novoclimat 2.0, qui imposent des standards plus ambitieux. Toutes ces données proviennent des fiches explicatives de la Régie du bâtiment du Québec sur la Partie 11.</p>
 
@@ -95,7 +95,7 @@
 </tr>
 <tr>
 <td>Fondations</td>
-<td>Pas d’exigence spécifique en RSI dans la Partie 11 résidentielle</td>
+<td>Exigences moins explicites, encadrées par les guides explicatifs de la RBQ selon les détails d’assemblage</td>
 <td>R-17 (RSI 3,0) + R-4 pour les ponts thermiques</td>
 </tr>
 <tr>
