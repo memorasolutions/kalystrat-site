@@ -64,8 +64,8 @@ class PageController extends Controller
     public const ARTICLES = [
         'pourquoi-construire-multi-logements-quebec-2026' => [
             'titre' => 'Pourquoi construire des multilogements au Québec en 2026 ?',
-            'extrait' => 'Crise du logement, programmes incitatifs SCHL, choix du format (4-plex à 50+) et avantage de l’intégration verticale Kalystrat.',
-            'date' => '2026-05-09',
+            'extrait' => 'Marché locatif SCHL 2025, PHAQ, APH Select, fiscalité (TPS bonifiée, TVQ), formats 4-plex à 50+ et risques : le guide promoteur 2026.',
+            'date' => '2026-05-16',
             'categorie' => 'Marché immobilier',
             'image' => '/intime/images/blog/blog-multilog.webp',
             'alt' => 'Immeuble résidentiel multilogements moderne',
