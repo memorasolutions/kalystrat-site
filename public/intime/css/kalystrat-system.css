@@ -4510,3 +4510,108 @@ body.mobile-menu-visible .ks-tabbar {
   padding-block: 4px;
   line-height: 1.5;
 }
+
+/* ========================================================================
+   Tableaux dans articles de blog — UX/UI design Kalystrat
+   Scope strict : `.ks-article-content table`. Aucun effet hors blog.
+   ======================================================================== */
+.ks-article-content table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin: clamp(2em, 4vw, 3em) 0;
+  font-size: 0.95em;
+  line-height: 1.55;
+  border: 1px solid var(--ks-gray-300);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(10, 22, 40, 0.06), 0 6px 16px -8px rgba(10, 22, 40, 0.08);
+  background: var(--ks-white);
+}
+
+.ks-article-content table caption {
+  caption-side: top;
+  text-align: left;
+  font-style: italic;
+  font-weight: 500;
+  color: var(--ks-gold-900);
+  font-size: 0.95em;
+  padding: 0 4px 0.75em;
+  letter-spacing: 0.01em;
+}
+
+.ks-article-content table thead {
+  background: linear-gradient(180deg, var(--ks-navy-900) 0%, var(--ks-navy-700) 100%);
+}
+
+.ks-article-content table thead th {
+  color: var(--ks-white);
+  font-weight: 600;
+  text-align: left;
+  padding: 14px 18px;
+  font-size: 0.92em;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--ks-gold-500);
+  vertical-align: bottom;
+}
+
+.ks-article-content table thead th + th {
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.ks-article-content table tbody td {
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--ks-gray-300);
+  color: var(--ks-gray-700);
+  vertical-align: top;
+}
+
+.ks-article-content table tbody td + td {
+  border-left: 1px solid var(--ks-gray-300);
+}
+
+.ks-article-content table tbody tr:nth-child(even) td {
+  background: var(--ks-gray-100);
+}
+
+.ks-article-content table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ks-article-content table tbody tr:hover td {
+  background: rgba(184, 164, 114, 0.10);
+  transition: background-color 0.18s ease;
+}
+
+.ks-article-content table tbody tr:nth-child(even):hover td {
+  background: rgba(184, 164, 114, 0.14);
+}
+
+.ks-article-content table tbody td strong {
+  color: var(--ks-navy-900);
+  font-weight: 600;
+}
+
+/* Mobile : scroll horizontal pour préserver lisibilité des colonnes */
+@media (max-width: 640px) {
+  .ks-article-content table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+    font-size: 0.9em;
+  }
+  .ks-article-content table thead,
+  .ks-article-content table tbody,
+  .ks-article-content table tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+    min-width: 520px;
+  }
+  .ks-article-content table thead th,
+  .ks-article-content table tbody td {
+    padding: 10px 12px;
+  }
+}
