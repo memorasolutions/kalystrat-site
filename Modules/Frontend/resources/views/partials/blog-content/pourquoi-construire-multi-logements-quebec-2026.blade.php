@@ -33,11 +33,11 @@
 <tr><td>Québec (incl. Lévis)</td><td>0,9&nbsp;%</td><td>2,2&nbsp;%</td><td>Hausse marquée, marché encore sous le seuil d’équilibre</td></tr>
 <tr><td>Montréal</td><td>2,1&nbsp;%</td><td>2,9&nbsp;%</td><td>Hausse modérée, marché tout près du seuil d’équilibre</td></tr>
 <tr><td>Gatineau</td><td>—</td><td>3,8&nbsp;%</td><td>Au-dessus du seuil d’équilibre</td></tr>
-<tr><td>Saguenay</td><td>—</td><td>1,3&nbsp;%</td><td>Marché très tendu</td></tr>
-<tr><td>Sherbrooke</td><td>—</td><td>1,4&nbsp;%</td><td>Marché très tendu</td></tr>
+<tr><td>Saguenay</td><td>1,6&nbsp;%</td><td>1,3&nbsp;%</td><td>Marché très tendu, légère baisse</td></tr>
+<tr><td>Sherbrooke</td><td>1,4&nbsp;%</td><td>1,4&nbsp;%</td><td>Marché très tendu, stable</td></tr>
 </tbody>
 </table>
-<p><em>Source&nbsp;: SCHL, Rapport sur le marché locatif, octobre 2025. Données 2024 non reproduites ici pour Gatineau, Saguenay et Sherbrooke.</em></p>
+<p><em>Sources&nbsp;: SCHL, Rapport sur le marché locatif, octobre 2025 (Québec, Montréal, Gatineau 2025)&nbsp;; FRAPRU, Tableaux régionaux SCHL 2024-2025, juillet 2025 (Saguenay, Sherbrooke). Donnée 2024 Gatineau non publiée dans les tableaux régionaux consultés.</em></p>
 
 <h2 id="programmes">Programmes publics (PHAQ et mesures municipales)</h2>
 <p>Le <strong>Programme d’habitation abordable Québec (PHAQ)</strong>, administré par la Société d’habitation du Québec (SHQ), demeure en 2026 un pilier du soutien à la construction de logements locatifs abordables. Il s’adresse à une diversité de promoteurs&nbsp;: offices d’habitation, organismes sans but lucratif (OBNL), coopératives d’habitation, entreprises privées et établissements d’enseignement postsecondaire.</p>
