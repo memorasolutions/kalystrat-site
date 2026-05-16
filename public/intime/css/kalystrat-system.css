@@ -4037,8 +4037,10 @@ body, body * {
   overflow: hidden;
   box-shadow: -16px 0 48px rgba(0, 0, 0, 0.4);
 }
-@media (min-width: 720px) and (max-width: 1023.98px) {
-  /* Tablet iPad portrait : drawer 480px right + backdrop visible (pattern hybride moderne) */
+@media (min-width: 720px) and (max-width: 1199.98px) {
+  /* Tablet iPad portrait+paysage (jusqu'à iPad Pro 12.9" 1024×1366 et iPad Air paysage 1180px) :
+     drawer 480px right + backdrop visible (pattern hybride moderne).
+     T219 (S33) : breakpoint étendu de 1023.98 à 1199.98 pour couvrir iPad Pro portrait 1024px. */
   .ks-mobile-menu__box {
     width: 480px !important;
     max-width: 480px !important;
@@ -4229,7 +4231,10 @@ body, body * {
 /* ============================================================
    T178 — Bottom tab bar native mobile (iOS/Android-like)
    Bord-à-bord bas écran. Permanent. Pas de dismiss. Pas de margin.
-   Desktop ≥ 1024px : caché (header complet suffit).
+   Desktop ≥ 1200px : caché (header complet suffit).
+   T219 (S33) : breakpoint étendu 1024→1200 pour couvrir iPad Pro 11" portrait
+   (834×1194), iPad Pro 12.9" portrait (1024×1366) et iPad Air paysage (1180×820)
+   où le header desktop ne tient pas confortablement sans bottom-nav d'appoint.
    ============================================================ */
 
 .ks-tabbar {
@@ -4302,8 +4307,8 @@ body.mobile-menu-visible .ks-tabbar {
   display: none;
 }
 
-/* Desktop ≥ 1024px : tabbar mobile-only par design */
-@media (min-width: 1024px) {
+/* Desktop ≥ 1200px : tabbar mobile-only par design (T219 étend de 1024→1200 pour iPad) */
+@media (min-width: 1200px) {
   .ks-tabbar {
     display: none !important;
   }
@@ -4381,11 +4386,12 @@ body.mobile-menu-visible .ks-tabbar {
    - Logo mobile : clamp 220→260px (vs 170-200px) pour cohérence visuelle
    - Wrap dans @media max-width:1023px : laisse desktop unchanged
    ============================================================ */
-/* T185 — Mobile/tablet (0-1023px) : hamburger top RETIRÉ visuellement
+/* T185 — Mobile/tablet (0-1199px) : hamburger top RETIRÉ visuellement
    Le bouton "Menu" du bottom tabbar (T178) ouvre le même drawer via
    programmatic .click() sur .mobile-nav-toggler (sticky-contact.blade.php).
-   Display:none n'empêche pas .click() de déclencher le handler jQuery. */
-@media (max-width: 1023px) {
+   Display:none n'empêche pas .click() de déclencher le handler jQuery.
+   T219 (S33) : breakpoint étendu 1023→1199 pour cohérence avec tabbar. */
+@media (max-width: 1199px) {
   .main-header .mobile-nav-toggler,
   .main-header .sticky-header .mobile-nav-toggler {
     display: none !important;
@@ -4393,14 +4399,15 @@ body.mobile-menu-visible .ks-tabbar {
 }
 
 /* ============================================================
-   T187 — Header mobile H1 : bandeau navy uni + logo centré full-width
+   T187 — Header mobile/tablet H1 : bandeau navy uni + logo centré full-width
    Pattern dominant 2026 (pp_search) : "aplat clair OU sombre uni, priorité
    lisibilité, marque, performance". Sombre choisi pour cohérence footer +
    logo blanc/gold ressort puissamment (AAA 17:1 garanti).
-   Mobile/tablet ≤1023px uniquement. Desktop ≥1024px : intact.
-   Header passe de transparent (T69 hero) à navy solid sur ALL pages mobile.
+   Mobile/tablet ≤1199px uniquement. Desktop ≥1200px : intact.
+   T219 (S33) : breakpoint étendu 1023→1199 pour couvrir iPad Pro portrait/paysage.
+   Header passe de transparent (T69 hero) à navy solid sur ALL pages mobile/tablet.
    ============================================================ */
-@media (max-width: 1023px) {
+@media (max-width: 1199px) {
   .main-header .header-upper,
   .main-header .sticky-header {
     background: var(--ks-navy-900) !important;
