@@ -4046,6 +4046,14 @@ body, body * {
     max-width: 480px !important;
   }
 }
+/* Cohérence b4260bb (T219) : .main-menu masquée jusqu'à 1199.98px (responsive.css
+   l'éteint seulement ≤ 1023px, ce qui laisse `display: flex` calculé entre
+   1024-1199px alors que header collapsed). Audit prod 1024/1180 → fix CSS pur. */
+@media (max-width: 1199.98px) {
+  .main-header .main-menu {
+    display: none !important;
+  }
+}
 /* T179 — Close button position fixed top-right viewport (pas dans drawer), forme parfaite */
 .ks-mobile-menu__close {
   position: fixed !important;
