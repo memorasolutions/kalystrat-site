@@ -54,8 +54,8 @@
 </tr>
 <tr>
 <td>5 ans</td>
-<td>Vices majeurs (structure et étanchéité de l’enveloppe)</td>
-<td>Fissuration structurelle de la fondation, infiltration d’eau par la toiture ou les murs</td>
+<td>Vices de conception, de construction ou de réalisation, et vices du sol</td>
+<td>Fissuration structurelle de la fondation, infiltration d’eau par la toiture ou les murs, tassement de sol affectant la solidité du bâtiment</td>
 </tr>
 </tbody>
 </table>
@@ -66,7 +66,8 @@
 <p>L’<strong>Office de la protection du consommateur (OPC)</strong> insiste fortement sur l’importance d’un contrat écrit détaillé pour tout projet de construction ou de rénovation. Ce document doit décrire précisément les travaux à réaliser, les matériaux à utiliser (en évitant les termes vagues comme «&nbsp;similaire&nbsp;»), l’échéancier des travaux, l’échelonnement des paiements, et les garanties offertes. Il doit aussi inclure des clauses sur les pénalités applicables en cas de retard non justifié.</p>
 <p>Concernant les <strong>acomptes</strong>, les pratiques prudentes recommandent de négocier le montant le plus bas possible. Une demande supérieure à 10 % à la signature doit être justifiée par des achats spécifiques de matériaux non retournables. Pour les achats de copropriétés divises (condos neufs), la Loi sur le bâtiment impose une règle stricte&nbsp;: l’acompte doit être entièrement protégé, soit par le plan GCR, soit par une assurance ou un cautionnement, soit par un <strong>dépôt en compte de fidéicommis</strong> auprès d’un notaire, d’un avocat ou d’un comptable mandaté. Dans ce dernier cas, l’entrepreneur n’a jamais accès direct aux fonds.</p>
 <p>Pour les projets dépassant un budget important, le <strong>cautionnement de performance</strong> est fortement conseillé. Émis par un assureur, il coûte généralement entre 1 % et 2 % du montant total et garantit l’achèvement des travaux même si l’entrepreneur fait faillite. La pratique courante — bien qu’elle ne soit pas une obligation légale stricte — consiste à retenir 10 % du montant de chaque paiement (la «&nbsp;retenue de garantie&nbsp;»). Cette somme est libérée après le délai légal d’inscription de l’hypothèque légale.</p>
-<p>Cette <strong>hypothèque légale</strong>, prévue aux articles 2724 et suivants du Code civil du Québec, protège les travailleurs, sous-traitants et fournisseurs. Si ceux-ci ne sont pas payés, ils peuvent grever le bien immobilier du donneur d’ouvrage dans les 30 jours suivant la fin des travaux. La retenue de 10 % sert donc de filet de sécurité pour couvrir d’éventuelles réclamations après la réception.</p>
+<p>Cette <strong>hypothèque légale</strong>, prévue aux articles 2724 et suivants du Code civil du Québec, protège les architectes, ingénieurs, fournisseurs de matériaux, ouvriers, entrepreneurs et sous-traitants. Le délai de 30 jours suivant la fin des travaux est en réalité un délai de <em>conservation</em> sans publication&nbsp;: pour préserver la sûreté au-delà, le créancier doit, avant l’expiration de ces 30 jours, inscrire un avis au registre foncier et signifier cet avis au propriétaire (article 2727 C.c.Q.).</p>
+<p>Précision importante pour le propriétaire&nbsp;: les sous-traitants et fournisseurs qui n’ont pas contracté directement avec lui doivent, en vertu de l’article 2728 C.c.Q., <strong>dénoncer par écrit leur contrat au propriétaire</strong> pour pouvoir bénéficier de l’hypothèque légale. L’ouvrier en est dispensé. Sans cette dénonciation écrite reçue avant les travaux concernés, un sous-traitant ne peut généralement pas inscrire d’hypothèque sur la propriété. La retenue de 10&nbsp;% sert donc de filet de sécurité pour couvrir les créanciers ayant valablement dénoncé leur contrat.</p>
 
 <h2 id="solidite">4. Solidité financière et capacité d’exécution</h2>
 <p>Au-delà des licences et des garanties, il est essentiel d’évaluer la capacité réelle de l’entrepreneur à mener à bien le projet. Une entreprise solide sur le plan financier est moins susceptible de faire faillite en cours de chantier ou de sous-traiter à l’excès, ce qui peut nuire à la qualité et à la coordination des travaux.</p>
@@ -185,7 +186,7 @@
 <p>Il est recommandé de ne pas verser plus de 10 % à la signature, sauf si des achats spécifiques de matériaux justifient un montant plus élevé. Pour un condo neuf (copropriété divise), l’acompte doit être entièrement protégé par GCR, assurance, cautionnement ou dépôt en fidéicommis, conformément à la Loi sur le bâtiment.</p>
 
 <h3>Que couvre le plan de garantie GCR sur 1, 3 et 5 ans&nbsp;?</h3>
-<p>Le plan GCR couvre&nbsp;: 1 an pour les malfaçons et défauts apparents à la réception (finitions), 3 ans pour les vices cachés (défauts non visibles à la réception), et 5 ans pour les vices majeurs touchant la structure ou l’étanchéité de l’enveloppe (fondations, toiture, murs extérieurs). Les acomptes sont protégés jusqu’à 50 000 $ et la couverture principale atteint jusqu’à 300 000 $ par habitation unifamiliale typique.</p>
+<p>Le plan GCR couvre&nbsp;: 1 an pour les malfaçons et défauts apparents à la réception (finitions), 3 ans pour les vices cachés (défauts non visibles à la réception), et 5 ans pour les vices de conception, de construction ou de réalisation, et les vices du sol (fondations, toiture, murs extérieurs, tassements affectant la solidité). Les acomptes sont protégés jusqu’à 50 000 $ et la couverture principale atteint jusqu’à 300 000 $ par habitation unifamiliale isolée, jumelée ou en rangée non détenue en copropriété divise.</p>
 
 <h3>Quels sont mes recours en cas de problème avec mon entrepreneur&nbsp;?</h3>
 <p>Pour une maison neuve assujettie, ouvrez d’abord un dossier auprès de GCR. Pour une rénovation, adressez-vous à l’OPC, puis aux tribunaux civils au besoin. Si l’entrepreneur n’a pas de licence, portez plainte à la RBQ. En cas de non-paiement de sous-traitants, une hypothèque légale peut être inscrite dans les 30 jours suivant la fin des travaux. Le Tribunal administratif du logement ne traite pas les litiges de construction pour un propriétaire.</p>
@@ -234,7 +235,7 @@
             'name' => 'Que couvre le plan de garantie GCR sur 1, 3 et 5 ans ?',
             'acceptedAnswer' => [
                 '@type' => 'Answer',
-                'text' => 'Le plan GCR couvre : 1 an pour les malfaçons et défauts apparents à la réception, 3 ans pour les vices cachés et 5 ans pour les vices majeurs touchant la structure ou l’étanchéité de l’enveloppe. Les acomptes sont protégés jusqu’à 50 000 $ et la couverture principale atteint jusqu’à 300 000 $ par habitation unifamiliale typique.',
+                'text' => 'Le plan GCR couvre : 1 an pour les malfaçons et défauts apparents à la réception, 3 ans pour les vices cachés, et 5 ans pour les vices de conception, de construction ou de réalisation, et les vices du sol affectant la solidité (fondations, toiture, murs extérieurs, tassements). Les acomptes sont protégés jusqu’à 50 000 $ et la couverture principale atteint jusqu’à 300 000 $ par habitation unifamiliale isolée, jumelée ou en rangée non détenue en copropriété divise.',
             ],
         ],
         [
