@@ -10,17 +10,17 @@
     $hasCookie = request()->cookie($cookieName);
 
     $text = [
-        'title' => $isFr ? 'Parametres de confidentialite' : 'Privacy Settings',
+        'title' => $isFr ? 'Paramètres de confidentialité' : 'Privacy Settings',
         'intro' => $isFr
-            ? 'Nous utilisons des temoins (cookies) pour assurer le bon fonctionnement du site, analyser le trafic et personnaliser le contenu. Vous pouvez gerer vos preferences ci-dessous.'
-            : 'We use cookies to ensure the site works properly, analyze traffic, and personalize content. You can manage your preferences below.',
+            ? 'Nous utilisons des témoins (cookies) pour assurer le bon fonctionnement du site, analyser le trafic et personnaliser le contenu. Conformément à la Loi 25 du Québec (art. 8.1), les témoins non essentiels sont désactivés par défaut. Vous pouvez gérer vos préférences ci-dessous et les modifier à tout moment via le bouton flottant.'
+            : 'We use cookies to ensure the site works properly, analyze traffic, and personalize content. In accordance with Quebec\'s Law 25 (art. 8.1), non-essential cookies are disabled by default. You can manage your preferences below and update them anytime via the floating button.',
         'accept_all' => $isFr ? 'Tout accepter' : 'Accept all',
         'refuse_all' => $isFr ? 'Tout refuser' : 'Refuse all',
         'customize' => $isFr ? 'Personnaliser' : 'Customize',
         'save' => $isFr ? 'Enregistrer mes choix' : 'Save preferences',
         'back' => $isFr ? 'Retour' : 'Back',
-        'policy_link' => $isFr ? 'Politique de confidentialite' : 'Privacy policy',
-        'fab_label' => $isFr ? 'Gerer les temoins' : 'Manage cookies',
+        'policy_link' => $isFr ? 'Politique de confidentialité' : 'Privacy policy',
+        'fab_label' => $isFr ? 'Gérer les témoins' : 'Manage cookies',
     ];
 @endphp
 
@@ -88,7 +88,7 @@
 </style>
 
 <div id="cc-host">
-    {{-- FAB (visible seulement si consentement deja donne) --}}
+    {{-- FAB (visible seulement si consentement déjà donné) --}}
     <button id="cc-fab" class="cc-fab {{ $hasCookie ? '' : 'cc-hidden' }}" type="button" aria-label="{{ $text['fab_label'] }}">
         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
     </button>
@@ -96,7 +96,7 @@
     {{-- Backdrop --}}
     <div id="cc-backdrop" class="cc-backdrop {{ $hasCookie ? '' : 'cc-open' }}"></div>
 
-    {{-- Banniere modale --}}
+    {{-- Bannière modale --}}
     <div id="cc-modal" class="cc-modal {{ $hasCookie ? '' : 'cc-open' }}" role="dialog" aria-modal="true" aria-labelledby="cc-title" aria-describedby="cc-desc">
         <h2 id="cc-title" class="cc-title">{{ $text['title'] }}</h2>
         <p id="cc-desc" class="cc-text">
@@ -111,7 +111,7 @@
             <button type="button" id="cc-btn-accept" class="cc-btn cc-btn-primary">{{ $text['accept_all'] }}</button>
         </div>
 
-        {{-- Panneau details (categories + toggles) --}}
+        {{-- Panneau détails (catégories + toggles) --}}
         <div id="cc-details" class="cc-details">
             <div class="cc-actions" style="margin-bottom: 1rem;">
                 <button type="button" id="cc-btn-back" class="cc-btn cc-btn-secondary">{{ $text['back'] }}</button>
@@ -182,7 +182,7 @@
         document.cookie = name + '=' + encodeURIComponent(value) + ';path=/;expires=' + d.toUTCString() + ';SameSite=Lax';
     }
 
-    // --- Read choices from cookie (handles server format {token,choices,v} or plain choices) ---
+    // --- Lire les choix depuis le cookie (gère le format serveur {token,choices,v} ou choices simple) ---
     function readChoicesFromCookie() {
         var raw = getCookie(config.cookieName);
         if (!raw) return null;
@@ -212,7 +212,7 @@
     function showDetails() {
         els.mainActions.classList.add('cc-hidden');
         els.details.classList.add('cc-show');
-        // GPC : desactiver marketing/third_party si signal actif
+        // GPC : désactiver marketing/third_party si signal actif
         if (navigator.globalPrivacyControl) {
             var inputs = els.form.querySelectorAll('input[type="checkbox"]:not([disabled])');
             for (var i = 0; i < inputs.length; i++) { inputs[i].checked = false; }
@@ -264,7 +264,7 @@
         }
     }
 
-    // --- Inject third-party scripts ---
+    // --- Injecter les scripts tiers ---
     function injectScripts(choices) {
         if (!config.scripts) return;
         for (var i = 0; i < config.scripts.length; i++) {
@@ -275,7 +275,7 @@
             var div = document.createElement('div');
             div.id = hash;
             div.innerHTML = sc.code;
-            // Move scripts to body for execution
+            // Déplacer les scripts vers le body pour exécution
             var scripts = div.querySelectorAll('script');
             for (var j = 0; j < scripts.length; j++) {
                 var ns = document.createElement('script');
@@ -286,9 +286,9 @@
         }
     }
 
-    // --- Save consent ---
+    // --- Enregistrer le consentement ---
     function saveConsent(choices) {
-        // 1. Cookie local (feedback immediat)
+        // 1. Cookie local (retour immédiat)
         setCookie(config.cookieName, JSON.stringify({choices: choices, v: config.policyVersion, expiresAt: Date.now() + (config.expirationDays * 86400000)}), config.expirationDays);
 
         // 2. API (preuve de consentement)
@@ -312,7 +312,7 @@
         closeBanner();
     }
 
-    // --- Build choices object ---
+    // --- Construire l'objet choices ---
     function buildAllChoices(value) {
         var choices = {};
         for (var i = 0; i < config.categoryKeys.length; i++) {
@@ -332,7 +332,7 @@
         return choices;
     }
 
-    // --- Event handlers ---
+    // --- Gestionnaires d'événements ---
     els.btnAccept.onclick = function() { saveConsent(buildAllChoices(true)); };
     els.btnRefuse.onclick = function() { saveConsent(buildAllChoices(false)); };
     els.btnCustomize.onclick = showDetails;
@@ -340,16 +340,16 @@
     els.btnSave.onclick = function() { saveConsent(buildFormChoices()); };
     els.fab.onclick = openBanner;
 
-    // --- Init : charger choix existants ---
+    // --- Init : charger les choix existants ---
     var raw = readChoicesFromCookie();
     var needsReprompt = false;
 
     if (raw) {
-        // Verifier version de la politique
+        // Vérifier la version de la politique
         if (raw.v && raw.v !== config.policyVersion) {
             needsReprompt = true;
         }
-        // Verifier expiration du consentement
+        // Vérifier l'expiration du consentement
         if (raw.expiresAt && raw.expiresAt <= Date.now()) {
             needsReprompt = true;
         }
@@ -357,18 +357,18 @@
         var existing = raw.choices || raw;
 
         if (!needsReprompt) {
-            // Pre-remplir les toggles
+            // Pré-remplir les toggles
             for (var k in existing) {
                 var inp = els.form.querySelector('input[name="' + k + '"]');
                 if (inp && !inp.disabled) inp.checked = !!existing[k];
             }
             injectScripts(existing);
         } else {
-            // Consentement expire ou politique mise a jour : re-prompt
+            // Consentement expiré ou politique mise à jour : re-prompt
             setTimeout(function() { openBanner(); }, 100);
         }
     } else {
-        // Pas de cookie : focus trap sur la banniere
+        // Pas de cookie : focus trap sur la bannière
         setTimeout(function() { initFocusTrap(); }, 100);
     }
 })();

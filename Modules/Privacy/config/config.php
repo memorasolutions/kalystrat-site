@@ -118,7 +118,7 @@ return [
     */
     'categories' => [
         'essential' => [
-            'label_fr' => 'Strictement necessaire',
+            'label_fr' => 'Strictement nécessaire',
             'label_en' => 'Strictly Necessary',
             'required' => true,
             'cookies' => [
@@ -139,7 +139,7 @@ return [
                 [
                     'name' => 'consent_v1',
                     'provider' => 'Application',
-                    'purpose_fr' => 'Memorisation des choix de consentement',
+                    'purpose_fr' => 'Mémorisation des choix de consentement',
                     'purpose_en' => 'Consent choices storage',
                     'duration' => '6-12 mois / 6-12 months',
                 ],
@@ -195,14 +195,14 @@ return [
                 [
                     'name' => 'locale',
                     'provider' => 'Application',
-                    'purpose_fr' => 'Memoriser la langue preferee',
+                    'purpose_fr' => 'Mémoriser la langue préférée',
                     'purpose_en' => 'Remember preferred language',
                     'duration' => '1 an / 1 year',
                 ],
                 [
                     'name' => 'theme',
                     'provider' => 'Application',
-                    'purpose_fr' => 'Memoriser le theme d\'affichage',
+                    'purpose_fr' => 'Mémoriser le thème d\'affichage',
                     'purpose_en' => 'Remember display theme preference',
                     'duration' => '1 an / 1 year',
                 ],
@@ -216,8 +216,8 @@ return [
                 [
                     'name' => '__stripe_mid',
                     'provider' => 'Stripe, Inc.',
-                    'purpose_fr' => 'Prevention de la fraude et gestion des paiements',
-                    'purpose_en' => 'Fraud prévention and payment processing',
+                    'purpose_fr' => 'Prévention de la fraude et gestion des paiements',
+                    'purpose_en' => 'Fraud prevention and payment processing',
                     'duration' => '1 an / 1 year',
                 ],
             ],
@@ -269,7 +269,7 @@ return [
     |--------------------------------------------------------------------------
     */
     'gpc' => [
-        'respect_in' => ['gdpr', 'ccpa'],
+        'respect_in' => ['gdpr', 'ccpa', 'canada_quebec'],
         'header' => 'Sec-GPC',
     ],
 

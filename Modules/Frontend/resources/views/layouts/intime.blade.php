@@ -288,7 +288,7 @@ if ('serviceWorker' in navigator) {
 					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">APCHQ</span><span class="ks-footer__trust-label">Garantie rénovation</span></li>
 					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">GCR</span><span class="ks-footer__trust-label">Plan de garantie résidentiel</span></li>
 					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">Novoclimat&nbsp;2.0</span><span class="ks-footer__trust-label">Efficacité énergétique</span></li>
-					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">Code&nbsp;QC&nbsp;2026</span><span class="ks-footer__trust-label">Conformité totale</span></li>
+					<li class="ks-footer__trust-item"><span class="ks-footer__trust-badge">Code de construction QC</span><span class="ks-footer__trust-label">Conformité totale</span></li>
 				</ul>
 			</div>
 		</div>
@@ -420,37 +420,8 @@ if ('serviceWorker' in navigator) {
 
 @stack('scripts')
 
-{{-- V5d-A — Bannière de consentement Loi 25 / RGPD / LPRPDE --}}
-<div class="ks-cookie-banner" role="region" aria-label="Avis de confidentialité" hidden data-ks-cookie>
-    <div class="ks-cookie-banner__inner">
-        <div class="ks-cookie-banner__content">
-            <strong>Confidentialité</strong>
-            Ce site utilise des témoins essentiels au fonctionnement et des outils de mesure d’audience. Conformément à la <strong>Loi&nbsp;25 du Québec</strong> et au RGPD, vous pouvez accepter, refuser ou consulter notre <a href="{{ url('/politique-confidentialite') }}">politique de confidentialité</a>.
-        </div>
-        <div class="ks-cookie-banner__actions">
-            <button type="button" class="ks-cookie-banner__btn ks-cookie-banner__btn--decline" data-ks-cookie-decline>Refuser</button>
-            <button type="button" class="ks-cookie-banner__btn ks-cookie-banner__btn--accept" data-ks-cookie-accept>Accepter</button>
-        </div>
-    </div>
-</div>
-<script>
-(function () {
-    'use strict';
-    var STORAGE_KEY = 'ks-cookie-consent-v1';
-    var banner = document.querySelector('[data-ks-cookie]');
-    if (!banner) return;
-    if (localStorage.getItem(STORAGE_KEY)) return;
-    banner.hidden = false;
-    document.querySelector('[data-ks-cookie-accept]').addEventListener('click', function () {
-        localStorage.setItem(STORAGE_KEY, 'accepted-' + Date.now());
-        banner.hidden = true;
-    });
-    document.querySelector('[data-ks-cookie-decline]').addEventListener('click', function () {
-        localStorage.setItem(STORAGE_KEY, 'declined-' + Date.now());
-        banner.hidden = true;
-    });
-})();
-</script>
+{{-- V5d-A — Bannière de consentement Loi 25 / RGPD / LPRPDE (Privacy module conforme) --}}
+@include('privacy::partials.cookie-consent')
 
 {{-- V5d-B sticky-cta tel SUPPRIMÉ T175 : remplacé par sticky-bar T174 qui contient déjà le bouton Appeler en mobile (DRY total, anti-duplication) --}}
 

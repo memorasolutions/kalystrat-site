@@ -279,16 +279,22 @@ test('POST rights request with invalid type returns 422', function () {
 
 // -- Legal pages --
 
-test('GET /privacy-policy returns 200', function () {
-    $this->get('/privacy-policy')->assertStatus(200);
+test('GET /privacy-policy redirects 301 to /politique-confidentialite (FR canonical)', function () {
+    $this->get('/privacy-policy')
+        ->assertStatus(301)
+        ->assertRedirect('/politique-confidentialite');
 });
 
-test('GET /terms-of-use returns 200', function () {
-    $this->get('/terms-of-use')->assertStatus(200);
+test('GET /terms-of-use redirects 301 to /conditions-utilisation (FR canonical)', function () {
+    $this->get('/terms-of-use')
+        ->assertStatus(301)
+        ->assertRedirect('/conditions-utilisation');
 });
 
-test('GET /cookie-policy returns 200', function () {
-    $this->get('/cookie-policy')->assertStatus(200);
+test('GET /cookie-policy redirects 301 to /politique-cookies (FR canonical)', function () {
+    $this->get('/cookie-policy')
+        ->assertStatus(301)
+        ->assertRedirect('/politique-cookies');
 });
 
 // -- Consent cookie --
